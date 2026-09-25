@@ -1,5 +1,10 @@
 # Changelog — OSWork v6.2
 
+## 1.2.1 — 2026-09-25
+
+- Landing: mostra só os 8 módulos, fechados, e o clique abre as aulas de cada um (formato-curso-v6 6.3.3).
+- Menu do curso: novo item "Trilhas", que volta para a landing para escolher o módulo. PT/EN/ES (tradução: US$ 0,02).
+
 ## 1.1.1 — 2026-09-25
 
 - Botão "copiar" dos terminais de exemplo copia só os comandos (sem `$` e sem a resposta).
