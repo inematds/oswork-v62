@@ -7,6 +7,12 @@ de cada aula. O OSWork v6 (7 aulas para leigo) é outro curso e continua separad
 - Abrir: `landing.html` ou `curso.html#trilha` — funciona offline e guarda o progresso no navegador.
 - Estado atual: **Módulo 1 (6 aulas)** — piloto para aprovação. Módulos 2–8 seguem o mesmo molde.
 
+## Mais no INEMA.CLUB
+
+- [Ficha deste curso](https://www.inema.club/cursos/288-oswork-v6-2-sua-ia-precisa-de-um-sistema/)
+- [Guia: como aprender inteligência artificial](https://www.inema.club/aprender-inteligencia-artificial/)
+- [Todos os cursos](https://www.inema.club/cursos/)
+
 ## Como é feito
 
 | Arquivo | Papel |
