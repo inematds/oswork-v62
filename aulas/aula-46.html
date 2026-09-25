@@ -1,0 +1,146 @@
+<section class="view" id="v-aula-46" data-aula="46" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 8 · Aula 4 de 6</p>
+  <h1>A portaria da VPS: <em>quem entra, quem sai</em></h1>
+  <figure class="cena"><img src="assets/img/aula-46.webp" width="1280" height="720" alt="Na recepção da escola, uma professora confere com o porteiro uma lista curta de visitantes numa prancheta, com o portão fechado ao fundo, enquanto o carteiro deixa as cartas no balcão."></figure>
+  <p class="promise">Você consegue listar as portas de rede que a sua <span class="gterm" data-gl="vps" data-def="Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar.">VPS</span> precisa abrir. E consegue deixar um arquivo <span class="gterm" data-gl="env" data-def="Arquivo que guarda chaves e senhas fora do código. Nunca vai para o Git, para um pedido ou para um print.">.env</span> legível só por você, conferindo no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
+  <p class="why">Abrir tudo "para funcionar" aumenta o risco e não encontra a causa do problema. E um .env que qualquer usuário da máquina lê deixa a senha do bot à vista.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O <b>firewall</b> é a portaria: decide o que entra e o que sai.</li>
+      <li>O bot de treino <b>só sai</b> para perguntar ao Telegram. Nenhuma porta de bot aberta.</li>
+      <li>O .env fica <b>fechado</b> (chmod 600) e fora do Git.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>O firewall é a portaria da máquina</h2>
+  <p>O <span class="gterm" data-gl="firewall" data-def="Filtro que decide quais conexões de rede podem entrar na máquina ou sair dela.">firewall</span> filtra as conexões de rede, nos dois sentidos. É como a portaria da escola: tem a lista de quem pode entrar, e o carteiro sai para buscar a correspondência.</p>
+  <p>O <span class="gterm" data-gl="bot" data-def="Programa que conversa por um aplicativo de mensagens e responde sozinho, seguindo as regras que você define.">bot</span> do kit usa <span class="gterm" data-gl="long-polling" data-def="Jeito de o bot perguntar ao Telegram, de tempos em tempos, se chegou mensagem nova. Não exige servidor com endereço público.">long polling</span>. Ele sai por uma conexão segura para perguntar ao <span class="gterm" data-gl="telegram" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7.">Telegram</span> se chegou mensagem. Ninguém de fora precisa bater na porta dele.</p>
+  <p data-ex="professora">Lúcia achou que precisava abrir uma porta para o bot receber as mensagens da turma. Não precisava: quem entra na máquina é só ela, pelo <span class="gterm" data-gl="ssh" data-def="Forma segura de abrir o terminal de outro computador pela internet.">SSH</span>.</p>
+  <figure class="diag"><svg viewBox="0 0 360 330" role="img" aria-label="De cima para baixo: você entra na VPS pelo SSH; da VPS, o bot sai para perguntar ao Telegram se chegou mensagem.">
+    <rect x="90" y="10" width="180" height="56" rx="12" fill="none" stroke="var(--line2)" stroke-width="2"/>
+    <text x="180" y="44" text-anchor="middle" fill="currentColor">Você</text>
+    <line x1="180" y1="66" x2="180" y2="124" stroke="var(--accent)" stroke-width="3"/>
+    <polygon points="172,122 180,136 188,122" fill="var(--accent)"/>
+    <text x="196" y="102" fill="currentColor">entrada: SSH</text>
+    <rect x="90" y="138" width="180" height="56" rx="12" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <text x="180" y="172" text-anchor="middle" fill="currentColor">VPS com o bot</text>
+    <line x1="180" y1="194" x2="180" y2="252" stroke="var(--accent)" stroke-width="3"/>
+    <polygon points="172,250 180,264 188,250" fill="var(--accent)"/>
+    <text x="196" y="230" fill="currentColor">saída: o bot pergunta</text>
+    <rect x="90" y="266" width="180" height="56" rx="12" fill="none" stroke="var(--line2)" stroke-width="2"/>
+    <text x="180" y="300" text-anchor="middle" fill="currentColor">Telegram</text>
+  </svg>
+  <figcaption>Com long polling, a única porta de entrada que a VPS precisa é a do SSH.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Libere o SSH antes de ligar o firewall</h2>
+  <p>No <span class="gterm" data-gl="ubuntu" data-def="Versão popular do Linux, comum em servidores.">Ubuntu</span>, o <span class="gterm" data-gl="ufw" data-def="Comando do Ubuntu para configurar o firewall de um jeito simples.">ufw</span> configura o firewall. Antes de ligá-lo, libere a <span class="gterm" data-gl="porta" data-def="Número que identifica um serviço dentro da máquina. O SSH costuma usar a porta 22, mas a sua VPS pode usar outra.">porta</span> do SSH que a sua VPS realmente usa. Se for a 22, a regra é a do exemplo. Se for outra, o número muda.</p>
+  <p>Alguns provedores têm um firewall próprio no painel. Se o seu tiver, confira lá também que a porta do SSH está liberada.</p>
+  <p data-ex="coordenadora">Denise só ligou o firewall depois de preparar as rotas de volta da aula anterior sobre SSH: a segunda sessão testada e o console do provedor conferido. O próprio ufw a avisou do risco.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · na VPS</span></div>
+<pre><code><span class="pr">$</span> sudo ufw allow 22/tcp
+<span class="out">Rules updated
+Rules updated (v6)</span>
+<span class="pr">$</span> sudo ufw enable
+<span class="out">Command may disrupt existing ssh connections. Proceed with operation (y|n)?</span></code></pre>
+<p class="tela-nota">"Rules updated" confirma a regra. A pergunta final avisa: "isto pode derrubar as conexões SSH abertas; continuar?".</p></div>
+  <figcaption>Responda y só depois de liberar a porta certa e com a rota de volta pronta.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>O .env fica fechado e fora do Git</h2>
+  <p>O <span class="gterm" data-gl="token-do-bot" data-def="Senha que o Telegram gera para o seu bot. Quem tem o token controla o bot; por isso ele fica no .env.">token do bot</span> mora no .env. O comando <span class="gterm" data-gl="chmod" data-def="Comando que define quem pode ler ou alterar um arquivo.">chmod</span> 600 deixa esse arquivo legível só pelo dono.</p>
+  <p>E o .env nunca entra no <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span>: o arquivo <span class="gterm" data-gl="gitignore" data-def="Arquivo que lista o que o Git não deve guardar, como senhas e arquivos temporários.">.gitignore</span>, do módulo 4, já cuida disso.</p>
+  <p data-ex="professora">Lúcia conferiu o .env antes e depois do chmod. No começo da linha, os traços mostram quem não pode ler.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> ls -l .env
+<span class="out">-rw-rw-r-- 1 usuario usuario 0 [data] .env</span>
+<span class="pr">$</span> chmod 600 .env
+<span class="pr">$</span> ls -l .env
+<span class="out">-rw------- 1 usuario usuario 0 [data] .env</span></code></pre>
+<p class="tela-nota">Depois do primeiro sinal vêm três trios: dono, grupo e outros. r é ler, w é alterar, traço é "não pode". Antes, o grupo e os outros liam (rw- e r--). Depois, só o dono tem rw.</p></div>
+  <figcaption>O que importa é o começo: -rw------- quer dizer "só o dono".</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Rede, token e processo: três checagens separadas</h2>
+  <p>Se o bot não responde, não abra portas para ver se resolve. Separe três perguntas: o processo está rodando? O token foi aceito? A rede de saída funciona?</p>
+  <p>O <span class="gterm" data-gl="log" data-def="Registro do que um programa fez, linha por linha, com data e hora. É onde se procura a causa de um erro.">log</span> do bot do kit ajuda a separar, sem mostrar o token.</p>
+  <p data-ex="coordenadora">O bot de Denise parou. O log dizia "Falha HTTP 401": era o token, trocado na semana anterior. Nenhuma porta precisava mudar.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Bot parado · o que o log diz</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Nenhuma linha nova: o processo está rodando? (próxima aula)</div>
+        <div class="item doc"><span class="pin">2</span> "Falha HTTP 401 no Telegram; sem detalhes que exponham token."</div>
+        <div class="item doc"><span class="pin">3</span> "Falha de rede ou resposta; nova tentativa em 2 segundos."</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Processo: confira se ele está ligado.</span></li>
+      <li><span class="pin">2</span><span>Token: o Telegram recusou a senha do bot.</span></li>
+      <li><span class="pin">3</span><span>Rede: a saída falhou e o bot tenta de novo sozinho.</span></li>
+    </ol>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não tem VPS nem bot rodando? Sem problema. A prática é no seu computador, numa pasta de treino, com um .env vazio. O ufw fica para quando você tiver a máquina.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Feche um .env de treino e liste as portas</h3>
+  <p class="pgoal">Pronto quando o ls -l mostrar -rw------- no .env de treino e o plano tiver as portas necessárias. Cerca de 8 minutos, no computador, no terminal.</p>
+  <p class="psafe">O arquivo é criado vazio, numa pasta nova, só para treinar: não tem token nenhum. Não mexa no .env de um bot que já funciona. No Windows, rode no terminal do <span class="gterm" data-gl="wsl" data-def="Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux.">WSL</span>, do módulo 3: fora dele o -rw------- pode não aparecer; não é erro seu, volte ao WSL. Se o chmod der erro, confira com pwd se você está na pasta treino-rede.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir -p ~/treino-rede
+cd ~/treino-rede
+touch .env
+ls -l .env
+chmod 600 .env
+ls -l .env</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Rode as quatro primeiras linhas e anote o começo da resposta do ls -l. Ele pode variar de um computador para outro.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Rode as duas últimas e confira que o começo virou -rw-------.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>No plano de VPS, escreva as portas de entrada necessárias: a do SSH, com o número real ou "a conferir". Para o bot, nenhuma.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de fechar um arquivo de segredos para só você ler e de reduzir a portaria ao mínimo.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Portaria</h3>
+    <ol>
+      <li><span><b>Entrada</b>só a porta real do SSH, liberada antes de ligar o firewall.</span></li>
+      <li><span><b>Saída</b>o bot pergunta ao Telegram; nenhuma porta de bot.</span></li>
+      <li><span><b>.env</b>chmod 600, conferido com ls -l, fora do Git.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe decidir o que entra na VPS e proteger o arquivo de senhas do bot.</p>
+    <p class="na-action">Procure, no seu computador de trabalho, um arquivo com senha anotada fora de um gerenciador de senhas. Anote onde está e decida para onde ele vai.</p>
+    <p class="na-hook">A portaria está pronta, mas o bot ainda depende de você para ligar. Próxima aula: quem liga o bot sozinho e o religa quando ele cai.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Proteja a rede e as credenciais<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Firewall filtra conexões de rede. Para long polling, o bot precisa sair para HTTPS; não precisa expor uma porta de bot à internet. Antes de ativar UFW, libere a porta SSH realmente usada e confira regras locais e do <span class="gterm" data-def="Empresa que oferece um modelo de IA. Uma central reúne modelos de vários provedores num lugar só." data-gl="provedores">provedor</span>. Restrinja o .env com chmod 600 e deixe-o fora do Git.</p><h3>Por que aprender</h3><p>Abrir todas as portas para “fazer funcionar” amplia o risco sem diagnosticar a causa. Se o processo não responde, rede de saída, token e execução merecem checagens distintas.</p><h3>Conceitos-chave</h3><p>Entrada e saída; porta SSH; regra de firewall; permissões de arquivo.</p><h4>Na prática</h4><p>Se SSH usa a porta 22, <span class="gterm" data-def="Comando que executa a instrução seguinte com permissão de administrador. Pede a sua senha." data-gl="sudo">sudo</span> ufw allow 22/tcp pode ser apropriado. Se usa outra porta, a regra precisa mudar. Só execute sudo ufw enable após testar a configuração e o acesso de recuperação.</p><h4>✓ Faça</h4><p>Liste portas realmente necessárias no plano. Registre quais comandos variam por provedor e nunca trate o exemplo de porta como universal.</p><h4>✗ Evite</h4><p>Misturar a cópia de treino com arquivos privados ou trabalho em produção.</p><figure class="comp-fig"><ul><li>SSH com chave</li><li>Firewall</li><li>Credenciais fora do repo</li><li>Rotina de cuidado</li></ul><figcaption>Proteção é camada, não comando único. A rotina de cuidado é a que mais falta.</figcaption></figure></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-45">← aula anterior</a><a class="next" href="#aula-47">próxima aula →</a></nav>
+<p class="aula-pe">Aula 46 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-46">
+[
+  {"front":"O bot usa long polling. Quantas portas de entrada ele precisa na VPS?","back":"Nenhuma para o bot. Ele sai para perguntar ao Telegram. A única entrada necessária é a do SSH."},
+  {"front":"A sua VPS usa o SSH na porta 2222. O que muda no exemplo sudo ufw allow 22/tcp?","back":"O número: a regra precisa liberar a porta 2222, e isso antes de ligar o firewall."},
+  {"front":"O log mostra \"Falha HTTP 401 no Telegram\". Você abre mais portas?","back":"Não. O 401 aponta para o token. Confira o token no .env; a rede não é a causa."}
+]
+</script>
+</section>

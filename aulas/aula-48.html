@@ -1,0 +1,154 @@
+<section class="view" id="v-aula-48" data-aula="48" data-tempo="16min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 8 · Aula 6 de 6</p>
+  <h1>Simulado de incêndio: <em>só vale o que foi ensaiado</em></h1>
+  <figure class="cena"><img src="assets/img/aula-48.webp" width="1280" height="720" alt="Num pátio de escola ensolarado, a coordenadora segura uma prancheta e um cronômetro durante um simulado de incêndio, enquanto a professora ao lado conta os alunos em fila perto do portão de saída."></figure>
+  <p class="promise">Você consegue fazer um <span class="gterm" data-gl="backup" data-def="Cópia de segurança dos arquivos, guardada em outro lugar para recuperar se algo se perder.">backup</span> do vendas.csv, o arquivo de dados do bot de treino. Depois, restaurar a cópia numa pasta separada e provar, com um comando e com o total, que ela está inteira.</p>
+  <p class="why">Sem ninguém olhando, um serviço pode ficar parado por dias. Sem teste de restauração, a cópia pode estar incompleta, e você só descobre no dia em que precisa dela. A promessa real é uma rotina que se recupera, não uma máquina que nunca falha.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Operar é uma rotina: supervisão, atualização, <b>checagem de fora</b>, cópias e restauração testada.</li>
+      <li>Backup só vale <b>depois de restaurado</b> e conferido.</li>
+      <li>O projeto fecha com <b>cinco evidências</b>, e o que não foi feito é declarado.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Máquina ligada não é serviço funcionando</h2>
+  <p>O <span class="gterm" data-gl="systemd" data-def="Parte do Linux que liga, vigia e religa programas sozinha, inclusive depois de reiniciar a máquina.">systemd</span> religa o bot, mas não avisa ninguém se ele ficar calado. Por isso existe a checagem externa: alguém, de fora da <span class="gterm" data-gl="vps" data-def="Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar.">VPS</span>, confere se o serviço responde.</p>
+  <p>Uma verificação diária simples registra duas coisas: se o <span class="gterm" data-gl="bot" data-def="Programa que conversa por um aplicativo de mensagens e responde sozinho, seguindo as regras que você define.">bot</span> respondeu e quanto espaço sobra no disco. Na VPS, o comando <code>df -h /</code> mostra o espaço usado.</p>
+  <p data-ex="coordenadora">Denise manda /status pelo celular toda manhã, antes da reunião das oito. Anota a hora da resposta e, uma vez por semana, o espaço em disco.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Verificação diária · [data]</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> /status pelo <span class="gterm" data-gl="telegram" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7.">Telegram</span>: respondeu às [hora]</div>
+        <div class="item doc"><span class="pin">2</span> Espaço em disco: [percentual] usado</div>
+        <div class="item doc"><span class="pin">3</span> Conferido por: Denise</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>De fora: se o celular recebe a resposta, o caminho inteiro funciona.</span></li>
+      <li><span class="pin">2</span><span>Disco cheio para qualquer serviço; melhor ver antes.</span></li>
+      <li><span class="pin">3</span><span>Um nome: a checagem é de alguém.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Cópia fora da máquina, segredo fora da cópia</h2>
+  <p>Guarde as cópias dos dados fora da VPS: por exemplo, uma pasta protegida no Drive da escola ou um disco externo. Se a máquina some, a cópia não pode ir junto. Defina também a retenção: por quanto tempo cada cópia fica guardada.</p>
+  <p>O <span class="gterm" data-gl="env" data-def="Arquivo que guarda chaves e senhas fora do código. Nunca vai para o Git, para um pedido ou para um print.">.env</span> com o <span class="gterm" data-gl="token-do-bot" data-def="Senha que o Telegram gera para o seu bot. Quem tem o token controla o bot; por isso ele fica no .env.">token do bot</span> tem tratamento privado. Ele não entra numa cópia que outras pessoas acessam.</p>
+  <p data-ex="professora">Lúcia guardava a cópia dos dados da turma na mesma VPS. Passou a guardar num lugar protegido, fora dela, com três cópias mensais. O .env ficou de fora.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Na mesma VPS</span><p><b>Onde:</b> uma pasta ao lado do bot.</p><p><b>Se a máquina some:</b> a cópia some junto.</p><p><b>Segredo:</b> o .env foi junto na cópia.</p></div>
+      <div class="depois"><span class="rot">Fora da VPS</span><p><b>Onde:</b> um lugar externo e protegido.</p><p><b>Se a máquina some:</b> os dados voltam.</p><p><b>Segredo:</b> o .env tratado à parte; retenção de três meses escrita no plano.</p></div>
+      <p class="saldo"><b>Saldo:</b> perder a VPS deixa de ser perder os dados.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Backup só vale depois do ensaio</h2>
+  <p>Um simulado de incêndio prova que a escola sai do prédio. O teste de restauração prova que a cópia volta. Um backup só está validado quando você restaurou e conferiu o conteúdo.</p>
+  <p>O bot de treino do módulo 7 soma os valores de <code>vendas.csv</code>, um arquivo de vendas fictícias, quando recebe /relatorio. O teste mensal restaura esse arquivo numa pasta separada e compara com o original. O <span class="gterm" data-gl="diff" data-def="Comparação que mostra, linha por linha, o que mudou num arquivo.">diff</span> mostra as diferenças; se não mostra nada, os dois são iguais.</p>
+  <p data-ex="coordenadora">No primeiro teste, a cópia de Denise estava vazia: o comando de cópia apontava para a pasta errada. O ensaio achou o erro antes de uma perda real.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta bot do kit</span></div>
+<pre><code><span class="pr">$</span> cp ~/copias-oswork/vendas-copia-1.csv ~/restauracao-teste/vendas.csv
+<span class="pr">$</span> diff vendas.csv ~/restauracao-teste/vendas.csv
+<span class="pr">$</span> cat ~/restauracao-teste/vendas.csv
+<span class="out">produto,valor
+Caderno,35.50
+Caneta,9.50
+Agenda,55.00</span></code></pre>
+<p class="tela-nota">O diff não respondeu nada: a cópia é igual ao original. Some os valores: 100,00, o mesmo total que o /relatorio do bot mostra.</p></div>
+  <figcaption>Duas provas: o diff em silêncio e o total conferido à mão.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O silêncio do diff parece que "não aconteceu nada". É o contrário: ele só fala quando acha diferença. Se aparecer "No such file or directory", a pasta ou o nome da cópia estão diferentes; confira com ls.</p></div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Cinco evidências fecham o projeto</h2>
+  <p>O projeto do curso termina com cinco evidências: resposta autorizada, bloqueio de desconhecido, reinício, <span class="gterm" data-gl="log" data-def="Registro do que um programa fez, linha por linha, com data e hora. É onde se procura a causa de um erro.">log</span> sem token e restauração conferida.</p>
+  <p>Sem uma segunda conta no Telegram, o bloqueio de desconhecido pode ser provado pelo teste do kit, <code>python3 bot.py --self-test</code>. Para o log sem token, leia o journalctl e confira que o token não aparece. Se alguma etapa não foi executada, declare. "Não fiz" escrito vale mais que um "feito" que ninguém conferiu.</p>
+  <p data-ex="coordenadora">Denise ainda não tinha alugado a VPS. Registrou as evidências que conseguia no notebook e escreveu, na linha do reinício, "não executado: sem VPS".</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>plano-vps.md · Verificações observadas</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Resposta autorizada: /status respondeu às [hora]</div>
+        <div class="item doc"><span class="pin">2</span> Bloqueio de desconhecido: self-test "OK: 11 cenários offline"</div>
+        <div class="item doc"><span class="pin">3</span> Reinício do serviço: não executado: sem VPS</div>
+        <div class="item doc"><span class="pin">4</span> Logs sem token: lidos em [data]; nenhum token</div>
+        <div class="item doc"><span class="pin">5</span> Backup restaurado em pasta separada: diff igual; total 100,00</div>
+      </div>
+    </div>
+    <figcaption>Uma linha por evidência, sem segredos. A linha 3 declara o que falta, em vez de esconder.</figcaption>
+  </figure>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Faça e restaure um backup de verdade</h3>
+  <p class="pgoal">Pronto quando o diff não mostrar nada e o total da cópia restaurada for 100,00. Cerca de 10 minutos, no computador, no terminal.</p>
+  <p class="psafe">Você só copia um arquivo de dados fictícios; nada é apagado. Aqui a cópia fica no seu computador; numa VPS de verdade, ela iria para fora da máquina. No Windows, use o terminal do <span class="gterm" data-gl="wsl" data-def="Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux.">WSL</span>, do módulo 3: no PowerShell o diff responde diferente.</p>
+  <p><b>Onde está o arquivo:</b> <code>vendas.csv</code> vem na pasta bot do kit do curso, o oswork-kit.zip da <a href="https://inematds.github.io/oswork/materiais/" target="_blank" rel="noopener">página de materiais do OSWork</a>. As linhas abaixo supõem o kit descompactado em <code>~/projetos/oswork-kit</code>, como na aula anterior; se estiver em outro lugar, troque só a primeira linha. O <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> precisa responder vendas.csv ao ls.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/oswork-kit/bot
+ls vendas.csv
+mkdir -p ~/copias-oswork ~/restauracao-teste
+cp vendas.csv ~/copias-oswork/vendas-copia-1.csv
+cp ~/copias-oswork/vendas-copia-1.csv ~/restauracao-teste/vendas.csv
+diff vendas.csv ~/restauracao-teste/vendas.csv
+cat ~/restauracao-teste/vendas.csv</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Rode as cinco primeiras linhas: entrar na pasta, conferir o arquivo, criar as pastas, copiar e restaurar.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Rode o diff e confira o silêncio. Rode o cat e some os valores.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>No plano de VPS, preencha a linha "Backup restaurado em pasta separada" com a data e o resultado.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de provar, e não só supor, que a sua cópia volta inteira.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Simulado</h3>
+    <ol>
+      <li><span><b>De fora</b>checagem diária: o bot respondeu e o disco tem espaço.</span></li>
+      <li><span><b>Cópia</b>fora da VPS, com retenção escrita e sem o .env.</span></li>
+      <li><span><b>Ensaio</b>restaurar em pasta separada; diff em silêncio e total conferido.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você terminou o OSWork. Você sai com uma pasta organizada com instruções verificáveis, uma <span class="gterm" data-gl="skill" data-def="Procedimento empacotado que o agente pode reusar: instruções, passos e como conferir, guardados numa pasta.">Skill</span>, o histórico no <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span>, um bot restrito e um plano de operação supervisionada numa VPS.</p>
+    <p class="na-action">Complete as cinco linhas de Verificações observadas do plano, com o que você executou e "não executado" no resto. Depois marque na agenda o próximo teste de restauração, daqui a um mês.</p>
+    <p class="na-hook">Daqui em diante, o curso vira rotina: a checagem diária, o ensaio mensal e o plano atualizado a cada mudança. Quando quiser ir além, o laboratório do módulo, no material complementar, leva da pasta local ao serviço supervisionado.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Disponibilidade exige rotina de cuidado<small>Texto completo do tópico no OSWork v2 e fechamento do módulo. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Operação contínua combina supervisão, atualização, monitoramento, backups e restauração testada. Faça cópias dos dados fora da máquina, proteja credenciais e defina retenção. Um backup só foi validado quando você restaurou uma cópia e verificou o conteúdo.</p><h3>Por que aprender</h3><p>Sem monitoramento, um serviço pode ficar parado durante dias. Sem teste de restauração, a cópia pode estar incompleta. A promessa real é uma rotina recuperável, não uma máquina infalível.</p><h3>Conceitos-chave</h3><p>Checagem externa; <span class="gterm" data-def="Registro do que um programa fez, linha por linha, com data e hora. É onde se procura a causa de um erro." data-gl="log">logs</span>; backup fora da VPS; restauração; limite de gasto.</p><h4>Na prática</h4><p>Uma verificação diária registra resposta do bot e espaço em disco. Um teste mensal restaura vendas.<span class="gterm" data-def="Planilha em texto simples, com os valores separados por vírgula. Abre no Excel ou no Google Planilhas." data-gl="csv">csv</span> em uma pasta separada e compara o total. Credenciais seguem tratamento privado, sem entrar no backup público.</p><h4>Experimente agora</h4><p>Finalize o projeto com cinco evidências: resposta autorizada, bloqueio de desconhecido, reinício, log sem token e restauração conferida. Declare qualquer etapa não executada.</p></section><section class="comp-sec"><h3>Laboratório do módulo: Da pasta local a um serviço supervisionado</h3><p>Use arquivos fictícios e uma <span class="gterm" data-def="Pasta só com arquivos fictícios ou cópias, criada para testar a IA sem risco para o material verdadeiro." data-gl="pasta-de-treino">pasta de treino</span>. As práticas com <span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">instalação</span>, Telegram ou VPS podem exigir tempo adicional para cadastro e configuração.</p><ol><li>Escolha uma VPS <span class="gterm" data-def="Versão popular do Linux, comum em servidores." data-gl="ubuntu">Ubuntu</span> suportada, defina orçamento e confirme acesso ao <span class="gterm" data-def="Terminal da VPS aberto pelo painel do provedor, no navegador, sem SSH. É a rota de volta quando o SSH falha." data-gl="console-de-recuperacao">console de recuperação</span>.</li><li>Crie usuário de trabalho, teste acesso <span class="gterm" data-def="Forma segura de abrir o terminal de outro computador pela internet." data-gl="ssh">SSH</span> em uma segunda sessão e só então configure o <span class="gterm" data-def="Filtro que decide quais conexões de rede podem entrar na máquina ou sair dela." data-gl="firewall">firewall</span>.</li><li>Transfira o projeto sem credenciais pelo Git e configure o .env privado na VPS.</li><li>Adapte a <span class="gterm" data-def="Arquivo que diz ao systemd qual programa iniciar, com qual usuário e em qual pasta." data-gl="unidade">unidade</span> systemd, inicie o serviço e teste resposta, reinício controlado, logs e restauração de backup.</li></ol><h4>VPS Ubuntu · adapte <span class="gterm" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config." data-gl="caminho">caminhos</span> antes</h4><p>Leia o bloco antes de usar. Campos como Seu Nome e usuario@ip-da-vps são exemplos para adaptar; comandos administrativos pertencem somente ao seu ambiente de treino.</p><pre><code>sudo apt update
+sudo apt upgrade
+sudo apt install git python3
+# Adapte a unidade do kit ao usuário e caminho reais.
+sudo systemctl daemon-reload
+sudo systemctl enable --now oswork-bot
+systemctl status oswork-bot --no-pager
+journalctl -u oswork-bot -n 50 --no-pager</code></pre><h4>Critério de pronto</h4><p>Preparar um plano de implantação, supervisão, backup e verificação do serviço. Registre o arquivo produzido, o teste executado e o resultado observado.</p></section><section class="comp-sec"><h3>Critérios para revisar sua entrega</h3><p>Use esta rubrica depois do laboratório. Cada linha pede uma evidência; marcar leitura não significa que a prática foi executada.</p><ul><li><b>Escopo</b> — A entrega corresponde ao objetivo desta aula. <i>Se não passou:</i> Reduza a tarefa e nomeie um único resultado.</li><li><b>Entradas</b> — Você sabe quais arquivos ou dados foram usados. <i>Se não passou:</i> Liste as fontes e remova material sem relação.</li><li><b>Execução</b> — O procedimento foi realizado no ambiente de treino. <i>Se não passou:</i> Diferencie o que foi planejado do que foi feito.</li><li><b>Conferência</b> — Um resultado foi comparado com uma referência. <i>Se não passou:</i> Abra o arquivo ou repita a consulta verificável.</li><li><b>Segredos</b> — Nenhum token, senha ou dado privado foi compartilhado. <i>Se não passou:</i> Revise a cópia de trabalho antes de qualquer envio.</li><li><b>Continuidade</b> — Outra pessoa consegue encontrar o próximo passo. <i>Se não passou:</i> Atualize <span class="gterm" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado." data-gl="readme">README</span> e registre uma pendência concreta.</li></ul></section><section class="comp-sec"><h3>Confira o que ficou</h3><p><span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">Instalar</span> <span class="gterm" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3." data-gl="codex">Codex</span> numa VPS garante um <span class="gterm" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem." data-gl="agente">agente</span> ativo 24 horas?</p><details class="mais"><summary>Ver resposta comentada</summary><p>Não. É preciso um serviço ou agendador, processo supervisionado, credenciais válidas, rede e monitoramento.</p><p>Se sua resposta foi diferente, volte ao tópico correspondente e escreva a diferença em uma frase. A checagem não bloqueia seu estudo.</p></details><h4>Resumo do módulo</h4><ul><li><span class="gterm" data-def="Computador que fica ligado prestando um serviço para outros, como responder às mensagens de um bot." data-gl="servidor">Servidor</span> remoto; recursos; custo recorrente; responsabilidade operacional.</li><li><span class="gterm" data-def="Metade pública do par de chaves do SSH. Fica cadastrada na VPS; a outra metade, a chave privada, fica só no seu computador e nunca é colada em lugar nenhum." data-gl="chave-publica">Chave pública</span>; <span class="gterm" data-def="Sequência curta que identifica a VPS. Na primeira conexão por SSH, você confere se ela bate com a que o provedor da VPS informa." data-gl="impressao-digital">impressão digital</span>; usuário; <span class="gterm" data-def="Comando que executa a instrução seguinte com permissão de administrador. Pede a sua senha." data-gl="sudo">sudo</span>; recuperação.</li><li><span class="gterm" data-def="Instalador de programas do Ubuntu, usado no terminal." data-gl="apt">apt</span> update; apt upgrade; dependência; ambiente virtual quando necessário.</li><li>Entrada e saída; <span class="gterm" data-def="Número que identifica um serviço dentro da máquina. O SSH costuma usar a porta 22, mas a sua VPS pode usar outra." data-gl="porta">porta</span> SSH; regra de firewall; permissões de arquivo.</li><li>Unidade; usuário de serviço; <span class="gterm" data-def="Outro nome para pasta, usado no terminal." data-gl="diretorio">diretório</span>; reinício; journal.</li><li>Checagem externa; logs; backup fora da VPS; restauração; limite de gasto.</li></ul></section><section class="comp-sec"><h3>Consulte a fonte</h3><p class="comp-fontes">Ferramentas verificadas em 20/09/2026; nomes de telas e disponibilidade podem mudar.</p><ul class="comp-fontes"><li><a href="https://documentation.ubuntu.com/server/how-to/security/firewalls/" target="_blank" rel="noopener">Ubuntu: segurança e firewall</a></li></ul></section>
+<p class="comp-termos">Termos desta seção: <span class="gterm" data-def="Comando do systemd para ligar, desligar e ver o estado de um serviço." data-gl="systemctl">systemctl</span>, <span class="gterm" data-def="Comando que mostra o log dos serviços do systemd." data-gl="journalctl">journalctl</span>, <span class="gterm" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config." data-gl="caminho">caminho</span>.</p></details><!--/COMP-->
+<nav class="lnav"><a href="#aula-47">← aula anterior</a><a class="next" href="#trilha">voltar à trilha →</a></nav>
+<p class="aula-pe">Aula 48 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-48">
+[
+  {"front":"O systemd religa o bot sozinho. Então por que fazer uma checagem diária de fora?","back":"Porque ele não avisa ninguém se o bot ficar calado. Só a checagem de fora mostra que o caminho inteiro responde."},
+  {"front":"A cópia existe há seis meses e nunca foi restaurada. Ela está validada?","back":"Não. Só depois de restaurar numa pasta separada e conferir o conteúdo."},
+  {"front":"Você não conseguiu testar o reinício. O que escreve no relatório final?","back":"\"Não executado\", com o motivo. Declarar a lacuna vale mais que um feito sem conferência."},
+  {"front":"O diff respondeu com duas linhas. O que isso diz sobre a cópia?","back":"Que ela é diferente do original. Descubra qual está certo antes de confiar na cópia."}
+]
+</script>
+</section>

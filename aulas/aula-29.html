@@ -1,0 +1,146 @@
+<section class="view" id="v-aula-29" data-aula="29" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 5 · Aula 5 de 6</p>
+  <h1>Depois do escorregão, <em>a fita no degrau</em></h1>
+  <figure class="cena"><img src="assets/img/aula-29.webp" width="1280" height="720" alt="Uma professora de ciências, de jaleco, ajoelhada na escada da entrada do laboratório, cola uma fita antiderrapante amarela num degrau, com um caderno aberto ao lado."></figure>
+  <p class="promise">Você consegue registrar uma falha no arquivo falhas.md, com sintoma, causa, menor correção e verificação, e escrever a checagem que pegaria o problema antes da próxima execução.</p>
+  <p class="why">Quando o resultado sai errado, a vontade é refazer tudo ou trocar de ferramenta. Isso gasta horas e muitas vezes esconde um problema simples. Na escola, ninguém reconstrói a escada depois de um escorregão: põe a fita no degrau e confere se ficou firme.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Registre <b>sintoma, causa observada, menor correção e verificação</b>.</li>
+      <li>Diga se a falha foi <b>de pedido ou de infraestrutura</b>.</li>
+      <li>A correção vai para onde <b>a próxima execução lê</b>.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Sintoma não é causa</h2>
+  <p>"O relatório saiu vazio" é o sintoma: o que você viu. A causa é o motivo que você observou, como "a planilha estava sem registros". Anote os dois separados.</p>
+  <p>Depois, a menor correção e como verificar que ela funciona. São quatro colunas de conteúdo, mais a data e o tipo, numa linha só de uma tabela em <span class="gterm" data-gl="markdown" data-def="Jeito de escrever texto simples com marcas leves, como # para título e - para lista. Os arquivos terminam em .md.">Markdown</span>.</p>
+  <p data-ex="professora">No projeto de treino, Lúcia viu o relatório sair vazio. Antes de mexer em qualquer coisa, anotou o sintoma e abriu a planilha de entrada: estava sem nenhum registro.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>~/projetos/config/falhas.md</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Sintoma: relatório vazio</div>
+        <div class="item doc"><span class="pin">2</span> Causa observada: planilha sem registros</div>
+        <div class="item doc"><span class="pin">3</span> Menor correção: conferir a quantidade de linhas antes de gerar</div>
+        <div class="item doc"><span class="pin">4</span> Verificação: planilha vazia gera aviso, não relatório</div>
+        <div class="item doc">Tipo: infraestrutura</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O que você viu.</span></li>
+      <li><span class="pin">2</span><span>O motivo que você constatou, não o que supõe.</span></li>
+      <li><span class="pin">3</span><span>A proteção pequena.</span></li>
+      <li><span class="pin">4</span><span>Como saber que a proteção funciona.</span></li>
+    </ol>
+    <figcaption>A linha de exemplo do curso. No arquivo, ela vira uma linha de tabela, com a data e o tipo junto dessas quatro. Não fez o módulo 4? Crie falhas.md em ~/projetos/config.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Falha de pedido ou de infraestrutura</h2>
+  <p>Falha de pedido é quando o objetivo estava ambíguo ou faltou informação. Falha de infraestrutura é quando o texto estava bom, mas algo fora dele falhou: um arquivo ausente ou vazio, um processo que parou.</p>
+  <p>A correção muda conforme o tipo. Pedido se corrige no texto. Infraestrutura se corrige com uma checagem.</p>
+  <p data-ex="coordenadora">Denise teve duas falhas na mesma semana. O resumo das atas veio longo demais: ela não tinha dito o tamanho. O relatório de frequência não saiu: a planilha não estava na pasta.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="neutro"><span class="rot">Pedido</span><p><b>Sintoma:</b> resumo das atas com duas páginas.</p><p><b>Causa:</b> o pedido não dizia o tamanho.</p><p><b>Correção:</b> "até dez linhas".</p></div>
+      <div class="neutro"><span class="rot">Infraestrutura</span><p><b>Sintoma:</b> relatório de frequência não saiu.</p><p><b>Causa:</b> a planilha não estava na pasta.</p><p><b>Correção:</b> conferir se o arquivo existe antes de começar.</p></div>
+    </div>
+    <figcaption>Os dois tipos são normais. Saber qual é o tipo diz onde mexer.</figcaption>
+  </figure>
+  <div class="quiz" data-answer="b">
+    <p class="qk">Teste-se</p>
+    <p class="q">O agente usou a lista de alunos do ano passado porque o pedido dizia só "use a lista de alunos". Que tipo de falha é?</p>
+    <button class="opt" data-k="a" data-fb="A máquina fez o que o texto deixou aberto; nada quebrou.">De infraestrutura, a máquina</button>
+    <button class="opt" data-k="b" data-fb="Sim: o pedido era ambíguo; a correção é dizer qual lista.">De pedido, estava ambíguo</button>
+    <button class="opt" data-k="c" data-fb="O modelo seguiu o texto; o problema estava no texto.">Do modelo, que é ruim</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>A menor correção, não a reconstrução</h2>
+  <p>Refazer o projeto inteiro pode mascarar um problema simples. Uma proteção pequena é mais fácil de testar e de manter.</p>
+  <p data-ex="professora">Diante do relatório vazio do passo 1, com a planilha em <span class="gterm" data-gl="csv" data-def="Planilha em texto simples, com os valores separados por vírgula. Abre no Excel ou no Google Planilhas.">CSV</span> sem linhas, Lúcia pensou em trocar de modelo. A correção foi outra: conferir o cabeçalho e a quantidade de registros antes de gerar o relatório.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Reconstrução</span><p>Trocar de modelo, reescrever a Skill, refazer as pastas.</p><p>Duas horas, e a planilha vazia continua quebrando o próximo relatório.</p></div>
+      <div class="depois"><span class="rot">Proteção pequena</span><p>Uma linha nova: "confira o cabeçalho e a quantidade de registros antes de gerar".</p><p>Planilha vazia agora gera um aviso.</p></div>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>A proteção vai para onde a próxima execução lê</h2>
+  <p>O registro só ensina alguma coisa quando muda o procedimento seguinte. Por isso a proteção entra no <span class="gterm" data-gl="agents-md" data-def="Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir.">AGENTS.md</span> ou na <span class="gterm" data-gl="skill" data-def="Procedimento empacotado que o agente pode reusar: instruções, passos e como conferir, guardados numa pasta.">Skill</span>, que o <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span> lê de novo a cada tarefa.</p>
+  <p>No fim da prática, o <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span> mostra se a regra funcionou. Antes de escrever a regra, veja a checagem funcionar você mesma no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
+  <p data-ex="coordenadora">Denise acrescentou ao AGENTS.md da frequência: "Antes de ler, confira se a planilha existe. Se faltar, pare e diga qual arquivo falta." Na semana seguinte, o agente parou e avisou.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code>
+<span class="pr">$</span> cd ~/projetos/meu-primeiro-projeto
+<span class="pr">$</span> ls entradas/
+<span class="out">vendas.csv</span>
+<span class="pr">$</span> ls entradas/vendas-outubro.csv
+<span class="out">ls: cannot access 'entradas/vendas-outubro.csv': No such file or directory</span></code></pre>
+<p class="tela-nota">O primeiro ls lista o que existe. O segundo procura um arquivo que não está lá; a resposta, em inglês, diz "não foi possível acessar: arquivo ou pasta não existe". É isso que a checagem pega antes da execução.</p></div>
+  <figcaption>Na sua pasta, a lista de entradas/ pode ter outros arquivos. O que importa é a resposta quando o arquivo falta.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não sabe se a falha foi de pedido ou de infraestrutura? Pergunte: "se eu tivesse escrito melhor, teria dado certo?" Se sim, foi de pedido. Se o texto estava bom e algo da máquina faltou, foi de infraestrutura. Se foram os dois, marque os dois.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Registre uma falha de arquivo ausente e a checagem</h3>
+  <p class="pgoal">Pronto quando falhas.md tiver a linha nova, a regra estiver no AGENTS.md e o Codex parar avisando qual arquivo falta. Cerca de 12 minutos, no computador.</p>
+  <p class="psafe">No arquivo, as barras verticais desenham uma tabela: é assim que o Markdown escreve tabelas, e o editor mostra desse jeito mesmo. A falha é fictícia e os comandos só listam; nada é apagado. Se a sua pasta entradas/ não existir, o primeiro ls também avisa que não existe: anote isso como uma falha real e crie a pasta pelo gerenciador de arquivos.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">| Data | Sintoma | Causa observada | Menor correção | Verificação | Pedido ou infraestrutura |
+|---|---|---|---|---|---|
+| &lt;data de hoje&gt; | Relatório de outubro não saiu | &lt;ex.: entradas/vendas-outubro.csv não existe&gt; | &lt;ex.: conferir se o arquivo existe antes de ler&gt; | &lt;ex.: arquivo ausente gera aviso e parada&gt; | Infraestrutura (exemplo fictício) |</pre></div>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Antes de ler um arquivo de entradas/, confira se ele existe. Se faltar, pare e diga qual arquivo falta.</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>No terminal, rode os comandos do quadro do passo 4 e veja a resposta para o arquivo que falta.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Abra ~/projetos/config/falhas.md no editor. Se ele já tem a tabela, como o do módulo 4, cole só a última linha do molde no fim. Se está vazio, cole as três linhas. Preencha as lacunas.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Cole a regra do segundo molde como uma linha nova no AGENTS.md da pasta de treino e salve. Só depois digite codex, para ele ler a regra nova, e peça "gere o relatório de entradas/vendas-outubro.csv". O arquivo não existe de propósito: confira que ele para, diz qual arquivo falta e não inventa números.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de transformar uma falha numa proteção pequena, registrada onde a próxima execução vai ler.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Falha vira proteção</h3>
+    <ol>
+      <li><span><b>Quatro colunas</b>sintoma, causa observada, menor correção, verificação; mais data e tipo.</span></li>
+      <li><span><b>Tipo</b>pedido se corrige no texto; infraestrutura, com checagem.</span></li>
+      <li><span><b>Onde</b>no AGENTS.md ou na Skill, que a próxima execução lê.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já transforma um erro numa proteção pequena, em vez de refazer tudo.</p>
+    <p class="na-action">Hoje, lembre da última vez que um resultado da IA saiu errado no trabalho. Escreva a linha dele: sintoma, causa, menor correção, verificação.</p>
+    <p class="na-hook">Na próxima aula: a Skill funcionou uma vez. Funciona sempre? Você vai testá-la com um caso normal, um incompleto e um fora do combinado.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Falhas viram proteções pequenas<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Registre o sintoma, a causa observada, a menor correção e como verificar. Diferencie falha de pedido, como objetivo ambíguo, de falha de infraestrutura, como processo encerrado. O registro só gera aprendizado operacional quando altera o procedimento seguinte.</p><h3>Por que aprender</h3><p>Refazer todo o projeto pode mascarar um problema simples. Uma proteção pequena, como verificar a existência de um arquivo antes de ler, costuma ser mais fácil de testar e manter.</p><h3>Conceitos-chave</h3><p>Sintoma não é causa; correção mínima; prevenção; evidência.</p><h4>Na prática</h4><p>O relatório saiu vazio porque o CSV estava sem linhas. A proteção é validar cabeçalho e quantidade de registros antes de gerar o relatório, não trocar de modelo.</p><h4>Experimente agora</h4><p>No falhas.md, crie uma linha para um erro fictício de arquivo ausente. Escreva uma checagem que detectaria o problema antes da execução.</p><figure class="comp-fig"><ul><li>Falha observada</li><li>Proteção pequena</li><li>Memória atualizada</li></ul><figcaption>Falha não vira reescrita. Vira uma proteção pequena registrada onde a próxima execução vai ler.</figcaption></figure></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-28">← aula anterior</a><a class="next" href="#aula-30">próxima aula →</a></nav>
+<p class="aula-pe">Aula 29 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-29">
+[
+  {"front":"O relatório saiu com o total errado e um colega sugere trocar de modelo. O que você faz antes?","back":"Registra o sintoma e procura a causa observada. Muitas vezes a menor correção é uma checagem, não outro modelo."},
+  {"front":"O agente resumiu a ata para a direção, mas você queria para as famílias, e o pedido não dizia. Que tipo de falha é e onde se corrige?","back":"De pedido. Corrige-se no texto: dizer para quem é o resumo."},
+  {"front":"Você anotou a falha em falhas.md, mas ela se repetiu na semana seguinte. O que faltou?","back":"Levar a proteção para o AGENTS.md ou para a Skill, que a próxima execução lê."}
+]
+</script>
+</section>

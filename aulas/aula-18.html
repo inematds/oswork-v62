@@ -1,0 +1,161 @@
+<section class="view" id="v-aula-18" data-aula="18" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 3 · Aula 6 de 6</p>
+  <h1>Permissão pequena e <em>um ponto de retorno</em></h1>
+  <figure class="cena"><img src="assets/img/aula-18.webp" width="1280" height="720" alt="Uma coordenadora de óculos, diante do quadro de chaves da secretaria, tira uma única chave de um molho grande para entregar a uma colega mais nova."></figure>
+  <p class="promise">Você consegue guardar uma cópia da pasta de treino e pedir ao <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span> duas regras novas no AGENTS.md. Depois, você compara as duas versões e vê que só esse arquivo mudou.</p>
+  <p class="why">Na aula passada, o agente criou um arquivo. Se tivesse criado o errado, ou apagado outro, você saberia dizer o que existia antes? Voltar atrás exige ter guardado o "antes" e comparar.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Dê ao agente <b>a menor permissão</b> que dá conta da tarefa.</li>
+      <li>Regra escrita orienta; permissão do programa <b>limita de fato</b>.</li>
+      <li>Antes de mudar, guarde uma cópia. Depois, <b>compare</b>.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>A chave de uma sala, não a chave mestra</h2>
+  <p>Quem vai usar o laboratório recebe a chave do laboratório, não o molho inteiro. Com um <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span> é igual: as permissões controlam o que ele alcança nos arquivos, na internet e nos comandos.</p>
+  <p>Suba um degrau por vez. Ler arquivos tem risco baixo; escrever, médio; executar comandos, alto. Cada degrau amplia o estrago possível.</p>
+  <p data-ex="coordenadora">Denise deu à estagiária só a chave da sala de leitura. Com o Codex, começou pelo mesmo princípio: acesso só à pasta de treino.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Degraus de permissão</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Ler arquivos · risco baixo</div>
+        <div class="item doc"><span class="pin">2</span> Escrever arquivos · risco médio</div>
+        <div class="item doc"><span class="pin">3</span> Executar comandos · risco alto</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O pedido de leitura da aula 17 ficou aqui.</span></li>
+      <li><span class="pin">2</span><span>Criar o plano.md subiu para cá.</span></li>
+      <li><span class="pin">3</span><span>Só com um ponto de retorno guardado.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Regra escrita orienta; permissão limita</h2>
+  <p>O que você escreve no AGENTS.md orienta o comportamento do agente. Mas é texto: não impede nada tecnicamente. Quem impede são as permissões do programa.</p>
+  <p>No Codex, o comando <code>/permissions</code> mostra e troca o que ele pode fazer. Comece pelo mais restrito que dê conta da tarefa. Não tire todas as proteções para contornar um erro.</p>
+  <p data-ex="professora">O Codex pediu à Lúcia acesso à internet para consultar uma documentação. Ela avaliou esse pedido sozinho, sem liberar também apagar arquivos ou enviar mensagens.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="neutro"><span class="rot">Regra no AGENTS.md</span><p><b>Exemplo:</b> "Não envie nem publique nada."</p><p><b>O que faz:</b> orienta o agente sobre o que você quer.</p></div>
+      <div class="bom"><span class="rot">Permissão do programa</span><p><b>Exemplo:</b> acesso só à pasta de treino.</p><p><b>O que faz:</b> limita o que ele consegue fazer de fato.</p></div>
+    </div>
+    <figcaption>Os dois são necessários e se completam. Um não substitui o outro.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Guarde o "antes" com uma cópia</h2>
+  <p>O comando <code>cp -r</code> copia uma pasta inteira, com tudo dentro. Faça a cópia antes da mudança, com um nome que diga o que ela é.</p>
+  <p>Mais adiante, no módulo 5, o <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span> faz isso de um jeito mais completo. Por enquanto, a cópia já dá um ponto de retorno.</p>
+  <p data-ex="coordenadora">Antes de autorizar a mudança no AGENTS.md, Denise copiou a pasta de treino com o final "-antes". O <code>ls</code> confirmou as duas.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> cp -r ~/projetos/meu-primeiro-projeto ~/projetos/meu-primeiro-projeto-antes
+<span class="pr">$</span> ls ~/projetos
+<span class="out">meu-primeiro-projeto  meu-primeiro-projeto-antes</span></code></pre>
+<p class="tela-nota">O <code>cp</code> não responde nada quando dá certo. Quem confirma é o <code>ls</code>: as duas pastas lado a lado.</p></div>
+  <figcaption>A pasta "-antes" não é tocada pelo agente: ela é o seu ponto de retorno.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Compare: só mudou o que devia?</h2>
+  <p>Depois da mudança, o <span class="gterm" data-gl="diff" data-def="Comparação que mostra, linha por linha, o que mudou num arquivo.">diff</span> compara a cópia com a pasta atual. Ele mostra só as diferenças, arquivo por arquivo. As linhas que começam com <code>&gt;</code> são as novas.</p>
+  <p>Se aparecer outro arquivo na comparação, o agente mexeu onde não devia. A cópia "-antes" tem a versão antiga para você recuperar.</p>
+  <p data-ex="professora">No diff de Lúcia apareceu um arquivo só, o AGENTS.md, com duas linhas novas. Era exatamente o que ela tinha autorizado.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> diff -r ~/projetos/meu-primeiro-projeto-antes ~/projetos/meu-primeiro-projeto
+<span class="out">diff -r …/meu-primeiro-projeto-antes/AGENTS.md …/meu-primeiro-projeto/AGENTS.md
+3a4,5
+&gt; - Todo resultado vem com a verificação que você observou.
+&gt; - Esta tarefa não autoriza publicar nada.</span></code></pre>
+<p class="tela-nota">Um arquivo citado, duas linhas com <code>&gt;</code>. "3a4,5" quer dizer: depois da linha 3, entraram as linhas 4 e 5.</p></div>
+  <figcaption>Nada mais apareceu: o README, a pauta e o plano ficaram iguais.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>A saída do diff parece código, mas você só precisa de duas coisas: quais arquivos aparecem e quais linhas têm <code>&gt;</code>. Não apareceu nada? Então nada mudou: veja se o Codex chegou a salvar o arquivo.</p></div>
+  <details class="mais"><summary>Como voltar um arquivo para a versão de antes</summary>
+    <p>Só se o diff mostrou uma mudança que você não autorizou. Copie o arquivo da pasta "-antes" por cima do atual. Atenção: isso substitui o AGENTS.md atual pela versão antiga.</p>
+    <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> cp ~/projetos/meu-primeiro-projeto-antes/AGENTS.md ~/projetos/meu-primeiro-projeto/AGENTS.md</code></pre>
+<p class="tela-nota">Depois, rode o diff de novo: sem diferença, a volta deu certo.</p></div></figure>
+  </details>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Mude com ponto de retorno e compare</h3>
+  <p class="pgoal">Pronto quando o diff mostrar só o AGENTS.md, com as duas linhas novas. Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">Tudo acontece na pasta de treino; a cópia "-antes" fica guardada ao lado. Não fez as aulas 16 e 17? O bloco da prática da aula 16 monta a pasta em um minuto. Se o diff mostrar outro arquivo, não apague nada: anote o que mudou e recupere pela cópia.</p>
+  <p><b>Passo 1 · cole no terminal, uma vez só</b></p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cp -r ~/projetos/meu-primeiro-projeto ~/projetos/meu-primeiro-projeto-antes
+ls ~/projetos</pre></div>
+  <p><b>Passo 2 · cole no terminal</b></p>
+  <pre><code>cd ~/projetos/meu-primeiro-projeto
+codex</code></pre>
+  <p><b>Passo 3 · cole dentro do Codex e tecle Enter</b></p>
+  <pre><code>Acrescente ao AGENTS.md estas duas linhas, sem mudar as que já existem:
+- Todo resultado vem com a verificação que você observou.
+- Esta tarefa não autoriza publicar nada.
+Não altere nenhum outro arquivo.</code></pre>
+  <p><b>Passo 4 · cole no terminal, depois de sair com /quit</b></p>
+  <pre><code>diff -r ~/projetos/meu-primeiro-projeto-antes ~/projetos/meu-primeiro-projeto</code></pre>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole o passo 1 e confira que o <code>ls</code> mostra as duas pastas. Já existia uma pasta "-antes"? Use os blocos do quadro "Já fiz esta prática antes", logo abaixo.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Cole o passo 2. No Codex, digite <code>/permissions</code> só para ler as opções, sem mudar nada, e tecle Esc para fechar. Depois, cole o passo 3 e escolha "Yes, proceed" só se a mudança for no AGENTS.md.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Saia com <code>/quit</code>, cole o passo 4 e confira: um arquivo só, duas linhas com <code>&gt;</code>.</span></label></li>
+  </ol>
+  <details class="mais"><summary>Já fiz esta prática antes</summary>
+    <p>A pasta "-antes" já existe? Use estes dois blocos no lugar dos passos 1 e 4. Eles usam o nome "-antes2".</p>
+    <pre><code>cp -r ~/projetos/meu-primeiro-projeto ~/projetos/meu-primeiro-projeto-antes2
+ls ~/projetos</code></pre>
+    <pre><code>diff -r ~/projetos/meu-primeiro-projeto-antes2 ~/projetos/meu-primeiro-projeto</code></pre>
+  </details>
+  <p class="pdone">Você acabou de fazer uma alteração verificável: sabe o que existia antes, o que mudou e como voltar.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Mudar com segurança</h3>
+    <ol>
+      <li><span><b>Permissão mínima</b>ler, escrever, executar: um degrau por vez.</span></li>
+      <li><span><b>Regra e permissão</b>uma orienta, a outra limita.</span></li>
+      <li><span><b>Antes e depois</b>cópia com cp -r, comparação com diff -r.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você fechou o módulo 3: abre o terminal, põe o Codex no computador, entra com a conta, trabalha na pasta certa e confere cada mudança.</p>
+    <p class="na-action">Quando tiver uns 30 minutos, abra o material complementar desta aula e faça o laboratório do módulo, "Primeiro projeto acompanhado". Você já fez quase tudo; ele junta os passos.</p>
+    <p class="na-hook">No próximo módulo: a casa digital do projeto, com pastas, arquivos de instrução e um lugar separado para as senhas.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Use permissões e recuperação<small>Texto completo do tópico no OSWork v2 e fechamento do módulo. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>As permissões do cliente controlam acesso a arquivos, rede e execução. Instruções em linguagem natural orientam o comportamento, mas não substituem isolamento técnico. Comece com permissões restritas à <span class="gterm" data-def="Pasta só com arquivos fictícios ou cópias, criada para testar a IA sem risco para o material verdadeiro." data-gl="pasta-de-treino">pasta de treino</span>. Não ensine a remover todas as proteções para contornar qualquer erro.</p><h3>Por que aprender</h3><p>Recuperar uma alteração exige saber o que existia antes. Git e cópias de arquivos oferecem pontos de retorno; eles serão praticados adiante. Leia o que o comando fará antes de ampliar permissões.</p><h3>Conceitos-chave</h3><p>Permissão mínima; alterações pequenas; comparação; ponto de retorno.</p><h4>Na prática</h4><p>O agente pede acesso externo para consultar a documentação. Avalie essa necessidade separadamente de permissões para apagar arquivos ou enviar mensagens.</p><h4>Experimente agora</h4><p>Escreva no <span class="gterm" data-def="Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir." data-gl="agents-md">AGENTS.md</span> que resultados devem vir com verificação observada e que a tarefa não autoriza publicar. Revise o diff quando Git estiver ativo.</p><figure class="comp-fig"><ul><li>Ler arquivos</li><li>Escrever arquivos</li><li>Executar comandos</li></ul><figcaption>Suba um degrau por vez. Cada nível amplia o estrago possível e exige um ponto de recuperação.</figcaption></figure></section><section class="comp-sec"><h3>Laboratório do módulo: Primeiro projeto acompanhado</h3><p>Use arquivos fictícios e uma pasta de treino. As práticas com <span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">instalação</span>, <span class="gterm" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7." data-gl="telegram">Telegram</span> ou <span class="gterm" data-def="Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar." data-gl="vps">VPS</span> podem exigir tempo adicional para cadastro e configuração.</p><ol><li>Prepare a pasta meu-primeiro-projeto e um <span class="gterm" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado." data-gl="readme">README</span>.md sem informações privadas.</li><li>Confira a instalação e a autenticação conforme os comandos desta aula.</li><li>Inicie Codex nessa pasta e peça uma análise sem alterações.</li><li>Autorize criar plano.md, leia o arquivo e confira se respeita o README.</li></ol><h4><span class="gterm" data-def="Linguagem de comandos do terminal no Linux e no macOS. Os comandos deste curso são escritos para ele." data-gl="bash">Bash</span> · Linux ou macOS</h4><p>Leia o bloco antes de usar. Campos como Seu Nome e usuario@ip-da-vps são exemplos para adaptar; comandos administrativos pertencem somente ao seu ambiente de treino.</p><pre><code>mkdir -p ~/projetos/meu-primeiro-projeto
+cd ~/projetos/meu-primeiro-projeto
+pwd
+codex --version
+codex login
+codex login status
+codex</code></pre><h4>Critério de pronto</h4><p>Abrir um projeto de treino no Codex e produzir uma alteração verificável. Registre o arquivo produzido, o teste executado e o resultado observado.</p></section><section class="comp-sec"><h3>Critérios para revisar sua entrega</h3><p>Use esta rubrica depois do laboratório. Cada linha pede uma evidência; marcar leitura não significa que a prática foi executada.</p><ul><li><b>Escopo</b> — A entrega corresponde ao objetivo desta aula. <i>Se não passou:</i> Reduza a tarefa e nomeie um único resultado.</li><li><b>Entradas</b> — Você sabe quais arquivos ou dados foram usados. <i>Se não passou:</i> Liste as fontes e remova material sem relação.</li><li><b>Execução</b> — O procedimento foi realizado no ambiente de treino. <i>Se não passou:</i> Diferencie o que foi planejado do que foi feito.</li><li><b>Conferência</b> — Um resultado foi comparado com uma referência. <i>Se não passou:</i> Abra o arquivo ou repita a consulta verificável.</li><li><b>Segredos</b> — Nenhum <span class="gterm" data-def="Pedaço de texto, como uma palavra curta ou parte de uma palavra, que o modelo lê e escreve. O uso e a cobrança costumam ser medidos em tokens." data-gl="token">token</span>, senha ou dado privado foi compartilhado. <i>Se não passou:</i> Revise a cópia de trabalho antes de qualquer envio.</li><li><b>Continuidade</b> — Outra pessoa consegue encontrar o próximo passo. <i>Se não passou:</i> Atualize README e registre uma pendência concreta.</li></ul></section><section class="comp-sec"><h3>Confira o que ficou</h3><p>Codex não encontrou README.md. O primeiro passo é aumentar o raciocínio?</p><details class="mais"><summary>Ver resposta comentada</summary><p>Não. Confira o <span class="gterm" data-def="Outro nome para pasta, usado no terminal." data-gl="diretorio">diretório</span> atual, o nome do arquivo e a permissão de leitura.</p><p>Se sua resposta foi diferente, volte ao tópico correspondente e escreva a diferença em uma frase. A checagem não bloqueia seu estudo.</p></details><h4>Resumo do módulo</h4><ul><li><span class="gterm" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar." data-gl="terminal">Terminal</span>; <span class="gterm" data-def="Programa que interpreta os comandos digitados no terminal." data-gl="shell">shell</span>; pasta atual; comando e resposta.</li><li>Fonte oficial; instalação; versão; diagnóstico.</li><li>codex <span class="gterm" data-def="Entrar numa ferramenta com a sua conta, como a conta do ChatGPT. Os direitos e limites vêm do plano dessa conta." data-gl="login">login</span>; codex login status; entrada padrão; conta ativa.</li><li>Escopo local; README; AGENTS; arquivos de entrada.</li><li>Inspecionar; planejar; alterar; validar.</li><li>Permissão mínima; alterações pequenas; comparação; ponto de retorno.</li></ul></section><section class="comp-sec"><h3>Consulte a fonte</h3><p class="comp-fontes">Ferramentas verificadas em 20/09/2026; nomes de telas e disponibilidade podem mudar.</p><ul class="comp-fontes"><li><a href="https://learn.chatgpt.com/docs/codex/cli" target="_blank" rel="noopener">Instalação e uso do Codex</a></li><li><a href="https://learn.chatgpt.com/docs/auth" target="_blank" rel="noopener">Autenticação</a></li></ul></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-17">← aula anterior</a><a class="next" href="#aula-19">próxima aula →</a></nav>
+<p class="aula-pe">Aula 18 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-18">
+[
+  {"front":"O AGENTS.md diz \"não apague nada\". Isso impede o agente de apagar?","back":"Não. A regra escrita orienta; quem impede de fato são as permissões do programa."},
+  {"front":"O diff mostrou o AGENTS.md e também o README.md, que você não autorizou. O que você faz?","back":"Anota o que mudou no README.md e recupera a versão da pasta \"-antes\". Depois, repete o pedido com o limite mais claro."},
+  {"front":"O agente pede acesso à internet para consultar uma documentação. Você libera também apagar arquivos, já que está mexendo nas permissões?","back":"Não. Cada permissão se avalia separada, e só a necessária para a tarefa."}
+]
+</script>
+</section>

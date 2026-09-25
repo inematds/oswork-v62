@@ -1,0 +1,164 @@
+<section class="view" id="v-aula-24" data-aula="24" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 4 · Aula 6 de 6</p>
+  <h1>Faça uma <em>limpeza de contexto</em></h1>
+  <figure class="cena"><img src="assets/img/aula-24.webp" width="1280" height="720" alt="Na sala dos professores, uma professora tira do mural de cortiça um aviso velho e amarelado e deixa só as folhas novas presas."></figure>
+  <p class="promise">Você consegue acrescentar ao <span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span> uma seção Leia primeiro com três caminhos que existem e estão em dia.</p>
+  <p class="why">Ter memória na pasta não basta: a IA não abre sozinha cada arquivo que existe ali. E um arquivo velho atrapalha mais do que nenhum, se traz um processo que já mudou. Limpar o <span class="gterm" data-gl="contexto" data-def="O material que a IA recebe para fazer uma tarefa: os arquivos, as instruções e as informações que você aponta.">contexto</span> é isto: escolher o que a IA lê e manter esse material em dia.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Diga à IA <b>quais arquivos ler</b>; ela não lê tudo sozinha.</li>
+      <li>O <b>Leia primeiro</b> do README lista três caminhos, na ordem.</li>
+      <li>Abra cada um e confira se descreve <b>a situação de hoje</b>.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>A IA lê o que você aponta, e não a pasta inteira</h2>
+  <p>A IA não lê automaticamente todo arquivo <span class="gterm" data-gl="markdown" data-def="Jeito de escrever texto simples com marcas leves, como # para título e - para lista. Os arquivos terminam em .md.">Markdown</span> do computador. Você diz quais documentos ela deve consultar.</p>
+  <p>Quando uma referência vale para toda tarefa do projeto, ela vai no <span class="gterm" data-gl="agents-md" data-def="Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir.">AGENTS.md</span>, o arquivo de instruções do projeto. O módulo 5 cuida dele.</p>
+  <p data-ex="coordenadora">Denise pediu o rascunho do relatório do conselho sem citar arquivo nenhum. A IA não consultou o decisoes.md, e o formato saiu diferente do que a equipe tinha decidido.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Agente na pasta do projeto</span></div>
+      <div class="tela-caso" data-rotulo="Sem apontar">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Você</span>Monte o rascunho do relatório do conselho.</p>
+          <p class="msg ia falha"><span class="quem">IA</span>Aqui está um rascunho em tabela, com a média de cada turma e três recomendações…</p>
+        </div>
+        <p class="tela-nota ruim">Formato por conta própria e números que ninguém forneceu.</p>
+      </div>
+      <div class="tela-caso" data-rotulo="Com os arquivos">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Você</span>Leia README.md e ../config/decisoes.md. Depois monte o rascunho do relatório do conselho, sem inventar dado.</p>
+          <p class="msg ia ok"><span class="quem">IA</span>Li os dois arquivos. Vou seguir o formato registrado em decisoes.md e listar como pendência o que não estiver nas entradas.</p>
+        </div>
+        <p class="tela-nota bom">A resposta diz o que leu e segue a decisão da equipe.</p>
+      </div>
+    </div>
+    <figcaption><b>Toque nos dois botões</b> e compare o que a IA usou.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>O Leia primeiro aponta três caminhos, na ordem</h2>
+  <p>No README, a seção Leia primeiro lista os arquivos que qualquer tarefa do projeto deve abrir antes. Três <span class="gterm" data-gl="caminho" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config.">caminhos</span> bastam.</p>
+  <p>Escreva cada caminho a partir da pasta do projeto. O ## faz subtítulo, como na aula 2 deste módulo. Leia ../ como "sobe uma pasta": de meu-primeiro-projeto você sobe para projetos e, de lá, entra em config.</p>
+  <p data-ex="professora">No projeto da feira de ciências, Lúcia pôs o regulamento da feira em segundo lugar. No seu projeto de treino, use os três caminhos do quadro abaixo.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>README.md · seção nova</span></div>
+      <div class="janela-body">
+        <div class="item doc">## Leia primeiro</div>
+        <div class="item doc dentro"><span class="pin">1</span> 1. AGENTS.md</div>
+        <div class="item doc dentro"><span class="pin">2</span> 2. ../config/decisoes.md</div>
+        <div class="item doc dentro"><span class="pin">3</span> 3. ../config/memoria.md</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>As instruções do projeto, na própria pasta.</span></li>
+      <li><span class="pin">2</span><span>As escolhas da equipe, uma pasta acima, em config.</span></li>
+      <li><span class="pin">3</span><span>As suas preferências estáveis, também em config.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>Arquivo vencido atrapalha mais que nenhum</h2>
+  <p>O mural da sala dos professores com o aviso de uma reunião de março confunde mais do que um mural vazio. Com a memória da IA acontece o mesmo.</p>
+  <p>Um arquivo antigo pode trazer o endereço de um serviço ou um processo que já mudou. Antes de uma tarefa, atualize a decisão vencida e tire da pasta de trabalho o que não interessa.</p>
+  <p data-ex="professora">O decisoes.md de Lúcia ainda dizia "provas com 10 questões". A IA montou a prova com 10. Ela acrescentou a linha nova e marcou a antiga como substituída, como na aula 3 deste módulo.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Arquivo vencido</span><p><b>decisoes.md:</b> só a linha de agosto, provas com 10 questões.</p><p><b>Resultado:</b> a IA monta a prova no formato antigo.</p></div>
+      <div class="depois"><span class="rot">Arquivo em dia</span><p><b>decisoes.md:</b> a linha de outubro, com 12 questões, e a de agosto marcada como substituída.</p><p><b>Resultado:</b> a prova sai com 12 questões.</p></div>
+      <p class="saldo"><b>Saldo:</b> uma linha atualizada evitou refazer a prova inteira.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Confira os caminhos, e depois o conteúdo</h2>
+  <p>Ao começar uma tarefa, peça a leitura do README e da decisão que importa. Não carregue listas de contatos nem senhas só porque estão na mesma pasta.</p>
+  <p>Revise de tempos em tempos. Primeiro confira se cada caminho existe; depois abra o arquivo e veja se ainda descreve a situação de hoje.</p>
+  <p data-ex="coordenadora">Denise pôs na agenda da coordenação: toda primeira segunda do mês, dez minutos para revisar o Leia primeiro do projeto do conselho.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> ls AGENTS.md ../config/decisoes.md ../config/memoria.md
+<span class="out">AGENTS.md  ../config/decisoes.md  ../config/memoria.md</span></code></pre>
+<p class="tela-nota">Os três caminhos existem. Se um faltasse, o ls avisaria com "No such file or directory", e o Leia primeiro estaria errado.</p></div>
+  <figcaption>O ls confere se o caminho existe. Se está em dia, só abrindo o arquivo.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O ls respondeu "No such file or directory"? Confira o nome letra por letra, com ponto e barra. Continuou? O arquivo não existe ainda: a prática diz em qual aula ele é criado.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
+  <h3 class="ph">Escreva e confira o Leia primeiro</h3>
+  <p class="pgoal">Pronto quando o ls listar os três caminhos sem erro, o README tiver a seção Leia primeiro e os dois arquivos de config tiverem a data de hoje. Cerca de 10 minutos, no computador, no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
+  <p class="psafe">Os arquivos são do kit do curso, com dados fictícios. Nada é substituído: a segunda linha só baixa o AGENTS.md do kit se a pasta ainda não tiver um. O último ls acusou "No such file or directory"? Volte à aula que cria o que falta: README na aula 2 deste módulo, config na aula 3.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/meu-primeiro-projeto
+ls AGENTS.md || curl -fsSL https://inematds.github.io/oswork/materiais/AGENTS-projeto.md -o AGENTS.md
+ls AGENTS.md ../config/decisoes.md ../config/memoria.md
+nano README.md</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole as quatro linhas. A segunda procura o AGENTS.md; o || quer dizer "só se o anterior falhar", então o curl baixa o do kit apenas quando ele não existe. Por isso, na primeira vez, essa linha mostra "No such file or directory": é esperado. A terceira confere os três caminhos; só um aviso na resposta dela indica problema. A quarta abre o README no nano.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Procure a linha ## Leia primeiro. Se o seu README veio do kit, na aula 2 deste módulo, ela já existe. Se não existe, desça com a seta para baixo até o fim do arquivo e digite ## Leia primeiro. Apague o que houver embaixo dela até o próximo ## (Ctrl+K apaga a linha inteira) e escreva, uma em cada linha: 1. AGENTS.md, depois 2. ../config/decisoes.md, depois 3. ../config/memoria.md. Grave com Ctrl+O e Enter; saia com Ctrl+X.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Digite nano ../config/memoria.md. Na linha "Revisado em", troque "preencha a data" pela data de hoje, como 25/09/2026. Grave e saia. Não há essa linha? Escreva no topo: Revisado em: e a data.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>Digite nano ../config/decisoes.md. Na tabela, troque "Preencha" pela data de hoje. Grave e saia. Sem data, ninguém sabe se o arquivo está em dia.</span></label></li>
+  </ol>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>O que você deve ver</span></div>
+<pre><code><span class="pr">$</span> ls AGENTS.md ../config/decisoes.md ../config/memoria.md
+<span class="out">AGENTS.md  ../config/decisoes.md  ../config/memoria.md</span>
+<span class="pr">$</span> nano ../config/memoria.md</code></pre>
+<p class="tela-nota">Três caminhos listados, em qualquer ordem, e nenhum aviso de erro. Depois, o <span class="gterm" data-gl="nano" data-def="Editor de texto que abre dentro do terminal. Ctrl+O grava o arquivo e Ctrl+X sai.">nano</span> abre cada arquivo de config para a data.</p></div></figure>
+  <p class="pdone">Você acabou de dizer, por escrito, o que a IA deve ler primeiro, e de conferir que tudo existe e está em dia.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Contexto limpo</h3>
+    <ol>
+      <li><span><b>Aponte</b>a IA lê os arquivos que você nomeia.</span></li>
+      <li><span><b>Leia primeiro</b>três caminhos no README, conferidos com ls.</span></li>
+      <li><span><b>Em dia</b>decisão vencida atrapalha; data de revisão em cada arquivo.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já montou a casa digital inteira: pastas, README, memória, segredos separados e um Leia primeiro que aponta o que vale.</p>
+    <p class="na-action">Hoje, marque na sua agenda uma revisão mensal de dez minutos do Leia primeiro.</p>
+    <p class="na-hook">No próximo módulo: o AGENTS.md que você acabou de pôr na pasta passa a orientar cada execução do <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span>. Você vai escrever as instruções do seu projeto.</p>
+  </div>
+</div>
+
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Faça uma limpeza de contexto<small>Texto completo do tópico no OSWork v2 e fechamento do módulo. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>A IA não lê automaticamente todo arquivo Markdown existente no computador. Diga quais documentos consultar e mantenha referências no AGENTS.md quando forem necessárias. Antes de uma tarefa, remova dados irrelevantes da cópia de trabalho e atualize decisões vencidas.</p><h3>Por que aprender</h3><p>Memória útil precisa ser encontrada e estar correta. Um arquivo antigo pode atrapalhar mais que não ter memória se trouxer endereço de serviço ou processo que já mudou.</p><h3>Conceitos-chave</h3><p>Seleção de contexto; data; fonte de verdade; revisão periódica.</p><h4>Na prática</h4><p>Ao iniciar um relatório, peça leitura de README.md e da decisão sobre formato. Não carregue listas de contatos ou credenciais porque estão na mesma pasta.</p><h4>Experimente agora</h4><p>Acrescente ao README uma seção “Leia primeiro” com três caminhos reais. Abra cada <span class="gterm" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config." data-gl="caminho">caminho</span> e confira se descreve a situação atual.</p></section><section class="comp-sec"><h3>Laboratório do módulo: Organize seu segundo cérebro operacional</h3><p>Use arquivos fictícios e uma <span class="gterm" data-def="Pasta só com arquivos fictícios ou cópias, criada para testar a IA sem risco para o material verdadeiro." data-gl="pasta-de-treino">pasta de treino</span>. As práticas com <span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">instalação</span>, <span class="gterm" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7." data-gl="telegram">Telegram</span> ou <span class="gterm" data-def="Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar." data-gl="vps">VPS</span> podem exigir tempo adicional para cadastro e configuração.</p><ol><li>Crie config e meu-primeiro-projeto dentro de projetos, usando gerenciador de arquivos ou <span class="gterm" data-def="Linguagem de comandos do terminal no Linux e no macOS. Os comandos deste curso são escritos para ele." data-gl="bash">Bash</span>.</li><li>Na pasta config, crie memoria.md, falhas.md, dicas.md e decisoes.md a partir do kit.</li><li>No projeto, acrescente README.md, AGENTS.md e <span class="gterm" data-def="Arquivo que lista o que o Git não deve guardar, como senhas e arquivos temporários." data-gl="gitignore">.gitignore</span>.</li><li>Revise com a tabela da aula: cada arquivo tem um papel e nenhum segredo aparece nos documentos.</li></ol><h4>Estrutura de trabalho</h4><p>Leia o bloco antes de usar. Campos como Seu Nome e usuario@ip-da-vps são exemplos para adaptar; comandos administrativos pertencem somente ao seu ambiente de treino.</p><pre><code>~/projetos/
+├── config/
+│   ├── memoria.md
+│   ├── falhas.md
+│   ├── dicas.md
+│   └── decisoes.md
+└── meu-primeiro-projeto/
+    ├── AGENTS.md
+    ├── README.md
+    ├── .gitignore
+    ├── entradas/
+    └── saidas/</code></pre><h4>Critério de pronto</h4><p>Montar a casa digital e separar conhecimento de credenciais. Registre o arquivo produzido, o teste executado e o resultado observado.</p></section><section class="comp-sec"><h3>Critérios para revisar sua entrega</h3><p>Use esta rubrica depois do laboratório. Cada linha pede uma evidência; marcar leitura não significa que a prática foi executada.</p><ul><li><b>Escopo</b> — A entrega corresponde ao objetivo desta aula. <i>Se não passou:</i> Reduza a tarefa e nomeie um único resultado.</li><li><b>Entradas</b> — Você sabe quais arquivos ou dados foram usados. <i>Se não passou:</i> Liste as fontes e remova material sem relação.</li><li><b>Execução</b> — O procedimento foi realizado no ambiente de treino. <i>Se não passou:</i> Diferencie o que foi planejado do que foi feito.</li><li><b>Conferência</b> — Um resultado foi comparado com uma referência. <i>Se não passou:</i> Abra o arquivo ou repita a consulta verificável.</li><li><b>Segredos</b> — Nenhum <span class="gterm" data-def="Pedaço de texto, como uma palavra curta ou parte de uma palavra, que o modelo lê e escreve. O uso e a cobrança costumam ser medidos em tokens." data-gl="token">token</span>, senha ou dado privado foi compartilhado. <i>Se não passou:</i> Revise a cópia de trabalho antes de qualquer envio.</li><li><b>Continuidade</b> — Outra pessoa consegue encontrar o próximo passo. <i>Se não passou:</i> Atualize README e registre uma pendência concreta.</li></ul></section><section class="comp-sec"><h3>Confira o que ficou</h3><p>Adicionar <span class="gterm" data-def="Arquivo que guarda chaves e senhas fora do código. Nunca vai para o Git, para um pedido ou para um print." data-gl="env">.env</span> ao .gitignore remove automaticamente uma chave já publicada?</p><details class="mais"><summary>Ver resposta comentada</summary><p>Não. Revogue a chave exposta e corrija o histórico conforme o caso; ignorar só previne novos arquivos não rastreados.</p><p>Se sua resposta foi diferente, volte ao tópico correspondente e escreva a diferença em uma frase. A checagem não bloqueia seu estudo.</p></details><h4>Resumo do módulo</h4><ul><li><span class="gterm" data-def="A sua pasta principal no computador, onde ficam Documentos, Downloads e as demais. No terminal ela aparece como ~ (til)." data-gl="pasta-pessoal">Pasta pessoal</span>; projetos; contexto; entradas e saídas.</li><li>Título; lista; bloco de código; link; texto simples.</li><li>Memória seletiva; decisões datadas; procedimento; histórico.</li><li><span class="gterm" data-def="Um nome com um valor guardado, escrito como NOME=valor. O programa procura o valor pelo nome." data-gl="variavel">Variável</span>; segredo; <span class="gterm" data-def="Cópia do .env com os mesmos nomes de variáveis e valores fictícios. Mostra o que é preciso preencher sem dar acesso a nada, por isso pode ser compartilhada." data-gl="env-example">.env.example</span>; leitura em tempo de execução.</li><li>Arquivos rastreados; padrões de exclusão; revisão de alterações; revogação.</li><li>Seleção de contexto; data; fonte de verdade; revisão periódica.</li></ul></section><section class="comp-sec"><h3>Consulte a fonte</h3><p class="comp-fontes">Ferramentas verificadas em 20/09/2026; nomes de telas e disponibilidade podem mudar.</p><ul class="comp-fontes"><li><a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md" target="_blank" rel="noopener">Instruções AGENTS.md</a></li></ul></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-23">← aula anterior</a><a class="next" href="#aula-25">próxima aula →</a></nav>
+<p class="aula-pe">Aula 24 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-24">
+[
+  {"front":"A pasta do projeto tem uma lista de contatos das famílias ao lado do material da tarefa. Você cita a pasta inteira no pedido?","back":"Não. Você nomeia só os arquivos da tarefa; o que não interessa fica fora do pedido."},
+  {"front":"O ls respondeu \"No such file or directory\" para um caminho do Leia primeiro. O que isso diz?","back":"Que o caminho não existe: o nome está errado ou o arquivo não foi criado. O Leia primeiro precisa de correção."},
+  {"front":"Todos os caminhos existem. Isso garante que o Leia primeiro está em dia?","back":"Não. Existir não é estar atual: é preciso abrir cada arquivo e ver se descreve a situação de hoje."}
+]
+</script>
+</section>

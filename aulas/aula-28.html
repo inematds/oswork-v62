@@ -1,0 +1,164 @@
+<section class="view" id="v-aula-28" data-aula="28" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 5 · Aula 4 de 6</p>
+  <h1>Memória é um mural <em>com data e com dono</em></h1>
+  <figure class="cena"><img src="assets/img/aula-28.webp" width="1280" height="720" alt="Na sala dos professores, uma coordenadora tira um aviso velho e amarelado do mural de cortiça e prende um cartão novo, num mural com poucos avisos."></figure>
+  <p class="promise">Você consegue escrever uma memória curta e datada, com três fatos úteis. E consegue pedir ao agente que diga qual desses fatos usou numa tarefa.</p>
+  <p class="why">Colar a conversa inteira de ontem em cada pedido cansa e traz de volta instruções que já mudaram. Esperar que a IA "lembre sozinha" também falha. Um arquivo pequeno, com data e revisado por alguém, resolve os dois problemas.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Memória, aqui, é <b>um arquivo</b> que o agente consulta, não o modelo aprendendo.</li>
+      <li>Guarde <b>fatos estáveis, decisões e causas de falhas</b>, não a conversa toda.</li>
+      <li><b>Indique o arquivo</b> no pedido e revise na data marcada.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>A memória é um arquivo que alguém mantém</h2>
+  <p>O modelo não muda porque você conversou com ele. A <span class="gterm" data-gl="memoria-operacional" data-def="Arquivos de consulta com fatos estáveis, decisões e causas de falhas, que o agente lê quando você indica. Não muda o modelo; alguém precisa mantê-los em dia.">memória operacional</span> do curso é um conjunto de arquivos que o <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span> lê quando você indica.</p>
+  <p>Ela funciona com duas condições: o agente lê a parte que importa, e alguém mantém o arquivo atualizado. Na prática desta aula, quem lê é o <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span>, aberto no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> como no módulo 3.</p>
+  <p data-ex="coordenadora">Denise criou a pasta config no módulo 4, ao lado dos projetos. Lá ficam os arquivos que valem para vários projetos da coordenação.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>~/projetos/config</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> memoria.md</div>
+        <div class="item doc"><span class="pin">2</span> decisoes.md</div>
+        <div class="item doc"><span class="pin">3</span> falhas.md</div>
+        <div class="item doc">dicas.md</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Fatos estáveis e preferências.</span></li>
+      <li><span class="pin">2</span><span>Decisões tomadas, com o motivo.</span></li>
+      <li><span class="pin">3</span><span>Causas de falhas. É o assunto da próxima aula.</span></li>
+    </ol>
+    <figcaption>A pasta de arquivos de apoio do módulo 4. Não fez? Crie a pasta config dentro de projetos, ao lado de meu-primeiro-projeto, e nela um arquivo de texto memoria.md.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Guarde o que continua valendo</h2>
+  <p>Três coisas merecem ir para a memória: fatos estáveis, decisões e causas de falhas. Cada frase de cada conversa não merece.</p>
+  <p>Copiar todo o histórico aumenta o volume e pode trazer de volta uma instrução antiga. Ninguém consegue conferir um arquivo imenso.</p>
+  <p data-ex="professora">Lúcia registrou que os materiais da turma usam linguagem acessível e exemplos fictícios. Na tarefa seguinte, indicou esse arquivo em vez de repetir toda a conversa sobre a turma.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Histórico colado</span><p>Duzentas linhas de conversa, de março a setembro.</p><p>No meio, "use o modelo antigo de lista", que já mudou.</p></div>
+      <div class="depois"><span class="rot">Memória curta</span><p>"Revisado em: 25/09/2026."</p><p>"Materiais do 8º ano: linguagem acessível e exemplos fictícios."</p><p>"Lista semanal: cinco questões e gabarito separado."</p></div>
+      <p class="saldo"><b>Saldo:</b> de duzentas linhas para três, e nenhuma instrução vencida.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>Indique o arquivo e peça o fato usado</h2>
+  <p>O arquivo existir na pasta não garante que o agente vá ler. Diga no pedido qual arquivo consultar.</p>
+  <p>E peça que ele cite qual fato usou. Assim você confere se a memória serviu, em vez de supor.</p>
+  <p data-ex="coordenadora">Denise pediu o aviso da reunião de pais indicando a memória. A resposta terminou dizendo qual fato tinha usado, e ela conferiu no arquivo.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex · pasta de treino</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Consulte ../config/memoria.md. Escreva um aviso de três linhas sobre a reunião de pais; a pauta é o fechamento do bimestre. Use [data] e [horário] no lugar desses dados. No fim, diga qual fato da memória você usou.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Reunião de pais no dia [data], às [horário]. A pauta é o fechamento do bimestre. Contamos com a presença de todos.
+Fato usado: "Avisos às famílias: até três linhas, sem siglas".</p>
+      </div>
+      <p class="tela-nota bom">O fato citado está na memória de Denise, que aparece no passo 4, e a resposta respeitou: três linhas, sem siglas, sem inventar data.</p>
+    </div>
+    <figcaption>O ../ quer dizer "a pasta de cima": de dentro do projeto, o agente sobe um nível e acha a pasta config.</figcaption>
+  </figure>
+  <div class="quiz" data-answer="c">
+    <p class="qk">Teste-se</p>
+    <p class="q">Lúcia criou memoria.md na pasta config, mas o agente ignorou os fatos. O que ela faz primeiro?</p>
+    <button class="opt" data-k="a" data-fb="Um modelo diferente também não lê um arquivo que ninguém indicou.">Troca o modelo por um maior</button>
+    <button class="opt" data-k="b" data-fb="Mais texto não resolve se o arquivo não é consultado.">Copia mais conversas no arquivo</button>
+    <button class="opt" data-k="c" data-fb="Sim: a existência do arquivo não garante leitura; o pedido indica.">Indica o arquivo no próprio pedido</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Data de revisão mantém a memória viva</h2>
+  <p>Fato estável também muda. Marque no topo quando o arquivo foi revisado. Na próxima revisão, apague o que venceu e confirme o resto.</p>
+  <p>Anote de onde veio cada fato: uma reunião, um documento, uma decisão. Isso ajuda a conferir depois.</p>
+  <p data-ex="coordenadora">Na revisão de setembro, Denise apagou o fato "avisos vão impressos na mochila". A escola passou a mandar os avisos pelo aplicativo. Trocou a data do topo.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>memoria.md · Denise</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Revisado em: 25/09/2026 · próxima revisão: fim do bimestre</div>
+        <div class="item doc"><span class="pin">2</span> Avisos às famílias: até três linhas, sem siglas (fonte: reunião da coordenação)</div>
+        <div class="item doc">Relatórios: com fontes e pendências visíveis (fonte: decisoes.md)</div>
+        <div class="item doc">Projeto de treino: só dados fictícios (fonte: decisão da coordenação)</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>A data diz se dá para confiar no arquivo hoje.</span></li>
+      <li><span class="pin">2</span><span>Cada fato com a origem entre parênteses.</span></li>
+    </ol>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não sabe que fatos escrever? Pense no que você mais repete para a IA: o público do material, o formato preferido, um cuidado que sempre esquece. Três linhas bastam para começar.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Escreva a memória e faça o agente citar o fato</h3>
+  <p class="pgoal">Pronto quando o agente terminar a resposta dizendo qual fato da memória usou, e esse fato estiver no seu arquivo. Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">Os passos 2 e 3 usam o terminal e o Codex do módulo 3. O arquivo não existe? Na janela Salvar como, escolha o tipo "Todos os arquivos" e digite o nome completo, para o arquivo não virar .txt. Escreva só fatos de trabalho, sem nome de aluno, senha ou dado pessoal. Sem o Codex? Faça no chat que você usa: cole o texto da memória no começo do pedido. Se a resposta citar um fato que não está no arquivo, anote: é sinal de que ela inventou.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode"># Memória operacional
+
+Revisado em: &lt;data de hoje&gt; · próxima revisão: &lt;ex.: fim do bimestre&gt;
+
+- &lt;fato 1&gt; (fonte: &lt;de onde veio&gt;)
+- &lt;fato 2&gt; (fonte: &lt;de onde veio&gt;)
+- &lt;fato 3&gt; (fonte: &lt;de onde veio&gt;)</pre></div>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Consulte ../config/memoria.md. &lt;sua tarefa curta, ex.: escreva um aviso de três linhas sobre a feira de ciências; use [data] no lugar da data&gt;. No fim, diga qual fato da memória você usou.</pre></div>
+  <details class="mais"><summary>Veja a memória preenchida por uma professora</summary>
+    <p>Revisado em: 25/09/2026 · próxima revisão: fim do bimestre.<br>- Materiais do 8º ano: linguagem acessível e exemplos fictícios (fonte: conversa com a coordenação).<br>- Lista semanal: cinco questões e gabarito separado (fonte: planejamento do bimestre).<br>- Avisos às famílias: até três linhas, sem siglas (fonte: reunião da coordenação).</p>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Abra ~/projetos/config/memoria.md no editor, cole o primeiro molde e escreva a data e três fatos com a fonte. Salve.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>No terminal, entre na pasta de treino, digite codex e mande o segundo molde preenchido.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Confira que o fato citado está no arquivo e que a resposta o respeitou.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de criar uma memória que o agente consulta e que você consegue conferir.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Memória que funciona</h3>
+    <ol>
+      <li><span><b>Arquivo</b>a memória é consultada, o modelo não muda.</span></li>
+      <li><span><b>Pouco e estável</b>fatos, decisões e causas de falhas, com a fonte.</span></li>
+      <li><span><b>Indicada e datada</b>diga no pedido qual arquivo ler; revise na data.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já guarda o que precisa continuar valendo, num arquivo que o agente consulta quando você indica.</p>
+    <p class="na-action">Hoje, marque na agenda a data de revisão que você escreveu no topo do arquivo. É um lembrete de cinco minutos.</p>
+    <p class="na-hook">Na próxima aula: quando algo dá errado, o que vai para o registro? Uma falha vira uma proteção pequena, não uma reconstrução.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Memória precisa de manutenção<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>A memória operacional do curso é um conjunto de arquivos consultáveis, não uma mudança nos pesos do modelo. Ela funciona quando o agente lê as informações relevantes e quando alguém mantém essas informações atualizadas. Guarde fatos estáveis, decisões e causas de falhas; não preserve cada frase de cada conversa.</p><h3>Por que aprender</h3><p>Copiar todo o histórico aumenta volume e pode reintroduzir instruções antigas. Uma memória pequena, datada e revisada ajuda mais que um arquivo imenso que ninguém consegue validar.</p><h3>Conceitos-chave</h3><p>Memória externa; consulta explícita; resumo; validade; fonte.</p><h4>Na prática</h4><p>Uma professora registra que os materiais da turma usam linguagem acessível e exemplos fictícios. Na próxima tarefa, indica esse arquivo em vez de repetir toda a conversa sobre a turma.</p><h4>✓ Faça</h4><p>Inclua em memoria.md três fatos úteis e uma data de revisão. Na tarefa seguinte, peça que o agente cite qual fato utilizou.</p><h4>✗ Evite</h4><p>Misturar a cópia de treino com arquivos privados ou trabalho em produção.</p></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-27">← aula anterior</a><a class="next" href="#aula-29">próxima aula →</a></nav>
+<p class="aula-pe">Aula 28 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-28">
+[
+  {"front":"Uma colega quer colar no arquivo de memória todas as conversas do semestre com a IA. O que você sugere?","back":"Guardar só fatos estáveis, decisões e causas de falhas, com data e fonte. O histórico inteiro traz instruções vencidas."},
+  {"front":"Como você confere se o agente usou mesmo a memória na tarefa?","back":"Pedindo que cite o fato usado e procurando esse fato no arquivo."},
+  {"front":"O arquivo de memória foi revisado há um ano. Dá para confiar nele hoje?","back":"Não sem revisar: apague o que venceu, confirme o resto e troque a data do topo."}
+]
+</script>
+</section>

@@ -1,0 +1,166 @@
+<section class="view" id="v-aula-25" data-aula="25" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 5 · Aula 1 de 6</p>
+  <h1>Regra boa é regra que <em>dá para conferir</em></h1>
+  <figure class="cena"><img src="assets/img/aula-25.webp" width="1280" height="720" alt="Uma professora de ciências prende uma folha curta de regras na porta do laboratório da escola, ao lado dos óculos de proteção pendurados, com o notebook aberto na bancada."></figure>
+  <p class="promise">Você consegue reescrever o <span class="gterm" data-gl="agents-md" data-def="Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir.">AGENTS.md</span> da sua pasta de treino com cinco regras curtas, e dizer, para cada uma, como você confere se foi cumprida.</p>
+  <p class="why">Toda conversa nova com o <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span> começa do zero. Sem um arquivo de instruções, você repete os mesmos avisos a cada pedido. E instrução vaga, do tipo "capriche", não muda nada no que ele faz.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O AGENTS.md diz ao agente <b>como trabalhar</b> naquela pasta.</li>
+      <li>Cada regra precisa ser <b>observável</b>: dá para ver se foi cumprida.</li>
+      <li>Regra que não muda nenhuma decisão <b>sai</b> do arquivo.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>O AGENTS.md é a placa na porta da pasta</h2>
+  <p>No laboratório de ciências, a placa na porta diz como trabalhar ali dentro. O AGENTS.md faz o mesmo para uma pasta de projeto. O <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span> procura esse arquivo sozinho quando começa a trabalhar na pasta.</p>
+  <p>É um arquivo de texto em <span class="gterm" data-gl="markdown" data-def="Jeito de escrever texto simples com marcas leves, como # para título e - para lista. Os arquivos terminam em .md.">Markdown</span>. Você abre e edita no bloco de notas, como qualquer texto.</p>
+  <p data-ex="professora">Lúcia criou a pasta de treino no módulo 3 e completou no módulo 4. Lá dentro, ao lado do <span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span>, está o AGENTS.md. É o primeiro arquivo que ela vai melhorar.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>~/projetos/meu-primeiro-projeto</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> AGENTS.md</div>
+        <div class="item doc">README.md</div>
+        <div class="item pasta"><span class="pin">2</span> entradas</div>
+        <div class="item doc dentro">vendas.csv</div>
+        <div class="item pasta"><span class="pin">3</span> saidas</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>As instruções de trabalho desta pasta.</span></li>
+      <li><span class="pin">2</span><span>O material que o agente pode ler: aqui, uma planilha fictícia em <span class="gterm" data-gl="csv" data-def="Planilha em texto simples, com os valores separados por vírgula. Abre no Excel ou no Google Planilhas.">CSV</span>.</span></li>
+      <li><span class="pin">3</span><span>Onde ele entrega os rascunhos.</span></li>
+    </ol>
+    <figcaption>A pasta de treino dos módulos 3 e 4. Não montou? Na sua pasta pessoal, crie a pasta projetos e, dentro dela, meu-primeiro-projeto, com um arquivo de texto AGENTS.md vazio.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Ele diz como trabalhar, não conta a história</h2>
+  <p>Quatro assuntos cabem no AGENTS.md: por onde começar a ler, como conferir o resultado, o que não fazer e o formato da entrega. A história da escola e os motivos de cada decisão ficam de fora.</p>
+  <p>Arquivo curto é lido inteiro. Arquivo longo esconde a regra que importa no meio de parágrafos.</p>
+  <p data-ex="coordenadora">Denise abriu o AGENTS.md que tinha escrito para o projeto das atas. Eram dois parágrafos sobre a fundação da escola e só uma regra de trabalho. Ela apagou os parágrafos.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Conta a história</span><p>"A escola foi fundada em 1987 e sempre valorizou a comunicação com as famílias. Por isso, é muito importante que tudo seja feito com cuidado."</p></div>
+      <div class="depois"><span class="rot">Diz como trabalhar</span><p>"1. Leia README.md antes de alterar."</p><p>"2. Use só entradas/ e saidas/."</p><p>"3. Relate o que alterou e como conferiu."</p></div>
+    </div>
+    <figcaption>O cartão <b>Diz como trabalhar</b> muda o que o agente faz. O outro só ocupa espaço.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>Regra observável tem ação e evidência</h2>
+  <p>Faça o teste da placa. "Use óculos de proteção antes de começar o experimento" dá para conferir olhando. "Tenha cuidado" não dá.</p>
+  <p>No AGENTS.md vale o mesmo. Uma regra boa pede uma ação e deixa uma evidência que você consegue ver na entrega.</p>
+  <p data-ex="professora">No relatório de treino, Lúcia trocou "seja excelente" por uma regra de conferência. Na entrega seguinte, o agente escreveu a soma e a diferença encontrada. Ela conferiu em um minuto.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Vaga</span><p>"Seja excelente."</p><p><b>Como conferir:</b> não há como.</p></div>
+      <div class="depois"><span class="rot">Observável</span><p>"Compare o total do relatório com vendas.csv e indique a diferença."</p><p><b>Como conferir:</b> a entrega traz a soma e a diferença.</p></div>
+    </div>
+    <figcaption>O exemplo vem do material do curso: a regra observável diz a ação (comparar) e a evidência (a diferença escrita).</figcaption>
+  </figure>
+  <div class="quiz" data-answer="b">
+    <p class="qk">Teste-se</p>
+    <p class="q">Qual destas regras você consegue conferir olhando a entrega do agente?</p>
+    <button class="opt" data-k="a" data-fb="“Com atenção” não deixa marca na entrega: não há o que conferir.">Revise tudo com muita atenção</button>
+    <button class="opt" data-k="b" data-fb="Sim: a entrega mostra se há ou não uma linha de pendências.">Liste as pendências no final</button>
+    <button class="opt" data-k="c" data-fb="“Profissional” é um gosto, não uma ação com evidência.">Escreva de modo profissional</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Cinco regras curtas bastam para começar</h2>
+  <p>Comece com cinco regras e passe cada uma pela pergunta: consigo observar se foi cumprida? Se a resposta for não, reescreva com uma ação. Se a regra não muda nada no trabalho, apague.</p>
+  <p>O quadro abaixo é o modelo do curso, com regras assim. Você adapta o propósito à sua pasta.</p>
+  <p data-ex="coordenadora">Denise partiu destas cinco regras para o AGENTS.md das atas e trocou só os nomes das pastas. A mais útil: "Não invente dados faltantes: descreva a pendência."</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>AGENTS.md · pasta de treino</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Leia README.md e liste as fontes antes de alterar.</div>
+        <div class="item doc"><span class="pin">2</span> Use apenas entradas/ e saidas/.</div>
+        <div class="item doc"><span class="pin">3</span> Não invente dados faltantes: descreva a pendência.</div>
+        <div class="item doc"><span class="pin">4</span> Compare os totais com a entrada antes de entregar.</div>
+        <div class="item doc"><span class="pin">5</span> Não envie nem publique sem instrução explícita.</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Confere: a resposta começa com a lista de fontes, os arquivos de onde vêm os dados.</span></li>
+      <li><span class="pin">2</span><span>Confere: nenhum arquivo novo fora dessas pastas.</span></li>
+      <li><span class="pin">3</span><span>Confere: o que falta aparece como pendência.</span></li>
+      <li><span class="pin">4</span><span>Confere: o total e a comparação estão escritos.</span></li>
+      <li><span class="pin">5</span><span>Confere: nada saiu da pasta.</span></li>
+    </ol>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Escrever regra observável parece difícil na primeira vez. Use a frase-teste: "vou saber que foi cumprida porque na entrega aparece ___". Se você não consegue completar a lacuna, a regra ainda está vaga.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Reescreva o AGENTS.md com cinco regras observáveis</h3>
+  <p class="pgoal">Pronto quando o AGENTS.md tiver cinco regras e, ao lado de cada uma, a evidência que você vai ver na entrega. Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">Você só edita um arquivo de texto da pasta de treino; nada é executado. Não tem a pasta? Na sua pasta pessoal, crie projetos e, dentro dela, meu-primeiro-projeto. Criando o AGENTS.md do zero? Na janela Salvar como, escolha o tipo "Todos os arquivos" e digite o nome completo, para ele não virar AGENTS.md.txt. Se uma regra não passar no teste, reescreva ou apague; não existe resposta única.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode"># Instruções do projeto de treino
+
+Propósito: &lt;ex.: rascunhos de relatório a partir de dados fictícios&gt;
+
+1. &lt;regra&gt;  (confiro porque na entrega aparece: &lt;evidência&gt;)
+2. &lt;regra&gt;  (confiro porque na entrega aparece: &lt;evidência&gt;)
+3. &lt;regra&gt;  (confiro porque na entrega aparece: &lt;evidência&gt;)
+4. &lt;regra&gt;  (confiro porque na entrega aparece: &lt;evidência&gt;)
+5. &lt;regra&gt;  (confiro porque na entrega aparece: &lt;evidência&gt;)</pre></div>
+  <p>Troque tudo o que está entre &lt; e &gt;, sinais inclusive. O que fica entre parênteses é a sua conferência: pode ficar no arquivo, não atrapalha o agente.</p>
+  <details class="mais"><summary>Veja duas regras preenchidas por uma professora</summary>
+    <p><b>Propósito:</b> rascunhos de listas de exercícios de ciências a partir das minhas aulas.<br><b>Regra:</b> use só os arquivos da pasta entradas. <b>Confiro porque</b> a entrega lista as fontes, e todas estão em entradas.<br><b>Regra:</b> marque com [conferir] toda resposta de exercício que não está no material. <b>Confiro porque</b> vejo as marcas no rascunho.</p>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Abra o AGENTS.md no editor de texto (botão direito no arquivo › Abrir com › editor de texto) e cole o molde no lugar do conteúdo antigo.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Escreva o propósito e cinco regras. Pode aproveitar as do quadro do passo 4.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Complete a evidência de cada regra. A que ficar sem evidência, reescreva ou apague. Salve.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de transformar avisos soltos em regras que dá para conferir na entrega.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>AGENTS.md que funciona</h3>
+    <ol>
+      <li><span><b>Como trabalhar</b>fontes, conferência, limites e formato, sem a história.</span></li>
+      <li><span><b>Observável</b>ação que deixa evidência na entrega.</span></li>
+      <li><span><b>Curto</b>regra que não muda o trabalho sai.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já escreve instruções de trabalho que um agente segue e que você confere.</p>
+    <p class="na-action">Hoje, escolha uma regra que você repete toda vez que pede algo à IA no trabalho e escreva a versão observável dela numa linha.</p>
+    <p class="na-hook">Na próxima aula: essas regras valem só nesta pasta. E as que você quer em todos os projetos? Global e projeto, cada um no seu lugar.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · AGENTS.md orienta a execução<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>AGENTS.md é o arquivo de instruções que Codex descobre no escopo aplicável. Ele descreve como trabalhar: arquivos iniciais, comandos de verificação, limites e formato de entrega. Não precisa explicar toda a história da organização; prefira regras curtas que alterem uma decisão real.</p><h3>Por que aprender</h3><p>Instruções objetivas evitam repetir os mesmos detalhes em cada conversa. O arquivo deve ajudar o agente a escolher uma ação concreta, como verificar o relatório antes de considerá-lo finalizado.</p><h3>Conceitos-chave</h3><p>Instrução operacional; escopo; regra observável; concisão.</p><h4>Na prática</h4><p>“Seja excelente” é difícil de testar. “Compare o total do relatório com vendas.csv e indique a diferença” define uma ação e sua evidência.</p><h4>✓ Faça</h4><p>Escreva cinco regras. Para cada uma, pergunte: consigo observar se foi cumprida? Remova orientações que não mudam o trabalho.</p><h4>✗ Evite</h4><p>Aceitar uma conclusão sem conferir a entrada que a sustenta.</p></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-24">← aula anterior</a><a class="next" href="#aula-26">próxima aula →</a></nav>
+<p class="aula-pe">Aula 25 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-25">
+[
+  {"front":"Um colega escreveu no AGENTS.md: “faça um trabalho de qualidade”. Como você reescreveria essa linha?","back":"Com uma ação e uma evidência, por exemplo: “compare o total com a planilha de entrada e escreva a diferença”."},
+  {"front":"O AGENTS.md da equipe tem três páginas sobre a história do projeto. O que fazer com elas?","back":"Tirar do arquivo. Ele diz como trabalhar na pasta; o histórico pode ficar no README ou em outro documento."},
+  {"front":"Como saber se uma regra do AGENTS.md é observável?","back":"Complete: “vou saber que foi cumprida porque na entrega aparece ___”. Se não der, a regra está vaga."}
+]
+</script>
+</section>

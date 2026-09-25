@@ -1,0 +1,171 @@
+<section class="view" id="v-aula-36" data-aula="36" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 6 · Aula 6 de 6</p>
+  <h1>Enviar é outro passo: <em>confira antes</em></h1>
+  <figure class="cena"><img src="assets/img/aula-36.webp" width="1280" height="720" alt="Na secretaria da escola, uma professora confere o caderno de notas, linha por linha, contra a tela do computador antes de lançar as notas no sistema."></figure>
+  <p class="promise">Você consegue fazer a conferência de quatro pontos antes de um <span class="gterm" data-gl="push" data-def="Comando do Git que envia os seus commits para o GitHub.">push</span> — destino, estado da pasta, versões que iriam e segredos — e decidir por escrito se enviaria.</p>
+  <p class="why">Salvar e publicar parecem a mesma coisa, e não são. Quem mistura os dois acaba mandando rascunho ou senha para onde outras pessoas veem. Depois de enviado, o conteúdo fica com quem tem acesso ao destino.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>São três passos separados: <b>salvar</b> no computador, <b>enviar</b> ao GitHub e <b>pôr um site no ar</b>.</li>
+      <li>Antes de enviar: destino, estado, conteúdo e <b>nenhum segredo</b>.</li>
+      <li>Repositório público: <b>qualquer pessoa</b> vê. Privado: quem tem acesso.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Salvar, enviar e pôr no ar são três passos</h2>
+  <p>A nota no caderno só você vê. Lançada no sistema da secretaria, todo mundo com acesso vê. Impressa no boletim, vai para as famílias.</p>
+  <p>No <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span> é igual. O <span class="gterm" data-gl="commit" data-def="Versão salva no Git, com uma mensagem que explica a mudança. Dá para voltar a ela depois.">commit</span> fica no seu computador. O push envia as versões ao <span class="gterm" data-gl="github" data-def="Site onde você guarda uma cópia do seu repositório Git na internet, para trabalhar de outro computador ou com outras pessoas.">GitHub</span>. Pôr um site no ar é uma etapa a mais, que depende da hospedagem.</p>
+  <p data-ex="professora">Lúcia salvou três versões do roteiro de densidade no notebook. Nenhuma saiu dali. Enviar ao GitHub seria uma decisão dela, com conferência própria.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Três passos, três decisões</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Salvar a versão · fica no seu computador</div>
+        <div class="item doc"><span class="pin">2</span> Enviar ao GitHub · quem tem acesso ao destino passa a ver</div>
+        <div class="item doc"><span class="pin">3</span> Pôr um site no ar · etapa a mais, conforme a hospedagem</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O caderno: só você.</span></li>
+      <li><span class="pin">2</span><span>O sistema da secretaria: quem tem acesso.</span></li>
+      <li><span class="pin">3</span><span>O boletim: as famílias.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Confira o destino com <code>git remote -v</code></h2>
+  <p>Rodado no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>, o comando mostra para onde a pasta envia. O endereço aparece com o apelido <span class="gterm" data-gl="origin" data-def="Nome que o Git dá, por padrão, ao endereço no GitHub de onde a pasta veio e para onde ela envia.">origin</span>. A conta dona está no próprio endereço, logo depois de github.com.</p>
+  <p>Resposta vazia quer dizer que a pasta não tem destino: um push não teria para onde ir.</p>
+  <p data-ex="coordenadora">Antes de enviar os modelos de relatório, Denise rodou o comando. O endereço apontava para o <span class="gterm" data-gl="repositorio" data-def="Pasta de projeto acompanhada pelo Git, com todo o histórico de versões.">repositório</span> da rede de ensino, e não para o da coordenação. Ela parou ali.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> cd ~/projetos/treino-git
+<span class="pr">$</span> git remote -v
+<span class="pr">$</span> cd ~/projetos/clone-curso
+<span class="pr">$</span> git remote -v
+<span class="out">origin	https://github.com/inematds/oswork-v62.git (fetch)
+origin	https://github.com/inematds/oswork-v62.git (push)</span></code></pre>
+<p class="tela-nota">No treino, nada: não há destino. No clone, o destino é a conta inematds, que não é a sua; você não tem permissão para enviar para lá.</p></div>
+  <figcaption>"fetch" é de onde a pasta busca; "push" é para onde ela envia. Aqui, o mesmo endereço.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Confira o estado e as versões que iriam</h2>
+  <p><code>git status</code> diz se sobrou algo sem salvar. <code>git show --stat</code> mostra a última versão: autor, mensagem e a lista de arquivos que ela mudou.</p>
+  <p>O push leva todas as versões que o destino ainda não tem, e não só a última. O status diz quantas: <code>up to date with 'origin/main'</code> quer dizer nenhuma; <code>ahead of 'origin/main' by 2 commits</code> quer dizer duas. Sem destino, como no treino, essa linha nem aparece, e iria o histórico inteiro do log.</p>
+  <p data-ex="professora">Lúcia rodou os dois na pasta de treino. O status estava limpo. A última versão era a errata da aula anterior, e só mexia no <span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span>.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> git show --stat
+<span class="out">commit b11f583e5f52d25a3b67584457953303751f2cc5
+Author: Lúcia Andrade &lt;lucia@exemplo.com&gt;
+Date:   Fri Sep 25 00:38:59 2026 -0300
+
+    Revert "Muda o título do README (treino)"
+
+    This reverts commit 7ef98be6e53aff1d9381c1126153d7270b9cfd20.
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)</span></code></pre>
+<p class="tela-nota">Ignore a linha "commit" com o código longo. "Author" mostra o nome e o e-mail que iriam junto. No fim, "README.md | 2 +-": um arquivo, com uma linha que saiu (−) e uma que entrou (+).</p></div>
+  <figcaption>O e-mail configurado na aula 3 do módulo vai junto com cada versão enviada. Se não quiser expor o seu, o GitHub oferece nas configurações um e-mail de privacidade; troque antes do primeiro envio.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Nenhum segredo, e rascunho só se você decidiu</h2>
+  <p>Olhe só as versões que iriam. Se o status diz que nenhuma iria, não há o que procurar. Nas que iriam, procure senha, chave ou <span class="gterm" data-gl="env" data-def="Arquivo que guarda chaves e senhas fora do código. Nunca vai para o Git, para um pedido ou para um print.">.env</span> na lista de arquivos. Rascunho também conta: se ele está numa versão, vai junto.</p>
+  <p>Público quer dizer que qualquer pessoa na internet vê. Privado também exige cuidado: quem tem acesso vê tudo.</p>
+  <p data-ex="coordenadora">Denise achou um rascunho com nomes de alunos numa versão antiga da pasta. Não enviou. Pediu ajuda à equipe de tecnologia da escola antes de qualquer envio.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Conferência antes do envio · treino-git</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Destino: nenhum; a resposta do remote veio vazia</div>
+        <div class="item doc"><span class="pin">2</span> Estado: limpo, nada sem salvar</div>
+        <div class="item doc"><span class="pin">3</span> Versões que iriam: as três do treino, só README e .gitignore</div>
+        <div class="item doc"><span class="pin">4</span> Segredos: nenhum arquivo de senha ou chave</div>
+        <div class="item doc">Decisão: não enviar, porque não há destino</div>
+      </div>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Achou uma senha numa versão salva? Não envie. Apagar o arquivo agora não tira a senha das versões antigas. Anote qual versão é, pelo log, e peça ajuda a quem administra o projeto antes de qualquer envio.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Faça a conferência de quatro pontos e decida</h3>
+  <p class="pgoal">Pronto quando você tiver a conferência preenchida para a pasta de treino e para o clone do curso, cada uma com a decisão e o motivo. Cerca de 10 minutos, no computador. Anote no papel ou no bloco de notas.</p>
+  <p class="psafe">Só leitura: nenhum comando desta prática envia nada. Não rode o push. Na pasta de treino não há destino, e no clone a conta não é sua. A opção --no-pager só faz a resposta sair inteira, sem parar a tela. Não fez as aulas anteriores? Use qualquer pasta com histórico que você tenha.</p>
+  <p><b>Bloco 1</b> · pasta de treino:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/treino-git
+git remote -v
+git status
+git --no-pager log --oneline
+git --no-pager show --stat</pre></div>
+  <p><b>Bloco 2</b> · clone do curso:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/clone-curso
+git remote -v
+git status
+git --no-pager show --stat</pre></div>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">CONFERÊNCIA ANTES DO ENVIO · &lt;nome da pasta&gt;
+1. Destino: &lt;endereço do remote, ou "nenhum"&gt;
+2. Estado: &lt;limpo, ou o que sobrou sem salvar&gt;
+3. Versões que iriam: &lt;o status diz up to date ou ahead by N; sem destino, todas as do log&gt;
+4. Segredos: &lt;nenhum, ou qual arquivo&gt;
+Decisão: &lt;enviar · não enviar&gt;, porque &lt;motivo&gt;</pre></div>
+  <details class="mais"><summary>Veja a conferência do clone preenchida por uma professora</summary>
+    <p><b>Pasta:</b> clone-curso.<br><b>1. Destino:</b> github.com/inematds/oswork-v62, conta do curso.<br><b>2. Estado:</b> limpo.<br><b>3. Versões que iriam:</b> nenhuma; o status diz up to date with origin/main.<br><b>4. Segredos:</b> nenhum meu.<br><b>Decisão:</b> não enviar, porque a conta de destino não é minha e eu não mudei nada.</p>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole o bloco 1 e preencha a conferência da pasta de treino.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Cole o bloco 2 e preencha a conferência do clone.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Escreva a decisão de cada uma com o motivo, citando o ponto que decidiu.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de separar salvar de enviar, e decidiu com base no que o terminal mostrou.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Antes de enviar</h3>
+    <ol>
+      <li><span><b>Três passos</b>salvar, enviar e pôr no ar; cada um com decisão própria.</span></li>
+      <li><span><b>Quatro pontos</b>destino, estado, versões que iriam e segredos.</span></li>
+      <li><span><b>Visibilidade</b>público, qualquer pessoa; privado, quem tem acesso.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já tem um ponto de recuperação e sabe conferir antes de mandar qualquer versão para fora do computador.</p>
+    <p class="na-action">Hoje, cole o molde da conferência no seu bloco de notas, num lugar fácil de achar. Ele vale para qualquer envio futuro.</p>
+    <p class="na-hook">No módulo 7: o <span class="gterm" data-gl="telegram" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7.">Telegram</span> vira tela de trabalho, com um <span class="gterm" data-gl="bot" data-def="Programa que conversa por um aplicativo de mensagens e responde sozinho, seguindo as regras que você define.">bot</span> que responde sem executar mensagens. O <span class="gterm" data-gl="token-do-bot" data-def="Senha que o Telegram gera para o seu bot. Quem tem o token controla o bot; por isso ele fica no .env.">token do bot</span> é o primeiro segredo que nunca pode entrar num push.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Publique só o que revisou<small>Texto completo do tópico no OSWork v2 e fechamento do módulo. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>git push envia <span class="gterm" data-def="Versão salva no Git, com uma mensagem que explica a mudança. Dá para voltar a ela depois." data-gl="commit">commits</span> ao remoto. Antes disso, verifique a conta, a URL de destino, o escopo dos arquivos e a ausência de credenciais. Repositório público fica acessível a terceiros; privado também exige controle de acesso. Publicar um site é uma etapa adicional, conforme a hospedagem.</p><h3>Por que aprender</h3><p>Misturar salvar e publicar leva a exposição acidental. Separe “registrar localmente”, “enviar ao GitHub” e “colocar o site no ar” na sua lista de verificação.</p><h3>Conceitos-chave</h3><p>origin; push; visibilidade; credenciais; publicação.</p><h4>Na prática</h4><p>Um README local pode conter rascunhos. O commit preserva esses rascunhos na máquina. Só envie quando tiver decidido que podem fazer parte do remoto escolhido.</p><h4>Experimente agora</h4><p>Use git remote -v e git status. Confirme a URL e reveja o último commit com git show --stat antes de decidir pelo envio.</p></section><section class="comp-sec"><h3>Laboratório do módulo: Seu primeiro ponto de recuperação</h3><p>Use arquivos fictícios e uma <span class="gterm" data-def="Pasta só com arquivos fictícios ou cópias, criada para testar a IA sem risco para o material verdadeiro." data-gl="pasta-de-treino">pasta de treino</span>. As práticas com <span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">instalação</span>, Telegram ou <span class="gterm" data-def="Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar." data-gl="vps">VPS</span> podem exigir tempo adicional para cadastro e configuração.</p><ol><li>Inicialize Git apenas na pasta de treino e configure seu nome e email nesse repositório.</li><li>Crie o primeiro commit com arquivos nomeados, depois altere uma linha do README.</li><li>Inspecione git <span class="gterm" data-def="Comparação que mostra, linha por linha, o que mudou num arquivo." data-gl="diff">diff</span> e faça um segundo commit com essa mudança.</li><li>Use git <span class="gterm" data-def="Comando do Git que cria um commit novo desfazendo um commit anterior, sem apagar nada do histórico." data-gl="revert">revert</span> no segundo commit, confira o conteúdo restaurado e leia git <span class="gterm" data-def="Registro do que um programa fez, linha por linha, com data e hora. É onde se procura a causa de um erro." data-gl="log">log</span> --oneline.</li></ol><h4>Git · somente na pasta de treino</h4><p>Leia o bloco antes de usar. Campos como Seu Nome e usuario@ip-da-vps são exemplos para adaptar; comandos administrativos pertencem somente ao seu ambiente de treino.</p><pre><code>git init -b main
+git config user.name "Seu Nome"
+git config user.email "seu-email"
+git status
+git add README.md .gitignore
+git diff --cached
+git commit -m "Registra estrutura inicial de treino"
+git log --oneline</code></pre><h4>Critério de pronto</h4><p>Salvar uma versão, inspecionar diferenças e recuperar uma mudança de treino. Registre o arquivo produzido, o teste executado e o resultado observado.</p></section><section class="comp-sec"><h3>Critérios para revisar sua entrega</h3><p>Use esta rubrica depois do laboratório. Cada linha pede uma evidência; marcar leitura não significa que a prática foi executada.</p><ul><li><b>Escopo</b> — A entrega corresponde ao objetivo desta aula. <i>Se não passou:</i> Reduza a tarefa e nomeie um único resultado.</li><li><b>Entradas</b> — Você sabe quais arquivos ou dados foram usados. <i>Se não passou:</i> Liste as fontes e remova material sem relação.</li><li><b>Execução</b> — O procedimento foi realizado no ambiente de treino. <i>Se não passou:</i> Diferencie o que foi planejado do que foi feito.</li><li><b>Conferência</b> — Um resultado foi comparado com uma referência. <i>Se não passou:</i> Abra o arquivo ou repita a consulta verificável.</li><li><b>Segredos</b> — Nenhum token, senha ou dado privado foi compartilhado. <i>Se não passou:</i> Revise a cópia de trabalho antes de qualquer envio.</li><li><b>Continuidade</b> — Outra pessoa consegue encontrar o próximo passo. <i>Se não passou:</i> Atualize README e registre uma pendência concreta.</li></ul></section><section class="comp-sec"><h3>Confira o que ficou</h3><p>git commit já envia os arquivos ao GitHub?</p><details class="mais"><summary>Ver resposta comentada</summary><p>Não. Commit registra localmente; push envia ao remoto configurado.</p><p>Se sua resposta foi diferente, volte ao tópico correspondente e escreva a diferença em uma frase. A checagem não bloqueia seu estudo.</p></details><h4>Resumo do módulo</h4><ul><li>Repositório; commit; histórico; remoto; <span class="gterm" data-def="Cópia de segurança dos arquivos, guardada em outro lugar para recuperar se algo se perder." data-gl="backup">backup</span>.</li><li>Working tree; <span class="gterm" data-def="Área do Git onde ficam as mudanças escolhidas para entrar no próximo commit." data-gl="staging">staging</span>; diff; revisão de conteúdo.</li><li>Autoria; mensagem; mudança coesa; verificação.</li><li><span class="gterm" data-def="Cópia de um repositório do GitHub para o seu computador, com todo o histórico." data-gl="clone">Clone</span> cria a pasta; <span class="gterm" data-def="Comando do Git que traz para o seu computador as mudanças novas do GitHub." data-gl="pull">pull</span> atualiza; <span class="gterm" data-def="Linha paralela de trabalho no Git, onde você testa mudanças sem mexer na versão principal." data-gl="branch">branch</span> é uma linha de trabalho; divergência pede revisão.</li><li>Revert preserva histórico; <span class="gterm" data-def="Comando do Git que descarta as mudanças ainda não salvas de um arquivo, voltando ao que estava na última versão. O que foi descartado não volta." data-gl="restore">restore</span> descarta alterações selecionadas; recuperação exige diagnóstico.</li><li>origin; push; visibilidade; credenciais; publicação.</li></ul></section><section class="comp-sec"><h3>Consulte a fonte</h3><p class="comp-fontes">Ferramentas verificadas em 20/09/2026; nomes de telas e disponibilidade podem mudar.</p><ul class="comp-fontes"><li><a href="https://git-scm.com/docs/git-pull" target="_blank" rel="noopener">Git pull</a></li></ul></section>
+<p class="comp-termos">Termos desta seção: <span class="gterm" data-def="Arquivo que lista o que o Git não deve guardar, como senhas e arquivos temporários." data-gl="gitignore">.gitignore</span>.</p></details><!--/COMP-->
+<nav class="lnav"><a href="#aula-35">← aula anterior</a><a class="next" href="#aula-37">próxima aula →</a></nav>
+<p class="aula-pe">Aula 36 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-36">
+[
+  {"front":"Uma colega salvou uma versão e diz que o relatório já está no GitHub. O que você confere?","back":"Se houve envio. Salvar registra só no computador; enviar é outro comando, com destino próprio."},
+  {"front":"O git remote -v não respondeu nada. O que isso quer dizer?","back":"Que a pasta não tem destino configurado: um envio não teria para onde ir."},
+  {"front":"A lista de arquivos da última versão mostra um .env. Você envia e apaga depois?","back":"Não envia. Apagar depois não tira o arquivo das versões antigas; peça ajuda antes."},
+  {"front":"O repositório é privado. Isso libera enviar rascunhos com dados de alunos?","back":"Não. Privado ainda é visto por todos que têm acesso; decida o conteúdo antes."}
+]
+</script>
+</section>

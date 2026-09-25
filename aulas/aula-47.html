@@ -1,0 +1,148 @@
+<section class="view" id="v-aula-47" data-aula="47" data-tempo="16min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 8 · Aula 5 de 6</p>
+  <h1>O zelador do bot: <em>liga, religa e anota</em></h1>
+  <figure class="cena"><img src="assets/img/aula-47.webp" width="1280" height="720" alt="De manhã cedo, no corredor da escola, o zelador acende as luzes no painel da parede enquanto a coordenadora observa com uma xícara de café, ao lado de um livro de ocorrências aberto numa mesinha."></figure>
+  <p class="promise">Você consegue adaptar os quatro campos da unidade do kit e ler, no status e no <span class="gterm" data-gl="log" data-def="Registro do que um programa fez, linha por linha, com data e hora. É onde se procura a causa de um erro.">log</span>, se o <span class="gterm" data-gl="bot" data-def="Programa que conversa por um aplicativo de mensagens e responde sozinho, seguindo as regras que você define.">bot</span> está rodando.</p>
+  <p class="why">Um bot rodando numa sessão <span class="gterm" data-gl="ssh" data-def="Forma segura de abrir o terminal de outro computador pela internet.">SSH</span> pode parar quando você fecha a conexão. A supervisão liga o bot junto com a máquina e guarda os registros num lugar só. Ela não substitui alertas, limites nem a busca da causa.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O <b>systemd</b> liga o bot com a máquina e o religa depois de uma falha.</li>
+      <li>A <b>unidade</b> diz qual programa, com qual usuário e em qual pasta.</li>
+      <li>Religar não conserta erro que se repete: <b>leia o log</b> e pare para diagnosticar.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Na sessão aberta, o bot depende da janela</h2>
+  <p>Até aqui, você ligou o bot à mão, com <code>python3 bot.py</code> no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>. Na <span class="gterm" data-gl="vps" data-def="Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar.">VPS</span>, isso amarra o bot à sua conexão.</p>
+  <p>O <span class="gterm" data-gl="systemd" data-def="Parte do Linux que liga, vigia e religa programas sozinha, inclusive depois de reiniciar a máquina.">systemd</span> é o zelador da máquina: acende as luzes toda manhã, religa o que apagou e anota tudo no livro de ocorrências.</p>
+  <p data-ex="coordenadora">Denise deixou o bot rodando numa sessão SSH e foi para casa. A conexão caiu no caminho, e o bot parou junto.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Na sessão aberta</span><p><b>Liga:</b> quando você digita o comando.</p><p><b>Se a conexão cai:</b> o bot pode parar junto.</p><p><b>Registro:</b> some com a janela.</p></div>
+      <div class="depois"><span class="rot">Com systemd</span><p><b>Liga:</b> sozinho, junto com a máquina.</p><p><b>Se o bot falha:</b> religa depois de 15 segundos.</p><p><b>Registro:</b> guardado pelo systemd, para ler depois.</p></div>
+      <p class="saldo"><b>Saldo:</b> o bot deixa de depender da sua janela aberta.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>A unidade diz o quê, com quem e onde</h2>
+  <p>A <span class="gterm" data-gl="unidade" data-def="Arquivo que diz ao systemd qual programa iniciar, com qual usuário e em qual pasta.">unidade</span> do kit é o arquivo <code>oswork-bot.service</code>, na pasta bot. Quatro campos precisam do seu usuário e do seu caminho: User, WorkingDirectory, EnvironmentFile (onde está o <span class="gterm" data-gl="env" data-def="Arquivo que guarda chaves e senhas fora do código. Nunca vai para o Git, para um pedido ou para um print.">.env</span>) e ExecStart.</p>
+  <p>O campo Restart=on-failure religa o bot depois de uma falha. No kit, o usuário de exemplo é oswork; o usuário e as pastas precisam existir na VPS.</p>
+  <p data-ex="professora">Lúcia trocou oswork pelo usuário de trabalho dela nos quatro campos. Depois mostrou só essas linhas na tela para conferir.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta bot do kit</span></div>
+<pre><code><span class="pr">$</span> grep -E "^(User|WorkingDirectory|EnvironmentFile|ExecStart|Restart)=" oswork-bot.service
+<span class="out">User=oswork
+WorkingDirectory=/home/oswork/projetos/oswork/materiais/bot
+EnvironmentFile=/home/oswork/projetos/oswork/materiais/bot/.env
+ExecStart=/usr/bin/python3 /home/oswork/projetos/oswork/materiais/bot/bot.py
+Restart=on-failure</span></code></pre>
+<p class="tela-nota">Assim vem o kit. As quatro primeiras linhas são as que você adapta; a última você mantém.</p></div>
+  <figcaption>User é quem roda o bot. WorkingDirectory é a pasta. EnvironmentFile é o .env. ExecStart é o comando que liga.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Ligue e confira o status</h2>
+  <p>Na VPS, a unidade adaptada vai para a pasta do systemd, <code>/etc/systemd/system</code>, com permissão de administrador. Depois, três comandos ligam o bot. O <span class="gterm" data-gl="systemctl" data-def="Comando do systemd para ligar, desligar e ver o estado de um serviço.">systemctl</span> relê as unidades, liga o bot e mostra o estado dele.</p>
+  <p>O <span class="gterm" data-gl="sudo" data-def="Comando que executa a instrução seguinte com permissão de administrador. Pede a sua senha.">sudo</span> aparece nos dois primeiros porque eles mudam a máquina. O terceiro só lê.</p>
+  <p data-ex="coordenadora">Denise viu "active (running)" no status. Mesmo assim, só deu o passo por concluído depois de mandar /status no <span class="gterm" data-gl="telegram" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7.">Telegram</span> e receber a resposta.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · na VPS</span></div>
+<pre><code><span class="pr">$</span> sudo cp oswork-bot.service /etc/systemd/system/
+<span class="pr">$</span> sudo systemctl daemon-reload
+<span class="pr">$</span> sudo systemctl enable --now oswork-bot
+<span class="pr">$</span> systemctl status oswork-bot --no-pager
+<span class="out">● oswork-bot.service - OSWork bot de treino restrito
+     Active: active (running) since [data e hora]</span></code></pre>
+<p class="tela-nota">A primeira linha copia a unidade. O daemon-reload faz o systemd reler as unidades. "active (running)" quer dizer "ativo, rodando". O enable --now liga agora e deixa ligado para os próximos reinícios.</p></div>
+  <figcaption>Rodando é o primeiro sinal. A prova é o bot responder.</figcaption></figure>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Telegram · conversa com o bot</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>/status</p>
+        <p class="msg ia ok"><span class="quem">Bot</span>OSWork ativo. Acesso restrito. Bot determinístico de treino.</p>
+      </div>
+      <p class="tela-nota bom">A resposta real do bot do kit ao /status.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Reinício controlado e leitura do log</h2>
+  <p>Faça um reinício de propósito, com <code>systemctl restart</code>, e mande /status de novo. Anote o horário. Depois leia o log com o <span class="gterm" data-gl="journalctl" data-def="Comando que mostra o log dos serviços do systemd.">journalctl</span>.</p>
+  <p>Religar não conserta um erro que se repete. Se o bot cai de novo, pare o serviço e procure a causa antes de insistir.</p>
+  <p data-ex="professora">No log, Lúcia viu a parada e a volta do bot, com hora. Em outro dia, viu "processo encerrado para diagnóstico" e parou o serviço antes de tentar de novo.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · na VPS</span></div>
+<pre><code><span class="pr">$</span> sudo systemctl restart oswork-bot
+<span class="pr">$</span> journalctl -u oswork-bot -n 50 --no-pager
+<span class="out">[data] nome-da-vps systemd[1]: Stopped oswork-bot.service - OSWork bot de treino restrito.
+[data] nome-da-vps systemd[1]: Started oswork-bot.service - OSWork bot de treino restrito.</span></code></pre>
+<p class="tela-nota">Stopped e Started: parou e ligou, com data e hora. Com o bot funcionando, ele não escreve mais nada.</p></div>
+  <figcaption>Se aparecer uma linha terminando em "processo encerrado para diagnóstico", pare com sudo systemctl stop oswork-bot e leia a linha inteira.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Os passos 3 e 4 precisam de uma VPS com o bot. Sem ela, a prática desta aula é só a unidade, no seu computador. Guarde os comandos: eles vão estar no plano quando a máquina existir.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Adapte a unidade do kit ao seu usuário</h3>
+  <p class="pgoal">Pronto quando o grep mostrar o seu usuário e o seu caminho nos quatro campos. Cerca de 10 minutos, no computador, com um editor de texto e o terminal.</p>
+  <p class="psafe">Você edita um arquivo de texto, sem ligar nada: sem VPS, nada roda. Trabalhe numa cópia descompactada do kit. Errou? Descompacte de novo. No Windows, faça tudo no terminal do <span class="gterm" data-gl="wsl" data-def="Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux.">WSL</span>, do módulo 3.</p>
+  <p><b>Onde está a unidade:</b> no kit do curso, o oswork-kit.zip da <a href="https://inematds.github.io/oswork/materiais/" target="_blank" rel="noopener">página de materiais do OSWork</a>. Descompacte em <code>~/projetos/oswork-kit</code>: a unidade fica em <code>~/projetos/oswork-kit/bot</code>. No Windows, o zip baixa na pasta Downloads; no WSL, traga com <code>cp /mnt/c/Users/SeuNome/Downloads/oswork-kit.zip ~/projetos/</code> e depois <code>cd ~/projetos</code> e <code>unzip oswork-kit.zip -d oswork-kit</code>. O caminho que vem no kit é o do repositório do curso; troque pelo lugar onde o bot vai morar na VPS. No molde fica /home mesmo, também no Mac: é o caminho da VPS.</p>
+  <p><b>Cole no arquivo</b>, no lugar das quatro linhas do kit:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">User=&lt;seu usuário de trabalho&gt;
+WorkingDirectory=/home/&lt;usuário&gt;/projetos/oswork-kit/bot
+EnvironmentFile=/home/&lt;usuário&gt;/projetos/oswork-kit/bot/.env
+ExecStart=/usr/bin/python3 /home/&lt;usuário&gt;/projetos/oswork-kit/bot/bot.py</pre></div>
+  <p><b>Rode no terminal</b>, para conferir:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/oswork-kit/bot
+grep -E "^(User|WorkingDirectory|EnvironmentFile|ExecStart)=" oswork-bot.service</pre></div>
+  <details class="mais"><summary>Veja a unidade adaptada por uma coordenadora</summary>
+    <p>User=denise<br>WorkingDirectory=/home/denise/projetos/oswork-kit/bot<br>EnvironmentFile=/home/denise/projetos/oswork-kit/bot/.env<br>ExecStart=/usr/bin/python3 /home/denise/projetos/oswork-kit/bot/bot.py</p>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Na pasta bot, abra o arquivo com <code>nano oswork-bot.service</code>, no próprio terminal, e troque os quatro campos pelo molde, com o seu usuário. Para salvar, Ctrl+O e Enter; para sair, Ctrl+X.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Salve e rode a linha do grep no terminal, dentro da pasta bot.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Confira que nenhuma das quatro linhas ainda diz oswork. Anote no plano: nome da unidade, usuário e caminho.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de preparar a instrução que deixa o bot ligado sem depender da sua janela.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Zelador</h3>
+    <ol>
+      <li><span><b>Unidade</b>User, WorkingDirectory, EnvironmentFile e ExecStart com o seu usuário e caminho.</span></li>
+      <li><span><b>Ligar</b>daemon-reload, enable --now, status, e /status no Telegram.</span></li>
+      <li><span><b>Falhou de novo</b>leia o journalctl e pare antes de repetir.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe entregar o bot a um zelador que liga, religa e anota.</p>
+    <p class="na-action">No plano de VPS, preencha a parte Serviço: caminho de trabalho, comando, nome da unidade, arquivo de variáveis e política de reinício.</p>
+    <p class="na-hook">Ligado e religado ainda não é cuidado. Última aula: a rotina que prova que o serviço se recupera, e o fim do curso.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Systemd supervisiona o processo<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>systemd é o gerenciador de serviços de muitas distribuições Linux. Uma unidade descreve qual programa iniciar, com qual usuário e em qual pasta. Restart=on-failure reinicia após uma falha, mas não corrige um erro persistente. O kit fornece uma unidade parametrizada para o usuário oswork.</p><h3>Por que aprender</h3><p>Executar o bot numa sessão SSH pode encerrar o trabalho ao fechar a conexão. Supervisão permite reiniciar com a máquina e centralizar <span class="gterm" data-def="Registro do que um programa fez, linha por linha, com data e hora. É onde se procura a causa de um erro." data-gl="log">logs</span>. Ela não substitui alertas, limites ou análise da causa.</p><h3>Conceitos-chave</h3><p>Unidade; usuário de serviço; <span class="gterm" data-def="Outro nome para pasta, usado no terminal." data-gl="diretorio">diretório</span>; reinício; journal.</p><h4>Na prática</h4><p>Depois de adaptar <span class="gterm" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config." data-gl="caminho">caminhos</span>, use sudo systemctl daemon-reload e sudo systemctl enable --now oswork-bot. Consulte systemctl status e journalctl -u oswork-bot -n 50 --no-pager.</p><h4>Experimente agora</h4><p>Faça um reinício controlado com systemctl restart, confira /status e registre o horário. Se falhar, pare o serviço antes de ficar repetindo tentativas sem diagnóstico.</p><figure class="comp-fig"><ul><li>Pasta local</li><li><span class="gterm" data-def="Pasta de projeto acompanhada pelo Git, com todo o histórico de versões." data-gl="repositorio">Repositório</span></li><li>VPS</li><li>systemd</li></ul><figcaption>O mesmo trabalho, quatro lugares. O systemd é o que faz a rotina sobreviver a um reinício.</figcaption></figure></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-46">← aula anterior</a><a class="next" href="#aula-48">próxima aula →</a></nav>
+<p class="aula-pe">Aula 47 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-47">
+[
+  {"front":"O status diz active (running), mas ninguém testou o bot. Já está pronto?","back":"Ainda não. A prova é mandar /status no Telegram e receber a resposta."},
+  {"front":"O bot caiu três vezes na mesma hora e o systemd religou todas. O que você faz?","back":"Para o serviço e lê o journalctl. Religar não conserta a causa."},
+  {"front":"Você copiou a unidade do kit sem mudar nada para uma VPS sem o usuário oswork. O que acontece?","back":"Ela não funciona: o usuário e as pastas dos quatro campos precisam existir na máquina."}
+]
+</script>
+</section>

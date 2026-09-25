@@ -1,0 +1,170 @@
+<section class="view" id="v-aula-32" data-aula="32" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 6 · Aula 2 de 6</p>
+  <h1>Olhe o que vai entrar <em>antes</em> de salvar</h1>
+  <figure class="cena"><img src="assets/img/aula-32.webp" width="1280" height="720" alt="Uma coordenadora separa folhas de prova em montes sobre a mesa e grampeia só um deles, com o notebook aberto ao lado."></figure>
+  <p class="promise">Você consegue ler as respostas de <code>git status</code>, <code>git diff</code> e <code>git diff --cached</code> e dizer em que etapa cada arquivo está: fora do histórico ou separado para a próxima versão.</p>
+  <p class="why">Um <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span> pode criar arquivos que você não pediu. Se você salvar tudo de uma vez, uma anotação pessoal entra no histórico junto com o trabalho. Olhar antes custa um minuto.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li><code>git status</code> diz em que <b>etapa</b> cada arquivo está.</li>
+      <li><code>git add</code> com o nome do arquivo <b>separa</b> só ele para a próxima versão.</li>
+      <li><code>git diff --cached</code> mostra, linha por linha, o que <b>vai entrar</b>.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Três etapas: mudou, separou, salvou</h2>
+  <p>Numa prova, você separa as folhas que entram nesta versão e só então grampeia. O rascunho fica na mesa.</p>
+  <p>O <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span> trabalha igual. Um arquivo novo ou mudado fica na pasta: etapa 1. Quando você o separa, ele vai para a etapa 2, que o Git chama de <span class="gterm" data-gl="staging" data-def="Área do Git onde ficam as mudanças escolhidas para entrar no próximo commit.">staging</span>. O <span class="gterm" data-gl="commit" data-def="Versão salva no Git, com uma mensagem que explica a mudança. Dá para voltar a ela depois.">commit</span> grampeia o que foi separado: etapa 3.</p>
+  <p data-ex="coordenadora">Denise monta o simulado do 9º ano. Separa as folhas de matemática e de português num monte e grampeia. A folha com as respostas dela continua na mesa, fora da prova.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>As três etapas do Git</span></div>
+      <div class="janela-body">
+        <div class="item pasta"><span class="pin">1</span> Novos ou mudados, sem separar</div>
+        <div class="item doc dentro">notas-privadas.txt</div>
+        <div class="item pasta"><span class="pin">2</span> Separados para a próxima versão</div>
+        <div class="item doc dentro">README.md</div>
+        <div class="item pasta"><span class="pin">3</span> Versões salvas</div>
+        <div class="item doc dentro">nenhuma ainda</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>A folha na mesa: existe, mas não vai para a prova.</span></li>
+      <li><span class="pin">2</span><span>O monte separado: é o que entra se você salvar agora.</span></li>
+      <li><span class="pin">3</span><span>A prova grampeada: a versão já registrada.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span><code>git status</code> diz a etapa de cada arquivo</h2>
+  <p>Rode <code>git status</code> sempre antes de separar qualquer coisa. A resposta vem em inglês, em blocos com título.</p>
+  <p data-ex="professora">Lúcia escreveu o <span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span> da pasta de treino e uma anotação com ideias soltas para a aula. O status mostrou os dois arquivos no mesmo bloco, ainda fora do histórico.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> git status
+<span class="out">On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+	README.md
+	notas-privadas.txt</span></code></pre>
+<p class="tela-nota">"Untracked files" quer dizer "arquivos fora do histórico". Os dois estão na etapa 1.</p></div>
+  <figcaption>O <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> não salvou nada: o status só descreve.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span><code>git add</code> com o nome separa só o que você quer</h2>
+  <p>Escreva o nome do arquivo depois de <code>git add</code>. Assim você vê o tamanho da mudança e não leva junto o que não tem relação.</p>
+  <p>Existe o atalho <code>git add .</code>, que separa tudo o que não está ignorado. Para aprender, nomeie cada arquivo.</p>
+  <p data-ex="professora">Lúcia rodou <code>git add README.md</code>. No status seguinte, o README subiu para o bloco da próxima versão, e a anotação ficou onde estava.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> git add README.md
+<span class="pr">$</span> git status
+<span class="out">On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached &lt;file&gt;..." to unstage)
+	new file:   README.md
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+	notas-privadas.txt</span></code></pre>
+<p class="tela-nota">"Changes to be committed" é a etapa 2: o que entra na próxima versão. A anotação continua na etapa 1.</p></div></figure>
+  <div class="qerr"><p><span class="k">Erro comum</span>Usar <code>git add .</code> com pressa. Ele separa tudo de uma vez, inclusive a anotação pessoal que estava na pasta.</p></div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>O diff mostra o conteúdo, linha por linha</h2>
+  <p>O status diz quais arquivos. O <span class="gterm" data-gl="diff" data-def="Comparação que mostra, linha por linha, o que mudou num arquivo.">diff</span> mostra o que está escrito neles. <code>git diff --cached</code> mostra o que já foi separado e vai entrar na versão.</p>
+  <p><code>git diff</code>, sem mais nada, mostra mudanças ainda não separadas, mas só em arquivos que o Git já acompanha. Arquivo fora do histórico, como a anotação, nunca aparece nele.</p>
+  <p data-ex="professora">Lúcia rodou os dois na pasta de treino. O primeiro veio vazio: o README já estava separado e a anotação está fora do histórico. O segundo mostrou as linhas do README com um sinal de mais na frente.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> git diff
+<span class="pr">$</span> git diff --cached
+<span class="out">diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..4280337
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,3 @@
++# Treino de Git
++
++Pasta para praticar o histórico.</span></code></pre>
+<p class="tela-nota">O primeiro não respondeu nada. No segundo, pule o cabeçalho, até a linha que começa com @@: o que importa são as linhas que começam com +, o texto que vai entrar.</p></div>
+  <figcaption>Vazio no primeiro quer dizer: nada mudado ficou fora da etapa 2.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Se a tela parar com dois pontos no rodapé e não voltar ao cursor, o Git abriu a resposta em modo de leitura. Aperte a tecla q para sair. Nada foi perdido. Se o seu terminal responde em português, os títulos dos blocos vêm traduzidos, na mesma ordem.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Separe só o README e confira o que vai entrar</h3>
+  <p class="pgoal">Pronto quando o status mostrar o README em "Changes to be committed", a anotação em "Untracked files", e você souber explicar por que o <code>git diff</code> veio vazio. Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">Tudo acontece na pasta treino-git e nada é salvo no histórico ainda. O sinal &gt; cria o arquivo e substitui outro de mesmo nome: por isso, só rode estas linhas dentro de treino-git. Se o “cd” der erro, pare e faça antes a prática da aula 1 do módulo. Fechou o terminal entre um bloco e outro? Rode de novo “cd ~/projetos/treino-git” antes de seguir.</p>
+  <p><b>Bloco 1</b> · crie os dois arquivos e olhe o status:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/treino-git
+printf '# Treino de Git\n\nPasta para praticar o histórico.\n' &gt; README.md
+printf 'ideias soltas, não publicar\n' &gt; notas-privadas.txt
+git status</pre></div>
+  <p><b>Bloco 2</b> · separe só o README:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">git add README.md
+git status</pre></div>
+  <p><b>Bloco 3</b> · compare os dois diffs:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">git diff
+git diff --cached</pre></div>
+  <details class="mais"><summary>Não fez a aula 1 do módulo? Rode isto antes</summary>
+    <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir -p ~/projetos/treino-git
+cd ~/projetos/treino-git
+git init -b main</pre></div>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole o bloco 1. O <code>printf</code> escreve o texto entre aspas no arquivo; o <code>\n</code> é a quebra de linha. Confira os dois arquivos em "Untracked files".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Cole o bloco 2. Confira o README em "Changes to be committed" e a anotação ainda em "Untracked files".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Cole o bloco 3. Anote no papel ou no bloco de notas por que o primeiro diff veio vazio e o que o segundo mostrou.</span></label></li>
+  </ol>
+  <details class="gabarito"><summary>Confira a sua explicação</summary><p>O primeiro veio vazio porque o README já estava separado e a anotação está fora do histórico. O segundo mostrou as três linhas do README, que vão entrar na próxima versão.</p></details>
+  <p class="pdone">Você acabou de escolher, arquivo por arquivo, o que entra na próxima versão, e conferiu o conteúdo antes de salvar.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Olhar antes de salvar</h3>
+    <ol>
+      <li><span><b>status</b>em que etapa cada arquivo está.</span></li>
+      <li><span><b>add com o nome</b>separa só aquele arquivo.</span></li>
+      <li><span><b>diff e diff --cached</b>o que mudou sem separar e o que vai entrar.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe dizer o que entraria numa versão antes de salvá-la.</p>
+    <p class="na-action">Hoje, rode <code>git status</code> mais uma vez na pasta de treino e diga em voz alta a etapa de cada arquivo, sem olhar a aula.</p>
+    <p class="na-hook">Na próxima aula: você salva essa versão com o seu nome e uma mensagem que explica, e deixa a anotação pessoal de fora de vez.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Observe antes de preparar<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>git status mostra arquivos novos, modificados e preparados. git diff mostra mudanças ainda não preparadas; git diff --cached mostra o que vai para o próximo commit. A área de preparação, chamada staging, permite escolher exatamente quais arquivos pertencem à mesma mudança.</p><h3>Por que aprender</h3><p>git add . prepara tudo que não está ignorado. Para aprender, prefira nomear arquivos: você percebe melhor o escopo e reduz o risco de incluir material sem relação.</p><h3>Conceitos-chave</h3><p>Working tree; staging; diff; revisão de conteúdo.</p><h4>Na prática</h4><p>Você mudou README.md e criou uma anotação privada. git add README.md prepara somente a documentação. Antes do commit, git diff --cached confirma o que será registrado.</p><h4>Experimente agora</h4><p>Rode git status, git diff e git diff --cached. Se alguma saída estiver vazia, explique em qual etapa as alterações estão.</p></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-31">← aula anterior</a><a class="next" href="#aula-33">próxima aula →</a></nav>
+<p class="aula-pe">Aula 32 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-32">
+[
+  {"front":"O status mostra um arquivo em \"Untracked files\". Ele entra se você salvar agora?","back":"Não. Está fora do histórico; só entra depois de separado com git add e o nome dele."},
+  {"front":"Um agente criou quatro arquivos na pasta, mas a tarefa pedia um. Como você salva só esse?","back":"Separando só ele, pelo nome, e conferindo no status e no diff --cached antes de salvar."},
+  {"front":"O git diff veio vazio, mas você tem certeza de que mudou um arquivo. O que isso indica?","back":"Que a mudança já foi separada ou está num arquivo fora do histórico. O diff --cached e o status mostram qual."}
+]
+</script>
+</section>

@@ -1,0 +1,145 @@
+<section class="view" id="v-aula-42" data-aula="42" data-tempo="16min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 7 · Aula 6 de 6</p>
+  <h1>Passe o som antes da <em>reunião</em></h1>
+  <figure class="cena"><img src="assets/img/aula-42.webp" width="1280" height="720" alt="No auditório vazio, antes da reunião de pais, uma professora testa o microfone com uma prancheta de itens marcados e olha o celular no púlpito."></figure>
+  <p class="promise">Você consegue rodar o autoteste do bot e quatro testes reais no Telegram, registrando o que foi simulado e o que foi testado de verdade.</p>
+  <p class="why">Uma resposta certa não prova que o bot está restrito, nem que ele se recupera de uma falha. Poucos cenários, testados de propósito, mostram isso antes de o bot ir para uma máquina que fica ligada sem você.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O <b>autoteste</b> roda 11 cenários sem token e sem internet.</li>
+      <li>No Telegram, teste o que a simulação não alcança: você, um estranho, um comando qualquer, o bot desligado.</li>
+      <li>No registro, separe <b>simulado</b> de <b>testado no Telegram</b>.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>O autoteste simula 11 cenários sem internet</h2>
+  <p>O kit traz um <span class="gterm" data-gl="autoteste" data-def="Teste que o próprio bot do kit roda sem Telegram e sem internet, com mensagens de mentira, para conferir as suas regras.">autoteste</span>. O <span class="gterm" data-gl="bot" data-def="Programa que conversa por um aplicativo de mensagens e responde sozinho, seguindo as regras que você define.">bot</span> roda mensagens de mentira contra as próprias regras, sem token e sem internet.</p>
+  <p>Ele cobre acesso, grupo, comando desconhecido, a soma e arquivos de vendas com defeito. Mas não prova que o seu bot conversa com o <span class="gterm" data-gl="telegram" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7.">Telegram</span>.</p>
+  <p data-ex="coordenadora">Denise perguntou se o bot da Lúcia obedecia a estranhos. Lúcia mostrou a linha final do autoteste e anotou que ainda faltava o teste real, com uma pessoa de fora da lista.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta bot</span></div>
+<div class="pcodewrap" style="margin:0"><pre><code>
+<span class="pr">$</span> python3 bot.py --self-test
+<span class="out">OK: 11 cenários offline — acesso, grupo, comando, soma e arquivos inválidos.</span></code></pre></div>
+<p class="tela-nota">Uma linha só, começando com OK. Se aparecer um erro longo, algum cenário falhou.</p></div>
+  <figcaption>"Offline" quer dizer sem internet. É simulado: vai no registro como simulado.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>No Telegram, teste o que a simulação não alcança</h2>
+  <p>É como passar o som antes da reunião de pais: você testa o microfone com o auditório vazio. Quatro testes reais bastam: o seu /status, uma frase qualquer, uma pessoa fora da lista e o bot desligado. Se o bot desligado ainda responde, existe outra cópia ligada em algum lugar. Se fica calado, quem respondia antes era o programa do seu computador.</p>
+  <p>Anote cada teste no bloco de notas, com a origem: simulado ou Telegram. Assim ninguém confunde "passou no teste" com "funciona no celular". Ao religar o bot, ele pode responder ao /status que ficou esperando; isso é esperado.</p>
+  <p data-ex="professora">Lúcia pediu à Denise que mandasse /relatorio ao bot. Nada voltou, como esperado. No registro, escreveu: "fora da lista, Telegram, sem resposta".</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Registro de testes · bot da lojinha</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Autoteste · simulado · 11 cenários aprovados</div>
+        <div class="item doc"><span class="pin">2</span> /status da Lúcia · Telegram · "OSWork ativo…"</div>
+        <div class="item doc"><span class="pin">3</span> "oi, tudo bem?" · Telegram · "Comando desconhecido…"</div>
+        <div class="item doc"><span class="pin">4</span> /relatorio da Denise, fora da lista · Telegram · sem resposta</div>
+        <div class="item doc"><span class="pin">5</span> /status com o bot desligado · Telegram · sem resposta</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O que a simulação garante.</span></li>
+      <li><span class="pin">2</span><span>A dona é atendida.</span></li>
+      <li><span class="pin">3</span><span>Texto livre não vira ação.</span></li>
+      <li><span class="pin">4</span><span>Estranho não recebe nada.</span></li>
+      <li><span class="pin">5</span><span>Sem o programa, sem resposta.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Cada sintoma aponta para um lugar</h2>
+  <p>Quando algo falha, o sintoma diz onde olhar. Não troque o modelo de IA: /status e /relatorio nem usam IA.</p>
+  <p>Se só o /relatorio falha, o problema está no arquivo de vendas, o vendas.csv, uma planilha em <span class="gterm" data-gl="csv" data-def="Planilha em texto simples, com os valores separados por vírgula. Abre no Excel ou no Google Planilhas.">CSV</span>. Se nada responde, confira o programa, o token, a internet e a lista de acesso.</p>
+  <p data-ex="coordenadora">Denise viu a Lúcia receber "Não foi possível validar vendas.csv". Em vez de culpar a IA, Lúcia abriu o arquivo: tinha apagado a linha do cabeçalho sem querer.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="neutro"><span class="rot">Só o /relatorio falha</span><p><b>O bot diz:</b> "Não foi possível validar vendas.csv. Confira o arquivo local; nenhum total foi inventado."</p><p><b>Onde olhar:</b> o arquivo de vendas.</p></div>
+      <div class="neutro"><span class="rot">Nada responde</span><p><b>O bot diz:</b> nada.</p><p><b>Onde olhar:</b> o programa está ligado? O token está certo? Há internet? O seu <span class="gterm" data-gl="id-numerico" data-def="Número fixo que o Telegram dá a cada conta. Não muda quando a pessoa troca o nome que aparece.">ID numérico</span> está na <span class="gterm" data-gl="lista-de-acesso" data-def="Lista dos IDs numéricos que o bot atende. No kit, fica na linha ALLOWED_USER_IDS do .env.">lista de acesso</span>? Leia o terminal.</p></div>
+    </div>
+    <figcaption>Repare no fim da primeira mensagem: com o arquivo errado, o bot prefere não dar total a inventar um.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>O log conta o erro sem contar o segredo</h2>
+  <p>Numa falha de rede, o bot tenta de novo sozinho. Num conflito (409) ou com o token errado (401), ele se desliga para você investigar. O <span class="gterm" data-gl="log" data-def="Registro do que um programa fez, linha por linha, com data e hora. É onde se procura a causa de um erro.">log</span> do kit diz o tipo de falha e o horário. Ele não mostra o <span class="gterm" data-gl="token-do-bot" data-def="Senha que o Telegram gera para o seu bot. Quem tem o token controla o bot; por isso ele fica no .env.">token do bot</span> nem o texto das mensagens.</p>
+  <p>No mesmo registro do bloco de notas, anote cada falha assim: o que falhou, quando e o que você fez. É esse registro que vai com o bot para a <span class="gterm" data-gl="vps" data-def="Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar.">VPS</span> no módulo 8.</p>
+  <p data-ex="professora">Lúcia desligou o wi-fi com o bot ligado, de propósito. O <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> mostrou avisos de nova tentativa, e o bot voltou sozinho quando a rede voltou.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · bot ligado, rede desligada</span></div>
+<div class="pcodewrap" style="margin:0"><pre><code>
+<span class="out">2026-09-25 20:05:31,114 WARNING Falha de rede ou resposta; nova tentativa em 2 segundos.
+2026-09-25 20:05:33,120 WARNING Falha de rede ou resposta; nova tentativa em 4 segundos.
+2026-09-25 20:05:37,131 WARNING Falha de rede ou resposta; nova tentativa em 8 segundos.</span></code></pre></div>
+<p class="tela-nota">Cada tentativa espera o dobro da anterior, até 60 segundos. Nenhuma linha mostra o token.</p></div>
+  <figcaption>WARNING é aviso, não desastre: o bot continua tentando sozinho.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não tem quem mande a mensagem de fora da lista? Anote "não testado no Telegram" e siga: o autoteste já cobre esse caso de forma simulada. O registro honesto vale mais que um registro completo inventado.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
+  <h3 class="ph">Passe o som do seu bot e registre</h3>
+  <p class="pgoal">Pronto quando o registro tiver o autoteste e os testes no Telegram, cada um marcado como simulado ou Telegram. Cerca de 12 minutos, no computador e no celular.</p>
+  <p class="psafe">Os testes só leem dados fictícios; nada é apagado. A pessoa fora da lista não recebe dado nenhum. Não fez as aulas 2 a 4 deste módulo (38 a 40)? Rode só o autoteste: ele funciona sem token, na pasta bot do kit.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/oswork-kit/bot
+python3 bot.py --self-test &gt; autoteste.txt
+cat autoteste.txt</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Rode os três comandos do quadro; no celular, o do meio pode aparecer quebrado, mas é uma linha só. O sinal &gt; guarda a resposta no arquivo autoteste.txt em vez de mostrar na tela; o cat mostra o arquivo. Confira a linha "OK: 11 cenários".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Ligue o bot com <code style="white-space:nowrap">python3 bot.py</code>. No celular, envie /status e depois "oi, tudo bem?". Anote as duas respostas.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Se alguém puder, peça que mande /relatorio ao seu bot: não deve vir nada. Sem ajuda, anote "não testado".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>Aperte Ctrl+C, envie /status e confirme o silêncio. No bloco de notas, marque cada linha do registro como simulado ou Telegram.</span></label></li>
+  </ol>
+  <details class="mais"><summary>Molde do registro, preenchido por uma coordenadora</summary>
+    <p>Denise testou o bot de consultas que montou para treinar: <br>Autoteste · simulado · 11 cenários aprovados<br>/status meu · Telegram · "OSWork ativo…"<br>"bom dia" · Telegram · "Comando desconhecido…"<br>/relatorio de fora da lista · não testado no Telegram · coberto pelo autoteste<br>/status com o bot desligado · Telegram · sem resposta</p>
+  </details>
+  <p class="pdone">Você testou o bot antes de precisar dele e sabe dizer o que foi simulado e o que foi real.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Teste antes de confiar</h3>
+    <ol>
+      <li><span><b>Autoteste</b>11 cenários sem token e sem internet.</span></li>
+      <li><span><b>Testes reais</b>você, frase qualquer, estranho, bot desligado.</span></li>
+      <li><span><b>Sintoma</b>só o /relatorio: arquivo; nada: programa, token, rede, lista.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você fechou o módulo 7: tem um bot restrito, testado, que responde sem executar mensagens.</p>
+    <p class="na-action">Quando tiver uns 30 minutos, abra o material complementar e faça o laboratório do módulo: são os mesmos passos das aulas 2 a 6 deste módulo, de uma vez.</p>
+    <p class="na-hook">No próximo módulo: VPS do zero. O bot ligado o dia inteiro, sem depender do seu computador.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Teste operação e falhas<small>Texto completo do tópico no OSWork v2 e fechamento do módulo. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Teste remetente permitido, bloqueado, grupo, comando desconhecido e dados ausentes. <span class="gterm" data-def="Registro do que um programa fez, linha por linha, com data e hora. É onde se procura a causa de um erro." data-gl="log">Logs</span> devem informar tipo de falha e horário, sem token nem mensagens privadas completas. No laboratório, desligar o processo deve parar as respostas: isso prova que o programa local está no <span class="gterm" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config." data-gl="caminho">caminho</span>.</p><h3>Por que aprender</h3><p>Uma resposta correta não prova que o bot está restrito nem que recupera rede. Um conjunto pequeno de cenários demonstra as propriedades importantes antes de migrar para uma VPS.</p><h3>Conceitos-chave</h3><p>Autoteste; falha de rede; logs sem segredo; interrupção; diagnóstico.</p><h4>Na prática</h4><p>Se /status funciona e /relatorio falha, investigue o arquivo de dados. Se nenhum funciona, confira processo, autenticação e conexão. Não troque o modelo: esses comandos nem usam IA.</p><h4>Experimente agora</h4><p>Execute --self-test e guarde a saída. Depois teste a conversa real com sua conta; diferencie no registro o que foi simulado e o que foi testado no Telegram.</p></section><section class="comp-sec"><h3>Laboratório do módulo: Um bot que responde sem executar mensagens</h3><p>Use arquivos fictícios e uma <span class="gterm" data-def="Pasta só com arquivos fictícios ou cópias, criada para testar a IA sem risco para o material verdadeiro." data-gl="pasta-de-treino">pasta de treino</span>. As práticas com <span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">instalação</span>, Telegram ou VPS podem exigir tempo adicional para cadastro e configuração.</p><ol><li>Leia materiais/bot/<span class="gterm" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado." data-gl="readme">README</span>.md e rode o autoteste offline do bot, sem token.</li><li>Crie seu bot no <span class="gterm" data-def="Conta oficial do próprio Telegram que cria bots e gera o token de cada um." data-gl="botfather">BotFather</span> oficial e guarde o token somente no <span class="gterm" data-def="Arquivo que guarda chaves e senhas fora do código. Nunca vai para o Git, para um pedido ou para um print." data-gl="env">.env</span> local.</li><li>Descubra seu ID com o modo de identificação local e configure a lista de acesso.</li><li>Inicie o bot, envie /status e /relatorio na conversa privada e confira os resultados.</li></ol><h4>Bot · dentro de materiais/bot</h4><p>Leia o bloco antes de usar. Campos como Seu Nome e usuario@ip-da-vps são exemplos para adaptar; comandos administrativos pertencem somente ao seu ambiente de treino.</p><pre><code>python3 bot.py --self-test
+cp .env.example .env
+chmod 600 .env
+# Edite .env localmente; nunca compartilhe valores.
+python3 bot.py --identify
+# Preencha ALLOWED_USER_IDS com seu ID e encerre identificação.
+python3 bot.py</code></pre><h4>Critério de pronto</h4><p>Executar um bot restrito de consulta e entender onde a IA entra. Registre o arquivo produzido, o teste executado e o resultado observado.</p></section><section class="comp-sec"><h3>Critérios para revisar sua entrega</h3><p>Use esta rubrica depois do laboratório. Cada linha pede uma evidência; marcar leitura não significa que a prática foi executada.</p><ul><li><b>Escopo</b> — A entrega corresponde ao objetivo desta aula. <i>Se não passou:</i> Reduza a tarefa e nomeie um único resultado.</li><li><b>Entradas</b> — Você sabe quais arquivos ou dados foram usados. <i>Se não passou:</i> Liste as fontes e remova material sem relação.</li><li><b>Execução</b> — O procedimento foi realizado no ambiente de treino. <i>Se não passou:</i> Diferencie o que foi planejado do que foi feito.</li><li><b>Conferência</b> — Um resultado foi comparado com uma referência. <i>Se não passou:</i> Abra o arquivo ou repita a consulta verificável.</li><li><b>Segredos</b> — Nenhum token, senha ou dado privado foi compartilhado. <i>Se não passou:</i> Revise a cópia de trabalho antes de qualquer envio.</li><li><b>Continuidade</b> — Outra pessoa consegue encontrar o próximo passo. <i>Se não passou:</i> Atualize README e registre uma pendência concreta.</li></ul></section><section class="comp-sec"><h3>Confira o que ficou</h3><p>Uma mensagem do Telegram pode ser passada diretamente para o <span class="gterm" data-def="Programa que interpreta os comandos digitados no terminal." data-gl="shell">shell</span>?</p><details class="mais"><summary>Ver resposta comentada</summary><p>Não. O bot deve mapear comandos permitidos a funções definidas e verificar o remetente.</p><p>Se sua resposta foi diferente, volte ao tópico correspondente e escreva a diferença em uma frase. A checagem não bloqueia seu estudo.</p></details><h4>Resumo do módulo</h4><ul><li>Mensagem; Bot <span class="gterm" data-def="Porta de entrada para um programa usar um serviço de IA sem passar pela tela do chat. O uso pela API é cobrado por consumo." data-gl="api">API</span>; programa; <span class="gterm" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem." data-gl="agente">agente</span>; resultado.</li><li>BotFather; token; <span class="gterm" data-def="Um nome com um valor guardado, escrito como NOME=valor. O programa procura o valor pelo nome." data-gl="variavel">variável</span> de ambiente; rotação.</li><li>ID numérico; lista de acesso; conversa privada; comandos fixos.</li><li>getUpdates; offset; timeout; instância única; acesso de saída.</li><li>Função de domínio; limites; timeout; revisão; dados mínimos.</li><li>Autoteste; falha de rede; logs sem segredo; interrupção; diagnóstico.</li></ul></section><section class="comp-sec"><h3>Consulte a fonte</h3><p class="comp-fontes">Ferramentas verificadas em 20/09/2026; nomes de telas e disponibilidade podem mudar.</p><ul class="comp-fontes"><li><a href="https://core.telegram.org/bots/api" target="_blank" rel="noopener">Telegram Bot API</a></li></ul></section>
+<p class="comp-termos">Termos desta seção: <span class="gterm" data-def="Comando que define quem pode ler ou alterar um arquivo." data-gl="chmod">chmod</span>, <span class="gterm" data-def="Cópia do .env com os mesmos nomes de variáveis e valores fictícios. Mostra o que é preciso preencher sem dar acesso a nada, por isso pode ser compartilhada." data-gl="env-example">.env.example</span>.</p></details><!--/COMP-->
+<nav class="lnav"><a href="#aula-41">← aula anterior</a><a class="next" href="#aula-43">próxima aula →</a></nav>
+<p class="aula-pe">Aula 42 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-42">
+[
+  {"front":"O autoteste passou. Isso prova que o bot funciona no seu celular?","back":"Não. Ele simula mensagens sem Telegram; o teste no celular é outro e entra no registro como tal."},
+  {"front":"O /status responde e o /relatorio devolve \"Não foi possível validar\". Onde você olha?","back":"No vendas.csv. O programa está ligado; o problema é o arquivo de dados."},
+  {"front":"Você desligou o bot, mandou /status e, ao religar, a resposta chegou. É defeito?","back":"Não. Ele busca as mensagens que ficaram esperando e responde; como são só consultas, repetir não estraga nada."}
+]
+</script>
+</section>

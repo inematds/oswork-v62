@@ -28,7 +28,7 @@ integral: 8 módulos, 48 tópicos. O `oswork-v6` (7 aulas para leigo) continua c
 - Jargão: definido com `.gterm` em cada aula em que aparece; glossário em `context/glossario.json` (mesma definição
   em todo o curso) e página de glossário gerada.
 
-## Módulo 1 — Modelos: escolha pela tarefa (piloto para aprovação)
+## Módulo 1 — Modelos: escolha pela tarefa 
 
 Objetivo do v2: comparar modelos com uma tarefa real e um critério de qualidade. Laboratório: "Sua ficha de decisão".
 
@@ -44,3 +44,8 @@ Objetivo do v2: comparar modelos com uma tarefa real e um critério de qualidade
 Personagens do módulo: **Denise**, coordenadora pedagógica de uma escola; **Lúcia**, professora de ciências do 8º ano.
 Metáforas de abertura (inéditas no ecossistema v6): bancada de oficina (A1), bandejas de triagem (A2), botão de volume
 × estação de rádio (A3), a régua sobre a ata — o próprio conceito do v2 (A4), duas faturas (A5), bilhete de autorização (A6).
+
+## Módulos 2–8
+
+Mesmo molde e mesmos personagens (Denise e Lúcia). Plano de cada módulo (tabela de aulas + metáforas):
+`plano-m2.md` … `plano-m8.md`. Leitor simulado: `leitor-m2.md` … `leitor-m8.md`.

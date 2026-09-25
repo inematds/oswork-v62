@@ -1,0 +1,132 @@
+<section class="view" id="v-aula-14" data-aula="14" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 3 · Aula 2 de 6</p>
+  <h1>Programa novo vem da <em>fonte oficial</em></h1>
+  <figure class="cena"><img src="assets/img/aula-14.webp" width="1280" height="720" alt="Uma coordenadora de óculos confere com o dedo a fita de lacre de uma caixa entregue na secretaria, antes de abrir, com o notebook aberto ao lado."></figure>
+  <p class="promise">Você consegue <span class="gterm" data-gl="instalar" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial.">instalar</span> o <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span> pelo endereço oficial e confirmar, com um comando, que o computador o reconhece.</p>
+  <p class="why">Na internet circulam comandos "mais rápidos" para colocar programas no computador. Um comando colado sem conferir pode executar qualquer coisa. Conferir a fonte leva um minuto e evita esse risco.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Colocar o programa, entrar com a conta e abrir na pasta são <b>três etapas</b> diferentes.</li>
+      <li>O comando vem da <b>página oficial</b>. Confira o endereço antes de colar.</li>
+      <li><code>codex --version</code> confirma que deu certo.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Três etapas, uma de cada vez</h2>
+  <p>Instalar põe o programa no computador. Isso não conecta a sua conta nem escolhe a pasta de trabalho. Cada coisa tem a sua etapa e a sua conferência.</p>
+  <p>Esta aula faz só a primeira. As outras duas vêm nas aulas 15 e 16.</p>
+  <p data-ex="professora">Logo depois de instalar, Lúcia digitou <code>codex</code> e o programa pediu para ela entrar com a conta. Achou que era defeito. Não era: a primeira etapa tinha dado certo, e faltava a segunda.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Do zero ao primeiro pedido</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Colocar o programa no computador · esta aula</div>
+        <div class="item doc"><span class="pin">2</span> Entrar com a sua conta · aula 15</div>
+        <div class="item doc"><span class="pin">3</span> Abrir na pasta do projeto · aula 16</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Confere com <code>codex --version</code>.</span></li>
+      <li><span class="pin">2</span><span>Tem a sua própria conferência, na aula 15.</span></li>
+      <li><span class="pin">3</span><span>Confere com <code>pwd</code>, da aula 13.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Confira o lacre antes de abrir a caixa</h2>
+  <p>Quando chega uma caixa na secretaria, você olha o lacre e o remetente antes de abrir. Com um comando é igual: o remetente é o endereço de onde ele vem.</p>
+  <p>O comando oficial baixa um <span class="gterm" data-gl="script" data-def="Arquivo com uma sequência de comandos que o computador executa de uma vez.">script</span> do endereço <code>chatgpt.com</code> e o executa. Por isso o endereço importa tanto. Comando de página desconhecida não se cola.</p>
+  <p data-ex="coordenadora">Denise recebeu num grupo um "jeito mais rápido" de pôr o Codex no computador. O endereço no meio do comando não era o da página oficial. Ela não colou e usou o da página.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">✗ Mensagem do grupo</span><p><b>Endereço no comando:</b> um site com "codex" no nome, mas que não é chatgpt.com.</p><p><b>Quem garante:</b> ninguém.</p></div>
+      <div class="depois"><span class="rot">✓ Página oficial</span><p><b>Endereço no comando:</b> https://chatgpt.com/codex/install.sh</p><p><b>Quem garante:</b> a empresa que faz o programa, na página de instalação.</p></div>
+    </div>
+    <figcaption>Leia o endereço dentro do comando, não só o título da mensagem.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Cole o comando e espere a última linha</h2>
+  <p>No macOS e no Linux, o comando da página oficial é este abaixo. No Windows com <span class="gterm" data-gl="wsl" data-def="Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux.">WSL</span>, cole o mesmo comando dentro do <span class="gterm" data-gl="ubuntu" data-def="Versão popular do Linux, comum em servidores.">Ubuntu</span>. Sem WSL, siga a <a href="https://learn.chatgpt.com/docs/codex/cli" target="_blank" rel="noopener">página oficial do Codex</a>, que tem orientação própria.</p>
+  <p>Use o botão copiar: não precisa digitar a barra vertical. O instalador escreve algumas linhas enquanto trabalha, e você não precisa entender cada uma. Espere o <code>$</code> (no Mac, <code>%</code>) voltar. Quem confirma se deu certo é o passo 4.</p>
+  <p data-ex="professora">Lúcia colou o comando no Terminal do Mac e esperou. As linhas que passaram, ela não tentou decifrar. Quando o <code>%</code> voltou, passou para a conferência.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · macOS ou Linux</span></div>
+<pre><code><span class="pr">$</span> curl -fsSL https://chatgpt.com/codex/install.sh | sh</code></pre>
+<p class="tela-nota">É uma linha só, mesmo que a tela do celular a quebre. <code>curl</code> baixa o arquivo do endereço; a barra vertical o passa para o <code>sh</code>, que executa os comandos dele.</p></div>
+  <figcaption>O endereço no meio do comando é o lacre: confira que é chatgpt.com.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span><code>codex --version</code> confirma</h2>
+  <p>Para saber se deu certo, peça a versão. Se o computador reconhece o programa, ele responde com um número.</p>
+  <p>Se aparecer "command not found", o terminal ainda não achou o programa. Feche o terminal, abra de novo e repita.</p>
+  <p data-ex="coordenadora">No notebook de Denise, a primeira tentativa deu "command not found". Ela fechou o terminal, abriu outro e digitou de novo. Veio o número da versão.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> codex --version
+<span class="out">codex: command not found</span>
+<span class="pr">$</span> <span class="out"># fechou e abriu o terminal de novo</span>
+<span class="pr">$</span> codex --version
+<span class="out">codex-cli 0.156.1</span></code></pre>
+<p class="tela-nota">"command not found" quer dizer "não achei esse programa". Depois de reabrir, veio a versão. O número muda com o tempo.</p></div>
+  <figcaption>Qualquer número de versão na resposta quer dizer: está no computador e o terminal o encontra.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>"command not found" logo depois da primeira vez é comum: o terminal aberto antes não sabe do programa novo. Feche, abra de novo e repita o <code>codex --version</code>. Continuou? Copie a mensagem de erro, sem senha nenhuma, e leve para quem cuida do computador.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Coloque o Codex no computador e confira a versão</h3>
+  <p class="pgoal">Pronto quando <code>codex --version</code> responder com um número. Cerca de 10 minutos, no computador, com internet.</p>
+  <p class="psafe">O comando só vale se for igual ao da página oficial: confira o endereço chatgpt.com. Se pedir a senha do computador e ele é seu, digite a sua: as letras não aparecem enquanto você digita. Se o computador é da escola, pare e fale com quem cuida dele.</p>
+  <p><b>Passo 2 · cole no terminal</b></p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">curl -fsSL https://chatgpt.com/codex/install.sh | sh</pre></div>
+  <p><b>Passo 3 · cole no terminal novo</b></p>
+  <pre><code>codex --version</code></pre>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Abra a <a href="https://learn.chatgpt.com/docs/codex/cli" target="_blank" rel="noopener">página oficial do Codex</a>. Procure a parte de instalação (em inglês, "Install"). Confira que o comando para macOS e Linux é o mesmo do bloco do passo 2. No Windows com WSL, use esse mesmo comando no Ubuntu.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Copie o bloco do passo 2, cole no terminal, tecle Enter e espere o <code>$</code> (ou <code>%</code>) voltar.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Feche e reabra o terminal. Cole o bloco do passo 3 e anote o número que voltar. "command not found" duas vezes? Copie a mensagem e leve para quem cuida do computador.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de pôr um programa no computador pela fonte oficial e de conferir que ele está lá.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Pela fonte oficial</h3>
+    <ol>
+      <li><span><b>Três etapas</b>colocar o programa, entrar com a conta, abrir na pasta.</span></li>
+      <li><span><b>Endereço</b>o comando vem da página oficial; confira chatgpt.com.</span></li>
+      <li><span><b>Versão</b>um número na resposta quer dizer que deu certo.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe pôr um programa no computador sem colar comando de origem duvidosa.</p>
+    <p class="na-action">Na <span class="gterm" data-gl="ficha-do-projeto" data-def="Documento curto em que você anota como um trabalho com IA funciona: ferramentas, acesso, decisões e pendências. Pode ser uma nota no celular. No módulo 4 ele vira um arquivo da pasta do projeto.">ficha do projeto</span>, anote numa linha: "Codex · versão &lt;o número&gt; · fonte: página oficial". Leva um minuto.</p>
+    <p class="na-hook">Na próxima aula: o programa está no computador, mas ainda não sabe quem você é. Você vai entrar com a sua conta sem deixar nenhuma senha à mostra.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Instale pela fonte oficial<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>A página oficial do Codex oferece instalador para macOS/Linux e orientações específicas para Windows. Instalar significa adicionar o programa à máquina. O comando de <span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">instalação</span> baixa e executa um script oficial; leia a fonte, confira o domínio e use sua própria conta. Não execute comandos recebidos de páginas desconhecidas.</p><h3>Por que aprender</h3><p>Instalação, <span class="gterm" data-def="Entrar numa ferramenta com a sua conta, como a conta do ChatGPT. Os direitos e limites vêm do plano dessa conta." data-gl="login">login</span> e execução são etapas diferentes. Um programa <span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">instalado</span> ainda precisa de autenticação. Um login concluído não significa que você abriu a pasta correta.</p><h3>Conceitos-chave</h3><p>Fonte oficial; instalação; versão; diagnóstico.</p><h4>Na prática</h4><p>Depois da instalação, codex --version informa a versão reconhecida pelo <span class="gterm" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar." data-gl="terminal">terminal</span>. Se aparecer “command not found”, reabra o terminal e confira o <span class="gterm" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config." data-gl="caminho">caminho</span> indicado pelo instalador.</p><h4>Experimente agora</h4><p>No macOS/Linux: curl -fsSL https://chatgpt.com/codex/install.sh | sh. Depois verifique com codex --version. Veja a fonte no rodapé para outras plataformas.</p></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-13">← aula anterior</a><a class="next" href="#aula-15">próxima aula →</a></nav>
+<p class="aula-pe">Aula 14 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-14">
+[
+  {"front":"Um colega manda um comando para pôr o Codex no computador, mais curto que o da página. O que você confere antes de colar?","back":"O endereço dentro do comando. Se não for o da página oficial, não cole."},
+  {"front":"O codex --version respondeu \"command not found\" logo depois de terminar. O que você faz primeiro?","back":"Fecha e reabre o terminal e repete. Se continuar, confere o caminho que o instalador indicou."},
+  {"front":"O programa pede para você entrar com a conta. Isso quer dizer que a etapa de hoje falhou?","back":"Não. Colocar o programa e entrar com a conta são etapas diferentes; a segunda vem na aula seguinte."}
+]
+</script>
+</section>

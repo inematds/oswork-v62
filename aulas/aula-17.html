@@ -1,0 +1,153 @@
+<section class="view" id="v-aula-17" data-aula="17" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 3 · Aula 5 de 6</p>
+  <h1>Primeiro o agente <em>lê</em>, depois ele muda</h1>
+  <figure class="cena"><img src="assets/img/aula-17.webp" width="1280" height="720" alt="Uma professora de jaleco lê folhas impressas com um lápis na mão e faz pequenas marcas numa prancheta, com o notebook aberto ao lado, antes de mudar qualquer coisa."></figure>
+  <p class="promise">Você consegue pedir ao <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span> uma leitura da pasta sem nenhuma edição e conferir quais arquivos ele usou. Depois, você autoriza só a criação de um plano.md, que você mesma confere.</p>
+  <p class="why">Um pedido como "arrume o projeto" mistura diagnóstico e mudança. Se algo sai errado, você não sabe em qual parte foi. Separar leitura e alteração dá uma referência para revisar.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Primeiro pedido: <b>ler e explicar</b>, sem editar.</li>
+      <li>Peça que ele diga <b>quais arquivos usou</b>, e confira com o <code>ls</code>.</li>
+      <li>Depois, uma alteração pequena e com nome: <b>só o plano.md</b>.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Vistoria antes da reforma</h2>
+  <p>Ninguém sério começa uma reforma quebrando parede. Primeiro vem a vistoria: olhar, anotar, entender. Com um <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span> é a mesma ordem, em quatro passos.</p>
+  <p data-ex="coordenadora">Denise ia pedir ao Codex que "melhorasse a pasta da reunião". Trocou por dois pedidos: primeiro ler e dizer o que falta; depois, criar um arquivo só.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>A ordem do primeiro trabalho</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Inspecionar: ler e explicar, sem editar</div>
+        <div class="item doc"><span class="pin">2</span> Planejar: dizer o que falta</div>
+        <div class="item doc"><span class="pin">3</span> Alterar: um arquivo, com nome</div>
+        <div class="item doc"><span class="pin">4</span> Validar: você abre e confere</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Nenhum arquivo muda nessa etapa.</span></li>
+      <li><span class="pin">2</span><span>A lista do que falta é a sua referência.</span></li>
+      <li><span class="pin">3</span><span>Você diz qual arquivo pode ser criado.</span></li>
+      <li><span class="pin">4</span><span>A última palavra é sua.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>O primeiro pedido só lê</h2>
+  <p>Na pasta de treino da aula 16, peça ao Codex que leia o <span class="gterm" data-gl="agents-md" data-def="Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir.">AGENTS.md</span> e o <span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span>. Diga com todas as letras: sem editar. E peça que ele cite os arquivos que usou.</p>
+  <p data-ex="professora">Lúcia fez esse pedido na pasta de treino. A resposta abaixo é real, do Codex, nessa mesma pasta, só encurtada.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex · meu-primeiro-projeto</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Leia AGENTS.md e README.md. Explique o propósito e liste o que falta, sem editar. Diga quais arquivos você usou.</p>
+        <p class="msg ia ok"><span class="quem">Codex</span>O propósito é preparar a pauta de uma reunião pedagógica usando entradas/reuniao.txt.
+Falta: a pauta produzida, o formato e o local de saída, e como conferir o resultado.
+O arquivo de entrada existe, mas não li seu conteúdo.
+Arquivos lidos: AGENTS.md e README.md. Também consultei a listagem de arquivos. Nada foi editado.</p>
+      </div>
+      <p class="tela-nota bom">Explicou, listou o que falta, disse o que leu e o que não leu. Nenhum arquivo mudou.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Confira o que ele usou</h2>
+  <p>A lista de arquivos usados mostra em que a resposta se apoia. Compare com o que o <code>ls</code> mostra na pasta.</p>
+  <p>Na resposta real, o Codex leu dois arquivos e avisou que não abriu a pauta. Então a lista do que falta vem só do README. É uma boa leitura, mas ainda não conhece os cinco itens da reunião.</p>
+  <p data-ex="coordenadora">Denise leu "não li seu conteúdo" e entendeu o limite da resposta. No segundo pedido, deixou claro que o plano devia se apoiar na pauta.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="neutro"><span class="rot">O que ele disse que leu</span><p>AGENTS.md</p><p>README.md</p><p>a lista de arquivos da pasta</p></div>
+      <div class="bom"><span class="rot">O que existe na pasta</span><p>AGENTS.md</p><p>README.md</p><p>entradas/reuniao.txt, com os cinco itens</p></div>
+    </div>
+    <figcaption>A diferença entre os dois cartões é exatamente o que a resposta ainda não sabe.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Depois, uma alteração com nome</h2>
+  <p>Agora autorize uma mudança pequena: criar só o plano.md, com três ações e uma verificação para cada. O Codex pode perguntar "Would you like to make the following edits?". Confira que a mudança é só no plano.md e escolha "Yes, proceed". Se for outro arquivo, escolha a opção que começa com "No". Ele criou sem perguntar? Também acontece: as permissões atuais deixam escrever na pasta. Confira com <code>ls</code>.</p>
+  <p>Depois, saia com <code>/quit</code> e leia o arquivo com <code>cat plano.md</code>, que mostra o conteúdo no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>. Confira se as ações se apoiam no que existe na pasta.</p>
+  <p data-ex="professora">O plano que Lúcia recebeu cobre os cinco itens da pauta e avisa que horários e datas ainda precisam ser definidos. Ela conferiu no reuniao.txt: tudo estava lá.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> cat plano.md
+<span class="out"># Plano de ações
+
+Base: entradas/reuniao.txt (reunião pedagógica fictícia).
+Horários e datas ainda precisam ser definidos.
+
+1. Ação: Organizar o novo horário da biblioteca e as regras
+   de uso dos notebooks da sala de informática.
+   Verificação: Conferir se a proposta registra o horário
+   da biblioteca e as condições de uso dos notebooks.
+…</span></code></pre>
+<p class="tela-nota">Arquivo real criado pelo Codex com o pedido 2 da prática, encurtado. Se você repetir, o texto sai diferente; o que se confere é se ele se apoia na pauta.</p></div>
+  <figcaption>Você confere o plano contra a pauta, e não contra a sua memória.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O plano citou um arquivo que não existe na pasta? Não recomece do zero. Peça a correção específica: "O arquivo tal não existe. Refaça o plano.md usando só os arquivos desta pasta."</p></div>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Faça a leitura, autorize o plano e confira</h3>
+  <p class="pgoal">Pronto quando o plano.md existir na pasta e você tiver conferido uma das verificações direto no reuniao.txt. Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">O primeiro pedido não muda nada; o segundo cria um arquivo só, na pasta de treino. Não fez a aula 16? O bloco da prática dela monta a pasta em um minuto. Se o Codex quiser mexer em outro arquivo, recuse e repita o pedido.</p>
+  <p><b>Passo 1 · cole no terminal</b></p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/meu-primeiro-projeto
+codex</pre></div>
+  <p><b>Pedido 1 · cole dentro do Codex e tecle Enter</b></p>
+  <pre><code>Leia AGENTS.md e README.md. Explique o propósito e liste o que falta, sem editar. Diga quais arquivos você usou.</code></pre>
+  <p><b>Pedido 2 · cole dentro do Codex, só depois da resposta ao pedido 1</b></p>
+  <pre><code>Crie somente plano.md, com três ações e uma verificação para cada. Apoie o plano em entradas/reuniao.txt. Não altere nenhum outro arquivo.</code></pre>
+  <p><b>Passo 3 · cole no terminal, depois de sair com /quit</b></p>
+  <pre><code>cat plano.md
+cat entradas/reuniao.txt</code></pre>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole o passo 1 no terminal. Dentro do Codex, mande o pedido 1 e confira os arquivos que ele diz ter usado.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Mande o pedido 2. Se ele perguntar sobre as mudanças, escolha "Yes, proceed" só se for o plano.md.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Saia com <code>/quit</code>, cole o passo 3 e confira uma das verificações do plano na pauta que aparece embaixo.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de separar diagnóstico e alteração, e de conferir o resultado no material real.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Ler antes de mudar</h3>
+    <ol>
+      <li><span><b>Pedido 1</b>ler e explicar, sem editar.</span></li>
+      <li><span><b>Arquivos usados</b>compare com o ls.</span></li>
+      <li><span><b>Pedido 2</b>um arquivo, com nome; você confere.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe conduzir o primeiro trabalho de um agente: ler, planejar, alterar pouco e conferir.</p>
+    <p class="na-action">Hoje, leia o plano.md inteiro e marque a ação que você faria primeiro na reunião de verdade. Anote o motivo numa linha.</p>
+    <p class="na-hook">Na próxima aula: o agente escreveu um arquivo. E se tivesse escrito o errado? Você vai guardar um ponto de retorno antes de cada mudança.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Faça uma primeira tarefa de leitura<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Comece solicitando inspeção: listar estrutura, ler instruções e explicar pendências. Peça que o agente cite quais arquivos utilizou. Depois de conferir, autorize uma alteração pequena e nomeada, como criar plano.md com três próximos passos.</p><h3>Por que aprender</h3><p>Separar diagnóstico e alteração cria uma referência para a revisão. Você aprende o fluxo sem misturar <span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">instalação</span>, grande refatoração e publicação numa única tentativa.</p><h3>Conceitos-chave</h3><p>Inspecionar; planejar; alterar; validar.</p><h4>Na prática</h4><p>Pedido inicial: “Leia AGENTS.md e README.md. Explique o propósito e liste o que falta, sem editar.” Segundo pedido: “Crie somente plano.md, com três ações e uma verificação para cada.”</p><h4>Experimente agora</h4><p>Abra plano.md no editor e confira se os passos se apoiam no projeto real. Peça correção específica se o agente pressupôs arquivos inexistentes.</p></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-16">← aula anterior</a><a class="next" href="#aula-18">próxima aula →</a></nav>
+<p class="aula-pe">Aula 17 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-17">
+[
+  {"front":"A resposta do agente não diz quais arquivos ele leu. O que você pede?","back":"Que ele cite os arquivos usados. Assim você sabe em que a resposta se apoia e compara com o que existe na pasta."},
+  {"front":"O plano pede para \"atualizar o calendário.xlsx\", mas esse arquivo não existe na pasta. Qual é o próximo pedido?","back":"Uma correção específica: dizer que o arquivo não existe e pedir o plano refeito só com os arquivos da pasta."},
+  {"front":"Por que o primeiro pedido numa pasta nova não deve criar nada?","back":"Porque a leitura vira a referência para revisar a mudança depois. Misturando os dois, você não sabe onde algo deu errado."}
+]
+</script>
+</section>

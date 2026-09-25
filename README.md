@@ -5,7 +5,7 @@ Curso do INEMA.CLUB PRO no `formato-curso-v6` (6.2, perfil técnico). Conteúdo 
 de cada aula. O OSWork v6 (7 aulas para leigo) é outro curso e continua separado.
 
 - Abrir: `landing.html` ou `curso.html#trilha` — funciona offline e guarda o progresso no navegador.
-- Estado atual: **Módulo 1 (6 aulas)** — piloto para aprovação. Módulos 2–8 seguem o mesmo molde.
+- Estado atual: **curso completo — 8 módulos, 48 aulas** (auditoria 10/10 em todas). Ainda sem teste com pessoas reais.
 
 ## Mais no INEMA.CLUB
 

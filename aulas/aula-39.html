@@ -1,0 +1,145 @@
+<section class="view" id="v-aula-39" data-aula="39" data-tempo="13min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 7 · Aula 3 de 6</p>
+  <h1>O bot confere o <em>documento</em>, não o nome</h1>
+  <figure class="cena"><img src="assets/img/aula-39.webp" width="1280" height="720" alt="Na saída da escola, uma coordenadora com uma prancheta confere o documento que um pai mostra antes de liberar a criança."></figure>
+  <p class="promise">Você consegue descobrir o seu ID numérico no Telegram com o modo de identificação do kit e colocá-lo na lista de acesso do bot.</p>
+  <p class="why">Qualquer pessoa pode achar um bot no Telegram e mandar mensagem. O token prova que o programa é o dono do bot, mas não diz quem pode usá-lo. Essa segunda decisão é sua, e fica escrita numa lista.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O token cuida do programa; a <b>lista de acesso</b> cuida das pessoas.</li>
+      <li>O bot confere o <b>ID numérico</b>, que não muda, e não o nome que aparece.</li>
+      <li>Três portões antes de responder: conversa privada, ID na lista, comando conhecido.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Token e lista de acesso são controles diferentes</h2>
+  <p>O <span class="gterm" data-gl="token-do-bot" data-def="Senha que o Telegram gera para o seu bot. Quem tem o token controla o bot; por isso ele fica no .env.">token do bot</span> prova ao <span class="gterm" data-gl="telegram" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7.">Telegram</span> que o seu programa é o dono do <span class="gterm" data-gl="bot" data-def="Programa que conversa por um aplicativo de mensagens e responde sozinho, seguindo as regras que você define.">bot</span>. Ele não diz nada sobre quem pode conversar com ele.</p>
+  <p>Por isso o kit tem um segundo controle: a <span class="gterm" data-gl="lista-de-acesso" data-def="Lista dos IDs numéricos que o bot atende. No kit, fica na linha ALLOWED_USER_IDS do .env.">lista de acesso</span>. É como a lista de quem pode buscar cada aluno na saída da escola.</p>
+  <p data-ex="coordenadora">Denise explicou assim à equipe: a chave abre o portão; a lista da saída diz quem leva cada aluno. São duas conferências, e uma não substitui a outra.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">Token do bot</span><p>Prova que o programa é o dono do bot.</p><p>Fica no <span class="gterm" data-gl="env" data-def="Arquivo que guarda chaves e senhas fora do código. Nunca vai para o Git, para um pedido ou para um print.">.env</span>, na linha TELEGRAM_BOT_TOKEN.</p></div>
+      <div class="neutro"><span class="rot">Lista de acesso</span><p>Diz quais pessoas o bot atende.</p><p>Fica no mesmo .env, na linha ALLOWED_USER_IDS.</p></div>
+    </div>
+    <figcaption>Os dois são necessários. O primeiro autentica o programa; o segundo autoriza gente.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>O nome muda; o número fica</h2>
+  <p>O nome que aparece na conversa, a pessoa troca quando quiser. O bot confere o <span class="gterm" data-gl="id-numerico" data-def="Número fixo que o Telegram dá a cada conta. Não muda quando a pessoa troca o nome que aparece.">ID numérico</span>, que o Telegram dá a cada conta.</p>
+  <p>Para descobrir o seu, o kit tem um modo só de identificação. No celular, o bot não responde nada nesse modo: o número aparece no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
+  <p data-ex="professora">Lúcia aparece no Telegram como "Lúcia Ciências". Se mudar para "Prof. Lúcia", o bot continua reconhecendo: o número dela é o mesmo.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta bot</span></div>
+<div class="pcodewrap" style="margin:0"><pre><code>
+<span class="pr">$</span> python3 bot.py --identify
+<span class="out">Identificação apenas: envie /start em privado; confira seu ID abaixo e encerre com Ctrl+C. Nenhuma função operacional ativa.
+ID recebido na identificação: 7012345678
+^C
+Bot encerrado.</span></code></pre></div>
+<p class="tela-nota">A linha do ID só aparece depois que você manda /start ao bot, numa conversa privada. O número aqui é fictício; o seu será outro.</p></div>
+  <figcaption>Copie o número da linha "ID recebido". O ^C é o Ctrl+C que encerra o modo.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Três portões antes de qualquer resposta</h2>
+  <p>Antes de responder, o programa confere três coisas, nesta ordem. Quem falha nos portões 1 ou 2 não recebe nem um "não": o bot fica calado. No portão 3, a resposta é só "Comando desconhecido".</p>
+  <p>Essa conferência fica no começo da função handle_message, dentro do bot.py.</p>
+  <p data-ex="coordenadora">Denise quis testar o bot da Lúcia. Mandou /relatorio e não recebeu nada. Não era defeito: o número dela não estava na lista.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>bot.py · antes de responder</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> É conversa privada? Grupo: silêncio.</div>
+        <div class="item doc"><span class="pin">2</span> O ID está na lista de acesso? Fora dela: silêncio.</div>
+        <div class="item doc"><span class="pin">3</span> O comando é /status ou /relatorio? (/start e /help só mostram a lista.) Outro texto: "Comando desconhecido."</div>
+        <div class="item doc dentro"><span class="pin">4</span> Só então executa a função daquele comando.</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Onde a mensagem chegou.</span></li>
+      <li><span class="pin">2</span><span>Quem mandou, pelo número.</span></li>
+      <li><span class="pin">3</span><span>O que foi pedido.</span></li>
+      <li><span class="pin">4</span><span>A resposta, e nada além dela.</span></li>
+    </ol>
+  </figure>
+  <details class="mais"><summary>Veja as duas linhas do bot.py que fazem os portões 1 e 2</summary>
+    <pre><code>if message.get('chat',{}).get('type')!='private':return None
+if message.get('from',{}).get('id') not in allowed:return None</code></pre>
+    <p>"return None" quer dizer: não responda nada. Para achar essas linhas no seu computador, rode <code>grep -n "allowed" bot.py</code> na pasta bot.</p>
+  </details>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>O seu número entra na lista do .env</h2>
+  <p>Com o número em mãos, encerre o modo de identificação com Ctrl+C. Abra o .env e troque o 123456789, que é só o exemplo do kit, pelo seu ID.</p>
+  <p>Para autorizar mais de uma pessoa, separe os números com vírgula. Comece só com você.</p>
+  <p data-ex="professora">Lúcia pensou em incluir a colega da biblioteca. Deixou para depois do teste: com menos gente na lista, fica mais fácil conferir.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="neutro"><span class="rot">Lista do exemplo</span><p>ALLOWED_USER_IDS=123456789</p><p>Ninguém real está na lista. O bot fica calado até com você.</p></div>
+      <div class="depois"><span class="rot">Lista da Lúcia</span><p>ALLOWED_USER_IDS=7012345678</p><p>O mesmo número que apareceu no terminal dela, no passo 2. Só ela recebe respostas.</p></div>
+    </div>
+    <figcaption>O 123456789 vem no kit e o 7012345678 é fictício. No seu .env vai o número que o seu terminal mostrar.</figcaption>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O terminal não mostrou número nenhum? Confira três coisas: você mandou /start numa conversa privada com o bot, e não num grupo; o token no .env é o do bot certo; o modo de identificação ainda estava rodando quando você mandou.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
+  <h3 class="ph">Descubra o seu ID e coloque na lista de acesso</h3>
+  <p class="pgoal">Pronto quando a linha ALLOWED_USER_IDS do .env tiver o seu número, e não o do exemplo. Cerca de 8 minutos, no computador, com o celular na mão.</p>
+  <p class="psafe">O modo de identificação não responde nem executa nada: só mostra o número no terminal. Apareceu "Configure TELEGRAM_BOT_TOKEN no .env privado"? O token ainda não está no .env: faça a aula 2 deste módulo (aula 38), que cria esse arquivo na pasta projetos/oswork-kit/bot.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/oswork-kit/bot
+python3 --version</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Rode os dois comandos do quadro. O segundo mostra a versão do Python: precisa ser 3.10 ou maior. Neste curso o comando é sempre python3.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Rode <code style="white-space:nowrap">python3 bot.py --identify</code>. O terminal fica ocupado, esperando. No celular, procure o seu bot pelo identificador que você escolheu (por exemplo, @lojinha_gremio_lucia_bot), abra a conversa e envie /start.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Anote o número da linha "ID recebido na identificação" e encerre com Ctrl+C.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>Rode <code style="white-space:nowrap">nano .env</code>, troque 123456789 pelo seu número, salve com Ctrl+O e Enter e saia com Ctrl+X.</span></label></li>
+  </ol>
+  <details class="mais"><summary>O python3 --version deu erro ou versão antiga</summary>
+    <p>O bot do kit é escrito em <span class="gterm" data-gl="python" data-def="Linguagem de programação. O bot do kit do curso é escrito nela.">Python</span> e precisa da versão 3.10 ou mais nova. Se aparecer "command not found" ou um número menor, o Python precisa passar por uma <span class="gterm" data-gl="instalar" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial.">instalação</span> pela fonte oficial antes de continuar: <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org/downloads</a> mostra a versão para Windows e Mac. No Linux, o Python 3 costuma vir junto com o sistema.</p>
+  </details>
+  <p class="pdone">Você decidiu, por número, quem o seu bot atende.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Quem o bot atende</h3>
+    <ol>
+      <li><span><b>Token</b>prova que o programa é o dono do bot.</span></li>
+      <li><span><b>ID numérico</b>o bot confere o número, não o nome.</span></li>
+      <li><span><b>Três portões</b>privado, na lista, comando conhecido.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já decide quem o bot atende e sabe por que ele fica calado com os outros.</p>
+    <p class="na-action">Anote no bloco de notas quem você autorizaria no futuro e por quê. Não autorize ainda.</p>
+    <p class="na-hook">Na próxima aula: ligar o bot de verdade e receber /status e /relatorio no celular.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Autorize pessoas e ações<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>O bot do kit aceita apenas conversas privadas e IDs configurados. Também aceita somente os comandos conhecidos. Verificar o ID é diferente de verificar o nome visível: nomes podem mudar. Uma mensagem de desconhecido não deve acionar leitura de arquivos ou comandos do sistema.</p><h3>Por que aprender</h3><p>Um bot encontrado na internet pode receber mensagens inesperadas. Autenticação do programa com token não significa autorização de qualquer pessoa que fale com ele. São controles distintos.</p><h3>Conceitos-chave</h3><p>ID numérico; lista de acesso; conversa privada; comandos fixos.</p><h4>Na prática</h4><p>O dono escreve /relatorio e recebe totais fictícios. Um usuário fora da lista não recebe dados. Mesmo o dono não pode escrever um comando de <span class="gterm" data-def="Programa que interpreta os comandos digitados no terminal." data-gl="shell">shell</span> e esperar que o bot o execute.</p><h4>Sequência para experimentar</h4><ol><li>Prepare uma cópia de treino.</li><li>Leia a função handle_message do kit. Localize a conferência de ID e chat privado antes do despacho dos comandos.</li><li>Registre o resultado observado e a próxima correção.</li></ol></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-38">← aula anterior</a><a class="next" href="#aula-40">próxima aula →</a></nav>
+<p class="aula-pe">Aula 39 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-39">
+[
+  {"front":"Uma colega escreveu ao seu bot e não recebeu resposta nenhuma. O que você confere primeiro?","back":"Se o número dela está na lista de acesso. Fora da lista, o bot fica calado de propósito."},
+  {"front":"Alguém troca o nome no Telegram para o seu nome. O bot passa a responder a essa pessoa?","back":"Não. O bot confere o ID numérico, e trocar o nome não muda o número."},
+  {"front":"Você pôs o bot num grupo da escola. Por que ele não responde lá?","back":"Porque o kit só atende conversa privada; mensagem de grupo é barrada antes de olhar o comando."}
+]
+</script>
+</section>

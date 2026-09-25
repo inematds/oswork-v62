@@ -1,0 +1,117 @@
+<section class="view" id="v-aula-45" data-aula="45" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 8 · Aula 3 de 6</p>
+  <h1>Mala de mão: <em>só o que a viagem pede</em></h1>
+  <figure class="cena"><img src="assets/img/aula-45.webp" width="1280" height="720" alt="Uma coordenadora arruma uma mala de mão pequena sobre a mesa da coordenação, com poucas peças dentro, enquanto uma pilha de roupas e um chapéu ficam de fora numa cadeira."></figure>
+  <p class="promise">Você consegue conferir no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> se <span class="gterm" data-gl="python" data-def="Linguagem de programação. O bot do kit do curso é escrito nela.">Python</span> 3 e <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span> estão na máquina e criar a pasta de projetos, sem colocar mais nada.</p>
+  <p class="why">Cada programa a mais é mais uma coisa para atualizar, explicar e consertar. Colocar ferramentas por hábito dá trabalho e não aumenta o que o serviço consegue fazer.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Na VPS com Ubuntu, quem coloca e atualiza programas é o <b>apt</b>.</li>
+      <li>Antes de confirmar uma atualização, <b>leia a lista</b> do que vai mudar.</li>
+      <li>O bot de treino precisa de <b>Python 3</b>; o Git ajuda a levar o projeto.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Atualize a lista e leia antes de confirmar</h2>
+  <p>Os exemplos usam <span class="gterm" data-gl="ubuntu" data-def="Versão popular do Linux, comum em servidores.">Ubuntu</span> com <span class="gterm" data-gl="apt" data-def="Instalador de programas do Ubuntu, usado no terminal.">apt</span>. Primeiro, <code>sudo apt update</code> atualiza a lista do que existe para a máquina. Depois, <code>sudo apt upgrade</code> propõe as atualizações e espera a sua resposta.</p>
+  <p>O <span class="gterm" data-gl="sudo" data-def="Comando que executa a instrução seguinte com permissão de administrador. Pede a sua senha.">sudo</span> na frente pede a permissão de administrador, como na aula anterior.</p>
+  <p data-ex="coordenadora">Na <span class="gterm" data-gl="vps" data-def="Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar.">VPS</span> de treino, Denise parou na pergunta final e leu a lista inteira. Só depois respondeu Y.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · na VPS</span></div>
+<pre><code><span class="pr">$</span> sudo apt update
+<span class="out">Reading package lists... Done</span>
+<span class="pr">$</span> sudo apt upgrade
+<span class="out">The following packages will be upgraded:
+  [lista de programas que vão mudar]
+Do you want to continue? [Y/n]</span></code></pre>
+<p class="tela-nota">A pergunta final quer dizer "quer continuar?". O Y maiúsculo é a resposta padrão. Leia a lista acima dela antes de responder.</p></div>
+  <figcaption>Um programa que você não reconhece na lista é motivo para pesquisar antes de responder Y.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>O bot de treino pede só duas coisas</h2>
+  <p>O <span class="gterm" data-gl="bot" data-def="Programa que conversa por um aplicativo de mensagens e responde sozinho, seguindo as regras que você define.">bot</span> do kit do curso precisa do Python 3. O Git ajuda a levar o projeto do seu computador para a VPS. O comando fica <code>sudo apt install git python3</code>.</p>
+  <p>O bot usa só o que já vem com o Python, sem nenhum complemento extra. Outras ferramentas, como o <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span>, são opcionais: entram só se o programa pedir.</p>
+  <p data-ex="professora">Um tutorial sugeriu a Lúcia <span class="gterm" data-gl="instalar" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial.">instalar</span> cinco ferramentas "para garantir". Ela conferiu o que o bot pedia e ficou com duas.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Por hábito</span><p><b>Na máquina:</b> Git, Python 3 e mais três ferramentas "porque um dia pode precisar".</p><p><b>Resultado:</b> cinco coisas para atualizar; três sem uso.</p></div>
+      <div class="depois"><span class="rot">Na medida</span><p><b>Na máquina:</b> Git e Python 3.</p><p><b>Resultado:</b> duas coisas para atualizar, e as duas trabalham.</p></div>
+      <p class="saldo"><b>Saldo:</b> três ferramentas a menos para manter, sem perder nada do que o bot faz.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Confira as versões e crie a pasta</h2>
+  <p>Pergunte a versão de cada programa. Se ele responde, está na máquina. Depois crie a pasta <code>projetos</code> na sua pasta pessoal, na conta de trabalho.</p>
+  <p>Os comandos de versão só leem. O de criar pasta não apaga nada: se a pasta já existe, ele a deixa como está.</p>
+  <p data-ex="professora">Lúcia rodou os mesmos comandos no notebook, antes de alugar qualquer VPS. Os dois responderam. Ela anotou as versões no plano, para conferir as mesmas na VPS.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> python3 --version
+<span class="out">Python 3.x.y</span>
+<span class="pr">$</span> git --version
+<span class="out">git version 2.x.y</span>
+<span class="pr">$</span> mkdir -p ~/projetos
+<span class="pr">$</span> ls -d ~/projetos
+<span class="out">/home/usuario/projetos</span></code></pre>
+<p class="tela-nota">Onde está x.y, aparece o número da versão da sua máquina. O último comando confirma que a pasta existe.</p></div>
+  <figcaption>Quatro comandos, nenhum muda o sistema. O sinal ~ quer dizer "a minha pasta pessoal".</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Se aparecer "command not found", ou no Mac uma janela oferecendo as ferramentas de linha de comando, o programa não está na máquina. Não é erro seu. Anote "falta" no plano: é exatamente o que a VPS vai precisar receber. No Windows, rode no terminal do <span class="gterm" data-gl="wsl" data-def="Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux.">WSL</span>, do módulo 3.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Confira Python e Git e crie a pasta de projetos</h3>
+  <p class="pgoal">Pronto quando você tiver a resposta dos dois comandos de versão e a pasta projetos existir. Cerca de 8 minutos, no computador, no terminal.</p>
+  <p class="psafe">Nenhum comando daqui muda o sistema: dois só leem a versão, o outro cria uma pasta vazia. Não rode a atualização do apt no computador do trabalho só para treinar. No Windows, use o terminal do WSL, preparado no módulo 3: no PowerShell estes comandos respondem diferente. Tem uma VPS de treino? Rode os mesmos comandos nela.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">python3 --version
+git --version
+mkdir -p ~/projetos
+ls -d ~/projetos</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Abra o terminal e rode as duas primeiras linhas, uma de cada vez. Anote as versões.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Rode as duas últimas e confira que a resposta termina em /projetos.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>No plano de VPS, escreva o que a máquina precisa receber: Python 3, Git, e nada mais sem motivo.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de conferir o que a máquina tem e de decidir o que ela precisa, sem colocar nada por hábito.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Mala de mão</h3>
+    <ol>
+      <li><span><b>apt</b>update atualiza a lista; upgrade propõe e espera o seu Y.</span></li>
+      <li><span><b>Só o necessário</b>o bot de treino pede Python 3; o Git leva o projeto.</span></li>
+      <li><span><b>Conferir</b>--version responde se está na máquina.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já consegue decidir o que entra numa máquina e conferir se entrou.</p>
+    <p class="na-action">Olhe a lista de programas do seu computador de trabalho e marque dois que você não usa há meses. Só marque; não precisa remover.</p>
+    <p class="na-hook">Com o bot lá dentro, falta a portaria. Próxima aula: quem pode entrar na VPS, e onde guardar a senha do bot.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Instale só o necessário<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Os exemplos do laboratório usam Ubuntu com apt. Atualize a lista de pacotes e revise a atualização proposta. O bot base precisa de Python 3; Git ajuda a transferir o projeto. Node, Docker e Codex são opcionais conforme a aplicação, não uma lista obrigatória para qualquer VPS.</p><h3>Por que aprender</h3><p>Cada dependência acrescenta manutenção. Um serviço simples, com poucas peças, é mais fácil de explicar, atualizar e recuperar. Instalar ferramentas por hábito cria trabalho sem aumentar a capacidade necessária.</p><h3>Conceitos-chave</h3><p>apt update; apt upgrade; dependência; ambiente virtual quando necessário.</p><h4>Na prática</h4><p>Sequência de referência: sudo apt update, sudo apt upgrade, sudo apt install git python3. O bot do kit usa somente a biblioteca padrão, sem instalar pacotes Python externos.</p><h4>Sequência para experimentar</h4><ol><li>Prepare uma cópia de treino.</li><li>Antes de confirmar a atualização, leia os pacotes envolvidos. Confira python3 --version e git --version, depois crie ~/projetos na conta de trabalho.</li><li>Registre o resultado observado e a próxima correção.</li></ol></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-44">← aula anterior</a><a class="next" href="#aula-46">próxima aula →</a></nav>
+<p class="aula-pe">Aula 45 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-45">
+[
+  {"front":"O apt mostrou uma lista longa e perguntou se quer continuar. O que você faz antes de responder?","back":"Lê a lista. Se houver um programa que você não reconhece, pesquisa antes de responder Y."},
+  {"front":"Um tutorial manda colocar cinco ferramentas na VPS. Como você decide quais ficam?","back":"Pelo que o programa pede. O bot de treino pede Python 3; o Git ajuda a levar o projeto. O resto só entra com motivo."},
+  {"front":"git --version respondeu \"command not found\". O que isso quer dizer?","back":"Que o Git não está nessa máquina. Anote no plano como algo que ela precisa receber."}
+]
+</script>
+</section>

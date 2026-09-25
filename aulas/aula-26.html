@@ -1,0 +1,165 @@
+<section class="view" id="v-aula-26" data-aula="26" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 5 · Aula 2 de 6</p>
+  <h1>Regimento vale na escola, <em>combinado vale na sala</em></h1>
+  <figure class="cena"><img src="assets/img/aula-26.webp" width="1280" height="720" alt="Uma coordenadora pedagógica compara o regimento grosso da escola, numa mão, com uma folha curta de combinados de sala, na outra, sentada à mesa com o notebook aberto."></figure>
+  <p class="promise">Você consegue dizer quais arquivos de instrução valem numa pasta. E consegue conferir o resumo que o <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span> faz deles contra os arquivos de verdade.</p>
+  <p class="why">Às vezes o agente segue uma regra que você não lembra de ter escrito. Outras vezes ignora uma que você escreveu, mas em outra pasta. Antes de culpar o modelo, vale saber de onde vem cada instrução.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Há um arquivo de instruções <b>global</b>, que vale em tudo, e um <b>do projeto</b>, que vale naquela pasta.</li>
+      <li>O arquivo mais perto da pasta de trabalho <b>pode prevalecer</b> ali.</li>
+      <li>Peça ao Codex o resumo do que ele carregou e <b>confira</b> nos arquivos.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>O global vale em tudo; o do projeto, só na pasta</h2>
+  <p>O regimento vale na escola inteira. O combinado da turma vale na sala. Com o <span class="gterm" data-gl="agents-md" data-def="Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir.">AGENTS.md</span> é igual: por padrão, o global fica na pasta oculta .codex, dentro da sua pasta pessoal. O do projeto fica na pasta do projeto.</p>
+  <p>No <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>, o sinal ~ é o atalho para a sua pasta pessoal. Pasta com nome começando por ponto fica oculta.</p>
+  <p data-ex="coordenadora">Denise quer que o <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span> sempre conte o que conferiu, em qualquer projeto. Essa regra foi para o global. "Compare o total com a planilha de frequência" só faz sentido no projeto da frequência.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Onde ficam as instruções</span></div>
+      <div class="janela-body">
+        <div class="item pasta"><span class="pin">1</span> ~/.codex</div>
+        <div class="item doc dentro">AGENTS.md · "relate o que você conferiu"</div>
+        <div class="item pasta"><span class="pin">2</span> ~/projetos/frequencia</div>
+        <div class="item doc dentro">AGENTS.md · "compare o total com a planilha de frequência"</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Global: vale em todos os projetos. Fica pequeno.</span></li>
+      <li><span class="pin">2</span><span>Projeto: vale nesta pasta. Os detalhes ficam aqui.</span></li>
+    </ol>
+    <figcaption>As duas regras colaboram. Não é preciso repetir no global o detalhe de cada projeto.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>O arquivo mais perto pode decidir ali</h2>
+  <p>Uma subpasta pode ter o próprio AGENTS.md. Nesse trecho, a instrução mais próxima pode prevalecer, como o combinado de um laboratório dentro da escola.</p>
+  <p>"Pode" porque vale para o que ela trata. O que a regra de perto não menciona continua vindo do arquivo de cima.</p>
+  <p data-ex="professora">Lúcia criou uma subpasta de provas no projeto de ciências, com um AGENTS.md que pede gabarito separado. Quando ela abre o Codex dentro de provas, essa regra vale. Aberto nas listas de exercício, não.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>~/projetos/ciencias-8ano</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> AGENTS.md · vale no projeto todo</div>
+        <div class="item pasta">listas</div>
+        <div class="item pasta">provas</div>
+        <div class="item doc dentro"><span class="pin">2</span> AGENTS.md · "gabarito em arquivo separado"</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Instrução do projeto.</span></li>
+      <li><span class="pin">2</span><span>Instrução mais perto: pode prevalecer dentro de provas.</span></li>
+    </ol>
+  </figure>
+  <details class="mais"><summary>Um arquivo que passa na frente: o override</summary>
+  <p>Existe ainda o <span class="gterm" data-gl="agents-override" data-def="Arquivo AGENTS.override.md: quando está na mesma pasta que um AGENTS.md, as instruções dele têm prioridade sobre as do AGENTS.md.">AGENTS.override.md</span>. Na mesma pasta, ele tem prioridade sobre o AGENTS.md. Você não criou nenhum? Ótimo. Mas ele pode vir numa pasta copiada de um colega e, esquecido ali, explica muito comportamento estranho.</p>
+  </details>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>O AGENTS.md não passa por cima de tudo</h2>
+  <p>Nenhum desses arquivos supera três coisas. As instruções do sistema, que são as regras de fábrica da ferramenta. As permissões, que você aprova ou recusa, como no módulo 3. E o que você pede de forma explícita na conversa. Eles orientam; não liberam o que a ferramenta bloqueia.</p>
+  <p data-ex="coordenadora">O AGENTS.md de Denise diz "entregue em tópicos". Hoje ela pediu, na conversa, um parágrafo corrido para o e-mail da direção. Vale o pedido de hoje.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">O AGENTS.md decide</span><p>Como trabalhar na pasta quando o pedido não diz nada: fontes, conferência, formato.</p></div>
+      <div class="neutro"><span class="rot">O AGENTS.md não supera</span><p>Instruções do sistema.</p><p>Permissões da ferramenta.</p><p>O seu pedido explícito na sessão.</p></div>
+    </div>
+    <figcaption>Escrever "não leia senhas" orienta. Quem impede de fato são as permissões.</figcaption>
+  </figure>
+  <div class="quiz" data-answer="c">
+    <p class="qk">Teste-se</p>
+    <p class="q">O global diz "responda em tópicos". O AGENTS.md do projeto não fala de formato. Na conversa, você pede uma tabela. O que vale?</p>
+    <button class="opt" data-k="a" data-fb="O global vale em tudo, mas o pedido explícito da sessão passa na frente.">Os tópicos do arquivo global</button>
+    <button class="opt" data-k="b" data-fb="O projeto não fala de formato, então não decide nada aqui.">O AGENTS.md do projeto</button>
+    <button class="opt" data-k="c" data-fb="Sim: o pedido explícito da sessão não é superado pelos arquivos.">A tabela pedida na conversa</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Peça o resumo e confira nos arquivos</h2>
+  <p>Dentro da pasta, peça ao Codex que resuma as instruções que carregou e diga de qual arquivo veio cada uma. Depois abra os arquivos e compare.</p>
+  <p>O resumo cita uma regra que não está em nenhum arquivo? Ou esquece uma que está? Aí você achou a causa antes de culpar o modelo.</p>
+  <p data-ex="professora">Lúcia pediu o resumo na pasta de treino. Veio a regra "relate o que conferiu", que ela não tinha escrito ali. Estava no global, que ela criou em março e esqueceu.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex · pasta de treino</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Resuma as instruções que você carregou para esta pasta e diga de qual arquivo veio cada uma. Não altere nada.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Do global: relate o que você conferiu.
+Do AGENTS.md desta pasta: leia README.md e liste as fontes antes de alterar; use só entradas/ e saidas/; não invente dados faltantes; compare os totais antes de entregar; não envie nem publique sem instrução explícita.
+Não alterei nenhum arquivo.</p>
+      </div>
+      <p class="tela-nota bom">Cada regra com a origem. Agora dá para abrir os dois arquivos e conferir.</p>
+    </div>
+    <figcaption>Exemplo com as regras da aula anterior; o <span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span> é o arquivo que explica a pasta. Na sua pasta, a lista será a do seu AGENTS.md.</figcaption>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não achou a pasta .codex? Ela é oculta, e talvez você nunca tenha criado um global. Tudo bem: aí só o AGENTS.md do projeto vale, e a prática mostra como conferir isso.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Descubra quais instruções valem na pasta de treino</h3>
+  <p class="pgoal">Pronto quando você tiver anotado cada regra do resumo do Codex e o arquivo em que a encontrou. Cerca de 10 minutos, no computador, com o terminal do módulo 3.</p>
+  <p class="psafe">Os três comandos só leem e listam; nada é alterado. O pedido ao Codex diz "não altere nada". Se o Codex pedir autorização para mudar algum arquivo, recuse. Sem o Codex ainda? Faça só os passos 1 e 2 e anote o que encontrou.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code>
+<span class="pr">$</span> cd ~/projetos/meu-primeiro-projeto
+<span class="pr">$</span> ls -a
+<span class="out">.  ..  AGENTS.md  README.md  entradas  saidas</span>
+<span class="pr">$</span> cat ~/.codex/AGENTS.md
+<span class="out">cat: /home/seu-nome/.codex/AGENTS.md: No such file or directory</span></code></pre>
+<p class="tela-nota">O ls -a lista também os arquivos ocultos; o ponto e os dois pontos do começo representam a própria pasta e a de cima, pode ignorar. Procure um AGENTS.override.md: se aparecer, abra e veja se ainda deve existir. A última linha, em inglês, diz "arquivo ou pasta não existe": não há global. Se o arquivo existir, o cat mostra o texto dele.</p></div>
+  <figcaption>A sua lista pode ter mais arquivos, como os que você criou no módulo 4. O caminho na última linha mostra o seu nome de usuário.</figcaption></figure>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Resuma as instruções que você carregou para esta pasta e diga de qual arquivo veio cada uma. Não altere nada.</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>No terminal, entre na pasta de treino e rode ls -a. Anote se existe AGENTS.override.md.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Rode cat ~/.codex/AGENTS.md e anote se há global e o que ele diz.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Digite codex, cole o pedido e compare cada regra do resumo com o arquivo de onde ela diz ter vindo. Se o Codex fizer alguma pergunta ao abrir, responda como no módulo 3. Para sair, aperte Ctrl+C (duas vezes, se ele pedir): fecha o Codex e não desfaz nada.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de rastrear de onde vem cada instrução que o agente segue naquela pasta.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Global e projeto</h3>
+    <ol>
+      <li><span><b>Global pequeno</b>~/.codex/AGENTS.md, regras que valem em tudo.</span></li>
+      <li><span><b>Projeto com detalhe</b>o arquivo mais perto pode prevalecer naquela pasta.</span></li>
+      <li><span><b>Confira a origem</b>resumo do Codex contra os arquivos, antes de culpar o modelo.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe de onde vem cada instrução que o agente segue numa pasta.</p>
+    <p class="na-action">Hoje, escolha uma regra que você quer em todos os projetos e decida: ela vai para o global ou só para um projeto? Anote a decisão numa linha.</p>
+    <p class="na-hook">Na próxima aula: regra diz o que respeitar. E o procedimento que você repete toda semana, passo a passo? Isso vira uma Skill.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Global e projeto se complementam<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Por padrão, ~/.codex/AGENTS.md guarda instruções globais. No projeto, AGENTS.md acrescenta regras específicas; arquivos em pastas mais próximas podem prevalecer no escopo correspondente. AGENTS.override.md tem prioridade sobre AGENTS.md no mesmo nível. Isso não supera instruções de sistema, permissões ou a solicitação explícita da sessão.</p><h3>Por que aprender</h3><p>O <span class="gterm" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config." data-gl="caminho">caminho</span> importa. Uma regra local pode não ser aplicada a outra pasta, e um arquivo override esquecido pode explicar um comportamento inesperado. Mantenha o global pequeno e deixe detalhes locais no projeto.</p><h3>Conceitos-chave</h3><p>Descoberta; hierarquia; escopo de <span class="gterm" data-def="Outro nome para pasta, usado no terminal." data-gl="diretorio">diretório</span>; override.</p><h4>Na prática</h4><p>Global: “relate os testes executados”. Projeto: “valide o <span class="gterm" data-def="Planilha em texto simples, com os valores separados por vírgula. Abre no Excel ou no Google Planilhas." data-gl="csv">CSV</span> com python3 validar.py”. As duas instruções colaboram; não é necessário repetir o <span class="gterm" data-def="Arquivo com uma sequência de comandos que o computador executa de uma vez." data-gl="script">script</span> de cada projeto no arquivo global.</p><h4>Experimente agora</h4><p>Peça ao Codex para resumir as instruções que carregou. Confira a resposta contra os arquivos reais antes de atribuir um erro ao modelo.</p><figure class="comp-fig"><ul><li>AGENTS.md global</li><li>AGENTS.md do projeto</li><li><span class="gterm" data-def="Procedimento empacotado que o agente pode reusar: instruções, passos e como conferir, guardados numa pasta." data-gl="skill">Skill</span></li><li>Tarefa</li></ul><figcaption>Camadas de instrução: a do topo vale em tudo, e a mais específica, embaixo, decide o caso de agora.</figcaption></figure></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-25">← aula anterior</a><a class="next" href="#aula-27">próxima aula →</a></nav>
+<p class="aula-pe">Aula 26 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-26">
+[
+  {"front":"Uma regra só faz sentido no projeto das atas. Onde ela deve ficar: no AGENTS.md global ou no do projeto?","back":"No do projeto das atas. O global fica pequeno, com o que vale em qualquer pasta."},
+  {"front":"O agente segue uma regra que não está no AGENTS.md do projeto. Onde você procura primeiro?","back":"No global (~/.codex/AGENTS.md) e num AGENTS.override.md esquecido. O resumo do Codex diz a origem."},
+  {"front":"Escrever “não leia senhas” no AGENTS.md impede o agente de ler o arquivo?","back":"Não. A instrução orienta; quem impede são as permissões da ferramenta."}
+]
+</script>
+</section>

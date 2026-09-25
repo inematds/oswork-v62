@@ -96,7 +96,7 @@
     "formas": [
       "Desktop"
     ],
-    "def": "Aplicativo do ChatGPT no computador, que trabalha mais perto dos seus arquivos do que o chat no navegador."
+    "def": "Aplicativo do ChatGPT no computador, que trabalha mais perto dos seus arquivos e pode ler as pastas que você permitir."
   },
   "interface": {
     "formas": [
@@ -370,5 +370,181 @@
       "chmod"
     ],
     "def": "Comando que define quem pode ler ou alterar um arquivo."
+  },
+  "pasta-pessoal": {
+    "formas": [
+      "pasta pessoal"
+    ],
+    "def": "A sua pasta principal no computador, onde ficam Documentos, Downloads e as demais. No terminal ela aparece como ~ (til)."
+  },
+  "caminho": {
+    "formas": [
+      "caminho",
+      "caminhos"
+    ],
+    "def": "Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config."
+  },
+  "nano": {
+    "formas": [
+      "nano"
+    ],
+    "def": "Editor de texto que abre dentro do terminal. Ctrl+O grava o arquivo e Ctrl+X sai."
+  },
+  "variavel": {
+    "formas": [
+      "variável",
+      "variáveis"
+    ],
+    "def": "Um nome com um valor guardado, escrito como NOME=valor. O programa procura o valor pelo nome."
+  },
+  "env-example": {
+    "formas": [
+      ".env.example"
+    ],
+    "def": "Cópia do .env com os mesmos nomes de variáveis e valores fictícios. Mostra o que é preciso preencher sem dar acesso a nada, por isso pode ser compartilhada."
+  },
+  "arquivo-rastreado": {
+    "formas": [
+      "arquivo rastreado"
+    ],
+    "def": "Arquivo que o Git já acompanha, porque entrou em alguma versão salva. O .gitignore não vale para ele."
+  },
+  "contexto": {
+    "formas": [
+      "contexto"
+    ],
+    "def": "O material que a IA recebe para fazer uma tarefa: os arquivos, as instruções e as informações que você aponta."
+  },
+  "porta": {
+    "formas": [
+      "porta"
+    ],
+    "def": "Número que identifica um serviço dentro da máquina. O SSH costuma usar a porta 22, mas a sua VPS pode usar outra."
+  },
+  "chave-publica": {
+    "formas": [
+      "chave pública"
+    ],
+    "def": "Metade pública do par de chaves do SSH. Fica cadastrada na VPS; a outra metade, a chave privada, fica só no seu computador e nunca é colada em lugar nenhum."
+  },
+  "impressao-digital": {
+    "formas": [
+      "impressão digital"
+    ],
+    "def": "Sequência curta que identifica a VPS. Na primeira conexão por SSH, você confere se ela bate com a que o provedor da VPS informa."
+  },
+  "console-de-recuperacao": {
+    "formas": [
+      "console de recuperação"
+    ],
+    "def": "Terminal da VPS aberto pelo painel do provedor, no navegador, sem SSH. É a rota de volta quando o SSH falha."
+  },
+  "unidade": {
+    "formas": [
+      "unidade"
+    ],
+    "def": "Arquivo que diz ao systemd qual programa iniciar, com qual usuário e em qual pasta."
+  },
+  "encomenda": {
+    "formas": [
+      "encomenda"
+    ],
+    "def": "Pedido de trabalho que diz o que deve existir no fim: objetivo, entradas, saída, limites e parada."
+  },
+  "contrato-de-entrega": {
+    "formas": [
+      "contrato de entrega"
+    ],
+    "def": "A encomenda completa, com seis partes: objetivo, entradas, saída, limites, verificação e parada."
+  },
+  "pasta-de-treino": {
+    "formas": [
+      "pasta de treino"
+    ],
+    "def": "Pasta só com arquivos fictícios ou cópias, criada para testar a IA sem risco para o material verdadeiro."
+  },
+  "execucao-local": {
+    "formas": [
+      "execução local"
+    ],
+    "def": "Trabalho que roda no seu próprio computador. Depende de ele estar ligado, com rede e com as permissões certas."
+  },
+  "nuvem": {
+    "formas": [
+      "nuvem"
+    ],
+    "def": "Computadores de uma empresa, acessados pela internet, que executam o trabalho e guardam arquivos fora da sua máquina."
+  },
+  "revert": {
+    "formas": [
+      "revert"
+    ],
+    "def": "Comando do Git que cria um commit novo desfazendo um commit anterior, sem apagar nada do histórico."
+  },
+  "restore": {
+    "formas": [
+      "restore"
+    ],
+    "def": "Comando do Git que descarta as mudanças ainda não salvas de um arquivo, voltando ao que estava na última versão. O que foi descartado não volta."
+  },
+  "origin": {
+    "formas": [
+      "origin"
+    ],
+    "def": "Nome que o Git dá, por padrão, ao endereço no GitHub de onde a pasta veio e para onde ela envia."
+  },
+  "agents-override": {
+    "formas": [
+      "AGENTS.override.md"
+    ],
+    "def": "Arquivo AGENTS.override.md: quando está na mesma pasta que um AGENTS.md, as instruções dele têm prioridade sobre as do AGENTS.md."
+  },
+  "memoria-operacional": {
+    "formas": [
+      "memória operacional"
+    ],
+    "def": "Arquivos de consulta com fatos estáveis, decisões e causas de falhas, que o agente lê quando você indica. Não muda o modelo; alguém precisa mantê-los em dia."
+  },
+  "botfather": {
+    "formas": [
+      "BotFather"
+    ],
+    "def": "Conta oficial do próprio Telegram que cria bots e gera o token de cada um."
+  },
+  "lista-de-acesso": {
+    "formas": [
+      "lista de acesso"
+    ],
+    "def": "Lista dos IDs numéricos que o bot atende. No kit, fica na linha ALLOWED_USER_IDS do .env."
+  },
+  "id-numerico": {
+    "formas": [
+      "ID numérico"
+    ],
+    "def": "Número fixo que o Telegram dá a cada conta. Não muda quando a pessoa troca o nome que aparece."
+  },
+  "contrato-de-integracao": {
+    "formas": [
+      "contrato de integração"
+    ],
+    "def": "Cinco linhas escritas antes de ligar uma IA a um bot: dados enviados, modelo, limite de custo, tempo máximo e o que fazer se a IA falhar."
+  },
+  "autoteste": {
+    "formas": [
+      "autoteste"
+    ],
+    "def": "Teste que o próprio bot do kit roda sem Telegram e sem internet, com mensagens de mentira, para conferir as suas regras."
+  },
+  "wsl": {
+    "formas": [
+      "WSL"
+    ],
+    "def": "Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux."
+  },
+  "shell": {
+    "formas": [
+      "shell"
+    ],
+    "def": "Programa que interpreta os comandos digitados no terminal."
   }
 }

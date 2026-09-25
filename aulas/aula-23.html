@@ -1,0 +1,162 @@
+<section class="view" id="v-aula-23" data-aula="23" data-tempo="13min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 4 · Aula 5 de 6</p>
+  <h1>Ignore antes do <em>primeiro commit</em></h1>
+  <figure class="cena"><img src="assets/img/aula-23.webp" width="1280" height="720" alt="Na secretaria da escola, uma coordenadora confere os papéis um a um antes de fechar o malote; uma folha fica separada na mesa, fora do malote."></figure>
+  <p class="promise">Você consegue criar o <span class="gterm" data-gl="gitignore" data-def="Arquivo que lista o que o Git não deve guardar, como senhas e arquivos temporários.">.gitignore</span> antes do primeiro <span class="gterm" data-gl="commit" data-def="Versão salva no Git, com uma mensagem que explica a mudança. Dá para voltar a ela depois.">commit</span>. E consegue apontar a linha que deixa o .env de fora e a que mantém o .env.example.</p>
+  <p class="why">No módulo 6, o <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span> vai guardar versões da sua pasta. O que entra numa versão fica no histórico. Por isso a lista do que nunca entra vem antes da primeira versão.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O <b>.gitignore</b> é a lista do que o Git não guarda.</li>
+      <li>Ele só vale para o que o Git <b>ainda não guardou</b>.</li>
+      <li>Chave vazou? <b>Troque na origem</b> primeiro; apagar a linha não desfaz.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>O .gitignore separa o que a equipe lê do que fica em casa</h2>
+  <p>Cada versão salva pelo Git se chama commit. O .gitignore é um arquivo de texto, na pasta do projeto, com a lista do que o Git deve deixar de fora.</p>
+  <p>Entram nessa lista o <span class="gterm" data-gl="env" data-def="Arquivo que guarda chaves e senhas fora do código. Nunca vai para o Git, para um pedido ou para um print.">.env</span>, as variantes privadas dele e as pastas temporárias que os programas criam sozinhos.</p>
+  <p data-ex="coordenadora">No projeto de relatórios, Denise pôs o .env na lista antes de salvar a primeira versão. O arquivo com a senha do sistema de notas nunca entrou no histórico.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">Entra no histórico</span><p><span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span>.md, .env.example e os demais arquivos do trabalho.</p></div>
+      <div class="neutro"><span class="rot">Fica de fora</span><p>.env, chaves, senhas e pastas temporárias.</p></div>
+      <p class="saldo"><b>Quem decide:</b> o .gitignore, escrito antes da primeira versão.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Cada linha do .gitignore é um padrão</h2>
+  <p>A linha .env pega o arquivo .env. A linha .env.* pega variantes como .env.local: o asterisco vale por qualquer final. A linha que começa com ! abre uma exceção.</p>
+  <p>Assim, !.env.example devolve o exemplo à lista do que é guardado. As últimas linhas cobrem pastas e arquivos temporários que alguns programas criam sozinhos. Você não precisa mexer nelas.</p>
+  <p data-ex="professora">Lúcia estranhou a exclamação na terceira linha do arquivo do kit. Era ela que mantinha o .env.example no projeto, para a colega de matemática saber o que preencher.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>.gitignore (começo do modelo do kit)</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> .env</div>
+        <div class="item doc"><span class="pin">2</span> .env.*</div>
+        <div class="item doc"><span class="pin">3</span> !.env.example</div>
+        <div class="item doc"><span class="pin">4</span> __pycache__/</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Deixa de fora o arquivo com os valores reais.</span></li>
+      <li><span class="pin">2</span><span>Deixa de fora qualquer variante, como .env.local.</span></li>
+      <li><span class="pin">3</span><span>A exclamação traz o exemplo de volta: ele é guardado.</span></li>
+      <li><span class="pin">4</span><span>Pasta temporária que um programa cria sozinho. Você não precisa mexer nela.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>Ignorar só vale para o que ainda não foi guardado</h2>
+  <p>O .gitignore não vale para um arquivo que já foi guardado, o <span class="gterm" data-gl="arquivo-rastreado" data-def="Arquivo que o Git já acompanha, porque entrou em alguma versão salva. O .gitignore não vale para ele.">arquivo rastreado</span>. Se o .env já entrou num commit, a linha escrita depois não o tira do histórico.</p>
+  <p>É como o malote da secretaria: o papel que não deve ir sai da pilha antes de fechar. Depois que o malote partiu, riscar o papel da lista não o traz de volta.</p>
+  <p data-ex="coordenadora">Um colega de Denise pôs o .env no .gitignore uma semana depois da primeira versão. O arquivo com a senha continuava lá, na versão antiga.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Histórico do projeto do colega</span></div>
+      <div class="janela-body">
+        <div class="item pasta"><span class="pin">1</span> Versão de segunda-feira</div>
+        <div class="item doc dentro">README.md · .env (com a senha)</div>
+        <div class="item pasta"><span class="pin">2</span> Versão da segunda-feira seguinte</div>
+        <div class="item doc dentro">.gitignore com a linha .env</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O .env entrou nesta versão e continua dentro dela.</span></li>
+      <li><span class="pin">2</span><span>A linha nova vale daqui para a frente; a versão 1 não muda.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Vazou? Troque a chave antes de limpar o arquivo</h2>
+  <p>Se uma chave foi publicada, a primeira correção é revogar a chave na origem, ou seja, cancelá-la no site que a criou. Isso fica na área de chaves ou de segurança da conta, como a página de chaves da plataforma da API. Apagar a linha do arquivo não invalida uma cópia que alguém já viu.</p>
+  <p>Só depois vem o conserto do histórico, conforme o caso. O módulo 6 mostra como.</p>
+  <p data-ex="professora">A <span class="gterm" data-gl="chave-de-api" data-def="Senha longa que identifica quem usa a API e para quem vai a conta. Nunca vai num pedido, num arquivo compartilhado ou num print.">chave de API</span> de um projeto de Lúcia apareceu numa versão compartilhada com a equipe. Ela cancelou a chave no site da plataforma no mesmo minuto e criou outra. Só então cuidou do arquivo.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Só apagou a linha</span><p><b>O que fez:</b> tirou a chave do arquivo.</p><p><b>Resultado:</b> a chave antiga continua valendo para quem copiou.</p></div>
+      <div class="depois"><span class="rot">Cancelou a chave primeiro</span><p><b>O que fez:</b> cancelou na origem, criou outra e depois limpou o arquivo.</p><p><b>Resultado:</b> a cópia vazada não abre mais nada.</p></div>
+      <p class="saldo"><b>Saldo:</b> o risco acaba quando a chave morre, e não quando o arquivo muda.</p>
+    </div>
+  </figure>
+  <div class="quiz" data-answer="b">
+    <p class="qk">Teste-se</p>
+    <p class="q">Uma chave já foi publicada numa versão. Pôr o .env no .gitignore agora resolve?</p>
+    <button class="opt" data-k="a" data-fb="O .gitignore não mexe no que já foi guardado; a versão antiga continua com a chave.">Sim, o Git tira o .env do histórico</button>
+    <button class="opt" data-k="b" data-fb="Isso mesmo: quem copiou a chave só perde o acesso quando ela é cancelada na origem.">Não; primeiro cancele a chave na origem</button>
+    <button class="opt" data-k="c" data-fb="Uma versão nova não apaga as antigas, e a chave continua valendo.">Sim, desde que salve uma versão nova</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O Git só chega no módulo 6. Hoje basta o .gitignore estar pronto na pasta. Quando você salvar a primeira versão, ele já estará no lugar.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Ponha o .gitignore no projeto de treino</h3>
+  <p class="pgoal">Pronto quando o cat -n mostrar as linhas .env e !.env.example e o ls -a listar o .gitignore. Cerca de 8 minutos, no computador, no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
+  <p class="psafe">O modelo é um arquivo de texto do kit do curso e não guarda nada por si: só vira regra quando o Git entrar, no módulo 6. Atenção: a segunda linha substitui um .gitignore que já exista nessa pasta. Não fez a aula 1 deste módulo? Rode antes: mkdir -p ~/projetos/meu-primeiro-projeto</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/meu-primeiro-projeto
+curl -fsSL https://inematds.github.io/oswork/materiais/gitignore.txt -o .gitignore
+cat -n .gitignore
+ls -a</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole as quatro linhas e aperte Enter. A segunda usa o curl, que baixa um arquivo da internet: ele traz o modelo do kit e o -o grava com o nome .gitignore. O cat -n mostra o arquivo com o número de cada linha.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Na resposta do cat -n, anote no papel o número da linha que deixa o .env de fora e o da linha que mantém o .env.example.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>No ls -a, confira que o .gitignore aparece junto do .env.example e do README.md.</span></label></li>
+  </ol>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>O que você deve ver</span></div>
+<pre><code><span class="out">     1	.env
+     2	.env.*
+     3	!.env.example
+     4	__pycache__/
+     5	*.pyc
+     6	node_modules/
+     7	.verificacao/</span></code></pre>
+<p class="tela-nota">Essa é a resposta do cat -n. As linhas 4 a 7 são temporários de programas; ficam como estão. Linha 1 deixa o .env de fora; linha 3 mantém o .env.example.</p></div></figure>
+  <p class="pdone">Você acabou de pôr a lista do que nunca entra no histórico antes da primeira versão existir.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Ignore antes de guardar</h3>
+    <ol>
+      <li><span><b>.env e .env.*</b>fora; <b>!.env.example</b> volta para dentro.</span></li>
+      <li><span><b>Ordem</b>primeiro o .gitignore, depois a primeira versão.</span></li>
+      <li><span><b>Vazou</b>cancele a chave na origem antes de mexer no arquivo.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe deixar o segredo fora do histórico antes que ele exista.</p>
+    <p class="na-action">Hoje, descubra onde se cancela a chave de uma ferramenta que você usa. Anote o caminho na ficha do projeto, sem a chave.</p>
+    <p class="na-hook">Na próxima aula: com tudo no lugar, o que a IA deve ler primeiro? Você vai limpar o contexto e apontar três arquivos certos.</p>
+  </div>
+</div>
+
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Ignore antes do primeiro commit<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>O .gitignore lista arquivos que Git deve ignorar quando ainda não são rastreados. Inclua .env, variantes privadas e pastas temporárias. Mantenha uma exceção explícita para <span class="gterm" data-def="Cópia do .env com os mesmos nomes de variáveis e valores fictícios. Mostra o que é preciso preencher sem dar acesso a nada, por isso pode ser compartilhada." data-gl="env-example">.env.example</span>. Antes de salvar uma versão, examine git status e os arquivos preparados.</p><h3>Por que aprender</h3><p>Ignorar depois não apaga um segredo do histórico. Se a chave vazou, a primeira correção é revogar ou rotacionar na origem; apagar a linha do arquivo não invalida uma cópia já vista.</p><h3>Conceitos-chave</h3><p>Arquivos rastreados; padrões de exclusão; revisão de alterações; revogação.</p><h4>Na prática</h4><p>Padrões úteis: .env, .env.*, !.env.example, __pycache__/. Para descobrir qual regra se aplica, use git check-ignore -v .env.</p><h4>Experimente agora</h4><p>Copie materiais/gitignore.txt como .gitignore antes de git add. Confira que .env.example continua disponível e .env não aparece entre novos arquivos.</p></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-22">← aula anterior</a><a class="next" href="#aula-24">próxima aula →</a></nav>
+<p class="aula-pe">Aula 23 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-23">
+[
+  {"front":"Você vai salvar a primeira versão de um projeto novo e ainda não há .gitignore. O que faz antes?","back":"Cria o .gitignore com .env, .env.* e !.env.example, e confere a lista do que vai entrar."},
+  {"front":"Para que serve a exclamação em !.env.example?","back":"Abre uma exceção: o .env.* deixaria o exemplo de fora, e a exclamação o traz de volta."},
+  {"front":"O .env continua entrando nas versões novas, mesmo com a linha .env no .gitignore. Qual a causa provável?","back":"Ele já tinha sido guardado antes. O .gitignore não vale para arquivo que o Git já acompanha."}
+]
+</script>
+</section>

@@ -1,0 +1,151 @@
+<section class="view" id="v-aula-38" data-aula="38" data-tempo="17min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 7 · Aula 2 de 6</p>
+  <h1>Crie o bot e guarde a <em>chave</em> dele</h1>
+  <figure class="cena"><img src="assets/img/aula-38.webp" width="1280" height="720" alt="Uma professora, à noite, guarda uma única chave numa caixinha de madeira sobre a mesa, com o celular e o notebook ao lado."></figure>
+  <p class="promise">Você consegue criar o seu bot no BotFather e guardar o token do bot só no arquivo .env. Só a sua conta lê o arquivo, e o token não aparece em print nenhum.</p>
+  <p class="why">Quem tem o token opera o bot. Um print da conversa ou uma cópia colada num documento bastam para vazar o acesso. Guardar certo no primeiro minuto custa menos do que trocar tudo depois.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O <b>BotFather</b>, conta oficial do Telegram, cria o bot e entrega o token.</li>
+      <li>O token vai para <b>um lugar só</b>: o arquivo .env, na pasta do bot.</li>
+      <li>Vazou? <b>Revogue</b> no BotFather antes de continuar.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>O BotFather cria o bot e entrega a chave</h2>
+  <p>Todo <span class="gterm" data-gl="bot" data-def="Programa que conversa por um aplicativo de mensagens e responde sozinho, seguindo as regras que você define.">bot</span> do <span class="gterm" data-gl="telegram" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7.">Telegram</span> nasce numa conversa com o <span class="gterm" data-gl="botfather" data-def="Conta oficial do próprio Telegram que cria bots e gera o token de cada um.">BotFather</span>. Você envia /newbot, escolhe um nome e um identificador, e ele devolve o <span class="gterm" data-gl="token-do-bot" data-def="Senha que o Telegram gera para o seu bot. Quem tem o token controla o bot; por isso ele fica no .env.">token do bot</span>.</p>
+  <p>O identificador precisa terminar em "bot", como lojinha_gremio_lucia_bot. Se já estiver em uso, o BotFather pede outro. O token é uma linha de números, dois-pontos e letras. Ele funciona como a chave do portão da escola: quem tem a cópia entra, seja quem for.</p>
+  <p data-ex="professora">Lúcia criou o bot da lojinha do grêmio em três mensagens. Antes, conferiu que falava com o BotFather oficial: o @BotFather, com o selo azul de verificado, e não uma conta de nome parecido.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Telegram · conversa com o BotFather</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Lúcia</span>/newbot</p>
+        <p class="msg ia"><span class="quem">BotFather</span>Escolha um nome para o seu bot.</p>
+        <p class="msg eu"><span class="quem">Lúcia</span>Lojinha do Grêmio</p>
+        <p class="msg ia"><span class="quem">BotFather</span>Agora escolha um identificador para ele.</p>
+        <p class="msg eu"><span class="quem">Lúcia</span>lojinha_gremio_lucia_bot</p>
+        <p class="msg ia ok"><span class="quem">BotFather</span>Pronto. Este é o token do seu bot: [escondido nesta aula]</p>
+      </div>
+      <p class="tela-nota bom">O BotFather responde em inglês; aqui as mensagens estão traduzidas e resumidas. O token foi escondido de propósito.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>O token vai para o .env, e só para lá</h2>
+  <p>Na pasta do bot, o kit do curso (link no passo 1 da prática) traz um arquivo de exemplo, o <span class="gterm" data-gl="env-example" data-def="Cópia do .env com os mesmos nomes de variáveis e valores fictícios. Mostra o que é preciso preencher sem dar acesso a nada, por isso pode ser compartilhada.">.env.example</span>, só com valores de mentira. Você faz uma cópia chamada <span class="gterm" data-gl="env" data-def="Arquivo que guarda chaves e senhas fora do código. Nunca vai para o Git, para um pedido ou para um print.">.env</span> e cola o token lá dentro.</p>
+  <p>O .env fica só no seu computador. O token não entra em print, em mensagem, nem em documento compartilhado.</p>
+  <p data-ex="coordenadora">Denise pensou em pôr o token no documento de instruções da secretaria, "para ninguém perder". Mudou de ideia: o documento diz onde o .env fica, nunca o valor.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Token à vista</span><p>Colado no documento de instruções da equipe.</p><p>Aparece num print enviado ao grupo da escola.</p></div>
+      <div class="depois"><span class="rot">Token no .env</span><p>A linha TELEGRAM_BOT_TOKEN é preenchida só no arquivo privado.</p><p>O documento diz o caminho do arquivo, não o valor.</p></div>
+      <p class="saldo"><b>Saldo:</b> um lugar para proteger, em vez de vários para vigiar.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Quatro comandos criam o .env protegido</h2>
+  <p>O kit do curso é o arquivo oswork-kit.zip; o link está no passo 1 da prática. Abra o <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> e entre na pasta bot, dentro do kit descompactado. Copie o exemplo, restrinja a leitura e confira.</p>
+  <p>O <span class="gterm" data-gl="chmod" data-def="Comando que define quem pode ler ou alterar um arquivo.">chmod</span> 600 deixa só a sua conta ler e alterar o arquivo. Confira a linha do resultado: ela começa com -rw-------, um r e um w só.</p>
+  <p data-ex="professora">Lúcia rodou os quatro comandos e achou o -rw------- na primeira tentativa. Depois colou o token no arquivo, salvou e fechou sem tirar print.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<div class="pcodewrap" style="margin:0"><pre><code>
+<span class="pr">$</span> cd ~/projetos/oswork-kit/bot
+<span class="pr">$</span> cp .env.example .env
+<span class="pr">$</span> chmod 600 .env
+<span class="pr">$</span> ls -l .env
+<span class="out">-rw------- 1 lucia lucia 66 set 25 10:02 .env</span></code></pre></div>
+<p class="tela-nota">Os três primeiros comandos não mostram nada quando dão certo. O último mostra a linha para conferir.</p></div>
+  <figcaption>Olhe o começo da linha: -rw-------. Nome, tamanho e data mudam no seu computador.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Apareceu "No such file or directory"? Você não está na pasta certa. Repita o cd com o caminho de onde descompactou o kit. Se a linha não começa com -rw-------, rode de novo o chmod 600 .env e confira.</p></div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Vazou? Revogue antes de continuar</h2>
+  <p>Se o token apareceu num print, numa mensagem ou num documento, trate como vazado. No BotFather, envie /mybots, escolha o bot, toque em <code>API Token</code> e depois em <code>Revoke current token</code>. Ele gera um token novo, e o antigo para de valer.</p>
+  <p>Depois, troque o valor no .env. Um link que começa com <code>api.telegram.org/bot</code> e traz o token logo depois também é vazamento.</p>
+  <p data-ex="coordenadora">Numa reunião, Denise viu o print de um colega com o token de um bot à mostra. Avisou na hora. A equipe revogou e trocou o valor no .env em dez minutos.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Pasta bot · onde fica o token</span></div>
+      <div class="janela-body">
+        <div class="item pasta">bot</div>
+        <div class="item doc dentro"><span class="pin">1</span> .env — o token fica aqui, e só aqui</div>
+        <div class="item doc dentro"><span class="pin">2</span> .env.example — continua com o valor de exemplo</div>
+        <div class="item doc dentro"><span class="pin">3</span> bot.py — nunca recebe o token colado</div>
+        <div class="item botao"><span class="pin">4</span> BotFather › revogar, se vazar</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O único lugar do valor.</span></li>
+      <li><span class="pin">2</span><span>O modelo fica como veio.</span></li>
+      <li><span class="pin">3</span><span>O programa lê o .env sozinho.</span></li>
+      <li><span class="pin">4</span><span>Vazou, revogou, trocou.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/5</span></p>
+  <h3 class="ph">Crie o seu bot e guarde o token no .env</h3>
+  <p class="pgoal">Pronto quando o <code style="white-space:nowrap">ls -l</code> mostrar <code style="white-space:nowrap">-rw-------</code> no .env e o token estiver lá dentro, sem ter passado por print ou mensagem. Cerca de 12 minutos, no computador com o terminal e o Telegram no celular.</p>
+  <p class="psafe">Você cria um bot novo, só seu, e mexe apenas na pasta do kit. Nenhum comando aqui apaga nada. Se o token aparecer em algum print, pare, revogue no BotFather e refaça o último passo com o token novo.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/oswork-kit/bot
+cp .env.example .env
+chmod 600 .env
+ls -l .env</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Baixe o oswork-kit.zip na <a href="https://inematds.github.io/oswork/materiais/" target="_blank" rel="noopener">página de materiais do OSWork</a> e descompacte numa pasta oswork-kit dentro de projetos. Ficou uma pasta dentro da outra, ou em outro lugar (no Windows com WSL, dentro de projetos do WSL)? Ajuste o caminho do cd até chegar à pasta bot.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>No Telegram, abra o BotFather oficial, envie /newbot e responda às perguntas. Não tire print da resposta com o token.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>No terminal, rode os quatro comandos do quadro (pode colar os quatro juntos) e confira <code style="white-space:nowrap">-rw-------</code> no começo da última linha.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>No computador, abra o Telegram com a mesma conta: o aplicativo ou web.telegram.org. Ele mostra um código QR; no celular, vá em Configurações › Dispositivos e leia o código. Depois copie o token da conversa com o BotFather.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="5"> <span>Rode <code style="white-space:nowrap">nano .env</code> e troque preencha_localmente pelo token. Para colar no terminal: Ctrl+Shift+V no Linux e no <span class="gterm" data-gl="wsl" data-def="Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux.">WSL</span> do Windows, Cmd+V no Mac. O token é longo; se a linha passar da tela, é normal. Salve com Ctrl+O e Enter; saia com Ctrl+X.</span></label></li>
+  </ol>
+  <details class="mais"><summary>O que é o nano e como ele aparece</summary>
+    <p>O <span class="gterm" data-gl="nano" data-def="Editor de texto que abre dentro do terminal. Ctrl+O grava o arquivo e Ctrl+X sai.">nano</span> abre o arquivo dentro do próprio terminal. Você verá duas linhas: TELEGRAM_BOT_TOKEN=preencha_localmente e ALLOWED_USER_IDS=123456789. Nesta aula, mude só a primeira. A segunda fica para a próxima aula.</p>
+  </details>
+  <p class="pdone">Você criou um bot e guardou a chave dele num lugar que só a sua conta abre.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>A chave do bot</h3>
+    <ol>
+      <li><span><b>BotFather</b>/newbot cria o bot e entrega o token.</span></li>
+      <li><span><b>.env</b>o único lugar do token, com chmod 600.</span></li>
+      <li><span><b>Vazou</b>revogue no BotFather e troque no .env.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já cria um bot e guarda a chave dele fora de qualquer tela compartilhada.</p>
+    <p class="na-action">Anote no seu bloco de notas onde fica o .env do bot: o caminho da pasta, nunca o valor.</p>
+    <p class="na-hook">Na próxima aula: o bot vai responder só a você. Primeiro, descobrir o seu número de identificação no Telegram.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Crie o bot e proteja o token<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>No Telegram, encontre o BotFather oficial e use /newbot. Escolha nome e identificador conforme as instruções mostradas. O token gerado autentica seu programa perante o Telegram. Guarde-o como TELEGRAM_BOT_TOKEN em um arquivo privado; o kit tem apenas valores de exemplo.</p><h3>Por que aprender</h3><p>Quem controla o token pode operar o bot. Capturas de tela do processo e URLs contendo o token podem vazar acesso. Se houver exposição, revogue o token no BotFather antes de continuar.</p><h3>Conceitos-chave</h3><p>BotFather; token; <span class="gterm" data-def="Um nome com um valor guardado, escrito como NOME=valor. O programa procura o valor pelo nome." data-gl="variavel">variável</span> de ambiente; rotação.</p><h4>Na prática</h4><p>A professora cria um bot para uso pessoal. Ela não coloca o token no <span class="gterm" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado." data-gl="readme">README</span> e não envia o arquivo de credenciais para os alunos. Cada <span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">instalação</span> usa suas próprias credenciais.</p><h4>Experimente agora</h4><p>Use o modo --identify do kit: ele informa o ID de quem envia /start no terminal local, sem dar acesso às funções operacionais.</p></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-37">← aula anterior</a><a class="next" href="#aula-39">próxima aula →</a></nav>
+<p class="aula-pe">Aula 38 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-38">
+[
+  {"front":"Você vai mostrar a uma colega como configurou o bot. O que pode aparecer no print e o que não pode?","back":"Pode aparecer o nome das variáveis e o caminho da pasta. O valor do token nunca; se aparecer, revogue."},
+  {"front":"O ls -l .env mostrou -rw-r--r--. O que isso indica e o que você faz?","back":"Outras contas do computador conseguem ler o arquivo. Rode chmod 600 .env e confira de novo."},
+  {"front":"Duas colegas querem usar o kit, cada uma no seu computador. Elas podem dividir um token?","back":"Não. Cada uma cria o próprio bot e guarda o token no próprio .env; um token deve ter um só programa usando."}
+]
+</script>
+</section>

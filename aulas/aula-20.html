@@ -1,0 +1,157 @@
+<section class="view" id="v-aula-20" data-aula="20" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 4 · Aula 2 de 6</p>
+  <h1>Markdown é <em>texto organizado</em></h1>
+  <figure class="cena"><img src="assets/img/aula-20.webp" width="1280" height="720" alt="Uma professora de ciências, no laboratório da escola, escreve um roteiro de experimento dividido em três blocos com títulos, ao lado de um notebook com um documento de texto simples."></figure>
+  <p class="promise">Você consegue escrever o <span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span> do projeto de treino em <span class="gterm" data-gl="markdown" data-def="Jeito de escrever texto simples com marcas leves, como # para título e - para lista. Os arquivos terminam em .md.">Markdown</span>. Cada campo fica com informação real ou com "a definir".</p>
+  <p class="why">Uma explicação que só existe numa conversa some quando a conversa acaba. Quem chega depois não sabe para que a pasta serve. Um arquivo pequeno de texto resolve e dura.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li><b>#</b> faz título, <b>##</b> faz subtítulo, <b>-</b> faz item de lista.</li>
+      <li>O arquivo termina em <b>.md</b> e abre em qualquer editor de texto.</li>
+      <li>O README diz <b>para que serve</b> o projeto e <b>como conferir</b> o resultado.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Markdown é texto com três marcas simples</h2>
+  <p>Todo roteiro de experimento de Lúcia tem título, materiais e procedimento. Ela sublinha os títulos e põe um traço antes de cada material. Markdown faz o mesmo com sinais que você digita.</p>
+  <p>O # no começo da linha cria um título, o ## cria um subtítulo e o hífen cria um item de lista. O arquivo continua sendo texto: dá para ler mesmo sem um programa especial.</p>
+  <p data-ex="professora">Lúcia passou o roteiro "Germinação do feijão" para Markdown em cinco minutos. Não aprendeu nada além dessas três marcas.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="neutro"><span class="rot">No arquivo</span><p># Germinação do feijão</p><p>## Materiais</p><p>- 10 grãos de feijão</p><p>- algodão e um copo</p></div>
+      <div class="bom"><span class="rot">Como se lê</span><p><b>Título:</b> Germinação do feijão.</p><p><b>Subtítulo:</b> Materiais.</p><p><b>Lista:</b> dois itens, um por linha.</p></div>
+    </div>
+    <figcaption>As marcas ficam no texto. Quem lê entende a estrutura mesmo sem ver formatação.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>O nome termina em .md e abre em qualquer editor</h2>
+  <p>Um arquivo Markdown é um arquivo de texto cujo nome termina em .md, como README.md. Ele abre no editor de texto do computador e também no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
+  <p>No terminal, o <span class="gterm" data-gl="nano" data-def="Editor de texto que abre dentro do terminal. Ctrl+O grava o arquivo e Ctrl+X sai.">nano</span> abre o arquivo para editar ali mesmo. Depois, o comando cat mostra o conteúdo na tela, para você conferir.</p>
+  <p data-ex="coordenadora">Denise abriu o README do projeto do conselho com o nano. Trocou uma linha, gravou com Ctrl+O, confirmou o nome com Enter e saiu com Ctrl+X. Depois conferiu com cat.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · dentro do nano</span></div>
+<pre><code><span class="out">  GNU nano                    README.md
+# Meu primeiro projeto OSWork
+
+## Propósito
+Produzir relatórios de treino a partir de dados fictícios.
+
+^G Help    ^O Write Out    ^W Where Is    ^X Exit</span></code></pre>
+<p class="tela-nota">É assim que o nano aparece: o texto no meio e os atalhos no rodapé, em inglês. O ^ quer dizer Ctrl. Write Out é gravar; Exit é sair. Depois do Ctrl+O, ele mostra o nome do arquivo embaixo: aperte Enter.</p></div>
+  <figcaption>Não há menu de mouse: você anda com as setas e digita direto. Ao sair, cat README.md mostra o que ficou gravado.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>O README explica o projeto para quem chega depois</h2>
+  <p>O modelo do kit do curso traz cinco seções: Propósito, Leia primeiro, Organização, Como verificar e Estado atual. Você troca cada texto do modelo pelo que vale no seu projeto.</p>
+  <p>Ainda não sabe um campo? Escreva "a definir". Um campo honesto em aberto é melhor que um texto do modelo que ninguém conferiu.</p>
+  <p data-ex="professora">No README da feira de ciências, Lúcia escreveu em Propósito: "organizar as inscrições da feira". Em Como verificar: "todo grupo inscrito aparece na lista final".</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>README.md</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> # Feira de ciências 2026</div>
+        <div class="item doc"><span class="pin">2</span> ## Propósito</div>
+        <div class="item doc dentro">Organizar as inscrições da feira.</div>
+        <div class="item doc">## Leia primeiro</div>
+        <div class="item doc dentro">A definir.</div>
+        <div class="item doc">## Organização</div>
+        <div class="item doc dentro">- entradas: fichas de inscrição</div>
+        <div class="item doc dentro">- saidas: lista final</div>
+        <div class="item doc"><span class="pin">3</span> ## Como verificar</div>
+        <div class="item doc dentro">Todo grupo inscrito aparece na lista final.</div>
+        <div class="item doc"><span class="pin">4</span> ## Estado atual</div>
+        <div class="item doc dentro">A definir.</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Um título com o nome do projeto.</span></li>
+      <li><span class="pin">2</span><span>Para que o projeto existe, em uma frase.</span></li>
+      <li><span class="pin">3</span><span>Como alguém confere se o resultado está certo.</span></li>
+      <li><span class="pin">4</span><span>O que ainda não se sabe fica escrito como "a definir". O Leia primeiro será completado na aula 6 deste módulo.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Clareza vale mais que formatação</h2>
+  <p>Arquivos pequenos e com nome claro duram mais que uma conversa perdida. Pessoas podem revisá-los, e <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agentes</span> podem consultá-los.</p>
+  <p>O valor vem da clareza. As três marcas bastam. Negrito, tabela e link são opcionais.</p>
+  <p data-ex="coordenadora">Denise tirou uma semana de licença. A colega que ficou no lugar abriu o README do projeto do conselho e continuou o trabalho sem precisar ligar para ela.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Só na conversa</span><p><b>Onde está:</b> numa conversa de março com a IA.</p><p><b>Resultado:</b> a colega não acha e liga para Denise.</p></div>
+      <div class="depois"><span class="rot">No README</span><p><b>Onde está:</b> README.md, na pasta do projeto.</p><p><b>Resultado:</b> a colega lê o arquivo e segue.</p></div>
+      <p class="saldo"><b>Saldo:</b> a explicação passa a morar na pasta, e não na memória de alguém.</p>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O nano estranha na primeira vez: não há menu com mouse. Prefere outro caminho? Na pasta do projeto, digite open -e README.md no Mac, ou explorer.exe . no Windows, dentro do terminal Linux do módulo 3, e abra o README.md com o Bloco de Notas. Ao salvar, em Tipo, escolha Todos os arquivos, para ele não virar README.md.txt.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Escreva o README do projeto de treino</h3>
+  <p class="pgoal">Pronto quando o cat mostrar os títulos com # e você tiver lido cada seção e deixado nela texto seu ou "a definir". Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">O modelo é um arquivo de texto do kit do curso, sem dado de ninguém. Atenção: a segunda linha substitui um README.md que já exista nessa pasta. Já escreveu um? Pule essa linha. Não fez a aula anterior? Rode antes: mkdir -p ~/projetos/meu-primeiro-projeto</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/meu-primeiro-projeto
+curl -fsSL https://inematds.github.io/oswork/materiais/README-projeto.md -o README.md
+nano README.md</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole as três linhas. A primeira entra na pasta. A segunda usa o curl, que baixa um arquivo da internet: ele traz o modelo do kit e o -o grava com o nome README.md. A terceira abre o arquivo no nano.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Troque cada texto do modelo por algo verdadeiro do seu projeto de treino, ou por "a definir". Em Organização, descreva as pastas entradas e saidas. Mantenha os # e os hífens. Grave com Ctrl+O e Enter; saia com Ctrl+X.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Digite cat README.md e confira: os títulos continuam com #, e cada seção tem texto seu ou "a definir".</span></label></li>
+  </ol>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>O que você deve ver (começo)</span></div>
+<pre><code><span class="pr">$</span> cat README.md
+<span class="out"># Meu primeiro projeto OSWork
+
+## Propósito
+A definir.
+
+## Leia primeiro
+A definir.</span></code></pre>
+<p class="tela-nota">O título pode ficar como no modelo. O texto das seções é o seu; confira os títulos com # e nenhuma seção vazia. Se o terminal responder que não conhece o nano, use o Bloco de Notas, como diz o quadro "Se travou aqui", no fim do passo 4 da aula.</p></div></figure>
+  <p class="pdone">Você acabou de escrever, em Markdown, a explicação do projeto que fica na pasta, e não numa conversa.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Markdown e README</h3>
+    <ol>
+      <li><span><b># ## -</b>título, subtítulo e item de lista. Nada mais é obrigatório.</span></li>
+      <li><span><b>.md</b>continua sendo texto; abre no nano ou em qualquer editor.</span></li>
+      <li><span><b>README</b>propósito e verificação; o que falta vira "a definir".</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe registrar, num arquivo que dura, para que um projeto serve e como conferir o resultado.</p>
+    <p class="na-action">Hoje, escolha um trabalho real seu e escreva só a seção Propósito dele, em uma frase, num bloco de notas.</p>
+    <p class="na-hook">Na próxima aula: o README fala de um projeto. E o que vale para todos, como suas preferências e decisões? Você vai dar um arquivo para cada tipo de nota.</p>
+  </div>
+</div>
+
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Markdown é texto organizado<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Markdown usa sinais simples para organizar texto: # cria título, ## cria subtítulo e um hífen inicia item de lista. O arquivo continua sendo texto, legível mesmo sem um editor especial. O nome termina em .md. Você não precisa escrever código para registrar instruções claras.</p><h3>Por que aprender</h3><p>Arquivos pequenos, nomeados e fáceis de editar duram mais que uma conversa perdida. Eles podem ser revisados por pessoas e consultados por agentes. O valor vem da clareza, não de uma formatação elaborada.</p><h3>Conceitos-chave</h3><p>Título; lista; bloco de código; link; texto simples.</p><h4>Na prática</h4><p>Um README pode conter: propósito, arquivos de entrada, resultado esperado e como verificar. Quem chegar depois entende a tarefa sem depender da conversa original.</p><h4>Experimente agora</h4><p>Abra materiais/README-projeto.md. Copie o modelo para seu projeto e substitua cada campo por informação real ou “a definir”.</p></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-19">← aula anterior</a><a class="next" href="#aula-21">próxima aula →</a></nav>
+<p class="aula-pe">Aula 20 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-20">
+[
+  {"front":"Você abriu um arquivo .md sem nenhum programa especial e viu linhas começando com # e com hífen. Está com defeito?","back":"Não. É o próprio Markdown: texto com marcas. O # indica título e o hífen, item de lista."},
+  {"front":"Um campo do README você ainda não sabe preencher. Deixa o texto do modelo ou escreve outra coisa?","back":"Escreve \"a definir\". Texto do modelo que ninguém conferiu engana quem lê depois."},
+  {"front":"Você gravou o README no nano. Como confere que ficou certo sem abrir o editor de novo?","back":"Com cat README.md, que mostra o conteúdo gravado na tela."}
+]
+</script>
+</section>

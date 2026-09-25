@@ -1,0 +1,157 @@
+<section class="view" id="v-aula-16" data-aula="16" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 3 · Aula 4 de 6</p>
+  <h1>Abra o agente <em>na pasta certa</em></h1>
+  <figure class="cena"><img src="assets/img/aula-16.webp" width="1280" height="720" alt="Uma coordenadora de óculos para na porta de uma pequena sala de reunião arrumada e olha para dentro antes de entrar; na mesa, só um notebook e duas folhas."></figure>
+  <p class="promise">Você consegue criar uma pasta de treino com três arquivos fictícios, entrar nela pelo <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> e abrir o <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span> ali dentro.</p>
+  <p class="why">O Codex trabalha na pasta em que foi aberto. Na pasta errada, ele lê o que não devia e não acha o que precisa. Uma pasta pequena, só com o material da tarefa, deixa claro o que ele podia tocar.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>A pasta de trabalho é a <b>sala da tarefa</b>: só o material dela.</li>
+      <li>O README explica o projeto para pessoas; o AGENTS.md dá as regras ao agente.</li>
+      <li><code>cd</code> entra na pasta, <code>pwd</code> confirma, e <b>só então</b> <code>codex</code>.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Entre na sala antes de começar a aula</h2>
+  <p>Quem entra na sala errada dá a aula para a turma errada. Com o Codex é igual: ele trabalha onde foi aberto. Então você entra na pasta antes de abrir o programa.</p>
+  <p><code>mkdir -p</code> cria a pasta, e as de antes se faltarem. <code>cd</code> entra nela. O sinal <code>~</code> quer dizer "a minha pasta pessoal": no Finder do Mac, é a pasta com o seu nome e o ícone de casinha.</p>
+  <p data-ex="coordenadora">Denise criou a pasta de treino e entrou nela. O <code>pwd</code> confirmou o endereço antes de ela abrir qualquer programa.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> mkdir -p ~/projetos/meu-primeiro-projeto
+<span class="pr">$</span> cd ~/projetos/meu-primeiro-projeto
+<span class="pr">$</span> pwd
+<span class="out">/home/denise/projetos/meu-primeiro-projeto</span></code></pre>
+<p class="tela-nota">Os dois primeiros comandos não respondem nada quando dão certo. Quem confirma é o <code>pwd</code>.</p></div>
+  <figcaption>A última pasta do endereço é a da tarefa: ali o Codex vai trabalhar.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Na pasta, só o material da tarefa</h2>
+  <p>Você não precisa abrir a sua pasta pessoal inteira para experimentar. Uma área pequena, com arquivos de treino, reduz a confusão. Quando algo sai errado, fica claro quais arquivos podiam ter mudado.</p>
+  <p data-ex="professora">Lúcia pensou em abrir o Codex na pasta Documentos, onde estão as provas e as notas das turmas. Preferiu a pasta de treino, com uma pauta fictícia. Nada real ficou ao alcance.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>meu-primeiro-projeto</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> README.md</div>
+        <div class="item doc"><span class="pin">2</span> AGENTS.md</div>
+        <div class="item pasta"><span class="pin">3</span> entradas</div>
+        <div class="item doc dentro">reuniao.txt</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Para que serve o projeto.</span></li>
+      <li><span class="pin">2</span><span>As regras para o agente.</span></li>
+      <li><span class="pin">3</span><span>O material de trabalho: uma pauta fictícia de cinco itens.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Um arquivo para pessoas, outro para o agente</h2>
+  <p>O <span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span> descreve a finalidade do projeto para quem chega. O <span class="gterm" data-gl="agents-md" data-def="Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir.">AGENTS.md</span> dá instruções de trabalho ao <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span>.</p>
+  <p>Os dois terminam em .md porque são texto em <span class="gterm" data-gl="markdown" data-def="Jeito de escrever texto simples com marcas leves, como # para título e - para lista. Os arquivos terminam em .md.">Markdown</span>: o # marca o título, e o hífen, um item de lista.</p>
+  <p data-ex="coordenadora">Denise escreveu no README a finalidade: preparar a pauta da reunião. No AGENTS.md, pôs duas regras: trabalhar só naquela pasta e não enviar nada.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="neutro"><span class="rot">README.md · para pessoas</span><p># Meu primeiro projeto</p><p>Projeto de treino do curso OSWork. Só arquivos fictícios.</p><p>Finalidade: preparar a pauta da reunião pedagógica a partir de entradas/reuniao.txt.</p></div>
+      <div class="bom"><span class="rot">AGENTS.md · para o agente</span><p># Instruções para o agente</p><p>- Trabalhe só dentro desta pasta.</p><p>- Não envie nem publique nada.</p></div>
+    </div>
+    <figcaption>Os dois estão certos, cada um para um leitor. No módulo 4, o AGENTS.md cresce.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Confira a pasta e abra o Codex</h2>
+  <p>Antes de digitar <code>codex</code>, rode <code>pwd</code> e <code>ls</code>. Se o endereço e os arquivos batem, abra o programa ali.</p>
+  <p>Na primeira vez numa pasta, o Codex pergunta se você confia nela. É a sua pasta de treino: escolha "Trust and continue" com as setas e tecle Enter. Neste treino, não use "Open restricted". Para sair do Codex, digite <code>/quit</code> e tecle Enter.</p>
+  <p data-ex="professora">Lúcia conferiu o endereço, viu os três itens no <code>ls</code> e só então digitou <code>codex</code>. Respondeu à pergunta sobre a pasta e saiu com <code>/quit</code>, sem pedir nada ainda.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> pwd
+<span class="out">/Users/lucia/projetos/meu-primeiro-projeto</span>
+<span class="pr">$</span> ls
+<span class="out">AGENTS.md  README.md  entradas</span>
+<span class="pr">$</span> codex
+<span class="out">Trust this folder? Codex can read, edit, and run files here,
+subject to your permission settings. …
+› Trust and continue
+  Open restricted</span></code></pre>
+<p class="tela-nota">Em inglês: "Confia nesta pasta? O Codex pode ler, editar e executar arquivos aqui, dentro das suas permissões." "Trust and continue" é "confiar e continuar"; "Open restricted" abre com restrições. A resposta fica guardada. As palavras podem mudar um pouco com a versão.</p></div>
+  <figcaption>Endereço certo, arquivos certos, e só então o programa.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>A pergunta em inglês assusta na primeira vez. Ela só aparece porque a pasta é nova para o Codex. Confirme apenas em pastas que você conhece. Na dúvida, saia com <code>/quit</code> (ou tecle Ctrl+C duas vezes) e confira o <code>pwd</code> de novo.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Monte a pasta de treino e abra o Codex nela</h3>
+  <p class="pgoal">Pronto quando o <code>ls</code> mostrar AGENTS.md, README.md e entradas, e o Codex abrir nessa pasta. Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">O bloco cria uma pasta nova e escreve três arquivos fictícios dentro dela: cada cat &gt; escreve no arquivo tudo até a linha FIM. Nada fora dela é tocado. Use o bloco só nessa pasta nova: em outra pasta, ele substituiria um README.md que já estivesse lá. Copie o bloco inteiro, até o último ls. Se o terminal ficar parado mostrando &gt;, tecle Ctrl+C e cole o bloco inteiro de novo.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir -p ~/projetos/meu-primeiro-projeto/entradas
+cd ~/projetos/meu-primeiro-projeto
+cat &gt; README.md &lt;&lt;'FIM'
+# Meu primeiro projeto
+Projeto de treino do curso OSWork. Só arquivos fictícios.
+Finalidade: preparar a pauta da reunião pedagógica a partir de entradas/reuniao.txt.
+FIM
+cat &gt; AGENTS.md &lt;&lt;'FIM'
+# Instruções para o agente
+- Trabalhe só dentro desta pasta.
+- Não envie nem publique nada.
+FIM
+cat &gt; entradas/reuniao.txt &lt;&lt;'FIM'
+Reunião pedagógica (fictícia)
+1. Horário novo da biblioteca
+2. Gincana de ciências
+3. Recuperação do 8º ano
+4. Uso dos notebooks da sala de informática
+5. Datas das provas: a definir
+FIM
+pwd
+ls</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Copie o bloco inteiro, cole no terminal e tecle Enter. Confira que o <code>pwd</code> termina em meu-primeiro-projeto.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Confira que o <code>ls</code> mostrou AGENTS.md, README.md e entradas.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Digite <code>codex</code> e tecle Enter. Na pergunta sobre a pasta, escolha "Trust and continue" e tecle Enter. Depois, saia com <code>/quit</code>.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de montar uma área de trabalho pequena e de abrir o agente exatamente dentro dela.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>A pasta certa</h3>
+    <ol>
+      <li><span><b>Sala da tarefa</b>uma pasta pequena, só com o material dela.</span></li>
+      <li><span><b>README e AGENTS.md</b>um para pessoas, outro para o agente.</span></li>
+      <li><span><b>Ordem</b>cd, pwd, ls e só então codex.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe abrir o agente numa pasta escolhida por você, e não onde o terminal estava.</p>
+    <p class="na-action">No terminal, dentro da pasta de treino, digite <code>cat entradas/reuniao.txt</code> e leia a pauta. São esses cinco itens que o Codex vai ler na próxima aula.</p>
+    <p class="na-hook">Na próxima aula: o primeiro pedido ao Codex. Ele vai ler a pasta e dizer o que falta, sem mudar nada.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Entre na pasta antes de pedir<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>A pasta de trabalho é a bancada da tarefa. Crie uma área pequena, com arquivos de treino, antes de permitir mudanças. Um README.md descreve a finalidade para pessoas; AGENTS.md dá instruções operacionais ao agente. Você não precisa abrir sua <span class="gterm" data-def="A sua pasta principal no computador, onde ficam Documentos, Downloads e as demais. No terminal ela aparece como ~ (til)." data-gl="pasta-pessoal">pasta pessoal</span> inteira para experimentar.</p><h3>Por que aprender</h3><p>Um escopo pequeno reduz ambiguidade e facilita revisar diferenças. Quando algo sai errado, fica claro quais arquivos deveriam ter sido afetados.</p><h3>Conceitos-chave</h3><p>Escopo local; README; AGENTS; arquivos de entrada.</p><h4>Na prática</h4><p>O projeto possui README.md e entradas/reuniao.txt. A primeira tarefa é explicar esses dois arquivos. Não há necessidade de acesso a documentos pessoais nem a outros projetos.</p><h4>✓ Faça</h4><p>No <span class="gterm" data-def="Linguagem de comandos do terminal no Linux e no macOS. Os comandos deste curso são escritos para ele." data-gl="bash">Bash</span>: mkdir -p ~/projetos/meu-primeiro-projeto. Entre com cd ~/projetos/meu-primeiro-projeto e inicie codex.</p><h4>✗ Evite</h4><p>Misturar a cópia de treino com arquivos privados ou trabalho em produção.</p></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-15">← aula anterior</a><a class="next" href="#aula-17">próxima aula →</a></nav>
+<p class="aula-pe">Aula 16 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-16">
+[
+  {"front":"Você abriu o terminal e digitou codex direto. O que deixou de conferir?","back":"Em que pasta estava. Antes do codex vêm o cd para a pasta da tarefa e o pwd para confirmar."},
+  {"front":"Uma regra como \"não envie nada\" vai no README ou no AGENTS.md?","back":"No AGENTS.md, que é o arquivo de instruções para o agente. O README explica o projeto para pessoas."},
+  {"front":"Por que treinar numa pasta nova, e não na pasta Documentos?","back":"Porque o agente alcança o que está na pasta em que foi aberto. Na pasta de treino, só há material fictício."}
+]
+</script>
+</section>

@@ -1,0 +1,159 @@
+<section class="view" id="v-aula-31" data-aula="31" data-tempo="14min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 6 · Aula 1 de 6</p>
+  <h1>O histórico que guarda cada <em>versão</em> da pasta</h1>
+  <figure class="cena"><img src="assets/img/aula-31.webp" width="1280" height="720" alt="Uma professora acrescenta uma linha nova, com data, no fim de um diário de classe cheio de registros anteriores, com o notebook aberto ao lado."></figure>
+  <p class="promise">Você consegue dizer o que são Git, repositório, commit e GitHub, e começar um histórico só numa pasta de treino, conferindo pela resposta do terminal.</p>
+  <p class="why">Numa tarefa, um agente pode mudar dez arquivos de uma vez. Sem histórico, você não sabe o que mudou nem como voltar à versão que funcionava. Com histórico, cada versão boa fica guardada, com data e explicação.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O Git guarda as <b>versões</b> de uma pasta; o GitHub é um <b>site</b> que pode guardar uma cópia.</li>
+      <li>Cada versão salva tem data, autor e uma <b>mensagem</b> que explica a mudança.</li>
+      <li>Comece o histórico só na <b>pasta de treino</b>, nunca na sua pasta pessoal inteira.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>O Git anota cada versão, como um diário de classe</h2>
+  <p>No diário de classe, cada dia ganha uma linha com data e assinatura. Ninguém apaga a linha de ontem: acrescenta a de hoje.</p>
+  <p>O <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span> faz o mesmo com uma pasta. A pasta acompanhada por ele se chama <span class="gterm" data-gl="repositorio" data-def="Pasta de projeto acompanhada pelo Git, com todo o histórico de versões.">repositório</span>. Cada versão salva se chama <span class="gterm" data-gl="commit" data-def="Versão salva no Git, com uma mensagem que explica a mudança. Dá para voltar a ela depois.">commit</span> e leva uma mensagem que explica a mudança.</p>
+  <p data-ex="professora">Lúcia pediu a um <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span> que reorganizasse os roteiros de experimento. Ele mexeu em seis arquivos e cortou um trecho do roteiro de densidade. Pelo histórico, ela achou a versão anterior e recuperou o trecho.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Histórico · roteiros de ciências</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> 23/09 · Lúcia · Acrescenta o roteiro de densidade</div>
+        <div class="item doc"><span class="pin">2</span> 24/09 · Lúcia · Corrige a lista de materiais do roteiro de densidade</div>
+        <div class="item doc"><span class="pin">3</span> 25/09 · agente · Reorganiza os roteiros por bimestre</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Cada linha é uma versão salva, com data e autor.</span></li>
+      <li><span class="pin">2</span><span>A mensagem diz o que mudou, para você achar depois.</span></li>
+      <li><span class="pin">3</span><span>A mudança do agente também fica registrada, e dá para voltar antes dela.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>GitHub é outro lugar, e é opcional</h2>
+  <p>O Git funciona só no seu computador, sem internet. O <span class="gterm" data-gl="github" data-def="Site onde você guarda uma cópia do seu repositório Git na internet, para trabalhar de outro computador ou com outras pessoas.">GitHub</span> é um site que pode guardar uma cópia do repositório.</p>
+  <p>Você pode usar o Git por meses sem publicar nada. Enviar uma cópia ao GitHub é uma decisão separada, que o módulo trata na aula 6.</p>
+  <p data-ex="coordenadora">Denise guarda no notebook o histórico da pasta de relatórios da coordenação. Nada disso está na internet. A cópia no GitHub só vai existir se a escola decidir que outra pessoa precisa trabalhar na mesma pasta.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="neutro"><span class="rot">Git</span><p><b>Onde:</b> no seu computador, dentro da pasta.</p><p><b>Para quê:</b> guardar as versões e voltar a uma delas.</p></div>
+      <div class="bom"><span class="rot">GitHub</span><p><b>Onde:</b> num site, na internet.</p><p><b>Para quê:</b> guardar uma cópia para outro computador ou outra pessoa.</p></div>
+    </div>
+    <figcaption>Os dois são úteis. O primeiro não depende do segundo.</figcaption>
+  </figure>
+  <div class="quiz" data-answer="b">
+    <p class="qk">Teste-se</p>
+    <p class="q">Denise acabou de salvar um commit do relatório no notebook. Alguém fora da escola consegue ver essa versão?</p>
+    <button class="opt" data-k="a" data-fb="O commit não sai do computador sozinho. Enviar ao site é um passo separado.">Sim, todo commit vai para o site</button>
+    <button class="opt" data-k="b" data-fb="Isso. A versão está no histórico do notebook até alguém decidir enviar uma cópia.">Não, a versão fica no notebook dela</button>
+    <button class="opt" data-k="c" data-fb="Tamanho de arquivo não decide nada aqui. O que decide é ter enviado ou não.">Só se o arquivo for muito grande</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>Histórico não é cópia de segurança de tudo</h2>
+  <p>O Git guarda só o que está na pasta e que você mandou guardar. Ele não substitui o <span class="gterm" data-gl="backup" data-def="Cópia de segurança dos arquivos, guardada em outro lugar para recuperar se algo se perder.">backup</span> do resto.</p>
+  <p>Arquivos que você manda ignorar, sistemas da escola e planilhas na nuvem precisam de proteção própria.</p>
+  <p data-ex="coordenadora">A planilha de frequência de Denise vive no sistema da secretaria. O histórico da pasta de relatórios guarda o texto do relatório, mas não guarda essa planilha.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>O que o histórico guarda</span></div>
+      <div class="janela-body">
+        <div class="item pasta"><span class="pin">1</span> relatorios-coordenacao</div>
+        <div class="item doc dentro">relatorio-setembro.md · guardado</div>
+        <div class="item doc dentro"><span class="pin">2</span> rascunho-pessoal.txt · ignorado de propósito (aula 3 do módulo)</div>
+        <div class="item pasta"><span class="pin">3</span> Planilha de frequência, no sistema da secretaria · fora da pasta</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O que está na pasta e foi salvo entra no histórico.</span></li>
+      <li><span class="pin">2</span><span>O que você manda ignorar fica de fora.</span></li>
+      <li><span class="pin">3</span><span>O que mora em outro sistema precisa de outra proteção.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Comece o histórico só na pasta de treino</h2>
+  <p>No <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>, <code>git --version</code> confirma que o Git está no computador. Depois, dentro de uma pasta nova, <code>git init -b main</code> começa o histórico.</p>
+  <p><code>mkdir -p</code> cria a pasta, e <code>cd</code> entra nela. O <code>-b main</code> só dá o nome <code>main</code> à linha principal de trabalho. Nunca rode <code>git init</code> na sua pasta pessoal inteira: o Git passaria a acompanhar tudo o que está lá.</p>
+  <p data-ex="professora">Lúcia criou a pasta <code>treino-git</code> dentro de <code>projetos</code>, entrou nela e só então começou o histórico. A resposta do terminal citava o caminho da pasta, e ela conferiu que era o de treino.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> git --version
+<span class="out">git version 2.43.0</span>
+<span class="pr">$</span> mkdir -p ~/projetos/treino-git
+<span class="pr">$</span> cd ~/projetos/treino-git
+<span class="pr">$</span> git init -b main
+<span class="out">Initialized empty Git repository in /home/lucia/projetos/treino-git/.git/</span></code></pre>
+<p class="tela-nota">A última linha diz, em inglês, "repositório vazio iniciado em…". Confira que o caminho termina em treino-git. O .git no fim é a pasta oculta onde o histórico mora: não mexa nela.</p></div>
+  <figcaption>O número da versão e o nome de usuária no caminho serão outros no seu computador.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Se aparecer <code>command not found</code>, o Git não está <span class="gterm" data-gl="instalar" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial.">instalado</span>. Pare e siga a página oficial, git-scm.com, para o seu sistema. No Mac, pode abrir uma janela oferecendo as ferramentas de linha de comando: aceite, espere terminar e repita. Se aparecer <code>unknown switch</code>, o seu Git é anterior à versão 2.28: atualize pela mesma página e repita. No Windows, use o <span class="gterm" data-gl="bash" data-def="Linguagem de comandos do terminal no Linux e no macOS. Os comandos deste curso são escritos para ele.">Bash</span> do <span class="gterm" data-gl="wsl" data-def="Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux.">WSL</span> preparado no módulo 3; se ele ainda não estiver pronto, volte lá antes. A resposta pode vir em português se o seu sistema estiver em português: o sentido é o mesmo.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Comece o histórico da pasta de treino</h3>
+  <p class="pgoal">Pronto quando o terminal responder que o repositório vazio foi iniciado em treino-git e mostrar <code>No commits yet</code>. Cerca de 8 minutos, no computador.</p>
+  <p class="psafe">A pasta é nova e vazia: nada seu é tocado e nada sai do computador. Se o caminho da resposta não terminar em treino-git, pare. Não apague nada por conta própria; anote em qual pasta foi e peça ajuda a alguém que use Git.</p>
+  <p><b>Bloco 1</b> · confira o Git:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">git --version</pre></div>
+  <p><b>Bloco 2</b> · crie a pasta e entre nela:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir -p ~/projetos/treino-git
+cd ~/projetos/treino-git
+pwd</pre></div>
+  <p><b>Bloco 3</b> · comece o histórico:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">git init -b main
+git status</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Abra o terminal, cole o bloco 1 e aperte Enter. Confira que a resposta começa com "git version".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Cole o bloco 2. Confira que a resposta do <code>pwd</code> termina em /projetos/treino-git.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Só se o caminho estiver certo, cole o bloco 3. Confira <code>Initialized empty Git repository</code> e, no status, <code>On branch main</code> e <code>No commits yet</code>.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de começar um histórico numa pasta que escolheu, e conferiu pela resposta que era a pasta certa.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Histórico da pasta</h3>
+    <ol>
+      <li><span><b>Git e repositório</b>o programa e a pasta que ele acompanha.</span></li>
+      <li><span><b>Commit</b>uma versão salva, com data, autor e mensagem.</span></li>
+      <li><span><b>GitHub</b>site opcional para uma cópia; nada vai para lá sozinho.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já tem um repositório de treino, vazio e no lugar certo.</p>
+    <p class="na-action">Hoje, anote qual pasta real do seu trabalho merecia histórico. Só o nome, sem rodar nada nela ainda.</p>
+    <p class="na-hook">Na próxima aula: antes de salvar a primeira versão, você vai ver exatamente o que entraria nela e o que ficaria de fora.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Git é o histórico do projeto<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Git registra versões de arquivos. Repositório é a pasta acompanhada por esse histórico; commit é um registro com alterações e mensagem. GitHub é um serviço que hospeda <span class="gterm" data-def="Pasta de projeto acompanhada pelo Git, com todo o histórico de versões." data-gl="repositorio">repositórios</span> remotos. Você pode usar Git localmente sem publicar nada na internet.</p><h3>Por que aprender</h3><p>Quando um agente altera muitos arquivos, o histórico permite entender o que mudou e recuperar uma versão conhecida. Git não substitui backup de tudo: arquivos ignorados, bancos e dados externos precisam de proteção própria.</p><h3>Conceitos-chave</h3><p>Repositório; commit; histórico; remoto; backup.</p><h4>Na prática</h4><p>Uma gestora muda o modelo de relatório e perde uma seção. Um commit anterior preserva o conteúdo antigo; uma mensagem clara ajuda a localizar a mudança.</p><h4>✓ Faça</h4><p>Execute git --version. Na <span class="gterm" data-def="Pasta só com arquivos fictícios ou cópias, criada para testar a IA sem risco para o material verdadeiro." data-gl="pasta-de-treino">pasta de treino</span>, use git init -b main. Não inicialize o histórico na sua <span class="gterm" data-def="A sua pasta principal no computador, onde ficam Documentos, Downloads e as demais. No terminal ela aparece como ~ (til)." data-gl="pasta-pessoal">pasta pessoal</span> inteira.</p><h4>✗ Evite</h4><p>Aceitar uma conclusão sem conferir a entrada que a sustenta.</p></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-30">← aula anterior</a><a class="next" href="#aula-32">próxima aula →</a></nav>
+<p class="aula-pe">Aula 31 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-31">
+[
+  {"front":"Um agente mexeu em vários arquivos e um trecho sumiu. O que o histórico da pasta permite fazer?","back":"Ver quais arquivos mudaram em cada versão e recuperar o conteúdo de uma versão anterior."},
+  {"front":"Qual a diferença entre o Git e o GitHub?","back":"O Git guarda as versões no seu computador. O GitHub é um site que pode guardar uma cópia, se você decidir enviar."},
+  {"front":"Uma colega quer rodar o comando que inicia o histórico na pasta pessoal dela, para guardar tudo. O que você responde?","back":"Que não: o Git passaria a acompanhar tudo o que está lá. Comece numa pasta de projeto, como a de treino."},
+  {"front":"A pasta tem histórico. Isso protege a planilha que fica no sistema da secretaria?","back":"Não. O histórico guarda só o que está na pasta e foi salvo; o resto precisa de cópia de segurança própria."}
+]
+</script>
+</section>

@@ -1,0 +1,127 @@
+<section class="view" id="v-aula-15" data-aula="15" data-tempo="13min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 3 · Aula 3 de 6</p>
+  <h1>Entre com a conta <em>sem mostrar a chave</em></h1>
+  <figure class="cena"><img src="assets/img/aula-15.webp" width="1280" height="720" alt="Uma professora de jaleco segura o crachá da escola pelo cordão diante do notebook aberto numa tela de entrada, com uma caixinha de metal trancada na mesa."></figure>
+  <p class="promise">Você consegue conectar o <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span> à sua conta, conferir por qual método ele entrou e anotar na ficha só esse método, sem nenhuma senha.</p>
+  <p class="why">Uma chave colada numa mensagem, num exemplo ou num print pode ser usada por outra pessoa, e a conta é sua. Também dá para estar conectado pelo método errado e gastar de uma conta que você não esperava.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li><code>codex login</code> abre o navegador para você entrar com a conta do ChatGPT.</li>
+      <li><code>codex login status</code> diz <b>por qual método</b> você entrou.</li>
+      <li>Na ficha vai "ChatGPT" ou "API". <b>Nunca</b> a chave.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>O crachá passa na catraca, a senha fica com você</h2>
+  <p>Na escola, você passa o crachá na catraca e ninguém ouve a sua senha. O <span class="gterm" data-gl="login" data-def="Entrar numa ferramenta com a sua conta, como a conta do ChatGPT. Os direitos e limites vêm do plano dessa conta.">login</span> do Codex funciona assim: o <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> manda você ao navegador, e é lá que você entra.</p>
+  <p>A senha nunca passa pelo terminal. Quando você termina no navegador, o Codex recebe a confirmação e guarda a entrada.</p>
+  <p>Quais planos do ChatGPT incluem o Codex muda com o tempo. Antes de começar, confira na <a href="https://learn.chatgpt.com/docs/auth" target="_blank" rel="noopener">página oficial de autenticação</a> se o seu plano está lá. O nome do seu plano aparece nas configurações da sua conta do ChatGPT.</p>
+  <p data-ex="professora">Lúcia digitou <code>codex login</code>. O navegador abriu na tela de entrada do ChatGPT. Ela entrou com a conta da escola e voltou para o terminal.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> codex login
+<span class="out"># o navegador abre; entre com a conta do ChatGPT e volte ao terminal</span></code></pre>
+<p class="tela-nota">A primeira linha é o que você digita. A segunda é um lembrete do curso: o resto acontece no navegador.</p></div>
+  <figcaption>Nenhuma senha é digitada no terminal nesse caminho.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span><code>codex login status</code> diz o método</h2>
+  <p>Estar conectado não basta: importa por qual caminho. Entrar com a conta usa o plano dela. Uma <span class="gterm" data-gl="chave-de-api" data-def="Senha longa que identifica quem usa a API e para quem vai a conta. Nunca vai num pedido, num arquivo compartilhado ou num print.">chave de API</span> cobra por consumo, em outra conta.</p>
+  <p>Essa diferença é da aula 5, no módulo 1. Pulou? O resumo é esse: são duas contas, com duas cobranças.</p>
+  <p data-ex="coordenadora">Denise esperava ver "ChatGPT" e viu que o Codex estava entrando por uma chave de <span class="gterm" data-gl="api" data-def="Porta de entrada para um programa usar um serviço de IA sem passar pela tela do chat. O uso pela API é cobrado por consumo.">API</span> antiga da escola. Ela saiu com <code>codex logout</code> e entrou de novo com <code>codex login</code>, pela conta.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> codex login status
+<span class="out">Logged in using ChatGPT</span></code></pre>
+<p class="tela-nota">Em inglês: "conectado usando o ChatGPT". O método é a conta. Com uma chave de API, a resposta cita a chave, mas nunca o valor completo.</p></div>
+  <figcaption>Leia a resposta antes de pedir qualquer tarefa longa.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Pela API, a chave não aparece na tela</h2>
+  <p>Vai entrar pela conta do ChatGPT? Pode pular este passo. Se você usar API, a chave fica guardada num nome, <code>OPENAI_API_KEY</code>, que o terminal conhece. O comando oficial entrega o valor direto ao Codex, sem mostrar na tela.</p>
+  <p>Digitar a chave no comando é o erro comum: ela fica no histórico do terminal e aparece em qualquer print. Um arquivo <span class="gterm" data-gl="env" data-def="Arquivo que guarda chaves e senhas fora do código. Nunca vai para o Git, para um pedido ou para um print.">.env</span> sozinho também não conecta nada. Algum mecanismo precisa carregar o valor.</p>
+  <p data-ex="professora">Uma colega pediu a chave da escola para testar em casa. Lúcia não mandou pelo grupo. Explicou que a chave diz quem paga e que cada pessoa entra com a própria conta.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">✗ Chave no comando</span><p><b>Como fica:</b> <code>codex login --with-api-key</code> seguido da chave inteira.</p><p><b>Resultado:</b> a chave fica no histórico e em qualquer print da tela.</p></div>
+      <div class="depois"><span class="rot">✓ Comando oficial</span><p><b>Como fica:</b> <code>printenv OPENAI_API_KEY | codex login --with-api-key</code></p><p><b>Resultado:</b> o valor vai direto ao programa. Na tela, só o comando.</p></div>
+    </div>
+    <figcaption>Os dois conectam. Só o segundo não espalha a chave.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Na ficha, o método; a chave, nunca</h2>
+  <p>Anote na <span class="gterm" data-gl="ficha-do-projeto" data-def="Documento curto em que você anota como um trabalho com IA funciona: ferramentas, acesso, decisões e pendências. Pode ser uma nota no celular. No módulo 4 ele vira um arquivo da pasta do projeto.">ficha do projeto</span> qual método está ativo e onde você conferiu. É a mesma ficha de acesso da aula 5. Não tem ficha ainda? Uma nota no celular serve.</p>
+  <p>A credencial não vai para a ficha, para um pedido nem para um print. Se ela vazar, quem cuida da conta precisa trocar a chave.</p>
+  <p data-ex="coordenadora">A linha de Denise ficou assim: "Codex · ChatGPT · conferido com codex login status". Nenhuma senha, nenhum pedaço de chave.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Ficha de Denise · acesso</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Ferramenta: Codex</div>
+        <div class="item doc"><span class="pin">2</span> Método: ChatGPT</div>
+        <div class="item doc"><span class="pin">3</span> Onde conferi: codex login status</div>
+        <div class="item doc"><span class="pin">4</span> Credencial: não anotada</div>
+      </div>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não sabe se usa ChatGPT ou API? Comece pela conta do ChatGPT, com <code>codex login</code>: é o caminho sem chave nenhuma. O navegador não abriu sozinho? Veja se o terminal mostrou um endereço e abra esse endereço no navegador.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Conecte o Codex e anote só o método</h3>
+  <p class="pgoal">Pronto quando <code>codex login status</code> disser o método e a ficha tiver essa linha, sem senha. Cerca de 8 minutos, no computador.</p>
+  <p class="psafe">Neste caminho você não digita senha no terminal: ela fica no navegador. Não fez a aula 14? Confira antes com codex --version. Computador de outra pessoa? Ao terminar, saia com codex logout.</p>
+  <p><b>Passo 1 · cole no terminal</b></p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">codex login</pre></div>
+  <p><b>Passo 2 · cole no terminal, depois de entrar no navegador</b></p>
+  <pre><code>codex login status</code></pre>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Digite <code>codex login</code>, tecle Enter e entre com a sua conta do ChatGPT no navegador que abrir.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Volte ao terminal, digite <code>codex login status</code> e leia a resposta: ChatGPT ou chave de API.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Na ficha do projeto, escreva: "Codex · &lt;ChatGPT ou API&gt; · conferido com codex login status". Confira que não há senha na linha.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de conectar um programa à sua conta e registrar como, sem expor nenhuma credencial.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Conectar sem expor</h3>
+    <ol>
+      <li><span><b>codex login</b>a entrada acontece no navegador.</span></li>
+      <li><span><b>codex login status</b>mostra o método: conta ou chave.</span></li>
+      <li><span><b>Ficha</b>anota o método; a credencial fica de fora.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe conectar o Codex e dizer de qual conta sai o uso dele.</p>
+    <p class="na-action">Procure hoje, no seu e-mail e nas conversas de trabalho, alguma chave ou senha colada em texto. Achou? Apague e avise quem cuida dessa conta.</p>
+    <p class="na-hook">Na próxima aula: o Codex está conectado, mas em que pasta ele vai trabalhar? Você vai montar uma pasta de treino e abrir o Codex dentro dela.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Autentique sem espalhar segredos<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Execute codex login e conclua o fluxo de navegador para entrar com ChatGPT. Se optar por API, a chave precisa estar na <span class="gterm" data-def="Um nome com um valor guardado, escrito como NOME=valor. O programa procura o valor pelo nome." data-gl="variavel">variável</span> OPENAI_API_KEY; encaminhe-a pela entrada padrão, sem digitá-la no comando. Um arquivo .env sozinho não autentica o Codex: algum mecanismo deve carregar a variável.</p><h3>Por que aprender</h3><p>Colar a chave em exemplos, mensagens ou histórico pode expor a conta. Também é possível estar autenticado pelo método errado e consumir uma modalidade diferente da esperada.</p><h3>Conceitos-chave</h3><p>codex login; codex login status; entrada padrão; conta ativa.</p><h4>Na prática</h4><p>Para API, o comando documentado é printenv OPENAI_API_KEY | codex login --with-api-key. Ele envia o valor diretamente ao programa, em vez de mostrar a chave na tela.</p><h4>Sequência para experimentar</h4><ol><li>Prepare uma cópia de treino.</li><li>Escolha um método, conclua o login e execute codex login status. Registre apenas “ChatGPT” ou “API” na ficha do projeto.</li><li>Registre o resultado observado e a próxima correção.</li></ol></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-14">← aula anterior</a><a class="next" href="#aula-16">próxima aula →</a></nav>
+<p class="aula-pe">Aula 15 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-15">
+[
+  {"front":"Uma colega pede a chave de API da escola para testar em casa. O que você responde?","back":"Que a chave diz quem paga e não se compartilha. Ela entra com a própria conta."},
+  {"front":"Você vai deixar o Codex numa tarefa longa. O que confere antes, no terminal?","back":"O codex login status, para ver se o método ativo é o que você espera: conta ou chave."},
+  {"front":"Por que não digitar a chave direto no comando de login?","back":"Porque ela fica no histórico do terminal e aparece em prints. O comando oficial passa o valor sem mostrar."}
+]
+</script>
+</section>

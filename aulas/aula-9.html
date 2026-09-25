@@ -1,0 +1,151 @@
+<section class="view" id="v-aula-9" data-aula="9" data-tempo="14min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 2 · Aula 3 de 6</p>
+  <h1>Arquivo por perto não é <em>arquivo lido</em></h1>
+  <figure class="cena"><img src="assets/img/aula-9.webp" width="1280" height="720" alt="Uma coordenadora pedagógica abre com uma chave pequena uma única gaveta de um arquivo de madeira, com as outras gavetas fechadas e o notebook em cima do móvel."></figure>
+  <p class="promise">Você consegue montar uma <span class="gterm" data-gl="pasta-de-treino" data-def="Pasta só com arquivos fictícios ou cópias, criada para testar a IA sem risco para o material verdadeiro.">pasta de treino</span> com dois textos. E fazer a IA dizer quais arquivos recebeu, com a primeira e a última linha, antes do resumo.</p>
+  <p class="why">Muitas falhas de tarefa são falhas de acesso. Você imagina que a IA vê uma pasta, mas ela nunca foi compartilhada. Aí a resposta fala de documentos que o modelo não leu.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O Desktop é o aplicativo no computador e pode chegar às pastas que você permitir.</li>
+      <li>Ter o aplicativo não dá acesso a todos os seus documentos.</li>
+      <li>Antes do trabalho, peça a <b>lista dos arquivos recebidos, com a primeira e a última linha de cada</b>.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>O Desktop fica no computador, perto das pastas</h2>
+  <p>O <span class="gterm" data-gl="desktop" data-def="Aplicativo do ChatGPT no computador, que trabalha mais perto dos seus arquivos e pode ler as pastas que você permitir.">Desktop</span> é o aplicativo que fica no seu computador. Se o seu aplicativo oferecer isso, ele pode abrir pastas e outros aplicativos, sempre com a sua permissão.</p>
+  <p>No chat do navegador, você anexa ou cola cada arquivo. Nos dois casos, a IA só lê o que chegou até ela.</p>
+  <p data-ex="professora">Lúcia usa o chat no navegador da escola e o Desktop no notebook de casa. Nos dois, ela confere o que a IA recebeu antes de pedir o trabalho.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="neutro"><span class="rot">Chat no navegador</span><p>Você anexa ou cola cada arquivo.</p><p>A IA lê o que você entregou.</p></div>
+      <div class="neutro"><span class="rot">Desktop</span><p>Pode abrir uma pasta que você escolheu na hora de dar permissão.</p><p>A IA lê o que essa permissão alcança.</p></div>
+    </div>
+    <figcaption>Caminhos diferentes, a mesma regra: a IA só lê o que chegou até ela.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Autorize uma pasta, não o computador inteiro</h2>
+  <p>Dar acesso é como entregar a chave de uma gaveta, e não a da escola inteira. Separe numa subpasta só o que a tarefa precisa. Quando o aplicativo pedir acesso, escolha só essa subpasta. O nome das telas muda entre versões; o que não muda é escolher a menor pasta possível.</p>
+  <p data-ex="coordenadora">A pasta da feira de ciências tem três versões do orçamento. Denise quer testar a IA sem arriscar o original. Autorizou só a subpasta de exemplos, com duas cópias.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Meus arquivos › Feira de ciências</span></div>
+      <div class="janela-body">
+        <div class="item doc">orcamento-v1</div>
+        <div class="item doc">orcamento-v2</div>
+        <div class="item doc">orcamento-v3</div>
+        <div class="item pasta"><span class="pin">1</span> exemplos</div>
+        <div class="item doc dentro"><span class="pin">2</span> orcamento-v1-copia</div>
+        <div class="item doc dentro"><span class="pin">2</span> orcamento-v2-copia</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Só esta subpasta foi autorizada.</span></li>
+      <li><span class="pin">2</span><span>Dentro dela, cópias. Os originais ficam fora do alcance.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>Peça a lista do que foi lido antes do trabalho</h2>
+  <p>Antes da comparação, peça os nomes dos arquivos que a IA consegue ler. Junto, a primeira e a última linha de cada um. Nome sozinho não prova leitura. A primeira e a última linha mostram que o começo e o fim chegaram, e você confere no arquivo.</p>
+  <p>Se a lista vier errada, o problema é de acesso, e não do pedido. Corrija o acesso e repita a lista.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Desktop · subpasta exemplos</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Liste os arquivos que você consegue ler e copie a primeira e a última linha de cada um. Não compare nem resuma ainda.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Consigo ler 2 arquivos:
+orcamento-v1-copia
+primeira: "Feira de ciências, orçamento de materiais, versão 1"
+última: "Total: R$ 640,00"
+orcamento-v2-copia
+primeira: "Feira de ciências, orçamento de materiais, versão 2"
+última: "Total: R$ 710,00"</p>
+      </div>
+      <p class="tela-nota bom">Dois nomes, com a primeira e a última linha iguais às dos arquivos. Agora a comparação pode começar.</p>
+    </div>
+    <figcaption>A lista confirma a leitura. Nome faltando ou sobrando é sinal para parar e corrigir o acesso.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Sem acesso? Entregue por outro caminho</h2>
+  <p>Se o Desktop não existe na sua conta, ou não alcança a pasta, entregue os arquivos por um caminho que funciona. Anexe no chat, pelo botão de anexar ao lado da caixa de mensagem. Ou cole o texto com um cabeçalho com o nome do arquivo.</p>
+  <p data-ex="professora">Lúcia colou dois textos no chat do navegador, cada um com o nome em cima. Pediu a lista antes do resumo.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Chat de IA</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>=== arquivo: roteiro-experimento ===
+Misturar água e óleo num copo transparente.
+Observar por dois minutos.
+=== arquivo: lista-materiais ===
+Copo transparente, água, óleo de cozinha, colher.
+Tempo total: dez minutos.
+Liste os arquivos que você recebeu, com a primeira e a última linha de cada. Não resuma ainda.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Recebi 2 arquivos:
+roteiro-experimento: "Misturar água e óleo num copo transparente." … "Observar por dois minutos."
+lista-materiais: "Copo transparente, água, óleo de cozinha, colher." … "Tempo total: dez minutos."</p>
+      </div>
+      <p class="tela-nota bom">O cabeçalho dá nome a cada texto; a primeira e a última linha mostram que o começo e o fim chegaram.</p>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não tem o Desktop nem sabe se o seu chat anexa arquivos? Use o caminho do cabeçalho: cole cada texto com "=== arquivo: nome ===" em cima. Funciona em qualquer chat, até no celular.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
+  <h3 class="ph">Monte uma pasta de treino e confirme a leitura</h3>
+  <p class="pgoal">Pronto quando a IA listar os dois nomes e a primeira e a última linha certas de cada um, antes de você pedir o resumo. Cerca de 10 minutos. No computador, siga os passos. No celular, escreva as duas notas no aplicativo de notas e cole no chat, cada uma com o cabeçalho do step 4.</p>
+  <p class="psafe">A pasta de treino tem só texto inventado, então nada real sai do seu computador. É dela que você anexa, e é ela que você escolheria no Desktop. Se a lista vier com nome errado ou faltando, não peça o resumo: reenvie o arquivo e peça a lista de novo.</p>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Em Documentos, crie uma pasta chamada treino-ia: botão direito numa área vazia › Novo › Pasta (no Mac, › Nova Pasta).</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Dentro dela, crie dois arquivos de texto, aviso-a e aviso-b, com três linhas inventadas cada. Use o Bloco de Notas ou o TextEdit: Arquivo › Salvar como › escolha a pasta treino-ia › digite o nome.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>No chat, anexe os dois pelo botão de anexar, ou cole com o cabeçalho, e mande: "Liste os arquivos que você recebeu, com a primeira e a última linha de cada. Não resuma ainda."</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>Confira os nomes e as linhas com os arquivos. Só então peça o resumo.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de separar um problema de acesso de um problema de pedido, antes que ele virasse resposta errada.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Acesso antes do trabalho</h3>
+    <ol>
+      <li><span><b>Desktop</b>chega às pastas que você autoriza, não a todas.</span></li>
+      <li><span><b>Uma subpasta</b>só com o que a tarefa precisa, de preferência cópias.</span></li>
+      <li><span><b>Lista primeiro</b>nome, primeira e última linha de cada arquivo, antes do resumo.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe confirmar o que a IA leu antes de confiar no que ela escreveu.</p>
+    <p class="na-action">Na próxima tarefa com arquivo, mande primeiro: "Liste os arquivos que você recebeu, com a primeira e a última linha de cada". Leva uma mensagem.</p>
+    <p class="na-hook">Na próxima aula: o arquivo foi lido. Mas onde o trabalho acontece, e o que acontece se você fechar o notebook?</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Desktop aproxima os arquivos<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Desktop significa aplicativo <span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">instalado</span> no computador. Em ambientes compatíveis, ele pode acessar pastas e aplicativos mediante permissões. A presença do aplicativo não dá acesso universal aos seus documentos. Se uma ferramenta estiver indisponível, ofereça os arquivos por um <span class="gterm" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config." data-gl="caminho">caminho</span> suportado.</p><h3>Por que aprender</h3><p>Muitas falhas de tarefa são falhas de acesso: o aluno imagina que o <span class="gterm" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem." data-gl="agente">agente</span> vê uma pasta, mas ela não foi compartilhada. Verificar o <span class="gterm" data-def="O material que a IA recebe para fazer uma tarefa: os arquivos, as instruções e as informações que você aponta." data-gl="contexto">contexto</span> antes da execução evita conclusões sobre documentos que o modelo nunca leu.</p><h3>Conceitos-chave</h3><p>Pasta autorizada; acesso local; ferramenta disponível; confirmação de leitura.</p><h4>Na prática</h4><p>Uma pasta contém três versões de orçamento. A gestora autoriza somente a subpasta de exemplos e pede que o agente liste os arquivos que consegue ler antes de comparar.</p><h4>Sequência para experimentar</h4><ol><li>Prepare uma cópia de treino.</li><li>Crie uma pasta de treino com dois textos fictícios. Confirme os nomes lidos antes de pedir um resumo.</li><li>Registre o resultado observado e a próxima correção.</li></ol></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-8">← aula anterior</a><a class="next" href="#aula-10">próxima aula →</a></nav>
+<p class="aula-pe">Aula 9 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-9">
+[
+  {"front":"A IA comparou três orçamentos, mas você só compartilhou dois. Qual o primeiro sinal que você devia ter pedido?","back":"A lista dos arquivos que ela consegue ler, com a primeira e a última linha de cada, antes da comparação."},
+  {"front":"Com o Desktop aberto no notebook, a IA enxerga qualquer documento seu?","back":"Não. Ele alcança só as pastas e os aplicativos que você autorizou."},
+  {"front":"Seu chat não anexa arquivos. Como entregar dois textos com nome?","back":"Cole cada um com um cabeçalho, como \"=== arquivo: nome ===\", e peça a lista antes do trabalho."}
+]
+</script>
+</section>

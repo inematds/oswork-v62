@@ -45,7 +45,16 @@
     "Python",
     "diff",
     "staging",
-    "HEAD"
+    "HEAD",
+    "nano",
+    "WSL",
+    "BotFather",
+    ".env.example",
+    "AGENTS.override.md",
+    "revert",
+    "restore",
+    "origin",
+    "shell"
   ],
   "modulos": [
     {
@@ -58,6 +67,90 @@
         4,
         5,
         6
+      ]
+    },
+    {
+      "titulo": "Módulo 2 · Chat, Work e Desktop",
+      "resumo": "Redigir uma encomenda de trabalho com entradas, saída e revisão.",
+      "aulas": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "titulo": "Módulo 3 · Terminal e Codex na prática",
+      "resumo": "Abrir um projeto de treino no Codex e produzir uma alteração verificável.",
+      "aulas": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "titulo": "Módulo 4 · Pastas, Markdown e segredos",
+      "resumo": "Montar a casa digital e separar conhecimento de credenciais.",
+      "aulas": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "titulo": "Módulo 5 · AGENTS, Skills e memória",
+      "resumo": "Criar instruções de projeto e uma capacidade reutilizável com critério de revisão.",
+      "aulas": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "titulo": "Módulo 6 · Git e GitHub sem perder trabalho",
+      "resumo": "Salvar uma versão, inspecionar diferenças e recuperar uma mudança de treino.",
+      "aulas": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ]
+    },
+    {
+      "titulo": "Módulo 7 · Telegram como interface de trabalho",
+      "resumo": "Executar um bot restrito de consulta e entender onde a IA entra.",
+      "aulas": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ]
+    },
+    {
+      "titulo": "Módulo 8 · VPS do zero e operação 24/7",
+      "resumo": "Preparar um plano de implantação, supervisão, backup e verificação do serviço.",
+      "aulas": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
       ]
     }
   ]

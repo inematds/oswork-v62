@@ -1,0 +1,128 @@
+<section class="view" id="v-aula-44" data-aula="44" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 8 · Aula 2 de 6</p>
+  <h1>Não devolva a chave velha <em>antes de testar a nova</em></h1>
+  <figure class="cena"><img src="assets/img/aula-44.webp" width="1280" height="720" alt="Uma professora na sala dos professores segura uma chave antiga numa mão e uma chave nova na outra, comparando as duas, com o notebook aberto mostrando duas janelas escuras lado a lado."></figure>
+  <p class="promise">Você consegue dizer em que máquina está pelo que o <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> mostra e aplicar a regra da segunda sessão: testar a entrada nova antes de fechar a que funciona.</p>
+  <p class="why">Quem troca a fechadura de casa testa a chave nova antes de jogar fora a velha. Na <span class="gterm" data-gl="vps" data-def="Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar.">VPS</span> é igual. Mudar a rede ou o jeito de entrar sem uma rota de volta pode trancar você do lado de fora.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li><b>SSH</b> abre o terminal da VPS no seu computador, por uma conexão protegida.</li>
+      <li>Confira <b>em que máquina</b> você está antes de cada comando.</li>
+      <li>Teste uma <b>segunda sessão</b> antes de fechar a primeira.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>SSH abre o terminal da VPS no seu computador</h2>
+  <p>O <span class="gterm" data-gl="ssh" data-def="Forma segura de abrir o terminal de outro computador pela internet.">SSH</span> cria uma conexão protegida para administrar a máquina. O comando <code>ssh usuario@ip-da-vps</code> abre a sessão.</p>
+  <p>As partes <code>usuario</code> e <code>ip-da-vps</code> são campos para trocar, não valores reais. O endereço da VPS aparece no painel do provedor da VPS.</p>
+  <p data-ex="professora">Lúcia abriu duas janelas de terminal e se confundiu: numa estava o notebook, na outra a VPS. O nome no começo da linha e o comando <code>pwd</code> mostraram onde ela estava.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> ssh usuario@ip-da-vps
+<span class="out">usuario@nome-da-vps:~$</span> pwd
+<span class="out">/home/usuario</span></code></pre>
+<p class="tela-nota">Depois de entrar, o começo da linha muda: agora ele mostra o usuário e o nome da VPS. O comando pwd responde a pasta em que você está.</p></div>
+  <figcaption>Antes de qualquer comando, olhe o começo da linha. Ele diz em que máquina você está.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Chave no lugar da senha, identidade conferida</h2>
+  <p>Use a <span class="gterm" data-gl="chave-publica" data-def="Metade pública do par de chaves do SSH. Fica cadastrada na VPS; a outra metade, a chave privada, fica só no seu computador e nunca é colada em lugar nenhum.">chave pública</span> cadastrada do jeito que o provedor da VPS indica. A chave privada nunca sai do seu computador. Ao contratar, o painel do provedor guia a criação e o cadastro; nesta aula você não precisa criar nenhuma.</p>
+  <p>Na primeira conexão, o SSH mostra a <span class="gterm" data-gl="impressao-digital" data-def="Sequência curta que identifica a VPS. Na primeira conexão por SSH, você confere se ela bate com a que o provedor da VPS informa.">impressão digital</span> da máquina. Ela confirma que você chegou à VPS certa.</p>
+  <p data-ex="coordenadora">Denise recebeu a pergunta em inglês na primeira entrada. Antes de digitar yes, comparou a impressão digital com a que o painel do provedor mostrava.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · primeira conexão</span></div>
+<pre><code><span class="pr">$</span> ssh usuario@ip-da-vps
+<span class="out">The authenticity of host 'ip-da-vps' can't be established.
+ED25519 key fingerprint is SHA256:[impressão digital].
+Are you sure you want to continue connecting (yes/no/[fingerprint])?</span></code></pre>
+<p class="tela-nota">Em português: "não dá para confirmar a identidade desta máquina; a impressão digital é esta; quer continuar?". Responda yes só se ela bater.</p></div>
+  <figcaption>Essa pergunta aparece uma vez por máquina. Se aparecer de novo para a mesma VPS, pare e investigue.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Um usuário de trabalho, com sudo quando precisa</h2>
+  <p>Trabalhe com um usuário seu, o usuário de trabalho. Quando uma tarefa pedir permissão de administrador, ponha <span class="gterm" data-gl="sudo" data-def="Comando que executa a instrução seguinte com permissão de administrador. Pede a sua senha.">sudo</span> na frente do comando.</p>
+  <p>Assim o poder de administrador aparece só onde você pediu, e fica visível no comando.</p>
+  <p data-ex="professora">Lúcia conferiu o próprio usuário antes de mexer em qualquer coisa. O mesmo comando com sudo mostrou o administrador, depois de pedir a senha dela.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · na VPS</span></div>
+<pre><code><span class="pr">$</span> whoami
+<span class="out">usuario</span>
+<span class="pr">$</span> sudo whoami
+<span class="out">[sudo] password for usuario:
+root</span></code></pre>
+<p class="tela-nota">whoami responde "quem sou eu". Sem sudo, é o usuário de trabalho; com sudo, é root, o administrador da máquina.</p></div>
+  <figcaption>Ao digitar a senha, nada aparece na tela. É normal: ela está sendo lida.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>A segunda sessão é a sua rota de volta</h2>
+  <p>Antes de mudar a rede ou o jeito de entrar, deixe a sessão original aberta. Abra outra janela e teste a nova entrada. Só feche a primeira quando a segunda funcionar.</p>
+  <p>Se tudo falhar, o <span class="gterm" data-gl="console-de-recuperacao" data-def="Terminal da VPS aberto pelo painel do provedor, no navegador, sem SSH. É a rota de volta quando o SSH falha.">console de recuperação</span> ainda abre a máquina. Confira que ele funciona antes de restringir qualquer coisa.</p>
+  <p data-ex="coordenadora">Um tutorial sugeriu a Denise trocar a <span class="gterm" data-gl="porta" data-def="Número que identifica um serviço dentro da máquina. O SSH costuma usar a porta 22, mas a sua VPS pode usar outra.">porta</span> do SSH, uma mudança comum em guias de segurança. Antes de seguir, ela abriu o console pelo painel do provedor e anotou no plano que ele funcionava.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="neutro"><span class="rot">Sessão 1 · chave velha</span><p><b>Estado:</b> aberta, funcionando.</p><p><b>Regra:</b> não fechar enquanto a sessão 2 não entrar.</p></div>
+      <div class="bom"><span class="rot">Sessão 2 · chave nova</span><p><b>Estado:</b> outra janela, testando a mudança.</p><p><b>Regra:</b> entrou? Aí sim feche a sessão 1.</p></div>
+      <p class="saldo"><b>Saída de emergência:</b> o console do provedor, conferido antes de qualquer mudança.</p>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Você não precisa ter uma VPS para esta aula. A prática é um caso para analisar no papel. Quando alugar a sua, volte a este passo e siga as três rotas na ordem.</p></div>
+</section>
+
+<section class="practice" data-mode="analise">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Analise o caso da porta trocada</h3>
+  <p class="pgoal">Pronto quando você tiver respondido as três perguntas e conferido no gabarito. Cerca de 8 minutos; anote no papel ou no bloco de notas.</p>
+  <p class="psafe">É um caso, sem máquina real, então nada quebra. Tem uma VPS de treino? Faça também o teste de verdade: com a sessão aberta, abra outra janela e entre de novo com o mesmo comando ssh. Não mude porta nem jeito de entrar só para treinar.</p>
+  <p><b>O caso.</b> Rogério, um colega de Denise, alugou uma VPS de treino. Entrou por SSH e colou um comando da internet que troca a porta do SSH. Executou e fechou o terminal na hora. Na volta, <code>ssh rogerio@ip-da-vps</code> não conecta mais. Ele nunca abriu o console do provedor.</p>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Qual regra da aula faltou, e em que momento?</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Por onde Rogério ainda pode tentar entrar?</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>O que ele anota no plano para a próxima vez?</span></label></li>
+  </ol>
+  <details class="gabarito"><summary>Ver gabarito</summary>
+    <p><b>1.</b> A segunda sessão. Ele devia manter a primeira aberta e testar a nova porta numa outra janela antes de fechar.</p>
+    <p><b>2.</b> Pelo console de recuperação, no painel do provedor da VPS. Por lá, ele desfaz a troca de porta.</p>
+    <p><b>3.</b> Na parte Acesso do plano de VPS (a segunda das cinco partes do <code>plano-vps.md</code>): "Porta SSH real", "Segunda sessão SSH testada" e "Console de recuperação disponível", com a data do teste.</p>
+  </details>
+  <p class="pdone">Você acabou de achar o erro que tranca uma pessoa fora da própria VPS, e a rota de volta.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Duas chaves</h3>
+    <ol>
+      <li><span><b>Onde estou</b>o começo da linha e o pwd dizem a máquina.</span></li>
+      <li><span><b>Identidade</b>chave pública cadastrada; impressão digital conferida uma vez.</span></li>
+      <li><span><b>Rota de volta</b>sessão 1 aberta, sessão 2 testada, console conferido.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe entrar numa VPS sem perder o caminho de volta.</p>
+    <p class="na-action">No plano de VPS, preencha a parte Acesso: usuário de trabalho, porta real e onde fica o console. Onde não souber, escreva "a conferir no painel".</p>
+    <p class="na-hook">Lá dentro, a máquina vem quase vazia. Próxima aula: o que colocar nela, e o que deixar de fora.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Entre por SSH e preserve acesso<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>SSH cria uma conexão protegida para administrar a máquina. Use a chave pública cadastrada conforme o <span class="gterm" data-def="Empresa que oferece um modelo de IA. Uma central reúne modelos de vários provedores num lugar só." data-gl="provedores">provedor</span> e confira a identidade do <span class="gterm" data-def="Computador que fica ligado prestando um serviço para outros, como responder às mensagens de um bot." data-gl="servidor">servidor</span>. Crie um usuário de trabalho com permissões administrativas quando necessário. Mantenha a sessão original aberta enquanto testa uma segunda conexão.</p><h3>Por que aprender</h3><p>Mudar <span class="gterm" data-def="Filtro que decide quais conexões de rede podem entrar na máquina ou sair dela." data-gl="firewall">firewall</span> ou autenticação sem testar uma rota de recuperação pode bloquear seu próprio acesso. O console do provedor é a alternativa quando a conexão normal falha; confira que ele funciona antes de restringir a rede.</p><h3>Conceitos-chave</h3><p>Chave pública; impressão digital; usuário; sudo; recuperação.</p><h4>Na prática</h4><p>O comando ssh usuario@ip-da-vps abre a sessão. usuario e ip-da-vps são campos para substituir, não valores reais. O nome do prompt e pwd ajudam a confirmar em qual máquina você está.</p><h4>Experimente agora</h4><p>Teste a segunda sessão antes de encerrar a primeira. Não desative <span class="gterm" data-def="Entrar numa ferramenta com a sua conta, como a conta do ChatGPT. Os direitos e limites vêm do plano dessa conta." data-gl="login">login</span> ou altere porta SSH seguindo um comando sem saber como recuperar acesso.</p></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-43">← aula anterior</a><a class="next" href="#aula-45">próxima aula →</a></nav>
+<p class="aula-pe">Aula 44 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-44">
+[
+  {"front":"Você tem duas janelas de terminal abertas e vai rodar um comando administrativo. O que confere primeiro?","back":"Em que máquina está: o usuário e o nome no começo da linha, e o pwd."},
+  {"front":"A pergunta sobre a identidade da máquina apareceu de novo, numa VPS em que você já entrou várias vezes. O que faz?","back":"Para e investiga antes de responder yes. A impressão digital deveria ser conhecida."},
+  {"front":"Um tutorial manda desligar a entrada por senha. O que precisa estar pronto antes?","back":"A entrada por chave testada numa segunda sessão e o console de recuperação conferido."}
+]
+</script>
+</section>

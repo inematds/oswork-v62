@@ -1,0 +1,189 @@
+<section class="view" id="v-aula-27" data-aula="27" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 5 · Aula 3 de 6</p>
+  <h1>A regra fica na porta; <em>o roteiro, no fichário</em></h1>
+  <figure class="cena"><img src="assets/img/aula-27.webp" width="1280" height="720" alt="Uma professora de ciências, de jaleco, tira uma ficha de uma caixinha de madeira com roteiros de experimento, na bancada do laboratório, ao lado de béqueres e do notebook."></figure>
+  <p class="promise">Você consegue criar a <span class="gterm" data-gl="skill" data-def="Procedimento empacotado que o agente pode reusar: instruções, passos e como conferir, guardados numa pasta.">Skill</span> relatorio-semanal na pasta de treino, com o nome e a descrição no começo do arquivo. E consegue conferir que ela está no lugar certo.</p>
+  <p class="why">Tem tarefa que você explica ao agente toda semana, passo a passo, do mesmo jeito. Colar tudo isso no <span class="gterm" data-gl="agents-md" data-def="Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir.">AGENTS.md</span> deixa o arquivo enorme. E o agente passa a carregar o manual inteiro até nas tarefas que não precisam dele.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Regra diz <b>o que respeitar</b>; Skill ensina <b>um procedimento</b>.</li>
+      <li>A Skill é um arquivo SKILL.md que começa com <b>nome e descrição</b>.</li>
+      <li>Do projeto: <b>.agents/skills</b>, dentro da pasta. Pessoal: <b>~/.agents/skills</b>.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Regra vale sempre; Skill entra quando precisa</h2>
+  <p>A placa da porta do laboratório vale todo dia. O roteiro do experimento sai do fichário só no dia daquele experimento. O AGENTS.md é a placa. A Skill é o roteiro.</p>
+  <p>Uma Skill reúne as instruções de uma atividade que se repete. O <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span> aciona quando a tarefa pede.</p>
+  <p data-ex="professora">Lúcia explicava toda sexta ao agente como montar a lista semanal de exercícios: ler a aula, escolher cinco questões, separar o gabarito. Esse passo a passo virou uma Skill. O AGENTS.md continuou com cinco regras.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="neutro"><span class="rot">AGENTS.md · a placa</span><p>"Use só entradas/ e saidas/."</p><p>Vale em toda tarefa da pasta.</p></div>
+      <div class="bom"><span class="rot">Skill · o roteiro</span><p>"1. Leia a aula da semana. 2. Escolha cinco questões. 3. Separe o gabarito."</p><p>Entra só quando a tarefa é a lista semanal.</p></div>
+    </div>
+    <figcaption>Os dois estão certos, cada um no seu papel. Separar evita carregar o manual inteiro em toda tarefa.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>O arquivo começa com nome e descrição</h2>
+  <p>A Skill mora numa pasta com o nome dela, num arquivo chamado SKILL.md. No topo, entre duas linhas de três tracinhos, vêm o nome e a descrição. Esse bloco é o cabeçalho.</p>
+  <p>Depois do cabeçalho vem o procedimento: o que entra, os passos, o que sai e como conferir. No <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>, um comando mostra o começo do arquivo.</p>
+  <p data-ex="professora">Antes de escrever a Skill da lista, Lúcia abriu a Skill de relatório do curso, a mesma da prática, para entender o formato. Em quatro linhas, soube o nome, quando usar e quando não usar.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code>
+<span class="pr">$</span> head -4 .agents/skills/relatorio-semanal/SKILL.md
+<span class="out">---
+name: relatorio-semanal
+description: Gerar rascunho de relatório semanal quando o usuário fornecer um CSV de vendas. Não usar para enviar relatórios ou tratar credenciais.
+---</span></code></pre>
+<p class="tela-nota">O comando da primeira linha mostra as quatro primeiras linhas do arquivo. As linhas de tracinhos abrem e fecham o cabeçalho.</p></div>
+  <figcaption>O cabeçalho da Skill do curso, que você vai criar na prática. A planilha de entrada é um <span class="gterm" data-gl="csv" data-def="Planilha em texto simples, com os valores separados por vírgula. Abre no Excel ou no Google Planilhas.">CSV</span>.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>A descrição diz quando usar e quando não</h2>
+  <p>A descrição é o que o agente lê para decidir se aciona a Skill. Ela precisa dizer em que situação usar. E vale dizer onde a Skill para.</p>
+  <p>Nessa descrição, "credenciais" são senhas e chaves de acesso: a Skill não mexe nelas.</p>
+  <p data-ex="coordenadora">A primeira descrição da Skill de relatório de Denise era "ajuda com relatórios". O agente acionou a Skill até num pedido de ata de reunião. Ela reescreveu dizendo a situação e o limite, no mesmo jeito do cartão.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Vaga</span><p>"Ajuda com relatórios."</p><p>Quando usar? Quando não usar? Não diz.</p></div>
+      <div class="depois"><span class="rot">Com situação e limite</span><p>"Gerar rascunho de relatório semanal quando o usuário fornecer um CSV de vendas. Não usar para enviar relatórios ou tratar credenciais."</p></div>
+    </div>
+    <figcaption>A descrição do curso deixa claro que a Skill faz rascunho e não envia nada sozinha.</figcaption>
+  </figure>
+  <div class="quiz" data-answer="a">
+    <p class="qk">Teste-se</p>
+    <p class="q">Qual descrição ajuda o agente a decidir quando acionar a Skill da ata?</p>
+    <button class="opt" data-k="a" data-fb="Sim: diz a situação (receber anotações) e o limite (não enviar).">Rascunho de ata a partir das anotações; não enviar</button>
+    <button class="opt" data-k="b" data-fb="Diz o assunto, mas não a situação nem o limite.">Tudo sobre as atas das reuniões da escola</button>
+    <button class="opt" data-k="c" data-fb="É um elogio ao resultado, não diz quando acionar.">Atas muito bem escritas e bem organizadas</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>A pasta certa decide quem usa</h2>
+  <p>Skill do projeto fica em .agents/skills, dentro da pasta do projeto. Skill pessoal, que você quer em todos os projetos, fica em ~/.agents/skills. A pasta ~/.codex é do <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span>: guarda a configuração e o AGENTS.md global da aula anterior. Skill não vai lá.</p>
+  <p data-ex="coordenadora">A Skill das atas só serve ao projeto das atas: Denise guardou no projeto. A Skill de revisar ortografia ela usa em tudo: foi para a pasta pessoal.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Onde cada coisa fica</span></div>
+      <div class="janela-body">
+        <div class="item pasta"><span class="pin">1</span> ~/projetos/meu-primeiro-projeto/.agents/skills</div>
+        <div class="item pasta dentro">relatorio-semanal</div>
+        <div class="item doc dentro">SKILL.md</div>
+        <div class="item pasta"><span class="pin">2</span> ~/.agents/skills</div>
+        <div class="item pasta"><span class="pin">3</span> ~/.codex</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Do projeto: uma pasta por Skill, com o SKILL.md dentro.</span></li>
+      <li><span class="pin">2</span><span>Pessoais: valem em qualquer projeto seu.</span></li>
+      <li><span class="pin">3</span><span>Do Codex: configuração e AGENTS.md global. Não é lugar de Skill.</span></li>
+    </ol>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Pastas que começam com ponto ficam ocultas, e o gerenciador de arquivos não mostra. Por isso a prática cria a pasta pelo terminal e confere com um comando. Você não precisa enxergá-la na janela.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Crie a Skill relatorio-semanal no projeto de treino</h3>
+  <p class="pgoal">Pronto quando o último comando mostrar as quatro linhas do cabeçalho. Cerca de 10 minutos, no computador, com o terminal.</p>
+  <p class="psafe">Os comandos só criam uma pasta nova e movem um arquivo seu para dentro dela; nada é apagado. Não tem a pasta de treino dos módulos 3 e 4? Crie uma com mkdir -p ~/projetos/meu-primeiro-projeto e siga igual. Se aparecer "No such file or directory", confira se está na pasta certa com pwd.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">---
+name: relatorio-semanal
+description: Gerar rascunho de relatório semanal quando o usuário fornecer um CSV de vendas. Não usar para enviar relatórios ou tratar credenciais.
+---
+
+# Relatório semanal
+
+## Entrada
+CSV indicado pelo usuário, contendo produto e valor. Use apenas fontes explicitamente autorizadas.
+
+## Procedimento
+1. Leia README.md e as instruções do projeto.
+2. Confira cabeçalho, número de linhas e valores; explique campos inválidos.
+3. Calcule os totais com ferramenta de cálculo disponível, sem inventar ausências.
+4. Produza saidas/relatorio.md com fontes, total conhecido, registros válidos e pendências.
+5. Confira o total contra a soma dos registros.
+6. Relate a verificação e pare antes de enviar ou publicar.
+
+## Testes de comportamento
+- Dados completos: total consistente com a soma.
+- Dados incompletos: pendência visível, sem números fabricados.
+- Pedido fora do escopo: explique a limitação; não execute ações externas.</pre></div>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Salvar como</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Pasta: sua pasta pessoal › projetos › meu-primeiro-projeto</div>
+        <div class="item doc"><span class="pin">2</span> Nome: SKILL.md</div>
+        <div class="item doc"><span class="pin">3</span> Tipo: Todos os arquivos</div>
+        <div class="item botao">Salvar</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Abra a pasta de treino antes de salvar.</span></li>
+      <li><span class="pin">2</span><span>Nome com letras maiúsculas e o .md no fim.</span></li>
+      <li><span class="pin">3</span><span>Sem isso, alguns editores salvam como SKILL.md.txt.</span></li>
+    </ol>
+    <figcaption>Os nomes dos campos mudam um pouco de editor para editor; os três pontos são os mesmos.</figcaption>
+  </figure>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code>
+<span class="pr">$</span> cd ~/projetos/meu-primeiro-projeto
+<span class="pr">$</span> ls
+<span class="out">AGENTS.md  README.md  SKILL.md  entradas  saidas</span>
+<span class="pr">$</span> mkdir -p .agents/skills/relatorio-semanal
+<span class="pr">$</span> mv SKILL.md .agents/skills/relatorio-semanal/
+<span class="pr">$</span> head -4 .agents/skills/relatorio-semanal/SKILL.md</code></pre>
+<p class="tela-nota">O ls confere que o SKILL.md está ali. Apareceu SKILL.md.txt? Rode mv SKILL.md.txt SKILL.md para corrigir o nome. O mkdir -p cria a pasta e as de cima que faltarem. O mv move o SKILL.md para dentro dela. O último comando deve mostrar o cabeçalho, como no passo 2.</p></div></figure>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Copie o molde, cole num arquivo novo do editor de texto e salve como SKILL.md na pasta de treino, como no quadro Salvar como.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>No terminal, rode os comandos, um por vez, na ordem. Depois do ls, confira que aparece SKILL.md.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Confira: o nome é relatorio-semanal e a descrição diz quando usar e quando não usar.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de empacotar um procedimento que o agente pode reusar, no lugar em que ele procura.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Skill</h3>
+    <ol>
+      <li><span><b>Papel</b>AGENTS.md é a regra; Skill é o procedimento que se repete.</span></li>
+      <li><span><b>Cabeçalho</b>nome e descrição entre linhas de tracinhos: quando usar e quando não.</span></li>
+      <li><span><b>Lugar</b>.agents/skills no projeto; ~/.agents/skills pessoal; nunca em ~/.codex.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já transforma um passo a passo repetido num procedimento que o agente reusa.</p>
+    <p class="na-action">Hoje, anote uma tarefa que você explica toda semana do mesmo jeito. Escreva só o nome e a descrição dela, com a situação e o limite.</p>
+    <p class="na-hook">Na próxima aula: a Skill não lembra do que você combinou ontem. Onde guardar o que precisa continuar valendo? Memória, em arquivo.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Skills empacotam procedimentos<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Uma Skill reúne instruções de uma atividade recorrente, com nome e descrição no início de SKILL.md. Pode incluir recursos e programas de apoio. <span class="gterm" data-def="Procedimento empacotado que o agente pode reusar: instruções, passos e como conferir, guardados numa pasta." data-gl="skill">Skills</span> pessoais ficam em ~/.agents/skills; as do projeto podem ficar em .agents/skills dentro do <span class="gterm" data-def="Pasta de projeto acompanhada pelo Git, com todo o histórico de versões." data-gl="repositorio">repositório</span>. A pasta ~/.codex continua sendo configuração do Codex.</p><h3>Por que aprender</h3><p>Uma regra diz o que respeitar; uma Skill ensina um procedimento que pode ser acionado quando necessário. Separar esses papéis evita carregar todo manual em todas as tarefas.</p><h3>Conceitos-chave</h3><p>Nome; descrição de acionamento; procedimento; entrada e saída; validação.</p><h4>Na prática</h4><p>relatorio-semanal recebe um CSV fictício, calcula um total conferível e produz um <span class="gterm" data-def="Jeito de escrever texto simples com marcas leves, como # para título e - para lista. Os arquivos terminam em .md." data-gl="markdown">Markdown</span> com pendências. A descrição deixa claro que não envia o resultado automaticamente.</p><h4>Sequência para experimentar</h4><ol><li>Prepare uma cópia de treino.</li><li>Leia materiais/SKILL-relatorio.md. Crie a pasta indicada e salve o arquivo como SKILL.md, mantendo o cabeçalho delimitado por ---.</li><li>Registre o resultado observado e a próxima correção.</li></ol></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-26">← aula anterior</a><a class="next" href="#aula-28">próxima aula →</a></nav>
+<p class="aula-pe">Aula 27 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-27">
+[
+  {"front":"Você explica ao agente, toda semana, os mesmos seis passos para montar a lista de exercícios. Isso vai para o AGENTS.md ou vira uma Skill?","back":"Vira uma Skill: é um procedimento que se repete. O AGENTS.md fica com as regras que valem em toda tarefa."},
+  {"front":"O agente acionou a sua Skill num pedido que não tinha nada a ver com ela. O que você revisa primeiro?","back":"A descrição no cabeçalho: ela precisa dizer a situação de uso e o limite."},
+  {"front":"Uma Skill que você quer usar em todos os seus projetos fica em qual pasta?","back":"Em ~/.agents/skills, a pasta pessoal. A do projeto fica em .agents/skills, dentro dele."}
+]
+</script>
+</section>

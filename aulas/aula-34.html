@@ -1,0 +1,156 @@
+<section class="view" id="v-aula-34" data-aula="34" data-tempo="14min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 6 · Aula 4 de 6</p>
+  <h1>Copie um projeto e atualize <em>com freio</em></h1>
+  <figure class="cena"><img src="assets/img/aula-34.webp" width="1280" height="720" alt="Uma coordenadora compara uma apostila nova, recém-chegada, com a sua cópia antiga cheia de marcadores coloridos, as duas abertas lado a lado na mesa."></figure>
+  <p class="promise">Você consegue copiar o repositório público do curso numa pasta separada, conferir o estado dele e atualizar com <code>git pull --ff-only</code>, sabendo parar quando ele recusar.</p>
+  <p class="why">Um projeto guardado no GitHub muda enquanto você trabalha. Atualizar por cima de mudanças suas pode misturar tudo. Um comando com freio atualiza quando é seguro e para quando não é.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li><code>git clone</code> traz a pasta e <b>todo o histórico</b> para o seu computador.</li>
+      <li>Antes de atualizar, <b>confira o status</b>.</li>
+      <li><code>git pull --ff-only</code> só atualiza pelo caminho direto; se recusar, <b>pare e olhe</b>.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>O clone traz a pasta e o histórico inteiro</h2>
+  <p>A apostila da rede chega como uma cópia completa, com todas as páginas. O <span class="gterm" data-gl="clone" data-def="Cópia de um repositório do GitHub para o seu computador, com todo o histórico.">clone</span> faz isso com um <span class="gterm" data-gl="repositorio" data-def="Pasta de projeto acompanhada pelo Git, com todo o histórico de versões.">repositório</span> do <span class="gterm" data-gl="github" data-def="Site onde você guarda uma cópia do seu repositório Git na internet, para trabalhar de outro computador ou com outras pessoas.">GitHub</span>: cria uma pasta nova com os arquivos e todas as versões.</p>
+  <p>No <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>, basta o endereço e o nome da pasta nova. Clonar não executa nada. Mesmo assim, leia antes de rodar qualquer programa que veio no clone, inclusive de um repositório conhecido.</p>
+  <p data-ex="coordenadora">A rede de ensino guarda os modelos de relatório num repositório público. Denise clonou numa pasta só para isso, longe da pasta dos relatórios dela.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> cd ~/projetos
+<span class="pr">$</span> git clone https://github.com/inematds/oswork-v62.git clone-curso
+<span class="out">Cloning into 'clone-curso'...</span>
+<span class="pr">$</span> cd clone-curso</code></pre>
+<p class="tela-nota">"Cloning into" quer dizer "copiando para". A última palavra da segunda linha é o nome da pasta nova.</p></div>
+  <figcaption>Este é o endereço real do repositório deste curso. A pasta clone-curso fica separada da pasta de treino.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Antes de atualizar, confira o status</h2>
+  <p>Rode <code>git status</code> dentro da pasta clonada. Se ele disser que não há nada seu por salvar, a atualização não tem o que misturar.</p>
+  <p>Na resposta aparece <code>origin/main</code>: <span class="gterm" data-gl="origin" data-def="Nome que o Git dá, por padrão, ao endereço no GitHub de onde a pasta veio e para onde ela envia.">origin</span> é o apelido do endereço de onde a pasta veio, e <code>main</code> é a linha principal de trabalho de lá.</p>
+  <p data-ex="professora">Lúcia clonou o repositório do curso e rodou o status. A resposta dizia que a pasta estava igual à de lá, sem nada dela por salvar.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> git status
+<span class="out">On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean</span></code></pre>
+<p class="tela-nota">"On branch main": você está na linha principal. "Up to date with origin/main": igual à última versão que você trouxe. "Working tree clean": nenhuma mudança sua na pasta.</p></div></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span><code>pull --ff-only</code> atualiza só pelo caminho direto</h2>
+  <p>O <span class="gterm" data-gl="pull" data-def="Comando do Git que traz para o seu computador as mudanças novas do GitHub.">pull</span> busca as versões novas e as junta à sua pasta. Com <code>--ff-only</code>, ele só aceita o caso simples: as versões novas se encaixam depois da última que você tem.</p>
+  <p>É a apostila que recebe páginas novas no fim. Nada do que você tinha precisa ser mexido.</p>
+  <p data-ex="coordenadora">Uma semana depois, a rede acrescentou um modelo novo. Denise rodou o pull com freio, e a resposta mostrou o arquivo novo que chegou.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> git pull --ff-only
+<span class="out">Already up to date.</span>
+<span class="pr">$</span> git pull --ff-only
+<span class="out">Updating 0999fe3..33113cd
+Fast-forward
+ aulas/aula-7.html | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 aulas/aula-7.html</span></code></pre>
+<p class="tela-nota">Primeira resposta: "já está atualizado", nada chegou. Segunda: "Fast-forward", o caminho direto, com a lista do que chegou.</p></div>
+  <figcaption>A segunda resposta é um exemplo de quando há novidade; os códigos e arquivos serão outros.</figcaption></figure>
+  <figure class="diag"><svg viewBox="0 0 340 260" role="img" aria-label="Dois casos. Caminho direto: as versões novas de lá vêm depois das suas, numa linha só, e o pull passa. Divergiu: depois da última versão em comum, há uma versão nova de lá e uma sua, em linhas separadas, e o pull recusa.">
+    <text x="4" y="24" font-size="20" font-weight="700">Caminho direto: passa</text>
+    <line x1="24" y1="66" x2="300" y2="66" stroke="var(--line2)" stroke-width="4"/>
+    <circle cx="24" cy="66" r="15" fill="var(--line2)"/><circle cx="100" cy="66" r="15" fill="var(--line2)"/>
+    <circle cx="190" cy="66" r="15" fill="var(--accent)"/><circle cx="270" cy="66" r="15" fill="var(--accent)"/>
+    <text x="4" y="142" font-size="20" font-weight="700">Divergiu: recusa</text>
+    <line x1="24" y1="200" x2="100" y2="200" stroke="var(--line2)" stroke-width="4"/>
+    <line x1="100" y1="200" x2="190" y2="172" stroke="var(--line2)" stroke-width="4"/>
+    <line x1="100" y1="200" x2="190" y2="232" stroke="var(--line2)" stroke-width="4"/>
+    <circle cx="24" cy="200" r="15" fill="var(--line2)"/><circle cx="100" cy="200" r="15" fill="var(--line2)"/>
+    <circle cx="190" cy="172" r="15" fill="var(--accent)"/><circle cx="190" cy="232" r="15" fill="var(--warm)"/>
+  </svg>
+  <figcaption>Cinza: versões que você já tinha. Verde: versões novas de lá. Laranja: uma versão sua, salva aqui. No primeiro caso, as verdes se encaixam no fim. No segundo, a linha se abriu em duas.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Se ele recusar, pare e olhe</h2>
+  <p>Se você salvou uma versão aqui e lá também chegou uma versão nova, as duas linhas se separaram. O <code>--ff-only</code> recusa e não mexe em nada.</p>
+  <p>Essa recusa é informação, e não um defeito. Não apague o seu trabalho para contornar. Leia o histórico com <code>git log --oneline</code> ou peça ajuda levando a mensagem inteira.</p>
+  <p data-ex="professora">Lúcia tinha salvo, no clone, uma versão com anotações dela, do jeito da aula 3 do módulo. No mesmo dia, o curso publicou uma versão nova. O pull recusou. Ela copiou a mensagem e perguntou no grupo do curso antes de fazer qualquer outra coisa.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> git pull --ff-only
+<span class="out">hint: Diverging branches can't be fast-forwarded, you need to either:
+hint:
+hint: 	git merge --no-ff
+hint:
+hint: or:
+hint:
+hint: 	git rebase
+fatal: Not possible to fast-forward, aborting.</span>
+<span class="pr">$</span> git status
+<span class="out">On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.</span></code></pre>
+<p class="tela-nota">A última linha de ajuda foi omitida. "Not possible to fast-forward, aborting": não deu pelo caminho direto e ele parou. O status confirma: uma versão sua e uma de lá.</p></div></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>A resposta sugere dois comandos. Não rode nenhum deles agora, nem se um chat de IA mandar: os dois juntam as linhas de jeitos diferentes, e escolher exige ver o histórico. Parar aqui não perde nada, porque o <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span> não mexeu na sua pasta.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Clone o repositório do curso e atualize com freio</h3>
+  <p class="pgoal">Pronto quando o status disser "up to date with 'origin/main'" e o pull responder "Already up to date." Cerca de 8 minutos, no computador e com internet.</p>
+  <p class="psafe">O clone vai para uma pasta nova, clone-curso, separada da pasta de treino. Nenhum programa é executado. Se aparecer "destination path 'clone-curso' already exists", você já clonou antes: siga do bloco 2.</p>
+  <p><b>Bloco 1</b> · clone:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos
+git clone https://github.com/inematds/oswork-v62.git clone-curso</pre></div>
+  <p><b>Bloco 2</b> · entre e confira:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/clone-curso
+git status
+git log --oneline -3</pre></div>
+  <p><b>Bloco 3</b> · atualize com freio:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">git pull --ff-only</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole o bloco 1. Confira "Cloning into 'clone-curso'" e espere o cursor voltar.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Cole o bloco 2. Confira "up to date with 'origin/main'" e três linhas de versões no log.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Cole o bloco 3. Confira "Already up to date." Se vier "Fast-forward", o curso ganhou versões desde o clone: leia a lista do que chegou.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de trazer um projeto inteiro do GitHub e de atualizá-lo só pelo caminho seguro.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Clonar e atualizar</h3>
+    <ol>
+      <li><span><b>clone</b>pasta nova, com arquivos e histórico, separada das suas.</span></li>
+      <li><span><b>status antes</b>sem mudança sua, não há o que misturar.</span></li>
+      <li><span><b>pull --ff-only</b>atualiza pelo caminho direto; recusou, pare e olhe.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe trazer um projeto do GitHub e atualizá-lo sem risco de misturar.</p>
+    <p class="na-action">Hoje, abra a pasta clone-curso no gerenciador de arquivos e ache o <span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span>. Leia as primeiras linhas antes de abrir qualquer outro arquivo.</p>
+    <p class="na-hook">Na próxima aula: e quando uma versão que você salvou estava errada? Você desfaz a mudança sem apagar o histórico.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Clone e atualize com cuidado<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>git clone copia um repositório remoto e seu histórico. git pull busca e integra mudanças na <span class="gterm" data-def="Linha paralela de trabalho no Git, onde você testa mudanças sem mexer na versão principal." data-gl="branch">branch</span> atual. Antes de atualizar, confira git status. Em um fluxo inicial, git pull --ff-only aceita somente uma atualização direta e para quando os históricos divergiram.</p><h3>Por que aprender</h3><p>Atualizar uma pasta com mudanças locais pode gerar conflitos. O bloqueio do --ff-only é informação útil: não o contorne apagando trabalho. Inspecione o histórico ou peça ajuda com o <span class="gterm" data-def="O material que a IA recebe para fazer uma tarefa: os arquivos, as instruções e as informações que você aponta." data-gl="contexto">contexto</span>.</p><h3>Conceitos-chave</h3><p>Clone cria a pasta; pull atualiza; branch é uma linha de trabalho; divergência pede revisão.</p><h4>Na prática</h4><p>Você clonou um projeto ontem e hoje há novas instruções no GitHub. Sem mudanças locais, --ff-only costuma avançar a versão. Com <span class="gterm" data-def="Versão salva no Git, com uma mensagem que explica a mudança. Dá para voltar a ela depois." data-gl="commit">commits</span> diferentes dos dois lados, pare e inspecione.</p><h4>✓ Faça</h4><p>Clone o repositório público deste curso em uma pasta separada. Leia antes de executar qualquer programa recebido, inclusive de <span class="gterm" data-def="Pasta de projeto acompanhada pelo Git, com todo o histórico de versões." data-gl="repositorio">repositórios</span> conhecidos.</p><h4>✗ Evite</h4><p>Misturar a cópia de treino com arquivos privados ou trabalho em produção.</p></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-33">← aula anterior</a><a class="next" href="#aula-35">próxima aula →</a></nav>
+<p class="aula-pe">Aula 34 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-34">
+[
+  {"front":"O pull com freio respondeu \"Not possible to fast-forward, aborting\". O que você faz primeiro?","back":"Para. Lê o histórico com git log --oneline ou pede ajuda levando a mensagem inteira. Nada foi mexido."},
+  {"front":"Qual a diferença entre clonar e atualizar?","back":"Clonar cria uma pasta nova com tudo. Atualizar traz só as versões novas para uma pasta que já existe."},
+  {"front":"Você clonou um projeto conhecido e ele traz um programa pronto para rodar. Pode rodar direto?","back":"Não. Leia antes o que o programa faz, mesmo vindo de um repositório conhecido."}
+]
+</script>
+</section>

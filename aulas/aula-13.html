@@ -1,0 +1,145 @@
+<section class="view" id="v-aula-13" data-aula="13" data-tempo="13min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 3 · Aula 1 de 6</p>
+  <h1>O terminal começa dizendo <em>onde você está</em></h1>
+  <figure class="cena"><img src="assets/img/aula-13.webp" width="1280" height="720" alt="Uma professora de ciências, de jaleco, olha com calma para o notebook aberto numa janela escura, com a planta da escola impressa na mesa e um adesivo vermelho marcando uma sala."></figure>
+  <p class="promise">Você consegue abrir o <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>, digitar dois comandos e dizer em que pasta está e o que tem nela.</p>
+  <p class="why">A partir deste módulo, a IA trabalha numa pasta do seu computador. Se você não sabe em que pasta está, ela também não sabe. Muito erro que parece falha da IA é só a pasta errada.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O terminal é uma janela em que você escreve um <b>comando</b> e lê a <b>resposta</b>.</li>
+      <li><code>pwd</code> diz onde você está. <code>ls</code> diz o que tem ali.</li>
+      <li>Primeiro a localização, depois os arquivos. Esses dois comandos <b>não mudam nada</b>.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Cada sistema tem o seu terminal</h2>
+  <p>O terminal já vem no computador. Você só precisa saber onde ele fica. Os comandos deste curso são escritos em <span class="gterm" data-gl="bash" data-def="Linguagem de comandos do terminal no Linux e no macOS. Os comandos deste curso são escritos para ele.">Bash</span>, a linguagem do terminal no Linux e no macOS. O Mac usa uma variação dele, e os comandos funcionam igual.</p>
+  <p>No Windows, eles funcionam dentro do <span class="gterm" data-gl="wsl" data-def="Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux.">WSL</span>. O terminal que já vem no Windows usa outra linguagem. Não cole nele os comandos do curso sem adaptar.</p>
+  <p data-ex="professora">Lúcia usa um notebook com macOS. Ela apertou Cmd+Espaço, digitou "Terminal" e teclou Enter. Levou dez segundos.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Onde fica o terminal</span></div>
+      <div class="janela-body">
+        <div class="item pasta"><span class="pin">1</span> macOS</div>
+        <div class="item doc dentro">Cmd+Espaço, digite "Terminal" e Enter</div>
+        <div class="item pasta"><span class="pin">2</span> Linux</div>
+        <div class="item doc dentro">procure "Terminal" na lista de aplicativos</div>
+        <div class="item pasta"><span class="pin">3</span> Windows</div>
+        <div class="item doc dentro">WSL, ou o caminho oficial para Windows (aula 14)</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>No Mac, a busca acha o Terminal pelo nome.</span></li>
+      <li><span class="pin">2</span><span>No Linux, busque pelo nome.</span></li>
+      <li><span class="pin">3</span><span>No Windows, os comandos do curso pedem o WSL.</span></li>
+    </ol>
+  </figure>
+  <details class="mais"><summary>Uso Windows: como ter o WSL</summary>
+    <p>O WSL é da própria Microsoft. Abra o menu Iniciar, procure "PowerShell", clique com o botão direito › Executar como administrador. Digite o comando abaixo, tecle Enter e reinicie o computador quando ele pedir.</p>
+    <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>PowerShell · administrador</span></div>
+<pre><code><span class="pr">&gt;</span> wsl --install</code></pre>
+<p class="tela-nota">Depois de reiniciar, procure "<span class="gterm" data-gl="ubuntu" data-def="Versão popular do Linux, comum em servidores.">Ubuntu</span>" no menu Iniciar: essa janela é o terminal onde os comandos do curso funcionam. Na primeira vez, ele pede um nome de usuário e uma senha novos: anote a senha num lugar seguro.</p></div></figure>
+  </details>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O computador é da escola ou pediu uma senha que você não tem? Não force: faça hoje a leitura desta aula e peça o WSL a quem cuida do computador. Na aula 14, a página oficial do <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span> também mostra o caminho para Windows.</p></div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Você escreve uma linha, ele devolve outra</h2>
+  <p>Ao abrir, o terminal mostra uma linha curta que termina em <code>$</code>, com o cursor piscando. No Mac, ela termina em <code>%</code>: é a mesma coisa. É o computador esperando o seu comando.</p>
+  <p>Você digita o comando e tecla Enter. A resposta aparece logo abaixo. Depois, o <code>$</code> volta, pronto para o próximo.</p>
+  <p data-ex="coordenadora">Denise abriu o terminal pela primeira vez e esperou algo acontecer. Nada aconteceu, porque ele estava esperando por ela.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">denise@notebook:~$</span> pwd
+<span class="out">/home/denise</span>
+<span class="pr">denise@notebook:~$</span> </code></pre>
+<p class="tela-nota">A linha com <code>$</code> (no Mac, <code>%</code>) é a vez de você digitar. A linha sem <code>$</code> é a resposta do computador.</p></div>
+  <figcaption>Comando, resposta e o <code>$</code> de volta: é sempre esse vaivém.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span><code>pwd</code> é o "você está aqui"</h2>
+  <p>Sabe o mapa da escola com o adesivo "você está aqui"? O comando <code>pwd</code> faz esse papel. Ele responde o caminho completo da pasta em que você está agora.</p>
+  <p>Leia o caminho como endereço. Cada barra separa uma pasta, e a última é onde você está. No macOS, a sua pasta pessoal começa com <code>/Users</code>; no Linux, com <code>/home</code>.</p>
+  <p data-ex="professora">Lúcia digitou <code>pwd</code> e leu <code>/Users/lucia</code>. Então ela estava na pasta pessoal, a mesma que abre quando clica na casinha do Finder.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · macOS</span></div>
+<pre><code><span class="pr">$</span> pwd
+<span class="out">/Users/lucia</span></code></pre>
+<p class="tela-nota">Uma linha só: a pasta pessoal de Lúcia. Nada foi criado nem apagado.</p></div>
+  <figcaption>O <code>pwd</code> só informa. Use sempre que tiver dúvida de onde está.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span><code>ls</code> mostra o que tem na pasta</h2>
+  <p>Depois de saber onde está, veja o que tem ali. O comando <code>ls</code> lista as pastas e os arquivos do lugar atual, lado a lado. No Mac, as pastas da pasta pessoal aparecem com nome em inglês, como Documents e Downloads.</p>
+  <p>Para mudar de pasta existe o <code>cd</code>. Ele fica para a aula 16. Por enquanto, basta saber que a pasta de início importa.</p>
+  <p data-ex="coordenadora">Denise abriu o Codex na pasta Downloads, num teste de um colega. Ele não enxergava o projeto dela, que estava em outra pasta. O <code>pwd</code> teria mostrado isso antes.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · Linux</span></div>
+<pre><code><span class="pr">$</span> pwd
+<span class="out">/home/denise</span>
+<span class="pr">$</span> ls
+<span class="out">Documentos  Downloads  Imagens  Músicas</span></code></pre>
+<p class="tela-nota">Primeiro a localização, depois o conteúdo. Os nomes mudam de um computador para outro.</p></div>
+  <figcaption>O <code>ls</code> mostra o que o programa vai enxergar se começar a trabalhar dali.</figcaption></figure>
+  <div class="quiz" data-answer="b">
+    <p class="qk">Teste-se</p>
+    <p class="q">Lúcia digitou <code>ls</code> e a pasta do projeto não apareceu na lista. O que ela confere primeiro?</p>
+    <button class="opt" data-k="a" data-fb="Nada indica que a pasta sumiu. O mais comum é estar em outro lugar.">Se a pasta foi apagada</button>
+    <button class="opt" data-k="b" data-fb="Isso. O pwd mostra onde ela está; talvez a pasta do projeto esteja em outro lugar.">Onde está, com o pwd</button>
+    <button class="opt" data-k="c" data-fb="Repetir o mesmo comando no mesmo lugar dá a mesma lista.">O ls de novo, mais devagar</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Pergunte ao computador onde você está</h3>
+  <p class="pgoal">Pronto quando você tiver anotado a resposta do <code>pwd</code> e três nomes que o <code>ls</code> mostrou. Cerca de 8 minutos, no computador.</p>
+  <p class="psafe">Os dois comandos só leem: nada é criado, movido ou apagado. Se aparecer "command not found", confira a digitação: tudo em minúsculas, sem espaço no meio. No Windows sem WSL, pare no passo 1 e siga para a aula 14.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">pwd
+ls</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Abra o terminal do seu sistema, pelo caminho do quadro "Onde fica o terminal".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Digite <code>pwd</code> e tecle Enter. Anote a linha que voltou: é a pasta em que você está.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Digite <code>ls</code> e tecle Enter. Anote três nomes. No Mac eles vêm em inglês: Documents é a pasta Documentos. No Ubuntu que acabou de chegar ao computador, a lista pode vir vazia, e isso é normal.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de ler, no terminal, onde está e o que tem ali, sem mudar nada.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Primeiros comandos</h3>
+    <ol>
+      <li><span><b>Terminal</b>você digita uma linha, ele devolve a resposta.</span></li>
+      <li><span><b>pwd</b>a pasta em que você está agora.</span></li>
+      <li><span><b>ls</b>o que tem nessa pasta.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe perguntar ao computador onde está e o que tem ali.</p>
+    <p class="na-action">Amanhã, abra o terminal de novo e digite <code>pwd</code> antes de qualquer outra coisa. Leva dez segundos e vira hábito.</p>
+    <p class="na-hook">Na próxima aula: colocar o Codex no computador pela fonte oficial, e conferir que deu certo com um comando.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Terminal é uma porta de entrada<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Terminal é a janela em que você escreve comandos para o computador. <span class="gterm" data-def="Programa que interpreta os comandos digitados no terminal." data-gl="shell">Shell</span> é o programa que interpreta esses comandos. Aqui os exemplos de terminal usam Bash no Linux ou macOS; no Windows, use um ambiente Bash via WSL ou siga o instalador oficial para Windows. Não cole comandos Linux diretamente no PowerShell sem adaptação.</p><h3>Por que aprender</h3><p>Saber em qual ambiente você está evita erros que parecem falhas da IA. O comando cd muda a pasta atual; pwd mostra a localização no Bash. Não é necessário decorar dezenas de comandos para começar.</p><h3>Conceitos-chave</h3><p>Terminal; shell; pasta atual; comando e resposta.</p><h4>Na prática</h4><p>Se você abre Codex na pasta Downloads, ele não está automaticamente trabalhando dentro de meu-primeiro-projeto. A pasta de início precisa ser escolhida.</p><h4>✓ Faça</h4><p>No Bash, execute pwd e depois ls. Leia a saída: primeiro localização, depois arquivos. Não altere nada neste passo.</p><h4>✗ Evite</h4><p>Aceitar uma conclusão sem conferir a entrada que a sustenta.</p><figure class="comp-fig"><ul><li>Abrir o terminal</li><li>Entrar na pasta</li><li>Autenticar</li><li>Pedir a tarefa</li></ul><figcaption>A ordem importa: entrar na pasta certa antes de pedir evita trabalho feito no lugar errado.</figcaption></figure></section>
+<p class="comp-termos">Termos desta seção: <span class="gterm" data-def="Número que identifica um serviço dentro da máquina. O SSH costuma usar a porta 22, mas a sua VPS pode usar outra." data-gl="porta">porta</span>.</p></details><!--/COMP-->
+<nav class="lnav"><a href="#aula-12">← aula anterior</a><a class="next" href="#aula-14">próxima aula →</a></nav>
+<p class="aula-pe">Aula 13 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-13">
+[
+  {"front":"O programa diz que não encontrou o arquivo do projeto. Qual comando você digita primeiro?","back":"O pwd, para ver em que pasta está. Depois o ls, para ver o que tem ali."},
+  {"front":"Qual a diferença entre o que o pwd responde e o que o ls responde?","back":"O pwd dá o caminho da pasta atual. O ls dá a lista de pastas e arquivos que estão nela."},
+  {"front":"No Windows, por que não colar os comandos do curso no terminal que já vem no sistema?","back":"Porque ele usa outra linguagem. Os comandos do curso são para o Bash, que funciona no WSL, no Linux e no macOS."}
+]
+</script>
+</section>

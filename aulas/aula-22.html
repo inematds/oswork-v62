@@ -1,0 +1,160 @@
+<section class="view" id="v-aula-22" data-aula="22" data-tempo="13min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 4 · Aula 4 de 6</p>
+  <h1>Segredo não é conhecimento <em>para compartilhar</em></h1>
+  <figure class="cena"><img src="assets/img/aula-22.webp" width="1280" height="720" alt="Na portaria da escola, uma coordenadora conversa com o porteiro enquanto ele fecha o armário de chaves da parede; a lista de salas pode ficar à vista, as chaves ficam trancadas."></figure>
+  <p class="promise">Você consegue criar o <span class="gterm" data-gl="env-example" data-def="Cópia do .env com os mesmos nomes de variáveis e valores fictícios. Mostra o que é preciso preencher sem dar acesso a nada, por isso pode ser compartilhada.">.env.example</span> do projeto de treino, com os nomes das variáveis e valores fictícios. Nenhum valor real entra nele.</p>
+  <p class="why">Uma senha colada num documento, num print ou num pedido vira acesso para quem ler. E ela continua valendo depois que a conversa acaba. Separar o segredo do resto deixa você compartilhar a pasta sem medo.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O <b>.env</b> guarda as chaves de verdade, só no seu computador.</li>
+      <li>Ele <b>não é um cofre</b>: quem abre o arquivo, lê.</li>
+      <li>O <b>.env.example</b> tem só os nomes, com valores de mentira. Esse pode circular.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Quem tem a credencial age em nome da conta</h2>
+  <p>Na portaria da escola, o quadro de chaves mostra quais salas existem. Ninguém se preocupa com essa lista à vista. Com as chaves é diferente: quem pega a chave abre a sala.</p>
+  <p>Uma credencial funciona como a chave. Uma senha, uma <span class="gterm" data-gl="chave-de-api" data-def="Senha longa que identifica quem usa a API e para quem vai a conta. Nunca vai num pedido, num arquivo compartilhado ou num print.">chave de API</span> ou o <span class="gterm" data-gl="token-do-bot" data-def="Senha que o Telegram gera para o seu bot. Quem tem o token controla o bot; por isso ele fica no .env.">token do bot</span> deixam quem os tem agir em nome da sua conta.</p>
+  <p data-ex="coordenadora">Denise ia mandar no grupo da equipe um print da configuração do sistema de notas. Antes de enviar, viu a senha da coordenação inteira no canto da imagem.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Print como estava</span><p><b>O que mostra:</b> a tela de configuração, com a senha visível.</p><p><b>Resultado:</b> as 30 pessoas do grupo passam a ter o acesso.</p></div>
+      <div class="depois"><span class="rot">Print corrigido</span><p><b>O que mostra:</b> a mesma tela, com a senha coberta antes de enviar.</p><p><b>Resultado:</b> a equipe vê o que precisa, e o acesso continua só com a coordenação.</p></div>
+    </div>
+    <figcaption>A imagem ajuda do mesmo jeito sem o valor da senha.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>O .env guarda variáveis, mas não é um cofre</h2>
+  <p>O arquivo <span class="gterm" data-gl="env" data-def="Arquivo que guarda chaves e senhas fora do código. Nunca vai para o Git, para um pedido ou para um print.">.env</span> guarda <span class="gterm" data-gl="variavel" data-def="Um nome com um valor guardado, escrito como NOME=valor. O programa procura o valor pelo nome.">variáveis</span>: um nome, um sinal de igual e um valor. Por exemplo, <code>TELEGRAM_BOT_TOKEN</code> ou <code>DATABASE_URL</code>, o endereço de um banco de dados, com a senha dentro.</p>
+  <p>Ele não é criptografado. Qualquer pessoa com acesso ao arquivo consegue ler o que está nele. Por isso ele fica só na sua máquina. No módulo 7, o comando <span class="gterm" data-gl="chmod" data-def="Comando que define quem pode ler ou alterar um arquivo.">chmod</span> deixa a leitura só para você.</p>
+  <p data-ex="professora">No módulo 7, Lúcia vai criar um bot de consulta para a turma. O token dele vai morar no .env da pasta do projeto, e em nenhum outro lugar.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>.env · só no seu computador</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> TELEGRAM_BOT_TOKEN = ●●●●●●●●●●</div>
+        <div class="item doc"><span class="pin">2</span> DATABASE_URL = ●●●●●●●●●●</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O nome diz o que é; o programa procura o valor por ele.</span></li>
+      <li><span class="pin">2</span><span>O valor real, aqui coberto, nunca aparece num print.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>O .env.example mostra a estrutura sem dar acesso</h2>
+  <p>O .env.example tem os mesmos nomes, com valores fictícios. Quem recebe o projeto vê o que precisa preencher, mas não ganha acesso a nada.</p>
+  <p>O kit do curso traz <code>TELEGRAM_BOT_TOKEN=preencha_localmente</code>. Você troca o valor só na sua cópia privada, o .env. Com o valor de exemplo, nenhum bot funciona.</p>
+  <p data-ex="coordenadora">Denise passou o projeto de relatórios para a vice-diretora com o .env.example. A vice preencheu o próprio .env com a senha que recebeu da secretaria.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="neutro"><span class="rot">.env.example · pode circular</span><p>TELEGRAM_BOT_TOKEN=preencha_localmente</p><p>DATABASE_URL=preencha_localmente</p></div>
+      <div class="bom"><span class="rot">.env · fica na sua máquina</span><p>TELEGRAM_BOT_TOKEN=[o token real]</p><p>DATABASE_URL=[o endereço real]</p></div>
+    </div>
+    <figcaption>Os mesmos nomes nos dois. Só o .env tem valores que abrem alguma coisa.</figcaption>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Os dois nomes parecem gêmeos. Lembre assim: o que termina em example é o exemplo, que pode circular. O outro é o de verdade, que fica em casa.</p></div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>A IA precisa do nome da variável, e não do valor</h2>
+  <p>Valor real não vai em print, em exemplo de curso nem em arquivo enviado à IA sem necessidade. Para ajudar, a IA quase sempre precisa só saber que a variável existe.</p>
+  <p>Colou uma chave por engano? Apagar a mensagem não basta. Troque a chave no site que a gerou, na área de segurança ou de chaves da conta. Se você nunca gerou uma chave, guarde a regra para quando gerar.</p>
+  <p data-ex="professora">O relatório de Lúcia não conectava à planilha da escola. Em vez de colar o .env, ela contou à IA quais variáveis estavam preenchidas.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Chat de IA</span></div>
+      <div class="tela-caso" data-rotulo="Colou o valor">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Você</span>O relatório não conecta. Meu .env:
+DATABASE_URL=[endereço real com a senha dentro]</p>
+          <p class="msg ia falha"><span class="quem">IA</span>Vamos ver. Vou usar esse endereço para testar a conexão…</p>
+        </div>
+        <p class="tela-nota ruim">A senha agora está no histórico da conversa.</p>
+      </div>
+      <div class="tela-caso" data-rotulo="Só os nomes">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Você</span>O relatório não conecta. No meu .env, DATABASE_URL está preenchida. O que confiro, sem te mandar o valor?</p>
+          <p class="msg ia ok"><span class="quem">IA</span>Confira se o endereço está completo e se a senha dentro dele ainda vale. Não precisa me mandar o valor.</p>
+        </div>
+        <p class="tela-nota bom">A ajuda é a mesma, e o segredo ficou em casa.</p>
+      </div>
+    </div>
+    <figcaption><b>Toque nos dois botões</b> e compare o que fica na conversa.</figcaption>
+  </figure>
+  <div class="quiz" data-answer="b">
+    <p class="qk">Teste-se</p>
+    <p class="q">Uma colega vai testar o seu projeto no computador dela. O que você manda?</p>
+    <button class="opt" data-k="a" data-fb="O valor passaria a morar numa conversa, fora do seu controle.">A senha, por mensagem privada</button>
+    <button class="opt" data-k="b" data-fb="Ela vê os nomes e preenche o próprio .env com o acesso dela.">O .env.example, para ela preencher</button>
+    <button class="opt" data-k="c" data-fb="O seu .env leva os seus valores reais junto.">O seu .env, que já está pronto</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Crie o .env.example do projeto de treino</h3>
+  <p class="pgoal">Pronto quando o cat mostrar os dois nomes com o valor preencha_localmente e o ls -a listar o .env.example. Cerca de 8 minutos, no computador, no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
+  <p class="psafe">Os valores são de mentira; nenhum acesso real entra no arquivo. Nunca troque preencha_localmente por um valor real no .env.example. Não crie o .env agora: ele só será preciso no módulo 7. Não fez a aula 1 deste módulo? Rode antes: mkdir -p ~/projetos/meu-primeiro-projeto</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/meu-primeiro-projeto
+printf '%s\n' 'TELEGRAM_BOT_TOKEN=preencha_localmente' 'DATABASE_URL=preencha_localmente' &gt; .env.example
+cat .env.example
+ls -a</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Copie com o botão copiar e cole as quatro linhas de uma vez; não digite à mão, por causa das aspas. Aperte Enter. A segunda linha usa o printf, que escreve texto; o sinal &gt; manda esse texto para o arquivo .env.example.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Confira a resposta do cat: dois nomes, cada um na sua linha, e os dois com preencha_localmente. Apareceram aspas ou tudo numa linha só? Copie de novo pelo botão copiar e cole: a segunda linha reescreve o arquivo.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Confira o ls -a: o .env.example aparece, e não existe nenhum .env. Nomes que começam com ponto só aparecem com o -a.</span></label></li>
+  </ol>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>O que você deve ver</span></div>
+<pre><code><span class="out">TELEGRAM_BOT_TOKEN=preencha_localmente
+DATABASE_URL=preencha_localmente
+.  ..  .env.example  README.md  entradas  saidas</span></code></pre>
+<p class="tela-nota">As duas primeiras linhas vêm do cat; a última, do ls -a. A ordem pode variar, e pode haver outros arquivos seus.</p></div></figure>
+  <p class="pdone">Você acabou de criar o modelo que mostra o que preencher sem entregar nenhuma chave.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Segredo fica em casa</h3>
+    <ol>
+      <li><span><b>.env</b>valores reais, só na sua máquina; não é cofre.</span></li>
+      <li><span><b>.env.example</b>mesmos nomes, valores de mentira; pode circular.</span></li>
+      <li><span><b>Vazou?</b>troque a chave na origem; apagar a mensagem não basta.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe compartilhar a estrutura de um projeto sem entregar o acesso a ele.</p>
+    <p class="na-action">Hoje, procure nos seus documentos e conversas uma senha colada. Achou? Apague de lá e troque a senha no site de origem.</p>
+    <p class="na-hook">Na próxima aula: como garantir que o .env nunca seja guardado junto com o histórico do projeto, nem por descuido.</p>
+  </div>
+</div>
+
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Segredos não são conhecimento compartilhável<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Um arquivo .env pode guardar variáveis como TELEGRAM_BOT_TOKEN ou DATABASE_URL. Ele não é criptografado: qualquer pessoa com acesso ao arquivo pode lê-lo. Use permissões adequadas e nunca inclua valores reais em screenshots, exemplos de curso ou arquivos enviados à IA sem necessidade.</p><h3>Por que aprender</h3><p>Credenciais permitem agir em nome de uma conta. Separar o modelo .env.example, sem valores reais, do .env local permite compartilhar a estrutura sem distribuir acesso.</p><h3>Conceitos-chave</h3><p><span class="gterm" data-def="Um nome com um valor guardado, escrito como NOME=valor. O programa procura o valor pelo nome." data-gl="variavel">Variável</span>; segredo; .env.example; leitura em tempo de execução.</p><h4>Na prática</h4><p>O kit inclui TELEGRAM_BOT_TOKEN=preencha_localmente. O aluno substitui isso apenas em sua cópia privada. Nenhum bot fica autenticado com esse exemplo.</p><h4>✓ Faça</h4><p>Crie .env.example com nomes das variáveis e valores fictícios. Mantenha .env fora do <span class="gterm" data-def="Pasta de projeto acompanhada pelo Git, com todo o histórico de versões." data-gl="repositorio">repositório</span> e nunca cole sua chave no chat.</p><h4>✗ Evite</h4><p>Misturar a cópia de treino com arquivos privados ou trabalho em produção.</p><figure class="comp-fig"><ul><li><b>Versiona</b> — <span class="gterm" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado." data-gl="readme">README</span>, AGENTS, código</li><li><b>Não versiona</b> — .env, <span class="gterm" data-def="Pedaço de texto, como uma palavra curta ou parte de uma palavra, que o modelo lê e escreve. O uso e a cobrança costumam ser medidos em tokens." data-gl="token">tokens</span>, senhas</li><li><span class="gterm" data-def="Arquivo que lista o que o Git não deve guardar, como senhas e arquivos temporários." data-gl="gitignore">.gitignore</span> separa os dois</li></ul><figcaption>O .gitignore é a fronteira entre o que a equipe lê e o que nunca sai da sua máquina.</figcaption></figure></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-21">← aula anterior</a><a class="next" href="#aula-23">próxima aula →</a></nav>
+<p class="aula-pe">Aula 22 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-22">
+[
+  {"front":"O arquivo .env está numa pasta só sua. Então ele é seguro por si mesmo?","back":"Não. Ele não é criptografado: quem tiver acesso ao arquivo lê os valores. Por isso a leitura fica restrita a você; o módulo 7 mostra o comando."},
+  {"front":"Você precisa de ajuda da IA com uma conexão que falha. O que entra no pedido: o valor da variável ou o nome dela?","back":"O nome, dizendo se está preenchida. O valor real não precisa ir para a conversa."},
+  {"front":"Você colou uma chave num grupo e apagou a mensagem um minuto depois. O que ainda falta fazer?","back":"Trocar a chave no site que a gerou. Alguém pode ter copiado antes."}
+]
+</script>
+</section>

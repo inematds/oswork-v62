@@ -1,0 +1,168 @@
+<section class="view" id="v-aula-35" data-aula="35" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 6 · Aula 5 de 6</p>
+  <h1>Desfaça um erro sem <em>arrancar a página</em></h1>
+  <figure class="cena"><img src="assets/img/aula-35.webp" width="1280" height="720" alt="Uma coordenadora mostra a uma colega, no corredor da escola, o quadro de errata impresso no jornal da escola."></figure>
+  <p class="promise">Você consegue criar uma segunda versão de treino, desfazê-la com <code>git revert</code> e conferir no próprio README que o título antigo voltou, com as três versões no histórico.</p>
+  <p class="why">Quando uma versão salva estava errada, a vontade é apagar o registro. Apagar esconde o que aconteceu e pode levar junto trabalho bom. Desfazer com um registro novo corrige e deixa a história completa.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Antes do comando, descubra <b>onde está a mudança</b>: só no arquivo ou numa versão salva.</li>
+      <li><code>git revert</code> cria uma <b>versão nova</b> que desfaz a anterior, sem apagar nada.</li>
+      <li>Confira o <b>arquivo aberto</b>, não só a resposta do terminal.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Primeiro, descubra onde está a mudança</h2>
+  <p>Cada comando de recuperação do <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span> tem uma consequência diferente. Por isso a escolha começa por um diagnóstico: a mudança está só no arquivo, numa versão salva no seu computador ou numa versão já enviada ao <span class="gterm" data-gl="github" data-def="Site onde você guarda uma cópia do seu repositório Git na internet, para trabalhar de outro computador ou com outras pessoas.">GitHub</span>?</p>
+  <p data-ex="coordenadora">Denise trocou o título do relatório de setembro e salvou a versão. No dia seguinte, a direção pediu o título antigo de volta. A mudança estava numa versão salva, e isso decidiu o comando.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Onde está a mudança?</span></div>
+      <div class="janela-body">
+        <div class="item pasta"><span class="pin">1</span> Só no arquivo, ainda sem salvar</div>
+        <div class="item doc dentro">descartar (quadro no fim do passo 4) apaga o que você escreveu, sem volta</div>
+        <div class="item pasta"><span class="pin">2</span> Numa versão salva no seu computador</div>
+        <div class="item doc dentro">desfazer com uma versão nova: esta aula</div>
+        <div class="item pasta"><span class="pin">3</span> Numa versão já enviada ao GitHub</div>
+        <div class="item doc dentro">também com uma versão nova, para não reescrever o que outros já têm</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O caso mais arriscado: não há versão para voltar.</span></li>
+      <li><span class="pin">2</span><span>O caso desta aula.</span></li>
+      <li><span class="pin">3</span><span>Mesmo comando, e mais motivo para não apagar.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>O revert é a errata do jornal</h2>
+  <p>O jornal da escola não recolhe a edição com erro. Publica uma errata que corrige e mostra que houve correção.</p>
+  <p>O <span class="gterm" data-gl="revert" data-def="Comando do Git que cria um commit novo desfazendo um commit anterior, sem apagar nada do histórico.">revert</span> faz o mesmo: cria um <span class="gterm" data-gl="commit" data-def="Versão salva no Git, com uma mensagem que explica a mudança. Dá para voltar a ela depois.">commit</span> novo que desfaz o anterior. As três versões ficam no histórico: a original, a errada e a correção.</p>
+  <p data-ex="professora">Lúcia mudou a lista de materiais de um roteiro e salvou. Percebeu que tinha apagado o béquer. Com o revert, a lista voltou, e o histórico mostra que houve a troca e a volta.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Arrancar a página</span><p><b>O que faz:</b> apaga a versão errada do histórico.</p><p><b>Risco:</b> some o registro do que houve e pode levar junto trabalho bom.</p></div>
+      <div class="depois"><span class="rot">Errata</span><p><b>O que faz:</b> cria uma versão nova que desfaz a errada.</p><p><b>Resultado:</b> o arquivo volta, e o histórico conta o erro e a correção.</p></div>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Confirme qual versão você vai desfazer</h2>
+  <p>O <span class="gterm" data-gl="head" data-def="No Git, a versão em que você está agora.">HEAD</span> é o marcador de página do histórico: fica na versão em que você está agora, normalmente a última salva. O comando desta aula desfaz a versão marcada, então olhe antes qual é.</p>
+  <p><code>git log --oneline</code> mostra a lista, com a mais nova no topo. Na linha marcada aparece <code>(HEAD -&gt; main)</code>: o marcador está aqui, na linha principal.</p>
+  <p data-ex="professora">Na pasta de treino, Lúcia mudou o título do <span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span> e salvou uma segunda versão. O log mostrou essa versão no topo, com a marca HEAD.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> git diff
+<span class="out">@@ -1,3 +1,3 @@
+-# Treino de Git
++# Treino de Git — versão nova
+ 
+ Pasta para praticar o histórico.</span>
+<span class="pr">$</span> git log --oneline
+<span class="out">7ef98be (HEAD -&gt; main) Muda o título do README (treino)
+5f6c1eb Cria README e lista do que não guardar</span></code></pre>
+<p class="tela-nota">No <span class="gterm" data-gl="diff" data-def="Comparação que mostra, linha por linha, o que mudou num arquivo.">diff</span> (cabeçalho cortado), a linha com − é o título que saiu e a com +, o que entrou; linhas sem sinal não mudaram. No log, a linha do topo, com HEAD, é a mudança de título: é ela que o revert vai desfazer. Os códigos serão outros no seu computador.</p></div>
+  <figcaption>Leia a mensagem da linha do HEAD. Se não for a mudança de treino, não siga.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Se a linha do topo não for "Muda o título do README (treino)", pare e não rode o revert. Rode <code>git status</code> e confira se está na pasta treino-git. Parar não custa nada; desfazer a versão errada custaria.</p></div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Desfaça e confira o arquivo aberto</h2>
+  <p><code>git revert --no-edit HEAD</code> desfaz a última versão e usa uma mensagem automática; sem ele, o Git abriria um editor de texto para você escrever a mensagem. Depois, abra o README e leia o título. A resposta do <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> diz que algo foi feito; o arquivo diz se ficou certo.</p>
+  <p data-ex="coordenadora">Denise rodou o revert no relatório e abriu o arquivo. O título antigo estava de volta, e o log tinha uma linha nova começando com "Revert".</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> git revert --no-edit HEAD
+<span class="out">[main b11f583] Revert "Muda o título do README (treino)"
+ 1 file changed, 1 insertion(+), 1 deletion(-)</span>
+<span class="pr">$</span> cat README.md
+<span class="out"># Treino de Git
+
+Pasta para praticar o histórico.</span>
+<span class="pr">$</span> git log --oneline
+<span class="out">b11f583 (HEAD -&gt; main) Revert "Muda o título do README (treino)"
+7ef98be Muda o título do README (treino)
+5f6c1eb Cria README e lista do que não guardar</span></code></pre>
+<p class="tela-nota"><code>cat</code> mostra o arquivo: o título voltou. O log tem três linhas: a original, a mudança e a errata.</p></div></figure>
+  <details class="mais"><summary>E se a mudança ainda não estava salva?</summary>
+  <p>Aí o comando é outro: o <span class="gterm" data-gl="restore" data-def="Comando do Git que descarta as mudanças ainda não salvas de um arquivo, voltando ao que estava na última versão. O que foi descartado não volta.">restore</span>, com o nome do arquivo, descarta as mudanças ainda não separadas com <code>git add</code>. O que você tinha escrito se perde, sem volta. Use só quando tiver certeza, e nunca na pasta inteira. Você também vai achar na internet o <code>reset --hard</code> como solução para tudo: ele apaga mudanças sem volta, e este curso não o usa.</p>
+  </details>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Salve uma mudança de treino e desfaça com errata</h3>
+  <p class="pgoal">Pronto quando o README mostrar de novo o título que tinha antes do bloco 1 e o log tiver três linhas, a do topo começando com "Revert". Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">Tudo acontece na pasta treino-git e nada sai do computador. O revert não apaga nenhuma versão. Se o log do bloco 1 não mostrar a mudança de treino no topo, não rode o bloco 2. Se o revert responder “Your local changes … would be overwritten”, havia uma mudança sem salvar no README e ele não fez nada: rode “git status” e peça ajuda antes de descartar qualquer coisa.</p>
+  <p><b>Antes</b> · confira que não há nada sem salvar (a resposta deve terminar em <code>working tree clean</code>):</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/treino-git
+git status</pre></div>
+  <p><b>Bloco 1</b> · faça a mudança e salve. A primeira linha reescreve o README inteiro, com o título novo (cada <code>\n</code> é uma quebra de linha):</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">printf '# Treino de Git — versão nova\n\nPasta para praticar o histórico.\n' &gt; README.md
+git diff
+git add README.md
+git commit -m "Muda o título do README (treino)"
+git log --oneline</pre></div>
+  <p><b>Bloco 2</b> · só depois de conferir o log:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">git revert --no-edit HEAD
+cat README.md
+git log --oneline</pre></div>
+  <details class="mais"><summary>Não fez as aulas anteriores do módulo? Rode isto antes</summary>
+    <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir -p ~/projetos/treino-git
+cd ~/projetos/treino-git
+git init -b main
+git config user.name "Seu Nome"
+git config user.email "seu-email@exemplo.com"
+printf '# Treino de Git\n\nPasta para praticar o histórico.\n' &gt; README.md
+printf 'notas-privadas.txt\n' &gt; .gitignore
+git add README.md .gitignore
+git commit -m "Cria README e lista do que não guardar"</pre></div>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Rode o bloco 1. Na resposta do <code>git diff</code>, confira a linha do título antigo com − e a nova com +.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>No log, confira que a linha do topo, com HEAD, é "Muda o título do README (treino)".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Rode o bloco 2. Confira no README o título antigo de volta e as três linhas no log.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de desfazer uma versão salva sem apagar nada, e conferiu no próprio arquivo.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Recuperar sem apagar</h3>
+    <ol>
+      <li><span><b>Diagnóstico</b>só no arquivo, numa versão salva ou já enviada.</span></li>
+      <li><span><b>revert</b>versão nova que desfaz a anterior; o histórico fica completo.</span></li>
+      <li><span><b>Conferência</b>abra o arquivo, não confie só na resposta.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe desfazer uma versão errada sem esconder que ela existiu.</p>
+    <p class="na-action">Hoje, rode <code>git log --oneline</code> na pasta de treino e explique, linha por linha, o que cada versão fez.</p>
+    <p class="na-hook">Na próxima aula: salvar e desfazer ficou no seu computador. Enviar ao GitHub é outro passo, e tem uma conferência própria.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Recupere sem apagar o histórico<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>git revert cria um novo commit que desfaz uma mudança anterior. É adequado para corrigir um registro já compartilhado. git restore descarta mudanças não salvas de arquivos escolhidos; pode perder trabalho. Não ensine reset --hard como resposta automática para qualquer dificuldade.</p><h3>Por que aprender</h3><p>Ferramentas de recuperação têm consequências diferentes. Identifique se a mudança está só no arquivo, em commit local ou publicada antes de escolher o comando.</p><h3>Conceitos-chave</h3><p>Revert preserva histórico; restore descarta alterações selecionadas; recuperação exige diagnóstico.</p><h4>Na prática</h4><p>No treino, faça um segundo commit mudando o título do README. git revert HEAD cria um terceiro commit que restaura o título anterior, sem esconder que a mudança ocorreu.</p><h4>Experimente agora</h4><p>Use git revert --no-edit HEAD somente após confirmar que HEAD é o segundo commit de treino. Abra o README e confira o resultado, não apenas a mensagem do Git.</p><figure class="comp-fig"><ul><li>Estrutura inicial</li><li>Rascunho revisado</li><li>Ponto de retorno</li></ul><figcaption>Cada commit é um ponto de recuperação. Voltar é andar até um ponto, não apagar a linha.</figcaption></figure></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-34">← aula anterior</a><a class="next" href="#aula-36">próxima aula →</a></nav>
+<p class="aula-pe">Aula 35 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-35">
+[
+  {"front":"Você escreveu por cima de um parágrafo e ainda não salvou nenhuma versão. O revert resolve?","back":"Não. O revert desfaz versões salvas. Mudança não salva só pode ser descartada, e o que foi escrito se perde."},
+  {"front":"Uma versão errada já foi enviada ao GitHub e a equipe já a baixou. Por que desfazer com versão nova em vez de apagar?","back":"Porque apagar reescreve o histórico que os outros já têm. A versão nova corrige e mantém tudo alinhado."},
+  {"front":"O terminal respondeu \"1 file changed\" depois do revert. Isso basta para dar a tarefa por encerrada?","back":"Não. Abra o arquivo e confira o conteúdo; a resposta só diz que algo mudou."}
+]
+</script>
+</section>

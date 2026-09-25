@@ -1,0 +1,165 @@
+<section class="view" id="v-aula-41" data-aula="41" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 7 · Aula 5 de 6</p>
+  <h1>A IA escreve o parecer; a <em>nota</em> é do programa</h1>
+  <figure class="cena"><img src="assets/img/aula-41.webp" width="1280" height="720" alt="Uma coordenadora revisa um boletim impresso, com a coluna de notas de um lado e um quadro vazio para o parecer escrito, e uma calculadora ao lado."></figure>
+  <p class="promise">Você consegue escrever um contrato de integração em cinco linhas e testar no chat que o resumo feito pela IA não muda o total calculado.</p>
+  <p class="why">Ligar uma IA a um bot parece o passo natural, mas cada ligação abre um caminho novo para erro e custo. Um bot previsível já é útil. A IA só entra onde melhora algo que você consegue medir.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Primeiro o bot <b>sem IA</b>, testado; depois a capacidade nova.</li>
+      <li>A IA recebe <b>dados mínimos</b> e nunca muda o número calculado.</li>
+      <li>Antes de ligar, escreva o <b>contrato de integração</b>: cinco linhas.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Primeiro a base testada, depois a IA</h2>
+  <p>O kit separa de propósito o caminho das mensagens, que é o <span class="gterm" data-gl="telegram" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7.">Telegram</span>, das funções de trabalho. E começa sem IA: status e relatório de dados fictícios.</p>
+  <p>Um <span class="gterm" data-gl="bot" data-def="Programa que conversa por um aplicativo de mensagens e responde sozinho, seguindo as regras que você define.">bot</span> previsível você testa sem gastar nada. Só depois vale perguntar se a IA melhora a interpretação, o resumo ou a classificação.</p>
+  <p data-ex="coordenadora">Denise queria um bot de dúvidas da secretaria "com IA desde o começo". Mudou o plano: primeiro um /horario que só lê a planilha; a IA ficou para uma segunda etapa, com teste.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Tudo de uma vez</span><p>O bot novo já chama uma IA para tudo.</p><p>Quando erra, ninguém sabe se foi o programa ou a IA.</p></div>
+      <div class="depois"><span class="rot">Em etapas</span><p>Etapa 1: bot sem IA, testado com /status e /relatorio.</p><p>Etapa 2: uma função com IA, comparada com o resultado da etapa 1.</p></div>
+      <p class="saldo"><b>Saldo:</b> um erro de cada vez para investigar.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>A nota é calculada; o parecer só comenta</h2>
+  <p>No boletim, a nota vem da conta e o parecer escrito comenta. O parecer nunca muda a nota.</p>
+  <p>Com o bot é igual. A IA pode escrever um resumo, mas o total vem do programa e não pode mudar no texto.</p>
+  <p data-ex="professora">Lúcia imaginou um /resumo para a lojinha do grêmio. A IA receberia só o total e os três produtos, e não a pasta inteira dos projetos dela.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Chat de IA</span></div>
+      <div class="tela-caso" data-rotulo="Resumo que mexe no número">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Você</span>Dados: 3 vendas; total R$ 100,00; caderno R$ 35,50; caneta R$ 9,50; agenda R$ 55,00.
+Escreva um resumo de duas linhas.</p>
+          <p class="msg ia falha"><span class="quem">IA</span>As vendas somaram cerca de R$ 110, com destaque para a agenda.</p>
+        </div>
+        <p class="tela-nota ruim">Inventou um total que não existe. Esse texto não pode sair pelo bot.</p>
+      </div>
+      <div class="tela-caso" data-rotulo="Resumo que preserva">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Você</span>Use só estes dados. Não altere nenhum número e não acrescente dados.
+Dados: 3 vendas; total R$ 100,00; caderno R$ 35,50; caneta R$ 9,50; agenda R$ 55,00.
+Escreva um resumo de duas linhas.</p>
+          <p class="msg ia ok"><span class="quem">IA</span>Foram 3 vendas, com total de R$ 100,00. A agenda respondeu por R$ 55,00, a maior parte.</p>
+        </div>
+        <p class="tela-nota bom">O total é o do programa, e nenhum dado novo apareceu.</p>
+      </div>
+    </div>
+    <figcaption><b>Toque nos dois botões</b> e compare o total de cada resumo.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>Cinco linhas antes de ligar qualquer IA</h2>
+  <p>Escreva o <span class="gterm" data-gl="contrato-de-integracao" data-def="Cinco linhas escritas antes de ligar uma IA a um bot: dados enviados, modelo, limite de custo, tempo máximo e o que fazer se a IA falhar.">contrato de integração</span>: os dados enviados, o modelo disponível, o limite de custo, o tempo máximo e o que acontece quando a IA falha.</p>
+  <p>A última linha é a mais esquecida. Com ela, o bot segue útil mesmo quando a IA não responde.</p>
+  <p data-ex="coordenadora">Denise escreveu o contrato do /horario em cinco minutos. Na linha da falha pôs: "sem IA, o bot manda a linha da planilha como está".</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Contrato de integração · /horario da secretaria</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Dados enviados: a linha da turma pedida, e nada além</div>
+        <div class="item doc"><span class="pin">2</span> Modelo: o que estiver disponível na conta da escola</div>
+        <div class="item doc"><span class="pin">3</span> Limite de custo: até R$ 5 por mês</div>
+        <div class="item doc"><span class="pin">4</span> Tempo máximo: 20 segundos por resposta</div>
+        <div class="item doc"><span class="pin">5</span> Se a IA falhar: manda a linha da planilha como está</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O mínimo que a tarefa precisa.</span></li>
+      <li><span class="pin">2</span><span>O que você tem acesso de verdade.</span></li>
+      <li><span class="pin">3</span><span>Quanto pode gastar.</span></li>
+      <li><span class="pin">4</span><span>Quanto pode esperar.</span></li>
+      <li><span class="pin">5</span><span>O plano B, sem IA.</span></li>
+    </ol>
+    <figcaption>Os valores de custo e tempo são de exemplo. Você define os seus.</figcaption>
+  </figure>
+  <div class="quiz" data-answer="a">
+    <p class="qk">Teste-se</p>
+    <p class="q">O /resumo com IA já funciona. Numa manhã, a IA não responde. O contrato diz, na linha 5: "se a IA falhar, manda só o total". O que o bot faz?</p>
+    <button class="opt" data-k="a" data-fb="Isso: é o que a linha 5 manda. A base continua útil sem a IA.">Manda só o total, sem o resumo</button>
+    <button class="opt" data-k="b" data-fb="Tentar sem parar pode travar o bot e gerar custo. O contrato define um limite e um plano B.">Tenta de novo até a IA voltar</button>
+    <button class="opt" data-k="c" data-fb="O bot não está fora do ar: só a parte da IA falhou. O total ainda pode ser enviado.">Avisa que está fora do ar</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>A mensagem nunca vai direto para um agente</h2>
+  <p>Não ligue um <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span> como o <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span> às mensagens que chegam pelo bot. E não desligue proteções só para a integração funcionar.</p>
+  <p>A IA recebe uma entrada curta, montada pelo programa, e devolve texto. Quem decide o que fazer com esse texto continua sendo o programa.</p>
+  <p data-ex="professora">Lúcia leu num fórum a dica de ligar o Codex direto no bot, "para ele fazer qualquer coisa". Não seguiu: qualquer coisa inclui apagar a pasta dela.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Mensagem direto no agente</span><p>Quem escreve no Telegram manda o agente agir no computador.</p><p>Uma frase maldosa vira uma ação.</p></div>
+      <div class="depois"><span class="rot">Função com entrada curta</span><p>O programa monta a entrada: o total e três produtos.</p><p>A IA devolve texto; o programa confere se o total é o que ele calculou e só então envia.</p></div>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Você não vai programar a integração neste módulo: o kit não tem essa parte, de propósito. A prática é escrever o contrato e testar a regra do número no chat que você já usa.</p></div>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Escreva o contrato e teste a regra do número</h3>
+  <p class="pgoal">Pronto quando o contrato tiver as cinco linhas e o resumo do chat mantiver o total de R$ 100,00, sem dado novo. Cerca de 10 minutos, no chat que você já usa e no bloco de notas.</p>
+  <p class="psafe">Os dados são os fictícios do kit, e nada é enviado ao bot. Se a IA mudar um número, isso não é falha sua: é o risco que o contrato cobre. Anote e reforce a frase "não altere nenhum número".</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Use só estes dados. Não altere nenhum número e não acrescente dados.
+Dados: 3 vendas; total R$ 100,00; caderno R$ 35,50; caneta R$ 9,50; agenda R$ 55,00.
+Tarefa: escreva um resumo de duas linhas para &lt;a equipe da lojinha do grêmio&gt;.
+No fim, repita o total exatamente como veio.</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>No bloco de notas, escreva o contrato de integração em cinco linhas para um /resumo da lojinha, ou para uma consulta do seu trabalho. Plano gratuito? Escreva "modelo do plano gratuito", "custo: R$ 0, sem pagar extra" e, na linha 5, "se a IA errar ou falhar, uso o total do bot". Plano pago? "O modelo padrão da minha conta" e o valor extra que você aceita gastar.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Copie o pedido, troque o trecho entre &lt; &gt; e mande no chat.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Confira: o total é R$ 100,00, o mesmo do bot (lá aparece 100.00, com ponto), e nenhum dado novo apareceu.</span></label></li>
+  </ol>
+  <details class="mais"><summary>Veja o contrato de uma professora</summary>
+    <p><b>1. Dados enviados:</b> o total e os três produtos com valor.<br><b>2. Modelo:</b> o que estiver disponível na minha conta.<br><b>3. Limite de custo:</b> até R$ 2 por mês.<br><b>4. Tempo máximo:</b> 15 segundos.<br><b>5. Se a IA falhar:</b> o bot manda só a linha do /relatorio, como hoje.</p>
+  </details>
+  <p class="pdone">Você definiu, antes de ligar, o que a IA recebe, quanto custa, quanto espera e o que acontece se ela falhar.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>IA em etapas</h3>
+    <ol>
+      <li><span><b>Base primeiro</b>bot sem IA, testado, antes de qualquer ligação.</span></li>
+      <li><span><b>Número intocável</b>a IA comenta; o total vem do programa.</span></li>
+      <li><span><b>Contrato</b>dados, modelo, custo, tempo e plano de falha.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe onde uma IA entra no bot sem pôr em risco o número calculado.</p>
+    <p class="na-action">Guarde o contrato junto das anotações do bot. O mesmo molde serve para qualquer consulta do seu trabalho.</p>
+    <p class="na-hook">Na próxima aula: testar o bot antes de confiar nele, inclusive quando algo dá errado.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Conecte capacidades em etapas<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>O kit deliberadamente separa transporte e funções de trabalho. Começa determinístico: status e relatório de dados fictícios. Para acoplar IA, defina uma função com entrada limitada, timeout, teto de saída e revisão. Não exponha codex exec diretamente a mensagens públicas nem desative proteções para fazê-lo funcionar.</p><h3>Por que aprender</h3><p>Um programa previsível permite testar a base sem gastar <span class="gterm" data-def="Porta de entrada para um programa usar um serviço de IA sem passar pela tela do chat. O uso pela API é cobrado por consumo." data-gl="api">API</span>. Depois, você avalia se a IA melhora interpretação, resumo ou classificação e mede o resultado com uma referência conhecida.</p><h3>Conceitos-chave</h3><p>Função de domínio; limites; timeout; revisão; dados mínimos.</p><h4>Na prática</h4><p>Uma função de resumo pode receber apenas o total e três categorias, em vez de todo o <span class="gterm" data-def="Outro nome para pasta, usado no terminal." data-gl="diretorio">diretório</span> de projetos. O texto gerado nunca altera o total calculado pelo programa.</p><h4>Experimente agora</h4><p>Escreva um contrato de integração: dados enviados, modelo disponível, limite de custo, tempo máximo e ação quando a IA falhar. O bot base permanece útil sem essa extensão.</p></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-40">← aula anterior</a><a class="next" href="#aula-42">próxima aula →</a></nav>
+<p class="aula-pe">Aula 41 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-41">
+[
+  {"front":"Um colega quer mandar a pasta inteira de projetos para a IA ter contexto. O que você propõe?","back":"Mandar só os dados que o resumo usa, como o total e os três produtos. Menos dado é menos custo e menos risco."},
+  {"front":"O resumo da IA disse \"cerca de R$ 110\" e o programa calculou R$ 100,00. Qual vale?","back":"O do programa. O texto da IA é descartado ou refeito; ele nunca corrige o cálculo."},
+  {"front":"Seu contrato não diz o que fazer quando a IA falha. Que problema isso cria?","back":"O bot pode ficar sem resposta nenhuma. Com a linha de falha, ele segue útil sem o resumo."}
+]
+</script>
+</section>

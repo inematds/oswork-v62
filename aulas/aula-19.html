@@ -1,0 +1,147 @@
+<section class="view" id="v-aula-19" data-aula="19" data-tempo="13min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 4 · Aula 1 de 6</p>
+  <h1>Uma pasta representa <em>um contexto</em></h1>
+  <figure class="cena"><img src="assets/img/aula-19.webp" width="1280" height="720" alt="Uma coordenadora pedagógica abre uma gaveta do arquivo de aço da secretaria da escola; dentro, só as pastas de uma turma, e as outras gavetas ficam fechadas."></figure>
+  <p class="promise">Você consegue desenhar a árvore da sua pasta de projetos, com config e um projeto de treino. E consegue criá-la com um comando no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
+  <p class="why">Quando tudo fica numa pasta só, a IA lê material de assuntos que não têm nada a ver com o pedido. Depois fica difícil dizer de onde veio uma conclusão. Hoje você separa os assuntos antes de criar qualquer arquivo.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Uma pasta, <b>um assunto</b> de trabalho, com nome claro.</li>
+      <li>A pasta <b>config</b> guarda o que vale para todos os projetos.</li>
+      <li>Dentro do projeto, <b>entradas</b> separadas das <b>saídas</b>.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>A pasta diz à IA onde o assunto começa e termina</h2>
+  <p>No arquivo de aço da secretaria, cada gaveta guarda uma turma. Ninguém procura o 8º A na gaveta do 7º B. Uma pasta de trabalho faz o mesmo: ela reúne o material de um assunto só. Esse material é o <span class="gterm" data-gl="contexto" data-def="O material que a IA recebe para fazer uma tarefa: os arquivos, as instruções e as informações que você aponta.">contexto</span> da tarefa.</p>
+  <p>Quando você abre o <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span> numa pasta, ele trabalha a partir dela. Se a pasta mistura assuntos, o que não tem relação com o pedido vira ruído.</p>
+  <p data-ex="professora">Lúcia guardava o projeto da feira de ciências na mesma pasta dos boletins. Pediu à IA um resumo da feira e recebeu um parágrafo com a nota de um aluno no meio.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Tudo junto</span><p><b>Pasta Documentos:</b> feira-de-ciencias.docx, boletins-8A.xlsx, ata-do-conselho.pdf.</p><p><b>Resultado:</b> o resumo da feira cita uma nota de boletim.</p></div>
+      <div class="depois"><span class="rot">Uma pasta por contexto</span><p><b>Pasta feira-de-ciencias:</b> só o regulamento e a lista de grupos.</p><p><b>Resultado:</b> o resumo fala só da feira.</p></div>
+      <p class="saldo"><b>Saldo:</b> a IA lê menos material, e você sabe de onde veio cada frase.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>O til é o apelido da sua pasta pessoal</h2>
+  <p>No terminal, o símbolo ~ (til) representa a sua <span class="gterm" data-gl="pasta-pessoal" data-def="A sua pasta principal no computador, onde ficam Documentos, Downloads e as demais. No terminal ela aparece como ~ (til).">pasta pessoal</span>. Dentro dela você vai criar uma pasta projetos, que reúne trabalhos independentes.</p>
+  <p>O <span class="gterm" data-gl="caminho" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config.">caminho</span> ~/projetos/config se lê em ordem: pasta pessoal, depois projetos, depois config. No teclado brasileiro, o til sai com a tecla do til seguida da barra de espaço.</p>
+  <p data-ex="coordenadora">Denise digitou pwd no terminal, como no módulo 3, e viu o endereço completo da pasta pessoal dela. O ~ é só o jeito curto de escrever esse endereço.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> cd ~
+<span class="pr">$</span> pwd
+<span class="out">/Users/denise</span></code></pre>
+<p class="tela-nota">cd ~ leva você para a pasta pessoal; pwd mostra onde você está. No Linux, e no Windows com o terminal do módulo 3, o endereço começa com /home, como /home/denise.</p></div>
+  <figcaption>O endereço muda de computador para computador. O ~ vale em todos.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>O que vale para todos fica em config, fora dos projetos</h2>
+  <p>A pasta config, de configuração, guarda o conhecimento que vale para qualquer projeto, como as suas preferências. Ela fica dentro de projetos, mas fora de cada projeto.</p>
+  <p>Cada projeto guarda as próprias entradas, o material que a IA lê, como atas ou planilhas. E guarda as próprias saídas, o que ela produz. Separadas, dá para conferir uma contra a outra. Não misture num projeto documentos de turmas ou escolas diferentes.</p>
+  <p data-ex="coordenadora">Denise prefere relatórios curtos, com as pendências no fim. Isso vale para o relatório do conselho e para a pauta da reunião de pais. Então vai para config, uma vez só.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>~/projetos</span></div>
+      <div class="janela-body">
+        <div class="item pasta"><span class="pin">1</span> config</div>
+        <div class="item doc dentro">memoria.md · decisoes.md (aula 3 deste módulo)</div>
+        <div class="item pasta"><span class="pin">2</span> meu-primeiro-projeto</div>
+        <div class="item pasta dentro"><span class="pin">3</span> entradas</div>
+        <div class="item pasta dentro"><span class="pin">4</span> saidas</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Vale para todos os projetos.</span></li>
+      <li><span class="pin">2</span><span>Um contexto: o projeto de treino.</span></li>
+      <li><span class="pin">3</span><span>O que a IA lê.</span></li>
+      <li><span class="pin">4</span><span>O que a IA produz, para você revisar.</span></li>
+    </ol>
+  </figure>
+  <div class="quiz" data-answer="b">
+    <p class="qk">Teste-se</p>
+    <p class="q">Denise quer guardar a nota "prefiro relatórios curtos". Onde ela mora?</p>
+    <button class="opt" data-k="a" data-fb="Saídas guardam o que a IA produziu num projeto, não uma preferência sua.">Nas saídas do projeto do conselho</button>
+    <button class="opt" data-k="b" data-fb="Vale para qualquer projeto, então fica num lugar só: config.">Na pasta config, fora dos projetos</button>
+    <button class="opt" data-k="c" data-fb="Copiar em cada projeto cria versões que um dia vão discordar.">Nas entradas de cada projeto</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Desenhe a árvore antes de criar as pastas</h2>
+  <p>Antes de criar, desenhe a árvore no papel: uma pasta config e um único projeto de treino. Assim você decide os nomes com calma.</p>
+  <p>Use nomes curtos, sem espaço e sem acento, como meu-primeiro-projeto e saidas. No terminal, espaço e acento dão trabalho em cada comando.</p>
+  <p data-ex="professora">Lúcia desenhou num guardanapo: projetos, com config e feira-de-ciencias; dentro da feira, entradas e saidas. Levou um minuto e evitou três pastas com nomes parecidos.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> mkdir -p ~/projetos/config ~/projetos/meu-primeiro-projeto/entradas ~/projetos/meu-primeiro-projeto/saidas
+<span class="pr">$</span> ls ~/projetos
+<span class="out">config  meu-primeiro-projeto</span></code></pre>
+<p class="tela-nota">mkdir -p cria as pastas e as de cima que faltarem. Se uma pasta já existe, ela fica como está.</p></div>
+  <figcaption>Um comando cria a árvore inteira. O ls confere o resultado.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O comando é comprido porque cria quatro pastas de uma vez. Copie e cole do jeito que está, numa linha só. Para colar no terminal, use o botão direito › Colar; no teclado, Ctrl+Shift+V no Linux e no Windows, Cmd+V no Mac. Prefere o mouse? Digite cd ~ e depois open . no Mac, ou explorer.exe . no Windows, dentro do terminal Linux do módulo 3: o gerenciador de arquivos abre na sua pasta pessoal do terminal. Crie ali as pastas, com botão direito › Nova pasta.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Crie a árvore do projeto de treino</h3>
+  <p class="pgoal">Pronto quando o primeiro ls mostrar config e meu-primeiro-projeto, e o segundo mostrar entradas e saidas. Cerca de 8 minutos, no computador.</p>
+  <p class="psafe">Os comandos só criam pastas vazias dentro da sua pasta pessoal; nada é apagado. Criou meu-primeiro-projeto no módulo 3? Tudo bem, o que já está lá continua. Apareceu uma mensagem de erro? Pare, confira se colou a linha inteira e tente de novo uma vez.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir -p ~/projetos/config ~/projetos/meu-primeiro-projeto/entradas ~/projetos/meu-primeiro-projeto/saidas
+ls ~/projetos
+ls ~/projetos/meu-primeiro-projeto</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Desenhe no papel a árvore: projetos, com config e meu-primeiro-projeto; dentro do projeto, entradas e saidas.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Abra o terminal do módulo 3 (no Windows, o mesmo terminal Linux daquele módulo). Cole as três linhas com o botão direito › Colar e aperte Enter. O -p só pede: crie também as pastas de cima que faltarem.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Compare a resposta com o seu desenho. Se o projeto já tinha arquivos do módulo 3, eles também aparecem, e está certo.</span></label></li>
+  </ol>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>O que você deve ver</span></div>
+<pre><code><span class="out">config  meu-primeiro-projeto
+entradas  saidas</span></code></pre>
+<p class="tela-nota">A primeira linha responde ao ls de projetos; a segunda, ao ls do projeto de treino.</p></div></figure>
+  <p class="pdone">Você acabou de criar, com um comando, a árvore que separa o que vale sempre do que é de um projeto só.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Pastas por contexto</h3>
+    <ol>
+      <li><span><b>Uma pasta, um assunto</b>a IA lê só o que pertence a ele.</span></li>
+      <li><span><b>config fora do projeto</b>o que vale para todos, num lugar só.</span></li>
+      <li><span><b>entradas e saidas</b>o que a IA lê, separado do que ela produz.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já tem a casa digital de pé: uma pasta para o que vale sempre e uma para o projeto de treino.</p>
+    <p class="na-action">Hoje, abra a sua pasta Documentos e anote dois assuntos que estão misturados nela. Não mova nada ainda; só anote.</p>
+    <p class="na-hook">Na próxima aula: a pasta existe, mas quem chegar depois não sabe para que ela serve. Você vai escrever o <span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span> dela, em texto simples.</p>
+  </div>
+</div>
+
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Uma pasta representa um contexto<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>O símbolo ~ representa a pasta pessoal no <span class="gterm" data-def="Linguagem de comandos do terminal no Linux e no macOS. Os comandos deste curso são escritos para ele." data-gl="bash">Bash</span>. Dentro dela, projetos reúne trabalhos independentes. Use nomes claros e evite misturar documentos de clientes diferentes. A pasta config guarda conhecimento transversal; cada projeto mantém suas próprias entradas e resultados.</p><h3>Por que aprender</h3><p>Contextos separados ajudam a limitar o que a IA precisa ler. Uma pasta cheia de assuntos não relacionados aumenta ruído e torna difícil explicar de onde veio uma conclusão.</p><h3>Conceitos-chave</h3><p>Pasta pessoal; projetos; contexto; entradas e saídas.</p><h4>Na prática</h4><p>Em ~/projetos/website ficam os arquivos do site. Em ~/projetos/estudos ficam experimentos. No Windows, o gerenciador pode mostrar <span class="gterm" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config." data-gl="caminho">caminhos</span> como C:\Users\SeuNome\projetos.</p><h4>✓ Faça</h4><p>Desenhe a árvore antes de criar arquivos. Escolha um único projeto de treino e uma única pasta global config.</p><h4>✗ Evite</h4><p>Aceitar uma conclusão sem conferir a entrada que a sustenta.</p><figure class="comp-fig"><ul><li>~/projetos/</li><li>config/</li><li>memoria.md</li><li>decisoes.md</li><li>meu-projeto/</li><li><span class="gterm" data-def="Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir." data-gl="agents-md">AGENTS.md</span></li><li>entradas/</li><li>saidas/</li></ul><figcaption>Uma pasta por contexto. As configurações ficam fora do projeto; entradas e saídas ficam separadas.</figcaption></figure></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-18">← aula anterior</a><a class="next" href="#aula-20">próxima aula →</a></nav>
+<p class="aula-pe">Aula 19 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-19">
+[
+  {"front":"Você vai pedir à IA o resumo da reunião de pais, e a pasta aberta tem também as notas das turmas. O que faz antes do pedido?","back":"Separa: cria uma pasta só para a reunião, com o material dela, e abre a IA ali."},
+  {"front":"Qual a diferença entre a pasta config e a pasta de um projeto?","back":"config guarda o que vale para qualquer projeto, como preferências. O projeto guarda as entradas e saídas daquele trabalho."},
+  {"front":"O que o símbolo ~ quer dizer num caminho como ~/projetos?","back":"A sua pasta pessoal. É o jeito curto de escrever o endereço dela, que muda de computador para computador."}
+]
+</script>
+</section>

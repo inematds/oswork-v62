@@ -1,0 +1,152 @@
+<section class="view" id="v-aula-33" data-aula="33" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 6 · Aula 3 de 6</p>
+  <h1>Uma versão salva com <em>nome e motivo</em></h1>
+  <figure class="cena"><img src="assets/img/aula-33.webp" width="1280" height="720" alt="Uma professora escreve a legenda no verso de uma foto impressa da feira de ciências, com outras fotos do evento espalhadas na mesa e o notebook ao lado."></figure>
+  <p class="promise">Você consegue configurar a autoria só na pasta de treino e deixar a anotação pessoal de fora com o <span class="gterm" data-gl="gitignore" data-def="Arquivo que lista o que o Git não deve guardar, como senhas e arquivos temporários.">.gitignore</span>. Depois, cria o primeiro <span class="gterm" data-gl="commit" data-def="Versão salva no Git, com uma mensagem que explica a mudança. Dá para voltar a ela depois.">commit</span> com uma mensagem que diz o que mudou.</p>
+  <p class="why">Daqui a um mês, uma versão chamada "update" não diz nada. Uma mensagem concreta faz você achar a versão certa em segundos e lembrar se ela funcionava.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Nome e e-mail configurados <b>só nesta pasta</b> dizem quem salvou.</li>
+      <li>O .gitignore lista o que <b>nunca entra</b> no histórico.</li>
+      <li>A mensagem é a <b>legenda</b> da versão: o que mudou, em poucas palavras.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>O Git precisa saber quem salvou</h2>
+  <p>Cada versão guarda um nome e um e-mail. Configure os dois com <code>git config</code>, dentro da pasta de treino. Sem a palavra <code>--global</code>, a configuração vale só para este <span class="gterm" data-gl="repositorio" data-def="Pasta de projeto acompanhada pelo Git, com todo o histórico de versões.">repositório</span>.</p>
+  <p>No treino, o e-mail pode ser fictício. Ele aparece em cada versão e fica visível se um dia a pasta for publicada no <span class="gterm" data-gl="github" data-def="Site onde você guarda uma cópia do seu repositório Git na internet, para trabalhar de outro computador ou com outras pessoas.">GitHub</span>.</p>
+  <p data-ex="professora">Lúcia configurou um e-mail fictício só na pasta de treino. Na pasta dos roteiros de ciências, vai configurar o e-mail da escola. Cada pasta guarda o seu.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> git config user.name "Lúcia Andrade"
+<span class="pr">$</span> git config user.email "lucia@exemplo.com"
+<span class="pr">$</span> git config user.name
+<span class="out">Lúcia Andrade</span></code></pre>
+<p class="tela-nota">As duas primeiras linhas não respondem nada. A terceira, sem valor no fim, só lê o nome configurado.</p></div>
+  <figcaption>O <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> em silêncio, aqui, quer dizer que deu certo.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>O .gitignore deixa de fora o que nunca deve entrar</h2>
+  <p>O .gitignore é um arquivo de texto com uma linha por item a ignorar. O <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span> deixa de oferecer esses arquivos para as versões.</p>
+  <p>Isso vale para arquivo que ainda não foi separado nem salvo. O que já foi, continua acompanhado, mesmo depois de listado.</p>
+  <p>Por isso, crie a lista antes da primeira versão. É ali que, mais adiante, entra o <span class="gterm" data-gl="env" data-def="Arquivo que guarda chaves e senhas fora do código. Nunca vai para o Git, para um pedido ou para um print.">.env</span>, o arquivo das senhas.</p>
+  <p data-ex="coordenadora">No treino dela, Denise pôs o nome da anotação pessoal no .gitignore. No status seguinte, a anotação sumiu da lista. Continua na pasta, mas o Git não a oferece mais.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> printf 'notas-privadas.txt\n' &gt; .gitignore
+<span class="pr">$</span> git status
+<span class="out">On branch main
+
+No commits yet
+
+Changes to be committed:
+	new file:   README.md
+
+Untracked files:
+	.gitignore</span></code></pre>
+<p class="tela-nota">A anotação não aparece mais. No lugar dela surge o próprio .gitignore, que também vai para o histórico. Nome começado por ponto fica oculto no gerenciador de arquivos; o arquivo existe.</p></div>
+  <figcaption>Algumas linhas de ajuda da resposta foram omitidas para caber na tela.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>A mensagem é a legenda atrás da foto</h2>
+  <p>Foto de evento sem legenda não diz nada dez anos depois. A mensagem da versão é essa legenda: diga o que mudou, com verbo e objeto.</p>
+  <p>Salve quando a mudança estiver conferida. Uma versão só é ponto seguro de volta se você sabe que ela funcionava.</p>
+  <p data-ex="coordenadora">Denise escreveu "Acrescenta o quadro de faltas por turma ao relatório de setembro". Na semana seguinte, achou essa versão lendo só a lista.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Sem legenda</span><p><b>Mensagem:</b> "update"</p><p><b>Um mês depois:</b> ninguém sabe o que mudou sem abrir os arquivos.</p></div>
+      <div class="depois"><span class="rot">Com legenda</span><p><b>Mensagem:</b> "Cria README e lista do que não guardar"</p><p><b>Um mês depois:</b> a lista de versões já responde.</p></div>
+    </div>
+    <figcaption>Verbo no começo e o objeto da mudança. Sem "ajustes", sem "vários".</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Salve e confira na lista de versões</h2>
+  <p>Separe os dois arquivos pelo nome e salve com <code>git commit -m</code> e a mensagem entre aspas. Depois, <code>git log --oneline</code> mostra a lista curta das versões, uma por linha.</p>
+  <p data-ex="professora">Lúcia salvou o README e o .gitignore numa versão só. O log mostrou uma linha com um código curto e a mensagem dela.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> git add README.md .gitignore
+<span class="pr">$</span> git commit -m "Cria README e lista do que não guardar"
+<span class="out">[main (root-commit) 5f6c1eb] Cria README e lista do que não guardar
+ 2 files changed, 4 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md</span>
+<span class="pr">$</span> git log --oneline
+<span class="out">5f6c1eb (HEAD -&gt; main) Cria README e lista do que não guardar</span></code></pre>
+<p class="tela-nota">"2 files changed" confirma os dois arquivos. 5f6c1eb é o código curto desta versão; no seu computador será outro.</p></div></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Se a resposta do commit trouxer "Please tell me who you are", o nome e o e-mail não foram configurados nesta pasta. Rode as duas linhas do passo 1 e repita o commit. Nada foi perdido.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Crie a primeira versão da pasta de treino</h3>
+  <p class="pgoal">Pronto quando o log mostrar uma linha com a sua mensagem e o status responder "nothing to commit, working tree clean". Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">Tudo fica na pasta treino-git, e nada sai do computador. Troque o nome e o e-mail pelos seus, ou por fictícios. Se o status ainda listar notas-privadas.txt, não salve. Em "Untracked files", confira o nome escrito no .gitignore. Em "Changes to be committed", você a separou antes: rode “git rm --cached notas-privadas.txt”, que tira do monte sem apagar o arquivo, e confira o status de novo. Colou o bloco 1 sem trocar o nome? Rode de novo com o seu; o novo substitui o anterior.</p>
+  <p><b>Bloco 1</b> · troque o nome e o e-mail antes de rodar:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/treino-git
+git config user.name "Seu Nome"
+git config user.email "seu-email@exemplo.com"</pre></div>
+  <p><b>Bloco 2</b> · a lista do que não guardar:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">printf 'notas-privadas.txt\n' &gt; .gitignore
+git status</pre></div>
+  <p><b>Bloco 3</b> · salve e confira:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">git add README.md .gitignore
+git commit -m "Cria README e lista do que não guardar"
+git log --oneline
+git status</pre></div>
+  <details class="mais"><summary>Não fez as aulas anteriores do módulo? Rode isto antes</summary>
+    <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir -p ~/projetos/treino-git
+cd ~/projetos/treino-git
+git init -b main
+printf '# Treino de Git\n\nPasta para praticar o histórico.\n' &gt; README.md
+printf 'ideias soltas, não publicar\n' &gt; notas-privadas.txt</pre></div>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole o bloco 1 primeiro no bloco de notas, troque "Seu Nome" e o e-mail pelos seus (ou fictícios), e só então copie de lá para o terminal. Colado direto, ele roda na hora.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Cole o bloco 2. Confira que notas-privadas.txt sumiu do status.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Cole o bloco 3. Confira "2 files changed", a sua mensagem no log e "working tree clean" no status.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de salvar a primeira versão com autoria, com uma mensagem que explica e sem a anotação pessoal.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Versão com intenção</h3>
+    <ol>
+      <li><span><b>Autoria</b>nome e e-mail só nesta pasta, sem --global.</span></li>
+      <li><span><b>.gitignore</b>a lista do que nunca entra, criada antes da primeira versão.</span></li>
+      <li><span><b>Mensagem</b>verbo e objeto: o que mudou.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já tem uma versão salva e sabe o que entrou nela.</p>
+    <p class="na-action">Hoje, reescreva de cabeça uma mensagem vaga que você já viu, como "ajustes finais", no formato verbo e objeto.</p>
+    <p class="na-hook">Na próxima aula: e quando o projeto já está no GitHub? Você copia o repositório do curso para o seu computador e atualiza sem estragar nada.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Salve uma versão com intenção<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Configure user.name e user.email localmente para identificar autoria. Prepare os arquivos desejados e use git commit -m com uma descrição concreta. Um commit deve representar uma mudança que você consegue explicar e verificar.</p><h3>Por que aprender</h3><p>Mensagens como “update” tornam o histórico pouco útil. Uma versão só é um ponto confiável se você sabe se ela funcionava e quais verificações foram feitas.</p><h3>Conceitos-chave</h3><p>Autoria; mensagem; mudança coesa; verificação.</p><h4>Na prática</h4><p>“Adiciona instruções para conferir vendas” diz o que mudou. Depois, git <span class="gterm" data-def="Registro do que um programa fez, linha por linha, com data e hora. É onde se procura a causa de um erro." data-gl="log">log</span> --oneline mostra uma lista compacta dos registros e seus identificadores.</p><h4>Sequência para experimentar</h4><ol><li>Prepare uma cópia de treino.</li><li>Configure git config user.name "Seu Nome" e git config user.email "seu-email" no treino. Prepare <span class="gterm" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado." data-gl="readme">README</span>.md e .gitignore e crie o primeiro commit.</li><li>Registre o resultado observado e a próxima correção.</li></ol><figure class="comp-fig"><ul><li>Trabalho</li><li>Preparado</li><li>Salvo</li></ul><figcaption>Três estados, dois comandos. Nada é salvo antes de você preparar e descrever a intenção.</figcaption></figure></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-32">← aula anterior</a><a class="next" href="#aula-34">próxima aula →</a></nav>
+<p class="aula-pe">Aula 33 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-33">
+[
+  {"front":"O commit respondeu \"Please tell me who you are\". O que faltou fazer?","back":"Configurar o nome e o e-mail na pasta, com git config user.name e git config user.email."},
+  {"front":"Um colega salvou uma versão com a mensagem \"update\". Como você reescreveria?","back":"Com verbo e objeto do que mudou, como \"Acrescenta o quadro de faltas ao relatório\"."},
+  {"front":"Você vai criar um arquivo de senhas na pasta. Quando ele deve entrar no .gitignore?","back":"Antes de qualquer versão que pudesse incluí-lo. Depois de salvo, ele já está no histórico."},
+  {"front":"O salvamento de uma versão já envia os arquivos ao GitHub?","back":"Não. A versão fica registrada no seu computador; enviar ao site é outro passo."}
+]
+</script>
+</section>

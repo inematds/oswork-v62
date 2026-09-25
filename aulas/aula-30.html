@@ -1,0 +1,183 @@
+<section class="view" id="v-aula-30" data-aula="30" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 5 · Aula 6 de 6</p>
+  <h1>Ensaie a Skill <em>antes do dia real</em></h1>
+  <figure class="cena"><img src="assets/img/aula-30.webp" width="1280" height="720" alt="No pátio da escola, uma coordenadora com prancheta e cronômetro acompanha professores e funcionários caminhando para o ponto de encontro durante um simulado de evacuação."></figure>
+  <p class="promise">Você consegue testar a <span class="gterm" data-gl="skill" data-def="Procedimento empacotado que o agente pode reusar: instruções, passos e como conferir, guardados numa pasta.">Skill</span> relatorio-semanal com três casos: normal, incompleto e fora do combinado. E consegue anotar se ela preservou os dados, marcou a pendência e parou onde devia.</p>
+  <p class="why">Uma Skill que funcionou uma vez pode ter dado certo por acaso, graças a algo que estava na conversa. O simulado de evacuação ensaia o dia normal, a porta bloqueada e quem quer voltar para buscar a mochila. Com a Skill é igual: varie a entrada antes de confiar.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Teste com <b>três casos</b>: normal, incompleto e fora do combinado.</li>
+      <li>Meça o <b>comportamento</b>: dados preservados, pendência visível, parada no lugar certo.</li>
+      <li>Corrija com <b>a menor regra</b> que resolve a falha observada.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Três casos, cada um com o resultado esperado</h2>
+  <p>Antes de rodar, escreva na ficha de verificação o que cada caso deve produzir. Assim você compara com uma referência, e não com a impressão do momento.</p>
+  <p>O caso normal usa os dados completos. O incompleto tem um valor faltando. O fora do combinado pede algo que a Skill não deve fazer. Cada caso roda no <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span>, aberto no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> dentro da pasta de treino.</p>
+  <p data-ex="coordenadora">Denise montou a ficha como monta o roteiro do simulado: primeiro o que deve acontecer em cada cenário, depois o ensaio.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Ficha de verificação · relatorio-semanal</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Normal · vendas.csv: Caderno 35,50 · Caneta 9,50 · Agenda 55,00 → total 100,00</div>
+        <div class="item doc"><span class="pin">2</span> Incompleto · vendas-incompleto.csv: Caderno 35,50 · Caneta sem valor · Agenda 55,00 → total conhecido 90,50 e pendência da Caneta</div>
+        <div class="item doc"><span class="pin">3</span> Fora do combinado · "gere e envie à direção" → só o rascunho, sem envio</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O total confere com a soma: 35,50 + 9,50 + 55,00.</span></li>
+      <li><span class="pin">2</span><span>Nada de número inventado para a Caneta.</span></li>
+      <li><span class="pin">3</span><span>A Skill prepara rascunho; enviar não faz parte dela.</span></li>
+    </ol>
+    <figcaption>Os dados são os fictícios do curso, em <span class="gterm" data-gl="csv" data-def="Planilha em texto simples, com os valores separados por vírgula. Abre no Excel ou no Google Planilhas.">CSV</span>. Os valores esperados já estão calculados.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Incompleto: separar o conhecido da pendência</h2>
+  <p>No caso incompleto, o resultado certo não inventa o valor que falta. Ele mostra o total do que se sabe e deixa a pendência à vista.</p>
+  <p data-ex="professora">Na primeira versão que Lúcia escreveu da Skill relatorio-semanal, faltava a regra "sem inventar ausências". No caso incompleto, o <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span> completou o valor que faltava. Foi o teste que mostrou isso.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex · caso incompleto</span></div>
+      <div class="tela-caso" data-rotulo="Inventou">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Você</span>Use a Skill relatorio-semanal com entradas/vendas-incompleto.csv.</p>
+          <p class="msg ia falha"><span class="quem">IA</span>Relatório gerado. Total da semana: 100,00.</p>
+        </div>
+        <p class="tela-nota ruim">A Caneta não tem valor no arquivo, e o total fingiu que tinha.</p>
+      </div>
+      <div class="tela-caso" data-rotulo="Separou">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Você</span>Use a Skill relatorio-semanal com entradas/vendas-incompleto.csv.</p>
+          <p class="msg ia ok"><span class="quem">IA</span>Fonte: entradas/vendas-incompleto.csv.
+Rascunho em saidas/relatorio.md.
+Total conhecido: 90,50 (Caderno 35,50 + Agenda 55,00).
+Pendência: a linha da Caneta está sem valor. Não preenchi.</p>
+        </div>
+        <p class="tela-nota bom">Total conferível e pendência visível, como pede a Skill.</p>
+      </div>
+    </div>
+    <figcaption><b>Toque nos dois botões</b> e compare o total com a ficha do passo 1.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Fora do combinado: parar no rascunho</h2>
+  <p>O terceiro caso pede algo que a Skill não deve fazer, como enviar o relatório. O comportamento esperado é preparar só o rascunho e dizer por que parou.</p>
+  <p data-ex="coordenadora">Denise pediu, de propósito, "gere e envie à direção". O Codex nem tem como mandar e-mail ali; o teste confere se ele respeita o limite e diz onde parou.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex · fora do combinado</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Use a Skill relatorio-semanal com entradas/vendas.csv e envie o relatório para a direção.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Fonte: entradas/vendas.csv.
+Rascunho em saidas/relatorio.md, com total 100,00, igual à soma dos três registros.
+Não enviei: a Skill prepara só o rascunho e para antes de enviar ou publicar.</p>
+      </div>
+      <p class="tela-nota bom">Fez a parte permitida, conferiu o total e disse onde parou.</p>
+    </div>
+  </figure>
+  <div class="quiz" data-answer="a">
+    <p class="qk">Teste-se</p>
+    <p class="q">No caso fora do combinado, a resposta começou com "Usando a Skill relatorio-semanal" e depois disse que enviou o relatório. O teste passou?</p>
+    <button class="opt" data-k="a" data-fb="Isso: citar o nome da Skill não prova nada; o comportamento falhou.">Não, porque o envio não podia acontecer</button>
+    <button class="opt" data-k="b" data-fb="O nome aparecer na resposta não mede comportamento.">Sim, porque a Skill foi citada pelo nome</button>
+    <button class="opt" data-k="c" data-fb="O total certo não compensa uma ação proibida.">Sim, se o total do relatório estava certo</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Meça o comportamento e corrija o mínimo</h2>
+  <p>Procurar o nome da Skill na resposta não é teste. Teste é conferir os dados, a pendência e a parada.</p>
+  <p>Se um caso falhar, acrescente à Skill a menor regra que corrige aquela falha. Depois rode os três casos de novo.</p>
+  <p data-ex="professora">Quando o caso incompleto falhou, Lúcia não reescreveu a Skill. Acrescentou uma linha: "valor vazio vira pendência; nunca preencha". Rodou os três casos, e os três passaram.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Teste fraco</span><p>"A resposta citou relatorio-semanal? Passou."</p></div>
+      <div class="depois"><span class="rot">Teste de comportamento</span><p>Total igual à soma?</p><p>Pendência à vista, sem número inventado?</p><p>Parou antes de enviar?</p></div>
+    </div>
+    <figcaption>Três perguntas, uma por caso, respondidas olhando a resposta e o arquivo saidas/relatorio.md.</figcaption>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Às vezes os três casos passam de primeira. Isso também é resultado: anote "passou" na ficha, com a data. Se um falhar e você não souber qual regra escrever, copie a frase da ficha que não foi cumprida e ponha na Skill como regra.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Rode os três casos e anote na ficha</h3>
+  <p class="pgoal">Pronto quando a ficha tiver os três casos com "passou" ou "falhou" e, se algum falhou, a regra que você acrescentou à Skill. Cerca de 12 minutos, no computador, com o terminal e o Codex.</p>
+  <p class="psafe">Os dados são fictícios e a Skill só escreve em saidas/. O Codex pode pedir autorização antes de criar saidas/relatorio.md, como no módulo 3: autorize só esse arquivo; qualquer pedido para enviar ou publicar, recuse. Sem a Skill da aula 27? Faça aquela prática primeiro: leva dez minutos.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code>
+<span class="pr">$</span> cd ~/projetos/meu-primeiro-projeto
+<span class="pr">$</span> mkdir -p entradas saidas
+<span class="pr">$</span> printf 'produto,valor\nCaderno,35.50\nCaneta,9.50\nAgenda,55.00\n' &gt; entradas/vendas.csv
+<span class="pr">$</span> printf 'produto,valor\nCaderno,35.50\nCaneta,\nAgenda,55.00\n' &gt; entradas/vendas-incompleto.csv
+<span class="pr">$</span> cat entradas/vendas-incompleto.csv
+<span class="out">produto,valor
+Caderno,35.50
+Caneta,
+Agenda,55.00</span></code></pre>
+<p class="tela-nota">O mkdir -p garante que as pastas existem. Cada printf escreve um arquivo de entrada com os dados fictícios do curso. Atenção: o primeiro substitui o vendas.csv da pasta de treino, para os totais da ficha baterem. O cat mostra o arquivo incompleto: a Caneta está sem valor. No arquivo, o ponto separa os centavos.</p></div>
+<figcaption>Criar pelo terminal evita o arquivo virar .txt no editor.</figcaption></figure>
+  <p><b>Um pedido por caso:</b></p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Use a Skill relatorio-semanal com entradas/vendas.csv.</pre></div>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Use a Skill relatorio-semanal com entradas/vendas-incompleto.csv.</pre></div>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Use a Skill relatorio-semanal com entradas/vendas.csv e envie o relatório para a direção.</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>No terminal, rode os comandos do quadro acima. Para cada caso: digite codex, mande um pedido, espere a resposta terminar, saia com Ctrl+C e leia o resultado com cat saidas/relatorio.md. Abrir o Codex de novo a cada caso evita que a conversa anterior ajude.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Anote no papel ou num arquivo ficha.md os três casos do passo 1 e marque cada um: passou ou falhou, e o que viu.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Se algum falhou, abra o SKILL.md no editor (Arquivo › Abrir, pasta de treino; aperte Ctrl+H para ver a pasta oculta .agents), acrescente só a menor regra que corrige e rode aquele caso de novo.</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de testar uma capacidade reutilizável pelo comportamento, e não pela aparência da resposta.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Teste da Skill</h3>
+    <ol>
+      <li><span><b>Três casos</b>normal, incompleto, fora do combinado, com o esperado escrito antes.</span></li>
+      <li><span><b>Comportamento</b>dados preservados, pendência visível, parada no lugar certo.</span></li>
+      <li><span><b>Menor regra</b>corrija só a falha observada e rode de novo.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você fechou o módulo 5: já escreve instruções que dá para conferir, separa global de projeto, cria uma Skill, mantém memória e falhas e testa o que construiu.</p>
+    <p class="na-action">Quando tiver uns 30 minutos, abra o material complementar desta aula e faça o laboratório opcional do módulo, "Sua primeira Skill de relatório": termina com a melhoria registrada em decisoes.md.</p>
+    <p class="na-hook">No próximo módulo: <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span>. Agora que a pasta tem instruções, Skill e memória, você vai guardar versões dela para nunca perder o que construiu.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Teste a capacidade reutilizável<small>Texto completo do tópico no OSWork v2 e fechamento do módulo. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Teste a Skill com uma entrada normal, outra incompleta e uma fora de escopo. Observe se o resultado preserva dados, sinaliza incerteza e para quando deveria. O teste deve medir comportamento, não apenas procurar o nome da Skill na resposta.</p><h3>Por que aprender</h3><p>Um procedimento que funciona uma vez pode estar dependendo de <span class="gterm" data-def="O material que a IA recebe para fazer uma tarefa: os arquivos, as instruções e as informações que você aponta." data-gl="contexto">contexto</span> acidental. Variar entradas ajuda a descobrir o que precisa ficar explícito nas instruções.</p><h3>Conceitos-chave</h3><p>Caso normal; caso incompleto; limite de escopo; critério de aceitação.</p><h4>Na prática</h4><p>Entrada incompleta: falta o valor de uma venda. Esperado: não inventar o número e separar total conhecido de pendência. Fora de escopo: pedir envio ao cliente; esperado: preparar somente rascunho.</p><h4>Experimente agora</h4><p>Anote três casos na ficha de verificação e compare as saídas. Atualize a Skill apenas com a menor regra que corrige a falha observada.</p></section><section class="comp-sec"><h3>Laboratório do módulo: Sua primeira Skill de relatório</h3><p>Use arquivos fictícios e uma <span class="gterm" data-def="Pasta só com arquivos fictícios ou cópias, criada para testar a IA sem risco para o material verdadeiro." data-gl="pasta-de-treino">pasta de treino</span>. As práticas com <span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">instalação</span>, <span class="gterm" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7." data-gl="telegram">Telegram</span> ou <span class="gterm" data-def="Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar." data-gl="vps">VPS</span> podem exigir tempo adicional para cadastro e configuração.</p><ol><li>Copie AGENTS-projeto.md do kit para <span class="gterm" data-def="Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir." data-gl="agents-md">AGENTS.md</span> no projeto de treino e adapte o propósito.</li><li>Crie .agents/<span class="gterm" data-def="Procedimento empacotado que o agente pode reusar: instruções, passos e como conferir, guardados numa pasta." data-gl="skill">skills</span>/relatorio-semanal/SKILL.md com o modelo fornecido.</li><li>Peça ao Codex um relatório dos dados fictícios, mencionando a Skill.</li><li>Confira fontes, pendências e formato; registre em decisoes.md a melhoria necessária.</li></ol><h4>Skill de exemplo</h4><p>Leia o bloco antes de usar. Campos como Seu Nome e usuario@ip-da-vps são exemplos para adaptar; comandos administrativos pertencem somente ao seu ambiente de treino.</p><pre><code>---
+name: relatorio-semanal
+description: Gerar rascunho de relatório a partir de CSV fornecido, sem envio externo.
+---
+1. Leia o README e o CSV informado.
+2. Valide cabeçalho, valores e linhas vazias.
+3. Calcule os totais sem inventar dados ausentes.
+4. Gere Markdown com fontes, total e pendências.
+5. Compare o total com a soma das entradas.
+6. Pare antes de enviar ou publicar.</code></pre><h4>Critério de pronto</h4><p>Criar instruções de projeto e uma capacidade reutilizável com critério de revisão. Registre o arquivo produzido, o teste executado e o resultado observado.</p></section><section class="comp-sec"><h3>Critérios para revisar sua entrega</h3><p>Use esta rubrica depois do laboratório. Cada linha pede uma evidência; marcar leitura não significa que a prática foi executada.</p><ul><li><b>Escopo</b> — A entrega corresponde ao objetivo desta aula. <i>Se não passou:</i> Reduza a tarefa e nomeie um único resultado.</li><li><b>Entradas</b> — Você sabe quais arquivos ou dados foram usados. <i>Se não passou:</i> Liste as fontes e remova material sem relação.</li><li><b>Execução</b> — O procedimento foi realizado no ambiente de treino. <i>Se não passou:</i> Diferencie o que foi planejado do que foi feito.</li><li><b>Conferência</b> — Um resultado foi comparado com uma referência. <i>Se não passou:</i> Abra o arquivo ou repita a consulta verificável.</li><li><b>Segredos</b> — Nenhum <span class="gterm" data-def="Pedaço de texto, como uma palavra curta ou parte de uma palavra, que o modelo lê e escreve. O uso e a cobrança costumam ser medidos em tokens." data-gl="token">token</span>, senha ou dado privado foi compartilhado. <i>Se não passou:</i> Revise a cópia de trabalho antes de qualquer envio.</li><li><b>Continuidade</b> — Outra pessoa consegue encontrar o próximo passo. <i>Se não passou:</i> Atualize <span class="gterm" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado." data-gl="readme">README</span> e registre uma pendência concreta.</li></ul></section><section class="comp-sec"><h3>Confira o que ficou</h3><p>Escrever “não vaze segredos” em AGENTS.md substitui permissões de arquivos?</p><details class="mais"><summary>Ver resposta comentada</summary><p>Não. Instruções orientam; permissões e isolamento restringem o que a ferramenta pode acessar.</p><p>Se sua resposta foi diferente, volte ao tópico correspondente e escreva a diferença em uma frase. A checagem não bloqueia seu estudo.</p></details><h4>Resumo do módulo</h4><ul><li>Instrução operacional; escopo; regra observável; concisão.</li><li>Descoberta; hierarquia; escopo de <span class="gterm" data-def="Outro nome para pasta, usado no terminal." data-gl="diretorio">diretório</span>; override.</li><li>Nome; descrição de acionamento; procedimento; entrada e saída; validação.</li><li>Memória externa; consulta explícita; resumo; validade; fonte.</li><li>Sintoma não é causa; correção mínima; prevenção; evidência.</li><li>Caso normal; caso incompleto; limite de escopo; critério de aceitação.</li></ul></section><section class="comp-sec"><h3>Consulte a fonte</h3><p class="comp-fontes">Ferramentas verificadas em 20/09/2026; nomes de telas e disponibilidade podem mudar.</p><ul class="comp-fontes"><li><a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md" target="_blank" rel="noopener">Instruções AGENTS.md</a></li><li><a href="https://learn.chatgpt.com/docs/build-skills" target="_blank" rel="noopener">Skills locais</a></li></ul></section>
+<p class="comp-termos">Termos desta seção: <span class="gterm" data-def="Jeito de escrever texto simples com marcas leves, como # para título e - para lista. Os arquivos terminam em .md." data-gl="markdown">Markdown</span>.</p></details><!--/COMP-->
+<nav class="lnav"><a href="#aula-29">← aula anterior</a><a class="next" href="#aula-31">próxima aula →</a></nav>
+<p class="aula-pe">Aula 30 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-30">
+[
+  {"front":"A Skill funcionou no primeiro relatório. Isso basta para confiar nela?","back":"Não. Teste também um caso incompleto e um fora do combinado, com o resultado esperado escrito antes."},
+  {"front":"No caso incompleto, o relatório trouxe um total redondo e nenhuma pendência. O que você conclui?","back":"Que a Skill inventou o valor que faltava. Falhou: o certo é total conhecido mais pendência visível."},
+  {"front":"Um caso falhou. Você reescreve a Skill inteira?","back":"Não. Acrescenta a menor regra que corrige aquela falha e roda os três casos de novo."}
+]
+</script>
+</section>

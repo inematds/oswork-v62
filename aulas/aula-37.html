@@ -1,0 +1,152 @@
+<section class="view" id="v-aula-37" data-aula="37" data-tempo="13min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 7 · Aula 1 de 6</p>
+  <h1>O Telegram é a <em>porta</em>, não quem trabalha</h1>
+  <figure class="cena"><img src="assets/img/aula-37.webp" width="1280" height="720" alt="Uma coordenadora pedagógica na recepção da escola olha uma conversa no celular, ao lado do interfone de parede junto à porta."></figure>
+  <p class="promise">Você consegue desenhar o caminho de uma mensagem — celular, Telegram, bot, função permitida, resposta — e marcar a única etapa em que uma IA seria de fato útil.</p>
+  <p class="why">É comum chamar qualquer resposta automática de agente inteligente. Quando isso se mistura, ninguém sabe o que o bot pode fazer, nem onde ele erra. Separar a porta de quem trabalha deixa cada parte fácil de testar.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O Telegram é a <b>porta</b>: leva a mensagem e traz a resposta.</li>
+      <li>Quem responde é um <b>programa seu</b>, que só aceita comandos conhecidos.</li>
+      <li>A IA é uma <b>peça opcional</b>, ligada depois que a base funciona.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>O aplicativo leva e traz; ele não executa</h2>
+  <p>Neste módulo você vai conversar com um <span class="gterm" data-gl="bot" data-def="Programa que conversa por um aplicativo de mensagens e responde sozinho, seguindo as regras que você define.">bot</span> seu pelo <span class="gterm" data-gl="telegram" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7.">Telegram</span>. O aplicativo no celular só leva a sua mensagem e traz a resposta de volta.</p>
+  <p>Quem lê, decide e responde é um programa que roda no seu computador. Pense no interfone da portaria: o aparelho leva a voz, mas quem abre o portão é a pessoa lá dentro.</p>
+  <p data-ex="coordenadora">Denise ouviu que outra escola "tem um <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span> no Telegram". Perguntou o que ele fazia e descobriu três respostas prontas, sem IA nenhuma. O nome prometia mais do que a coisa fazia.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">O Telegram faz</span><p>Recebe o que você escreve no celular.</p><p>Entrega a resposta na mesma conversa.</p></div>
+      <div class="neutro"><span class="rot">O seu programa faz</span><p>Confere quem escreveu e qual comando é.</p><p>Executa só a função permitida e monta a resposta.</p></div>
+    </div>
+    <figcaption>As duas partes são necessárias. Só uma delas decide alguma coisa: o programa.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Sem IA, o bot já é útil</h2>
+  <p>O bot do kit do curso tem dois comandos de trabalho, e nenhum usa IA. O /status confirma que ele está ligado. O /relatorio soma três vendas fictícias do arquivo vendas.csv, uma planilha em <span class="gterm" data-gl="csv" data-def="Planilha em texto simples, com os valores separados por vírgula. Abre no Excel ou no Google Planilhas.">CSV</span>.</p>
+  <p>Você baixa esse kit na próxima aula. Por enquanto, veja o que ele devolve.</p>
+  <p data-ex="professora">Lúcia vai usar o bot para consultar a lojinha fictícia do grêmio: caderno, caneta e agenda. O total vem de uma conta feita pelo programa, não de um palpite.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Telegram · conversa com o bot</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Lúcia</span>/status</p>
+        <p class="msg ia ok"><span class="quem">Bot</span>OSWork ativo. Acesso restrito. Bot determinístico de treino.</p>
+        <p class="msg eu"><span class="quem">Lúcia</span>/relatorio</p>
+        <p class="msg ia ok"><span class="quem">Bot</span>Dados fictícios de treino: 3 vendas; total R$ 100.00. Sem chamada de IA.</p>
+      </div>
+      <p class="tela-nota bom">As duas respostas saem de regras fixas do programa. "Determinístico" quer dizer isso: o mesmo pedido dá sempre a mesma resposta.</p>
+    </div>
+    <figcaption>Estas são as respostas reais do bot do kit. O total usa ponto no lugar da vírgula porque vem do programa assim.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>Mensagem não vira comando no computador</h2>
+  <p>Quem escreve no Telegram não comanda o computador. O bot compara a mensagem com uma lista curta de comandos conhecidos. Todo o resto recebe a mesma resposta padrão.</p>
+  <p>Isso vale até para a dona do bot. Texto livre nunca é executado como ordem. Os comandos /start e /help existem, mas só mostram a lista dos dois comandos de trabalho.</p>
+  <p data-ex="coordenadora">Denise imaginou um bot da secretaria que recebesse "apague as faltas de ontem". Com a lista fechada, esse texto volta como comando desconhecido, e nada é apagado.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Bot que executa a mensagem</span><p><b>Alguém escreve:</b> "apague a pasta das provas".</p><p><b>Resultado:</b> o computador obedece. Não há volta.</p></div>
+      <div class="depois"><span class="rot">Bot do kit</span><p><b>Alguém escreve:</b> "apague a pasta das provas".</p><p><b>Resultado:</b> "Comando desconhecido. Use /status ou /relatorio."</p></div>
+      <p class="saldo"><b>Saldo:</b> a mesma frase, zero arquivos mexidos no bot do kit.</p>
+    </div>
+  </figure>
+  <div class="quiz" data-answer="a">
+    <p class="qk">Teste-se</p>
+    <p class="q">Um colega diz: "o nosso bot do Telegram é um agente inteligente". O que você pergunta primeiro?</p>
+    <button class="opt" data-k="a" data-fb="Isso separa o programa da IA: você descobre o que ele executa e onde a IA entra, se entra.">Que funções ele executa e qual usa IA</button>
+    <button class="opt" data-k="b" data-fb="O aplicativo só leva e traz. A versão dele não diz nada sobre o que o bot faz.">Qual versão do Telegram ele usa</button>
+    <button class="opt" data-k="c" data-fb="Muita gente usando não mostra o que o programa faz nem se há IA nele.">Quantas pessoas já falaram com ele</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>A IA entra numa etapa, não no caminho todo</h2>
+  <p>Desenhe o caminho inteiro antes de pensar em IA. Depois marque a etapa em que ela ajudaria de verdade.</p>
+  <p>Uma boa candidata é a função: ela pode ganhar um resumo em texto a partir dos números. A regra é firme: o número continua sendo o do programa.</p>
+  <p data-ex="professora">Lúcia marcou a etapa do resumo. A IA poderia escrever "a agenda foi a venda maior", desde que o total de R$ 100,00 fique como o programa calculou.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Caminho de uma mensagem · bot da Lúcia</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Celular da Lúcia: ela escreve /relatorio</div>
+        <div class="item doc"><span class="pin">2</span> Telegram: leva a mensagem até o bot</div>
+        <div class="item doc"><span class="pin">3</span> Bot no computador: confere quem é e qual comando</div>
+        <div class="item doc"><span class="pin">4</span> Função permitida (parte do seu programa): soma as vendas</div>
+        <div class="item doc dentro">✗ marcado aqui: a IA poderia escrever um resumo, sem mexer no total</div>
+        <div class="item doc"><span class="pin">5</span> Resposta: volta pelo Telegram ao celular</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Quem pede.</span></li>
+      <li><span class="pin">2</span><span>A porta.</span></li>
+      <li><span class="pin">3</span><span>O portão: quem decide.</span></li>
+      <li><span class="pin">4</span><span>A execução. O X da IA fica dentro desta caixa.</span></li>
+      <li><span class="pin">5</span><span>A volta.</span></li>
+    </ol>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Você ainda não precisa ter bot nenhum funcionando. Nesta aula o desenho no papel basta. A criação do bot começa na próxima aula, passo a passo.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Desenhe o caminho e marque onde a IA entraria</h3>
+  <p class="pgoal">Pronto quando o desenho tiver cinco caixas, quem faz o quê em cada uma e um X numa só etapa. Cerca de 8 minutos, no papel ou no bloco de notas do celular.</p>
+  <p class="psafe">Nada aqui mexe no computador nem no Telegram. Ficou em dúvida sobre o X? Marque na função: é nela que se monta o texto que a pessoa vai ler, antes de voltar pelo Telegram.</p>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Desenhe cinco caixas em fila: celular, Telegram, bot, função permitida, resposta.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Embaixo de cada caixa, escreva quem faz: você (celular), o aplicativo (Telegram e resposta), o seu programa (bot e função).</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Marque um X na caixa em que uma IA ajudaria e escreva, numa linha, o que ela faria sem mudar números.</span></label></li>
+  </ol>
+  <details class="mais"><summary>Veja o desenho de uma coordenadora</summary>
+    <p>Denise desenhou o bot de consulta da secretaria: <b>celular</b> (a mãe pede /horario) → <b>Telegram</b> (leva) → <b>bot</b> (confere se o número está autorizado) → <b>função</b> (lê a planilha de horários) → <b>resposta</b>. O X ficou na função, com a linha: "a IA reescreve o horário em frase simples; o horário continua o da planilha".</p>
+  </details>
+  <p class="pdone">Você separou a porta de quem trabalha e sabe dizer onde uma IA entraria sem tomar conta de tudo.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>A porta e quem trabalha</h3>
+    <ol>
+      <li><span><b>Telegram</b>leva e traz a mensagem; não executa nada.</span></li>
+      <li><span><b>Bot</b>programa seu que aceita só comandos conhecidos.</span></li>
+      <li><span><b>IA</b>peça opcional numa etapa, depois que a base funciona.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já separa interface, programa e IA quando alguém fala em "agente no Telegram".</p>
+    <p class="na-action">Na próxima vez que ouvir falar de um bot no trabalho, faça duas perguntas: que funções ele executa, e qual delas usa IA?</p>
+    <p class="na-hook">Na próxima aula: criar o seu bot no Telegram e guardar a senha dele num lugar que ninguém vê.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Telegram é a interface, não o agente<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Um bot recebe mensagens pela <span class="gterm" data-def="Porta de entrada para um programa usar um serviço de IA sem passar pela tela do chat. O uso pela API é cobrado por consumo." data-gl="api">API</span> do Telegram e devolve respostas. A inteligência pode vir de regras, de um programa ou de uma chamada a modelo. O aplicativo no celular não executa sozinho suas tarefas no <span class="gterm" data-def="Computador que fica ligado prestando um serviço para outros, como responder às mensagens de um bot." data-gl="servidor">servidor</span>: existe um programa intermediário com permissões definidas.</p><h3>Por que aprender</h3><p>Separar <span class="gterm" data-def="A tela por onde você passa o objetivo à IA, como a janela do chat. O curso mostra outras interfaces ao longo dos módulos." data-gl="interface">interface</span> e execução evita chamar qualquer resposta automática de agente inteligente. Primeiro construa um <span class="gterm" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config." data-gl="caminho">caminho</span> confiável para receber e responder; depois conecte a capacidade necessária.</p><h3>Conceitos-chave</h3><p>Mensagem; Bot API; programa; agente; resultado.</p><h4>Na prática</h4><p>/status consulta o estado do bot sem IA. /relatorio calcula vendas fictícias sem IA. Um resumo em linguagem natural poderia ser acrescentado depois, preservando os números calculados.</p><h4>✓ Faça</h4><p>Desenhe: celular → Telegram → bot → função permitida → resposta. Marque em que etapa uma futura chamada a IA seria realmente útil.</p><h4>✗ Evite</h4><p>Aceitar uma conclusão sem conferir a entrada que a sustenta.</p><figure class="comp-fig"><ul><li>Telegram</li><li>Bot autorizado</li><li>Capacidade</li></ul><figcaption>O Telegram é a <span class="gterm" data-def="Número que identifica um serviço dentro da máquina. O SSH costuma usar a porta 22, mas a sua VPS pode usar outra." data-gl="porta">porta</span>. O portão de autorização decide quem passa, e a capacidade é o que de fato executa.</figcaption></figure></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-36">← aula anterior</a><a class="next" href="#aula-38">próxima aula →</a></nav>
+<p class="aula-pe">Aula 37 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-37">
+[
+  {"front":"Você escreveu uma frase livre ao bot e ele devolveu \"Comando desconhecido\". É defeito ou proteção?","back":"Proteção. O bot só executa o que está na lista de comandos; texto livre não vira ação no computador."},
+  {"front":"Onde está a inteligência de um bot do Telegram: no aplicativo, no programa ou numa IA?","back":"No programa. Ele pode usar regras fixas ou chamar uma IA; o aplicativo só leva e traz."},
+  {"front":"Você quer que o bot escreva um resumo das vendas com IA. Que regra protege o total?","back":"A IA só redige. O número vem do cálculo do programa e o texto não pode alterá-lo."}
+]
+</script>
+</section>
