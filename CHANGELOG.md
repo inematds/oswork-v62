@@ -1,5 +1,12 @@
 # Changelog — OSWork v6.2
 
+## 1.1.1 — 2026-09-25
+
+- Botão "copiar" dos terminais de exemplo copia só os comandos (sem `$` e sem a resposta).
+- Caixa de segurança da prática não quebra mais em colunas no celular.
+- Aula 26: regra do AGENTS.md conferida na documentação oficial do Codex — sem ressalva ("prevalece"); definição de
+  AGENTS.override.md exata (o Codex ignora o AGENTS.md da mesma pasta). Pasta `~/.agents/skills` (aula 27) confirmada.
+
 ## 1.1.0 — 2026-09-25
 
 Módulos 2 a 8 (aulas 7–48): curso completo com os 48 tópicos do v2, uma aula por tópico, complementar integral e

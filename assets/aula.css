@@ -229,8 +229,8 @@ details.mais > *:not(summary){font-size:16px}
 .practice .pcount{font-weight:500;color:var(--muted)}
 .practice .ph{font-family:var(--serif);font-weight:500;font-size:26px;line-height:1.15;margin:0 0 8px}
 .practice .pgoal{margin:0 0 10px;font-size:17px}
-.psafe{display:flex;gap:10px;background:var(--accent-soft);border-radius:12px;padding:10px 14px;font-size:16px;margin:0 0 14px}
-.psafe::before{content:"✓";font-weight:700;color:var(--accent)}
+.psafe{display:block;background:var(--accent-soft);border-radius:12px;padding:10px 14px;font-size:16px;margin:0 0 14px}
+.psafe::before{content:"✓";font-weight:700;color:var(--accent);margin-right:8px}
 .pcodewrap,.codewrap{position:relative;margin:0 0 14px}
 .pcode,.aula pre{margin:0;background:var(--panel2);border:1px solid var(--line2);border-radius:12px;padding:16px;padding-top:46px;font-family:var(--mono);font-size:15px;line-height:1.6;white-space:pre-wrap;word-break:break-word;color:var(--ink)}
 .pcopy{position:absolute;top:8px;right:8px;min-height:36px;padding:0 14px;border-radius:99px;border:1px solid var(--accent);background:var(--panel);color:var(--accent);font-weight:600}

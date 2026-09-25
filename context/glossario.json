@@ -497,7 +497,7 @@
     "formas": [
       "AGENTS.override.md"
     ],
-    "def": "Arquivo AGENTS.override.md: quando está na mesma pasta que um AGENTS.md, as instruções dele têm prioridade sobre as do AGENTS.md."
+    "def": "Arquivo AGENTS.override.md: quando está na mesma pasta que um AGENTS.md, o Codex lê o override e ignora o AGENTS.md daquela pasta."
   },
   "memoria-operacional": {
     "formas": [

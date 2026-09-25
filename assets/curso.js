@@ -214,7 +214,11 @@
   function flash(b,m){ var o=b.getAttribute('data-o'); if(o===null){ o=b.textContent; b.setAttribute('data-o',o); } b.textContent=m; setTimeout(function(){ b.textContent=b.getAttribute('data-o'); },1400); }
   function copyText(t,b){ function fb(){ var ta=el('textarea'); ta.value=t; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); try{ document.execCommand('copy'); flash(b,L.copiado); }catch(e){} ta.remove(); }
     try{ if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(function(){ flash(b,L.copiado); },fb); return; } }catch(e){} fb(); }
-  document.querySelectorAll('.view[data-aula] pre').forEach(function(pre){ if(pre.closest('.pcodewrap')) return; var w=el('div','codewrap'); pre.before(w); w.appendChild(pre); var b=el('button','pcopy',L.copiar); b.type='button'; w.prepend(b); b.addEventListener('click',function(){ copyText(pre.textContent,b); }); });
+  // terminal de exemplo: copia só as linhas de comando (as que têm .pr), sem o $ e sem a saída (.out)
+  function cmdText(pre){ if(!pre.querySelector('.pr')) return pre.textContent; var c=pre.cloneNode(true);
+    c.querySelectorAll('.out').forEach(function(o){ o.remove(); }); c.querySelectorAll('.pr').forEach(function(o){ o.textContent='\u0001'; });
+    return c.textContent.split('\n').filter(function(l){ return l.indexOf('\u0001')>=0; }).map(function(l){ return l.slice(l.indexOf('\u0001')+1).trim(); }).filter(Boolean).join('\n'); }
+  document.querySelectorAll('.view[data-aula] pre').forEach(function(pre){ if(pre.closest('.pcodewrap')) return; var w=el('div','codewrap'); pre.before(w); w.appendChild(pre); var b=el('button','pcopy',L.copiar); b.type='button'; w.prepend(b); b.addEventListener('click',function(){ copyText(cmdText(pre),b); }); });
 
   // ---------- prática ----------
   var practiceRefresh={};

@@ -10,7 +10,7 @@
     <p class="k">Em 1 minuto</p>
     <ol>
       <li>Há um arquivo de instruções <b>global</b>, que vale em tudo, e um <b>do projeto</b>, que vale naquela pasta.</li>
-      <li>O arquivo mais perto da pasta de trabalho <b>pode prevalecer</b> ali.</li>
+      <li>O arquivo mais perto da pasta de trabalho <b>prevalece</b> ali.</li>
       <li>Peça ao Codex o resumo do que ele carregou e <b>confira</b> nos arquivos.</li>
     </ol>
   </div>
@@ -41,7 +41,7 @@
 
 <section class="step" data-kind="fundamento">
   <h2><span class="n">2</span>O arquivo mais perto pode decidir ali</h2>
-  <p>Uma subpasta pode ter o próprio AGENTS.md. Nesse trecho, a instrução mais próxima pode prevalecer, como o combinado de um laboratório dentro da escola.</p>
+  <p>Uma subpasta pode ter o próprio AGENTS.md. Com o Codex aberto nela, os dois valem, e a instrução mais próxima prevalece, como o combinado de um laboratório dentro da escola.</p>
   <p>"Pode" porque vale para o que ela trata. O que a regra de perto não menciona continua vindo do arquivo de cima.</p>
   <p data-ex="professora">Lúcia criou uma subpasta de provas no projeto de ciências, com um AGENTS.md que pede gabarito separado. Quando ela abre o Codex dentro de provas, essa regra vale. Aberto nas listas de exercício, não.</p>
   <figure class="largo">
@@ -56,11 +56,11 @@
     </div>
     <ol class="passos">
       <li><span class="pin">1</span><span>Instrução do projeto.</span></li>
-      <li><span class="pin">2</span><span>Instrução mais perto: pode prevalecer dentro de provas.</span></li>
+      <li><span class="pin">2</span><span>Instrução mais perto: prevalece dentro de provas.</span></li>
     </ol>
   </figure>
   <details class="mais"><summary>Um arquivo que passa na frente: o override</summary>
-  <p>Existe ainda o <span class="gterm" data-gl="agents-override" data-def="Arquivo AGENTS.override.md: quando está na mesma pasta que um AGENTS.md, as instruções dele têm prioridade sobre as do AGENTS.md.">AGENTS.override.md</span>. Na mesma pasta, ele tem prioridade sobre o AGENTS.md. Você não criou nenhum? Ótimo. Mas ele pode vir numa pasta copiada de um colega e, esquecido ali, explica muito comportamento estranho.</p>
+  <p>Existe ainda o <span class="gterm" data-gl="agents-override" data-def="Arquivo AGENTS.override.md: quando está na mesma pasta que um AGENTS.md, o Codex lê o override e ignora o AGENTS.md daquela pasta.">AGENTS.override.md</span>. Na mesma pasta, o Codex lê o override e ignora o AGENTS.md. Você não criou nenhum? Ótimo. Mas ele pode vir numa pasta copiada de um colega e, esquecido ali, explica muito comportamento estranho.</p>
   </details>
 </section>
 
@@ -135,7 +135,7 @@ Não alterei nenhum arquivo.</p>
     <h3>Global e projeto</h3>
     <ol>
       <li><span><b>Global pequeno</b>~/.codex/AGENTS.md, regras que valem em tudo.</span></li>
-      <li><span><b>Projeto com detalhe</b>o arquivo mais perto pode prevalecer naquela pasta.</span></li>
+      <li><span><b>Projeto com detalhe</b>o arquivo mais perto prevalece naquela pasta.</span></li>
       <li><span><b>Confira a origem</b>resumo do Codex contra os arquivos, antes de culpar o modelo.</span></li>
     </ol>
   </div>

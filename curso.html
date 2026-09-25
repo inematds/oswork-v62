@@ -286,7 +286,7 @@
 <dl class="glossario">
 <div class="gl-item" id="g-agente"><dt>agente</dt><dd><p>IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.</p><p class="gl-aulas">Aparece em: <a href="#aula-5">Aula 5</a> <a href="#aula-6">Aula 6</a> <a href="#aula-8">Aula 8</a> <a href="#aula-9">Aula 9</a> <a href="#aula-11">Aula 11</a> <a href="#aula-12">Aula 12</a> <a href="#aula-16">Aula 16</a> <a href="#aula-17">Aula 17</a> <a href="#aula-18">Aula 18</a> <a href="#aula-20">Aula 20</a> <a href="#aula-24">Aula 24</a> <a href="#aula-25">Aula 25</a> <a href="#aula-26">Aula 26</a> <a href="#aula-27">Aula 27</a> <a href="#aula-28">Aula 28</a> <a href="#aula-29">Aula 29</a> <a href="#aula-30">Aula 30</a> <a href="#aula-31">Aula 31</a> <a href="#aula-32">Aula 32</a> <a href="#aula-37">Aula 37</a> <a href="#aula-41">Aula 41</a> <a href="#aula-42">Aula 42</a> <a href="#aula-48">Aula 48</a></p></dd></div>
 <div class="gl-item" id="g-agents-md"><dt>AGENTS.md</dt><dd><p>Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir.</p><p class="gl-aulas">Aparece em: <a href="#aula-16">Aula 16</a> <a href="#aula-17">Aula 17</a> <a href="#aula-18">Aula 18</a> <a href="#aula-19">Aula 19</a> <a href="#aula-24">Aula 24</a> <a href="#aula-25">Aula 25</a> <a href="#aula-26">Aula 26</a> <a href="#aula-27">Aula 27</a> <a href="#aula-29">Aula 29</a> <a href="#aula-30">Aula 30</a></p></dd></div>
-<div class="gl-item" id="g-agents-override"><dt>AGENTS.override.md</dt><dd><p>Arquivo AGENTS.override.md: quando está na mesma pasta que um AGENTS.md, as instruções dele têm prioridade sobre as do AGENTS.md.</p><p class="gl-aulas">Aparece em: <a href="#aula-26">Aula 26</a></p></dd></div>
+<div class="gl-item" id="g-agents-override"><dt>AGENTS.override.md</dt><dd><p>Arquivo AGENTS.override.md: quando está na mesma pasta que um AGENTS.md, o Codex lê o override e ignora o AGENTS.md daquela pasta.</p><p class="gl-aulas">Aparece em: <a href="#aula-26">Aula 26</a></p></dd></div>
 <div class="gl-item" id="g-api"><dt>API</dt><dd><p>Porta de entrada para um programa usar um serviço de IA sem passar pela tela do chat. O uso pela API é cobrado por consumo.</p><p class="gl-aulas">Aparece em: <a href="#aula-5">Aula 5</a> <a href="#aula-6">Aula 6</a> <a href="#aula-15">Aula 15</a> <a href="#aula-37">Aula 37</a> <a href="#aula-41">Aula 41</a> <a href="#aula-42">Aula 42</a> <a href="#aula-43">Aula 43</a></p></dd></div>
 <div class="gl-item" id="g-apt"><dt>apt</dt><dd><p>Instalador de programas do Ubuntu, usado no terminal.</p><p class="gl-aulas">Aparece em: <a href="#aula-45">Aula 45</a> <a href="#aula-48">Aula 48</a></p></dd></div>
 <div class="gl-item" id="g-arquivo-rastreado"><dt>arquivo rastreado</dt><dd><p>Arquivo que o Git já acompanha, porque entrou em alguma versão salva. O .gitignore não vale para ele.</p><p class="gl-aulas">Aparece em: <a href="#aula-23">Aula 23</a></p></dd></div>
@@ -4199,7 +4199,7 @@ Propósito: &lt;ex.: rascunhos de relatório a partir de dados fictícios&gt;
 <p class="k">Em 1 minuto</p>
 <ol>
 <li>Há um arquivo de instruções <b>global</b>, que vale em tudo, e um <b>do projeto</b>, que vale naquela pasta.</li>
-<li>O arquivo mais perto da pasta de trabalho <b>pode prevalecer</b> ali.</li>
+<li>O arquivo mais perto da pasta de trabalho <b>prevalece</b> ali.</li>
 <li>Peça ao Codex o resumo do que ele carregou e <b>confira</b> nos arquivos.</li>
 </ol>
 </div>
@@ -4228,7 +4228,7 @@ Propósito: &lt;ex.: rascunhos de relatório a partir de dados fictícios&gt;
 </section>
 <section class="step" data-kind="fundamento">
 <h2><span class="n">2</span>O arquivo mais perto pode decidir ali</h2>
-<p>Uma subpasta pode ter o próprio AGENTS.md. Nesse trecho, a instrução mais próxima pode prevalecer, como o combinado de um laboratório dentro da escola.</p>
+<p>Uma subpasta pode ter o próprio AGENTS.md. Com o Codex aberto nela, os dois valem, e a instrução mais próxima prevalece, como o combinado de um laboratório dentro da escola.</p>
 <p>"Pode" porque vale para o que ela trata. O que a regra de perto não menciona continua vindo do arquivo de cima.</p>
 <p data-ex="professora" data-exlbl="Na prática · Professora">Lúcia criou uma subpasta de provas no projeto de ciências, com um AGENTS.md que pede gabarito separado. Quando ela abre o Codex dentro de provas, essa regra vale. Aberto nas listas de exercício, não.</p>
 <figure class="largo">
@@ -4243,11 +4243,11 @@ Propósito: &lt;ex.: rascunhos de relatório a partir de dados fictícios&gt;
 </div>
 <ol class="passos">
 <li><span class="pin">1</span><span>Instrução do projeto.</span></li>
-<li><span class="pin">2</span><span>Instrução mais perto: pode prevalecer dentro de provas.</span></li>
+<li><span class="pin">2</span><span>Instrução mais perto: prevalece dentro de provas.</span></li>
 </ol>
 </figure>
 <details class="mais"><summary>Um arquivo que passa na frente: o override</summary>
-<p>Existe ainda o <span class="gterm" data-def="Arquivo AGENTS.override.md: quando está na mesma pasta que um AGENTS.md, as instruções dele têm prioridade sobre as do AGENTS.md." data-gl="agents-override">AGENTS.override.md</span>. Na mesma pasta, ele tem prioridade sobre o AGENTS.md. Você não criou nenhum? Ótimo. Mas ele pode vir numa pasta copiada de um colega e, esquecido ali, explica muito comportamento estranho.</p>
+<p>Existe ainda o <span class="gterm" data-def="Arquivo AGENTS.override.md: quando está na mesma pasta que um AGENTS.md, o Codex lê o override e ignora o AGENTS.md daquela pasta." data-gl="agents-override">AGENTS.override.md</span>. Na mesma pasta, o Codex lê o override e ignora o AGENTS.md. Você não criou nenhum? Ótimo. Mas ele pode vir numa pasta copiada de um colega e, esquecido ali, explica muito comportamento estranho.</p>
 </details>
 </section>
 <section class="step" data-kind="fundamento">
@@ -4318,7 +4318,7 @@ Não alterei nenhum arquivo.</p>
 <h3>Global e projeto</h3>
 <ol>
 <li><span><b>Global pequeno</b>~/.codex/AGENTS.md, regras que valem em tudo.</span></li>
-<li><span><b>Projeto com detalhe</b>o arquivo mais perto pode prevalecer naquela pasta.</span></li>
+<li><span><b>Projeto com detalhe</b>o arquivo mais perto prevalece naquela pasta.</span></li>
 <li><span><b>Confira a origem</b>resumo do Codex contra os arquivos, antes de culpar o modelo.</span></li>
 </ol>
 </div>

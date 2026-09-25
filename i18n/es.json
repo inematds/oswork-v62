@@ -5299,5 +5299,11 @@
  "O zelador do bot: liga, religa e anota": "El conserje del bot: conecta, reconecta y anota",
  "Aula 48": "Lección 48",
  "Simulado de incêndio: só vale o que foi ensaiado": "Simulacro de incendio: solo vale lo que se ensayó",
- "Como você confere se o agente usou mesmo a memória na tarefa?": "¿Cómo verificas si el agente realmente usó la memoria en la tarea?"
+ "Como você confere se o agente usou mesmo a memória na tarefa?": "¿Cómo verificas si el agente realmente usó la memoria en la tarea?",
+ "Arquivo AGENTS.override.md: quando está na mesma pasta que um AGENTS.md, o Codex lê o override e ignora o AGENTS.md daquela pasta.": "Archivo AGENTS.override.md: cuando está en la misma carpeta que un AGENTS.md, el Codex lee el override e ignora el AGENTS.md de esa carpeta.",
+ "O arquivo mais perto da pasta de trabalho <b>prevalece</b> ali.": "El archivo más cercano a la carpeta de trabajo <b>prevalece</b> ahí.",
+ "Uma subpasta pode ter o próprio AGENTS.md. Com o Codex aberto nela, os dois valem, e a instrução mais próxima prevalece, como o combinado de um laboratório dentro da escola.": "Una subcarpeta puede tener su propio AGENTS.md. Con el Codex abierto ahí, los dos valen, y la instrucción más cercana prevalece, como el acuerdo de un laboratorio dentro de la escuela.",
+ "<span class=\"pin\">2</span><span>Instrução mais perto: prevalece dentro de provas.</span>": "<span class=\"pin\">2</span><span>Instrucción más cercana: prevalece dentro de pruebas.</span>",
+ "Existe ainda o <span class=\"gterm\" data-def=\"Arquivo AGENTS.override.md: quando está na mesma pasta que um AGENTS.md, o Codex lê o override e ignora o AGENTS.md daquela pasta.\" data-gl=\"agents-override\">AGENTS.override.md</span>. Na mesma pasta, o Codex lê o override e ignora o AGENTS.md. Você não criou nenhum? Ótimo. Mas ele pode vir numa pasta copiada de um colega e, esquecido ali, explica muito comportamento estranho.": "Todavía existe el <span class=\"gterm\" data-def=\"Archivo AGENTS.override.md: cuando está en la misma carpeta que un AGENTS.md, el Codex lee el override e ignora el AGENTS.md de esa carpeta.\" data-gl=\"agents-override\">AGENTS.override.md</span>. En la misma carpeta, el Codex lee el override e ignora el AGENTS.md. ¿No creaste ninguno? Perfecto. Pero puede venir en una carpeta copiada de un colega y, olvidado ahí, explica mucho comportamiento extraño.",
+ "<span><b>Projeto com detalhe</b>o arquivo mais perto prevalece naquela pasta.</span>": "<span><b>Proyecto con detalle</b>el archivo más cercano prevalece en esa carpeta.</span>"
 }

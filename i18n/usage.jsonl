@@ -347,3 +347,5 @@
 {"t": "2026-09-25T01:40:00", "lang": "es", "modelo": "openai/gpt-5.4-nano", "id": "gen-1790311198-HMzk5IKiEPumIVvEYdEY", "in": 1076, "out": 384, "usd": 0.0006952, "ok": 40, "rejeitadas": 0}
 {"t": "2026-09-25T01:40:02", "lang": "es", "modelo": "openai/gpt-5.4-nano", "id": "gen-1790311200-4ypOuoQ2LCOoRow71eMx", "in": 956, "out": 280, "usd": 0.0005412, "ok": 27, "rejeitadas": 0}
 {"t": "2026-09-25T01:40:04", "lang": "es", "modelo": "openai/gpt-5.4-nano", "id": "gen-1790311203-B7i3OvmEtHGIH1jN1iKA", "in": 654, "out": 27, "usd": 0.00016455, "ok": 1, "rejeitadas": 0}
+{"t": "2026-09-25T01:57:19", "lang": "en", "modelo": "openai/gpt-5.4-nano", "id": "gen-1790312237-rZbeR6vgo8cvNVhJpXnz", "in": 896, "out": 268, "usd": 0.0005142, "ok": 6, "rejeitadas": 0}
+{"t": "2026-09-25T01:57:22", "lang": "es", "modelo": "openai/gpt-5.4-nano", "id": "gen-1790312240-MO35ZySnQwbkJKhN2Pbf", "in": 909, "out": 284, "usd": 0.0005368, "ok": 6, "rejeitadas": 0}

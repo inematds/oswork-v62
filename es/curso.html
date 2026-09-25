@@ -286,7 +286,7 @@
 <dl class="glossario">
 <div class="gl-item" id="g-agente"><dt>agente</dt><dd><p>IA que ejecuta varias etapas por su cuenta, como leer archivos, crear y comparar, en lugar de solo responder un mensaje.</p><p class="gl-aulas">Aparece en: <a href="#aula-5">Lección 5</a> <a href="#aula-6">Lección 6</a> <a href="#aula-8">Lección 8</a> <a href="#aula-9">Lección 9</a> <a href="#aula-11">Lección 11</a> <a href="#aula-12">Lección 12</a> <a href="#aula-16">Lección 16</a> <a href="#aula-17">Lección 17</a> <a href="#aula-18">Lección 18</a> <a href="#aula-20">Lección 20</a> <a href="#aula-24">Lección 24</a> <a href="#aula-25">Lección 25</a> <a href="#aula-26">Lección 26</a> <a href="#aula-27">Lección 27</a> <a href="#aula-28">Lección 28</a> <a href="#aula-29">Lección 29</a> <a href="#aula-30">Lección 30</a> <a href="#aula-31">Lección 31</a> <a href="#aula-32">Lección 32</a> <a href="#aula-37">Lección 37</a> <a href="#aula-41">Lección 41</a> <a href="#aula-42">Lección 42</a> <a href="#aula-48">Lección 48</a></p></dd></div>
 <div class="gl-item" id="g-agents-md"><dt>AGENTS.md</dt><dd><p>Archivo en Markdown con las instrucciones que el agente lee antes de trabajar en una carpeta: reglas, límites y cómo comprobarlo.</p><p class="gl-aulas">Aparece en: <a href="#aula-16">Lección 16</a> <a href="#aula-17">Lección 17</a> <a href="#aula-18">Lección 18</a> <a href="#aula-19">Lección 19</a> <a href="#aula-24">Lección 24</a> <a href="#aula-25">Lección 25</a> <a href="#aula-26">Lección 26</a> <a href="#aula-27">Lección 27</a> <a href="#aula-29">Lección 29</a> <a href="#aula-30">Lección 30</a></p></dd></div>
-<div class="gl-item" id="g-agents-override"><dt>AGENTS.override.md</dt><dd><p>Archivo AGENTS.override.md: cuando está en la misma carpeta que un AGENTS.md, sus instrucciones tienen prioridad sobre las del AGENTS.md.</p><p class="gl-aulas">Aparece en: <a href="#aula-26">Lección 26</a></p></dd></div>
+<div class="gl-item" id="g-agents-override"><dt>AGENTS.override.md</dt><dd><p>Archivo AGENTS.override.md: cuando está en la misma carpeta que un AGENTS.md, el Codex lee el override e ignora el AGENTS.md de esa carpeta.</p><p class="gl-aulas">Aparece en: <a href="#aula-26">Lección 26</a></p></dd></div>
 <div class="gl-item" id="g-api"><dt>API</dt><dd><p>Puerta de entrada para que un programa use un servicio de IA sin pasar por la pantalla del chat. El uso por API se cobra por consumo.</p><p class="gl-aulas">Aparece en: <a href="#aula-5">Lección 5</a> <a href="#aula-6">Lección 6</a> <a href="#aula-15">Lección 15</a> <a href="#aula-37">Lección 37</a> <a href="#aula-41">Lección 41</a> <a href="#aula-42">Lección 42</a> <a href="#aula-43">Lección 43</a></p></dd></div>
 <div class="gl-item" id="g-apt"><dt>apt</dt><dd><p>Instalador de programas de Ubuntu, usado en la terminal.</p><p class="gl-aulas">Aparece en: <a href="#aula-45">Lección 45</a> <a href="#aula-48">Lección 48</a></p></dd></div>
 <div class="gl-item" id="g-arquivo-rastreado"><dt>archivo rastreado</dt><dd><p>Archivo que Git ya incluye, porque entró en alguna versión guardada. El .gitignore no aplica para él.</p><p class="gl-aulas">Aparece en: <a href="#aula-23">Lección 23</a></p></dd></div>
@@ -4427,7 +4427,7 @@ Propósito: &lt;ej.: borradores de informe a partir de datos ficticios&gt;
 <p class="k">En 1 minuto</p>
 <ol>
 <li>Hay un archivo de instrucciones <b>global</b>, que vale para todo, y uno <b>del proyecto</b>, que vale en esa carpeta.</li>
-<li>El archivo más cercano a la carpeta de trabajo <b>puede prevalecer</b> ahí.</li>
+<li>El archivo más cercano a la carpeta de trabajo <b>prevalece</b> ahí.</li>
 <li>Pídele al Codex el resumen de lo que cargó y <b>verifica</b> en los archivos.</li>
 </ol>
 </div>
@@ -4456,7 +4456,7 @@ Propósito: &lt;ej.: borradores de informe a partir de datos ficticios&gt;
 </section>
 <section class="step" data-kind="fundamento">
 <h2><span class="n">2</span> El archivo más cercano puede decidir ahí</h2>
-<p>Una subcarpeta puede tener su propio AGENTS.md. En este fragmento, la instrucción más cercana puede prevalecer, como el acuerdo de un laboratorio dentro de la escuela.</p>
+<p>Una subcarpeta puede tener su propio AGENTS.md. Con el Codex abierto ahí, los dos valen, y la instrucción más cercana prevalece, como el acuerdo de un laboratorio dentro de la escuela.</p>
 <p>"Puede" porque vale para lo que trata. Lo que la regla de cerca no menciona sigue viniendo del archivo de arriba.</p>
 <p data-ex="professora" data-exlbl="En la práctica · Profesora">Lúcia creó una subcarpeta de pruebas en el proyecto de ciencias, con un AGENTS.md que pide la clave por separado. Cuando ella abre Codex dentro de pruebas, esa regla vale. Abierto en las listas de ejercicios, no.</p>
 <figure class="largo">
@@ -4471,11 +4471,11 @@ Propósito: &lt;ej.: borradores de informe a partir de datos ficticios&gt;
 </div>
 <ol class="passos">
 <li><span class="pin">1</span><span>Instrucción del proyecto.</span></li>
-<li><span class="pin">2</span><span>Instrucción más cercana: puede prevalecer dentro de pruebas.</span></li>
+<li><span class="pin">2</span><span>Instrucción más cercana: prevalece dentro de pruebas.</span></li>
 </ol>
 </figure>
 <details class="mais"><summary>Un archivo que va adelante: el override</summary>
-<p>También existe el <span class="gterm" data-def="Archivo AGENTS.override.md: cuando está en la misma carpeta que un AGENTS.md, sus instrucciones tienen prioridad sobre las del AGENTS.md." data-gl="agents-override">AGENTS.override.md</span>. En la misma carpeta, tiene prioridad sobre el AGENTS.md. ¿No lo creaste ninguno? Genial. Pero puede venir en una carpeta copiada de un colega y, si se quedó ahí, explica mucho comportamiento raro.</p>
+<p>Todavía existe el <span class="gterm" data-def="Archivo AGENTS.override.md: cuando está en la misma carpeta que un AGENTS.md, el Codex lee el override e ignora el AGENTS.md de esa carpeta." data-gl="agents-override">AGENTS.override.md</span>. En la misma carpeta, el Codex lee el override e ignora el AGENTS.md. ¿No creaste ninguno? Perfecto. Pero puede venir en una carpeta copiada de un colega y, olvidado ahí, explica mucho comportamiento extraño.</p>
 </details>
 </section>
 <section class="step" data-kind="fundamento">
@@ -4546,7 +4546,7 @@ No alteré ningún archivo.</p>
 <h3>Global y proyecto</h3>
 <ol>
 <li><span><b>Global pequeño</b>~/.codex/AGENTS.md, reglas que valen para todo.</span></li>
-<li><span><b>Proyecto con detalle</b>el archivo más cercano puede prevalecer en esa carpeta.</span></li>
+<li><span><b>Proyecto con detalle</b>el archivo más cercano prevalece en esa carpeta.</span></li>
 <li><span><b>Verifica el origen</b>resumen de Codex contra los archivos, antes de culpar al modelo.</span></li>
 </ol>
 </div>

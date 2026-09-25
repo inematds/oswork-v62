@@ -286,7 +286,7 @@
 <dl class="glossario">
 <div class="gl-item" id="g-agente"><dt>agent</dt><dd><p>AI that runs multiple steps on its own, like reading files, creating and comparing, instead of just responding to a message.</p><p class="gl-aulas">Shown in: <a href="#aula-5">Lesson 5</a> <a href="#aula-6">Lesson 6</a> <a href="#aula-8">Lesson 8</a> <a href="#aula-9">Lesson 9</a> <a href="#aula-11">Lesson 11</a> <a href="#aula-12">Lesson 12</a> <a href="#aula-16">Lesson 16</a> <a href="#aula-17">Lesson 17</a> <a href="#aula-18">Lesson 18</a> <a href="#aula-20">Lesson 20</a> <a href="#aula-24">Lesson 24</a> <a href="#aula-25">Lesson 25</a> <a href="#aula-26">Lesson 26</a> <a href="#aula-27">Lesson 27</a> <a href="#aula-28">Lesson 28</a> <a href="#aula-29">Lesson 29</a> <a href="#aula-30">Lesson 30</a> <a href="#aula-31">Lesson 31</a> <a href="#aula-32">Lesson 32</a> <a href="#aula-37">Lesson 37</a> <a href="#aula-41">Lesson 41</a> <a href="#aula-42">Lesson 42</a> <a href="#aula-48">Lesson 48</a></p></dd></div>
 <div class="gl-item" id="g-agents-md"><dt>AGENTS.md</dt><dd><p>Markdown file with the instructions that the agent reads before working in a folder: rules, limits, and how to verify.</p><p class="gl-aulas">Shown in: <a href="#aula-16">Lesson 16</a> <a href="#aula-17">Lesson 17</a> <a href="#aula-18">Lesson 18</a> <a href="#aula-19">Lesson 19</a> <a href="#aula-24">Lesson 24</a> <a href="#aula-25">Lesson 25</a> <a href="#aula-26">Lesson 26</a> <a href="#aula-27">Lesson 27</a> <a href="#aula-29">Lesson 29</a> <a href="#aula-30">Lesson 30</a></p></dd></div>
-<div class="gl-item" id="g-agents-override"><dt>AGENTS.override.md</dt><dd><p>AGENTS.override.md file: when it’s in the same folder as an AGENTS.md, its instructions have priority over the AGENTS.md instructions.</p><p class="gl-aulas">Appears in: <a href="#aula-26">Lesson 26</a></p></dd></div>
+<div class="gl-item" id="g-agents-override"><dt>AGENTS.override.md</dt><dd><p>AGENTS.override.md file: when it’s in the same folder as an AGENTS.md, the Codex reads the override and ignores the AGENTS.md from that folder.</p><p class="gl-aulas">Appears in: <a href="#aula-26">Lesson 26</a></p></dd></div>
 <div class="gl-item" id="g-api"><dt>API</dt><dd><p>Entry point for a program to use an AI service without going through the chat screen. API usage is charged based on consumption.</p><p class="gl-aulas">Appears in: <a href="#aula-5">Lesson 5</a> <a href="#aula-6">Lesson 6</a> <a href="#aula-15">Lesson 15</a> <a href="#aula-37">Lesson 37</a> <a href="#aula-41">Lesson 41</a> <a href="#aula-42">Lesson 42</a> <a href="#aula-43">Lesson 43</a></p></dd></div>
 <div class="gl-item" id="g-apt"><dt>apt</dt><dd><p>Ubuntu’s program installer, used in the terminal.</p><p class="gl-aulas">Appears in: <a href="#aula-45">Lesson 45</a> <a href="#aula-48">Lesson 48</a></p></dd></div>
 <div class="gl-item" id="g-arquivo-rastreado"><dt>tracked file</dt><dd><p>A file that Git already includes, because it was added from some saved version. .gitignore doesn’t apply to it.</p><p class="gl-aulas">Appears in: <a href="#aula-23">Lesson 23</a></p></dd></div>
@@ -4427,7 +4427,7 @@ Purpose: &lt;e.g., report drafts based on fictitious data&gt;
 <p class="k">In 1 minute</p>
 <ol>
 <li>There’s a <b>global</b> instruction file that applies to everything, and a <b>project</b> one that applies in that folder.</li>
-<li>The instruction file closest to the working folder <b>can take precedence</b> there.</li>
+<li>The file closest to the working folder <b>takes precedence</b> there.</li>
 <li>Ask Codex for the summary of what it loaded and <b>verify</b> it in the files.</li>
 </ol>
 </div>
@@ -4456,7 +4456,7 @@ Purpose: &lt;e.g., report drafts based on fictitious data&gt;
 </section>
 <section class="step" data-kind="fundamento">
 <h2><span class="n">2</span>The closest file can decide there</h2>
-<p>A subfolder can have its own AGENTS.md. In this part, the closest instruction can prevail, like the lab agreement within the school.</p>
+<p>A subfolder can have its own AGENTS.md. With Codex open in it, both apply, and the closest instruction takes precedence, like a lab agreement inside the school.</p>
 <p>"Can" because it applies to what it covers. What the nearby rule doesn’t mention keeps coming from the upper file.</p>
 <p data-ex="professora" data-exlbl="In practice · Teacher">Lúcia created a provas subfolder inside her science project, with an AGENTS.md that asks for a separate answer key. When she opens the Codex inside provas, this rule applies. If it’s opened in the exercise lists, it doesn’t.</p>
 <figure class="largo">
@@ -4471,11 +4471,11 @@ Purpose: &lt;e.g., report drafts based on fictitious data&gt;
 </div>
 <ol class="passos">
 <li><span class="pin">1</span><span>Project instruction.</span></li>
-<li><span class="pin">2</span><span>Closest instruction: it can prevail inside tests.</span></li>
+<li><span class="pin">2</span><span>Closest instruction: takes precedence inside exams.</span></li>
 </ol>
 </figure>
 <details class="mais"><summary>A file that gets in front: the override</summary>
-<p>There’s also the <span class="gterm" data-def="File AGENTS.override.md: when it’s in the same folder as an AGENTS.md, its instructions take priority over those of AGENTS.md." data-gl="agents-override">AGENTS.override.md</span>. In the same folder, it takes priority over the AGENTS.md. Did you create none? Great. But it can come from a folder copied from a colleague and, forgotten there, it explains a lot of very strange behavior.</p>
+<p>There’s also the <span class="gterm" data-def="AGENTS.override.md file: when it’s in the same folder as an AGENTS.md, the Codex reads the override and ignores the AGENTS.md from that folder." data-gl="agents-override">AGENTS.override.md</span>. In the same folder, the Codex reads the override and ignores the AGENTS.md. You didn’t create any? Great. But it can show up in a folder copied from a colleague and, forgotten there, it explains a lot of weird behavior.</p>
 </details>
 </section>
 <section class="step" data-kind="fundamento">
@@ -4546,7 +4546,7 @@ I didn’t change any file.</p>
 <h3>Global and project</h3>
 <ol>
 <li><span><b>Small global</b>~/.codex/AGENTS.md, rules that apply everywhere.</span></li>
-<li><span><b>Project with detail</b>the closest file can prevail in that folder.</span></li>
+<li><span><b>Project with details</b> the closest file takes precedence in that folder.</span></li>
 <li><span><b>Check the source</b>Codex summary against the files, before blaming the model.</span></li>
 </ol>
 </div>
