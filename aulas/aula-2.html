@@ -1,0 +1,160 @@
+<section class="view" id="v-aula-2" data-aula="2" data-tempo="14min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 1 · Aula 2 de 6</p>
+  <h1>Separe por <em>função</em> antes de comparar nomes</h1>
+  <figure class="cena"><img src="assets/img/aula-2.webp" width="1280" height="720" alt="Uma professora na sala dos professores separa papéis em quatro bandejas de cores diferentes, com o notebook aberto ao lado."></figure>
+  <p class="promise">Você consegue dizer, para cada tarefa que repete, que tipo de modelo ela pede — texto, imagem, vídeo ou classificação — antes de escolher um nome.</p>
+  <p class="why">Adotar um modelo como "o melhor" fecha a porta para tudo que ele não faz. Um modelo excelente de texto não gera um vídeo. Um classificador não escreve o seu relatório. Esta aula ensina a separar por função primeiro.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Quatro funções: <b>texto</b>, <b>imagem</b>, <b>vídeo</b> e <b>classificação</b>.</li>
+      <li>Nomes e versões mudam; a função da tarefa fica.</li>
+      <li>Centrais dão acesso a vários modelos por um único ponto.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Quatro funções, quatro tipos de modelo</h2>
+  <p>Modelos de linguagem, as <span class="gterm" data-gl="llm" data-def="Modelo de linguagem: programa treinado com muito texto que produz texto a partir do que você entrega. É o tipo de IA que está por trás dos chats.">LLMs</span>, escrevem, resumem, explicam e programam. Modelos de imagem e de vídeo geram ou editam material visual.</p>
+  <p>Existem ainda os modelos de classificação. Eles não conversam: recebem alternativas e devolvem uma escolha, um sim ou não, ou uma nota.</p>
+  <p data-ex="professora">Lúcia listou o que faz com IA num mês. Resumir a ata do conselho de classe pede texto. A capa da feira de ciências pede imagem. Separar duzentos comentários da turma pede classificação.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Tarefas de Lúcia · por função</span></div>
+      <div class="janela-body">
+        <div class="item pasta"><span class="pin">1</span> Texto</div>
+        <div class="item doc dentro">resumir a ata do conselho de classe</div>
+        <div class="item pasta"><span class="pin">2</span> Imagem</div>
+        <div class="item doc dentro">capa da feira de ciências</div>
+        <div class="item pasta"><span class="pin">3</span> Vídeo</div>
+        <div class="item doc dentro">vinheta de dez segundos da feira</div>
+        <div class="item pasta"><span class="pin">4</span> Classificação</div>
+        <div class="item doc dentro">separar comentários em "dúvida", "elogio" e "reclamação"</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Texto: escrever, resumir, explicar.</span></li>
+      <li><span class="pin">2</span><span>Imagem: gerar ou editar figuras.</span></li>
+      <li><span class="pin">3</span><span>Vídeo: gerar clipes.</span></li>
+      <li><span class="pin">4</span><span>Classificação: escolher e pontuar.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Nomes mudam, a função fica</h2>
+  <p>ChatGPT, Gemini e Copilot são chats: por trás de cada um há modelos de linguagem. Dentro de cada tipo há famílias com nomes próprios. Em texto, a família GPT tem Sol, Terra e Luna, além do GPT-6 Astra. A família Claude tem Opus e Fable.</p>
+  <p>Você não precisa decorar essa lista: esses nomes são de uma consulta de 20/09/2026. Nomes, versões e disponibilidade mudam. Por isso a escolha acontece quando a tarefa aparece, e pode ser outra na semana seguinte.</p>
+  <p data-ex="coordenadora">Denise ouviu de uma colega que "tal modelo é o melhor" e quis usá-lo para tudo. Ao pedir a arte do convite da festa junina, descobriu que ele só escrevia texto.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Escolha pelo nome</span><p>"Vou usar o modelo que todo mundo elogia, para tudo."</p><p>A arte do convite não sai: o modelo é de texto.</p></div>
+      <div class="depois"><span class="rot">Escolha pela função</span><p>Convite em texto: um modelo de linguagem. Arte do convite: um modelo de imagem.</p><p>Cada tarefa vai para o tipo que sabe fazê-la.</p></div>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>O classificador não conversa, escolhe</h2>
+  <p>Um classificador, como o <span class="gterm" data-def="Exemplo de modelo de classificação citado no curso. Não conversa: recebe um texto e alternativas fechadas e devolve uma escolha, um sim ou não, ou uma nota.">Jev</span>, recebe um texto e uma lista fechada de alternativas. Ele devolve uma escolha, e não um parágrafo.</p>
+  <p>Para triar muitos itens entre poucas categorias, isso pode ser mais simples de conferir do que uma conversa. É uma hipótese para testar, não uma garantia. Dá para experimentar a ideia hoje no próprio chat: cole os itens e peça "responda só com uma destas categorias".</p>
+  <p data-ex="professora">Lúcia colou no chat um comentário de aluno e as três categorias, pedindo só a categoria. Voltou uma palavra só. Ela conferiu dez respostas na mão antes de confiar nas outras.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Classificador</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Comentário: "Não entendi a parte da fotossíntese que caiu na prova."
+Categorias: dúvida · elogio · reclamação</p>
+        <p class="msg ia ok"><span class="quem">IA</span>dúvida</p>
+      </div>
+      <p class="tela-nota bom">Uma escolha entre as alternativas dadas. Fácil de conferir em lote.</p>
+    </div>
+  </figure>
+  <div class="quiz" data-answer="a">
+    <p class="qk">Teste-se</p>
+    <p class="q">Denise recebeu 300 respostas abertas de pais sobre o horário de entrada. Ela quer saber quantas pedem mudança. Que tipo de modelo ela testa primeiro?</p>
+    <button class="opt" data-k="a" data-fb="Cada resposta vai para &quot;pede mudança&quot; ou &quot;não pede&quot;: escolher entre alternativas fechadas é o trabalho de um classificador.">Um classificador</button>
+    <button class="opt" data-k="b" data-fb="Um resumo junta as respostas num texto e perde a contagem; ela precisa de cada resposta numa categoria.">Um modelo de texto que resuma tudo</button>
+    <button class="opt" data-k="c" data-fb="Ser o mais novo não diz nada sobre a função. Primeiro a função, depois o nome.">O modelo mais novo da família GPT</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Centrais abrem várias portas por um ponto</h2>
+  <p>Há ainda as centrais, que dão acesso a vários <span class="gterm" data-def="Empresa que oferece um modelo de IA. Uma central reúne modelos de vários provedores num lugar só.">provedores</span> por um único ponto. O <span class="gterm" data-gl="openrouter" data-def="Central que dá acesso a modelos de linguagem de várias empresas por um único ponto, com crédito próprio.">OpenRouter</span> reúne modelos de linguagem. O <span class="gterm" data-gl="kie" data-def="Central que dá acesso a modelos de imagem e de vídeo de vários provedores, com crédito próprio.">Kie</span> reúne modelos de imagem e de vídeo.</p>
+  <p>A disponibilidade varia por conta, por plano e por liberação. Um modelo que aparece para uma colega pode não aparecer para você.</p>
+  <p data-ex="coordenadora">Para a vinheta de dez segundos da formatura, Denise não precisou assinar um serviço de vídeo por modelo. Numa central de imagem e vídeo, comparou dois modelos no mesmo lugar, com uma conta só.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="neutro"><span class="rot">Central de texto</span><p><b>OpenRouter</b></p><p>Vários modelos de linguagem num só ponto de acesso.</p></div>
+      <div class="bom"><span class="rot">Central de imagem e vídeo</span><p><b>Kie</b></p><p>Vários modelos de imagem e de vídeo num só ponto de acesso.</p></div>
+    </div>
+    <figcaption>Cada central tem crédito próprio. A aula 5 mostra como isso entra na conta.</figcaption>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>A lista de nomes cansa e envelhece rápido. Guarde só as quatro funções. Os nomes você consulta em "Onde consultar os nomes atuais", na prática desta aula, quando a tarefa aparecer.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Classifique as suas três tarefas mais repetidas</h3>
+  <p class="pgoal">Pronto quando cada tarefa tiver um tipo de modelo e só depois um nome. Cerca de 8 minutos, no papel ou nas Notas do celular.</p>
+  <p class="psafe">Ninguém vê essa lista além de você. Ficou em dúvida entre dois tipos? Escreva os dois: o laboratório do módulo, no material complementar da aula 6, compara na prática.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">TAREFA 1: &lt;ex.: resumir a ata do conselho&gt;
+Tipo: &lt;texto, imagem, vídeo ou classificação&gt;
+Nome para testar: &lt;preencha por último&gt;
+
+TAREFA 2: &lt;…&gt;
+Tipo: &lt;…&gt;
+Nome para testar: &lt;…&gt;
+
+TAREFA 3: &lt;…&gt;
+Tipo: &lt;…&gt;
+Nome para testar: &lt;…&gt;</pre></div>
+  <details class="mais"><summary>Onde consultar os nomes atuais</summary><p>As páginas oficiais listam o que está disponível hoje: <a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener">modelos do ChatGPT</a>, <a href="https://docs.claude.com/en/docs/about-claude/models/overview" target="_blank" rel="noopener">modelos Claude</a>, <a href="https://openrouter.ai/models" target="_blank" rel="noopener">catálogo do OpenRouter</a> e <a href="https://kie.ai/" target="_blank" rel="noopener">Kie</a>. Consulta do curso: 20/09/2026.</p></details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Escreva as três tarefas de IA que você mais repete no mês.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Ao lado de cada uma, escreva o tipo de modelo que ela pede: texto, imagem, vídeo ou classificação.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Só agora escreva um nome para testar em cada tarefa. Os links estão logo acima, em "Onde consultar os nomes atuais".</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de escolher pela função antes do nome, para as tarefas que mais se repetem.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Função antes do nome</h3>
+    <ol>
+      <li><span><b>Quatro tipos</b>texto, imagem, vídeo, classificação.</span></li>
+      <li><span><b>Nomes envelhecem</b>consulte a data e a fonte antes de escolher.</span></li>
+      <li><span><b>Centrais</b>vários provedores num ponto, com crédito próprio.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe separar as suas tarefas pelo tipo de modelo que cada uma pede.</p>
+    <p class="na-action">Guarde a lista da prática num documento ou nas Notas. Se fizer o laboratório opcional do módulo, no fim da aula 6, você testa uma dessas tarefas em dois modelos.</p>
+    <p class="na-hook">Na próxima aula: dentro do mesmo modelo ainda existe um controle, o esforço de raciocínio. Aumentar nem sempre melhora.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · Tipos de IA e para que servem<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Antes de comparar nomes, separe por função. Modelos de linguagem, as LLMs, escrevem, resumem, explicam e programam: aí entram famílias como GPT, com Sol, Terra e Luna, o GPT-6 Astra, e a família Claude, com Opus e Fable. Modelos de imagem e de vídeo geram ou editam material visual. E existem modelos de classificação, como o Jev, que não conversam: recebem alternativas e devolvem uma escolha, um sim ou não, ou uma nota. Há ainda as centrais, que dão acesso a vários provedores por um único ponto: o OpenRouter para modelos de linguagem e o Kie para imagem e vídeo. Nomes, versões e disponibilidade mudam; esta consulta é de 20/09/2026.</p><h3>Por que aprender</h3><p>Adotar um modelo como o melhor fecha a porta para tudo que ele não faz. Uma <span class="gterm" data-def="Modelo de linguagem: programa treinado com muito texto que produz texto a partir do que você entrega. É o tipo de IA que está por trás dos chats." data-gl="llm">LLM</span> excelente não gera um vídeo, e um classificador não escreve o seu relatório. Entender para que cada tipo serve vem antes de escolher, e a escolha acontece quando a tarefa aparece, podendo ser outra na semana seguinte. Disponibilidade também varia por conta, cliente, autenticação e liberação.</p><h3>Conceitos-chave</h3><p>Texto; imagem; vídeo; classificação; centrais de acesso; disponibilidade.</p><h4>Na prática</h4><p>Resumir uma ata pede um modelo de linguagem. Triar duzentos comentários entre três categorias pode caber melhor em um classificador como o Jev. Produzir uma vinheta de dez segundos exige um modelo de vídeo, normalmente acessado por uma central. São hipóteses para testar, não garantias.</p><h4>Experimente agora</h4><p>Liste as três tarefas de IA que você mais repete. Ao lado de cada uma escreva o tipo de modelo que ela pede e só depois o nome que pretende testar; consulte as fontes no fim do módulo.</p><figure class="comp-fig"><ul><li><b>Texto · LLMs</b> — resumir e escrever</li><li><b>Imagem</b> — gerar e editar</li><li><b>Vídeo</b> — gerar clipes</li><li><b>Classificação</b> — escolher e pontuar</li><li>OpenRouter · texto</li><li>Kie · imagem e vídeo</li></ul><figcaption>Separe por função antes de comparar nomes. As centrais dão acesso a vários provedores por um ponto só.</figcaption></figure></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#aula-1">← aula anterior</a><a class="next" href="#aula-3">próxima aula →</a></nav>
+<p class="aula-pe">Aula 2 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-2">
+[
+  {"front":"Você quer transformar a foto da turma num cartaz ilustrado. Qual tipo de modelo essa tarefa pede?","back":"Um modelo de imagem. Um modelo de texto pode ajudar a descrever o cartaz, mas não gera a figura."},
+  {"front":"Por que anotar a data ao lado do nome de um modelo?","back":"Porque nomes, versões e disponibilidade mudam. A data diz quando aquela escolha foi verificada."},
+  {"front":"Um colega vê um modelo no seletor dele que não aparece no seu. O que pode explicar a diferença?","back":"A disponibilidade varia por conta, plano, autenticação e liberação."},
+  {"front":"Em que situação um classificador pode ser melhor que uma conversa com a IA?","back":"Quando a tarefa é escolher entre poucas alternativas fechadas, em muitos itens, e você precisa conferir em lote."}
+]
+</script>
+</section>

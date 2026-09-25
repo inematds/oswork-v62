@@ -1,0 +1,40 @@
+{
+  "id": "oswork62",
+  "titulo": "OSWork v6.2 — Sua IA precisa de um sistema",
+  "titulo_html": "Sua IA precisa de um <em>sistema</em>",
+  "curso_curto": "OSWork v6.2",
+  "kicker": "OSWork v6.2 · 8 módulos · aulas de uns 15 minutos",
+  "lead": "Do chat ao seu ambiente de agentes, uma aula curta de cada vez. Você organiza arquivos, ensina procedimentos à IA e monta rotinas que consegue conferir. Cada aula traz no fim o material completo do tópico para quem quer ir mais fundo.",
+  "imagem_trilha": "assets/img/trilha.webp",
+  "alt_trilha": "Uma coordenadora e uma professora dividem uma bancada de trabalho arrumada, com notebook, pastas e ferramentas, como numa oficina.",
+  "rodape": "OSWork v6.2 · INEMA.CLUB PRO · <a href=\"landing.html\">sobre o curso</a>",
+  "landing": "landing.html",
+  "perfil": "tecnico",
+  "termos": [
+    "LLM",
+    "LLMs",
+    "token",
+    "tokens",
+    "Codex",
+    "OpenRouter",
+    "Kie",
+    "agente",
+    "agentes",
+    "Telegram",
+    "VPS"
+  ],
+  "modulos": [
+    {
+      "titulo": "Módulo 1 · Modelos: escolha pela tarefa",
+      "resumo": "Comparar modelos com uma tarefa real e um critério de qualidade.",
+      "aulas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ]
+}

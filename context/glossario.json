@@ -1,0 +1,87 @@
+{
+  "_nota": "Uma definição por termo, igual no curso inteiro. 'formas' = como o termo aparece no texto (o auditor cobra cada forma). O scripts/complementar.py usa este arquivo para marcar termos no material complementar.",
+  "llm": {
+    "formas": [
+      "LLM",
+      "LLMs"
+    ],
+    "def": "Modelo de linguagem: programa treinado com muito texto que produz texto a partir do que você entrega. É o tipo de IA que está por trás dos chats."
+  },
+  "token": {
+    "formas": [
+      "token",
+      "tokens"
+    ],
+    "def": "Pedaço de texto, como uma palavra curta ou parte de uma palavra, que o modelo lê e escreve. O uso e a cobrança costumam ser medidos em tokens."
+  },
+  "codex": {
+    "formas": [
+      "Codex"
+    ],
+    "def": "Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3."
+  },
+  "terminal": {
+    "formas": [
+      "terminal"
+    ],
+    "def": "Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar."
+  },
+  "api": {
+    "formas": [
+      "API"
+    ],
+    "def": "Porta de entrada para um programa usar um serviço de IA sem passar pela tela do chat. O uso pela API é cobrado por consumo."
+  },
+  "chave-de-api": {
+    "formas": [
+      "chave de API"
+    ],
+    "def": "Senha longa que identifica quem usa a API e para quem vai a conta. Nunca vai num pedido, num arquivo compartilhado ou num print."
+  },
+  "login": {
+    "formas": [
+      "login",
+      "Login"
+    ],
+    "def": "Entrar numa ferramenta com a sua conta, como a conta do ChatGPT. Os direitos e limites vêm do plano dessa conta."
+  },
+  "openrouter": {
+    "formas": [
+      "OpenRouter"
+    ],
+    "def": "Central que dá acesso a modelos de linguagem de várias empresas por um único ponto, com crédito próprio."
+  },
+  "kie": {
+    "formas": [
+      "Kie"
+    ],
+    "def": "Central que dá acesso a modelos de imagem e de vídeo de vários provedores, com crédito próprio."
+  },
+  "agente": {
+    "formas": [
+      "agente",
+      "agentes"
+    ],
+    "def": "IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem."
+  },
+  "instalar": {
+    "formas": [
+      "instalar",
+      "instalação",
+      "instalado"
+    ],
+    "def": "Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial."
+  },
+  "telegram": {
+    "formas": [
+      "Telegram"
+    ],
+    "def": "Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7."
+  },
+  "vps": {
+    "formas": [
+      "VPS"
+    ],
+    "def": "Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar."
+  }
+}

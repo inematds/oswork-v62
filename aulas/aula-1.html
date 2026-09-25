@@ -1,0 +1,165 @@
+<section class="view" id="v-aula-1" data-aula="1" data-tempo="13min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 1 · Aula 1 de 6</p>
+  <h1>O modelo é uma peça, <em>não o sistema</em></h1>
+  <figure class="cena"><img src="assets/img/aula-1.webp" width="1280" height="720" alt="Uma coordenadora pedagógica numa mesa de reunião desenha sete caixas numa folha, com a pauta e a ata anterior impressas ao lado do notebook."></figure>
+  <p class="promise">Você consegue desenhar as sete peças do seu sistema de IA e apontar qual delas falta para concluir uma tarefa real desta semana.</p>
+  <p class="why">Quando a resposta sai ruim, a reação comum é trocar de ferramenta ou escrever um pedido maior. Muitas vezes o problema está em outra peça: faltou o arquivo, a permissão ou a forma de conferir. Esta aula mostra onde procurar.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Um modelo produz texto a partir do que você entrega.</li>
+      <li>Não existe <b>melhor modelo</b>: existe o adequado à tarefa.</li>
+      <li>O resultado depende de <b>sete peças</b>, e a falha costuma estar numa delas.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>O modelo trabalha com o que recebe</h2>
+  <p>Quando este curso fala em IA, fala em modelos de linguagem, as <span class="gterm" data-gl="llm" data-def="Modelo de linguagem: programa treinado com muito texto que produz texto a partir do que você entrega. É o tipo de IA que está por trás dos chats.">LLMs</span>. Um modelo é um mecanismo treinado para produzir texto a partir do que você entrega.</p>
+  <p>Ele não enxerga a sua escola, a sua equipe nem a reunião da semana passada. O que falta no pedido, ele completa com o jeito mais comum de responder.</p>
+  <p data-ex="coordenadora">Denise, coordenadora pedagógica, pediu um plano para a reunião de pais. Sem a pauta, a IA imaginou prioridades. Com a pauta e a ata anterior coladas, voltou uma proposta que ela conseguiu conferir.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Chat de IA</span></div>
+      <div class="tela-caso" data-rotulo="Sem a pauta">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Você</span>Monte um plano para a reunião de pais do 8º ano.</p>
+          <p class="msg ia falha"><span class="quem">IA</span>Sugestão de plano: 1. Boas-vindas. 2. Apresentação do projeto pedagógico. 3. Calendário de provas…</p>
+        </div>
+        <p class="tela-nota ruim">Prioridades inventadas. Nada disso estava na pauta da escola.</p>
+      </div>
+      <div class="tela-caso" data-rotulo="Com pauta e ata">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Você</span>Monte um plano para a reunião de pais do 8º ano, usando só a pauta e a ata abaixo. Marque o que ficou pendente da reunião anterior.
+[pauta colada]
+[ata anterior colada]</p>
+          <p class="msg ia ok"><span class="quem">IA</span>Plano a partir da pauta enviada:
+1. [item 1 da pauta]
+2. [item 2 da pauta]
+Pendente da ata anterior: [pendência registrada na ata]</p>
+        </div>
+        <p class="tela-nota bom">Mesma IA. Agora cada item aponta para um papel que Denise tem na mão.</p>
+      </div>
+    </div>
+    <figcaption><b>Toque nos dois botões</b> e compare o que a IA recebeu em cada caso.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Não existe o melhor modelo</h2>
+  <p>Existem vários modelos, com nomes, tamanhos e custos diferentes. A pergunta "qual é o melhor?" não tem resposta útil.</p>
+  <p>A pergunta que ajuda é outra: qual modelo resolve esta tarefa, neste prazo, com este custo e com o quanto você vai precisar conferir? Por isso o módulo compara modelos com uma tarefa real, e não com opinião.</p>
+  <p data-ex="professora">Lúcia, professora de ciências, parou de procurar "a melhor IA". Agora ela pergunta qual ferramenta corrige a lista de exercícios do 8º ano no tempo que ela tem.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Pergunta que trava</span><p>"Qual é a melhor IA?"</p><p>Cada pessoa responde uma coisa. Nenhuma resposta vale para a sua tarefa.</p></div>
+      <div class="depois"><span class="rot">Pergunta que decide</span><p>"Qual modelo resume esta ata em dez linhas, hoje, e me deixa conferir os três responsáveis?"</p><p>Dá para testar e comparar.</p></div>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>Sete peças fazem o sistema</h2>
+  <p>Um modelo produz respostas. Um sistema organiza como essas respostas viram trabalho. O OSWork combina sete peças: modelo, <span class="gterm" data-def="A tela por onde você passa o objetivo à IA, como a janela do chat. O curso mostra outras interfaces ao longo dos módulos.">interface</span>, arquivos, instruções, ferramentas, memória e automações.</p>
+  <p>O nome OSWork é uma metáfora de organização. Você não vai trocar o sistema do seu computador.</p>
+  <p data-ex="coordenadora">Denise desenhou as sete caixas para a tarefa "ata da reunião de pais". Tinha modelo e interface. Faltavam os arquivos: a pauta estava no e-mail de outra pessoa.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Bancada de Denise · ata da reunião</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Modelo — o chat da escola ✓</div>
+        <div class="item doc"><span class="pin">2</span> Interface — a janela do chat ✓</div>
+        <div class="item doc"><span class="pin">3</span> Arquivos — pauta e ata anterior ✗ falta</div>
+        <div class="item doc"><span class="pin">4</span> Instruções — regras fixas que a IA segue (módulo 5) · ?</div>
+        <div class="item doc"><span class="pin">5</span> Ferramentas — o que a IA pode executar, como gravar arquivo (módulo 3) · ?</div>
+        <div class="item doc"><span class="pin">6</span> Memória — o que fica guardado entre conversas (módulo 5) · ?</div>
+        <div class="item doc"><span class="pin">7</span> Automações — tarefas que rodam sem você abrir o chat (módulos 7 e 8) · ?</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O modelo raciocina sobre o que recebe.</span></li>
+      <li><span class="pin">2</span><span>A interface recebe o objetivo.</span></li>
+      <li><span class="pin">3</span><span>Os arquivos dão evidência. Sem eles, a IA imagina.</span></li>
+      <li><span class="pin">4</span><span>As peças 4 a 7 ganham um módulo cada. Por enquanto, um "?" basta.</span></li>
+    </ol>
+  </figure>
+  <details class="mais"><summary>Quer uma comparação do dia a dia?</summary><p>Pense numa pequena oficina. A habilidade do profissional importa, mas ferramentas, materiais e critérios de qualidade também decidem o resultado.</p></details>
+  <div class="quiz" data-answer="c">
+    <p class="qk">Teste-se</p>
+    <p class="q">No computador da escola, o plano da reunião saiu certo. No celular, com o mesmo chat, a IA inventou dois itens. Você tinha colado só metade da pauta. Qual peça falhou?</p>
+    <button class="opt" data-k="a" data-fb="O chat era o mesmo nas duas vezes; o modelo não mudou.">O modelo</button>
+    <button class="opt" data-k="b" data-fb="Trocar de tela não faz a IA inventar. O que mudou foi o que ela recebeu.">A interface, por ser o celular</button>
+    <button class="opt" data-k="c" data-fb="Metade da pauta ficou de fora, e a IA completou o resto. A peça foi o material enviado.">Os arquivos enviados</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Corrija a peça certa</h2>
+  <p>Separar as peças evita o reflexo de escrever um pedido cada vez maior. Primeiro você pergunta onde a falha nasceu. Depois corrige só ali.</p>
+  <p>E uma peça nunca sai do sistema: você. O modelo raciocina, as ferramentas executam, e quem confere é você.</p>
+  <p data-ex="professora">A IA de Lúcia disse que tinha salvo as notas, mas o arquivo não apareceu. Faltava uma ferramenta com permissão para gravar. Escrever o pedido de novo não resolveria.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Sintoma → peça que falta</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Inventou prioridades → arquivos: a pauta e a ata</div>
+        <div class="item doc"><span class="pin">2</span> Disse que salvou, e não salvou → ferramenta com permissão para gravar</div>
+        <div class="item doc"><span class="pin">3</span> Ninguém sabe se está certo → você, que confere</div>
+      </div>
+    </div>
+    <figcaption>A terceira linha não é uma das sete peças: é quem usa o sistema.</figcaption>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Sete peças parecem muitas no começo. Nesta aula você só precisa julgar três: modelo, interface e arquivos. Nas outras quatro, um "?" é a resposta certa por enquanto.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Desenhe as sete peças de uma tarefa sua</h3>
+  <p class="pgoal">Pronto quando você circular, entre modelo, interface e arquivos, a peça que falta numa tarefa real desta semana. Cerca de 8 minutos, no papel ou nas Notas do celular.</p>
+  <p class="psafe">É só um desenho: nada é enviado para ninguém. Se todas as peças parecerem presentes, escolha uma tarefa que deu retrabalho recentemente.</p>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Escolha uma tarefa que você já pediu à IA. Desenhe sete caixas: modelo, interface, arquivos, instruções, ferramentas, memória e automações.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Marque ✓ ou ✗ em modelo, interface e arquivos. Nas outras quatro, escreva "?". Exemplo de Lúcia: modelo ✓, interface ✓, planilha da turma ✗.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Circule a peça marcada com ✗ e escreva, ao lado, o que você faria para trazê-la. Se a falha parece estar numa das outras quatro, como ferramentas, anote isso ao lado do "?".</span></label></li>
+  </ol>
+  <p class="pdone">Você acabou de enxergar o seu uso de IA como um sistema e apontar a peça que falta.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Sete peças</h3>
+    <ol>
+      <li><span><b>Modelo certo para a tarefa</b>não existe o melhor em geral.</span></li>
+      <li><span><b>Sete peças</b>modelo, interface, arquivos, instruções, ferramentas, memória, automações.</span></li>
+      <li><span><b>Falhou?</b>ache a peça antes de reescrever o pedido. Quem confere é você.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe localizar a peça que falta quando a IA erra.</p>
+    <p class="na-action">Hoje, no próximo pedido que voltar ruim, anote numa linha qual peça faltou antes de tentar de novo.</p>
+    <p class="na-hook">Na próxima aula: se o modelo é uma peça, que tipos de modelo existem? Texto, imagem, vídeo e classificação resolvem coisas diferentes.</p>
+  </div>
+</div>
+<!--COMP-->
+<details class="complementar">
+  <summary>Material complementar · IA como sistema de trabalho<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>Quando este curso fala em IA, fala em modelos de linguagem, as LLMs. Um modelo é um mecanismo treinado para produzir texto a partir do que você entrega. Existem vários, com nomes, tamanhos e custos diferentes, e a primeira pergunta costuma ser qual é o melhor. Essa pergunta não tem resposta útil: não existe melhor modelo, existe o modelo adequado à tarefa, ao prazo, ao custo e ao nível de conferência que aquele trabalho exige. Por isso o módulo compara modelos com uma tarefa real, e não com opinião. Um modelo produz respostas; um sistema organiza como essas respostas viram trabalho. O OSWork combina modelo, interface, arquivos, instruções, ferramentas, memória e automações. Pense em uma pequena oficina: a habilidade do profissional importa, mas ferramentas, materiais e critérios de qualidade também determinam o resultado. Não estamos instalando um novo sistema operacional de computador: usamos essa expressão como uma metáfora de organização.</p><h3>Por que aprender</h3><p>Sem essa distinção, toda falha vira tentativa de escrever um prompt maior. Às vezes falta apenas o arquivo de entrada, uma permissão ou a forma de conferir a saída. Separar as peças permite corrigir o ponto certo.</p><h3>Conceitos-chave</h3><p>Modelo raciocina; interface recebe o objetivo; arquivos dão evidência; ferramentas executam; você confere.</p><h4>Na prática</h4><p>Uma coordenadora pede um plano de reunião. Sem pauta, a IA imagina prioridades. Com pauta e ata anterior, ela consegue preparar uma proposta verificável.</p><h4>✓ Faça</h4><p>Desenhe sete caixas com as peças do sistema. Marque quais você já tem e qual falta para concluir uma tarefa.</p><h4>✗ Evite</h4><p>Aceitar uma conclusão sem conferir a entrada que a sustenta.</p><figure class="comp-fig"><ul><li>Modelo</li><li>Interface</li><li>Arquivos</li><li>Instruções</li><li>Ferramentas</li><li>Memória</li><li>Automações</li></ul><figcaption>As sete peças do sistema. Marque o que você já tem e o que falta para concluir uma tarefa.</figcaption></figure></section>
+</details>
+<!--/COMP-->
+<nav class="lnav"><a href="#trilha">← trilha</a><a class="next" href="#aula-2">próxima aula →</a></nav>
+<p class="aula-pe">Aula 1 · OSWork v6.2 · INEMA.CLUB PRO</p>
+</div>
+<script type="application/json" id="cards-1">
+[
+  {"front":"Uma colega diz que vai trocar de IA porque o resumo saiu com um nome errado. O que você pergunta a ela antes da troca?","back":"Que material a IA recebeu. Se a lista de nomes não foi enviada, qualquer modelo vai supor, e a troca não resolve."},
+  {"front":"Qual a diferença entre um modelo e um sistema de trabalho com IA?","back":"O modelo produz respostas. O sistema junta modelo, interface, arquivos, instruções, ferramentas, memória e automações para que as respostas virem trabalho conferido."},
+  {"front":"A IA diz que gravou a planilha, mas o arquivo não existe. Qual peça você investiga?","back":"A ferramenta e a permissão para gravar. O texto do pedido não cria essa capacidade."}
+]
+</script>
+</section>
