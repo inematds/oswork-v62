@@ -1,0 +1,1357 @@
+WEBVTT
+
+1
+00:00:00.020 --> 00:00:02.915
+Olá, eu sou Neymar Danner e este é o módulo 8
+
+2
+00:00:02.940 --> 00:00:04.080
+do OS Work.
+
+3
+00:00:04.500 --> 00:00:08.040
+No módulo 7, a Denise montou um bot de treino restrito,
+
+4
+00:00:08.240 --> 00:00:11.080
+mas ele só responde enquanto o notebook dela está ligado.
+
+5
+00:00:11.980 --> 00:00:15.560
+Neste último módulo, vamos tirar esse bot de cima do notebook.
+
+6
+00:00:15.620 --> 00:00:18.515
+Você vai entender o que é uma VPS e de que
+
+7
+00:00:18.540 --> 00:00:20.460
+tamanho ela precisa ser.
+
+8
+00:00:20.560 --> 00:00:23.940
+Entrar nela pela internet, sem se trancar do lado de fora.
+
+9
+00:00:24.300 --> 00:00:27.555
+Instalar só o necessário, fechar a portaria e o arquivo de
+
+10
+00:00:27.580 --> 00:00:27.920
+senhas.
+
+11
+00:00:28.560 --> 00:00:31.760
+Entregar o bote a um zelador que liga e religa sozinho
+
+12
+00:00:32.260 --> 00:00:35.635
+E, por fim, provar com um ensaio que a sua cópia
+
+13
+00:00:35.660 --> 00:00:40.355
+volta inteira Você não precisa contratar nenhuma máquina agora As
+
+14
+00:00:40.380 --> 00:00:44.975
+práticas funcionam no seu computador ou no papel Quando eu pedir,
+
+15
+00:00:45.000 --> 00:00:48.895
+pause o vídeo e faça na hora Comece pelo problema da
+
+16
+00:00:48.920 --> 00:00:52.595
+Denise O bote de treino dela responde no Telegram só enquanto
+
+17
+00:00:52.620 --> 00:00:55.635
+o notebook está ligado Às seis da tarde ela fecha a
+
+18
+00:00:55.660 --> 00:00:58.795
+tampa e o bote para de responder A saída é uma
+
+19
+00:00:58.820 --> 00:00:59.800
+VPS.
+
+20
+00:00:59.860 --> 00:01:01.500
+Pense numa sala alugada.
+
+21
+00:01:01.680 --> 00:01:05.000
+O dono do prédio entrega a sala com luz e porta.
+
+22
+00:01:05.100 --> 00:01:07.040
+E o que acontece lá dentro é com você.
+
+23
+00:01:07.960 --> 00:01:09.535
+A VPS funciona assim.
+
+24
+00:01:09.560 --> 00:01:13.635
+É um servidor virtual alugado, com memória, disco e rede, numa
+
+25
+00:01:13.660 --> 00:01:16.115
+empresa chamada provedor da VPS.
+
+26
+00:01:16.140 --> 00:01:20.915
+Ela roda o tempo todo, mas usuários, atualizações e programas ficam
+
+27
+00:01:20.940 --> 00:01:22.815
+por sua conta no notebook.
+
+28
+00:01:22.840 --> 00:01:25.920
+Você já cuidava de tudo isso sem perceber.
+
+29
+00:01:26.360 --> 00:01:28.915
+Na VPS, você cuida de propósito.
+
+30
+00:01:28.940 --> 00:01:29.740
+Os dois servem.
+
+31
+00:01:30.180 --> 00:01:33.855
+A VPS resolve o problema da tampa fechada e, junto, traz
+
+32
+00:01:33.880 --> 00:01:35.200
+uma responsabilidade nova.
+
+33
+00:01:35.980 --> 00:01:37.580
+E de que tamanho precisa ser essa máquina?
+
+34
+00:01:38.400 --> 00:01:41.655
+Comece pequeno, com uma máquina compatível com o programa que vai
+
+35
+00:01:41.680 --> 00:01:42.395
+rodar.
+
+36
+00:01:42.420 --> 00:01:47.235
+Um bot, que chama o modelo de inteligência artificial, pela API,
+
+37
+00:01:47.260 --> 00:01:50.695
+não precisa de placa de vídeo, porque o modelo roda nos
+
+38
+00:01:50.720 --> 00:01:53.720
+computadores do provedor da inteligência artificial.
+
+39
+00:01:54.120 --> 00:01:56.255
+A VPS só envia o pedido e recebe a resposta.
+
+40
+00:01:56.280 --> 00:02:00.455
+A Lúcia quase contratou uma VPS com placa de vídeo para
+
+41
+00:02:00.480 --> 00:02:02.820
+um bot de médias fictícias da turma.
+
+42
+00:02:03.600 --> 00:02:06.900
+A placa ficaria parada e a conta alta.
+
+43
+00:02:07.520 --> 00:02:09.900
+Repare também que são três contas separadas.
+
+44
+00:02:10.620 --> 00:02:13.695
+A mensalidade da VPS, que chega todo mês com a máquina
+
+45
+00:02:13.720 --> 00:02:17.875
+trabalhando ou parada, o espaço extra de disco e a API
+
+46
+00:02:17.900 --> 00:02:19.580
+de inteligência artificial.
+
+47
+00:02:20.060 --> 00:02:22.235
+Assinar uma não paga a outra.
+
+48
+00:02:22.260 --> 00:02:24.080
+É a mesma lógica do módulo 1.
+
+49
+00:02:24.200 --> 00:02:27.395
+Cada acesso tem a sua conta, e você anota o limite
+
+50
+00:02:27.420 --> 00:02:28.480
+de cada uma.
+
+51
+00:02:28.720 --> 00:02:32.295
+Antes de contratar, lembre que máquina ligada não quer dizer serviço
+
+52
+00:02:32.320 --> 00:02:33.355
+saudável.
+
+53
+00:02:33.380 --> 00:02:36.180
+O bot pode parar lá dentro sem ninguém perceber.
+
+54
+00:02:36.260 --> 00:02:39.395
+Por isso, decida primeiro o que precisa rodar sem parar e
+
+55
+00:02:39.420 --> 00:02:41.720
+quem vai verificar quando algo der errado.
+
+56
+00:02:41.840 --> 00:02:45.675
+O kit do curso traz o arquivo plano VPS, MD, e
+
+57
+00:02:45.700 --> 00:02:47.540
+a primeira parte dele tem seis linhas.
+
+58
+00:02:48.260 --> 00:02:52.775
+O trabalho, o responsável técnico, o orçamento da VPS, o orçamento
+
+59
+00:02:52.800 --> 00:02:56.995
+separado da API, o sistema, que nos exemplos é o Ubuntu,
+
+60
+00:02:57.020 --> 00:02:58.735
+e o plano de desligamento.
+
+61
+00:02:58.760 --> 00:03:01.320
+Para Denise, a última foi a que mais demorou.
+
+62
+00:03:02.180 --> 00:03:05.400
+Onde fica o botão de cancelar e quem pode apertar?
+
+63
+00:03:05.860 --> 00:03:08.475
+Pause o vídeo e preencha as seis linhas com o trabalho
+
+64
+00:03:08.500 --> 00:03:08.740
+seu.
+
+65
+00:03:09.240 --> 00:03:12.555
+Onde faltar um dado, escreva a definir e o nome de
+
+66
+00:03:12.580 --> 00:03:13.660
+quem decide.
+
+67
+00:03:13.780 --> 00:03:14.700
+Nada é contratado.
+
+68
+00:03:15.860 --> 00:03:17.580
+E o plano não leva senha nem cartão.
+
+69
+00:03:18.320 --> 00:03:21.420
+Com a sala alugada, a primeira porta é a de entrada.
+
+70
+00:03:21.860 --> 00:03:25.355
+Você entra na VPS pelo SSH, que cria uma conexão protegida
+
+71
+00:03:25.380 --> 00:03:27.015
+para administrar a máquina.
+
+72
+00:03:27.040 --> 00:03:31.895
+O comando é SSK, seguido do usuário, arroba e o endereço
+
+73
+00:03:31.920 --> 00:03:32.460
+da VPS.
+
+74
+00:03:33.140 --> 00:03:36.040
+Usuário e endereço são campos para trocar, não valores reais.
+
+75
+00:03:37.020 --> 00:03:38.860
+E o endereço aparece no painel do provedor.
+
+76
+00:03:39.340 --> 00:03:43.040
+A Lúcia abriu duas janelas de terminal e se confundiu.
+
+77
+00:03:43.260 --> 00:03:46.200
+Numa estava o notebook, na outra a VPS.
+
+78
+00:03:46.920 --> 00:03:49.795
+O que resolveu foi olhar o começo da linha, que depois
+
+79
+00:03:49.820 --> 00:03:52.295
+de entrar, passa a mostrar o usuário e o nome da
+
+80
+00:03:52.320 --> 00:03:56.535
+VPS, e rodar o comando PWD, que responde a pasta em
+
+81
+00:03:56.560 --> 00:03:57.540
+que você está.
+
+82
+00:03:57.580 --> 00:03:59.260
+Então fica o hábito para a vida.
+
+83
+00:03:59.400 --> 00:04:02.080
+Antes de qualquer comando, olhe o começo da linha.
+
+84
+00:04:02.200 --> 00:04:04.660
+É ele que diz em que máquina você está.
+
+85
+00:04:05.080 --> 00:04:08.295
+Para entrar, use a chave pública cadastrada do jeito que o
+
+86
+00:04:08.320 --> 00:04:09.480
+provedor indica.
+
+87
+00:04:09.520 --> 00:04:12.275
+A chave privada nunca sai do seu computador, e o painel
+
+88
+00:04:12.300 --> 00:04:15.100
+do provedor guia essa criação quando você contratar.
+
+89
+00:04:15.980 --> 00:04:19.735
+Na primeira conexão, o SSH mostra em inglês a impressão digital
+
+90
+00:04:19.760 --> 00:04:22.880
+da máquina e pergunta se você quer continuar.
+
+91
+00:04:22.980 --> 00:04:25.755
+A Denise comparou essa impressão com a que o painel mostrava,
+
+92
+00:04:25.780 --> 00:04:27.300
+e só então digitou Yes.
+
+93
+00:04:28.240 --> 00:04:30.360
+Essa pergunta aparece uma vez por máquina.
+
+94
+00:04:30.460 --> 00:04:33.900
+Se aparecer de novo para a mesma VPS, pare e investigue
+
+95
+00:04:34.460 --> 00:04:37.780
+Lá dentro, trabalhe com o usuário seu, o usuário de trabalho
+
+96
+00:04:38.220 --> 00:04:42.395
+Quando uma tarefa pedir permissão de administrador, põe a sudo na
+
+97
+00:04:42.420 --> 00:04:45.795
+frente do comando Assim esse poder aparece só onde você pediu
+
+98
+00:04:45.820 --> 00:04:49.300
+E ao digitar a senha, nada aparece na tela É normal
+
+99
+00:04:49.920 --> 00:04:52.175
+Agora, a regra que dá nome à aula.
+
+100
+00:04:52.200 --> 00:04:55.400
+Não devolva a chave velha antes de testar a nova.
+
+101
+00:04:55.860 --> 00:04:58.455
+Antes de mudar a rede ou o jeito de entrar, deixe
+
+102
+00:04:58.480 --> 00:05:02.115
+a sessão original aberta, abra outra janela e teste a nova
+
+103
+00:05:02.140 --> 00:05:02.960
+entrada.
+
+104
+00:05:03.020 --> 00:05:05.040
+Só feche a primeira quando a segunda funcionar.
+
+105
+00:05:05.540 --> 00:05:08.095
+E confira antes que o console de recuperação, no painel do
+
+106
+00:05:08.120 --> 00:05:10.640
+provedor, abre a máquina se tudo falhar.
+
+107
+00:05:11.620 --> 00:05:14.040
+Pause o vídeo e analise um caso no papel.
+
+108
+00:05:14.080 --> 00:05:17.055
+O Rogério, colega da Denise, colou da internet um comando que
+
+109
+00:05:17.080 --> 00:05:20.375
+troca a porta do SSH, executou e fechou o terminal na
+
+110
+00:05:20.400 --> 00:05:21.040
+hora.
+
+111
+00:05:21.360 --> 00:05:24.260
+Agora não consegue mais entrar e nunca abriu o console.
+
+112
+00:05:24.380 --> 00:05:25.375
+Responda três perguntas.
+
+113
+00:05:25.400 --> 00:05:27.955
+Qual regra faltou?
+
+114
+00:05:27.980 --> 00:05:29.695
+Por onde ele ainda pode entrar?
+
+115
+00:05:29.720 --> 00:05:30.700
+E o que anota no plano?
+
+116
+00:05:31.500 --> 00:05:33.515
+Depois confira no gabarito da aula.
+
+117
+00:05:33.540 --> 00:05:37.035
+Lá dentro, a máquina vem quase vazia e a pergunta passa
+
+118
+00:05:37.060 --> 00:05:38.535
+a ser o que colocar nela.
+
+119
+00:05:38.560 --> 00:05:42.975
+os exemplos do curso usam o Ubuntu que instala e atualiza
+
+120
+00:05:43.000 --> 00:05:49.455
+programas com apt primeiro o comando sudo apt update atualiza a
+
+121
+00:05:49.480 --> 00:05:53.575
+lista do que existe para a máquina depois sudo apt upgrade
+
+122
+00:05:53.600 --> 00:05:58.695
+propõe as atualizações e espera sua resposta no fim aparece em
+
+123
+00:05:58.720 --> 00:06:02.396
+inglês a pergunta quer continuar, com o Y maiúsculo como resposta
+
+124
+00:06:02.421 --> 00:06:02.801
+padrão.
+
+125
+00:06:03.441 --> 00:06:06.356
+Na VPS de treino, a Denise parou nessa pergunta e leu
+
+126
+00:06:06.381 --> 00:06:08.621
+a lista inteira antes de responder Y.
+
+127
+00:06:08.801 --> 00:06:09.756
+Faça igual.
+
+128
+00:06:09.781 --> 00:06:12.976
+Se aparecer na lista um programa que você não reconhece, pesquise
+
+129
+00:06:13.001 --> 00:06:13.841
+antes de confirmar.
+
+130
+00:06:14.421 --> 00:06:16.796
+E o sudo na frente, como você viu na aula anterior,
+
+131
+00:06:16.821 --> 00:06:19.081
+é o pedido de permissão de administrador.
+
+132
+00:06:19.421 --> 00:06:19.496
+E o que instalar?
+
+133
+00:06:19.521 --> 00:06:23.721
+O bot do kit do curso precisa do Python 3.
+
+134
+00:06:23.801 --> 00:06:26.356
+e o Git ajuda a levar o projeto do seu computador
+
+135
+00:06:26.381 --> 00:06:27.621
+para a VPS.
+
+136
+00:06:27.821 --> 00:06:31.441
+O comando fica sudo apt install git python3.
+
+137
+00:06:32.581 --> 00:06:35.356
+O bot usa só o que já vem com o Python,
+
+138
+00:06:35.381 --> 00:06:37.036
+sem nenhum complemento extra.
+
+139
+00:06:37.061 --> 00:06:41.536
+Outras ferramentas, como o Codex, são opcionais e entram só se
+
+140
+00:06:41.561 --> 00:06:42.681
+o programa pedir.
+
+141
+00:06:43.581 --> 00:06:46.481
+Um tutorial sugeriu a Lúcia instalar cinco ferramentas.
+
+142
+00:06:47.061 --> 00:06:51.036
+Para garantir, ela conferiu o que o bot pedia e ficou
+
+143
+00:06:51.061 --> 00:06:51.456
+com duas.
+
+144
+00:06:51.481 --> 00:06:53.481
+é a lógica da mala de mão.
+
+145
+00:06:53.521 --> 00:06:56.316
+Cada programa a mais é mais uma coisa para atualizar e
+
+146
+00:06:56.341 --> 00:06:56.641
+manter.
+
+147
+00:06:57.641 --> 00:07:02.441
+Com 5, seriam 5 coisas para atualizar e 3 sem uso.
+
+148
+00:07:03.021 --> 00:07:06.316
+Com 2, as duas trabalham e o bot não perde nada
+
+149
+00:07:06.341 --> 00:07:07.341
+do que faz.
+
+150
+00:07:07.421 --> 00:07:10.001
+Antes de instalar, confira o que já existe.
+
+151
+00:07:10.163 --> 00:07:12.998
+Pergunte a versão de cada programa, com Python 3 e a
+
+152
+00:07:13.023 --> 00:07:15.823
+opção version, e depois com Git e a mesma opção.
+
+153
+00:07:16.523 --> 00:07:18.683
+Se ele responde, está na máquina.
+
+154
+00:07:18.763 --> 00:07:22.578
+Em seguida, crie a pasta projetos na sua pasta pessoal com
+
+155
+00:07:22.603 --> 00:07:26.123
+o comando mkdir e confira com ls.
+
+156
+00:07:26.803 --> 00:07:29.623
+O sinal til quer dizer a minha pasta pessoal.
+
+157
+00:07:29.803 --> 00:07:31.938
+Nenhum desses comandos muda o sistema.
+
+158
+00:07:31.963 --> 00:07:35.118
+A Lúcia rodou tudo no notebook antes de alugar qualquer VPS
+
+159
+00:07:35.143 --> 00:07:37.203
+e anotou as versões.
+
+160
+00:07:37.583 --> 00:07:40.763
+Pause o vídeo e faça o mesmo no seu terminal.
+
+161
+00:07:40.983 --> 00:07:43.423
+No Windows, use o WSL do módulo 3.
+
+162
+00:07:43.983 --> 00:07:47.318
+Se aparecer comando not found, não é erro seu.
+
+163
+00:07:47.343 --> 00:07:48.903
+Anote falta no plano.
+
+164
+00:07:48.943 --> 00:07:52.763
+Por fim, escreva no plano o que a VPS precisa receber.
+
+165
+00:07:53.483 --> 00:07:54.858
+Python 3.
+
+166
+00:07:54.883 --> 00:07:57.243
+Git e nada mais sem motivo.
+
+167
+00:07:57.463 --> 00:07:59.418
+Com o bot lá dentro, falta a portaria.
+
+168
+00:07:59.443 --> 00:08:04.138
+O firewall filtra as conexões de rede, nos dois sentidos.
+
+169
+00:08:04.163 --> 00:08:05.658
+É como a portaria da escola.
+
+170
+00:08:05.683 --> 00:08:08.278
+Tem a lista de quem pode entrar e o carteiro sai
+
+171
+00:08:08.303 --> 00:08:10.098
+para buscar a correspondência.
+
+172
+00:08:10.123 --> 00:08:13.058
+O bot do kit funciona desse segundo jeito, com o que
+
+173
+00:08:13.083 --> 00:08:14.603
+se chama long polling.
+
+174
+00:08:14.743 --> 00:08:17.658
+Ele sai por uma conexão segura e pergunta ao Telegram se
+
+175
+00:08:17.683 --> 00:08:18.463
+chegou mensagem.
+
+176
+00:08:19.223 --> 00:08:22.799
+Ninguém de fora precisa bater na porta dele a lúcia achou
+
+177
+00:08:22.824 --> 00:08:25.799
+que precisava abrir uma porta para o bote receber as mensagens
+
+178
+00:08:25.824 --> 00:08:29.799
+da turma não precisava porque quem entra na máquina só ela
+
+179
+00:08:29.824 --> 00:08:34.699
+pelo ssh então guarde a regra com o long polling a
+
+180
+00:08:34.724 --> 00:08:39.339
+única porta de entrada que a vps precisa é a do
+
+181
+00:08:39.364 --> 00:08:43.959
+ssh todo o resto pode ficar fechado No Ubuntu, quem configura
+
+182
+00:08:43.984 --> 00:08:45.884
+o firewall é o UFW.
+
+183
+00:08:46.864 --> 00:08:48.124
+E a ordem importa.
+
+184
+00:08:48.364 --> 00:08:50.999
+Antes de ligá-lo, libere a porta do SSH que a sua
+
+185
+00:08:51.024 --> 00:08:52.559
+VPS realmente usa.
+
+186
+00:08:52.584 --> 00:08:57.059
+Se for a 22, o comando é sudo ufw allow 22
+
+187
+00:08:57.084 --> 00:08:58.084
+barra tcp.
+
+188
+00:08:58.524 --> 00:08:59.924
+Se for outra, o número muda.
+
+189
+00:09:00.564 --> 00:09:04.459
+Só depois vem sudo ufw enable, que liga o firewall.
+
+190
+00:09:04.484 --> 00:09:07.719
+O próprio ufw avisa, em inglês, que isso pode derrubar as
+
+191
+00:09:07.744 --> 00:09:10.019
+conexões SSH abertas.
+
+192
+00:09:10.044 --> 00:09:11.864
+E pergunta se deve continuar.
+
+193
+00:09:11.984 --> 00:09:15.379
+A Denise só respondeu sim depois de preparar as rotas de
+
+194
+00:09:15.404 --> 00:09:19.359
+volta da aula anterior, a segunda sessão testada e o console
+
+195
+00:09:19.384 --> 00:09:20.404
+do provedor conferido.
+
+196
+00:09:21.344 --> 00:09:24.639
+E tem um detalhe, alguns provedores têm um firewall próprio no
+
+197
+00:09:24.664 --> 00:09:25.484
+painel.
+
+198
+00:09:25.544 --> 00:09:28.419
+Se o seu tiver, confira lá também que a porta do
+
+199
+00:09:28.444 --> 00:09:30.084
+SSH está liberada.
+
+200
+00:09:30.660 --> 00:09:33.000
+falta o arquivo de segredos.
+
+201
+00:09:33.220 --> 00:09:36.215
+O token do bot, a senha dele no Telegram, mora no
+
+202
+00:09:36.240 --> 00:09:37.060
+arquivo .env.
+
+203
+00:09:37.820 --> 00:09:41.440
+O comando segmod 600 deixa esse arquivo legível só pelo dono,
+
+204
+00:09:42.180 --> 00:09:45.395
+e o ls mostra isso no começo da linha, e o .env
+
+205
+00:09:45.420 --> 00:09:46.520
+nunca entra no git.
+
+206
+00:09:47.180 --> 00:09:50.100
+O git ignore do módulo 4 já cuida disso.
+
+207
+00:09:50.220 --> 00:09:53.520
+Se o bot parar, não abra portas para ver se resolve.
+
+208
+00:09:53.760 --> 00:09:56.775
+Pergunte se o processo está rodando, se o token foi aceito
+
+209
+00:09:56.800 --> 00:09:58.375
+e se a rede de saída funciona.
+
+210
+00:09:58.400 --> 00:10:02.795
+O log do bot da Denise dizia falha HTTP 401.
+
+211
+00:10:02.820 --> 00:10:04.780
+Era o token trocado na semana anterior.
+
+212
+00:10:05.620 --> 00:10:08.435
+Pause o vídeo e numa pasta de treino crie um ponto
+
+213
+00:10:08.460 --> 00:10:09.360
+em vazio.
+
+214
+00:10:09.520 --> 00:10:13.235
+Feche com chmod e confira que a linha começa com traço,
+
+215
+00:10:13.260 --> 00:10:15.120
+r, w e só traços.
+
+216
+00:10:15.720 --> 00:10:17.120
+No plano, anote as portas.
+
+217
+00:10:17.640 --> 00:10:18.795
+A do SSH.
+
+218
+00:10:18.820 --> 00:10:20.740
+E para o bot, nenhuma.
+
+219
+00:10:21.860 --> 00:10:24.675
+A portaria está pronta, mas o bot ainda depende de você
+
+220
+00:10:24.700 --> 00:10:25.740
+para ligar.
+
+221
+00:10:25.820 --> 00:10:29.035
+Até aqui, você ligou o bot à mão, com Python 3
+
+222
+00:10:29.060 --> 00:10:33.215
+Bot Y no terminal Na VPS, isso amarra o bot à
+
+223
+00:10:33.240 --> 00:10:36.735
+sua conexão A Denise deixou o bot rodando numa sessão SSH
+
+224
+00:10:36.760 --> 00:10:39.955
+e foi para casa A conexão caiu no caminho e o
+
+225
+00:10:39.980 --> 00:10:43.895
+bot parou junto Quem resolve isso é o Systemd, o zelador
+
+226
+00:10:43.920 --> 00:10:47.680
+da máquina Acende as luzes toda manhã, religa o que apagou
+
+227
+00:10:47.705 --> 00:10:50.100
+e anota tudo no livro de ocorrências.
+
+228
+00:10:50.125 --> 00:10:53.180
+Com ele, o bot liga sozinho junto com a máquina.
+
+229
+00:10:53.205 --> 00:10:54.820
+Religa 15 segundos depois de uma falha.
+
+230
+00:10:54.845 --> 00:10:58.340
+E o registro fica guardado para você ler depois, em vez
+
+231
+00:10:58.365 --> 00:10:59.760
+de sumir com a janela.
+
+232
+00:10:59.785 --> 00:11:02.960
+A instrução para esse zelador é um arquivo chamado unidade.
+
+233
+00:11:02.985 --> 00:11:05.800
+E o kit traz uma pronta.
+
+234
+00:11:05.825 --> 00:11:09.700
+A unidade do kit é o arquivo Oswork Bot Service, e
+
+235
+00:11:09.725 --> 00:11:12.325
+ela diz o que, com quem e onde.
+
+236
+00:11:12.425 --> 00:11:15.245
+Quatro campos levam o seu usuário e o seu caminho.
+
+237
+00:11:15.965 --> 00:11:17.665
+User, quem roda o bot.
+
+238
+00:11:17.965 --> 00:11:20.385
+Working, Directory, a pasta.
+
+239
+00:11:20.705 --> 00:11:25.925
+Environment File, onde está o .execstart, o comando que liga.
+
+240
+00:11:25.965 --> 00:11:27.785
+Um quinto, você mantém.
+
+241
+00:11:28.025 --> 00:11:31.525
+Restart, igual a onFailure, que religa depois de uma falha.
+
+242
+00:11:32.405 --> 00:11:35.640
+Na VPS, a unidade vai para a pasta do Systemd, com
+
+243
+00:11:35.665 --> 00:11:36.100
+sudo.
+
+244
+00:11:36.125 --> 00:11:40.840
+Aí, o daemon reload faz o Systemd reler as unidades, o
+
+245
+00:11:40.865 --> 00:11:44.460
+enable com a opção now, liga o bot agora e nos
+
+246
+00:11:44.485 --> 00:11:48.040
+próximos reinícios e o status mostra o estado.
+
+247
+00:11:48.065 --> 00:11:51.800
+A Denise viu active running, ativo e rodando.
+
+248
+00:11:51.825 --> 00:11:55.020
+Mesmo assim, só deu o passo por concluído depois de mandar
+
+249
+00:11:55.045 --> 00:11:58.480
+barra status no Telegram e receber a resposta.
+
+250
+00:11:58.505 --> 00:12:01.226
+Depois de ligar, faça um reinício de propósito.
+
+251
+00:12:01.251 --> 00:12:04.906
+Consiste em ETL restart, mande barra status de novo e anote
+
+252
+00:12:04.931 --> 00:12:05.786
+o horário.
+
+253
+00:12:05.811 --> 00:12:10.211
+Em seguida, leia o registro com o comando journalctl.
+
+254
+00:12:10.271 --> 00:12:12.786
+A Lúcia viu ali a parada e a volta do bot,
+
+255
+00:12:12.811 --> 00:12:13.451
+com data e hora.
+
+256
+00:12:14.111 --> 00:12:17.806
+Mas atenção, religar não conserta um erro que se repete.
+
+257
+00:12:17.831 --> 00:12:21.566
+Num outro dia, ela viu a linha processo encerrado para diagnóstico,
+
+258
+00:12:21.591 --> 00:12:25.451
+parou o serviço e foi procurar a causa antes de insistir.
+
+259
+00:12:25.491 --> 00:12:28.406
+Agora pause o vídeo e adapte a unidade do kit ao
+
+260
+00:12:28.431 --> 00:12:29.011
+seu usuário.
+
+261
+00:12:30.211 --> 00:12:34.966
+Descompacte o kit, abra o Osworkbot, serve-se com o Nano, troque
+
+262
+00:12:34.991 --> 00:12:37.231
+os quatro campos pelo seu usuário e caminho.
+
+263
+00:12:38.691 --> 00:12:42.026
+Salve e confira com o comando grep, que nenhuma das quatro
+
+264
+00:12:42.051 --> 00:12:43.551
+linhas ainda diz Oswork.
+
+265
+00:12:44.271 --> 00:12:47.811
+Sem VPS, nada liga, é só um arquivo de texto.
+
+266
+00:12:48.211 --> 00:12:50.206
+Ligado e religado ainda não é cuidado.
+
+267
+00:12:50.231 --> 00:12:54.586
+O Systemd religa o bot, mas não avisa ninguém se ele
+
+268
+00:12:54.611 --> 00:12:55.851
+ficar calado.
+
+269
+00:12:56.591 --> 00:12:59.146
+Por isso, existe a checagem externa.
+
+270
+00:12:59.171 --> 00:13:02.431
+Alguém de fora da VPS confere se o serviço responde.
+
+271
+00:13:02.851 --> 00:13:05.926
+Uma verificação diária simples registra duas coisas.
+
+272
+00:13:05.951 --> 00:13:09.366
+Se o bot respondeu e quanto espaço sobra no disco que
+
+273
+00:13:09.391 --> 00:13:11.651
+na VPS o comando DF mostra.
+
+274
+00:13:11.731 --> 00:13:16.291
+A Denise manda barra status pelo celular toda manhã, antes da
+
+275
+00:13:16.316 --> 00:13:17.516
+reunião das 8.
+
+276
+00:13:17.556 --> 00:13:19.016
+E anota a hora da resposta.
+
+277
+00:13:20.276 --> 00:13:23.896
+Uma vez por semana, anota também o espaço em disco.
+
+278
+00:13:24.556 --> 00:13:28.571
+Se o celular recebe a resposta, o caminho inteiro funciona.
+
+279
+00:13:28.596 --> 00:13:31.871
+O disco você olha antes que ele encha, porque disco cheio
+
+280
+00:13:31.896 --> 00:13:33.476
+faz qualquer serviço parar.
+
+281
+00:13:34.116 --> 00:13:36.491
+E a anotação leva um nome, porque a checagem é de
+
+282
+00:13:36.516 --> 00:13:36.716
+alguém.
+
+283
+00:13:37.536 --> 00:13:39.211
+Agora, as cópias.
+
+284
+00:13:39.236 --> 00:13:43.731
+guarde as cópias dos dados fora da VPS, numa pasta protegida
+
+285
+00:13:43.756 --> 00:13:47.196
+no drive da escola ou num disco externo, por exemplo.
+
+286
+00:13:47.776 --> 00:13:50.016
+Se a máquina some, a cópia não pode ir junto.
+
+287
+00:13:50.736 --> 00:13:55.171
+Defina também a retenção, quer dizer, por quanto tempo cada cópia
+
+288
+00:13:55.196 --> 00:13:55.896
+fica guardada.
+
+289
+00:13:56.476 --> 00:13:59.571
+A Lucy aguardava a cópia na mesma VPS e passou a
+
+290
+00:13:59.596 --> 00:14:02.596
+guardar fora dela, com três cópias mensais.
+
+291
+00:14:02.896 --> 00:14:05.616
+O .en com o token ficou de fora.
+
+292
+00:14:05.856 --> 00:14:09.071
+Mas uma cópia só vale depois do ensaio, como um simulado
+
+293
+00:14:09.096 --> 00:14:10.071
+de incêndio.
+
+294
+00:14:10.096 --> 00:14:12.016
+O teste restaura o arquivo vendas.
+
+295
+00:14:12.476 --> 00:14:16.991
+CSV numa pasta separada e compara com o original usando o
+
+296
+00:14:17.016 --> 00:14:17.056
+diff.
+
+297
+00:14:18.076 --> 00:14:21.256
+Se o diff não responde nada, os dois são iguais.
+
+298
+00:14:21.296 --> 00:14:24.496
+No primeiro teste da Denise, a cópia estava vazia.
+
+299
+00:14:24.556 --> 00:14:26.696
+O comando apontava para a pasta errada.
+
+300
+00:14:26.836 --> 00:14:29.016
+O ensaio achou o erro antes de uma perda real.
+
+301
+00:14:29.540 --> 00:14:32.340
+O projeto do curso fecha com 5 evidências.
+
+302
+00:14:32.560 --> 00:14:37.075
+Resposta autorizada, bloqueio de desconhecido, reinício, log sem token
+
+303
+00:14:37.100 --> 00:14:39.280
+e restauração conferida.
+
+304
+00:14:39.940 --> 00:14:43.115
+Sem uma segunda conta no Telegram, o bloqueio de desconhecido pode
+
+305
+00:14:43.140 --> 00:14:45.835
+ser provado pelo autoteste do kit.
+
+306
+00:14:45.860 --> 00:14:48.020
+E o que não foi feito, você declara.
+
+307
+00:14:48.920 --> 00:14:52.255
+A Denise ainda não tinha VPS e escreveu na linha do
+
+308
+00:14:52.280 --> 00:14:52.660
+reinício.
+
+309
+00:14:53.220 --> 00:14:55.080
+Não executado sem VPS.
+
+310
+00:14:55.240 --> 00:14:57.895
+Um não fiz escrito vale mais que um feito que ninguém
+
+311
+00:14:57.920 --> 00:14:58.815
+conferiu.
+
+312
+00:14:58.840 --> 00:15:01.435
+Agora pause o vídeo e faça um backup de verdade no
+
+313
+00:15:01.460 --> 00:15:02.520
+seu computador.
+
+314
+00:15:02.740 --> 00:15:06.020
+Copie o Venda CSV do kit para uma pasta de cópias.
+
+315
+00:15:06.700 --> 00:15:09.780
+Restaure numa pasta separada e rode o GIF.
+
+316
+00:15:09.820 --> 00:15:11.995
+O silêncio é o sinal de acerto.
+
+317
+00:15:12.020 --> 00:15:15.580
+Depois, mostre o arquivo com o catch e some os valores.
+
+318
+00:15:15.660 --> 00:15:16.700
+O total tem que dar 100.
+
+319
+00:15:17.380 --> 00:15:19.855
+Anote a data e o resultado no plano.
+
+320
+00:15:19.880 --> 00:15:21.075
+Vamos juntar tudo.
+
+321
+00:15:21.100 --> 00:15:23.200
+Uma VPS é uma sala alugada.
+
+322
+00:15:23.280 --> 00:15:25.500
+Roda o tempo todo e quem cuida é você.
+
+323
+00:15:25.540 --> 00:15:27.160
+O tamanho segue o programa.
+
+324
+00:15:27.200 --> 00:15:28.380
+Cada conta tem seu limite.
+
+325
+00:15:28.920 --> 00:15:31.115
+E o plano vem antes da compra.
+
+326
+00:15:31.140 --> 00:15:35.715
+Você entra pelo SSH, sem largar a chave velha, antes de
+
+327
+00:15:35.740 --> 00:15:40.035
+testar a nova, instala só o que o bot pede, deixa
+
+328
+00:15:40.060 --> 00:15:44.455
+aberta só a porta do SSH, fecha o .env e entrega o
+
+329
+00:15:44.480 --> 00:15:47.835
+bot ao Systemd, que liga, religa e anota.
+
+330
+00:15:47.860 --> 00:15:52.735
+E prova de fora que ele responde e ensaia a restauração.
+
+331
+00:15:52.760 --> 00:15:55.115
+Com isso, o OSC Work termina.
+
+332
+00:15:55.140 --> 00:15:58.595
+Você sai com uma pasta organizada com instruções verificáveis, uma
+
+333
+00:15:58.620 --> 00:16:02.315
+skill, o histórico no Git, um bot restrito e um plano
+
+334
+00:16:02.340 --> 00:16:04.880
+de operação supervisionada numa VPS.
+
+335
+00:16:04.980 --> 00:16:08.515
+Daqui em diante, o curso vira a rotina, a checagem diária,
+
+336
+00:16:08.540 --> 00:16:11.400
+o ensaio mensal e o plano atualizado a cada mudança.
+
+337
+00:16:12.920 --> 00:16:16.235
+Marque já na agenda o próximo teste de restauração, daqui a
+
+338
+00:16:16.260 --> 00:16:16.995
+um mês.
+
+339
+00:16:17.020 --> 00:16:18.588
+Obrigado por ter chegado até aqui.
