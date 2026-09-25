@@ -1,0 +1,1421 @@
+WEBVTT
+
+1
+00:00:00.020 --> 00:00:03.915
+Olá, eu sou Neymar Aldaner e este é o módulo 1
+
+2
+00:00:03.940 --> 00:00:04.760
+do OzWork.
+
+3
+00:00:05.260 --> 00:00:08.315
+Quando uma resposta de inteligência artificial sai ruim, a reação
+
+4
+00:00:08.340 --> 00:00:11.755
+mais comum é trocar de ferramenta ou escrever um pedido cada
+
+5
+00:00:11.780 --> 00:00:12.220
+vez maior.
+
+6
+00:00:13.040 --> 00:00:15.260
+Neste módulo, vamos fazer diferente.
+
+7
+00:00:15.320 --> 00:00:18.395
+Você vai aprender a enxergar a inteligência artificial como um sistema
+
+8
+00:00:18.420 --> 00:00:21.935
+de peças, a escolher o modelo pela tarefa e não pela
+
+9
+00:00:21.960 --> 00:00:26.395
+fama, a julgar uma resposta com uma régua escrita antes, a
+
+10
+00:00:26.420 --> 00:00:30.555
+descobrir de qual conta sai cada custo e a delegar trabalho
+
+11
+00:00:30.580 --> 00:00:31.880
+com limites claros.
+
+12
+00:00:32.800 --> 00:00:37.695
+Vamos acompanhar duas colegas de uma escola, a Denise, coordenadora
+
+13
+00:00:37.720 --> 00:00:41.720
+pedagógica, e a Lúcia, professora de ciências do oitavo ano.
+
+14
+00:00:42.440 --> 00:00:44.375
+Cada aula tem uma prática curta.
+
+15
+00:00:44.400 --> 00:00:47.475
+Quando eu pedir, pause o vídeo e faça na hora, com
+
+16
+00:00:47.500 --> 00:00:48.480
+uma tarefa real sua.
+
+17
+00:00:49.980 --> 00:00:53.215
+Quando falamos em inteligência artificial neste curso, falamos principalmente
+
+18
+00:00:53.240 --> 00:00:55.795
+de modelos de linguagem, as LLMs.
+
+19
+00:00:55.820 --> 00:01:00.975
+Um modelo é um mecanismo treinado para produzir texto a partir
+
+20
+00:01:01.000 --> 00:01:02.555
+do que você entrega.
+
+21
+00:01:02.580 --> 00:01:05.939
+Repare nessa última parte, a partir do que você entrega.
+
+22
+00:01:06.499 --> 00:01:09.234
+Ele não enxerga a sua escola, a sua equipe, nem a
+
+23
+00:01:09.259 --> 00:01:10.819
+reunião da semana passada.
+
+24
+00:01:10.859 --> 00:01:13.674
+O que falta no pedido, ele completa com o jeito mais
+
+25
+00:01:13.699 --> 00:01:14.939
+comum de responder.
+
+26
+00:01:15.119 --> 00:01:16.399
+Veja o caso da Denise.
+
+27
+00:01:16.599 --> 00:01:18.894
+Ela pediu um plano para a reunião de pais do oitavo
+
+28
+00:01:18.919 --> 00:01:19.199
+ano.
+
+29
+00:01:19.499 --> 00:01:19.899
+Só isso.
+
+30
+00:01:20.419 --> 00:01:24.194
+Voltou um plano bonito, com boas-vindas, projeto pedagógico e calendário
+
+31
+00:01:24.219 --> 00:01:25.239
+de provas.
+
+32
+00:01:25.299 --> 00:01:27.159
+Nada disso estava na pauta da escola.
+
+33
+00:01:27.639 --> 00:01:30.154
+Depois ela colou a pauta e a ata da reunião anterior
+
+34
+00:01:30.179 --> 00:01:33.079
+e pediu para marcar o que tinha ficado pendente.
+
+35
+00:01:33.219 --> 00:01:34.819
+Mesma inteligência artificial.
+
+36
+00:01:35.119 --> 00:01:37.794
+Agora cada item apontava para um papel que ela tinha na
+
+37
+00:01:37.819 --> 00:01:38.419
+mão.
+
+38
+00:01:38.499 --> 00:01:41.834
+Então, se a resposta ruim nem sempre é culpa do modelo,
+
+39
+00:01:41.859 --> 00:01:42.999
+de onde ela vem?
+
+40
+00:01:43.179 --> 00:01:45.319
+Aqui entra a ideia central do curso.
+
+41
+00:01:45.519 --> 00:01:47.019
+Um modelo produz respostas.
+
+42
+00:01:47.619 --> 00:01:50.899
+Um sistema organiza como essas respostas viram trabalho.
+
+43
+00:01:50.939 --> 00:01:53.099
+O WashiWork olha para sete peças.
+
+44
+00:01:53.959 --> 00:01:57.494
+O modelo, a interface onde você conversa, os arquivos que dão
+
+45
+00:01:57.519 --> 00:02:02.034
+evidência, as instruções fixas, as ferramentas que executam ações,
+
+46
+00:02:02.059 --> 00:02:05.714
+a memória entre conversas e as automações que rodam sem você
+
+47
+00:02:05.739 --> 00:02:06.692
+abrir o chat.
+
+48
+00:02:06.717 --> 00:02:07.837
+Pense numa pequena oficina.
+
+49
+00:02:08.657 --> 00:02:12.712
+A habilidade do profissional importa, mas ferramenta, material e critério
+
+50
+00:02:12.737 --> 00:02:14.657
+de qualidade também decidem o resultado.
+
+51
+00:02:15.497 --> 00:02:18.332
+Quando a Denise desenhou as sete caixas para a ata da
+
+52
+00:02:18.357 --> 00:02:21.597
+reunião de pais, viu que tinha modelo e interface.
+
+53
+00:02:21.697 --> 00:02:23.092
+Faltavam os arquivos.
+
+54
+00:02:23.117 --> 00:02:24.957
+A pauta estava no e-mail de outra pessoa.
+
+55
+00:02:26.457 --> 00:02:27.457
+E um aviso.
+
+56
+00:02:27.657 --> 00:02:30.617
+OS Work é uma metáfora de organização.
+
+57
+00:02:30.717 --> 00:02:33.477
+Você não vai trocar o sistema do seu computador.
+
+58
+00:02:33.577 --> 00:02:35.957
+Separar as peças tem um benefício prático.
+
+59
+00:02:36.197 --> 00:02:38.997
+Evita o reflexo de escrever um pedido cada vez maior.
+
+60
+00:02:39.457 --> 00:02:42.237
+Primeiro você pergunta onde a falha nasceu.
+
+61
+00:02:42.717 --> 00:02:44.497
+Depois, corrija só ali.
+
+62
+00:02:44.537 --> 00:02:48.152
+A inteligência artificial da Lúcia disse que tinha salvas notas, mas
+
+63
+00:02:48.177 --> 00:02:49.717
+o arquivo não apareceu.
+
+64
+00:02:50.077 --> 00:02:52.137
+Reescrever o pedido não resolveria nada.
+
+65
+00:02:52.197 --> 00:02:54.537
+Faltava uma ferramenta com permissão para gravar.
+
+66
+00:02:55.897 --> 00:02:58.297
+E existe uma peça que nunca sai do sistema.
+
+67
+00:02:58.337 --> 00:02:58.497
+Você.
+
+68
+00:02:59.117 --> 00:03:00.117
+O modelo raciocina.
+
+69
+00:03:00.477 --> 00:03:03.737
+as ferramentas executam e quem confere é você.
+
+70
+00:03:04.297 --> 00:03:05.597
+Agora pause o vídeo.
+
+71
+00:03:05.877 --> 00:03:09.131
+Pegue uma tarefa que você já pediu, a inteligência artificial, e
+
+72
+00:03:09.156 --> 00:03:10.276
+desenhe sete caixas.
+
+73
+00:03:10.836 --> 00:03:15.291
+Marque certo ou errado em modelo, interface e arquivos e coloque
+
+74
+00:03:15.316 --> 00:03:18.811
+um ponto de interrogação nas outras quatro, que chegam nos próximos
+
+75
+00:03:18.836 --> 00:03:19.791
+módulos.
+
+76
+00:03:19.816 --> 00:03:23.631
+Circule a peça que falta e escreva ao lado como trazê-la,
+
+77
+00:03:23.656 --> 00:03:25.351
+se o modelo é uma peça.
+
+78
+00:03:25.376 --> 00:03:27.091
+Que tipos de peça existem?
+
+79
+00:03:27.116 --> 00:03:29.811
+Antes de comparar nomes, separe por função.
+
+80
+00:03:29.836 --> 00:03:31.271
+São quatro.
+
+81
+00:03:31.296 --> 00:03:33.471
+Modelos de texto, as LLMs.
+
+82
+00:03:33.496 --> 00:03:35.996
+Escrevem, resumem, explicam e até programam.
+
+83
+00:03:36.776 --> 00:03:39.551
+Modelos de imagem geram ou editam figuras.
+
+84
+00:03:39.576 --> 00:03:42.531
+Modelos de vídeo geram clips.
+
+85
+00:03:42.556 --> 00:03:46.891
+E existem os classificadores, que não conversam, recebem alternativas
+
+86
+00:03:46.916 --> 00:03:51.351
+e devolvem uma escolha, um sim ou não, ou uma nota.
+
+87
+00:03:51.376 --> 00:03:55.631
+A Lúcia listou o que faz com inteligência artificial num mês.
+
+88
+00:03:55.656 --> 00:03:59.151
+Resumir, a ata do conselho de classe pede texto a capa
+
+89
+00:03:59.176 --> 00:04:02.831
+da feira de ciências pede imagem uma vinheta de 10 segundos
+
+90
+00:04:02.856 --> 00:04:07.691
+pede vídeo e separar 200 comentários da turma em dúvida, elogio
+
+91
+00:04:07.716 --> 00:04:11.671
+e reclamação pede classificação cada tarefa vai para o tipo que
+
+92
+00:04:11.696 --> 00:04:12.796
+sabe fazer lá
+
+93
+00:04:13.360 --> 00:04:16.920
+Chat GPT, Gemini e Copilot são chats.
+
+94
+00:04:17.420 --> 00:04:21.455
+Por trás de cada um, existem modelos, organizados em famílias com
+
+95
+00:04:21.480 --> 00:04:22.120
+nomes próprios.
+
+96
+00:04:22.600 --> 00:04:24.520
+Você não precisa decorar essa lista.
+
+97
+00:04:24.680 --> 00:04:27.860
+Nomes, versões e disponibilidade mudam de um mês para o outro.
+
+98
+00:04:27.960 --> 00:04:30.255
+E o que aparece na conta de uma colega pode não
+
+99
+00:04:30.280 --> 00:04:31.700
+aparecer na sua.
+
+100
+00:04:32.260 --> 00:04:35.975
+Por isso, a escolha acontece quando a tarefa aparece, consultando
+
+101
+00:04:36.000 --> 00:04:38.555
+a página oficial e anotando a data.
+
+102
+00:04:38.580 --> 00:04:40.895
+A Denise ouviu que um certo modelo era o melhor e
+
+103
+00:04:40.920 --> 00:04:41.975
+quis usá-lo para tudo.
+
+104
+00:04:42.000 --> 00:04:44.980
+funcionou no texto do convite da festa junina.
+
+105
+00:04:45.040 --> 00:04:48.395
+Quando pediu a arte do convite, descobriu que aquele modelo só
+
+106
+00:04:48.420 --> 00:04:49.720
+escrevia texto.
+
+107
+00:04:49.880 --> 00:04:53.855
+Existem também as centrais, como o Open Router para texto e
+
+108
+00:04:53.880 --> 00:04:56.095
+o Quie para imagem e vídeo.
+
+109
+00:04:56.120 --> 00:04:59.775
+Elas dão acesso a vários modelos num só lugar, com crédito
+
+110
+00:04:59.800 --> 00:05:00.720
+próprio.
+
+111
+00:05:00.920 --> 00:05:03.855
+Vale olhar com calma para o classificador, porque ele é o
+
+112
+00:05:03.880 --> 00:05:04.935
+menos lembrado.
+
+113
+00:05:04.960 --> 00:05:08.175
+Ele recebe um texto e uma lista fechada de alternativas e
+
+114
+00:05:08.200 --> 00:05:10.595
+devolve uma escolha, não um parágrafo.
+
+115
+00:05:10.620 --> 00:05:15.075
+Para triar muitos itens entre poucas categorias, isso pode ser mais
+
+116
+00:05:15.100 --> 00:05:17.280
+fácil de conferir do que uma conversa.
+
+117
+00:05:17.940 --> 00:05:20.995
+É uma hipótese para testar, não uma garantia.
+
+118
+00:05:21.020 --> 00:05:24.400
+E dá para experimentar hoje, no próprio chat.
+
+119
+00:05:24.660 --> 00:05:27.656
+A Lúcia colou o comentário de um aluno não entendia parte
+
+120
+00:05:27.681 --> 00:05:31.061
+da fotossíntese que caiu na prova.
+
+121
+00:05:31.181 --> 00:05:34.701
+Junto com as três categorias pedindo só a categoria.
+
+122
+00:05:34.921 --> 00:05:36.056
+Voltou uma palavra.
+
+123
+00:05:36.081 --> 00:05:36.961
+Dúvida.
+
+124
+00:05:37.001 --> 00:05:40.141
+Ela conferiu dez respostas na mão antes de confiar nas outras.
+
+125
+00:05:41.181 --> 00:05:42.441
+Sua prática agora.
+
+126
+00:05:42.621 --> 00:05:46.116
+Pause e escreva as três tarefas de inteligência artificial que você
+
+127
+00:05:46.141 --> 00:05:46.801
+mais repete.
+
+128
+00:05:47.441 --> 00:05:49.756
+Ao lado de cada uma, o tipo de modelo.
+
+129
+00:05:49.781 --> 00:05:51.936
+Só depois, um nome para testar.
+
+130
+00:05:51.961 --> 00:05:55.996
+Dentro do mesmo modelo ainda existe um segundo controle, o esforço
+
+131
+00:05:56.021 --> 00:05:57.316
+de raciocínio.
+
+132
+00:05:57.341 --> 00:05:59.396
+O modelo é o mecanismo escolhido.
+
+133
+00:05:59.421 --> 00:06:02.656
+O esforço é uma configuração desse mecanismo.
+
+134
+00:06:02.681 --> 00:06:05.136
+Quanto ele analisa antes de responder?
+
+135
+00:06:05.161 --> 00:06:08.696
+A Denise achava que mudar o nível era trocar de inteligência
+
+136
+00:06:08.721 --> 00:06:09.836
+artificial.
+
+137
+00:06:09.861 --> 00:06:10.756
+Não é.
+
+138
+00:06:10.781 --> 00:06:14.256
+No mesmo modelo, dá para pedir uma resposta rápida ou uma
+
+139
+00:06:14.281 --> 00:06:16.016
+análise mais longa.
+
+140
+00:06:16.041 --> 00:06:19.956
+Níveis mais altos podem gastar mais tempo e mais tokens.
+
+141
+00:06:19.981 --> 00:06:23.136
+E os nomes do seletor mudam de produto para produto.
+
+142
+00:06:23.161 --> 00:06:26.816
+No chat, no work e no codex, você vai encontrar rótulos
+
+143
+00:06:26.841 --> 00:06:27.996
+diferentes.
+
+144
+00:06:28.021 --> 00:06:31.901
+Não existe uma lista única de níveis que valha para todos.
+
+145
+00:06:31.941 --> 00:06:35.936
+Alguns chats nem mostram esse controle, dependendo do produto e do
+
+146
+00:06:35.961 --> 00:06:36.661
+plano.
+
+147
+00:06:36.741 --> 00:06:39.963
+Muita gente liga o esforço máximo em toda tarefa, por garantia.
+
+148
+00:06:40.623 --> 00:06:43.258
+Só que nenhum esforço traz de volta um documento que ficou
+
+149
+00:06:43.283 --> 00:06:44.598
+fora do pedido.
+
+150
+00:06:44.623 --> 00:06:46.758
+A Lúcia queria entender por que a planilha de notas da
+
+151
+00:06:46.783 --> 00:06:49.843
+secretaria discordava da dela.
+
+152
+00:06:49.963 --> 00:06:53.558
+No esforço máximo, sem colar as planilhas, recebeu uma lista de
+
+153
+00:06:53.583 --> 00:06:56.283
+causas possíveis, sem apontar nenhuma.
+
+154
+00:06:56.343 --> 00:07:00.018
+No esforço padrão, com as duas planilhas coladas, recebeu a linha
+
+155
+00:07:00.043 --> 00:07:00.923
+exata.
+
+156
+00:07:01.443 --> 00:07:03.938
+Um aluno com nota diferente numa avaliação.
+
+157
+00:07:03.963 --> 00:07:06.818
+A entrada certa resolveu o que o controle no máximo não
+
+158
+00:07:06.843 --> 00:07:09.138
+resolveu, então a ordem é esta.
+
+159
+00:07:09.163 --> 00:07:12.578
+Comece pelo padrão, que resolve a maioria das tarefas do dia
+
+160
+00:07:12.603 --> 00:07:13.378
+a dia.
+
+161
+00:07:13.403 --> 00:07:15.118
+Complete as entradas.
+
+162
+00:07:15.143 --> 00:07:18.978
+Só depois avalie se o problema pede mais análise, como tarefas
+
+163
+00:07:19.003 --> 00:07:21.163
+com várias etapas ou muitos dados.
+
+164
+00:07:21.883 --> 00:07:24.518
+E como saber se o esforço maior ajudou?
+
+165
+00:07:24.543 --> 00:07:26.338
+Mudando um controle só.
+
+166
+00:07:26.363 --> 00:07:29.958
+Repita o mesmo pedido, com o mesmo material, no mesmo modelo
+
+167
+00:07:29.983 --> 00:07:32.098
+e mude apenas o esforço.
+
+168
+00:07:32.123 --> 00:07:34.878
+Se você mudar duas coisas ao mesmo tempo, não dá para
+
+169
+00:07:34.903 --> 00:07:36.103
+concluir nada.
+
+170
+00:07:36.143 --> 00:07:39.583
+Depois, registre se houve uma melhora que você consegue mostrar.
+
+171
+00:07:39.643 --> 00:07:42.783
+Um fato a mais, um erro a menos, uma conta certa.
+
+172
+00:07:42.963 --> 00:07:45.643
+Ficou melhor, sem evidência, não conta.
+
+173
+00:07:45.703 --> 00:07:49.323
+A Lúcia pediu a mesma correção comentada duas vezes.
+
+174
+00:07:49.384 --> 00:07:52.724
+No nível mais alto, apareceu um erro de unidade.
+
+175
+00:07:53.744 --> 00:07:57.924
+Quilômetro no lugar de metro, que o padrão tinha deixado passar.
+
+176
+00:07:57.964 --> 00:08:00.144
+Ela anotou exatamente isso.
+
+177
+00:08:00.204 --> 00:08:01.304
+Pause e faça o mesmo.
+
+178
+00:08:01.844 --> 00:08:05.659
+Um pedido real, duas rodadas em conversas novas, e uma linha
+
+179
+00:08:05.684 --> 00:08:08.324
+dizendo se houve melhora e qual foi a evidência.
+
+180
+00:08:09.104 --> 00:08:11.919
+Se as duas saírem iguais, também é resultado.
+
+181
+00:08:11.944 --> 00:08:13.084
+O padrão basta.
+
+182
+00:08:13.204 --> 00:08:16.219
+Para dizer que melhorou, você precisa de uma régua.
+
+183
+00:08:16.244 --> 00:08:20.199
+Uma régua de qualidade diz, antes do pedido, quais fatos precisam
+
+184
+00:08:20.224 --> 00:08:23.879
+aparecer, quais erros são inaceitáveis e como a saída vai ser
+
+185
+00:08:23.904 --> 00:08:24.284
+usada.
+
+186
+00:08:24.884 --> 00:08:27.084
+O detalhe importante é o antes.
+
+187
+00:08:27.604 --> 00:08:31.044
+Escrita antes, a régua não se deixa levar pela resposta.
+
+188
+00:08:31.244 --> 00:08:34.644
+Escrita depois, ela costuma aprovar o que chegou.
+
+189
+00:08:35.124 --> 00:08:38.839
+A Denise, Inteligência Artificial, pediu o resumo da reunião de planejamento
+
+190
+00:08:38.864 --> 00:08:40.104
+da Feira de Ciências.
+
+191
+00:08:40.684 --> 00:08:41.839
+Quer um resumo bom?
+
+192
+00:08:41.864 --> 00:08:42.939
+É desejo.
+
+193
+00:08:42.964 --> 00:08:45.039
+Qualquer texto bem escrito passa.
+
+194
+00:08:45.064 --> 00:08:48.759
+Então, antes de abrir o chat, ela escreveu três linhas num
+
+195
+00:08:48.784 --> 00:08:49.759
+papel.
+
+196
+00:08:49.784 --> 00:08:53.019
+Os três responsáveis, sem prazo, que não está na ata.
+
+197
+00:08:53.044 --> 00:08:54.639
+Uma sessão de pendências.
+
+198
+00:08:54.664 --> 00:08:57.219
+Cada frase dá para achar na ata.
+
+199
+00:08:57.244 --> 00:09:00.859
+Três perguntas, de sim ou não, respondidas em menos de um
+
+200
+00:09:00.884 --> 00:09:01.184
+minuto.
+
+201
+00:09:01.760 --> 00:09:04.320
+Para começar, três critérios bastam.
+
+202
+00:09:04.380 --> 00:09:05.880
+Fidelidade aos dados.
+
+203
+00:09:06.020 --> 00:09:08.480
+Nenhum dado do material muda ou some.
+
+204
+00:09:08.600 --> 00:09:12.400
+Formato combinado, o tamanho e as seções que você pediu.
+
+205
+00:09:12.580 --> 00:09:13.640
+Conclusões verificáveis.
+
+206
+00:09:14.340 --> 00:09:17.300
+Nada é acrescentado que não dê para achar no material.
+
+207
+00:09:17.400 --> 00:09:18.460
+Esses três são o molde.
+
+208
+00:09:18.900 --> 00:09:21.540
+E em cada tarefa, eles viram itens concretos.
+
+209
+00:09:22.240 --> 00:09:25.855
+Na ata da Denise, Fidelidade virou os três responsáveis sem prazo
+
+210
+00:09:25.880 --> 00:09:26.860
+inventado.
+
+211
+00:09:26.940 --> 00:09:29.315
+A Lúcia usou o mesmo molde para o resumo de um
+
+212
+00:09:29.340 --> 00:09:30.615
+capítulo do livro de ciências.
+
+213
+00:09:30.640 --> 00:09:34.195
+e os itens mudaram, só conceitos que estão no capítulo, uma
+
+214
+00:09:34.220 --> 00:09:37.380
+página em tópicos, e cada tópico com o número da página.
+
+215
+00:09:37.900 --> 00:09:41.675
+Se escrever critérios parecer burocracia, comece com um só, nenhum
+
+216
+00:09:41.700 --> 00:09:43.460
+dado que não esteja no material.
+
+217
+00:09:43.740 --> 00:09:46.280
+Os outros aparecem depois da primeira resposta errada.
+
+218
+00:09:46.960 --> 00:09:48.400
+Por que isso importa tanto?
+
+219
+00:09:48.500 --> 00:09:51.735
+Porque sem critério, você escolhe a resposta mais bonita.
+
+220
+00:09:51.760 --> 00:09:54.080
+A Denise recebeu duas versões do resumo.
+
+221
+00:09:54.140 --> 00:09:55.820
+A primeira era fluida.
+
+222
+00:09:55.980 --> 00:09:59.035
+A reunião foi produtiva e cheia de energia, a Lúcia organiza
+
+223
+00:09:59.060 --> 00:10:02.775
+os grupos, o Marcos reserva o pátio até sexta-feira, a feira
+
+224
+00:10:02.800 --> 00:10:03.340
+promete.
+
+225
+00:10:03.780 --> 00:10:08.340
+A segunda era seca, três decisões, três responsáveis e uma pendência.
+
+226
+00:10:08.940 --> 00:10:12.011
+Com a régua, a versão bonita reprovou nos três itens.
+
+227
+00:10:12.691 --> 00:10:13.786
+Faltou a Renata.
+
+228
+00:10:13.811 --> 00:10:17.386
+O até-sexta-feira não estava na ata, não havia pendências e cheia
+
+229
+00:10:17.411 --> 00:10:19.986
+de energia, não dá para achar em lugar nenhum.
+
+230
+00:10:20.011 --> 00:10:21.706
+A seca passou em tudo.
+
+231
+00:10:21.731 --> 00:10:23.446
+Transforme a régua numa tabela.
+
+232
+00:10:23.471 --> 00:10:27.806
+Critério, esperado, observado e passou, sim ou não.
+
+233
+00:10:27.831 --> 00:10:29.986
+E guarde a resposta ruim, porque ela lembra o que você
+
+234
+00:10:30.011 --> 00:10:32.166
+quer evitar.
+
+235
+00:10:32.191 --> 00:10:35.366
+Pause e escreva a sua régua de três linhas para o
+
+236
+00:10:35.391 --> 00:10:37.886
+próximo resumo que for pedir.
+
+237
+00:10:37.911 --> 00:10:41.706
+Testar dois modelos custa, e a pergunta é, de qual conta
+
+238
+00:10:41.731 --> 00:10:42.786
+sai esse custo?
+
+239
+00:10:42.811 --> 00:10:45.886
+Um teste pode estar consumindo uma conta diferente da que você
+
+240
+00:10:45.911 --> 00:10:46.386
+imagina.
+
+241
+00:10:46.411 --> 00:10:49.886
+O primeiro caminho é entrar com a sua conta, fazendo o
+
+242
+00:10:49.911 --> 00:10:50.471
+login no chat.
+
+243
+00:10:51.291 --> 00:10:54.226
+Aí você usa os direitos e os limites daquela conta, que
+
+244
+00:10:54.251 --> 00:10:56.511
+vem do plano e do espaço de trabalho.
+
+245
+00:10:56.551 --> 00:10:59.086
+A Lúcia usa o chat pela conta da escola.
+
+246
+00:10:59.111 --> 00:11:01.766
+Quando atingiu o limite de uso do dia, descobriu que o
+
+247
+00:11:01.791 --> 00:11:04.526
+limite era do plano da escola, e não dela.
+
+248
+00:11:04.551 --> 00:11:05.886
+E esses limites mudam.
+
+249
+00:11:05.911 --> 00:11:08.786
+A fonte de verdade é a configuração atual da sua conta,
+
+250
+00:11:08.811 --> 00:11:10.246
+e não o que alguém contou.
+
+251
+00:11:10.271 --> 00:11:12.931
+O segundo caminho é a chave da API.
+
+252
+00:11:13.211 --> 00:11:16.386
+Programas usam a inteligência artificial por uma API, com uma chave
+
+253
+00:11:16.411 --> 00:11:18.051
+cobrada por consumo na plataforma.
+
+254
+00:11:18.991 --> 00:11:22.276
+Assinar o chat não dá saldo livre para qualquer programa que
+
+255
+00:11:22.301 --> 00:11:23.196
+chame API.
+
+256
+00:11:23.221 --> 00:11:28.116
+São duas contas com duas cobranças, mesmo quando o modelo tem
+
+257
+00:11:28.141 --> 00:11:28.841
+nome parecido.
+
+258
+00:11:29.521 --> 00:11:32.476
+A Denise rodou um programa de relatórios com uma chave da
+
+259
+00:11:32.501 --> 00:11:36.816
+escola e os tokens gastos apareceram na plataforma da API, não
+
+260
+00:11:36.841 --> 00:11:37.936
+na assinatura.
+
+261
+00:11:37.961 --> 00:11:41.156
+O terceiro caminho são as centrais, como o OpenRouter e o
+
+262
+00:11:41.181 --> 00:11:42.981
+CAE, com crédito próprio.
+
+263
+00:11:43.681 --> 00:11:46.796
+A Lúcia gerou os cartazes da semana da leitura numa central
+
+264
+00:11:46.821 --> 00:11:50.161
+e o crédito acabou no meio do lote.
+
+265
+00:11:50.221 --> 00:11:54.376
+A assinatura do chat continuava ativa, mas não cobria aquilo, o
+
+266
+00:11:54.401 --> 00:11:56.521
+que resolve é repor o crédito na própria central.
+
+267
+00:11:58.321 --> 00:12:02.156
+Antes de deixar algo rodando por muito tempo, confira qual método
+
+268
+00:12:02.181 --> 00:12:02.881
+está ativo.
+
+269
+00:12:03.721 --> 00:12:07.416
+Nas configurações da ferramenta, veja o plano da conta ou a
+
+270
+00:12:07.441 --> 00:12:07.916
+chave em uso.
+
+271
+00:12:07.941 --> 00:12:12.716
+No módulo 3, no códex, um comando no terminal, códex login
+
+272
+00:12:12.741 --> 00:12:14.981
+status, vai mostrar isso para você.
+
+273
+00:12:15.541 --> 00:12:19.156
+E anote o método na ficha do projeto, conta, chave ou
+
+274
+00:12:19.181 --> 00:12:19.561
+central.
+
+275
+00:12:20.361 --> 00:12:22.936
+A credencial em si nunca vai para a ficha, para um
+
+276
+00:12:22.961 --> 00:12:24.621
+pedido ou para um print.
+
+277
+00:12:24.661 --> 00:12:27.276
+Antes de pedir o resumo das 40 atas do ano, a
+
+278
+00:12:27.301 --> 00:12:32.612
+Denise escreveu chat da escola, conta da escola, limite do plano,
+
+279
+00:12:32.712 --> 00:12:36.247
+sem nenhuma senha, pause e faça sua ficha, com uma linha
+
+280
+00:12:36.272 --> 00:12:38.707
+por ferramenta de inteligência artificial que você usa.
+
+281
+00:12:38.732 --> 00:12:41.927
+Se hoje você só usa o chat pela sua conta, a
+
+282
+00:12:41.952 --> 00:12:44.192
+ficha tem uma linha, e está certo assim.
+
+283
+00:12:44.772 --> 00:12:48.087
+Se encontrar uma chave colada em algum documento, apague de lá
+
+284
+00:12:48.112 --> 00:12:50.552
+e avise quem administra a conta.
+
+285
+00:12:50.592 --> 00:12:55.067
+Com a conta certa, até onde deixar a inteligência artificial ir
+
+286
+00:12:55.092 --> 00:12:55.552
+sozinha?
+
+287
+00:12:56.332 --> 00:12:59.987
+Num chat, você manda uma mensagem, recebe uma resposta e vê
+
+288
+00:13:00.012 --> 00:13:01.952
+cada passo antes do próximo.
+
+289
+00:13:02.052 --> 00:13:03.427
+Um agente é diferente.
+
+290
+00:13:03.452 --> 00:13:05.832
+Ele recebe um objetivo e segue sozinho.
+
+291
+00:13:05.892 --> 00:13:09.092
+Lê arquivos, cria, compara, corrige.
+
+292
+00:13:09.232 --> 00:13:10.567
+Isso poupa trabalho.
+
+293
+00:13:10.592 --> 00:13:13.627
+E também multiplica os pontos em que ele pode errar sem
+
+294
+00:13:13.652 --> 00:13:14.592
+você ver.
+
+295
+00:13:15.612 --> 00:13:18.347
+A Lúcia pediu a um agente que organizasse as notas do
+
+296
+00:13:18.372 --> 00:13:19.212
+bimestre.
+
+297
+00:13:19.272 --> 00:13:23.612
+Ele leu três planilhas, criou uma nova e renomeou as antigas.
+
+298
+00:13:24.212 --> 00:13:26.312
+Essa última etapa, ela não tinha pedido.
+
+299
+00:13:27.032 --> 00:13:31.527
+Sem limite escrito, um agente pode gastar tempo, crédito ou mexer
+
+300
+00:13:31.552 --> 00:13:32.772
+no arquivo errado.
+
+301
+00:13:32.872 --> 00:13:37.867
+Autonomia, aqui, é uma autorização com um escopo e não um
+
+302
+00:13:37.892 --> 00:13:39.922
+convite para fazer qualquer coisa.
+
+303
+00:13:40.240 --> 00:13:42.055
+Uma autorização tem cinco partes.
+
+304
+00:13:42.080 --> 00:13:46.635
+O objetivo, os arquivos permitidos, as ações autorizadas, o limite
+
+305
+00:13:46.660 --> 00:13:48.360
+de tempo e o ponto de parada.
+
+306
+00:13:49.200 --> 00:13:52.555
+A Denise escreveu a do agente que prepara o relatório mensal
+
+307
+00:13:52.580 --> 00:13:53.595
+de frequência.
+
+308
+00:13:53.620 --> 00:13:56.120
+Objetivo, rascunho do relatório de setembro.
+
+309
+00:13:56.880 --> 00:13:59.300
+Arquivos, só a planilha de frequência de setembro.
+
+310
+00:13:59.880 --> 00:14:03.740
+Ações, ler e criar o rascunho, sem apagar nem renomear nada.
+
+311
+00:14:04.540 --> 00:14:05.920
+Tempo, até 10 minutos.
+
+312
+00:14:06.840 --> 00:14:09.940
+Parada, entregar o rascunho e parar antes de enviar.
+
+313
+00:14:09.980 --> 00:14:13.240
+Levou dois minutos e cabe num post-it.
+
+314
+00:14:13.460 --> 00:14:16.980
+E atenção, enviar, publicar e apagar são ações externas.
+
+315
+00:14:17.720 --> 00:14:19.560
+Cada uma exige instrução explícita.
+
+316
+00:14:20.180 --> 00:14:23.035
+O botão de enviar existir não significa que o agente pode
+
+317
+00:14:23.060 --> 00:14:23.720
+usar a Lô.
+
+318
+00:14:23.900 --> 00:14:25.800
+A ferramenta limita o que é possível.
+
+319
+00:14:26.120 --> 00:14:27.660
+A autorização diz o que é desejado.
+
+320
+00:14:28.380 --> 00:14:31.480
+Para fechar, peça sempre uma saída em três partes.
+
+321
+00:14:31.560 --> 00:14:34.335
+O que foi feito, como foi verificado e o que ficou
+
+322
+00:14:34.360 --> 00:14:35.340
+pendente.
+
+323
+00:14:35.420 --> 00:14:38.255
+Assim o resultado vira algo que você revisa e não algo
+
+324
+00:14:38.280 --> 00:14:39.920
+em que precisa acreditar.
+
+325
+00:14:41.480 --> 00:14:43.560
+O agente da Denise respondeu assim.
+
+326
+00:14:49.125 --> 00:14:51.040
+bate com a soma das linhas.
+
+327
+00:14:51.065 --> 00:14:52.100
+Pendente.
+
+328
+00:14:52.125 --> 00:14:55.820
+A turma do oitavo ano C tem duas linhas sem data,
+
+329
+00:14:55.845 --> 00:14:56.865
+que ele não completou.
+
+330
+00:14:57.505 --> 00:15:00.900
+Repare que a pendência não foi preenchida com um palpite.
+
+331
+00:15:00.925 --> 00:15:03.500
+A Denise conferiu um dos números na planilha e aprovou o
+
+332
+00:15:03.525 --> 00:15:04.320
+resto.
+
+333
+00:15:04.345 --> 00:15:05.405
+Sua prática.
+
+334
+00:15:05.925 --> 00:15:08.760
+Pause e escreva uma autorização de cinco partes para uma tarefa
+
+335
+00:15:08.785 --> 00:15:12.985
+pequena, com dados fictícios e mande no chat.
+
+336
+00:15:13.365 --> 00:15:17.240
+Leia o fechamento e confira você mesma um dos pontos direto
+
+337
+00:15:17.265 --> 00:15:18.380
+no material.
+
+338
+00:15:18.405 --> 00:15:19.720
+Vamos juntar tudo.
+
+339
+00:15:19.745 --> 00:15:23.260
+Quando a inteligência artificial erra, você procura a peça que faltou
+
+340
+00:15:23.285 --> 00:15:26.220
+antes de reescrever o pedido.
+
+341
+00:15:26.245 --> 00:15:29.325
+Escolhe o tipo de modelo pela função, antes do nome.
+
+342
+00:15:29.545 --> 00:15:32.400
+Testa um controle de cada vez e só aceita a melhora
+
+343
+00:15:32.425 --> 00:15:33.740
+com evidência.
+
+344
+00:15:33.765 --> 00:15:36.940
+Escreve a régua antes de pedir e decide pela régua, não
+
+345
+00:15:36.965 --> 00:15:38.060
+pelo tom.
+
+346
+00:15:38.085 --> 00:15:40.880
+Sabe de qual conta sai cada custo e anota o método,
+
+347
+00:15:40.905 --> 00:15:42.340
+nunca a credencial.
+
+348
+00:15:42.365 --> 00:15:45.480
+E delega com um escopo, ponto de parada e um fechamento
+
+349
+00:15:45.505 --> 00:15:48.865
+que diz o que foi feito, verificado e pendente.
+
+350
+00:15:48.905 --> 00:15:52.720
+Quando tiver uns 30 minutos, faça o laboratório do módulo, no
+
+351
+00:15:52.745 --> 00:15:56.505
+material complementar da aula 6, o mesmo pedido em dois modelos,
+
+352
+00:15:56.565 --> 00:15:57.605
+avaliado pela sua régua.
+
+353
+00:15:58.125 --> 00:16:03.540
+No próximo módulo, vamos ver chat, work e desktop, três jeitos
+
+354
+00:16:03.565 --> 00:16:06.905
+de trabalhar com a inteligência artificial e quando usar cada um.
+
+355
+00:16:07.745 --> 00:16:08.268
+Até lá!

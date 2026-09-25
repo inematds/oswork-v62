@@ -1,5 +1,10 @@
 # Changelog — OSWork v6.2
 
+## 1.3.1 — 2026-09-25
+
+- Vídeo-aulas: página `videos/` com um player por módulo (avatar e voz do Nei, capítulos por aula, legendas). Publicados M1, M2 e M4 em PT; os demais entram conforme ficam prontos. MP4/SRT na release `video-v1.0.0`.
+- Landing PT: link "Assista às vídeo-aulas".
+
 ## 1.2.1 — 2026-09-25
 
 - Landing: mostra só os 8 módulos, fechados, e o clique abre as aulas de cada um (formato-curso-v6 6.3.3).

@@ -1,0 +1,17 @@
+{
+  "oswork-v62-m1-pt": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m1-pt.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m1-pt.srt",
+    "duration": 968.341016
+  },
+  "oswork-v62-m2-pt": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m2-pt.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m2-pt.srt",
+    "duration": 989.141016
+  },
+  "oswork-v62-m4-pt": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m4-pt.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m4-pt.srt",
+    "duration": 966.301016
+  }
+}
