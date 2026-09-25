@@ -68,7 +68,9 @@
     "formas": [
       "instalar",
       "instalação",
-      "instalado"
+      "instalado",
+      "Instalar",
+      "Instalação"
     ],
     "def": "Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial."
   },
@@ -83,5 +85,290 @@
       "VPS"
     ],
     "def": "Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar."
+  },
+  "work": {
+    "formas": [
+      "Work"
+    ],
+    "def": "Modo do ChatGPT em que você entrega uma tarefa maior e recebe o resultado pronto depois, sem acompanhar cada resposta."
+  },
+  "desktop": {
+    "formas": [
+      "Desktop"
+    ],
+    "def": "Aplicativo do ChatGPT no computador, que trabalha mais perto dos seus arquivos do que o chat no navegador."
+  },
+  "interface": {
+    "formas": [
+      "interface"
+    ],
+    "def": "A tela por onde você passa o objetivo à IA, como a janela do chat. O curso mostra outras interfaces ao longo dos módulos."
+  },
+  "regua-de-qualidade": {
+    "formas": [
+      "régua de qualidade"
+    ],
+    "def": "Lista curta de critérios, escrita antes do pedido, que diz o que a resposta precisa ter para ser aceita."
+  },
+  "ficha-do-projeto": {
+    "formas": [
+      "ficha do projeto"
+    ],
+    "def": "Documento curto em que você anota como um trabalho com IA funciona: ferramentas, acesso, decisões e pendências. Pode ser uma nota no celular. No módulo 4 ele vira um arquivo da pasta do projeto."
+  },
+  "jev": {
+    "formas": [
+      "Jev"
+    ],
+    "def": "Exemplo de modelo de classificação citado no curso. Não conversa: recebe um texto e alternativas fechadas e devolve uma escolha, um sim ou não, ou uma nota."
+  },
+  "provedores": {
+    "formas": [
+      "provedores",
+      "provedor"
+    ],
+    "def": "Empresa que oferece um modelo de IA. Uma central reúne modelos de vários provedores num lugar só."
+  },
+  "bash": {
+    "formas": [
+      "Bash"
+    ],
+    "def": "Linguagem de comandos do terminal no Linux e no macOS. Os comandos deste curso são escritos para ele."
+  },
+  "diretorio": {
+    "formas": [
+      "diretório",
+      "diretórios"
+    ],
+    "def": "Outro nome para pasta, usado no terminal."
+  },
+  "script": {
+    "formas": [
+      "script",
+      "scripts"
+    ],
+    "def": "Arquivo com uma sequência de comandos que o computador executa de uma vez."
+  },
+  "git": {
+    "formas": [
+      "Git"
+    ],
+    "def": "Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê."
+  },
+  "github": {
+    "formas": [
+      "GitHub"
+    ],
+    "def": "Site onde você guarda uma cópia do seu repositório Git na internet, para trabalhar de outro computador ou com outras pessoas."
+  },
+  "repositorio": {
+    "formas": [
+      "repositório",
+      "repositórios"
+    ],
+    "def": "Pasta de projeto acompanhada pelo Git, com todo o histórico de versões."
+  },
+  "commit": {
+    "formas": [
+      "commit",
+      "commits"
+    ],
+    "def": "Versão salva no Git, com uma mensagem que explica a mudança. Dá para voltar a ela depois."
+  },
+  "branch": {
+    "formas": [
+      "branch"
+    ],
+    "def": "Linha paralela de trabalho no Git, onde você testa mudanças sem mexer na versão principal."
+  },
+  "backup": {
+    "formas": [
+      "backup"
+    ],
+    "def": "Cópia de segurança dos arquivos, guardada em outro lugar para recuperar se algo se perder."
+  },
+  "servidor": {
+    "formas": [
+      "servidor",
+      "servidores"
+    ],
+    "def": "Computador que fica ligado prestando um serviço para outros, como responder às mensagens de um bot."
+  },
+  "readme": {
+    "formas": [
+      "README"
+    ],
+    "def": "Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado."
+  },
+  "markdown": {
+    "formas": [
+      "Markdown"
+    ],
+    "def": "Jeito de escrever texto simples com marcas leves, como # para título e - para lista. Os arquivos terminam em .md."
+  },
+  "agents-md": {
+    "formas": [
+      "AGENTS.md"
+    ],
+    "def": "Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir."
+  },
+  "gitignore": {
+    "formas": [
+      ".gitignore"
+    ],
+    "def": "Arquivo que lista o que o Git não deve guardar, como senhas e arquivos temporários."
+  },
+  "env": {
+    "formas": [
+      ".env"
+    ],
+    "def": "Arquivo que guarda chaves e senhas fora do código. Nunca vai para o Git, para um pedido ou para um print."
+  },
+  "skill": {
+    "formas": [
+      "Skill",
+      "Skills"
+    ],
+    "def": "Procedimento empacotado que o agente pode reusar: instruções, passos e como conferir, guardados numa pasta."
+  },
+  "csv": {
+    "formas": [
+      "CSV"
+    ],
+    "def": "Planilha em texto simples, com os valores separados por vírgula. Abre no Excel ou no Google Planilhas."
+  },
+  "bot": {
+    "formas": [
+      "bot",
+      "bots"
+    ],
+    "def": "Programa que conversa por um aplicativo de mensagens e responde sozinho, seguindo as regras que você define."
+  },
+  "token-do-bot": {
+    "formas": [
+      "token do bot"
+    ],
+    "def": "Senha que o Telegram gera para o seu bot. Quem tem o token controla o bot; por isso ele fica no .env."
+  },
+  "long-polling": {
+    "formas": [
+      "long polling"
+    ],
+    "def": "Jeito de o bot perguntar ao Telegram, de tempos em tempos, se chegou mensagem nova. Não exige servidor com endereço público."
+  },
+  "webhook": {
+    "formas": [
+      "webhook"
+    ],
+    "def": "Jeito de o Telegram avisar o seu servidor na hora em que chega uma mensagem. Exige um endereço público na internet."
+  },
+  "ssh": {
+    "formas": [
+      "SSH"
+    ],
+    "def": "Forma segura de abrir o terminal de outro computador pela internet."
+  },
+  "systemd": {
+    "formas": [
+      "systemd"
+    ],
+    "def": "Parte do Linux que liga, vigia e religa programas sozinha, inclusive depois de reiniciar a máquina."
+  },
+  "firewall": {
+    "formas": [
+      "firewall"
+    ],
+    "def": "Filtro que decide quais conexões de rede podem entrar na máquina ou sair dela."
+  },
+  "sudo": {
+    "formas": [
+      "sudo"
+    ],
+    "def": "Comando que executa a instrução seguinte com permissão de administrador. Pede a sua senha."
+  },
+  "ubuntu": {
+    "formas": [
+      "Ubuntu"
+    ],
+    "def": "Versão popular do Linux, comum em servidores."
+  },
+  "python": {
+    "formas": [
+      "Python"
+    ],
+    "def": "Linguagem de programação. O bot do kit do curso é escrito nela."
+  },
+  "log": {
+    "formas": [
+      "log",
+      "logs"
+    ],
+    "def": "Registro do que um programa fez, linha por linha, com data e hora. É onde se procura a causa de um erro."
+  },
+  "diff": {
+    "formas": [
+      "diff"
+    ],
+    "def": "Comparação que mostra, linha por linha, o que mudou num arquivo."
+  },
+  "staging": {
+    "formas": [
+      "staging"
+    ],
+    "def": "Área do Git onde ficam as mudanças escolhidas para entrar no próximo commit."
+  },
+  "head": {
+    "formas": [
+      "HEAD"
+    ],
+    "def": "No Git, a versão em que você está agora."
+  },
+  "clone": {
+    "formas": [
+      "clone"
+    ],
+    "def": "Cópia de um repositório do GitHub para o seu computador, com todo o histórico."
+  },
+  "pull": {
+    "formas": [
+      "pull"
+    ],
+    "def": "Comando do Git que traz para o seu computador as mudanças novas do GitHub."
+  },
+  "push": {
+    "formas": [
+      "push"
+    ],
+    "def": "Comando do Git que envia os seus commits para o GitHub."
+  },
+  "apt": {
+    "formas": [
+      "apt"
+    ],
+    "def": "Instalador de programas do Ubuntu, usado no terminal."
+  },
+  "systemctl": {
+    "formas": [
+      "systemctl"
+    ],
+    "def": "Comando do systemd para ligar, desligar e ver o estado de um serviço."
+  },
+  "journalctl": {
+    "formas": [
+      "journalctl"
+    ],
+    "def": "Comando que mostra o log dos serviços do systemd."
+  },
+  "ufw": {
+    "formas": [
+      "ufw"
+    ],
+    "def": "Comando do Ubuntu para configurar o firewall de um jeito simples."
+  },
+  "chmod": {
+    "formas": [
+      "chmod"
+    ],
+    "def": "Comando que define quem pode ler ou alterar um arquivo."
   }
 }
