@@ -28,5 +28,100 @@
     "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m7-pt.mp4",
     "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m7-pt.srt",
     "duration": 1064.421016
+  },
+  "oswork-v62-m1-pt-v2": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m1-pt-v2.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m1-pt-v2.srt",
+    "duration": 968.341016
+  },
+  "oswork-v62-m2-pt-v2": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m2-pt-v2.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m2-pt-v2.srt",
+    "duration": 989.141016
+  },
+  "oswork-v62-m4-pt-v2": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m4-pt-v2.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m4-pt-v2.srt",
+    "duration": 966.301016
+  },
+  "oswork-v62-m5-pt-v2": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m5-pt-v2.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m5-pt-v2.srt",
+    "duration": 966.421016
+  },
+  "oswork-v62-m1-en": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m1-en.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m1-en.srt",
+    "duration": 972.741333
+  },
+  "oswork-v62-m2-en": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m2-en.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m2-en.srt",
+    "duration": 981.501016
+  },
+  "oswork-v62-m3-en": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m3-en.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m3-en.srt",
+    "duration": 1020.781016
+  },
+  "oswork-v62-m4-en": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m4-en.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m4-en.srt",
+    "duration": 988.781016
+  },
+  "oswork-v62-m5-en": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m5-en.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m5-en.srt",
+    "duration": 996.421016
+  },
+  "oswork-v62-m7-en": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m7-en.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m7-en.srt",
+    "duration": 1079.581016
+  },
+  "oswork-v62-m8-en": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m8-en.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m8-en.srt",
+    "duration": 989.101016
+  },
+  "oswork-v62-m1-es": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m1-es.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m1-es.srt",
+    "duration": 857.901016
+  },
+  "oswork-v62-m2-es": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m2-es.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m2-es.srt",
+    "duration": 881.021016
+  },
+  "oswork-v62-m3-es": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m3-es.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m3-es.srt",
+    "duration": 907.141016
+  },
+  "oswork-v62-m4-es": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m4-es.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m4-es.srt",
+    "duration": 885.101016
+  },
+  "oswork-v62-m5-es": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m5-es.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m5-es.srt",
+    "duration": 869.981016
+  },
+  "oswork-v62-m6-es": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m6-es.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m6-es.srt",
+    "duration": 845.741016
+  },
+  "oswork-v62-m7-es": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m7-es.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m7-es.srt",
+    "duration": 943.701333
+  },
+  "oswork-v62-m8-es": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m8-es.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m8-es.srt",
+    "duration": 888.621016
   }
 }

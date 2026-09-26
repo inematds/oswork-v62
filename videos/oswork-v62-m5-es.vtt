@@ -1,0 +1,1417 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.935
+Hola, soy Neymar Danner y este es el módulo 5 de
+
+2
+00:00:02.960 --> 00:00:04.020
+OS Work.
+
+3
+00:00:04.260 --> 00:00:06.875
+En los módulos 3 y 4, armaste la carpeta de práctica
+
+4
+00:00:06.900 --> 00:00:09.700
+y la carpeta config, con archivos de apoyo.
+
+5
+00:00:09.780 --> 00:00:13.620
+Ahora, esas carpetas van a recibir instrucciones que el agente sigue.
+
+6
+00:00:13.720 --> 00:00:16.075
+En este módulo vas a escribir reglas que se pueden comprobar
+
+7
+00:00:16.100 --> 00:00:19.035
+en la entrega, separar lo que vale en todos los proyectos
+
+8
+00:00:19.060 --> 00:00:22.035
+de lo que vale en una sola carpeta, convertir un paso
+
+9
+00:00:22.060 --> 00:00:25.195
+a paso repetido en una skill, mantener una memoria corta y
+
+10
+00:00:25.220 --> 00:00:28.775
+con fecha, registrar fallas como protecciones pequeñas y probar lo
+
+11
+00:00:28.800 --> 00:00:30.120
+que construiste con tres casos.
+
+12
+00:00:30.760 --> 00:00:34.455
+Seguimos con Denise, coordinadora pedagógica, y Lucia, profesora de
+
+13
+00:00:34.480 --> 00:00:35.920
+ciencias de octavo año.
+
+14
+00:00:36.480 --> 00:00:38.660
+Cada lección tiene una práctica corta.
+
+15
+00:00:38.700 --> 00:00:41.095
+Cuando te lo pida, pausa el video y hazla en ese
+
+16
+00:00:41.120 --> 00:00:42.960
+momento, en tu computadora.
+
+17
+00:00:43.000 --> 00:00:44.675
+Piensa en el laboratorio de ciencias.
+
+18
+00:00:44.700 --> 00:00:46.735
+En la puerta hay una placa que dice cómo trabajar ahí
+
+19
+00:00:46.540 --> 00:00:51.135
+El Agents, MD, hace lo mismo con una carpeta de proyecto.
+
+20
+00:00:51.160 --> 00:00:54.015
+Es un archivo de texto simple, en Markdown, que abres y
+
+21
+00:00:54.040 --> 00:00:55.155
+editas en el blog de notas.
+
+22
+00:00:55.180 --> 00:00:58.395
+Y Codex busca ese archivo solo cuando empieza a trabajar en
+
+23
+00:00:58.420 --> 00:00:58.940
+la carpeta.
+
+24
+00:00:59.400 --> 00:01:01.900
+Lucia ya tiene la carpeta de práctica, mi primer proyecto.
+
+25
+00:01:02.480 --> 00:01:07.155
+Ahí dentro está el README, el AGENTS, MD, la carpeta Entradas,
+
+26
+00:01:07.180 --> 00:01:10.355
+con una planilla ficticia de ventas, y la carpeta CIDAS, donde
+
+27
+00:01:10.380 --> 00:01:12.235
+la gente entrega los borradores.
+
+28
+00:01:12.260 --> 00:01:15.775
+El AGNT, MD, es el primer archivo que ella va a
+
+29
+00:01:15.800 --> 00:01:16.600
+mejorar.
+
+30
+00:01:16.700 --> 00:01:18.915
+Si no armaste esa carpeta, no hay problema.
+
+31
+00:01:18.940 --> 00:01:22.015
+En tu carpeta personal, crea proyectos, dentro de ella mi primer
+
+32
+00:01:22.040 --> 00:01:24.660
+proyecto, y un AGENTS MD vacío.
+
+33
+00:01:25.080 --> 00:01:26.295
+¿Qué va en este archivo?
+
+34
+00:01:26.320 --> 00:01:27.355
+Cuatro temas.
+
+35
+00:01:27.380 --> 00:01:30.395
+Por dónde empezar a leer, cómo comprobar el resultado, qué no
+
+36
+00:01:30.420 --> 00:01:31.980
+hacer y el formato de la entrega.
+
+37
+00:01:32.500 --> 00:01:34.915
+La historia de la escuela y los motivos de cada decisión
+
+38
+00:01:34.940 --> 00:01:36.120
+quedan fuera.
+
+39
+00:01:36.340 --> 00:01:38.195
+Un archivo corto se lee entero.
+
+40
+00:01:38.220 --> 00:01:40.975
+Un archivo largo esconde la regla que importa en medio de
+
+41
+00:01:41.000 --> 00:01:41.460
+párrafos.
+
+42
+00:01:42.080 --> 00:01:46.055
+Denise abrió el Agents, MD, que había escrito para el proyecto
+
+43
+00:01:46.080 --> 00:01:46.680
+de las actas.
+
+44
+00:01:47.260 --> 00:01:49.908
+Eran dos párrafos sobre la fundación de la escuela y una
+
+45
+00:01:49.933 --> 00:01:51.508
+sola regla de trabajo.
+
+46
+00:01:51.533 --> 00:01:54.168
+Borró los párrafos y se quedó con frases así.
+
+47
+00:01:54.193 --> 00:01:56.128
+Lee el Readme antes de modificar.
+
+48
+00:01:56.153 --> 00:01:58.488
+Usa solo las carpetas entradas y saidas.
+
+49
+00:01:58.513 --> 00:02:00.988
+Informa qué cambiaste y cómo lo comprobaste.
+
+50
+00:02:01.013 --> 00:02:03.268
+Esas frases cambian lo que hace el agente.
+
+51
+00:02:03.293 --> 00:02:06.008
+Los párrafos sobre la fundación solo ocupaban espacio.
+
+52
+00:02:06.033 --> 00:02:07.873
+Ahora, la prueba de la placa.
+
+53
+00:02:07.993 --> 00:02:10.908
+Usa gafas de protección antes del experimento, se puede comprobar
+
+54
+00:02:10.933 --> 00:02:11.813
+mirando.
+
+55
+00:02:11.933 --> 00:02:13.248
+Ten cuidado, no.
+
+56
+00:02:13.273 --> 00:02:16.053
+En el Agents, MD pasa lo mismo.
+
+57
+00:02:16.113 --> 00:02:18.888
+Una buena regla pide una acción y deja una evidencia que
+
+58
+00:02:18.913 --> 00:02:19.673
+ves en la entrega.
+
+59
+00:02:20.393 --> 00:02:23.588
+Lucia cambió C excelente por compara el total del informe con
+
+60
+00:02:23.613 --> 00:02:25.793
+la planilla e indica la diferencia.
+
+61
+00:02:25.973 --> 00:02:28.468
+En la entrega siguiente, el agente escribió la suma y la
+
+62
+00:02:28.493 --> 00:02:30.993
+diferencia, y ella lo comprobó en un minuto.
+
+63
+00:02:31.513 --> 00:02:34.093
+Empieza con cinco reglas, como las de la pantalla.
+
+64
+00:02:34.153 --> 00:02:36.428
+Si te trabas, usa la frase de prueba.
+
+65
+00:02:36.453 --> 00:02:39.048
+Voy a saber que se cumplió porque en la entrega aparece
+
+66
+00:02:39.073 --> 00:02:39.993
+tal cosa.
+
+67
+00:02:40.253 --> 00:02:41.173
+Tu práctica.
+
+68
+00:02:41.333 --> 00:02:42.213
+Pausa el video.
+
+69
+00:02:42.313 --> 00:02:42.913
+Abre el Agents.
+
+70
+00:02:43.533 --> 00:02:45.388
+MD de la carpeta de práctica.
+
+71
+00:02:45.413 --> 00:02:48.168
+Y escribe el propósito y cinco reglas, cada una con su
+
+72
+00:02:48.193 --> 00:02:49.373
+evidencia al lado.
+
+73
+00:02:49.453 --> 00:02:50.668
+Toma unos 10 minutos.
+
+74
+00:02:50.693 --> 00:02:53.233
+Las reglas de la lección anterior valen solo en esa carpeta.
+
+75
+00:02:53.713 --> 00:02:55.073
+¿Y las que quieres en todos los proyectos?
+
+76
+00:02:55.473 --> 00:02:55.568
+Piensa en la escuela.
+
+77
+00:02:55.593 --> 00:02:58.528
+El reglamento vale en todo el edificio.
+
+78
+00:02:58.553 --> 00:03:00.893
+Y lo acordado con el grupo vale en el aula.
+
+79
+00:03:01.213 --> 00:03:03.573
+Con el Agents, MD es igual.
+
+80
+00:03:03.613 --> 00:03:07.328
+Por defecto, el global queda en una carpeta oculta llamada .codex
+
+81
+00:03:07.353 --> 00:03:09.453
+dentro de tu carpeta personal.
+
+82
+00:03:09.533 --> 00:03:12.073
+El del proyecto queda en la carpeta del proyecto.
+
+83
+00:03:12.393 --> 00:03:14.948
+En la terminal, el signo tilde es el atajo a tu
+
+84
+00:03:14.973 --> 00:03:18.528
+carpeta personal, y una carpeta cuyo nombre empieza con punto queda
+
+85
+00:03:18.553 --> 00:03:19.013
+oculta.
+
+86
+00:03:19.473 --> 00:03:22.428
+Denise quiere que la gente siempre cuente qué comprobó en cualquier
+
+87
+00:03:22.453 --> 00:03:23.333
+proyecto.
+
+88
+00:03:23.373 --> 00:03:25.053
+Esa regla fue al global.
+
+89
+00:03:25.713 --> 00:03:28.948
+En cambio, comparar el total con la planilla de asistencia solo
+
+90
+00:03:28.973 --> 00:03:30.833
+tiene sentido en el proyecto de asistencia.
+
+91
+00:03:31.393 --> 00:03:33.573
+Las dos colaboran, y el global queda pequeño.
+
+92
+00:03:33.613 --> 00:03:33.842
+Gracias.
+
+93
+00:03:33.880 --> 00:03:37.680
+Una subcarpeta puede tener su propio Agents, MD.
+
+94
+00:03:37.820 --> 00:03:40.775
+Con Codex abierto en ella, valen los dos, y la instrucción
+
+95
+00:03:40.800 --> 00:03:42.980
+más cercana prevalece en lo que trata.
+
+96
+00:03:43.120 --> 00:03:45.720
+Lo que no menciona sigue viniendo del archivo de arriba.
+
+97
+00:03:45.840 --> 00:03:48.335
+Lucia creó una subcarpeta de pruebas con la regla la clave
+
+98
+00:03:48.360 --> 00:03:50.060
+de respuestas va en un archivo aparte.
+
+99
+00:03:50.680 --> 00:03:51.555
+¿Abierto en pruebas?
+
+100
+00:03:51.580 --> 00:03:52.420
+Vale.
+
+101
+00:03:52.560 --> 00:03:53.795
+¿En las listas de ejercicios?
+
+102
+00:03:53.820 --> 00:03:54.140
+No.
+
+103
+00:03:54.920 --> 00:03:57.635
+Existe además el Agents, Override.
+
+104
+00:03:57.660 --> 00:04:01.135
+En la misma carpeta, Codex lee el Override e ignora el
+
+105
+00:04:01.160 --> 00:04:02.420
+Agents, MD.
+
+106
+00:04:03.220 --> 00:04:06.800
+Olvidado en una carpeta copiada, explica mucho comportamiento extraño.
+
+107
+00:04:06.860 --> 00:04:09.315
+Y ninguno de estos archivos supera tres cosas.
+
+108
+00:04:09.340 --> 00:04:12.715
+Las instrucciones del sistema, los permisos y tu pedido explícito
+
+109
+00:04:12.740 --> 00:04:13.900
+en la conversación.
+
+110
+00:04:13.940 --> 00:04:17.555
+El archivo de Denise dice entrega en viñetas, pero hoy ella
+
+111
+00:04:17.580 --> 00:04:18.660
+pidió un párrafo corrido.
+
+112
+00:04:19.560 --> 00:04:20.980
+Vale el pedido de hoy.
+
+113
+00:04:21.080 --> 00:04:23.260
+¿Cómo saber qué instrucciones valen en una carpeta?
+
+114
+00:04:23.820 --> 00:04:26.815
+Pídele a Codex que resuma las instrucciones que cargó y que
+
+115
+00:04:26.840 --> 00:04:28.360
+diga de qué archivo vino cada una.
+
+116
+00:04:29.040 --> 00:04:31.400
+Después, abre los archivos y compara.
+
+117
+00:04:31.440 --> 00:04:34.715
+Lucia lo hizo y apareció la regla informa que comprobaste, que
+
+118
+00:04:34.740 --> 00:04:36.340
+ella no había escrito ahí.
+
+119
+00:04:36.660 --> 00:04:39.360
+Estaba en el global, creado en marzo y olvidado.
+
+120
+00:04:39.440 --> 00:04:41.215
+Tu práctica, unos 10 minutos.
+
+121
+00:04:41.240 --> 00:04:42.200
+Pausa el video.
+
+122
+00:04:42.280 --> 00:04:45.035
+En la terminal, entra en la carpeta de práctica, ejecuta el
+
+123
+00:04:45.060 --> 00:04:49.275
+comando ls-a, que también muestra los ocultos, y anota si existe
+
+124
+00:04:49.300 --> 00:04:50.260
+un override.
+
+125
+00:04:50.400 --> 00:04:53.180
+Después ejecuta cat en el agents, md global.
+
+126
+00:04:53.880 --> 00:04:56.555
+Si dice que el archivo no existe, no tienes global.
+
+127
+00:04:56.580 --> 00:04:57.020
+Y está bien.
+
+128
+00:04:57.700 --> 00:05:01.195
+Por último, abre Codex Pide el resumen diciendo No modifiques nada
+
+129
+00:05:01.220 --> 00:05:04.475
+Y compara cada regla con su archivo de origen La regla
+
+130
+00:05:04.500 --> 00:05:08.335
+dice qué respetar ¿Y el procedimiento que repites cada semana, paso
+
+131
+00:05:08.360 --> 00:05:09.040
+a paso?
+
+132
+00:05:09.440 --> 00:05:12.495
+Volvamos al laboratorio La placa de la puerta vale todos los
+
+133
+00:05:12.520 --> 00:05:15.655
+días El guión del experimento sale del fichero solo el día
+
+134
+00:05:15.680 --> 00:05:20.835
+de ese experimento El Agents, MD, es la placa La Skill
+
+135
+00:05:20.860 --> 00:05:23.975
+es el guión Una Skill reúne las instrucciones de una actividad
+
+136
+00:05:24.000 --> 00:05:26.615
+que se repite y el agente la activa cuando la tarea
+
+137
+00:05:26.640 --> 00:05:30.014
+lo pide Cada viernes, Lucia le explicaba a la gente cómo
+
+138
+00:05:30.039 --> 00:05:33.134
+armar la lista semanal de ejercicios, leer la clase de la
+
+139
+00:05:33.159 --> 00:05:37.339
+semana, elegir cinco preguntas, separar la clave de respuestas.
+
+140
+00:05:37.479 --> 00:05:40.334
+Ese paso a paso se convirtió en una skill, y el
+
+141
+00:05:40.359 --> 00:05:42.919
+Agents, MD, siguió con las cinco reglas.
+
+142
+00:05:43.619 --> 00:05:45.894
+Los dos están bien, cada uno en su papel.
+
+143
+00:05:45.919 --> 00:05:48.894
+Separar evita cargar el manual entero en cada tarea.
+
+144
+00:05:48.919 --> 00:05:51.574
+La skill vive en una carpeta con su nombre, en un
+
+145
+00:05:51.599 --> 00:05:54.894
+archivo llamado skill, MD.
+
+146
+00:05:54.919 --> 00:05:58.614
+Arriba, entre dos líneas de tres guiones, van el nombre y
+
+147
+00:05:58.639 --> 00:05:59.714
+la descripción.
+
+148
+00:05:59.739 --> 00:06:01.974
+Ese bloque es el encabezado.
+
+149
+00:06:01.999 --> 00:06:06.274
+Después viene el procedimiento, qué entra, los pasos, qué sale y
+
+150
+00:06:06.299 --> 00:06:07.099
+cómo comprobarlo.
+
+151
+00:06:07.919 --> 00:06:10.714
+La descripción es la parte más importante, porque es lo que
+
+152
+00:06:10.739 --> 00:06:13.594
+la gente lee para decidir si activa la skill.
+
+153
+00:06:13.619 --> 00:06:17.074
+Tiene que decir en qué situación usarla y dónde termina.
+
+154
+00:06:17.099 --> 00:06:19.614
+La primera descripción de la skill de informes de Denise era
+
+155
+00:06:19.639 --> 00:06:21.294
+ayuda con informes.
+
+156
+00:06:21.319 --> 00:06:23.514
+El agente activó la skill hasta en un pedido de acta
+
+157
+00:06:23.539 --> 00:06:24.474
+de reunión.
+
+158
+00:06:24.499 --> 00:06:26.014
+Ella la reescribió.
+
+159
+00:06:26.039 --> 00:06:28.954
+Generar un borrador del informe semanal cuando el usuario entregue
+
+160
+00:06:28.979 --> 00:06:32.254
+un CSV de ventas y no usarla para enviar informes ni
+
+161
+00:06:32.279 --> 00:06:36.014
+manejar credenciales, que son contraseñas y claves de acceso.
+
+162
+00:06:36.039 --> 00:06:37.254
+¿Dónde guardarla?
+
+163
+00:06:37.279 --> 00:06:41.434
+La skill del proyecto va en .agents barra skills dentro de la
+
+164
+00:06:41.459 --> 00:06:42.774
+carpeta del proyecto.
+
+165
+00:06:42.799 --> 00:06:45.814
+La skill personal, la que quieres en todos los proyectos va
+
+166
+00:06:45.839 --> 00:06:48.854
+en esa misma carpeta, pero dentro de tu carpeta personal.
+
+167
+00:06:48.879 --> 00:06:52.134
+La carpeta .codex es de Codex, con la configuración y el
+
+168
+00:06:52.159 --> 00:06:52.954
+global.
+
+169
+00:06:52.979 --> 00:06:54.454
+Las skills no van ahí.
+
+170
+00:06:54.479 --> 00:06:56.774
+Denise guardó la skill de las actas en el proyecto de
+
+171
+00:06:56.799 --> 00:07:00.034
+las actas y la de revisar ortografía, que usa para todo,
+
+172
+00:07:00.059 --> 00:07:01.294
+en su carpeta personal.
+
+173
+00:07:01.319 --> 00:07:04.834
+Tu práctica, unos 10 minutos, pausa el video, copia el molde
+
+174
+00:07:04.859 --> 00:07:09.114
+de la lección y guárdalo como skillmd en la carpeta de
+
+175
+00:07:09.139 --> 00:07:11.714
+práctica, con el tipo todos los archivos.
+
+176
+00:07:11.739 --> 00:07:16.074
+En la terminal, crea la carpeta Relatorio Semanal con mecadir-p, mueve
+
+177
+00:07:16.099 --> 00:07:20.294
+el archivo adentro con mv y ejecuta head-4, listo cuando aparezcan
+
+178
+00:07:20.319 --> 00:07:21.699
+las cuatro líneas del encabezado.
+
+179
+00:07:22.320 --> 00:07:24.640
+La skill no recuerda lo que acordaste ayer.
+
+180
+00:07:24.720 --> 00:07:27.620
+Entonces, ¿dónde guardar lo que tiene que seguir valiendo?
+
+181
+00:07:27.800 --> 00:07:29.320
+Primero, una aclaración.
+
+182
+00:07:29.360 --> 00:07:31.635
+El modelo no cambia porque hablaste con él.
+
+183
+00:07:31.660 --> 00:07:34.095
+La memoria operativa de este curso es un conjunto de archivos
+
+184
+00:07:34.120 --> 00:07:37.380
+que el agente lee cuando tú se lo indicas.
+
+185
+00:07:37.520 --> 00:07:39.100
+Funciona con dos condiciones.
+
+186
+00:07:39.160 --> 00:07:41.895
+El agente lee la parte que importa y alguien mantiene el
+
+187
+00:07:41.920 --> 00:07:43.040
+archivo al día.
+
+188
+00:07:43.080 --> 00:07:46.515
+En el módulo 4, Denise creó la carpeta Config al lado
+
+189
+00:07:46.540 --> 00:07:47.820
+de los proyectos.
+
+190
+00:07:47.860 --> 00:07:52.035
+Ahí están, memoria, con hechos estables y preferencias, Decisoes,
+
+191
+00:07:52.060 --> 00:07:55.455
+con las decisiones tomadas y el motivo Y Fallas, con las
+
+192
+00:07:55.480 --> 00:07:57.495
+causas de las fallas, que es el tema de la próxima
+
+193
+00:07:57.520 --> 00:08:00.795
+lección Si no hiciste esa parte, crea la carpeta config dentro
+
+194
+00:08:00.820 --> 00:08:04.735
+de Proyectos y, en ella, un archivo memoria MD, que va
+
+195
+00:08:04.760 --> 00:08:08.435
+a la memoria Tres cosas, hechos estables, decisiones y causas de
+
+196
+00:08:08.460 --> 00:08:12.835
+fallas Cada frase de cada conversación, no Copiar todo el historial
+
+197
+00:08:12.860 --> 00:08:15.715
+aumenta el volumen y puede traer de vuelta una instrucción vieja
+
+198
+00:08:15.740 --> 00:08:19.535
+Y nadie puede revisar un archivo inmenso Mira el caso de
+
+199
+00:08:19.560 --> 00:08:23.335
+Lucia Tenía 200 líneas de conversación, de marzo a septiembre, y
+
+200
+00:08:23.360 --> 00:08:25.795
+en medio una frase que pedía el modelo viejo de lista
+
+201
+00:08:25.820 --> 00:08:27.440
+que ya había cambiado.
+
+202
+00:08:27.520 --> 00:08:30.715
+Cambió todo por tres líneas, la fecha de revisión, materiales de
+
+203
+00:08:30.740 --> 00:08:34.315
+octavo año con lenguaje accesible y ejemplos ficticios, y lista semanal
+
+204
+00:08:34.340 --> 00:08:36.760
+con cinco preguntas y clave de respuestas aparte.
+
+205
+00:08:37.240 --> 00:08:40.340
+De 200 líneas a tres, y ninguna instrucción vencida.
+
+206
+00:08:40.440 --> 00:08:43.155
+En la tarea siguiente, indicó ese archivo en lugar de repetir
+
+207
+00:08:43.180 --> 00:08:44.200
+la conversación.
+
+208
+00:08:44.700 --> 00:08:46.895
+Que el archivo exista en la carpeta no garantiza que la
+
+209
+00:08:46.920 --> 00:08:47.915
+gente lo lea.
+
+210
+00:08:47.940 --> 00:08:50.655
+di en el pedido qué archivo consultar y pídele que cite
+
+211
+00:08:50.680 --> 00:08:52.055
+el hecho que usó.
+
+212
+00:08:52.080 --> 00:08:54.395
+Denise pidió un aviso de tres líneas sobre la reunión de
+
+213
+00:08:54.420 --> 00:08:56.235
+padres indicando la memoria.
+
+214
+00:08:56.260 --> 00:08:59.195
+La respuesta terminó con el hecho usado, avisos a las familias
+
+215
+00:08:59.220 --> 00:09:01.655
+de hasta tres líneas y sin siglas.
+
+216
+00:09:01.680 --> 00:09:04.455
+Ella lo comprobó en el archivo y los hechos estables también
+
+217
+00:09:04.480 --> 00:09:05.515
+cambian.
+
+218
+00:09:05.540 --> 00:09:08.112
+Marca arriba la fecha de revisión y anota la fuente de
+
+219
+00:09:08.137 --> 00:09:09.097
+cada hecho.
+
+220
+00:09:09.237 --> 00:09:12.712
+En septiembre, Denise borró los avisos van impresos en la mochila,
+
+221
+00:09:12.737 --> 00:09:14.577
+porque la escuela empezó a usar la aplicación.
+
+222
+00:09:15.117 --> 00:09:15.997
+Tu práctica.
+
+223
+00:09:16.037 --> 00:09:16.657
+Pausa.
+
+224
+00:09:16.777 --> 00:09:19.492
+Escribe la fecha y tres hechos con su fuente, sin nombres
+
+225
+00:09:19.517 --> 00:09:21.237
+de alumnos ni contraseñas.
+
+226
+00:09:21.357 --> 00:09:24.452
+Después, en Codex o en tu chat, pide una tarea corta
+
+227
+00:09:24.477 --> 00:09:27.277
+indicando el archivo y comprueba el hecho citado.
+
+228
+00:09:27.317 --> 00:09:29.877
+Cuando algo sale mal, ¿qué va al registro?
+
+229
+00:09:30.057 --> 00:09:31.797
+Empieza separando dos cosas.
+
+230
+00:09:31.917 --> 00:09:35.057
+El informe salió vacío es el síntoma, lo que viste.
+
+231
+00:09:35.157 --> 00:09:38.032
+La causa es el motivo que observaste, como que la planilla
+
+232
+00:09:38.057 --> 00:09:39.497
+no tenía registros.
+
+233
+00:09:39.617 --> 00:09:42.517
+Fíjate, observaste, no supusiste.
+
+234
+00:09:42.737 --> 00:09:45.292
+En el proyecto de práctica, Lucia vio que el informe salió
+
+235
+00:09:45.317 --> 00:09:46.197
+vacío.
+
+236
+00:09:46.397 --> 00:09:49.192
+Antes de tocar nada, anotó el síntoma y abrió la planilla
+
+237
+00:09:49.157 --> 00:09:51.197
+No tenía ningún registro.
+
+238
+00:09:51.837 --> 00:09:54.532
+Después del síntoma y la causa, vienen dos columnas más.
+
+239
+00:09:54.557 --> 00:09:57.152
+La menor corrección, que aquí es comprobar la cantidad de filas
+
+240
+00:09:57.177 --> 00:10:00.632
+antes de generar, y la verificación, que dice cómo saber que
+
+241
+00:10:00.657 --> 00:10:02.032
+la corrección funciona.
+
+242
+00:10:02.057 --> 00:10:05.077
+Una planilla vacía genera un aviso, y no un informe.
+
+243
+00:10:05.717 --> 00:10:08.652
+Todo en una sola fila de tabla, en el archivo fallas,
+
+244
+00:10:08.677 --> 00:10:10.297
+con la fecha y el tipo.
+
+245
+00:10:10.477 --> 00:10:11.437
+¿Y de qué tipo es la falla?
+
+246
+00:10:11.937 --> 00:10:15.072
+Una falla de pedido es cuando el objetivo era ambiguo o
+
+247
+00:10:15.097 --> 00:10:16.317
+faltó información.
+
+248
+00:10:16.457 --> 00:10:19.332
+Una falla de infraestructura es cuando el texto estaba bien, pero
+
+249
+00:10:19.357 --> 00:10:21.992
+falló algo fuera de él, como un archivo ausente o un
+
+250
+00:10:22.017 --> 00:10:23.277
+proceso que se detuvo.
+
+251
+00:10:23.757 --> 00:10:26.097
+Denise tuvo una de cada tipo en la misma semana.
+
+252
+00:10:26.137 --> 00:10:28.692
+El resumen de las actas salió con dos páginas, porque el
+
+253
+00:10:28.717 --> 00:10:30.417
+pedido no decía el tamaño.
+
+254
+00:10:30.517 --> 00:10:32.997
+La corrección fue en el texto, hasta 10 líneas.
+
+255
+00:10:33.577 --> 00:10:36.432
+En cambio, el informe de asistencia no salió porque la planilla
+
+256
+00:10:36.457 --> 00:10:37.557
+no estaba en la carpeta.
+
+257
+00:10:38.437 --> 00:10:41.812
+La corrección fue una verificación, comprobar que el archivo existe
+
+258
+00:10:41.837 --> 00:10:43.237
+antes de empezar.
+
+259
+00:10:43.277 --> 00:10:44.977
+Si tienes dudas, pregúntate.
+
+260
+00:10:45.157 --> 00:10:47.717
+Si lo hubiera escrito mejor, ¿habría funcionado?
+
+261
+00:10:48.037 --> 00:10:48.712
+Si sí, fue de pedido.
+
+262
+00:10:48.737 --> 00:10:51.672
+Si fueron las dos, marca las dos.
+
+263
+00:10:51.697 --> 00:10:54.415
+Y prefiere la menor corrección a la reconstrucción.
+
+264
+00:10:54.720 --> 00:10:57.815
+Ante el informe vacío, Lucia pensó en cambiar de modelo.
+
+265
+00:10:57.840 --> 00:11:00.755
+Serían dos horas, y la planilla vacía seguiría rompiendo el próximo
+
+266
+00:11:00.780 --> 00:11:01.475
+informe.
+
+267
+00:11:01.500 --> 00:11:02.875
+Bastó una línea nueva.
+
+268
+00:11:02.900 --> 00:11:06.735
+Y esa línea va al Agents, MD, o a la Skill,
+
+269
+00:11:06.760 --> 00:11:08.820
+que el agente lee en cada tarea.
+
+270
+00:11:09.060 --> 00:11:11.180
+Denise escribió en el de asistencia.
+
+271
+00:11:11.260 --> 00:11:13.420
+Antes de leer, comprueba que la planilla exista.
+
+272
+00:11:13.800 --> 00:11:16.480
+Si falta, detente y di qué archivo falta.
+
+273
+00:11:16.560 --> 00:11:19.720
+A la semana siguiente, el agente se detuvo y avisó.
+
+274
+00:11:19.760 --> 00:11:21.840
+Tu práctica, unos 12 minutos.
+
+275
+00:11:21.880 --> 00:11:22.455
+Pausa.
+
+276
+00:11:22.480 --> 00:11:25.495
+En la terminal, lista la carpeta entradas y busca un archivo
+
+277
+00:11:25.520 --> 00:11:27.020
+de octubre que no existe.
+
+278
+00:11:27.240 --> 00:11:29.155
+Registra esa falla ficticia en fallas.
+
+279
+00:11:29.180 --> 00:11:30.595
+Pega la regla en el agents.
+
+280
+00:11:30.620 --> 00:11:33.060
+MD, abre codecs y pide el informe de octubre.
+
+281
+00:11:33.680 --> 00:11:34.675
+Comprueba que se detiene.
+
+282
+00:11:34.700 --> 00:11:36.975
+Dice qué archivo falta y no inventa números.
+
+283
+00:11:37.000 --> 00:11:38.320
+La skill funcionó una vez.
+
+284
+00:11:38.560 --> 00:11:39.515
+¿Funciona siempre?
+
+285
+00:11:39.540 --> 00:11:42.060
+Para saberlo, la vas a probar con tres casos.
+
+286
+00:11:42.480 --> 00:11:45.415
+Y antes de ejecutarla, escribes en una ficha de verificación qué
+
+287
+00:11:45.440 --> 00:11:46.940
+debe producir cada caso.
+
+288
+00:11:47.100 --> 00:11:49.395
+Así comparas con una referencia, y no con la impresión del
+
+289
+00:11:49.420 --> 00:11:50.140
+momento.
+
+290
+00:11:50.360 --> 00:11:52.700
+Denise armó la ficha como arma la guía del simulacro.
+
+291
+00:11:52.780 --> 00:11:54.740
+Primero lo que debe pasar, después el ensayo.
+
+292
+00:11:55.300 --> 00:11:59.035
+En el caso normal, la planilla tiene cuaderno a 35,50, pluma
+
+293
+00:11:59.060 --> 00:12:02.935
+a 9,50 y agenda a 55, y el total esperado es
+
+294
+00:12:02.960 --> 00:12:03.635
+100.
+
+295
+00:12:03.660 --> 00:12:06.295
+En el incompleto, la pluma no tiene valor, así que lo
+
+296
+00:12:06.320 --> 00:12:09.435
+esperado es el total conocido de 90 con 50 y la
+
+297
+00:12:09.460 --> 00:12:10.660
+pendiente de la pluma.
+
+298
+00:12:10.840 --> 00:12:13.455
+En el fuera de lo acordado, el pedido es genera y
+
+299
+00:12:13.480 --> 00:12:16.175
+envía a la dirección, y lo esperado es solo el borrador,
+
+300
+00:12:16.200 --> 00:12:16.640
+sin envío.
+
+301
+00:12:17.060 --> 00:12:19.895
+En el caso incompleto, el resultado correcto no inventa el valor
+
+302
+00:12:19.920 --> 00:12:20.820
+que falta.
+
+303
+00:12:20.900 --> 00:12:23.095
+Muestra el total de lo que se sabe y deja la
+
+304
+00:12:23.120 --> 00:12:24.360
+pendiente a la vista.
+
+305
+00:12:24.420 --> 00:12:26.635
+A la primera versión de la skill de Lucia, le faltaba
+
+306
+00:12:26.660 --> 00:12:29.655
+la regla no inventar ausencias, y el agente respondió con un
+
+307
+00:12:29.680 --> 00:12:32.280
+total de 100, como si la pluma tuviera valor.
+
+308
+00:12:32.780 --> 00:12:35.515
+Fue la prueba la que lo mostró Después de la corrección,
+
+309
+00:12:35.540 --> 00:12:38.115
+la respuesta trajo la fuente El borrador en la carpeta CIDAS
+
+310
+00:12:38.140 --> 00:12:41.635
+El total conocido de 90 con 50 Y la pendiente de
+
+311
+00:12:41.660 --> 00:12:42.999
+la pluma, sin completar.
+
+312
+00:12:43.024 --> 00:12:46.479
+En el tercer caso, Denise pidió a propósito enviar el informe
+
+313
+00:12:46.504 --> 00:12:47.379
+a la dirección.
+
+314
+00:12:47.404 --> 00:12:50.139
+Codex ni siquiera puede mandar correos ahí.
+
+315
+00:12:50.164 --> 00:12:53.459
+La prueba verifica si respeta el límite, hizo el borrador, comprobó
+
+316
+00:12:53.484 --> 00:12:55.899
+el total y dijo que no lo envió, porque la skill
+
+317
+00:12:55.924 --> 00:12:58.379
+se detiene antes de enviar o publicar.
+
+318
+00:12:58.404 --> 00:13:00.839
+Buscar el nombre de la skill en la respuesta no es
+
+319
+00:13:00.864 --> 00:13:01.744
+una prueba.
+
+320
+00:13:01.884 --> 00:13:05.439
+Probar es responder tres preguntas, mirando la respuesta y el archivo
+
+321
+00:13:05.464 --> 00:13:07.279
+del informe en la carpeta CIDAS.
+
+322
+00:13:07.304 --> 00:13:09.239
+¿El total es igual a la suma?
+
+323
+00:13:09.264 --> 00:13:11.759
+¿La pendiente está a la vista, sin números inventados?
+
+324
+00:13:11.784 --> 00:13:14.239
+¿Se detuvo antes de enviar?
+
+325
+00:13:14.264 --> 00:13:17.199
+Si un caso falla, agrega a la skill la regla más
+
+326
+00:13:17.224 --> 00:13:20.259
+pequeña que corrige esa falla y ejecútalo de nuevo.
+
+327
+00:13:20.284 --> 00:13:21.899
+Lucia no reescribió la skill.
+
+328
+00:13:21.924 --> 00:13:24.779
+Agregó una línea, el valor vacío se vuelve pendiente.
+
+329
+00:13:24.804 --> 00:13:25.759
+Nunca lo completes.
+
+330
+00:13:25.784 --> 00:13:26.964
+Y los tres casos pasaron.
+
+331
+00:13:27.724 --> 00:13:30.839
+Tu práctica, unos 12 minutos, pausa el video.
+
+332
+00:13:30.864 --> 00:13:34.119
+Crea las dos planillas ficticias con los comandos de la lección.
+
+333
+00:13:34.144 --> 00:13:37.699
+Para cada caso, abre Codex, envía el pedido, sal y lee
+
+334
+00:13:37.724 --> 00:13:38.699
+el informe.
+
+335
+00:13:38.724 --> 00:13:40.959
+Anota en la ficha pasó o falló.
+
+336
+00:13:40.984 --> 00:13:43.899
+Si uno falla, agrega solo la regla más pequeña.
+
+337
+00:13:43.924 --> 00:13:45.279
+Juntemos todo.
+
+338
+00:13:45.304 --> 00:13:48.719
+Escribes instrucciones que se pueden comprobar en la entrega, con
+
+339
+00:13:48.744 --> 00:13:51.799
+acción y evidencia, y quitas del archivo lo que no cambia
+
+340
+00:13:51.824 --> 00:13:52.719
+el trabajo.
+
+341
+00:13:52.744 --> 00:13:55.579
+Dejas el global pequeño y los detalles en el proyecto, sabiendo
+
+342
+00:13:55.604 --> 00:13:57.939
+que el archivo más cercano decide ahí y que tu pedido
+
+343
+00:13:57.964 --> 00:13:59.579
+explícito vale más.
+
+344
+00:13:59.604 --> 00:14:02.179
+Conviertes el paso a paso que se repite en una skill
+
+345
+00:14:02.204 --> 00:14:05.659
+con una descripción que dice cuándo usarla y cuándo no.
+
+346
+00:14:05.684 --> 00:14:08.539
+Guardas en la memoria sólo lo que sigue valiendo, con fecha
+
+347
+00:14:08.564 --> 00:14:11.759
+y fuente, e indicas el archivo en el pedido.
+
+348
+00:14:11.784 --> 00:14:14.584
+Registras las fallas como protecciones pequeñas, donde la próxima
+
+349
+00:14:14.624 --> 00:14:18.439
+ejecución las lee, y pruebas la skill con tres casos antes
+
+350
+00:14:18.464 --> 00:14:19.679
+de confiar.
+
+351
+00:14:19.704 --> 00:14:22.879
+Cuando tengas unos 30 minutos, haz el laboratorio del módulo en
+
+352
+00:14:22.904 --> 00:14:25.259
+el material complementario de la lección 30.
+
+353
+00:14:25.284 --> 00:14:29.024
+En del módulo 6, Git y GitHub sin perder trabajo.
+
+354
+00:14:29.064 --> 00:14:29.915
+Nos vemos allí.

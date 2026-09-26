@@ -1,0 +1,1457 @@
+WEBVTT
+
+1
+00:00:00.300 --> 00:00:04.035
+Hi, I'm Neymar O'Donnor, and this is Module 3 of OS
+
+2
+00:00:04.060 --> 00:00:04.720
+Work.
+
+3
+00:00:04.820 --> 00:00:09.075
+In Module 2, you saw chat, work, and desktop, three ways
+
+4
+00:00:09.100 --> 00:00:10.460
+to work with AI.
+
+5
+00:00:10.560 --> 00:00:13.735
+Now, the AI starts working in a folder on your computer
+
+6
+00:00:13.760 --> 00:00:15.260
+through the terminal.
+
+7
+00:00:15.420 --> 00:00:19.135
+It may sound like something for programmers, but we'll go slowly,
+
+8
+00:00:19.160 --> 00:00:20.500
+one command at a time.
+
+9
+00:00:21.060 --> 00:00:23.655
+By the end of the module, you'll open the terminal and
+
+10
+00:00:23.680 --> 00:00:27.595
+know where you are, install codecs from the official source, sign
+
+11
+00:00:27.620 --> 00:00:31.715
+in with your account without leaving any password in sight, open
+
+12
+00:00:31.740 --> 00:00:35.175
+the agent in the right folder, ask first for a reading
+
+13
+00:00:35.200 --> 00:00:39.315
+and then for a small change and check what changed.
+
+14
+00:00:39.340 --> 00:00:42.215
+Denise and Lucia are still with us.
+
+15
+00:00:42.240 --> 00:00:45.555
+Each lesson has a hands-on practice on the computer with training
+
+16
+00:00:45.580 --> 00:00:46.155
+files.
+
+17
+00:00:46.180 --> 00:00:49.615
+When I ask, pause the video and do it right then.
+
+18
+00:00:49.640 --> 00:00:52.015
+From now on the AI works in a folder on your
+
+19
+00:00:52.040 --> 00:00:52.815
+computer.
+
+20
+00:00:52.840 --> 00:00:55.395
+And if you don't know which folder you are in, it
+
+21
+00:00:55.420 --> 00:00:56.475
+doesn't know either.
+
+22
+00:00:56.500 --> 00:00:59.515
+Many errors that look like AI failures are just the wrong
+
+23
+00:00:59.540 --> 00:01:00.235
+folder.
+
+24
+00:01:00.260 --> 00:01:02.882
+The terminal is a window where you type a command and
+
+25
+00:01:02.907 --> 00:01:05.322
+read the answer and it already comes with your computer.
+
+26
+00:01:05.347 --> 00:01:09.562
+On the Mac, Lucia pressed C minor and space, typed terminal
+
+27
+00:01:09.587 --> 00:01:10.907
+and hit enter.
+
+28
+00:01:11.027 --> 00:01:12.142
+It took 10 seconds.
+
+29
+00:01:12.167 --> 00:01:16.102
+On Linux, just look for terminal in your list of apps.
+
+30
+00:01:16.127 --> 00:01:19.462
+The commands in this course are written in Bash, the language
+
+31
+00:01:19.487 --> 00:01:22.342
+of the terminal on Linux and MacOS.
+
+32
+00:01:22.367 --> 00:01:26.262
+On Windows, they work inside WSL, which comes from Microsoft itself
+
+33
+00:01:26.287 --> 00:01:27.402
+and opens as Ubuntu.
+
+34
+00:01:27.427 --> 00:01:31.162
+The terminal that comes with Windows uses a different language, so
+
+35
+00:01:31.187 --> 00:01:34.287
+don't paste the course commands into it without adapting them.
+
+36
+00:01:34.667 --> 00:01:37.827
+A school computer with no administrator password?
+
+37
+00:01:37.907 --> 00:01:40.522
+Don't force it, ask whoever manages it.
+
+38
+00:01:40.547 --> 00:01:43.982
+When it opens, the terminal shows a short line ending in
+
+39
+00:01:44.007 --> 00:01:45.227
+a dollar sign.
+
+40
+00:01:45.507 --> 00:01:49.442
+Or on the Mac, a percent sign, with the cursor blinking.
+
+41
+00:01:49.467 --> 00:01:51.487
+That's the computer waiting for you.
+
+42
+00:01:51.927 --> 00:01:54.942
+Denise opened the terminal for the first time and waited for
+
+43
+00:01:54.967 --> 00:01:55.782
+something to happen.
+
+44
+00:01:55.807 --> 00:01:57.502
+Nothing happened.
+
+45
+00:01:57.527 --> 00:01:59.062
+Because it was waiting for her.
+
+46
+00:01:59.087 --> 00:02:02.528
+You type the command, press enter, the answer shows up below,
+
+47
+00:02:02.553 --> 00:02:04.588
+and the dollar sign comes back.
+
+48
+00:02:04.613 --> 00:02:06.608
+It's always that back and forth.
+
+49
+00:02:06.633 --> 00:02:07.888
+The first command is parties.
+
+50
+00:02:07.913 --> 00:02:11.868
+You know this cool map with the you are here sticker?
+
+51
+00:02:11.893 --> 00:02:13.468
+Pound plays that role.
+
+52
+00:02:13.493 --> 00:02:15.948
+It answers with the full path of the folder you are
+
+53
+00:02:15.973 --> 00:02:16.428
+in.
+
+54
+00:02:16.453 --> 00:02:17.948
+Read it like an address.
+
+55
+00:02:17.973 --> 00:02:19.908
+Each slash separates a folder.
+
+56
+00:02:19.933 --> 00:02:21.953
+And the last one is where you are.
+
+57
+00:02:22.013 --> 00:02:28.348
+Lucia typed pwd and read slash users slash Lucia, her personal
+
+58
+00:02:28.373 --> 00:02:29.193
+folder.
+
+59
+00:02:29.413 --> 00:02:31.273
+Nothing was created or deleted.
+
+60
+00:02:31.433 --> 00:02:33.893
+Once you know where you are, look at what's there.
+
+61
+00:02:33.933 --> 00:02:37.208
+The ls command lists the folders and files in the current
+
+62
+00:02:37.233 --> 00:02:38.028
+place.
+
+63
+00:02:38.053 --> 00:02:40.508
+It shows what a program will see if it starts working
+
+64
+00:02:40.533 --> 00:02:40.993
+from there.
+
+65
+00:02:42.413 --> 00:02:46.048
+Denise opened Codex in the downloads folder while testing something
+
+66
+00:02:46.073 --> 00:02:49.588
+for a colleague, and it couldn't see her project which was
+
+67
+00:02:49.613 --> 00:02:50.668
+in another folder.
+
+68
+00:02:50.693 --> 00:02:53.808
+A PWD would have shown that beforehand.
+
+69
+00:02:53.833 --> 00:02:57.448
+To change folders, there's capital, which we will leave for lesson
+
+70
+00:02:57.473 --> 00:02:58.353
+16.
+
+71
+00:02:58.833 --> 00:03:00.388
+Now pause the video.
+
+72
+00:03:00.413 --> 00:03:03.628
+Open the terminal, type pound and write down the folder you
+
+73
+00:03:03.653 --> 00:03:04.788
+get.
+
+74
+00:03:04.813 --> 00:03:07.500
+Then type ls and write down three names.
+
+75
+00:03:08.080 --> 00:03:10.555
+On the Mac, you'll see names like documents.
+
+76
+00:03:10.580 --> 00:03:13.815
+On a freshly installed Ubuntu, the list may be empty.
+
+77
+00:03:13.840 --> 00:03:14.415
+And that's normal.
+
+78
+00:03:14.440 --> 00:03:17.500
+If you see command not found, check your typing.
+
+79
+00:03:17.560 --> 00:03:19.200
+All lowercase, no space in the middle.
+
+80
+00:03:19.980 --> 00:03:21.840
+Now let's put Codex on the computer.
+
+81
+00:03:21.960 --> 00:03:24.975
+Codex is the program that will work inside the terminal, in
+
+82
+00:03:25.000 --> 00:03:26.320
+a folder of yours.
+
+83
+00:03:26.380 --> 00:03:29.900
+First, a distinction that avoids a lot of confusion.
+
+84
+00:03:30.140 --> 00:03:33.275
+Putting the program on the computer, signing in with your account,
+
+85
+00:03:33.300 --> 00:03:35.975
+and opening the program in the project folder are three different
+
+86
+00:03:36.000 --> 00:03:36.340
+steps.
+
+87
+00:03:37.080 --> 00:03:38.695
+Each with its own check.
+
+88
+00:03:38.720 --> 00:03:40.960
+This lesson does only the first one.
+
+89
+00:03:41.500 --> 00:03:44.715
+The account comes in lesson 15 and the folder in lesson
+
+90
+00:03:44.740 --> 00:03:45.140
+16.
+
+91
+00:03:46.080 --> 00:03:49.635
+Right after installing, Lucia typed codex and the program asked her
+
+92
+00:03:49.660 --> 00:03:51.120
+to sign in with her account.
+
+93
+00:03:52.560 --> 00:03:54.175
+She thought it was a bug.
+
+94
+00:03:54.200 --> 00:03:55.175
+It wasn't.
+
+95
+00:03:55.200 --> 00:03:58.280
+The first step had worked, and the second was still missing.
+
+96
+00:03:58.900 --> 00:04:01.915
+When you separate the steps, each new message stops looking like
+
+97
+00:04:01.940 --> 00:04:04.775
+an error and starts telling you where you are along the
+
+98
+00:04:04.800 --> 00:04:05.020
+way.
+
+99
+00:04:05.560 --> 00:04:09.040
+Faster commands for installing programs circulate on the internet.
+
+100
+00:04:09.360 --> 00:04:12.640
+But a command pasted without checking can run anything.
+
+101
+00:04:13.520 --> 00:04:15.960
+Think of a package that arrives at the school office.
+
+102
+00:04:16.020 --> 00:04:19.280
+Before opening it, you look at the seal and the sender.
+
+103
+00:04:19.720 --> 00:04:21.140
+A command works the same way.
+
+104
+00:04:22.340 --> 00:04:24.660
+And the sender is the address it comes from.
+
+105
+00:04:25.560 --> 00:04:29.815
+The official codex command downloads a script from the chatgpt.com
+
+106
+00:04:29.840 --> 00:04:32.260
+address and runs that script.
+
+107
+00:04:32.560 --> 00:04:35.220
+That's why the address matters so much.
+
+108
+00:04:35.340 --> 00:04:37.535
+Denise got a faster way to install codecs in a group
+
+109
+00:04:37.560 --> 00:04:38.300
+chat.
+
+110
+00:04:38.440 --> 00:04:40.815
+The address in the middle of the command had codecs in
+
+111
+00:04:40.840 --> 00:04:44.000
+its name, but it wasn't the one from the official page.
+
+112
+00:04:44.120 --> 00:04:47.195
+She didn't paste it and use the one from the page.
+
+113
+00:04:47.220 --> 00:04:49.580
+So, the rule is simple.
+
+114
+00:04:49.820 --> 00:04:52.575
+You don't paste a command from an unknown page and you
+
+115
+00:04:52.600 --> 00:04:56.255
+read the address inside the command, not just the title of
+
+116
+00:04:56.280 --> 00:04:56.755
+the message.
+
+117
+00:04:56.780 --> 00:05:01.015
+On MacOS and Linux, the command from the official page starts
+
+118
+00:05:01.040 --> 00:05:04.735
+with curl, which downloads the file from the address, and hands
+
+119
+00:05:04.760 --> 00:05:07.135
+that file to sha, which runs it.
+
+120
+00:05:07.160 --> 00:05:11.284
+On Windows with WSL, you paste the same command inside Ubuntu.
+
+121
+00:05:11.309 --> 00:05:14.144
+The installer prints a few lines and you don't need to
+
+122
+00:05:14.169 --> 00:05:17.629
+understand each one, wait for the dollar sign to come back.
+
+123
+00:05:17.789 --> 00:05:21.024
+Then ask for the version with the command codec's dash dash
+
+124
+00:05:21.049 --> 00:05:21.444
+version.
+
+125
+00:05:21.469 --> 00:05:24.984
+If you see command not found, the terminal you opened earlier
+
+126
+00:05:25.009 --> 00:05:27.049
+doesn't know about the new program yet.
+
+127
+00:05:27.169 --> 00:05:28.564
+That's what happened to Denise.
+
+128
+00:05:28.589 --> 00:05:32.124
+She closed the terminal, opened another one and the number showed
+
+129
+00:05:32.149 --> 00:05:32.689
+up.
+
+130
+00:05:32.809 --> 00:05:33.484
+Pause the video.
+
+131
+00:05:33.509 --> 00:05:36.584
+Open the official Codex page, check that the command is the
+
+132
+00:05:36.609 --> 00:05:41.764
+same, paste it, wait, reopen the terminal and write down the
+
+133
+00:05:41.789 --> 00:05:43.109
+version number.
+
+134
+00:05:43.469 --> 00:05:46.724
+If the computer belongs to the school and asks for a
+
+135
+00:05:46.749 --> 00:05:49.964
+password, stop and talk to whoever manages it.
+
+136
+00:05:49.989 --> 00:05:53.444
+Codex is on the computer, but it doesn't know who you
+
+137
+00:05:53.469 --> 00:05:53.924
+are yet.
+
+138
+00:05:53.949 --> 00:05:57.724
+At school, you swipe your badge at the turnstile and nobody
+
+139
+00:05:57.749 --> 00:05:59.069
+hears your password.
+
+140
+00:05:59.189 --> 00:06:01.729
+The Codex login works the same way.
+
+141
+00:06:01.789 --> 00:06:06.384
+You type codex login, the terminal sends you to the browser,
+
+142
+00:06:06.409 --> 00:06:09.304
+and that's where you sign in with your ChatGPT account.
+
+143
+00:06:09.329 --> 00:06:13.354
+When you finish, Codex gets the confirmation and saves the sign-in.
+
+144
+00:06:13.379 --> 00:06:16.159
+The password never goes through the terminal.
+
+145
+00:06:16.319 --> 00:06:17.954
+Lúcia did exactly that.
+
+146
+00:06:17.979 --> 00:06:22.834
+She typed codexlogin, the browser opened on the ChatGPT sign-in screen,
+
+147
+00:06:22.859 --> 00:06:25.174
+she signed in with the school account and went back to
+
+148
+00:06:25.199 --> 00:06:25.694
+the terminal.
+
+149
+00:06:25.719 --> 00:06:28.254
+One precaution before you start.
+
+150
+00:06:28.279 --> 00:06:32.979
+Which ChatGPT plans include Codex changes over time?
+
+151
+00:06:33.219 --> 00:06:35.934
+Check the official authentication page to see if your plan is
+
+152
+00:06:35.959 --> 00:06:36.114
+there.
+
+153
+00:06:36.139 --> 00:06:38.974
+The plan name appears in your account settings.
+
+154
+00:06:38.999 --> 00:06:40.714
+Being connected isn't enough.
+
+155
+00:06:40.739 --> 00:06:43.579
+What matters is which path you took.
+
+156
+00:06:43.979 --> 00:06:47.234
+Signing in with the account uses that account's plan.
+
+157
+00:06:47.259 --> 00:06:50.754
+An API key is built by usage, on a different account.
+
+158
+00:06:50.779 --> 00:06:52.534
+It's that difference from lesson 5.
+
+159
+00:06:52.559 --> 00:06:54.294
+Two accounts, two bills.
+
+160
+00:06:54.319 --> 00:06:58.979
+To find out the path, use the command codex login status.
+
+161
+00:06:59.019 --> 00:07:02.854
+With the account, the answer is logged in using chat GPT.
+
+162
+00:07:02.879 --> 00:07:06.114
+With a key, it mentions the key, but never the full
+
+163
+00:07:06.139 --> 00:07:06.874
+value.
+
+164
+00:07:06.899 --> 00:07:10.814
+Denise expected to see chat GPT and found out Codex was
+
+165
+00:07:10.839 --> 00:07:13.034
+signing in with an old-school API key.
+
+166
+00:07:13.059 --> 00:07:16.443
+She logged out with Codex Logout and signed in again with
+
+167
+00:07:16.468 --> 00:07:18.308
+Codex Login, using the account.
+
+168
+00:07:19.528 --> 00:07:23.003
+So, read that answer before asking for any long task.
+
+169
+00:07:23.028 --> 00:07:26.108
+It's what tells you which account the usage comes from.
+
+170
+00:07:26.948 --> 00:07:30.703
+If you're signing in with your ChatGPT account, you can skip
+
+171
+00:07:30.728 --> 00:07:31.683
+this part.
+
+172
+00:07:31.708 --> 00:07:34.423
+People who use the API keep the key under a name,
+
+173
+00:07:34.448 --> 00:07:39.583
+the terminal knows, OpenAI API key and the official command hands
+
+174
+00:07:39.608 --> 00:07:43.428
+that value straight to Codex without showing it on the screen.
+
+175
+00:07:43.908 --> 00:07:46.908
+The common mistake is typing the whole key into the command.
+
+176
+00:07:46.968 --> 00:07:50.228
+It stays in the history and shows up in any screenshot.
+
+177
+00:07:50.588 --> 00:07:54.048
+And a .environ file on its own doesn't connect anything.
+
+178
+00:07:54.108 --> 00:07:57.263
+When a colleague asked Lucia for the school's key, she didn't
+
+179
+00:07:57.288 --> 00:07:58.668
+send it through the group.
+
+180
+00:07:58.708 --> 00:08:00.868
+Each person signs in with their own account.
+
+181
+00:08:02.328 --> 00:08:03.368
+Pause the video.
+
+182
+00:08:03.568 --> 00:08:07.003
+Type codex login, sign in on the browser, and then run
+
+183
+00:08:07.028 --> 00:08:08.603
+codex login status.
+
+184
+00:08:08.628 --> 00:08:12.603
+On the project sheet, write a line like the NISIS, codex
+
+185
+00:08:12.628 --> 00:08:16.603
+chatgpt, checked with codex login status, make sure there's no password
+
+186
+00:08:16.628 --> 00:08:17.648
+at all on that line.
+
+187
+00:08:17.940 --> 00:08:20.980
+Codex is connected, but which folder will it work in?
+
+188
+00:08:21.060 --> 00:08:22.800
+It works in the folder where it was opened.
+
+189
+00:08:23.700 --> 00:08:26.375
+In the wrong folder, it reads what it shouldn't, and can't
+
+190
+00:08:26.400 --> 00:08:27.155
+find what it needs.
+
+191
+00:08:27.180 --> 00:08:30.015
+If you walk into the wrong room, you teach the wrong
+
+192
+00:08:30.040 --> 00:08:33.700
+class, so you go into the folder before opening the program.
+
+193
+00:08:34.020 --> 00:08:35.155
+Three commands do this.
+
+194
+00:08:35.180 --> 00:08:40.575
+markdir-p creates the folder, and the ones before it too, if
+
+195
+00:08:40.600 --> 00:08:43.080
+they're missing, capital goes into it.
+
+196
+00:08:43.600 --> 00:08:45.655
+And pwd confirms the address.
+
+197
+00:08:45.680 --> 00:08:46.115
+address.
+
+198
+00:08:46.140 --> 00:08:49.535
+The tilde sign means my personal folder, the one with your
+
+199
+00:08:49.560 --> 00:08:52.900
+name and the little house icon in the Mac Finder.
+
+200
+00:08:52.940 --> 00:08:56.715
+Denise created the training folder, meu primeiro projeto, and went
+
+201
+00:08:56.740 --> 00:08:57.595
+into it.
+
+202
+00:08:57.620 --> 00:09:01.155
+The first two comments don't answer anything when they work.
+
+203
+00:09:01.180 --> 00:09:05.555
+What confirmed the address, before she opened any program, was parties.
+
+204
+00:09:05.580 --> 00:09:08.095
+You don't need to open your entire personal folder to try
+
+205
+00:09:08.120 --> 00:09:08.755
+this out.
+
+206
+00:09:08.780 --> 00:09:12.055
+A small area with only the material for the task reduces
+
+207
+00:09:12.080 --> 00:09:15.495
+confusion, and when something goes wrong, it's clear which files could
+
+208
+00:09:15.520 --> 00:09:16.695
+have changed.
+
+209
+00:09:16.720 --> 00:09:19.915
+Lucia thought about opening codecs in her Documents folder, where
+
+210
+00:09:19.940 --> 00:09:21.775
+her classes' tests and grades are.
+
+211
+00:09:21.800 --> 00:09:26.036
+She chose the training folder instead, with a fictional agenda.
+
+212
+00:09:26.061 --> 00:09:28.376
+Nothing real was within reach.
+
+213
+00:09:28.401 --> 00:09:29.956
+Three things go inside it.
+
+214
+00:09:29.981 --> 00:09:34.556
+The readme describes the purpose of the project for whoever arrives.
+
+215
+00:09:34.581 --> 00:09:39.176
+Agents.md gives the agent its working instructions.
+
+216
+00:09:39.201 --> 00:09:42.996
+Both end in .md because they are marked down, plain text, where
+
+217
+00:09:43.021 --> 00:09:45.796
+the hash sign marks the title and the hyphen marks the
+
+218
+00:09:45.821 --> 00:09:47.096
+list item.
+
+219
+00:09:47.121 --> 00:09:49.656
+Denise put two rules in the agents.md column.
+
+220
+00:09:49.681 --> 00:09:53.181
+Work only in that folder and don't send anything.
+
+221
+00:09:54.201 --> 00:09:57.816
+And the Entradas folder holds the fictional meeting agenda.
+
+222
+00:09:57.841 --> 00:10:01.236
+Before typing codex, run pound and liverment.
+
+223
+00:10:01.261 --> 00:10:04.576
+If the address and the files match, open the program there.
+
+224
+00:10:04.601 --> 00:10:08.036
+The first time in a folder, codex asks whether you trust
+
+225
+00:10:08.061 --> 00:10:09.681
+it.
+
+226
+00:10:09.901 --> 00:10:13.456
+because there it can read, edit and run files within your
+
+227
+00:10:13.481 --> 00:10:14.621
+permissions.
+
+228
+00:10:14.721 --> 00:10:16.136
+It's your training folder.
+
+229
+00:10:16.161 --> 00:10:19.436
+Choose Trust and continue with the arrow keys and press Enter.
+
+230
+00:10:19.461 --> 00:10:22.676
+In this practice, don't use Open Restricted.
+
+231
+00:10:22.701 --> 00:10:25.496
+The wording may change a bit between versions.
+
+232
+00:10:25.521 --> 00:10:28.716
+To exit, type slash quit.
+
+233
+00:10:28.741 --> 00:10:30.356
+Now pause the video.
+
+234
+00:10:30.381 --> 00:10:34.338
+Copy the practice block from the lesson, which creates the folder
+
+235
+00:10:34.363 --> 00:10:38.723
+and the three fictional files, and paste it into the terminal.
+
+236
+00:10:38.983 --> 00:10:43.078
+Check that pwd ends in meu primeiro projeto and that ls
+
+237
+00:10:43.103 --> 00:10:48.263
+shows against .md, readme, .md and entradas.
+
+238
+00:10:48.543 --> 00:10:52.743
+Then type codex, trust the folder and exit.
+
+239
+00:10:52.783 --> 00:10:54.463
+With slash quit.
+
+240
+00:10:54.543 --> 00:10:56.383
+Without asking for anything yet.
+
+241
+00:10:56.463 --> 00:10:58.203
+Codex is in the right folder.
+
+242
+00:10:58.483 --> 00:11:00.498
+What should the first request be?
+
+243
+00:11:00.523 --> 00:11:03.538
+A request like fix up the project mix's diagnosis and change
+
+244
+00:11:03.563 --> 00:11:06.978
+and if something goes wrong, you don't know which part it
+
+245
+00:11:07.003 --> 00:11:07.743
+was.
+
+246
+00:11:07.903 --> 00:11:12.003
+No serious person starts a renovation by knocking down a wall.
+
+247
+00:11:12.303 --> 00:11:13.898
+First comes the inspection.
+
+248
+00:11:13.923 --> 00:11:15.678
+Look, take notes, understand.
+
+249
+00:11:15.703 --> 00:11:20.463
+With an agent, it's the same order, in four steps.
+
+250
+00:11:20.743 --> 00:11:24.843
+Inspect, by reading and explaining, without editing anything.
+
+251
+00:11:25.823 --> 00:11:30.183
+Plan, by saying what's missing, and that list becomes your reference.
+
+252
+00:11:30.543 --> 00:11:33.598
+Change a single file, by name, and you're the one who
+
+253
+00:11:33.623 --> 00:11:34.538
+says which.
+
+254
+00:11:34.563 --> 00:11:37.959
+And validate, you open it and check, because you have the
+
+255
+00:11:37.984 --> 00:11:38.504
+final word.
+
+256
+00:11:39.724 --> 00:11:42.904
+Denise was going to ask Codex to improve the meeting folder.
+
+257
+00:11:43.064 --> 00:11:44.764
+She switched to two requests.
+
+258
+00:11:44.844 --> 00:11:48.764
+First, read and say what's missing, then create a single file.
+
+259
+00:11:48.804 --> 00:11:55.119
+In the training folder, ask Codex to read agents.md and the
+
+260
+00:11:55.144 --> 00:11:56.584
+readme and explain the purpose.
+
+261
+00:11:57.604 --> 00:11:58.239
+Say it plainly.
+
+262
+00:11:58.264 --> 00:11:59.764
+No editing.
+
+263
+00:12:00.284 --> 00:12:02.919
+and ask it to name the files it used.
+
+264
+00:12:02.944 --> 00:12:07.299
+Lúcia made that request, and Codex's actual answer was roughly this.
+
+265
+00:12:07.324 --> 00:12:10.959
+The purpose is to prepare the agenda for a teacher's meeting.
+
+266
+00:12:10.984 --> 00:12:15.799
+What's missing is the finished agenda, the output format, and location,
+
+267
+00:12:15.824 --> 00:12:17.499
+and how to check the result.
+
+268
+00:12:17.524 --> 00:12:19.699
+And one important detail.
+
+269
+00:12:19.724 --> 00:12:23.359
+The input file exists, but I didn't read its contents.
+
+270
+00:12:23.384 --> 00:12:25.379
+Nothing was edited.
+
+271
+00:12:25.404 --> 00:12:29.259
+Now compare the list of what it used with what LIS
+
+272
+00:12:29.284 --> 00:12:30.479
+shows in the folder.
+
+273
+00:12:30.504 --> 00:12:33.819
+It didn't open the agenda, so the list of what's missing
+
+274
+00:12:33.844 --> 00:12:35.639
+comes only from the README.
+
+275
+00:12:35.664 --> 00:12:38.819
+Denise read that limit and in the second request, made it
+
+276
+00:12:38.844 --> 00:12:41.100
+clear that the plan had to be based on the agenda.
+
+277
+00:12:41.420 --> 00:12:43.340
+Now, authorize a small change.
+
+278
+00:12:43.420 --> 00:12:46.955
+Create only plano.md with three actions and a check for each
+
+279
+00:12:46.980 --> 00:12:47.180
+one.
+
+280
+00:12:48.720 --> 00:12:50.080
+Based on the agenda.
+
+281
+00:12:50.320 --> 00:12:52.955
+Codex may ask whether you want to make the edits.
+
+282
+00:12:52.980 --> 00:12:56.935
+If the change is only to plano.md, choose Yes, proceed.
+
+283
+00:12:56.960 --> 00:13:00.480
+If it's another file, choose the option that starts with No.
+
+284
+00:13:00.840 --> 00:13:04.195
+It may also create the file without asking, because the current
+
+285
+00:13:04.220 --> 00:13:06.615
+permissions let it write in the folder.
+
+286
+00:13:06.640 --> 00:13:06.875
+Check with LS.
+
+287
+00:13:06.900 --> 00:13:11.140
+The plan Lucia got covered the five items on the agenda,
+
+288
+00:13:11.400 --> 00:13:15.895
+and noted that times and dates still had to be set.
+
+289
+00:13:15.920 --> 00:13:20.340
+She checked it against reunial.txt and everything was there.
+
+290
+00:13:20.920 --> 00:13:21.935
+Pause the video.
+
+291
+00:13:21.960 --> 00:13:24.880
+Make the reading request, then the plan request.
+
+292
+00:13:24.920 --> 00:13:26.800
+Exit with slash quit.
+
+293
+00:13:27.540 --> 00:13:32.115
+Show the file with catplano.md and check one of the checks
+
+294
+00:13:32.140 --> 00:13:34.080
+directly against the agenda.
+
+295
+00:13:34.360 --> 00:13:37.260
+In the last lesson, the agent created a file.
+
+296
+00:13:37.340 --> 00:13:41.100
+What if it had created the wrong one or deleted another?
+
+297
+00:13:41.160 --> 00:13:43.555
+Whoever is going to use the lab gets the key to
+
+298
+00:13:43.580 --> 00:13:45.840
+the lab, not the whole keyring.
+
+299
+00:13:45.911 --> 00:13:47.671
+With an agent, it's the same.
+
+300
+00:13:47.731 --> 00:13:50.906
+Permissions control what it can reach in files, on the internet,
+
+301
+00:13:50.931 --> 00:13:51.871
+and in commands.
+
+302
+00:13:52.731 --> 00:13:54.791
+Go up one step at a time.
+
+303
+00:13:54.831 --> 00:13:59.086
+Reading files is low risk, writing is medium risk, and running
+
+304
+00:13:59.111 --> 00:14:00.471
+commands is high risk.
+
+305
+00:14:01.391 --> 00:14:02.811
+And notice one difference.
+
+306
+00:14:03.331 --> 00:14:07.446
+What you write in agents.md guides the agent, but it's text
+
+307
+00:14:07.471 --> 00:14:09.406
+and doesn't technically prevent anything.
+
+308
+00:14:09.431 --> 00:14:12.491
+What prevents things is the program's permissions.
+
+309
+00:14:12.751 --> 00:14:16.351
+In Codex, the slash permissions command shows and changes those permissions.
+
+310
+00:14:17.031 --> 00:14:20.591
+When Codex asked for internet access to look up some documentation,
+
+311
+00:14:20.671 --> 00:14:23.986
+Lucia evaluated just that request, without granting anything else
+
+312
+00:14:24.011 --> 00:14:24.531
+along with it.
+
+313
+00:14:25.611 --> 00:14:27.731
+Going back requires having saved before.
+
+314
+00:14:28.311 --> 00:14:33.291
+The command cp-r copies an entire folder with everything inside.
+
+315
+00:14:34.111 --> 00:14:37.766
+Make the copy before the change, with a name that says
+
+316
+00:14:37.791 --> 00:14:38.446
+what it is.
+
+317
+00:14:38.471 --> 00:14:43.186
+Before authorizing a change to agents.md, Denis copied the training
+
+318
+00:14:43.211 --> 00:14:47.426
+folder with the ending "-antes", which means before.
+
+319
+00:14:47.451 --> 00:14:50.366
+Cp doesn't answer anything when it works.
+
+320
+00:14:50.391 --> 00:14:54.256
+What confirmed it was Livermorium, with the two folders side by
+
+321
+00:14:54.241 --> 00:14:58.361
+The folder ending in antes isn't touched by the agent.
+
+322
+00:14:58.581 --> 00:15:00.261
+It's your return point.
+
+323
+00:15:00.541 --> 00:15:03.496
+Later on, in module 5, Git does this in a more
+
+324
+00:15:03.521 --> 00:15:04.721
+complete way.
+
+325
+00:15:04.981 --> 00:15:07.776
+For now, a simple copy does the job, and don't remove
+
+326
+00:15:07.801 --> 00:15:10.376
+all of the program's protections to get around an error.
+
+327
+00:15:10.401 --> 00:15:14.601
+Start with the most restrictive setting that can handle the task.
+
+328
+00:15:14.681 --> 00:15:18.636
+After the change, the command diff-r compares the copy with the
+
+329
+00:15:18.661 --> 00:15:22.021
+current folder and shows only the differences, file by file.
+
+330
+00:15:22.501 --> 00:15:25.461
+The output looks like code, but you only need two things.
+
+331
+00:15:26.281 --> 00:15:29.296
+Which files show up, and which lines start with the greater
+
+332
+00:15:29.321 --> 00:15:31.421
+than sign, which are the new ones.
+
+333
+00:15:31.661 --> 00:15:35.796
+In Lucia's diff, a single file showed up, against.md, with two
+
+334
+00:15:35.821 --> 00:15:36.321
+new lines.
+
+335
+00:15:36.941 --> 00:15:38.701
+That was exactly what she had authorized.
+
+336
+00:15:39.621 --> 00:15:42.416
+If another file shows up, the antes copy has the old
+
+337
+00:15:42.441 --> 00:15:43.961
+version for you to restore.
+
+338
+00:15:44.581 --> 00:15:47.756
+Pause the video, make the copy, open codecs in the training
+
+339
+00:15:47.781 --> 00:15:51.916
+folder, look at slash permissions without changing anything and ask
+
+340
+00:15:51.941 --> 00:15:57.427
+for two new lines in agents.md, without changing anything else.
+
+341
+00:15:57.452 --> 00:15:59.187
+Exit and run the diff.
+
+342
+00:15:59.212 --> 00:16:03.227
+You're done when only agents.md shows up, with the two new
+
+343
+00:16:03.252 --> 00:16:04.307
+lines.
+
+344
+00:16:04.332 --> 00:16:05.847
+Let's put it all together.
+
+345
+00:16:05.872 --> 00:16:09.767
+You open the terminal and ask where you are with pwd,
+
+346
+00:16:09.792 --> 00:16:11.987
+and what's there with ls.
+
+347
+00:16:12.012 --> 00:16:16.027
+You install codecs from the official source, reading the address inside
+
+348
+00:16:16.052 --> 00:16:18.572
+the command, and check it with the version.
+
+349
+00:16:18.672 --> 00:16:22.547
+You sign in with your account through the browser, check the
+
+350
+00:16:22.572 --> 00:16:26.587
+method with codex login status and write only the method on
+
+351
+00:16:26.612 --> 00:16:28.207
+the sheet, never the key.
+
+352
+00:16:28.232 --> 00:16:31.767
+You open the agent in a small folder with only the
+
+353
+00:16:31.792 --> 00:16:32.647
+material for the task.
+
+354
+00:16:32.672 --> 00:16:35.687
+You ask first for a reading, then for a change by
+
+355
+00:16:35.712 --> 00:16:38.947
+name and check it against the real material.
+
+356
+00:16:38.972 --> 00:16:42.727
+And before changing anything, you save a copy and compare with
+
+357
+00:16:42.752 --> 00:16:42.947
+DIV.
+
+358
+00:16:42.972 --> 00:16:46.647
+When you have about 30 minutes, do the module lab, first
+
+359
+00:16:46.672 --> 00:16:47.932
+guided project.
+
+360
+00:16:48.292 --> 00:16:50.667
+the supplementary material for lesson 18.
+
+361
+00:16:50.692 --> 00:16:53.767
+In the next module, folders, markdowns and secrets.
+
+362
+00:16:53.792 --> 00:16:57.407
+The project's digital home, with instruction files and a separate
+
+363
+00:16:57.432 --> 00:16:58.832
+place for passwords.
+
+364
+00:16:59.692 --> 00:17:00.702
+See you there!

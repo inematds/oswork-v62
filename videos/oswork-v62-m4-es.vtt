@@ -1,0 +1,1381 @@
+WEBVTT
+
+1
+00:00:00.020 --> 00:00:03.255
+Hola, soy Ney Maldaner y este es el módulo 4 de
+
+2
+00:00:03.280 --> 00:00:04.400
+OSC Work.
+
+3
+00:00:04.440 --> 00:00:07.535
+En el módulo 3, abriste la terminal y diste los primeros
+
+4
+00:00:07.560 --> 00:00:09.900
+pasos con codecs en una carpeta de práctica.
+
+5
+00:00:10.220 --> 00:00:13.780
+Ahora, vamos a ordenar la casa alrededor de ese trabajo.
+
+6
+00:00:13.860 --> 00:00:16.235
+En este módulo, vas a crear un árbol de carpetas que
+
+7
+00:00:16.260 --> 00:00:17.920
+separa un tema de otro.
+
+8
+00:00:17.960 --> 00:00:20.975
+Escribir en Markdown un readme que explica el proyecto a quien
+
+9
+00:00:21.000 --> 00:00:22.080
+llegue después.
+
+10
+00:00:22.180 --> 00:00:25.075
+Darle un archivo a cada tipo de nota y guardar contraseñas
+
+11
+00:00:25.100 --> 00:00:27.140
+y claves lejos de todo lo que circula.
+
+12
+00:00:27.860 --> 00:00:31.195
+Al final, dejas por escrito qué debe leer primero la inteligencia
+
+13
+00:00:31.220 --> 00:00:32.120
+artificial.
+
+14
+00:00:32.280 --> 00:00:36.255
+Denise, coordinadora pedagógica, y Lucia, profesora de ciencias de
+
+15
+00:00:36.280 --> 00:00:37.980
+octavo año, siguen con nosotros.
+
+16
+00:00:38.900 --> 00:00:41.895
+Todas las prácticas usan la misma terminal del módulo 3, con
+
+17
+00:00:41.920 --> 00:00:43.120
+datos ficticios.
+
+18
+00:00:43.180 --> 00:00:45.415
+Cuando te lo pida, pausa el video y hazlo en el
+
+19
+00:00:45.440 --> 00:00:46.160
+momento.
+
+20
+00:00:46.540 --> 00:00:48.415
+Piensa en el archivo de acero de la secretaría de la
+
+21
+00:00:48.440 --> 00:00:49.120
+escuela.
+
+22
+00:00:49.240 --> 00:00:51.835
+Cada gaveta guarda un curso, y nadie busca el octavo A
+
+23
+00:00:51.860 --> 00:00:53.400
+en la gaveta del séptimo B.
+
+24
+00:00:53.640 --> 00:00:55.755
+Una carpeta de trabajo cumple el mismo papel.
+
+25
+00:00:55.780 --> 00:00:58.120
+Reúne el material de un solo tema.
+
+26
+00:00:58.160 --> 00:01:00.320
+Ese material es el contexto de la tarea.
+
+27
+00:01:00.820 --> 00:01:04.240
+Cuando abres Codex en una carpeta, trabaja a partir de ella.
+
+28
+00:01:04.300 --> 00:01:06.975
+Si la carpeta mezcla temas, lo que no tiene relación con
+
+29
+00:01:07.000 --> 00:01:08.560
+el pedido se vuelve ruido.
+
+30
+00:01:09.120 --> 00:01:11.615
+Lucy aguardaba el proyecto de la Feria de Ciencias en la
+
+31
+00:01:11.640 --> 00:01:14.260
+misma carpeta que las libretas de calificaciones.
+
+32
+00:01:14.500 --> 00:01:17.015
+Le pidió a la inteligencia artificial un resumen de la feria
+
+33
+00:01:17.040 --> 00:01:19.695
+y recibió un párrafo con la nota de un alumno en
+
+34
+00:01:19.720 --> 00:01:19.880
+medio.
+
+35
+00:01:20.440 --> 00:01:22.375
+Cuando la carpeta de la feria pasó a tener solo el
+
+36
+00:01:22.400 --> 00:01:24.995
+reglamento y la lista de grupos, el resumen habló solo de
+
+37
+00:01:25.020 --> 00:01:25.500
+la feria.
+
+38
+00:01:26.000 --> 00:01:29.235
+La inteligencia artificial lee menos material, y tú sabes de dónde
+
+39
+00:01:29.260 --> 00:01:30.595
+salió cada frase.
+
+40
+00:01:30.620 --> 00:01:33.655
+En la terminal, el símbolo de la tilde representa tu carpeta
+
+41
+00:01:33.680 --> 00:01:34.060
+personal.
+
+42
+00:01:34.520 --> 00:01:37.175
+Es solo una forma corta de escribir la dirección completa, que
+
+43
+00:01:37.200 --> 00:01:39.020
+cambia de una computadora a otra.
+
+44
+00:01:39.160 --> 00:01:43.135
+Denise escribió el comando PWD, como en el módulo 3, y
+
+45
+00:01:43.160 --> 00:01:44.540
+vio esa dirección entera.
+
+46
+00:01:44.920 --> 00:01:47.755
+Dentro de la carpeta personal, vas a crear una carpeta llamada
+
+47
+00:01:47.780 --> 00:01:48.820
+Projetos.
+
+48
+00:01:48.860 --> 00:01:50.080
+Ahí van dos cosas.
+
+49
+00:01:50.160 --> 00:01:53.680
+Una carpeta Config, de configuración, con lo que vale para cualquier
+
+50
+00:01:53.705 --> 00:01:55.500
+proyecto, como tus preferencias.
+
+51
+00:01:55.525 --> 00:01:59.040
+Y cada proyecto, con su propia carpeta Entradas, el material que
+
+52
+00:01:59.065 --> 00:02:02.280
+lee la inteligencia artificial, y su propia carpeta CIDAS, lo que
+
+53
+00:02:02.305 --> 00:02:03.700
+ella produce.
+
+54
+00:02:03.725 --> 00:02:06.560
+Separadas, puedes comparar una con la otra.
+
+55
+00:02:06.585 --> 00:02:10.400
+Denise prefiere informes cortos, con los pendientes al final, tanto
+
+56
+00:02:10.425 --> 00:02:12.660
+en el informe del consejo como en la pauta de la
+
+57
+00:02:12.685 --> 00:02:13.900
+reunión de padres.
+
+58
+00:02:13.925 --> 00:02:17.260
+Por eso, esa preferencia va a config, una sola vez.
+
+59
+00:02:17.285 --> 00:02:20.440
+Antes de crear, dibuja el árbol en papel, una carpeta config
+
+60
+00:02:20.465 --> 00:02:22.500
+y un único proyecto de práctica.
+
+61
+00:02:22.525 --> 00:02:24.480
+Así decides los nombres con calma.
+
+62
+00:02:24.505 --> 00:02:27.900
+Usa nombres cortos, sin espacios y sin tildes, porque en la
+
+63
+00:02:27.925 --> 00:02:31.640
+terminal los espacios y las tildes complican cada comando.
+
+64
+00:02:31.665 --> 00:02:35.040
+Lucia lo dibujó en una servilleta y, en un minuto, evitó
+
+65
+00:02:35.065 --> 00:02:37.080
+tres carpetas con nombres parecidos.
+
+66
+00:02:37.105 --> 00:02:40.800
+Después viene el comando mcadir con la opción guión p, que
+
+67
+00:02:40.825 --> 00:02:43.360
+crea las carpetas y las de arriba que falten.
+
+68
+00:02:43.385 --> 00:02:45.720
+Si una carpeta ya existe, queda como está y no se
+
+69
+00:02:45.745 --> 00:02:46.880
+borra nada.
+
+70
+00:02:46.905 --> 00:02:48.480
+Pausa el video y hazlo ahora.
+
+71
+00:02:48.505 --> 00:02:51.400
+Dibuja el árbol, abre la terminal del módulo 3 y pega
+
+72
+00:02:51.425 --> 00:02:53.480
+las tres líneas que están en pantalla.
+
+73
+00:02:53.505 --> 00:02:56.760
+Comprueba que el primer LS muestre config y meu primeiro projeto
+
+74
+00:02:56.785 --> 00:02:59.440
+y que el segundo muestre entradas y saidas.
+
+75
+00:02:59.465 --> 00:03:02.580
+La carpeta existe, pero quien llegue después no sabe para qué
+
+76
+00:03:02.605 --> 00:03:03.405
+sirve.
+
+77
+00:03:03.485 --> 00:03:06.300
+Para escribirlo, vamos a usar Markdown.
+
+78
+00:03:06.325 --> 00:03:10.680
+Cada guión de experimento de Lucia tiene título, materiales y procedimiento.
+
+79
+00:03:10.705 --> 00:03:13.340
+Ella subraya los títulos y pone una raya antes de cada
+
+80
+00:03:13.365 --> 00:03:14.205
+material.
+
+81
+00:03:14.425 --> 00:03:16.640
+Markdown hace lo mismo con signos que escribes.
+
+82
+00:03:16.665 --> 00:03:19.300
+El numeral al comienzo de la línea crea un título, dos
+
+83
+00:03:19.325 --> 00:03:22.580
+numerales crean un subtítulo y el guión crea un elemento de
+
+84
+00:03:22.605 --> 00:03:23.340
+lista.
+
+85
+00:03:23.365 --> 00:03:26.180
+El archivo sigue siendo texto, así que se puede leer incluso
+
+86
+00:03:26.205 --> 00:03:28.180
+sin un programa especial.
+
+87
+00:03:28.205 --> 00:03:30.700
+Lucia pasó el guión de la germinación del frijol a Markdown
+
+88
+00:03:30.725 --> 00:03:34.520
+en cinco minutos, sin aprender nada más que esas tres marcas.
+
+89
+00:03:34.545 --> 00:03:38.320
+Un archivo Markdown es un texto cuyo nombre termina en .md y
+
+90
+00:03:38.345 --> 00:03:40.585
+se abre en cualquier editor, incluso en la terminal.
+
+91
+00:03:41.020 --> 00:03:43.620
+El archivo que explica el proyecto se llama Readme.
+
+92
+00:03:44.200 --> 00:03:46.895
+El modelo del kit del curso trae cinco secciones.
+
+93
+00:03:46.920 --> 00:03:52.100
+Propósito, Lee primero, Organización, Cómo verificar y Estado actual.
+
+94
+00:03:52.240 --> 00:03:54.275
+Cambias cada texto del modelo por lo que vale en tu
+
+95
+00:03:54.300 --> 00:03:55.140
+proyecto.
+
+96
+00:03:55.220 --> 00:03:58.035
+Y si todavía no sabes un campo, escribe por definir.
+
+97
+00:03:58.060 --> 00:04:00.315
+Un campo abierto y honesto es mejor que un texto del
+
+98
+00:04:00.340 --> 00:04:01.940
+modelo que nadie revisó.
+
+99
+00:04:02.000 --> 00:04:04.615
+En el Readme de la Feria de Ciencias, Lucia escribió en
+
+100
+00:04:04.640 --> 00:04:07.655
+propósito, Organizar las inscripciones de la feria.
+
+101
+00:04:07.680 --> 00:04:10.975
+y en cómo verificar, todo grupo inscrito aparece en la lista
+
+102
+00:04:11.000 --> 00:04:11.820
+final.
+
+103
+00:04:11.880 --> 00:04:14.415
+No hace falta negrita, tabla ni enlace.
+
+104
+00:04:14.440 --> 00:04:15.880
+El valor está en la claridad.
+
+105
+00:04:16.520 --> 00:04:19.335
+Cuando Denise pidió una semana de licencia, la compañera que quedó
+
+106
+00:04:19.360 --> 00:04:22.255
+en su lugar abrió el ritme del proyecto del consejo y
+
+107
+00:04:22.280 --> 00:04:24.600
+siguió el trabajo sin necesidad de llamarla.
+
+108
+00:04:24.700 --> 00:04:27.300
+Para editar en la terminal, usa Nano.
+
+109
+00:04:27.400 --> 00:04:29.975
+Muestra el texto en el centro y los atajos abajo, en
+
+110
+00:04:30.000 --> 00:04:30.560
+inglés.
+
+111
+00:04:30.920 --> 00:04:33.560
+El acento circunflejo quiere decir control.
+
+112
+00:04:33.740 --> 00:04:37.435
+Te mueves con las flechas, guardas con Control-O, confirmas el nombre
+
+113
+00:04:37.460 --> 00:04:40.020
+con Enter y sales con Control-X.
+
+114
+00:04:40.120 --> 00:04:43.940
+Después, el comando Cat muestra en pantalla lo que quedó guardado.
+
+115
+00:04:44.000 --> 00:04:45.300
+Pausa el video y practica.
+
+116
+00:04:45.960 --> 00:04:48.955
+Entra en la carpeta del proyecto de práctica, descarga el modelo
+
+117
+00:04:48.980 --> 00:04:51.980
+del Readme con el comando Curl y ábrelo en Nano.
+
+118
+00:04:52.140 --> 00:04:55.715
+Atención, si ya escribiste un Readme en esa carpeta, sáltate la
+
+119
+00:04:55.740 --> 00:04:58.640
+línea del Curl porque sobrescribe el archivo.
+
+120
+00:04:58.720 --> 00:05:01.135
+Cambia cada texto del modelo por algo verdadero de tu proyecto
+
+121
+00:05:01.160 --> 00:05:05.715
+o por por definir y describe las carpetas Entradas y Saidas.
+
+122
+00:05:05.740 --> 00:05:09.415
+guarda, sal y comprueba con CAT que los títulos sigan con
+
+123
+00:05:09.440 --> 00:05:10.360
+el numeral.
+
+124
+00:05:10.440 --> 00:05:12.160
+El Readme habla de un proyecto.
+
+125
+00:05:12.360 --> 00:05:15.400
+¿Y lo que vale para todo, como tus preferencias y decisiones?
+
+126
+00:05:15.580 --> 00:05:18.195
+La Secretaría de la Escuela no anota todo en un solo
+
+127
+00:05:18.220 --> 00:05:18.640
+cuaderno.
+
+128
+00:05:19.020 --> 00:05:21.515
+Tiene el libro de actas, el libro de incidencias y el
+
+129
+00:05:21.540 --> 00:05:25.100
+cuaderno de procedimientos, y cada uno responde a una pregunta.
+
+130
+00:05:25.160 --> 00:05:28.240
+En la carpeta Config, cuatro archivos cumplen ese papel.
+
+131
+00:05:28.320 --> 00:05:31.560
+Memoria.md responde cómo prefiero que salga el trabajo.
+
+132
+00:05:31.731 --> 00:05:35.106
+Decisoes.md, qué elegimos, cuándo y por qué.
+
+133
+00:05:35.131 --> 00:05:38.526
+Dicas.md, cómo se hace, de la forma que ya funcionó.
+
+134
+00:05:38.551 --> 00:05:42.186
+Y fallas.md, qué salió mal y cuál fue la corrección.
+
+135
+00:05:42.211 --> 00:05:44.866
+Denise buscaba por qué la reunión de padres se había pasado
+
+136
+00:05:44.891 --> 00:05:45.746
+al sábado.
+
+137
+00:05:45.771 --> 00:05:48.506
+El motivo estaba en un cuaderno de 40 páginas, entre recados
+
+138
+00:05:48.531 --> 00:05:51.426
+y teléfonos, y le tomó media hora encontrarlo.
+
+139
+00:05:51.451 --> 00:05:54.266
+Una preferencia es tu forma estable de trabajar, y casi nunca
+
+140
+00:05:54.291 --> 00:05:55.066
+cambia.
+
+141
+00:05:55.091 --> 00:05:58.306
+Lucia prefiere ejercicios con la clave de respuestas al final.
+
+142
+00:05:58.331 --> 00:05:59.431
+Eso va en memoria.
+
+143
+00:05:59.771 --> 00:06:02.666
+Una decisión es una elección con motivo, y el motivo puede
+
+144
+00:06:02.691 --> 00:06:03.491
+cambiar.
+
+145
+00:06:03.551 --> 00:06:06.906
+Las pruebas de octavo año tienen 10 preguntas porque la coordinación
+
+146
+00:06:06.931 --> 00:06:08.046
+las estandarizó.
+
+147
+00:06:08.071 --> 00:06:09.631
+Eso va en decisóes, con fecha.
+
+148
+00:06:10.231 --> 00:06:13.891
+Cuando una decisión cambia, no reemplaces la línea antigua en silencio.
+
+149
+00:06:14.011 --> 00:06:17.226
+En octubre, las pruebas pasaron a 12 preguntas, con 2 de
+
+150
+00:06:17.251 --> 00:06:18.606
+lectura de gráficos.
+
+151
+00:06:18.631 --> 00:06:21.486
+Lucia agregó la línea nueva y marcó la de agosto como
+
+152
+00:06:21.511 --> 00:06:22.106
+sustituida.
+
+153
+00:06:22.131 --> 00:06:26.366
+El archivo fallas registra el síntoma, la causa confirmada y la
+
+154
+00:06:26.391 --> 00:06:27.191
+corrección mínima.
+
+155
+00:06:28.211 --> 00:06:31.166
+El resumen de las actas salió vacío porque la carpeta entradas
+
+156
+00:06:31.191 --> 00:06:32.411
+estaba vacía.
+
+157
+00:06:32.451 --> 00:06:35.451
+La corrección fue revisar la carpeta antes de pedir.
+
+158
+00:06:35.531 --> 00:06:38.566
+Ese archivo lo abres cuando el problema vuelve, sin pegarlo en
+
+159
+00:06:38.591 --> 00:06:39.171
+cada pedido.
+
+160
+00:06:39.771 --> 00:06:41.731
+A veces una nota parece caber en dos archivos.
+
+161
+00:06:42.391 --> 00:06:46.126
+Entonces pregúntate, ¿dice cómo me gusta, qué elegimos, cómo se hace
+
+162
+00:06:46.151 --> 00:06:47.551
+o qué salió mal?
+
+163
+00:06:48.071 --> 00:06:50.191
+La primera respuesta que encaje decide.
+
+164
+00:06:50.291 --> 00:06:51.726
+Pausa el video y practica.
+
+165
+00:06:51.751 --> 00:06:54.526
+Entra en la carpeta Config y descarga los cuatro modelos del
+
+166
+00:06:54.551 --> 00:06:57.291
+kit con el comando curl, una línea para cada archivo.
+
+167
+00:06:58.171 --> 00:07:01.246
+Si ya escribiste en alguno, sáltate su línea, porque el curl
+
+168
+00:07:01.271 --> 00:07:02.391
+sobrescribe el archivo.
+
+169
+00:07:02.911 --> 00:07:05.451
+El LSE debe mostrar los cuatro archivos.
+
+170
+00:07:05.611 --> 00:07:08.586
+Después, en papel, di dónde va cada una de las cinco
+
+171
+00:07:08.611 --> 00:07:11.446
+notas ficticias de la lección, como prefiero avisos a las familias
+
+172
+00:07:11.471 --> 00:07:13.251
+en cinco líneas como máximo.
+
+173
+00:07:13.311 --> 00:07:17.406
+O, libreta de calificaciones en PDF desde septiembre, porque no todas
+
+174
+00:07:17.431 --> 00:07:19.506
+las familias abren hojas de cálculo.
+
+175
+00:07:19.531 --> 00:07:22.126
+Escribe el porqué de cada elección y compara con la clave
+
+176
+00:07:22.151 --> 00:07:22.731
+de respuestas.
+
+177
+00:07:23.400 --> 00:07:25.815
+¿Y la contraseña del sistema de la escuela, en cuál de
+
+178
+00:07:25.840 --> 00:07:27.240
+esos cuatro archivos va?
+
+179
+00:07:27.780 --> 00:07:28.680
+En ninguno.
+
+180
+00:07:28.900 --> 00:07:32.535
+En la portería, el tablero de llaves muestra qué salones existen.
+
+181
+00:07:32.560 --> 00:07:34.800
+Y a nadie le preocupa esa lista a la vista.
+
+182
+00:07:34.840 --> 00:07:36.220
+Con las llaves es distinto.
+
+183
+00:07:36.280 --> 00:07:38.215
+Quien toma la llave, abre el salón.
+
+184
+00:07:38.240 --> 00:07:40.300
+Una credencial funciona como la llave.
+
+185
+00:07:40.340 --> 00:07:43.215
+Una contraseña, una clave de API o el token de un
+
+186
+00:07:43.240 --> 00:07:45.615
+bot le permiten a quien los tenga actuar en nombre de
+
+187
+00:07:45.640 --> 00:07:46.460
+tu cuenta.
+
+188
+00:07:46.940 --> 00:07:49.735
+Denise iba a enviar al grupo del equipo una captura de
+
+189
+00:07:49.760 --> 00:07:51.775
+la configuración del sistema de notas.
+
+190
+00:07:51.800 --> 00:07:53.995
+Antes de enviarla, vio en la esquina de la imagen la
+
+191
+00:07:54.020 --> 00:07:56.020
+contraseña de toda la coordinación.
+
+192
+00:07:56.400 --> 00:07:59.175
+Si la hubiera enviado, las 30 personas del grupo tendrían el
+
+193
+00:07:59.200 --> 00:08:00.000
+acceso.
+
+194
+00:08:00.180 --> 00:08:02.915
+Tapó la contraseña y el equipo vio lo que necesitaba, con
+
+195
+00:08:02.940 --> 00:08:04.720
+el acceso todavía solo en la coordinación.
+
+196
+00:08:05.380 --> 00:08:06.380
+¿Dónde va la credencial entonces?
+
+197
+00:08:06.940 --> 00:08:08.600
+En un archivo llamado .env.
+
+198
+00:08:09.180 --> 00:08:13.095
+Guarda variables, un nombre, un signo igual y un valor, como
+
+199
+00:08:13.120 --> 00:08:15.435
+el token del bot de Telegram o la dirección de una
+
+200
+00:08:15.460 --> 00:08:17.540
+base de datos con la contraseña dentro.
+
+201
+00:08:18.040 --> 00:08:21.040
+Atención, el .env no está cifrado.
+
+202
+00:08:21.080 --> 00:08:24.195
+Cualquier persona con acceso al archivo lee lo que contiene.
+
+203
+00:08:24.220 --> 00:08:26.020
+Por eso se queda solo en tu máquina.
+
+204
+00:08:26.120 --> 00:08:28.475
+En el módulo 7, Lucia va a crear un bot de
+
+205
+00:08:28.500 --> 00:08:29.955
+consulta para su curso.
+
+206
+00:08:29.980 --> 00:08:32.780
+Y el token va a vivir ahí, en ningún otro lugar.
+
+207
+00:08:32.940 --> 00:08:36.595
+Para compartir el proyecto existe el .env.example, con los mismos
+
+208
+00:08:36.620 --> 00:08:38.355
+nombres y valores ficticios.
+
+209
+00:08:38.380 --> 00:08:41.135
+Quien lo recibe, ve lo que tiene que completar, pero no
+
+210
+00:08:41.160 --> 00:08:42.595
+obtiene acceso a nada.
+
+211
+00:08:42.620 --> 00:08:45.240
+Así Denise le pasó el proyecto de informes a la subdirectora.
+
+212
+00:08:45.880 --> 00:08:47.935
+Y la subdirectora completó su propio .env.
+
+213
+00:08:47.960 --> 00:08:51.535
+Para ayudarte, a la inteligencia artificial casi siempre le basta
+
+214
+00:08:51.560 --> 00:08:53.375
+saber que la variable existe.
+
+215
+00:08:53.400 --> 00:08:55.395
+El informe de Lucia no se conectaba a la hoja de
+
+216
+00:08:55.420 --> 00:08:56.775
+cálculo de la escuela.
+
+217
+00:08:56.800 --> 00:08:59.695
+En lugar de pegar el punto env, escribió que la variable
+
+218
+00:08:59.720 --> 00:09:03.355
+de la base de datos estaba completada y preguntó qué revisar.
+
+219
+00:09:03.380 --> 00:09:05.655
+La ayuda fue la misma y el secreto se quedó en
+
+220
+00:09:05.680 --> 00:09:06.755
+casa.
+
+221
+00:09:06.780 --> 00:09:09.995
+Si pegas una clave por error, borrar el mensaje no basta.
+
+222
+00:09:10.020 --> 00:09:11.609
+Cambia la clave en el sitio que la generó.
+
+223
+00:09:12.169 --> 00:09:13.289
+Pause el video y practica.
+
+224
+00:09:13.809 --> 00:09:16.164
+En la carpeta del proyecto de práctica, pega de una vez
+
+225
+00:09:16.189 --> 00:09:18.984
+las líneas de la pantalla, sin escribirlas a mano, por culpa
+
+226
+00:09:19.009 --> 00:09:20.069
+de las comillas.
+
+227
+00:09:20.249 --> 00:09:23.344
+El comando printf escribe los dos nombres, con el valor pre-encha
+
+228
+00:09:23.369 --> 00:09:26.149
+localmente, en el punto env.example.
+
+229
+00:09:26.869 --> 00:09:29.409
+Comprueba con cat y con lc-a.
+
+230
+00:09:29.469 --> 00:09:31.269
+No crees el punto env ahora.
+
+231
+00:09:31.309 --> 00:09:33.589
+Solo lo necesitarás en el módulo 7.
+
+232
+00:09:34.289 --> 00:09:37.724
+Ahora, ¿cómo garantizar que el .env nunca se guarde junto con el
+
+233
+00:09:37.749 --> 00:09:40.349
+historial del proyecto, ni siquiera por descuido?
+
+234
+00:09:40.409 --> 00:09:44.664
+Cada versión guardada por Git se llama commit El .gitignore es un
+
+235
+00:09:44.689 --> 00:09:47.404
+archivo de texto, en la carpeta del proyecto, con la lista
+
+236
+00:09:47.429 --> 00:09:50.084
+de lo que Git debe dejar fuera En esa lista entran
+
+237
+00:09:50.109 --> 00:09:53.984
+el .env, sus variantes privadas y las carpetas temporales que los
+
+238
+00:09:54.009 --> 00:09:58.164
+programas crean solos Todo lo demás entra al historial, el readme,
+
+239
+00:09:58.189 --> 00:10:02.024
+el .env.example y el resto de los archivos del trabajo En el
+
+240
+00:10:02.049 --> 00:10:05.524
+proyecto de informes, Denise puso el .env en la lista antes de
+
+241
+00:10:05.549 --> 00:10:06.969
+guardar la primera versión.
+
+242
+00:10:07.189 --> 00:10:10.784
+Resultado, el archivo con la contraseña del sistema de notas nunca
+
+243
+00:10:10.809 --> 00:10:11.609
+entró al historial.
+
+244
+00:10:12.229 --> 00:10:14.269
+Git en sí llega recién en el módulo 6.
+
+245
+00:10:15.029 --> 00:10:17.969
+Hoy basta con tener el .gitignore listo en la carpeta.
+
+246
+00:10:18.649 --> 00:10:21.089
+Hay una regla de orden que confunde a mucha gente.
+
+247
+00:10:21.129 --> 00:10:24.369
+El .gitignore no vale para un archivo que ya se guardó.
+
+248
+00:10:24.509 --> 00:10:25.284
+Es como el maletín de la secretaría.
+
+249
+00:10:25.309 --> 00:10:28.064
+El papel que no debe irse se saca de la pila
+
+250
+00:10:28.089 --> 00:10:29.364
+antes de cerrarlo.
+
+251
+00:10:29.389 --> 00:10:32.004
+Una vez que el maletín salió, tachar el papel de la
+
+252
+00:10:32.029 --> 00:10:33.809
+lista no lo trae de vuelta.
+
+253
+00:10:33.949 --> 00:10:37.044
+Un colega de Denise puso el .env en el Gitignore una semana
+
+254
+00:10:37.069 --> 00:10:39.824
+después de la primera versión y el archivo con la contraseña
+
+255
+00:10:39.849 --> 00:10:41.489
+seguía ahí, en la versión antigua.
+
+256
+00:10:42.029 --> 00:10:44.844
+Y si una clave se filtró, la primera corrección es revocarla
+
+257
+00:10:44.869 --> 00:10:47.524
+en el origen, o sea, cancelarla en el sitio que la
+
+258
+00:10:47.549 --> 00:10:47.789
+creó.
+
+259
+00:10:48.509 --> 00:10:50.904
+La clave de API de un proyecto de Lucia apareció en
+
+260
+00:10:50.929 --> 00:10:52.849
+una versión compartida con el equipo.
+
+261
+00:10:52.909 --> 00:10:56.144
+La canceló en ese mismo minuto, creó otra y solo entonces
+
+262
+00:10:56.169 --> 00:10:57.264
+se ocupó del archivo.
+
+263
+00:10:57.289 --> 00:11:00.033
+Arreglar el historial queda para el módulo 6.
+
+264
+00:11:00.380 --> 00:11:03.300
+Cada línea del .gitignore es un patrón.
+
+265
+00:11:03.420 --> 00:11:05.980
+La línea .env toma el archivo .env.
+
+266
+00:11:06.480 --> 00:11:11.955
+La línea .env.asterisco toma variantes como .env.local, porque el
+
+267
+00:11:11.980 --> 00:11:13.940
+asterisco vale por cualquier final.
+
+268
+00:11:14.100 --> 00:11:16.815
+Y la línea que empieza con signo de exclamación abre una
+
+269
+00:11:16.840 --> 00:11:17.795
+excepción.
+
+270
+00:11:17.820 --> 00:11:21.615
+Devuelve el .example a la lista de lo que se guarda.
+
+271
+00:11:21.640 --> 00:11:24.915
+A Lucia le extrañó esa exclamación en el archivo del kit,
+
+272
+00:11:24.940 --> 00:11:27.295
+pero era lo que mantenía el ejemplo en el proyecto, para
+
+273
+00:11:27.320 --> 00:11:30.055
+que la compañera de matemáticas supiera qué completar.
+
+274
+00:11:30.080 --> 00:11:34.540
+Las últimas líneas cubren carpetas temporales y no necesitas tocarlas.
+
+275
+00:11:34.580 --> 00:11:36.260
+Pausa el video y practica.
+
+276
+00:11:36.400 --> 00:11:40.360
+Descarga el modelo del kit con curl y muéstralo con cat-n.
+
+277
+00:11:40.660 --> 00:11:42.975
+Anota en papel el número de la línea que deja fuera
+
+278
+00:11:43.000 --> 00:11:45.735
+el punto env y el de la línea que mantiene el
+
+279
+00:11:45.760 --> 00:11:46.100
+ejemplo.
+
+280
+00:11:46.860 --> 00:11:49.495
+Con todo guardado en su lugar, ¿qué debe leer primero la
+
+281
+00:11:49.520 --> 00:11:50.840
+inteligencia artificial?
+
+282
+00:11:51.060 --> 00:11:54.780
+No lee automáticamente todos los archivos Markdown de la computadora.
+
+283
+00:11:54.940 --> 00:11:56.880
+Tú le dices qué documentos consultar.
+
+284
+00:11:57.280 --> 00:12:00.295
+Denise pidió el borrador del informe del consejo sin mencionar ningún
+
+285
+00:12:00.320 --> 00:12:01.220
+archivo.
+
+286
+00:12:01.360 --> 00:12:04.035
+Recibió una tabla con el promedio de cada curso y tres
+
+287
+00:12:04.060 --> 00:12:07.775
+recomendaciones, en un formato que nadie había decidido y con números
+
+288
+00:12:07.800 --> 00:12:09.260
+que nadie había dado.
+
+289
+00:12:09.400 --> 00:12:12.775
+Entonces rehizo el pedido, lee el readme y el decisoes de
+
+290
+00:12:12.800 --> 00:12:16.135
+la carpeta config, y después arma el borrador del informe del
+
+291
+00:12:16.160 --> 00:12:17.580
+consejo, sin inventar datos.
+
+292
+00:12:18.180 --> 00:12:21.535
+Esta vez, la respuesta dijo qué había leído, siguió el formato
+
+293
+00:12:21.560 --> 00:12:24.675
+registrado en las decisiones y listó como pendiente lo que no
+
+294
+00:12:24.700 --> 00:12:26.080
+estaba en las entradas.
+
+295
+00:12:26.180 --> 00:12:29.115
+Cuando una referencia vale para toda tarea del proyecto, va en
+
+296
+00:12:29.140 --> 00:12:32.300
+el Agents.md, el tema del próximo módulo.
+
+297
+00:12:32.780 --> 00:12:35.695
+En el Readme, la sección Lee primero lista los archivos que
+
+298
+00:12:35.720 --> 00:12:38.240
+cualquier tarea del proyecto debe abrir antes.
+
+299
+00:12:38.300 --> 00:12:40.340
+Bastan tres rutas, en orden.
+
+300
+00:12:40.500 --> 00:12:44.535
+Primero, el Agents.md, con las instrucciones del proyecto, en la propia
+
+301
+00:12:44.560 --> 00:12:44.980
+carpeta.
+
+302
+00:12:45.700 --> 00:12:48.960
+Segundo, el Decisoes, con las selecciones del equipo.
+
+303
+00:12:49.220 --> 00:12:52.160
+Tercero, el Memoria, con tus preferencias estables.
+
+304
+00:12:52.240 --> 00:12:54.866
+Esos dos últimos están en config, así que la ruta empieza
+
+305
+00:12:54.891 --> 00:12:58.226
+con punto punto barra, que lees como sube una carpeta.
+
+306
+00:12:58.251 --> 00:13:01.986
+Desde meu primeiro projeto, subes a projetos y, desde ahí, entras
+
+307
+00:13:02.011 --> 00:13:02.906
+en config.
+
+308
+00:13:02.931 --> 00:13:05.346
+En el proyecto de la feria de ciencias, Lucia puso el
+
+309
+00:13:05.371 --> 00:13:09.426
+reglamento de la feria en segundo lugar, porque ahí importaba.
+
+310
+00:13:09.451 --> 00:13:11.646
+En tu proyecto de práctica, usa estas tres.
+
+311
+00:13:11.671 --> 00:13:14.846
+Y si escribes ls con las tres rutas, la terminal comprueba
+
+312
+00:13:14.871 --> 00:13:16.346
+que cada una exista.
+
+313
+00:13:16.371 --> 00:13:18.746
+Hay un detalle que el LS no resuelve.
+
+314
+00:13:18.771 --> 00:13:20.626
+El mural de la sala de profesores, con el aviso de
+
+315
+00:13:20.651 --> 00:13:23.826
+una reunión de marzo, confunde más que un mural vacío.
+
+316
+00:13:23.851 --> 00:13:26.606
+Con la memoria de la inteligencia artificial pasa lo mismo.
+
+317
+00:13:26.631 --> 00:13:29.746
+El de Cisóes de Lucia todavía decía pruebas con 10 preguntas,
+
+318
+00:13:29.771 --> 00:13:32.226
+y la inteligencia artificial armó la prueba con 10.
+
+319
+00:13:32.251 --> 00:13:34.746
+Ella agregó la línea nueva y marcó la de agosto como
+
+320
+00:13:34.771 --> 00:13:35.766
+sustituida.
+
+321
+00:13:35.791 --> 00:13:38.366
+Con el archivo al día, la prueba sale con 12.
+
+322
+00:13:38.391 --> 00:13:41.566
+Entonces el S comprueba que la ruta exista, pero solo abriendo
+
+323
+00:13:41.591 --> 00:13:43.366
+el archivo sabe si está al día.
+
+324
+00:13:43.391 --> 00:13:46.766
+Denise se agendó 10 minutos, cada primer lunes del mes para
+
+325
+00:13:46.791 --> 00:13:48.971
+revisar la sección Lee primero.
+
+326
+00:13:49.571 --> 00:13:50.951
+Pause el video y practica.
+
+327
+00:13:51.511 --> 00:13:54.446
+Pega las líneas de la lección, escribe la sección Lee primero
+
+328
+00:13:54.471 --> 00:13:56.886
+en el Readme con las tres rutas y pon la fecha
+
+329
+00:13:56.911 --> 00:13:58.591
+de hoy en memoria y en decisos.
+
+330
+00:13:59.091 --> 00:14:00.191
+Juntemos todo.
+
+331
+00:14:00.331 --> 00:14:02.706
+Creaste un árbol en el que cada carpeta guarda un solo
+
+332
+00:14:02.731 --> 00:14:05.986
+contexto, con config para lo que vale siempre y las entradas
+
+333
+00:14:06.011 --> 00:14:06.971
+separadas de las salidas.
+
+334
+00:14:07.671 --> 00:14:11.526
+Escribiste en Markdown un Readme que explique el proyecto, por definir
+
+335
+00:14:11.551 --> 00:14:13.031
+donde todavía no sabes.
+
+336
+00:14:13.211 --> 00:14:17.026
+Le diste a cada nota su archivo, preferencia, decisión con fecha,
+
+337
+00:14:17.051 --> 00:14:21.226
+procedimiento y falla Separaste el secreto del conocimiento El .env
+
+338
+00:14:21.251 --> 00:14:23.886
+se queda en tu máquina, el ejemplo puede circular Y si
+
+339
+00:14:23.911 --> 00:14:26.926
+algo se filtra, cambias la clave en el origen Pusiste el
+
+340
+00:14:26.951 --> 00:14:29.306
+git ignore en su lugar antes de que existiera la primera
+
+341
+00:14:29.331 --> 00:14:33.086
+versión Y dejaste por escrito qué debe leer primero la inteligencia
+
+342
+00:14:33.111 --> 00:14:36.606
+artificial Comprobando que todo existe y está al día En el
+
+343
+00:14:36.631 --> 00:14:40.766
+próximo módulo, Agents, Skills y Memoria el Agents.md que pusiste
+
+344
+00:14:40.791 --> 00:14:43.731
+en la carpeta pasa a orientar cada ejecución del agente.
+
+345
+00:14:44.331 --> 00:14:45.036
+Nos vemos allí.

@@ -1,0 +1,1329 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.815
+Hola, soy Naim Aldaner, y este es el módulo 6 de
+
+2
+00:00:02.840 --> 00:00:03.920
+OSI Work.
+
+3
+00:00:04.500 --> 00:00:07.515
+En el módulo anterior, le diste a la inteligencia artificial instrucciones
+
+4
+00:00:07.540 --> 00:00:10.760
+fijas y capacidades reutilizables para trabajar en tus proyectos.
+
+5
+00:00:11.340 --> 00:00:12.920
+Ahora viene la pregunta natural.
+
+6
+00:00:13.140 --> 00:00:16.160
+¿Y cuando un agente toca tus archivos y algo sale mal?
+
+7
+00:00:16.220 --> 00:00:19.335
+En este módulo, vas a empezar el historial de una carpeta,
+
+8
+00:00:19.360 --> 00:00:22.755
+mirar exactamente qué entra en cada versión antes de guardar, guardar
+
+9
+00:00:22.780 --> 00:00:25.815
+con tu nombre y un mensaje que explique, traer un proyecto
+
+10
+00:00:25.840 --> 00:00:29.735
+de GitHub y actualizarlo con seguridad, deshacer una versión equivocada
+
+11
+00:00:29.760 --> 00:00:33.235
+sin borrar nada y revisar todo antes de enviar cualquier cosa
+
+12
+00:00:33.260 --> 00:00:34.240
+fuera de la computadora.
+
+13
+00:00:34.800 --> 00:00:37.695
+Las prácticas se hacen en el terminal, en una carpeta de
+
+14
+00:00:37.720 --> 00:00:38.520
+entrenamiento.
+
+15
+00:00:38.820 --> 00:00:41.255
+Cuando te lo pida, pausa el video y hazlo en ese
+
+16
+00:00:41.280 --> 00:00:42.100
+momento.
+
+17
+00:00:42.480 --> 00:00:44.040
+Piensa en el diario de clase.
+
+18
+00:00:44.160 --> 00:00:47.055
+Cada día recibe una línea, con fecha y firma, y nadie
+
+19
+00:00:47.080 --> 00:00:49.100
+borra la línea de ayer, se añade la de hoy.
+
+20
+00:00:50.320 --> 00:00:51.940
+El Git hace lo mismo con una carpeta.
+
+21
+00:00:52.420 --> 00:00:55.555
+La carpeta que sigue se llama Repositorio, y cada versión guardada
+
+22
+00:00:55.580 --> 00:00:59.215
+se llama Commit, que lleva un mensaje que explica qué cambió.
+
+23
+00:00:59.240 --> 00:01:00.620
+Mira por qué esto importa.
+
+24
+00:01:00.680 --> 00:01:03.198
+Lucia le pidió a un agente que reorganizara las guías de
+
+25
+00:01:03.223 --> 00:01:04.458
+experimentos.
+
+26
+00:01:04.483 --> 00:01:07.878
+Tocó seis archivos y, a mitad de camino, cortó un fragmento
+
+27
+00:01:07.903 --> 00:01:09.138
+de la guía de densidad.
+
+28
+00:01:09.163 --> 00:01:12.278
+Como la carpeta tenía historial, ella encontró la versión anterior
+
+29
+00:01:12.303 --> 00:01:14.038
+y recuperó el fragmento.
+
+30
+00:01:14.063 --> 00:01:17.198
+El cambio del agente quedó registrado como cualquier otro, con fecha
+
+31
+00:01:17.223 --> 00:01:19.978
+y autor, y se podía volver a antes de él.
+
+32
+00:01:20.003 --> 00:01:21.958
+Ahora, una confusión común.
+
+33
+00:01:21.983 --> 00:01:24.258
+Git y GitHub no son lo mismo.
+
+34
+00:01:24.283 --> 00:01:27.318
+El Git funciona solo en tu computadora, sin internet.
+
+35
+00:01:27.343 --> 00:01:29.198
+GitHub es un sitio web que puede guardar una copia del
+
+36
+00:01:29.223 --> 00:01:33.198
+repositorio, y enviar esa copia es una decisión aparte, que queda
+
+37
+00:01:33.223 --> 00:01:35.078
+para la última lección del módulo.
+
+38
+00:01:35.103 --> 00:01:37.258
+Denise guarda en su laptop el historial de la carpeta de
+
+39
+00:01:37.283 --> 00:01:40.458
+reportes de la coordinación, y nada de eso está en internet.
+
+40
+00:01:40.483 --> 00:01:43.698
+Entonces, cuando guarda una versión, nadie fuera de la escuela la
+
+41
+00:01:43.723 --> 00:01:43.998
+ve.
+
+42
+00:01:44.023 --> 00:01:45.618
+Y hay un límite importante.
+
+43
+00:01:45.643 --> 00:01:48.078
+El historial guarda sólo lo que está en la carpeta y
+
+44
+00:01:48.103 --> 00:01:49.118
+lo que le pediste guardar.
+
+45
+00:01:49.143 --> 00:01:50.958
+No es un respaldo de todo.
+
+46
+00:01:50.983 --> 00:01:53.518
+La hoja de cálculo de asistencia de Denise vive en el
+
+47
+00:01:53.543 --> 00:01:56.838
+sistema de la secretaría, fuera de la carpeta, y necesita su
+
+48
+00:01:56.863 --> 00:01:58.458
+propia protección.
+
+49
+00:01:58.483 --> 00:02:01.543
+Vamos a empezar, pero solo en una carpeta de entrenamiento.
+
+50
+00:02:01.643 --> 00:02:05.360
+En el terminal, el comando GitVersion confirma confirma que el git
+
+51
+00:02:05.385 --> 00:02:06.780
+está instalado.
+
+52
+00:02:06.805 --> 00:02:10.420
+Después creas la carpeta treino git dentro de proyectos, entras en
+
+53
+00:02:10.445 --> 00:02:15.180
+ella y solo entonces ejecutas git init-b main, que empieza el
+
+54
+00:02:15.205 --> 00:02:18.500
+historial y le da el nombre main a la línea principal.
+
+55
+00:02:18.525 --> 00:02:21.560
+Nunca lo ejecutes en toda tu carpeta personal, porque el git
+
+56
+00:02:21.585 --> 00:02:23.580
+pasaría a seguir todo lo que hay ahí.
+
+57
+00:02:23.605 --> 00:02:27.280
+Lucia verificó que la respuesta citaba el camino terminado en Treino
+
+58
+00:02:27.305 --> 00:02:27.840
+Git.
+
+59
+00:02:27.865 --> 00:02:31.620
+Si aparece Command Not Found, el Git no está instalado.
+
+60
+00:02:31.645 --> 00:02:34.980
+Sigue la página oficial, git-scm.com.
+
+61
+00:02:35.005 --> 00:02:37.140
+Pause el video ahora y haz los tres bloques de la
+
+62
+00:02:37.165 --> 00:02:37.925
+lección.
+
+63
+00:02:38.045 --> 00:02:40.960
+Terminas cuando el estatus responda No Commits Yet.
+
+64
+00:02:40.985 --> 00:02:44.000
+Si el camino no es el de entrenamiento, detente y pide
+
+65
+00:02:44.025 --> 00:02:44.800
+ayuda.
+
+66
+00:02:44.825 --> 00:02:47.665
+El historial está vacío, pero antes de guardar la primera versión,
+
+67
+00:02:48.105 --> 00:02:49.760
+conviene entender cómo se arma.
+
+68
+00:02:49.785 --> 00:02:51.420
+Piensa en un examen.
+
+69
+00:02:51.445 --> 00:02:54.200
+Separas las hojas que entran en esta versión y solo entonces
+
+70
+00:02:54.225 --> 00:02:57.660
+las grapas, y el borrador se queda sobre la mesa.
+
+71
+00:02:57.685 --> 00:03:00.100
+El Git trabaja igual, en tres etapas.
+
+72
+00:03:00.125 --> 00:03:02.580
+Un archivo nuevo o cambiado está en la carpeta, es la
+
+73
+00:03:02.605 --> 00:03:04.980
+etapa 1, la hoja sobre la mesa.
+
+74
+00:03:05.005 --> 00:03:07.543
+Cuando lo separas, pasa a la etapa 2, que el Git
+
+75
+00:03:07.568 --> 00:03:09.943
+llama staging, el montón separado.
+
+76
+00:03:09.968 --> 00:03:13.043
+Y el commit grapa lo que se separó, etapa 3.
+
+77
+00:03:13.068 --> 00:03:16.223
+Denise, armando el simulacro de noveno año, separó las hojas de
+
+78
+00:03:16.248 --> 00:03:18.043
+matemáticas y de portugués y las grapó.
+
+79
+00:03:18.068 --> 00:03:21.443
+La hoja, con sus respuestas, siguió sobre la mesa, fuera del
+
+80
+00:03:21.468 --> 00:03:22.423
+examen.
+
+81
+00:03:22.448 --> 00:03:25.763
+Esa separación es la que protege lo que no debe entrar.
+
+82
+00:03:25.788 --> 00:03:29.563
+Para saber en qué etapa está cada archivo, existe git status.
+
+83
+00:03:29.588 --> 00:03:33.143
+Solo describe, no guarda nada, y conviene ejecutarlo siempre antes
+
+84
+00:03:33.168 --> 00:03:34.083
+de separar.
+
+85
+00:03:34.108 --> 00:03:36.503
+La respuesta viene en inglés, en bloques.
+
+86
+00:03:36.528 --> 00:03:39.603
+Lucia escribió el readme de la carpeta de entrenamiento y una
+
+87
+00:03:39.628 --> 00:03:40.968
+anotación con ideas sueltas.
+
+88
+00:03:41.628 --> 00:03:45.043
+El status mostró los dos en untracked files, que quiere decir
+
+89
+00:03:45.068 --> 00:03:46.348
+archivos fuera del historial.
+
+90
+00:03:46.908 --> 00:03:51.683
+Entonces ejecutó git add seguido del nombre, readme.md.
+
+91
+00:03:51.708 --> 00:03:54.563
+En el status siguiente, el readme subió a changes to be
+
+92
+00:03:54.588 --> 00:03:57.363
+committed, lo que entra en la próxima versión, y la anotación
+
+93
+00:03:57.388 --> 00:03:58.923
+se quedó donde estaba.
+
+94
+00:03:58.948 --> 00:04:02.263
+Existe el atajo git add punto, que separa todo de una
+
+95
+00:04:02.288 --> 00:04:03.063
+vez.
+
+96
+00:04:03.088 --> 00:04:05.743
+El error común es usarlo con prisa y llevarse también la
+
+97
+00:04:05.768 --> 00:04:07.003
+anotación personal.
+
+98
+00:04:07.028 --> 00:04:08.808
+Para aprender, nombra cada archivo.
+
+99
+00:04:09.160 --> 00:04:11.360
+El status dice qué archivos.
+
+100
+00:04:12.000 --> 00:04:14.640
+El div muestra lo que tienen escrito, línea por línea.
+
+101
+00:04:15.200 --> 00:04:18.595
+El comando git div guión guión cached muestra lo que ya
+
+102
+00:04:18.620 --> 00:04:20.380
+se separó y va a entrar.
+
+103
+00:04:20.480 --> 00:04:24.375
+El git div solo muestra cambios aún no separados, pero únicamente
+
+104
+00:04:24.400 --> 00:04:26.840
+en archivos que el git ya sigue.
+
+105
+00:04:26.940 --> 00:04:29.675
+En la carpeta de Lucia, el primero salió vacío, y el
+
+106
+00:04:29.700 --> 00:04:32.715
+segundo mostró las líneas del redme con un signo de más
+
+107
+00:04:32.740 --> 00:04:33.740
+al principio.
+
+108
+00:04:33.940 --> 00:04:36.715
+Si la pantalla se detiene con dos puntos abajo, presiona la
+
+109
+00:04:36.740 --> 00:04:38.260
+tecla Q para salir.
+
+110
+00:04:38.400 --> 00:04:40.820
+Ahora pausa el video y haz la práctica.
+
+111
+00:04:41.140 --> 00:04:42.440
+Crea los dos archivos.
+
+112
+00:04:42.540 --> 00:04:44.840
+Separa solo el readme y ejecuta los dos divs.
+
+113
+00:04:45.500 --> 00:04:48.575
+Después, anota por qué el primer div salió vacío.
+
+114
+00:04:48.600 --> 00:04:49.255
+Pista.
+
+115
+00:04:49.280 --> 00:04:52.315
+El readme ya estaba separado y la anotación está fuera del
+
+116
+00:04:52.340 --> 00:04:53.160
+historial.
+
+117
+00:04:53.280 --> 00:04:54.980
+El readme está separado.
+
+118
+00:04:55.060 --> 00:04:55.660
+Falta guardar.
+
+119
+00:04:56.020 --> 00:04:58.895
+Y para eso, el Git necesita saber quién guardó.
+
+120
+00:04:58.920 --> 00:05:01.215
+Cada versión guarda un nombre y un correo.
+
+121
+00:05:01.240 --> 00:05:04.200
+Configurados con git config dentro de la carpeta de entrenamiento.
+
+122
+00:05:04.840 --> 00:05:07.780
+Sin la palabra global, vale solo para este repositorio.
+
+123
+00:05:07.820 --> 00:05:11.395
+En el entrenamiento, el correo puede ser ficticio, pero recuerda que
+
+124
+00:05:11.420 --> 00:05:14.295
+aparece en cada versión y queda visible si la carpeta se
+
+125
+00:05:14.320 --> 00:05:15.175
+publica.
+
+126
+00:05:15.200 --> 00:05:18.035
+Lucia usó un correo ficticio en el entrenamiento, y en las
+
+127
+00:05:18.060 --> 00:05:20.260
+guías de ciencias va a usar el de la escuela.
+
+128
+00:05:20.580 --> 00:05:23.955
+La segunda pieza es el punto gitignore, un archivo de texto
+
+129
+00:05:23.980 --> 00:05:25.720
+con una línea por cada cosa a ignorar.
+
+130
+00:05:26.240 --> 00:05:28.435
+Solo vale para lo que todavía no se separó ni se
+
+131
+00:05:28.460 --> 00:05:30.780
+guardó, por eso créalo antes de la primera versión.
+
+132
+00:05:31.460 --> 00:05:34.575
+Ahí es donde, más adelante, entra el punto en el archivo
+
+133
+00:05:34.600 --> 00:05:35.335
+de las contraseñas.
+
+134
+00:05:35.360 --> 00:05:38.195
+Cuando Denise puso el nombre de la anotación personal en el
+
+135
+00:05:38.220 --> 00:05:40.675
+gitignore, desapareció del estatus.
+
+136
+00:05:40.700 --> 00:05:43.520
+Sigue en la carpeta, pero el git ya no la ofrece.
+
+137
+00:05:43.920 --> 00:05:45.415
+Ahora, el mensaje.
+
+138
+00:05:45.440 --> 00:05:47.695
+Piensa en una foto de un evento sin leyenda.
+
+139
+00:05:47.720 --> 00:05:49.655
+Diez años después, no dice nada.
+
+140
+00:05:49.680 --> 00:05:52.355
+El mensaje de la versión es esa leyenda.
+
+141
+00:05:52.380 --> 00:05:55.135
+Di que cambió, con un verbo y el objeto del cambio.
+
+142
+00:05:55.160 --> 00:05:57.924
+Un mensaje como update no le sirve a nadie un mes
+
+143
+00:05:57.949 --> 00:05:58.764
+después.
+
+144
+00:05:58.789 --> 00:06:00.964
+En cambio, algo como crea readme y lista de lo que
+
+145
+00:06:00.989 --> 00:06:03.384
+no guardar, responde solo.
+
+146
+00:06:03.409 --> 00:06:06.804
+Denise escribió, añade la tabla de ausencias por curso al informe
+
+147
+00:06:06.829 --> 00:06:10.224
+de septiembre, y a la semana siguiente encontró esa versión solo
+
+148
+00:06:10.249 --> 00:06:11.204
+leyendo la lista.
+
+149
+00:06:11.229 --> 00:06:13.484
+Y guarda cuando el cambio esté verificado.
+
+150
+00:06:13.509 --> 00:06:16.184
+Una versión solo es un punto seguro de vuelta si sabes
+
+151
+00:06:16.209 --> 00:06:17.264
+que funcionaba.
+
+152
+00:06:17.289 --> 00:06:20.504
+Para guardar, separas los dos archivos por nombre, el readme y
+
+153
+00:06:20.529 --> 00:06:25.509
+el gitignore, y ejecutas git commit-m con el mensaje entre comillas.
+
+154
+00:06:25.669 --> 00:06:30.184
+Después, git log-1align muestra la lista corta de versiones, una por
+
+155
+00:06:30.209 --> 00:06:32.349
+línea, con un código corto y el mensaje.
+
+156
+00:06:32.929 --> 00:06:35.744
+Si aparece Please tell me who you are, faltó configurar nombre
+
+157
+00:06:35.769 --> 00:06:36.869
+y correo en esta carpeta.
+
+158
+00:06:37.409 --> 00:06:40.169
+Ejecuta las dos líneas de configuración y repite.
+
+159
+00:06:40.229 --> 00:06:41.409
+No se perdió nada.
+
+160
+00:06:41.549 --> 00:06:44.064
+Pause el video y crea la primera versión de tu carpeta
+
+161
+00:06:44.089 --> 00:06:44.729
+de entrenamiento.
+
+162
+00:06:44.909 --> 00:06:47.584
+Cambia el nombre y el correo en el blog de notas
+
+163
+00:06:47.609 --> 00:06:49.409
+antes de pegar en el terminal.
+
+164
+00:06:49.549 --> 00:06:52.489
+Si el status todavía muestra la anotación personal, no guardes.
+
+165
+00:06:53.069 --> 00:06:56.464
+Terminas cuando el log muestre tu mensaje y el status responda,
+
+166
+00:06:56.489 --> 00:06:57.524
+Nothing to commit.
+
+167
+00:06:57.549 --> 00:06:58.829
+Working tree clean.
+
+168
+00:06:59.009 --> 00:07:01.524
+Y cuando el proyecto ya está en GitHub, piensa en el
+
+169
+00:07:01.549 --> 00:07:04.124
+manual de la red de enseñanza que llega como una copia
+
+170
+00:07:04.149 --> 00:07:06.449
+completa, con todas las páginas.
+
+171
+00:07:06.689 --> 00:07:08.944
+El clone hace eso con un repositorio.
+
+172
+00:07:08.969 --> 00:07:11.929
+Crea una carpeta nueva con los archivos y todas las versiones.
+
+173
+00:07:12.429 --> 00:07:15.964
+En el terminal, basta el comando git clone, la dirección y
+
+174
+00:07:15.989 --> 00:07:17.664
+el nombre de la carpeta nueva.
+
+175
+00:07:17.689 --> 00:07:19.189
+Clonar no ejecuta nada.
+
+176
+00:07:19.289 --> 00:07:22.344
+Aún así, lee antes de ejecutar cualquier programa que vino en
+
+177
+00:07:22.369 --> 00:07:25.189
+el clone, incluso de un repositorio conocido.
+
+178
+00:07:25.229 --> 00:07:28.264
+La red de enseñanza guarda los modelos de reporte en un
+
+179
+00:07:28.289 --> 00:07:29.669
+repositorio público.
+
+180
+00:07:29.729 --> 00:07:32.904
+Y Denise lo clonó en una carpeta solo para eso, lejos
+
+181
+00:07:32.929 --> 00:07:34.169
+de la carpeta de sus reportes.
+
+182
+00:07:34.729 --> 00:07:37.364
+En la práctica, vas a clonar el repositorio real de este
+
+183
+00:07:37.389 --> 00:07:40.984
+curso en una carpeta llamada clone curso, separada de la carpeta
+
+184
+00:07:41.009 --> 00:07:41.913
+de entrenamiento.
+
+185
+00:07:42.260 --> 00:07:46.360
+Antes de actualizar, ejecuta git status dentro de la carpeta clonada.
+
+186
+00:07:46.500 --> 00:07:48.995
+Si dice que no hay nada tuyo por guardar, la actualización
+
+187
+00:07:49.020 --> 00:07:50.220
+no tiene nada que mezclar.
+
+188
+00:07:50.760 --> 00:07:53.380
+En la respuesta aparece origin barra main.
+
+189
+00:07:53.700 --> 00:07:56.095
+Origin es el apodo de la dirección de donde vino la
+
+190
+00:07:56.120 --> 00:07:59.260
+carpeta, y main es la línea principal de allá.
+
+191
+00:07:59.560 --> 00:08:03.560
+Para actualizar, usa git pull guión guión ff only.
+
+192
+00:08:03.820 --> 00:08:06.435
+El pull busca las versiones nuevas y las junta a tu
+
+193
+00:08:06.460 --> 00:08:06.940
+carpeta.
+
+194
+00:08:07.280 --> 00:08:10.215
+Y este freno hace que aceptes sólo el caso simple.
+
+195
+00:08:10.240 --> 00:08:13.815
+Las versiones nuevas encajan después de la última que tienes, como
+
+196
+00:08:13.840 --> 00:08:15.740
+páginas nuevas al final del manual.
+
+197
+00:08:16.200 --> 00:08:19.600
+Una semana después del clone, la red agregó un modelo nuevo.
+
+198
+00:08:19.740 --> 00:08:22.935
+Denise ejecutó el pull con freno, y la respuesta decía Fast
+
+199
+00:08:22.960 --> 00:08:25.315
+Forward, con el archivo nuevo que llegó.
+
+200
+00:08:25.340 --> 00:08:27.655
+¿Y si guardaste una versión aquí y allá, también llegó una
+
+201
+00:08:27.680 --> 00:08:28.380
+nueva?
+
+202
+00:08:28.840 --> 00:08:31.435
+Las dos líneas se separaron, y el pull con freno se
+
+203
+00:08:31.460 --> 00:08:32.860
+niega sin tocar nada.
+
+204
+00:08:33.060 --> 00:08:35.180
+Esa negativa es información, no un defecto.
+
+205
+00:08:35.620 --> 00:08:36.920
+Eso le pasó a Lucia.
+
+206
+00:08:37.000 --> 00:08:38.900
+Había guardado anotaciones en el clone.
+
+207
+00:08:39.020 --> 00:08:41.840
+Y ese mismo día, el curso publicó una versión nueva.
+
+208
+00:08:42.000 --> 00:08:44.535
+Copió el mensaje y preguntó en el grupo del curso antes
+
+209
+00:08:44.560 --> 00:08:46.035
+de hacer cualquier cosa.
+
+210
+00:08:46.060 --> 00:08:47.560
+La respuesta sugiere dos comandos.
+
+211
+00:08:48.140 --> 00:08:50.735
+No ejecutes ninguno, ni aunque un chat de inteligencia artificial
+
+212
+00:08:50.760 --> 00:08:53.120
+te lo diga, y no borres tu trabajo para esquivarlo.
+
+213
+00:08:53.700 --> 00:08:55.840
+Ahora pausa el video y haz la práctica.
+
+214
+00:08:55.900 --> 00:08:59.160
+Clone el repositorio del curso, revise el status y el log,
+
+215
+00:08:59.200 --> 00:09:00.700
+y ejecute el pull con freno.
+
+216
+00:09:00.760 --> 00:09:03.540
+Terminas cuando responda, Already up to date.
+
+217
+00:09:03.580 --> 00:09:05.720
+¿Y cuando una versión que guardaste estaba equivocada?
+
+218
+00:09:06.240 --> 00:09:09.555
+Cada comando de recuperación del Git tiene una consecuencia distinta,
+
+219
+00:09:09.580 --> 00:09:11.835
+por eso la elección empieza por un diagnóstico.
+
+220
+00:09:11.860 --> 00:09:13.175
+¿Dónde está el cambio?
+
+221
+00:09:13.200 --> 00:09:15.620
+Puede estar solo en el archivo, todavía sin guardar.
+
+222
+00:09:16.340 --> 00:09:19.195
+Puede estar en una versión guardada en tu computadora, o en
+
+223
+00:09:19.220 --> 00:09:20.720
+una versión ya enviada a GitHub.
+
+224
+00:09:21.440 --> 00:09:24.315
+El caso más riesgoso es el primero, porque no hay versión
+
+225
+00:09:24.340 --> 00:09:25.515
+a la cual volver.
+
+226
+00:09:25.540 --> 00:09:28.215
+En los otros dos, la salida es la misma, crear una
+
+227
+00:09:28.240 --> 00:09:30.555
+versión nueva que deshace la equivocada.
+
+228
+00:09:30.580 --> 00:09:33.515
+Y en el tercero, hay todavía más motivo para no borrar,
+
+229
+00:09:33.540 --> 00:09:35.500
+porque otros ya tienen esa versión.
+
+230
+00:09:35.580 --> 00:09:38.560
+Denise cambió el título del informe de septiembre y guardó.
+
+231
+00:09:38.780 --> 00:09:41.220
+Al día siguiente, la dirección pidió el título antiguo.
+
+232
+00:09:41.760 --> 00:09:44.495
+El cambio estaba en una versión guardada, y eso decidió el
+
+233
+00:09:44.520 --> 00:09:45.280
+comando.
+
+234
+00:09:45.380 --> 00:09:48.555
+El periódico de la escuela no recoge la edición con error.
+
+235
+00:09:48.580 --> 00:09:51.555
+Publica una fede de erratas, que corrige y muestra que hubo
+
+236
+00:09:51.580 --> 00:09:52.560
+corrección.
+
+237
+00:09:52.600 --> 00:09:54.080
+El revert hace lo mismo.
+
+238
+00:09:54.160 --> 00:09:56.395
+Crea un commit nuevo que deshace el anterior.
+
+239
+00:09:56.420 --> 00:09:58.240
+Y el historial queda con las tres versiones.
+
+240
+00:09:58.540 --> 00:10:01.080
+La original, la equivocada y la corrección.
+
+241
+00:10:01.160 --> 00:10:03.575
+Lucia borró sin querer el vaso de precipitados de la lista
+
+242
+00:10:03.600 --> 00:10:05.460
+de materiales de una guía y guardó.
+
+243
+00:10:06.080 --> 00:10:07.960
+Con el revert, la lista volvió.
+
+244
+00:10:08.000 --> 00:10:10.420
+Y el historial muestra el cambio y el regreso.
+
+245
+00:10:10.480 --> 00:10:13.660
+Antes de ejecutarlo, revisa qué versión va a deshacer.
+
+246
+00:10:13.780 --> 00:10:16.075
+El HUD es el marca páginas del historial.
+
+247
+00:10:16.100 --> 00:10:17.695
+Está en la versión en la que estás.
+
+248
+00:10:17.720 --> 00:10:19.420
+normalmente la última guardada.
+
+249
+00:10:19.500 --> 00:10:23.800
+En git log-guion-oneline, la línea de arriba trae hadd flecha main.
+
+250
+00:10:24.040 --> 00:10:25.160
+Lee el mensaje de esa línea.
+
+251
+00:10:25.740 --> 00:10:28.215
+Si no es el cambio de entrenamiento, no sigas.
+
+252
+00:10:28.240 --> 00:10:31.520
+El comando es git revert-guion-no-edit hadd.
+
+253
+00:10:32.120 --> 00:10:34.895
+Deshace la última versión con un mensaje automático, sin abrir un
+
+254
+00:10:34.920 --> 00:10:35.620
+editor.
+
+255
+00:10:35.720 --> 00:10:37.900
+Después, abre el archivo y léelo.
+
+256
+00:10:38.020 --> 00:10:40.420
+La respuesta del terminal dice que algo se hizo.
+
+257
+00:10:40.500 --> 00:10:41.680
+El archivo dice si quedó bien.
+
+258
+00:10:42.220 --> 00:10:44.240
+¿Y si el cambio todavía no estaba guardado?
+
+259
+00:10:44.760 --> 00:10:47.995
+Entonces el comando es restore con el nombre del archivo y
+
+260
+00:10:48.020 --> 00:10:51.415
+lo que escribiste se pierde sin vuelta Úsalo solo con certeza,
+
+261
+00:10:51.440 --> 00:10:54.415
+nunca en toda la carpeta En internet vas a encontrar el
+
+262
+00:10:54.440 --> 00:10:59.235
+reset-hard como solución para todo Borra sin vuelta, y este curso
+
+263
+00:10:59.260 --> 00:11:02.295
+no lo usa Pause el video y haz la práctica Cambia
+
+264
+00:11:02.320 --> 00:11:05.495
+el título del readme, guarda, revisa el log y ejecuta el
+
+265
+00:11:05.520 --> 00:11:08.335
+revert Terminas cuando vuelva el título antiguo y el log tenga
+
+266
+00:11:08.360 --> 00:11:09.940
+tres líneas, con revert arriba
+
+267
+00:11:10.640 --> 00:11:13.320
+Guardar y deshacer se quedó en tu computadora.
+
+268
+00:11:13.420 --> 00:11:15.560
+Enviar es otro paso, con su propia revisión.
+
+269
+00:11:16.480 --> 00:11:17.700
+Piensa en la nota de un alumno.
+
+270
+00:11:18.240 --> 00:11:20.320
+En el cuaderno, solo tú la ves.
+
+271
+00:11:20.480 --> 00:11:22.855
+Cargada en el sistema de la secretaría, la ve todo el
+
+272
+00:11:22.880 --> 00:11:23.960
+que tiene acceso.
+
+273
+00:11:24.300 --> 00:11:26.300
+Impresa en el boletín, llega a las familias.
+
+274
+00:11:26.700 --> 00:11:28.155
+En el Git, es igual.
+
+275
+00:11:28.180 --> 00:11:30.280
+El commit se queda en tu computadora.
+
+276
+00:11:30.340 --> 00:11:32.640
+El push envía las versiones a GitHub.
+
+277
+00:11:32.760 --> 00:11:34.660
+Y quien tiene acceso al destino, pasa a verlas.
+
+278
+00:11:35.820 --> 00:11:38.440
+Publicar un sitio es un paso más, que depende del hospedaje.
+
+279
+00:11:38.900 --> 00:11:41.275
+Lucia guardó tres versiones de la guía de densidad en su
+
+280
+00:11:41.300 --> 00:11:43.340
+laptop, y ninguna salió de ahí.
+
+281
+00:11:43.480 --> 00:11:46.000
+Enviarlas a GitHub sería una decisión de ella.
+
+282
+00:11:46.060 --> 00:11:47.900
+Y recuerda la diferencia de visibilidad.
+
+283
+00:11:48.120 --> 00:11:50.895
+Público quiere decir que cualquier persona en Internet lo ve, y
+
+284
+00:11:50.920 --> 00:11:54.180
+privado quiere decir que quien tiene acceso lo ve todo.
+
+285
+00:11:54.240 --> 00:11:55.680
+La revisión empieza por el destino.
+
+286
+00:11:56.280 --> 00:12:00.375
+El comando git remote-v muestra a dónde envía la carpeta, con
+
+287
+00:12:00.400 --> 00:12:03.695
+el apodo origin, y la cuenta dueña aparece justo después de
+
+288
+00:12:03.720 --> 00:12:05.140
+github.com.
+
+289
+00:12:05.280 --> 00:12:07.955
+Una respuesta vacía quiere decir que no hay destino.
+
+290
+00:12:07.980 --> 00:12:11.095
+Antes de enviar los modelos de reporte, Denise ejecutó ese comando
+
+291
+00:12:11.120 --> 00:12:14.295
+y vio que apuntaba al repositorio de la red de enseñanza,
+
+292
+00:12:14.320 --> 00:12:15.895
+no al de la coordinación.
+
+293
+00:12:15.920 --> 00:12:17.055
+Se detuvo ahí.
+
+294
+00:12:17.080 --> 00:12:20.715
+Después, el Git status dice si quedó algo sin guardar y
+
+295
+00:12:20.740 --> 00:12:24.075
+cuántas versiones irían, porque el push lleva todas las que el
+
+296
+00:12:24.100 --> 00:12:27.035
+destino todavía no tiene, no solo la última.
+
+297
+00:12:27.060 --> 00:12:31.535
+Y el git show-stat muestra la última versión, autor, mensaje y
+
+298
+00:12:31.560 --> 00:12:31.895
+archivos.
+
+299
+00:12:31.920 --> 00:12:34.215
+El correo configurado va junto.
+
+300
+00:12:34.240 --> 00:12:36.500
+GitHub ofrece un correo de privacidad en la configuración.
+
+301
+00:12:37.080 --> 00:12:39.184
+El último punto son los secretos.
+
+302
+00:12:39.209 --> 00:12:43.784
+En las versiones que irían, busca contraseñas, claves o un archivo .env.
+
+303
+00:12:43.809 --> 00:12:45.684
+Los borradores también cuentan.
+
+304
+00:12:45.709 --> 00:12:48.044
+Si están en una versión, van juntos.
+
+305
+00:12:48.069 --> 00:12:50.944
+Denise encontró un borrador con nombres de alumnos en una versión
+
+306
+00:12:50.969 --> 00:12:53.564
+antigua, no lo envió y pidió ayuda al equipo de tecnología
+
+307
+00:12:53.589 --> 00:12:55.064
+de la escuela.
+
+308
+00:12:55.089 --> 00:12:58.184
+Y si encuentras una contraseña en una versión guardada, borrar el
+
+309
+00:12:58.209 --> 00:13:01.624
+archivo ahora no saca la contraseña de las versiones antiguas, anota
+
+310
+00:13:01.649 --> 00:13:04.824
+cuál es y pide ayuda a quien administre el proyecto.
+
+311
+00:13:04.849 --> 00:13:07.404
+Pausa el video y haz la revisión de cuatro puntos para
+
+312
+00:13:07.429 --> 00:13:10.444
+la carpeta de entrenamiento y para el clone del curso, con
+
+313
+00:13:10.469 --> 00:13:12.344
+la decisión y el motivo.
+
+314
+00:13:12.369 --> 00:13:15.524
+No ejecutes el push, en el entrenamiento no hay destino, y
+
+315
+00:13:15.549 --> 00:13:17.804
+en el clone la cuenta no es tuya.
+
+316
+00:13:17.829 --> 00:13:18.864
+Juntemos todo.
+
+317
+00:13:18.889 --> 00:13:22.064
+Empezaste un historial en una carpeta que elegiste y comprobaste por
+
+318
+00:13:22.089 --> 00:13:23.809
+la respuesta que era la carpeta correcta.
+
+319
+00:13:24.549 --> 00:13:28.244
+Aprendiste a mirar con Status y Diff antes de guardar, separando
+
+320
+00:13:28.269 --> 00:13:31.904
+archivo por archivo Guardaste una versión con autoría, un mensaje
+
+321
+00:13:31.929 --> 00:13:35.624
+que explica y la anotación personal fuera Trajiste un proyecto de
+
+322
+00:13:35.649 --> 00:13:39.484
+GitHub y lo actualizaste solo por el camino directo, sabiendo detenerte
+
+323
+00:13:39.509 --> 00:13:42.784
+cuando se niega Deshiciste una versión equivocada con una fe de
+
+324
+00:13:42.809 --> 00:13:47.624
+ratas, sin ocultar que existió Y separaste guardar de enviar, con
+
+325
+00:13:47.649 --> 00:13:51.864
+una revisión de cuatro puntos Destino, estado, versiones que irían
+
+326
+00:13:51.889 --> 00:13:55.304
+y secretos Guarda el molde de esa revisión en tu blog
+
+327
+00:13:55.329 --> 00:13:55.789
+de notas.
+
+328
+00:13:56.349 --> 00:13:59.144
+En el módulo 7, Telegram como interfaz de trabajo.
+
+329
+00:13:59.169 --> 00:14:01.604
+Un bot que responde sin ejecutar mensajes.
+
+330
+00:14:01.629 --> 00:14:04.144
+Y su token, el primer secreto que nunca puede entrar en
+
+331
+00:14:04.169 --> 00:14:04.829
+un push.
+
+332
+00:14:04.909 --> 00:14:05.329
+Nos vemos allí.

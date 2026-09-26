@@ -1,0 +1,1453 @@
+WEBVTT
+
+1
+00:00:00.320 --> 00:00:03.375
+Hi, I'm Neymar Odaner, and this is Module 2 of OS
+
+2
+00:00:03.400 --> 00:00:04.140
+Work.
+
+3
+00:00:04.460 --> 00:00:07.095
+In Module 1, you learned to see AI as a system
+
+4
+00:00:07.120 --> 00:00:09.280
+of parts, and to delegate with limits.
+
+5
+00:00:10.020 --> 00:00:12.955
+Now, we'll look at the places where that work happens.
+
+6
+00:00:12.980 --> 00:00:15.440
+The chat, work, and desktop.
+
+7
+00:00:15.500 --> 00:00:18.935
+You learned to recognize when a short question is enough, turn
+
+8
+00:00:18.960 --> 00:00:21.860
+a vague request into a work order with a clear finish,
+
+9
+00:00:22.180 --> 00:00:26.400
+confirm what the AI actually read, know where the task runs,
+
+10
+00:00:26.680 --> 00:00:29.975
+write a delivery contract, and check what you got back.
+
+11
+00:00:30.000 --> 00:00:32.755
+There's no terminal in this module, and the practices work in
+
+12
+00:00:32.780 --> 00:00:36.315
+the chat you already use or in a notepad, even without
+
+13
+00:00:36.340 --> 00:00:38.840
+work or desktop on your account.
+
+14
+00:00:39.200 --> 00:00:41.235
+Denise and Lucia are still with us.
+
+15
+00:00:41.260 --> 00:00:43.875
+When I ask, pause the video and do the practice right
+
+16
+00:00:43.900 --> 00:00:44.515
+then.
+
+17
+00:00:44.540 --> 00:00:46.360
+Not every task calls for a big tool.
+
+18
+00:00:47.080 --> 00:00:50.115
+Setting up a complicated routine for something that only needed an
+
+19
+00:00:50.140 --> 00:00:53.140
+answer wastes time and gives you more to check.
+
+20
+00:00:53.640 --> 00:00:56.180
+The chat is a conversation interface.
+
+21
+00:00:56.240 --> 00:00:57.935
+Think of the question you ask a colleague in the hallway
+
+22
+00:00:57.960 --> 00:00:58.640
+between classes.
+
+23
+00:00:59.400 --> 00:01:02.615
+It's short, the answer comes right away, and you decide what
+
+24
+00:01:02.640 --> 00:01:03.635
+to do with it.
+
+25
+00:01:03.660 --> 00:01:06.315
+If the answer doesn't work, you don't start over, you send
+
+26
+00:01:06.340 --> 00:01:08.380
+an adjustment in the same conversation.
+
+27
+00:01:08.520 --> 00:01:11.155
+Lucia was covering a colleague's math class and asked for three
+
+28
+00:01:11.180 --> 00:01:14.580
+ways to explain fractions using the ingredients of a cake recipe.
+
+29
+00:01:14.800 --> 00:01:17.135
+She got half a cup of sugar, a quarter stick of
+
+30
+00:01:17.160 --> 00:01:18.860
+butter, and a third of a cup of milk.
+
+31
+00:01:19.340 --> 00:01:22.615
+She asked to swap the third one for three eggs split
+
+32
+00:01:22.640 --> 00:01:24.540
+between two recipes, and got it.
+
+33
+00:01:25.700 --> 00:01:27.080
+One and a half eggs each.
+
+34
+00:01:27.620 --> 00:01:28.575
+That's the chat.
+
+35
+00:01:28.600 --> 00:01:30.780
+Question, answer and adjustment.
+
+36
+00:01:31.160 --> 00:01:34.000
+A loose question gets an encyclopedia answer.
+
+37
+00:01:34.080 --> 00:01:36.255
+When you say who will read it and what they'll do
+
+38
+00:01:36.280 --> 00:01:39.275
+with the text, the answer comes out at the right length
+
+39
+00:01:39.300 --> 00:01:40.400
+and in the right tone.
+
+40
+00:01:41.580 --> 00:01:45.375
+Denise needed to explain the class council to the parents of
+
+41
+00:01:45.400 --> 00:01:45.455
+6th graders.
+
+42
+00:01:45.480 --> 00:01:50.475
+She just asked what a class council is and got a
+
+43
+00:01:50.500 --> 00:01:54.660
+technical paragraph, correct, but far too long for a note.
+
+44
+00:01:54.900 --> 00:01:57.360
+Then she asked for the explanation in two sentences.
+
+45
+00:01:58.200 --> 00:02:01.010
+for sixth grade parents, because it was going in a note
+
+46
+00:02:01.035 --> 00:02:01.630
+home.
+
+47
+00:02:01.655 --> 00:02:03.515
+She got two simple sentences.
+
+48
+00:02:03.635 --> 00:02:05.890
+The class council is a meeting of the teachers with the
+
+49
+00:02:05.915 --> 00:02:09.390
+coordinators to talk about how each class and each student is
+
+50
+00:02:09.415 --> 00:02:13.295
+doing, and it produces agreements to help whoever needs it.
+
+51
+00:02:13.675 --> 00:02:17.870
+Same subject, now at the length and in the tone of
+
+52
+00:02:17.895 --> 00:02:18.255
+the note.
+
+53
+00:02:19.015 --> 00:02:23.530
+Every short question leaves gaps, and the AI fills those gaps
+
+54
+00:02:23.555 --> 00:02:24.915
+without telling you.
+
+55
+00:02:25.615 --> 00:02:29.255
+It assumes the age of the class, the tone, the length.
+
+56
+00:02:29.575 --> 00:02:33.090
+That's why you ask it to list what it assumed.
+
+57
+00:02:33.115 --> 00:02:36.615
+Lucia asked for an opening question for her lesson on mixtures,
+
+58
+00:02:37.275 --> 00:02:40.670
+and the list of assumptions showed the AI had pictured high
+
+59
+00:02:40.695 --> 00:02:41.255
+school students.
+
+60
+00:02:42.255 --> 00:02:45.870
+She corrected it in one line, the class is 8th grade,
+
+61
+00:02:45.895 --> 00:02:47.570
+and the question was adjusted.
+
+62
+00:02:47.595 --> 00:02:50.150
+So, when is the chat enough?
+
+63
+00:02:50.175 --> 00:02:53.410
+If what you need is an answer you read and check
+
+64
+00:02:53.435 --> 00:02:55.890
+on the spot, the chat handles it.
+
+65
+00:02:55.915 --> 00:02:59.370
+If it's a document with several sources, a conversation falls short.
+
+66
+00:02:59.395 --> 00:03:02.430
+Pause the video now and use this template with a real
+
+67
+00:03:02.455 --> 00:03:05.470
+question from this week, with no student names.
+
+68
+00:03:05.495 --> 00:03:08.670
+Read the list of assumptions first and correct one of them
+
+69
+00:03:08.695 --> 00:03:09.910
+in a short message.
+
+70
+00:03:09.935 --> 00:03:13.190
+And when the task doesn't fit in a conversation, a job
+
+71
+00:03:13.215 --> 00:03:16.635
+with several sources needs a definition of done.
+
+72
+00:03:16.775 --> 00:03:19.430
+Without one, the AI may keep researching when you only needed
+
+73
+00:03:19.455 --> 00:03:22.190
+to compare three options, and you get back a long text
+
+74
+00:03:22.215 --> 00:03:23.570
+you don't know where to start reviewing.
+
+75
+00:03:23.595 --> 00:03:26.330
+In work, you don't talk sentence by sentence.
+
+76
+00:03:26.355 --> 00:03:29.570
+You hand over a task, like an analysis or a document,
+
+77
+00:03:29.595 --> 00:03:30.990
+and get the result back to review.
+
+78
+00:03:31.015 --> 00:03:33.870
+Think of ordering a cake from a bakery.
+
+79
+00:03:33.895 --> 00:03:36.590
+You say the flavor, the size, and the day.
+
+80
+00:03:36.615 --> 00:03:39.250
+And you don't stand there watching the oven.
+
+81
+00:03:39.275 --> 00:03:40.810
+An important note.
+
+82
+00:03:40.835 --> 00:03:43.635
+Work isn't available on every plan.
+
+83
+00:03:43.775 --> 00:03:46.270
+If you can't find it on yours, place the work order
+
+84
+00:03:46.295 --> 00:03:47.370
+in the regular chat.
+
+85
+00:03:47.395 --> 00:03:49.090
+And it works the same way.
+
+86
+00:03:49.115 --> 00:03:52.055
+What changes is the request, not the tool.
+
+87
+00:03:52.255 --> 00:03:55.530
+Denise had to hire the bus for the museum field trip.
+
+88
+00:03:55.555 --> 00:03:58.850
+And she had three quotes to compare and bring to the
+
+89
+00:03:58.875 --> 00:03:59.415
+principle.
+
+90
+00:03:59.820 --> 00:04:01.960
+A work order says five things.
+
+91
+00:04:02.320 --> 00:04:06.235
+The goal, which is what the result is for, the inputs,
+
+92
+00:04:06.260 --> 00:04:09.855
+the material the AI can use, the output, the format of
+
+93
+00:04:09.880 --> 00:04:13.415
+what comes back, the limits, what it shouldn't do, and the
+
+94
+00:04:13.440 --> 00:04:15.595
+stop, when the work is over.
+
+95
+00:04:15.620 --> 00:04:19.340
+It looks like the authorization from lesson 6, and it's related.
+
+96
+00:04:19.740 --> 00:04:22.775
+The authorization says what the AI can do, and the work
+
+97
+00:04:22.800 --> 00:04:25.015
+order says what must exist at the end.
+
+98
+00:04:25.040 --> 00:04:27.615
+Denise wrote the one for the bus in five lines, in
+
+99
+00:04:27.640 --> 00:04:28.620
+three minutes.
+
+100
+00:04:28.700 --> 00:04:33.195
+She got back a three-row table with only what was in
+
+101
+00:04:33.220 --> 00:04:34.095
+the quotes.
+
+102
+00:04:34.120 --> 00:04:37.795
+And where a quote said nothing, it showed not informed instead
+
+103
+00:04:37.820 --> 00:04:38.895
+of a guess.
+
+104
+00:04:38.920 --> 00:04:42.515
+That means the document doesn't cover it, not that the risk
+
+105
+00:04:42.540 --> 00:04:43.440
+is zero.
+
+106
+00:04:43.580 --> 00:04:45.880
+The fifth part deserves attention.
+
+107
+00:04:45.920 --> 00:04:48.775
+Without a stop, the AI decides on its own when it's
+
+108
+00:04:48.800 --> 00:04:49.380
+done.
+
+109
+00:04:49.900 --> 00:04:53.180
+Sometimes it stops early, but often it goes way too far.
+
+110
+00:04:53.240 --> 00:04:56.875
+Lucia asked for a comparison of microscope kits for the lab,
+
+111
+00:04:56.900 --> 00:05:00.320
+Just like that, with no limit, and got 5 pages.
+
+112
+00:05:00.420 --> 00:05:02.955
+With kits from stores she'd never heard of.
+
+113
+00:05:02.980 --> 00:05:06.295
+Then she limited it to 3 kits, to the catalogs she
+
+114
+00:05:06.320 --> 00:05:08.560
+pasted, and to one table.
+
+115
+00:05:08.660 --> 00:05:10.980
+With deliver and stop at the end.
+
+116
+00:05:11.060 --> 00:05:14.295
+She got 1 page, 3 rows, ready to check, all from
+
+117
+00:05:14.320 --> 00:05:15.735
+the material she provided.
+
+118
+00:05:15.760 --> 00:05:16.835
+Pause the video now.
+
+119
+00:05:16.860 --> 00:05:20.115
+Pick a research task you'd do this week, gather 3 fictional
+
+120
+00:05:20.140 --> 00:05:23.100
+or public options, and fill in the 5 parts.
+
+121
+00:05:23.520 --> 00:05:26.135
+Send it in work, if your account has it, or in
+
+122
+00:05:26.160 --> 00:05:27.355
+the regular chat.
+
+123
+00:05:27.380 --> 00:05:30.455
+Check that only your options came back in the format you
+
+124
+00:05:30.480 --> 00:05:33.600
+asked for, with not informed wherever data was missing.
+
+125
+00:05:34.360 --> 00:05:36.000
+The work order mentions files.
+
+126
+00:05:36.740 --> 00:05:39.080
+But can the AI really read each one?
+
+127
+00:05:39.320 --> 00:05:41.960
+Many task failures are access failures.
+
+128
+00:05:42.000 --> 00:05:42.900
+You imagine?
+
+129
+00:05:43.420 --> 00:05:46.120
+The AI can see a folder that was never shared.
+
+130
+00:05:47.020 --> 00:05:49.960
+And the answer talks about documents the model didn't read.
+
+131
+00:05:50.100 --> 00:05:52.675
+Desktop is the app that lives on your computer.
+
+132
+00:05:52.700 --> 00:05:55.635
+If your app offers it, it can open folders and other
+
+133
+00:05:55.660 --> 00:05:57.860
+apps, always with your permission.
+
+134
+00:05:58.160 --> 00:06:00.850
+But having the app doesn't give it access to all your
+
+135
+00:06:00.875 --> 00:06:01.835
+documents.
+
+136
+00:06:02.035 --> 00:06:05.375
+In the browser chat, you attach or paste each file.
+
+137
+00:06:05.495 --> 00:06:07.635
+There are different paths with the same rule.
+
+138
+00:06:07.795 --> 00:06:09.655
+The AI only reads what reached it.
+
+139
+00:06:10.935 --> 00:06:14.210
+Lúcia uses the browser chat on the school computer and desktop
+
+140
+00:06:14.235 --> 00:06:15.495
+on her laptop at home.
+
+141
+00:06:16.115 --> 00:06:19.290
+And in both, she checks what the AI received before asking
+
+142
+00:06:19.315 --> 00:06:20.190
+for the work.
+
+143
+00:06:20.215 --> 00:06:23.670
+Giving access is like handing over the key to one drawer,
+
+144
+00:06:23.695 --> 00:06:24.995
+not to the whole school.
+
+145
+00:06:25.235 --> 00:06:27.495
+Put only what the task needs in a subfolder.
+
+146
+00:06:28.075 --> 00:06:31.475
+And when the app asks for access, choose just that subfolder.
+
+147
+00:06:32.235 --> 00:06:34.330
+Screen names change between versions.
+
+148
+00:06:34.355 --> 00:06:37.575
+What doesn't change is choosing the smallest folder possible.
+
+149
+00:06:39.075 --> 00:06:42.390
+Denise's Science Fair folder had three versions of the budget, and
+
+150
+00:06:42.415 --> 00:06:45.715
+she wanted to test the AI without risking the original.
+
+151
+00:06:46.215 --> 00:06:49.850
+She allowed only a subfolder of samples with two copies.
+
+152
+00:06:49.875 --> 00:06:52.990
+Before the comparison, she asked for the list of files the
+
+153
+00:06:53.015 --> 00:06:55.890
+AI could read, with the first and last line of each
+
+154
+00:06:55.915 --> 00:06:56.595
+one.
+
+155
+00:06:56.855 --> 00:06:58.975
+A name alone doesn't prove it was read.
+
+156
+00:06:59.015 --> 00:07:01.470
+The first and last line show that the beginning and the
+
+157
+00:07:01.495 --> 00:07:04.195
+end came through, and you check them against the file.
+
+158
+00:07:04.675 --> 00:07:07.830
+If the list is wrong, the problem is access, not the
+
+159
+00:07:07.855 --> 00:07:08.235
+request.
+
+160
+00:07:08.935 --> 00:07:12.190
+And what if desktop isn't on your account, or can't reach
+
+161
+00:07:12.215 --> 00:07:13.135
+the folder?
+
+162
+00:07:13.235 --> 00:07:14.575
+Deliver the files away that works.
+
+163
+00:07:15.495 --> 00:07:17.830
+Attach them in the chat, with the button next to the
+
+164
+00:07:17.855 --> 00:07:21.070
+message box, or paste the text with a header that has
+
+165
+00:07:21.095 --> 00:07:21.710
+the file name on top.
+
+166
+00:07:21.735 --> 00:07:24.990
+That's what Lúcia did with the procedure for a water and
+
+167
+00:07:25.015 --> 00:07:27.310
+oil experiment and the materials list.
+
+168
+00:07:27.335 --> 00:07:30.630
+She asked for the list before the summary, and the AI
+
+169
+00:07:30.655 --> 00:07:33.870
+gave back both names with the right first and last lines.
+
+170
+00:07:33.895 --> 00:07:37.255
+Pause the video and set up your practice folder.
+
+171
+00:07:37.855 --> 00:07:44.310
+In Documents, create the folder Trano with two text files, a
+
+172
+00:07:44.335 --> 00:07:48.175
+visual A and a visual B, with three made-up lines each.
+
+173
+00:07:48.235 --> 00:07:51.710
+Attach or paste them in the chat and ask for the
+
+174
+00:07:51.735 --> 00:07:53.755
+list, without summarizing it.
+
+175
+00:07:53.835 --> 00:07:54.715
+Check names and lines.
+
+176
+00:07:55.275 --> 00:07:57.850
+If something's wrong, send them again and ask for the list
+
+177
+00:07:57.875 --> 00:07:58.135
+again.
+
+178
+00:07:58.700 --> 00:07:59.940
+The file was read.
+
+179
+00:08:00.920 --> 00:08:02.640
+But where does the work happen?
+
+180
+00:08:02.720 --> 00:08:04.920
+And what happens if you close your laptop?
+
+181
+00:08:05.340 --> 00:08:08.135
+A task doesn't keep going just because it started on a
+
+182
+00:08:08.160 --> 00:08:09.195
+modern screen.
+
+183
+00:08:09.220 --> 00:08:11.135
+If you don't know where it runs, you don't know why
+
+184
+00:08:11.160 --> 00:08:13.640
+it stopped, or where to look for the result.
+
+185
+00:08:13.860 --> 00:08:16.820
+In local execution, the work runs on your machine.
+
+186
+00:08:16.920 --> 00:08:19.040
+It's like a cake in your oven at home.
+
+187
+00:08:19.120 --> 00:08:21.480
+If the power goes out, the oven stops.
+
+188
+00:08:21.520 --> 00:08:24.720
+Power, network, and your computer's permissions all matter.
+
+189
+00:08:26.180 --> 00:08:29.695
+Lucia asked desktop to review the lesson plans that only exist
+
+190
+00:08:29.720 --> 00:08:30.900
+on her laptop.
+
+191
+00:08:31.440 --> 00:08:34.355
+The task ran on the laptop, read the folder with the
+
+192
+00:08:34.380 --> 00:08:37.415
+term's lesson plans, and saved to that same folder.
+
+193
+00:08:37.440 --> 00:08:39.815
+At 6 in the evening, she closed the lid and went
+
+194
+00:08:39.840 --> 00:08:40.600
+home.
+
+195
+00:08:40.720 --> 00:08:43.880
+The next day, the review had stopped halfway through.
+
+196
+00:08:44.800 --> 00:08:47.540
+In the cloud, the work runs on remote computers.
+
+197
+00:08:48.180 --> 00:08:49.400
+It's like the bakery.
+
+198
+00:08:49.500 --> 00:08:52.075
+The oven doesn't depend on your house, but the baker only
+
+199
+00:08:52.100 --> 00:08:53.740
+has the ingredients you brought.
+
+200
+00:08:53.780 --> 00:08:55.415
+the chat you already use is an example.
+
+201
+00:08:55.440 --> 00:08:59.068
+The model works on the company's computers and that's why it
+
+202
+00:08:59.093 --> 00:09:01.788
+only knows what you pasted or attached.
+
+203
+00:09:01.813 --> 00:09:04.028
+Denise wants the draft of the attendance report to be ready
+
+204
+00:09:04.053 --> 00:09:06.548
+even if she turns off her laptop.
+
+205
+00:09:06.573 --> 00:09:08.728
+For that, the spreadsheet needs to be somewhere the cloud can
+
+206
+00:09:08.753 --> 00:09:09.828
+reach.
+
+207
+00:09:09.853 --> 00:09:12.128
+Neither one is better.
+
+208
+00:09:12.153 --> 00:09:15.708
+Local depends on your computer being on, with network, and it
+
+209
+00:09:15.733 --> 00:09:18.228
+reads the folders on your machine that you allow.
+
+210
+00:09:18.253 --> 00:09:21.268
+The cloud depends on the tool and your plan, and it
+
+211
+00:09:21.293 --> 00:09:24.848
+It only reads the file sent or connected to it.
+
+212
+00:09:24.873 --> 00:09:27.408
+Each one has a dependency you need to know.
+
+213
+00:09:27.433 --> 00:09:29.128
+Watch out for a common assumption.
+
+214
+00:09:29.153 --> 00:09:32.448
+I started it in work, so it runs on its own.
+
+215
+00:09:32.473 --> 00:09:35.448
+Some environments keep going without your machine on.
+
+216
+00:09:35.473 --> 00:09:38.668
+But that depends on the feature, not on the name of
+
+217
+00:09:38.693 --> 00:09:39.068
+the screen.
+
+218
+00:09:39.093 --> 00:09:42.148
+When in doubt, look it up on the tool's help page.
+
+219
+00:09:42.173 --> 00:09:43.428
+Or test it.
+
+220
+00:09:43.453 --> 00:09:46.828
+Start a short task, close your laptop for 10 minutes and
+
+221
+00:09:46.853 --> 00:09:48.428
+see if it moved forward.
+
+222
+00:09:48.453 --> 00:09:53.328
+Denise wrote down on the project sheet created in lesson 5
+
+223
+00:09:53.353 --> 00:09:56.828
+where the report runs, where it reads from and where it
+
+224
+00:09:56.853 --> 00:09:57.673
+saves.
+
+225
+00:09:57.933 --> 00:09:59.602
+And she wrote a pending item.
+
+226
+00:09:59.627 --> 00:10:02.762
+She doesn't know how long the draft stays stored in the
+
+227
+00:10:02.787 --> 00:10:03.482
+task.
+
+228
+00:10:03.507 --> 00:10:07.822
+With that, she went to ask the school support team, pause
+
+229
+00:10:07.847 --> 00:10:10.542
+the video and do the same for one of your tasks,
+
+230
+00:10:10.567 --> 00:10:13.462
+on the sheet or in a notepad.
+
+231
+00:10:13.487 --> 00:10:17.282
+Whatever you don't know becomes a pending item, along with where
+
+232
+00:10:17.307 --> 00:10:18.642
+you look for the answer.
+
+233
+00:10:18.667 --> 00:10:22.442
+Now, let's bring the request, the files and the check together
+
+234
+00:10:22.467 --> 00:10:24.322
+in a single text.
+
+235
+00:10:24.347 --> 00:10:26.342
+The delivery contract.
+
+236
+00:10:26.367 --> 00:10:28.382
+Think of the work order at a repair shop.
+
+237
+00:10:28.407 --> 00:10:29.867
+It has fixed fields.
+
+238
+00:10:29.907 --> 00:10:33.522
+The device, the problem, what not to touch and how to
+
+239
+00:10:33.547 --> 00:10:34.962
+test it at pickup.
+
+240
+00:10:34.987 --> 00:10:36.507
+Nobody writes fix it well.
+
+241
+00:10:37.787 --> 00:10:41.262
+The delivery contract is the work order from lesson 8 with
+
+242
+00:10:41.287 --> 00:10:42.462
+a 6-part verification.
+
+243
+00:10:42.487 --> 00:10:49.622
+So, you have go, inputs, output, limits, verification and stop.
+
+244
+00:10:49.647 --> 00:10:51.002
+One sentence each.
+
+245
+00:10:51.027 --> 00:10:54.147
+The authorization from module one fits inside it.
+
+246
+00:10:54.287 --> 00:10:58.282
+Goal and stop stay, files become inputs, actions and time become
+
+247
+00:10:58.307 --> 00:10:58.847
+limits.
+
+248
+00:10:59.347 --> 00:11:02.295
+Denise filled in the six fields in four minutes, for the
+
+249
+00:11:02.320 --> 00:11:05.515
+draft minutes of the teaching staff meeting based on the agenda.
+
+250
+00:11:05.540 --> 00:11:09.435
+They're fields of a work order, not magic words.
+
+251
+00:11:09.460 --> 00:11:13.235
+Write the minutes leaves, open the format, the length, and what
+
+252
+00:11:13.260 --> 00:11:14.555
+to do about what's missing.
+
+253
+00:11:14.580 --> 00:11:18.115
+Look at what happened when Denise asked for good minutes, with
+
+254
+00:11:18.140 --> 00:11:19.800
+only the agenda pasted in.
+
+255
+00:11:19.840 --> 00:11:22.495
+She got minutes of a meeting held on March 12th at
+
+256
+00:11:22.520 --> 00:11:26.055
+2 in the afternoon in the teacher's lounge.
+
+257
+00:11:26.080 --> 00:11:29.155
+Date, time and place weren't in the agenda.
+
+258
+00:11:29.180 --> 00:11:31.520
+The AI filled them in with a guess.
+
+259
+00:11:31.900 --> 00:11:34.655
+With the six fields, the answer changed.
+
+260
+00:11:34.680 --> 00:11:37.415
+She got one line per item, with Lucia on the science
+
+261
+00:11:37.440 --> 00:11:40.415
+fair calendar and Marcos on math tutoring.
+
+262
+00:11:40.440 --> 00:11:43.755
+The date was marked as not informed and so was the
+
+263
+00:11:43.780 --> 00:11:47.215
+third item, which had no one responsible in the agenda.
+
+264
+00:11:47.240 --> 00:11:49.335
+At the end, the verification.
+
+265
+00:11:49.360 --> 00:11:52.235
+The three items and The two people responsible are in the
+
+266
+00:11:52.260 --> 00:11:54.835
+minutes and nothing was sent.
+
+267
+00:11:54.860 --> 00:11:59.395
+The contract settled the format, the length and what's missing and
+
+268
+00:11:59.420 --> 00:12:00.820
+the AI stopped guessing.
+
+269
+00:12:01.140 --> 00:12:04.740
+Good, clear and complete are wishes.
+
+270
+00:12:04.860 --> 00:12:06.480
+And nobody can check a wish.
+
+271
+00:12:06.800 --> 00:12:10.135
+Verification uses criteria that anyone can check by looking at the
+
+272
+00:12:10.160 --> 00:12:13.080
+result, like the quality ruler from lesson 4.
+
+273
+00:12:13.140 --> 00:12:15.660
+Lucia used to ask for well-explained experiment procedures.
+
+274
+00:12:16.320 --> 00:12:17.720
+She swapped that for two criteria.
+
+275
+00:12:18.300 --> 00:12:22.055
+Each step starts with a verb, and every material mentioned in
+
+276
+00:12:22.080 --> 00:12:24.820
+the steps is on the materials list.
+
+277
+00:12:24.880 --> 00:12:27.700
+Now she checks each procedure in a minute.
+
+278
+00:12:27.740 --> 00:12:29.875
+And the easier it is to check, the sooner a slip
+
+279
+00:12:29.900 --> 00:12:30.675
+shows up.
+
+280
+00:12:30.700 --> 00:12:34.740
+In Denise's minutes, the verification said two people responsible.
+
+281
+00:12:34.920 --> 00:12:37.435
+She counted in the agenda and in the minutes two and
+
+282
+00:12:37.460 --> 00:12:42.135
+two in 30 seconds because the minutes were a list.
+
+283
+00:12:42.160 --> 00:12:45.035
+Pause the video and fill in a contract with a made-up
+
+284
+00:12:45.060 --> 00:12:46.220
+five-item agenda.
+
+285
+00:12:47.280 --> 00:12:47.920
+No real names.
+
+286
+00:12:48.780 --> 00:12:52.055
+Send it in the chat, check one criterion directly against the
+
+287
+00:12:52.080 --> 00:12:55.480
+agenda, and save the answer for the next lesson.
+
+288
+00:12:55.540 --> 00:12:56.680
+The AI said it's done.
+
+289
+00:12:57.460 --> 00:12:58.135
+Is it really done?
+
+290
+00:12:58.160 --> 00:13:01.655
+the word done doesn't show that the file opens or that
+
+291
+00:13:01.680 --> 00:13:03.140
+the data was kept.
+
+292
+00:13:03.880 --> 00:13:07.596
+A small check done by you usually finds more problems than
+
+293
+00:13:07.621 --> 00:13:09.676
+asking again to make it better.
+
+294
+00:13:09.701 --> 00:13:12.676
+It's like checking your grocery bag against the receipt before you
+
+295
+00:13:12.701 --> 00:13:13.356
+leave.
+
+296
+00:13:13.381 --> 00:13:15.496
+It's not enough for the bag to be full.
+
+297
+00:13:15.521 --> 00:13:18.176
+Every item on the receipt has to be there and nothing
+
+298
+00:13:18.201 --> 00:13:19.101
+extra.
+
+299
+00:13:19.561 --> 00:13:22.556
+Lucia got the minutes from the science department meeting and compared
+
+300
+00:13:22.581 --> 00:13:24.521
+each decision with the agenda.
+
+301
+00:13:24.601 --> 00:13:28.156
+For the lab schedule, the person responsible was herself, same as
+
+302
+00:13:28.181 --> 00:13:29.256
+the agenda.
+
+303
+00:13:29.281 --> 00:13:32.956
+For buying reagents, the agenda said not defined, and the minutes
+
+304
+00:13:32.981 --> 00:13:36.476
+had someone named Paulo, a made-up name, found in two minutes
+
+305
+00:13:36.501 --> 00:13:37.396
+of comparing.
+
+306
+00:13:37.421 --> 00:13:39.296
+The minutes looked complete.
+
+307
+00:13:39.321 --> 00:13:42.436
+Only the line-by-line comparison showed the error.
+
+308
+00:13:42.461 --> 00:13:44.256
+You don't need to reread everything.
+
+309
+00:13:44.281 --> 00:13:45.256
+Pick three points.
+
+310
+00:13:45.281 --> 00:13:49.456
+A fact that matches the source, a format that's what you
+
+311
+00:13:49.481 --> 00:13:53.376
+asked for, and an action that works or was done the
+
+312
+00:13:53.401 --> 00:13:54.516
+way you agreed.
+
+313
+00:13:54.541 --> 00:13:57.796
+In the attendance report, Denise checked whether the total absences
+
+314
+00:13:57.821 --> 00:14:01.316
+for 7th grade A matched the sum in the spreadsheet, whether
+
+315
+00:14:01.341 --> 00:14:04.316
+the file opened with one column per month and whether the
+
+316
+00:14:04.341 --> 00:14:06.796
+spreadsheet link, mentioned in the report, opened.
+
+317
+00:14:06.821 --> 00:14:09.636
+It's also worth asking the AI for evidence.
+
+318
+00:14:09.661 --> 00:14:11.776
+I reviewed everything and it's correct.
+
+319
+00:14:11.801 --> 00:14:13.738
+Doesn't say what was reviewed.
+
+320
+00:14:13.763 --> 00:14:16.058
+Ask it to show what it checked side by side with
+
+321
+00:14:16.083 --> 00:14:18.578
+the source and to say what it didn't check.
+
+322
+00:14:18.603 --> 00:14:22.318
+A test that was run isn't a test that was suggested.
+
+323
+00:14:22.343 --> 00:14:25.038
+And even the AIs I checked, it is a claim.
+
+324
+00:14:25.063 --> 00:14:27.598
+Spot check one item on the list.
+
+325
+00:14:27.623 --> 00:14:31.078
+Finally, write down what you observed in each check with the
+
+326
+00:14:31.103 --> 00:14:32.198
+exact result.
+
+327
+00:14:32.223 --> 00:14:33.258
+Found an error?
+
+328
+00:14:33.283 --> 00:14:37.878
+Fix the request to before you reuse it or the source
+
+329
+00:14:37.903 --> 00:14:40.478
+if the error came from there.
+
+330
+00:14:40.503 --> 00:14:43.538
+Otherwise, the error comes back next time.
+
+331
+00:14:43.563 --> 00:14:48.058
+Lucia corrected the name in the minutes and added a line
+
+332
+00:14:48.083 --> 00:14:49.958
+to the delivery contract.
+
+333
+00:14:49.983 --> 00:14:54.498
+Anyone responsible that the agenda doesn't define becomes not informed.
+
+334
+00:14:54.523 --> 00:14:58.278
+And if you don't find any error at all, that's a
+
+335
+00:14:58.303 --> 00:14:58.778
+great sign.
+
+336
+00:14:58.803 --> 00:15:02.278
+Write down what you compared it with, because the log shows
+
+337
+00:15:02.303 --> 00:15:04.918
+you looked, not just that you trusted it.
+
+338
+00:15:04.943 --> 00:15:06.238
+Pause the video now.
+
+339
+00:15:06.263 --> 00:15:10.738
+Take the delivery you saved in lesson 11, or the practice
+
+340
+00:15:10.763 --> 00:15:12.743
+agenda and minutes from this lesson.
+
+341
+00:15:13.123 --> 00:15:16.299
+Check a fact, a format and an action, like something sent
+
+342
+00:15:16.324 --> 00:15:20.679
+without permission, and write three notes with the result of each.
+
+343
+00:15:20.704 --> 00:15:22.044
+Let's put it all together.
+
+344
+00:15:23.584 --> 00:15:26.719
+For a small question, the chat is enough, as long as
+
+345
+00:15:26.744 --> 00:15:30.099
+you say who it's for and what it's for, and ask
+
+346
+00:15:30.124 --> 00:15:31.299
+for the assumptions.
+
+347
+00:15:31.324 --> 00:15:35.139
+For a bigger task, you write a work order with goal,
+
+348
+00:15:35.164 --> 00:15:38.239
+inputs, output, limits and stop.
+
+349
+00:15:38.264 --> 00:15:42.139
+Before the work, you confirm what the AI read, with the
+
+350
+00:15:42.164 --> 00:15:45.079
+name and the first and last line.
+
+351
+00:15:45.104 --> 00:15:48.379
+You know where the task runs, reads and saves.
+
+352
+00:15:48.404 --> 00:15:51.259
+And whatever you don't know becomes a pending item.
+
+353
+00:15:51.284 --> 00:15:54.919
+You bring it all together in a delivery contract with a
+
+354
+00:15:54.944 --> 00:15:56.959
+verification someone else can check.
+
+355
+00:15:56.984 --> 00:16:00.459
+And you only call it done after checking a fact, a
+
+356
+00:16:00.484 --> 00:16:02.064
+format and an action.
+
+357
+00:16:02.164 --> 00:16:05.544
+When you have about 30 minutes, do the module's optional lab,
+
+358
+00:16:06.484 --> 00:16:09.279
+from loose question to work order in the additional material for
+
+359
+00:16:09.304 --> 00:16:09.844
+lesson 12.
+
+360
+00:16:10.624 --> 00:16:13.584
+In module 3, terminal and codecs in practice.
+
+361
+00:16:14.204 --> 00:16:18.659
+The delivery contract comes along, now with an AI that works
+
+362
+00:16:18.684 --> 00:16:19.744
+in a folder of yours.
+
+363
+00:16:20.764 --> 00:16:21.422
+See you there.

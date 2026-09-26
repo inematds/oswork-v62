@@ -1,0 +1,1473 @@
+WEBVTT
+
+1
+00:00:00.320 --> 00:00:03.535
+Hi, I'm Neymar Odaner and this is module 7 of OS
+
+2
+00:00:03.560 --> 00:00:04.240
+Work.
+
+3
+00:00:04.820 --> 00:00:07.615
+In the last module, you learned to save versions of your
+
+4
+00:00:07.640 --> 00:00:10.480
+work with Git, so nothing gets lost.
+
+5
+00:00:10.800 --> 00:00:12.535
+Now, we're going to find a way to talk to a
+
+6
+00:00:12.560 --> 00:00:14.780
+program of yours from your phone, using Telegram.
+
+7
+00:00:15.280 --> 00:00:17.335
+By the end of this module, you'll have a bot of
+
+8
+00:00:17.360 --> 00:00:21.735
+your own, created on Telegram, with its key kept in a
+
+9
+00:00:21.760 --> 00:00:26.395
+place nobody sees, serving only the people you've authorized, and
+
+10
+00:00:26.420 --> 00:00:29.980
+answering two lookup commands without executing any message.
+
+11
+00:00:30.260 --> 00:00:33.215
+You'll also know where an AI could come in without messing
+
+12
+00:00:33.240 --> 00:00:36.255
+up the numbers and how to test everything before you trust
+
+13
+00:00:36.280 --> 00:00:36.520
+it.
+
+14
+00:00:37.780 --> 00:00:40.295
+Denise and Lucia are still with us.
+
+15
+00:00:40.320 --> 00:00:43.355
+Lucia is going to build a bot for the Grammys fictional
+
+16
+00:00:43.380 --> 00:00:44.515
+school shop.
+
+17
+00:00:44.540 --> 00:00:46.575
+Each lesson has a short practice.
+
+18
+00:00:46.600 --> 00:00:49.020
+When I ask, pause the video and do it right then.
+
+19
+00:00:49.340 --> 00:00:52.355
+Let's start by separating two things that usually get mixed up.
+
+20
+00:00:52.380 --> 00:00:54.655
+When you chat with a bot on Telegram, the app on
+
+21
+00:00:54.680 --> 00:00:57.715
+your phone only carries your message and brings the reply back.
+
+22
+00:00:57.740 --> 00:01:01.415
+The one that reads, decides and replies is a program running
+
+23
+00:01:01.440 --> 00:01:02.255
+on your computer.
+
+24
+00:01:02.280 --> 00:01:04.435
+Think of the intercom at the gatehouse.
+
+25
+00:01:04.460 --> 00:01:07.864
+The device carries the voice, but the person inside is the
+
+26
+00:01:07.889 --> 00:01:09.564
+one who opens the gate.
+
+27
+00:01:09.589 --> 00:01:12.544
+Denise heard that another school had an agent on Telegram.
+
+28
+00:01:12.569 --> 00:01:15.444
+She asked what it did and found out it was three
+
+29
+00:01:15.469 --> 00:01:17.669
+canned replies with no AI at all.
+
+30
+00:01:18.689 --> 00:01:20.784
+The name promised more than the thing delivered.
+
+31
+00:01:20.809 --> 00:01:22.984
+So keep this division in mind.
+
+32
+00:01:23.009 --> 00:01:26.224
+Telegram receives what you write and delivers the reply in the
+
+33
+00:01:26.249 --> 00:01:27.084
+same chat.
+
+34
+00:01:27.109 --> 00:01:31.944
+Your program checks who wrote and which command it is, executes
+
+35
+00:01:31.969 --> 00:01:35.284
+only the allowed function, and builds the reply.
+
+36
+00:01:35.309 --> 00:01:38.524
+Both parts are needed, but only one decides.
+
+37
+00:01:38.549 --> 00:01:41.544
+The bot in the course kit has two work commands and
+
+38
+00:01:41.569 --> 00:01:42.884
+neither uses AI.
+
+39
+00:01:42.909 --> 00:01:45.964
+The status command confirms it's running.
+
+40
+00:01:45.989 --> 00:01:50.864
+The relatorial command, which means report, adds up three fictional
+
+41
+00:01:50.889 --> 00:01:56.444
+sales from a file called vendas.csv, a spreadsheet in plain text.
+
+42
+00:01:56.469 --> 00:02:00.344
+Lúcia will use this bot to check on the Grammys shop,
+
+43
+00:02:00.369 --> 00:02:02.329
+notebook, pen and planner.
+
+44
+00:02:02.509 --> 00:02:05.104
+She sends a relatório and the bot replies that there were
+
+45
+00:02:05.129 --> 00:02:07.484
+three sales totaling 100 reais.
+
+46
+00:02:07.509 --> 00:02:11.174
+That total comes from a calculation the program makes, not from
+
+47
+00:02:11.199 --> 00:02:12.059
+a guess.
+
+48
+00:02:12.599 --> 00:02:14.379
+That's what deterministic means.
+
+49
+00:02:14.619 --> 00:02:17.279
+The same request always gets the same reply.
+
+50
+00:02:18.279 --> 00:02:20.159
+And there's one more important detail.
+
+51
+00:02:20.359 --> 00:02:23.239
+Whoever writes on Telegram doesn't control the computer.
+
+52
+00:02:23.319 --> 00:02:26.754
+The bot compares the message with a short list of known
+
+53
+00:02:26.779 --> 00:02:30.579
+commands, and everything else gets the same standard reply.
+
+54
+00:02:31.199 --> 00:02:31.494
+Unknown command.
+
+55
+00:02:31.519 --> 00:02:34.674
+That goes even for the bot's owner.
+
+56
+00:02:34.699 --> 00:02:40.014
+Denise imagined a school office bot that received the sentence, delete
+
+57
+00:02:40.039 --> 00:02:41.419
+yesterday's absences.
+
+58
+00:02:42.139 --> 00:02:45.794
+With a closed list of commands, that sentence comes back as
+
+59
+00:02:45.819 --> 00:02:48.474
+a known command and nothing is deleted.
+
+60
+00:02:48.499 --> 00:02:51.794
+That's why, before you think about AI, you draw the whole
+
+61
+00:02:51.819 --> 00:02:53.339
+path of a message.
+
+62
+00:02:53.399 --> 00:02:55.994
+Then you mark the step where it would really help.
+
+63
+00:02:56.019 --> 00:02:57.819
+A good candidate is the function.
+
+64
+00:02:57.859 --> 00:03:00.079
+It could gain a text summary built from the numbers.
+
+65
+00:03:00.699 --> 00:03:01.594
+The rule is firm.
+
+66
+00:03:01.619 --> 00:03:05.634
+The number stays the program's number.
+
+67
+00:03:05.659 --> 00:03:07.994
+Lucia marked that step.
+
+68
+00:03:08.019 --> 00:03:11.274
+The AI could write that the planner was the biggest sale
+
+69
+00:03:11.299 --> 00:03:14.394
+as long as the 100 reais total stays exactly as the
+
+70
+00:03:14.419 --> 00:03:16.374
+program calculated it.
+
+71
+00:03:16.399 --> 00:03:17.703
+Now pause the video.
+
+72
+00:03:17.728 --> 00:03:21.603
+On paper, draw five boxes in a row.
+
+73
+00:03:21.628 --> 00:03:25.803
+Phone, Telegram, Bot, Allowed Function and Reply.
+
+74
+00:03:25.828 --> 00:03:28.723
+Under each one, write who does the work.
+
+75
+00:03:28.748 --> 00:03:31.543
+Put an X in a single box and write what the
+
+76
+00:03:31.568 --> 00:03:34.323
+AI would do there without changing numbers.
+
+77
+00:03:34.348 --> 00:03:37.823
+Every Telegram bot is born in a chat with Botfather.
+
+78
+00:03:37.848 --> 00:03:40.163
+You send the new bot command, choose a name and a
+
+79
+00:03:40.188 --> 00:03:42.883
+username, and it gives you back the bot's token.
+
+80
+00:03:42.908 --> 00:03:46.943
+The username has to end in bot, like Lojinha Grêmio Lúcia
+
+81
+00:03:46.968 --> 00:03:51.083
+Bot, and if it's already taken, Botfather asks for another one.
+
+82
+00:03:51.108 --> 00:03:54.283
+The token is a string of numbers, a column, and letters.
+
+83
+00:03:54.308 --> 00:03:56.383
+It works like the key to the school gate.
+
+84
+00:03:56.408 --> 00:03:59.883
+Whoever has a copy gets in, whoever they are.
+
+85
+00:03:59.908 --> 00:04:02.323
+Lúcia created the shop bot in three messages.
+
+86
+00:04:02.348 --> 00:04:05.723
+But first, she checked something important, that she was talking to
+
+87
+00:04:05.748 --> 00:04:10.823
+the official Botfather with the blue verified badge and not to
+
+88
+00:04:10.848 --> 00:04:12.468
+an account with a similar name.
+
+89
+00:04:13.368 --> 00:04:14.708
+A practical detail.
+
+90
+00:04:14.908 --> 00:04:16.963
+Botfather replies in English.
+
+91
+00:04:16.988 --> 00:04:19.803
+And notice that in the lesson, the token is hidden on
+
+92
+00:04:19.828 --> 00:04:20.768
+purpose.
+
+93
+00:04:20.868 --> 00:04:23.292
+That's the same care you're going to take with yours.
+
+94
+00:04:23.580 --> 00:04:25.180
+Where do you keep that key?
+
+95
+00:04:25.520 --> 00:04:30.595
+In the bot folder, the course kit includes an example file .env.example,
+
+96
+00:04:30.620 --> 00:04:32.100
+with only fake values.
+
+97
+00:04:32.840 --> 00:04:36.680
+You make a copy called .env and paste the token inside it.
+
+98
+00:04:37.780 --> 00:04:39.175
+That file stays on your computer only.
+
+99
+00:04:39.200 --> 00:04:43.935
+The token doesn't go into a screenshot, a message, or a
+
+100
+00:04:43.960 --> 00:04:44.580
+shared document.
+
+101
+00:04:45.320 --> 00:04:48.135
+Denise thought about putting the token in the school office's instructions
+
+102
+00:04:48.160 --> 00:04:50.220
+document, so nobody would lose it.
+
+103
+00:04:50.700 --> 00:04:51.980
+She changed her mind.
+
+104
+00:04:53.000 --> 00:04:56.820
+The document says where the file is, never the value.
+
+105
+00:04:57.120 --> 00:05:00.140
+In the terminal, inside the kits.bot folder, it's four commands.
+
+106
+00:05:00.800 --> 00:05:04.715
+Go into the folder, copy the example, restrict reading with Chmod
+
+107
+00:05:04.740 --> 00:05:07.315
+600, and check with ls.
+
+108
+00:05:07.340 --> 00:05:10.455
+Chmod 600 lets only your account read and change the file.
+
+109
+00:05:10.480 --> 00:05:14.995
+The last line has to start with dash, r, w, and
+
+110
+00:05:15.020 --> 00:05:15.840
+then only dashes.
+
+111
+00:05:16.600 --> 00:05:19.375
+The first three commands show nothing when they work, and that's
+
+112
+00:05:19.400 --> 00:05:19.655
+normal.
+
+113
+00:05:19.680 --> 00:05:23.215
+If you get a message that the file doesn't exist, you're
+
+114
+00:05:23.240 --> 00:05:24.900
+not in the right folder.
+
+115
+00:05:25.600 --> 00:05:28.435
+Repeat the cd command with the path where you unzip the
+
+116
+00:05:28.460 --> 00:05:28.940
+kit.
+
+117
+00:05:29.280 --> 00:05:32.075
+And if the token shows up in a screenshot, a message
+
+118
+00:05:32.100 --> 00:05:34.240
+or a document, treat it as leaked.
+
+119
+00:05:34.265 --> 00:05:38.820
+In Botfather, send my bots, pick the bot, tap API token
+
+120
+00:05:38.845 --> 00:05:41.540
+and then revoke current token.
+
+121
+00:05:41.565 --> 00:05:45.400
+It generates a new token and the old one stops working.
+
+122
+00:05:45.425 --> 00:05:47.840
+Then replace the value in the dot environment.
+
+123
+00:05:47.865 --> 00:05:51.460
+In a meeting, Denise saw a colleague's screenshot with the token
+
+124
+00:05:51.485 --> 00:05:52.680
+in plain view.
+
+125
+00:05:52.705 --> 00:05:55.900
+She spoke up right away and the team revoked and replaced
+
+126
+00:05:55.925 --> 00:05:57.000
+it in 10 minutes.
+
+127
+00:05:57.025 --> 00:05:58.725
+Now pause the video.
+
+128
+00:05:58.845 --> 00:06:02.280
+your bot in Botfather, run the four commands, check the permissions
+
+129
+00:06:02.305 --> 00:06:08.180
+line, and with the command nano.environ, replace the placeholder text
+
+130
+00:06:08.205 --> 00:06:10.980
+preentia localmente with your token.
+
+131
+00:06:11.005 --> 00:06:12.765
+No screenshots.
+
+132
+00:06:12.965 --> 00:06:16.140
+With the token stored, another question comes up.
+
+133
+00:06:16.165 --> 00:06:18.580
+Who can talk to the bot?
+
+134
+00:06:18.605 --> 00:06:21.260
+The token proves to Telegram that your program owns the bot,
+
+135
+00:06:21.285 --> 00:06:23.380
+but it says nothing about who can talk to it.
+
+136
+00:06:23.405 --> 00:06:26.880
+That's why the kit has a second control, the access list.
+
+137
+00:06:26.905 --> 00:06:30.100
+It's like the list of who can pick up each student
+
+138
+00:06:30.125 --> 00:06:31.485
+at the end of the school day.
+
+139
+00:06:32.865 --> 00:06:34.745
+Denise explained it to the team this way.
+
+140
+00:06:34.905 --> 00:06:38.120
+The key opens the gate and the pick up list says
+
+141
+00:06:38.145 --> 00:06:39.885
+who takes each student home.
+
+142
+00:06:40.265 --> 00:06:43.885
+They're two separate checks and one doesn't replace the other.
+
+143
+00:06:44.385 --> 00:06:47.525
+Both live in the same .nv file.
+
+144
+00:06:47.991 --> 00:06:50.966
+The token on the Telegram bot token line and the list
+
+145
+00:06:50.991 --> 00:06:53.526
+on the allowed user IGS line.
+
+146
+00:06:53.551 --> 00:06:56.766
+And that list doesn't store names.
+
+147
+00:06:56.791 --> 00:06:59.146
+The name that shows up in the chat.
+
+148
+00:06:59.171 --> 00:07:01.926
+A person can change whenever they want.
+
+149
+00:07:01.951 --> 00:07:05.866
+The bot checks the numeric ID, the number Telegram gives each
+
+150
+00:07:05.891 --> 00:07:06.691
+account.
+
+151
+00:07:07.931 --> 00:07:11.566
+Lucia shows up on Telegram as luciasciencias.
+
+152
+00:07:11.591 --> 00:07:17.526
+If she changes it to Professor Lucia, the bot still recognizes
+
+153
+00:07:17.551 --> 00:07:19.991
+her, because her number is the same.
+
+154
+00:07:20.911 --> 00:07:24.211
+To find your number, the kit has an identification-only mode.
+
+155
+00:07:24.871 --> 00:07:29.266
+The command python3botpy with the identify option.
+
+156
+00:07:29.291 --> 00:07:31.826
+In this mode, the bot doesn't reply to anything on your
+
+157
+00:07:31.851 --> 00:07:33.946
+phone and doesn't execute any function.
+
+158
+00:07:33.971 --> 00:07:37.886
+You send the start command in a private chat with the
+
+159
+00:07:37.911 --> 00:07:40.806
+bot and the number shows up in the terminal on a
+
+160
+00:07:40.831 --> 00:07:43.966
+line that says ID recebido, ID received.
+
+161
+00:07:43.991 --> 00:07:47.386
+Then you copy the number and stop it with control C.
+
+162
+00:07:47.411 --> 00:07:50.886
+The number you see here on screen is fictional, yours will
+
+163
+00:07:50.911 --> 00:07:51.846
+be different.
+
+164
+00:07:51.871 --> 00:07:56.686
+If the terminal doesn't show any number, check three things that
+
+165
+00:07:56.711 --> 00:08:00.771
+you sent, start in a private chat, not in a group.
+
+166
+00:08:00.796 --> 00:08:06.011
+That the token in the .env belongs to the right bot.
+
+167
+00:08:06.036 --> 00:08:09.691
+And that identification mode was still running.
+
+168
+00:08:09.716 --> 00:08:14.251
+Before replying, the program checks three things in this order.
+
+169
+00:08:14.276 --> 00:08:15.551
+Is it a private chat?
+
+170
+00:08:15.576 --> 00:08:17.731
+If it's a group, silence.
+
+171
+00:08:17.756 --> 00:08:19.431
+Is the ID on the access list?
+
+172
+00:08:19.456 --> 00:08:21.211
+If not, silence.
+
+173
+00:08:21.236 --> 00:08:23.731
+Is the command status or Relatorio.
+
+174
+00:08:23.756 --> 00:08:29.731
+If it's any other text, the only reply is unknown command.
+
+175
+00:08:29.756 --> 00:08:34.251
+And only then does it execute that command's function.
+
+176
+00:08:34.276 --> 00:08:38.951
+Denise wanted to test Lucia's bot, sent Relatorio, and got nothing
+
+177
+00:08:38.976 --> 00:08:39.711
+back.
+
+178
+00:08:39.736 --> 00:08:43.091
+It wasn't a bug, her number wasn't on the list.
+
+179
+00:08:43.116 --> 00:08:49.731
+With your number in hand, and open the .env and replace 123456789,
+
+180
+00:08:49.756 --> 00:08:52.291
+which is just the kit's example, with your ID.
+
+181
+00:08:52.316 --> 00:08:56.411
+For more people, separate the numbers with commas.
+
+182
+00:08:56.436 --> 00:08:58.191
+But start with just yourself.
+
+183
+00:08:58.216 --> 00:09:00.096
+Pause the video.
+
+184
+00:09:00.156 --> 00:09:05.171
+Check that Python 3 is version 3.10 or higher, run identification
+
+185
+00:09:05.196 --> 00:09:08.396
+mode, write down your number and put it on the list.
+
+186
+00:09:08.760 --> 00:09:11.660
+With the list ready, how does the bot keep listening?
+
+187
+00:09:12.200 --> 00:09:15.375
+With long polling, the program asks Telegram whether a new message
+
+188
+00:09:15.400 --> 00:09:16.440
+has arrived.
+
+189
+00:09:16.600 --> 00:09:19.620
+If not, it waits up to 25 seconds and asks again.
+
+190
+00:09:20.040 --> 00:09:22.255
+It's like stopping by your cubby in the teacher's room and
+
+191
+00:09:22.280 --> 00:09:24.500
+lingering for a moment in case a note shows up.
+
+192
+00:09:25.400 --> 00:09:28.455
+There's another way, the webhook, which would be the mail carrier
+
+193
+00:09:28.480 --> 00:09:30.060
+ringing the doorbell.
+
+194
+00:09:30.140 --> 00:09:32.915
+Telegram calls an address of yours on the internet, but that
+
+195
+00:09:32.940 --> 00:09:34.680
+requires a public address.
+
+196
+00:09:34.880 --> 00:09:36.820
+And it isn't used in this module.
+
+197
+00:09:37.320 --> 00:09:40.280
+Both work, but the kit uses the first one.
+
+198
+00:09:40.500 --> 00:09:43.935
+Lucia left the bot running on her laptop, at home, and
+
+199
+00:09:43.960 --> 00:09:45.920
+didn't have to touch any network settings.
+
+200
+00:09:46.540 --> 00:09:49.255
+The program goes out to fetch the messages, and nobody needs
+
+201
+00:09:49.280 --> 00:09:50.800
+to get into her computer.
+
+202
+00:09:51.240 --> 00:09:54.895
+To start it, in the terminal, in the bot folder, run
+
+203
+00:09:54.920 --> 00:09:57.575
+python3botpy, no line appears.
+
+204
+00:09:57.600 --> 00:09:57.955
+And that's the right sign.
+
+205
+00:09:57.980 --> 00:10:00.380
+The program is waiting.
+
+206
+00:10:00.420 --> 00:10:02.080
+The terminal has to stay open.
+
+207
+00:10:02.740 --> 00:10:06.320
+Close the window or press ctrl-c, and the bot stops replying.
+
+208
+00:10:06.720 --> 00:10:10.220
+Denise found the still screen strange and almost closed it.
+
+209
+00:10:10.260 --> 00:10:14.875
+Lucia explained, I screen with no new lines is the bot
+
+210
+00:10:14.900 --> 00:10:18.246
+working, and a new line is usually a warning.
+
+211
+00:10:18.506 --> 00:10:22.141
+With the bot running, send status and relatorio in the private
+
+212
+00:10:22.166 --> 00:10:22.901
+chat.
+
+213
+00:10:22.926 --> 00:10:25.441
+But before you start it, look at the file with the
+
+214
+00:10:25.466 --> 00:10:27.786
+command cat vendas.csv.
+
+215
+00:10:28.986 --> 00:10:32.681
+Because afterwards the terminal is busy, Lucia added it up on
+
+216
+00:10:32.706 --> 00:10:33.546
+paper.
+
+217
+00:10:33.726 --> 00:10:36.906
+3550 plus 950 plus 55.
+
+218
+00:10:37.526 --> 00:10:39.081
+That came to 100 reais.
+
+219
+00:10:39.106 --> 00:10:41.401
+the same number as the bot.
+
+220
+00:10:41.426 --> 00:10:44.941
+A total that matches the file is a verified result, not
+
+221
+00:10:44.966 --> 00:10:46.026
+an impression.
+
+222
+00:10:46.526 --> 00:10:48.141
+One more precaution.
+
+223
+00:10:48.166 --> 00:10:51.381
+Keep a single program fetching messages for each bot.
+
+224
+00:10:51.406 --> 00:10:55.261
+Two at the same time, with the same token, compete for
+
+225
+00:10:55.286 --> 00:10:57.941
+the messages, and Telegram refuses.
+
+226
+00:10:57.966 --> 00:11:01.821
+The kit notices that conflict and shuts itself down with a
+
+227
+00:11:01.846 --> 00:11:04.581
+warning in the log, which shows up right in the terminal
+
+228
+00:11:04.606 --> 00:11:06.461
+without revealing the token.
+
+229
+00:11:06.486 --> 00:11:10.941
+The warning number is 409, which means conflict.
+
+230
+00:11:10.966 --> 00:11:13.861
+Lúcia started the bot at home, forgetting it was still running
+
+231
+00:11:13.886 --> 00:11:16.421
+on the school laptop, and the one at home stopped with
+
+232
+00:11:16.446 --> 00:11:17.141
+that warning.
+
+233
+00:11:17.166 --> 00:11:20.341
+The next day, she stopped the one at school and restarted
+
+234
+00:11:20.366 --> 00:11:20.971
+the one at home.
+
+235
+00:11:21.511 --> 00:11:25.486
+Now pause the video, add up the sales file on paper,
+
+236
+00:11:25.511 --> 00:11:29.786
+start the bot, send status and relatório from your phone and
+
+237
+00:11:29.811 --> 00:11:30.706
+compare the total.
+
+238
+00:11:30.731 --> 00:11:34.806
+Then press Ctrl C and send status again.
+
+239
+00:11:34.831 --> 00:11:37.566
+No reply should come.
+
+240
+00:11:37.591 --> 00:11:41.026
+If the bot replies later when you restart it, that's normal.
+
+241
+00:11:41.051 --> 00:11:43.406
+The bot works without AI.
+
+242
+00:11:43.431 --> 00:11:47.286
+So where would the AI come in without spoiling the total.
+
+243
+00:11:47.311 --> 00:11:51.646
+The kit deliberately separates the message path, which is telegram,
+
+244
+00:11:51.671 --> 00:11:52.986
+from the work functions.
+
+245
+00:11:53.011 --> 00:11:56.946
+And it starts with no AI, status, and a report on
+
+246
+00:11:56.971 --> 00:11:58.246
+fictional data.
+
+247
+00:11:58.271 --> 00:12:02.066
+A predictable bot is one you can test without spending anything.
+
+248
+00:12:02.091 --> 00:12:08.766
+Only then is it worth asking whether AI improves interpretation, summarizing,
+
+249
+00:12:08.791 --> 00:12:10.346
+or classification.
+
+250
+00:12:10.371 --> 00:12:14.586
+Denise wanted a school office frequently asked questions bot with
+
+251
+00:12:14.611 --> 00:12:15.806
+AI from the start.
+
+252
+00:12:15.831 --> 00:12:17.526
+She changed the plan.
+
+253
+00:12:17.551 --> 00:12:21.986
+First, a horario command for schedules that only reads the spreadsheet
+
+254
+00:12:22.011 --> 00:12:25.706
+and the AI was left for a second step with testing.
+
+255
+00:12:25.731 --> 00:12:30.792
+If a new bot already calls an AI for everything, when
+
+256
+00:12:30.817 --> 00:12:34.312
+it gets something wrong, nobody knows whether it was the program
+
+257
+00:12:34.337 --> 00:12:36.152
+or the AI.
+
+258
+00:12:36.177 --> 00:12:39.632
+Step by step, step two is compared with the result of
+
+259
+00:12:39.657 --> 00:12:43.252
+step one and you investigate one error at a time.
+
+260
+00:12:43.277 --> 00:12:47.732
+On a report card, the grade comes from the calculation and
+
+261
+00:12:47.757 --> 00:12:50.032
+the written comment discusses it.
+
+262
+00:12:50.057 --> 00:12:53.112
+The comment never changes degrade.
+
+263
+00:12:53.137 --> 00:12:54.672
+It's the same with the bot.
+
+264
+00:12:54.697 --> 00:12:57.312
+The AI can write a summary, but the total comes from
+
+265
+00:12:57.337 --> 00:13:00.192
+the program and can't change in the text.
+
+266
+00:13:00.217 --> 00:13:04.192
+Lucia imagined a resumo command, a summary for the shop.
+
+267
+00:13:04.217 --> 00:13:07.672
+The AI would receive only the total and the three products,
+
+268
+00:13:07.697 --> 00:13:09.417
+not the entire folder of her projects.
+
+269
+00:13:10.117 --> 00:13:11.632
+Look at what happened in the chat.
+
+270
+00:13:11.657 --> 00:13:14.632
+Given the data and a request for a two-line summary, the
+
+271
+00:13:14.657 --> 00:13:18.332
+AI wrote that sales added up to about 110 reais.
+
+272
+00:13:18.357 --> 00:13:22.492
+It made up a total that doesn't exist, and that text
+
+273
+00:13:22.517 --> 00:13:24.192
+can't go out through the bot.
+
+274
+00:13:24.217 --> 00:13:27.852
+With the sentence, use only this data, don't change any number
+
+275
+00:13:27.877 --> 00:13:31.357
+and don't add data, the total came back as 100 reais.
+
+276
+00:13:32.317 --> 00:13:35.055
+With the planner as the biggest share and no new data.
+
+277
+00:13:35.420 --> 00:13:40.335
+Before switching on any AI, write the integration contract in five
+
+278
+00:13:40.360 --> 00:13:40.680
+lines.
+
+279
+00:13:41.320 --> 00:13:45.715
+The data sent, the available model, the cost limit, the maximum
+
+280
+00:13:45.740 --> 00:13:49.155
+time, and what happens when the AI fails.
+
+281
+00:13:49.180 --> 00:13:52.815
+The last line is the one most often forgotten, and it's
+
+282
+00:13:52.840 --> 00:13:55.195
+the one that keeps the bot useful even when the AI
+
+283
+00:13:55.220 --> 00:13:56.340
+doesn't answer.
+
+284
+00:13:56.480 --> 00:13:59.395
+Denise wrote the one for Horario in five minutes, and on
+
+285
+00:13:59.420 --> 00:14:02.515
+the failure line she put, Without AI, the bot sends the
+
+286
+00:14:02.540 --> 00:14:04.180
+spreadsheet row as it is.
+
+287
+00:14:04.220 --> 00:14:06.195
+The cost and time values are examples.
+
+288
+00:14:06.220 --> 00:14:07.355
+You set your own.
+
+289
+00:14:07.380 --> 00:14:08.680
+And one firm rule.
+
+290
+00:14:09.400 --> 00:14:13.100
+The message never goes straight to an agent like Codex.
+
+291
+00:14:13.320 --> 00:14:16.355
+Whoever writes on Telegram can't make an agent act on your
+
+292
+00:14:16.380 --> 00:14:17.280
+computer.
+
+293
+00:14:17.500 --> 00:14:21.495
+The AI receives a short input, built by the program, and
+
+294
+00:14:21.520 --> 00:14:22.775
+returns text.
+
+295
+00:14:22.800 --> 00:14:25.815
+Pause the video, write your contract, and test in the chat
+
+296
+00:14:25.840 --> 00:14:27.420
+that the summary keeps the 100 reais.
+
+297
+00:14:28.340 --> 00:14:31.335
+Before taking the bot anywhere, it's worth proving that it fails
+
+298
+00:14:31.360 --> 00:14:31.635
+well.
+
+299
+00:14:31.660 --> 00:14:34.975
+The kit comes with a self-test.
+
+300
+00:14:35.000 --> 00:14:39.375
+The bot runs fake messages against its own rules, with no
+
+301
+00:14:39.400 --> 00:14:41.152
+token and no internet.
+
+302
+00:14:41.177 --> 00:14:46.152
+It covers access, group, unknown command, the sum, and broken sales
+
+303
+00:14:46.177 --> 00:14:46.952
+files.
+
+304
+00:14:46.977 --> 00:14:51.112
+The command is python3bot, py, with the self-test option, and the
+
+305
+00:14:51.137 --> 00:14:54.572
+answer is a single line, starting with OK and mentioning 11
+
+306
+00:14:54.597 --> 00:14:55.552
+scenarios.
+
+307
+00:14:55.577 --> 00:14:58.432
+If a long error shows up, some scenario failed.
+
+308
+00:14:58.457 --> 00:15:01.972
+But watch out, the self-test doesn't prove that your bot talks
+
+309
+00:15:01.997 --> 00:15:02.992
+to Telegram.
+
+310
+00:15:03.017 --> 00:15:06.177
+It's simulated, and it goes in the log as simulated.
+
+311
+00:15:06.777 --> 00:15:09.232
+Denise asked whether Lucia's bot obeyed strangers.
+
+312
+00:15:09.257 --> 00:15:13.572
+Lucia showed the last line of the self-test and noted that
+
+313
+00:15:13.597 --> 00:15:15.137
+the real test was still missing.
+
+314
+00:15:16.297 --> 00:15:18.917
+With someone from outside the list.
+
+315
+00:15:19.297 --> 00:15:21.112
+It's like a sound check before the parents meeting.
+
+316
+00:15:21.137 --> 00:15:23.692
+You test the microphone with the auditorium empty.
+
+317
+00:15:23.717 --> 00:15:26.592
+On Telegram, four real tests are enough.
+
+318
+00:15:26.617 --> 00:15:32.392
+Your own status, any random sentence, a person who's not on
+
+319
+00:15:32.417 --> 00:15:34.132
+the list, and the bot switched off.
+
+320
+00:15:34.157 --> 00:15:34.692
+off.
+
+321
+00:15:34.717 --> 00:15:37.932
+If the bot still replies while it's off, there's another copy
+
+322
+00:15:37.957 --> 00:15:38.532
+running somewhere.
+
+323
+00:15:38.557 --> 00:15:42.592
+Lucia asked Denizzi to send Relatorio.
+
+324
+00:15:42.617 --> 00:15:46.392
+Nothing came back, as expected, and she wrote down, off the
+
+325
+00:15:46.417 --> 00:15:48.535
+list, telegram, no reply.
+
+326
+00:15:48.755 --> 00:15:52.250
+And when something fails, the symptom tells you where to look.
+
+327
+00:15:52.275 --> 00:15:53.435
+Don't switch the AI model.
+
+328
+00:15:54.075 --> 00:15:57.535
+Because status and Relatorio don't even use AI.
+
+329
+00:15:57.735 --> 00:16:00.715
+If only Relatorio fails, the problem is in the sales file.
+
+330
+00:16:02.015 --> 00:16:05.370
+Lúcia got the message that the file couldn't be validated, and
+
+331
+00:16:05.395 --> 00:16:07.730
+found out she had deleted the header.
+
+332
+00:16:07.755 --> 00:16:12.370
+If nothing replies, check the program, the token, the internet, and
+
+333
+00:16:12.395 --> 00:16:13.155
+the access list.
+
+334
+00:16:13.755 --> 00:16:16.835
+On a network failure, the bot retries on its own.
+
+335
+00:16:16.895 --> 00:16:20.350
+On a conflict, the 409, or with the wrong token, the
+
+336
+00:16:20.375 --> 00:16:24.095
+401, it shuts itself down so you can investigate.
+
+337
+00:16:25.015 --> 00:16:27.675
+The log shows the type of failure and the time.
+
+338
+00:16:28.535 --> 00:16:31.130
+But it doesn't show the token or the text of the
+
+339
+00:16:31.155 --> 00:16:31.535
+messages.
+
+340
+00:16:32.195 --> 00:16:35.150
+Lucia turned off the Wi-Fi on purpose, with the bot running.
+
+341
+00:16:35.175 --> 00:16:39.270
+The terminal showed retry warnings, each one waiting twice as long
+
+342
+00:16:39.295 --> 00:16:41.610
+as the last, and the bot came back on its own
+
+343
+00:16:41.635 --> 00:16:42.895
+when the network returned.
+
+344
+00:16:43.515 --> 00:16:45.835
+Pause the video and sound check your bot.
+
+345
+00:16:45.875 --> 00:16:47.195
+Run the self-test.
+
+346
+00:16:47.275 --> 00:16:51.510
+Start the bot, send status and any sentence, ask someone off
+
+347
+00:16:51.535 --> 00:16:54.787
+the list to send the relatorio, and finally, stop it and
+
+348
+00:16:54.812 --> 00:16:56.172
+confirm the silence.
+
+349
+00:16:57.072 --> 00:16:59.272
+Mark each line as simulated or telegram.
+
+350
+00:16:59.712 --> 00:17:02.587
+With no one to help, write not tested.
+
+351
+00:17:02.612 --> 00:17:04.552
+An honest log is worth more.
+
+352
+00:17:05.072 --> 00:17:06.412
+Let's put it all together.
+
+353
+00:17:06.512 --> 00:17:09.607
+Telegram carries messages back and forth, and the one that decides
+
+354
+00:17:09.632 --> 00:17:13.167
+is your program, which accepts only known commands.
+
+355
+00:17:13.192 --> 00:17:17.047
+The bot token lives only in the .env protected, and if it
+
+356
+00:17:17.072 --> 00:17:19.012
+leaks, you revoke and replace it.
+
+357
+00:17:19.572 --> 00:17:23.187
+The access list says who the bot serves, by number, not
+
+358
+00:17:23.212 --> 00:17:24.067
+by name.
+
+359
+00:17:24.092 --> 00:17:27.107
+You start the bot with long polling, check the total against
+
+360
+00:17:27.132 --> 00:17:29.292
+the file, and keep just one copy running.
+
+361
+00:17:30.272 --> 00:17:34.507
+AI comes in at one step after the base is tested,
+
+362
+00:17:34.532 --> 00:17:37.452
+with a five-line contract and the number left untouched.
+
+363
+00:17:37.972 --> 00:17:41.727
+And you test before you trust, separating what was simulated from
+
+364
+00:17:41.752 --> 00:17:44.747
+what was real, When you have about 30 minutes, do the
+
+365
+00:17:44.772 --> 00:17:47.607
+module lab in the supplementary material.
+
+366
+00:17:47.632 --> 00:17:53.012
+In the next module, VPS from scratch and 24-7 operation.
+
+367
+00:17:53.752 --> 00:17:57.892
+The bot running all day long without depending on your computer.
+
+368
+00:17:58.892 --> 00:17:59.524
+See you there.
