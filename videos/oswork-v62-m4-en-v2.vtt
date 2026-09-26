@@ -1,0 +1,2169 @@
+WEBVTT
+
+1
+00:00:00.300 --> 00:00:01.820
+Hi, I'm Nei Maldaner,
+
+2
+00:00:01.820 --> 00:00:03.730
+and this is module four of
+
+3
+00:00:03.730 --> 00:00:04.500
+OSWork.
+
+4
+00:00:04.500 --> 00:00:05.300
+In module three,
+
+5
+00:00:05.300 --> 00:00:07.200
+you opened the terminal and took your
+
+6
+00:00:07.200 --> 00:00:09.000
+first steps with Codex in a practice
+
+7
+00:00:09.000 --> 00:00:10.040
+folder.
+
+8
+00:00:10.040 --> 00:00:11.180
+Now we're going to put the house
+
+9
+00:00:11.180 --> 00:00:12.840
+in order around that work.
+
+10
+00:00:12.840 --> 00:00:13.720
+In this module,
+
+11
+00:00:13.720 --> 00:00:15.800
+you'll create a folder tree that keeps
+
+12
+00:00:15.800 --> 00:00:18.240
+one topic apart from another,
+
+13
+00:00:18.900 --> 00:00:21.480
+write a README in Markdown that explains
+
+14
+00:00:21.480 --> 00:00:24.220
+the project to whoever comes later,
+
+15
+00:00:24.280 --> 00:00:26.060
+give each kind of note its own
+
+16
+00:00:26.060 --> 00:00:28.860
+file, and keep passwords and keys far
+
+17
+00:00:28.860 --> 00:00:31.340
+away from everything that gets shared.
+
+18
+00:00:31.880 --> 00:00:32.970
+At the end,
+
+19
+00:00:32.970 --> 00:00:34.840
+you'll write down what the AI should
+
+20
+00:00:34.840 --> 00:00:36.320
+read first.
+
+21
+00:00:36.400 --> 00:00:39.040
+Denise, a pedagogical coordinator,
+
+22
+00:00:39.220 --> 00:00:41.420
+and Lúcia, an eighth grade science teacher,
+
+23
+00:00:41.420 --> 00:00:42.600
+are still with us.
+
+24
+00:00:42.600 --> 00:00:45.100
+Every practice uses the same terminal from
+
+25
+00:00:45.100 --> 00:00:46.820
+module three, with
+
+26
+00:00:46.880 --> 00:00:48.140
+made-up data.
+
+27
+00:00:48.140 --> 00:00:49.120
+When I ask,
+
+28
+00:00:49.120 --> 00:00:50.500
+pause the video and do it right
+
+29
+00:00:50.500 --> 00:00:51.000
+then.
+
+30
+00:00:50.720 --> 00:00:52.940
+Think of the steel filing cabinet in
+
+31
+00:00:52.940 --> 00:00:53.640
+the school office.
+
+32
+00:00:53.640 --> 00:00:55.860
+Each drawer holds one class,
+
+33
+00:00:55.860 --> 00:00:57.280
+and nobody looks for 8th grade A
+
+34
+00:00:57.280 --> 00:00:59.060
+in the 7th grade B drawer.
+
+35
+00:00:59.060 --> 00:01:01.368
+A work folder plays the same role:
+
+36
+00:01:01.368 --> 00:01:02.928
+it gathers the material for a single
+
+37
+00:01:02.928 --> 00:01:03.588
+topic.
+
+38
+00:01:03.588 --> 00:01:05.368
+That material is the context of the
+
+39
+00:01:05.368 --> 00:01:06.008
+task.
+
+40
+00:01:06.008 --> 00:01:07.668
+When you open Codex in a folder,
+
+41
+00:01:07.668 --> 00:01:09.388
+it works from that folder.
+
+42
+00:01:09.388 --> 00:01:11.328
+If the folder mixes topics,
+
+43
+00:01:11.328 --> 00:01:14.208
+anything unrelated to the request becomes noise.
+
+44
+00:01:14.208 --> 00:01:16.308
+Lúcia kept the science fair project in
+
+45
+00:01:16.308 --> 00:01:18.528
+the same folder as the report cards.
+
+46
+00:01:18.528 --> 00:01:20.208
+She asked the AI for a summary
+
+47
+00:01:20.208 --> 00:01:22.108
+of the fair and got a paragraph
+
+48
+00:01:22.108 --> 00:01:24.868
+with a student's grade in the middle.
+
+49
+00:01:24.868 --> 00:01:26.208
+Once the fair folder held only the
+
+50
+00:01:26.208 --> 00:01:27.808
+rules and the list of groups,
+
+51
+00:01:27.808 --> 00:01:29.888
+the summary talked only about the fair.
+
+52
+00:01:29.888 --> 00:01:32.388
+The AI reads less material,
+
+53
+00:01:32.388 --> 00:01:34.288
+and you know where every sentence came
+
+54
+00:01:34.288 --> 00:01:35.368
+from.
+
+55
+00:01:35.368 --> 00:01:36.388
+In the terminal,
+
+56
+00:01:36.388 --> 00:01:38.288
+the tilde symbol stands for your home
+
+57
+00:01:38.288 --> 00:01:39.288
+folder.
+
+58
+00:01:39.288 --> 00:01:40.688
+It's just a short way of writing
+
+59
+00:01:40.688 --> 00:01:41.868
+the full address,
+
+60
+00:01:41.868 --> 00:01:44.368
+which changes from one computer to another.
+
+61
+00:01:44.368 --> 00:01:46.868
+Denise typed the pwd command,
+
+62
+00:01:46.868 --> 00:01:47.668
+like in module three,
+
+63
+00:01:47.668 --> 00:01:50.008
+and saw that whole address.
+
+64
+00:01:50.328 --> 00:01:51.718
+Inside your home folder,
+
+65
+00:01:51.718 --> 00:01:54.008
+you'll create a folder called projetos.
+
+66
+00:01:54.008 --> 00:01:54.848
+Two things go in it.
+
+67
+00:01:54.848 --> 00:01:56.148
+A config folder,
+
+68
+00:01:56.148 --> 00:01:58.208
+short for configuration,
+
+69
+00:01:58.208 --> 00:02:00.008
+with whatever applies to any project,
+
+70
+00:02:00.008 --> 00:02:00.748
+like your preferences.
+
+71
+00:02:00.748 --> 00:02:01.808
+And
+
+72
+00:02:01.808 --> 00:02:04.636
+each project, with its own entradas folder,
+
+73
+00:02:04.636 --> 00:02:06.256
+the inputs the AI reads,
+
+74
+00:02:06.256 --> 00:02:07.896
+and its own saidas folder,
+
+75
+00:02:07.896 --> 00:02:09.536
+the outputs it produces.
+
+76
+00:02:09.536 --> 00:02:11.316
+Kept apart, you can check one against
+
+77
+00:02:11.316 --> 00:02:12.656
+the other.
+
+78
+00:02:12.816 --> 00:02:15.556
+Denise prefers short reports with the open
+
+79
+00:02:15.556 --> 00:02:16.896
+items at the end,
+
+80
+00:02:16.896 --> 00:02:18.656
+both for the council report and
+
+81
+00:02:18.656 --> 00:02:20.176
+for the parents meeting agenda.
+
+82
+00:02:20.176 --> 00:02:22.596
+That's why this preference goes into config,
+
+83
+00:02:22.596 --> 00:02:23.096
+just once.
+
+84
+00:02:22.916 --> 00:02:23.876
+Before
+
+85
+00:02:23.876 --> 00:02:25.496
+you create anything,
+
+86
+00:02:25.856 --> 00:02:27.336
+sketch the tree on paper:
+
+87
+00:02:27.336 --> 00:02:29.536
+a config folder and a single practice
+
+88
+00:02:29.536 --> 00:02:30.456
+project.
+
+89
+00:02:30.456 --> 00:02:32.736
+That way you choose the names calmly.
+
+90
+00:02:32.736 --> 00:02:33.236
+Use short names,
+
+91
+00:02:33.236 --> 00:02:36.216
+with no spaces and no accents,
+
+92
+00:02:36.216 --> 00:02:38.696
+because in the terminal spaces and accents
+
+93
+00:02:38.696 --> 00:02:41.416
+cause trouble in every command.
+
+94
+00:02:41.556 --> 00:02:43.876
+Lúcia sketched hers on a napkin and,
+
+95
+00:02:43.876 --> 00:02:44.716
+in one minute,
+
+96
+00:02:44.716 --> 00:02:47.456
+avoided three folders with similar names.
+
+97
+00:02:47.456 --> 00:02:50.056
+Then comes the mkdir command with the
+
+98
+00:02:50.056 --> 00:02:51.516
+dash p option,
+
+99
+00:02:51.516 --> 00:02:53.656
+which creates the folders plus any parent
+
+100
+00:02:53.656 --> 00:02:55.096
+folders that are missing.
+
+101
+00:02:55.096 --> 00:02:56.876
+If a folder already exists,
+
+102
+00:02:56.876 --> 00:02:58.176
+it stays as it is,
+
+103
+00:02:58.176 --> 00:03:00.156
+and nothing gets deleted.
+
+104
+00:03:00.156 --> 00:03:01.976
+Pause the video and do it now.
+
+105
+00:03:01.976 --> 00:03:03.176
+Sketch the tree,
+
+106
+00:03:03.176 --> 00:03:04.704
+open the terminal from module three,
+
+107
+00:03:04.704 --> 00:03:06.424
+and paste the three lines on the
+
+108
+00:03:06.424 --> 00:03:07.384
+screen.
+
+109
+00:03:07.384 --> 00:03:09.824
+Check that the first ls shows config
+
+110
+00:03:09.824 --> 00:03:11.164
+and meu primeiro projeto,
+
+111
+00:03:11.164 --> 00:03:13.584
+and that the second one shows entradas
+
+112
+00:03:13.584 --> 00:03:14.624
+and saidas.
+
+113
+00:03:14.624 --> 00:03:15.704
+The folder exists,
+
+114
+00:03:15.704 --> 00:03:17.964
+but whoever comes later doesn't know what
+
+115
+00:03:17.964 --> 00:03:19.224
+it's for.
+
+116
+00:03:19.224 --> 00:03:20.864
+To write that down,
+
+117
+00:03:20.864 --> 00:03:22.804
+we'll use Markdown.
+
+118
+00:03:22.904 --> 00:03:25.204
+Every one of Lúcia's experiment guides has
+
+119
+00:03:25.204 --> 00:03:26.764
+a title, materials,
+
+120
+00:03:26.764 --> 00:03:28.224
+and procedure.
+
+121
+00:03:28.224 --> 00:03:30.424
+She underlines the titles and puts a
+
+122
+00:03:30.424 --> 00:03:32.444
+dash before each material.
+
+123
+00:03:33.244 --> 00:03:35.144
+Markdown does the same thing with symbols
+
+124
+00:03:35.144 --> 00:03:35.904
+you type.
+
+125
+00:03:35.904 --> 00:03:37.764
+A hash sign at the start of
+
+126
+00:03:37.764 --> 00:03:39.724
+a line makes a title,
+
+127
+00:03:39.724 --> 00:03:42.224
+two hash signs make a subtitle,
+
+128
+00:03:42.224 --> 00:03:44.044
+and a hyphen makes a list item.
+
+129
+00:03:44.044 --> 00:03:46.184
+The file is still plain text,
+
+130
+00:03:46.184 --> 00:03:47.904
+so you can read it even without
+
+131
+00:03:47.904 --> 00:03:49.544
+a special program.
+
+132
+00:03:50.244 --> 00:03:52.904
+Lúcia moved her bean germination guide to
+
+133
+00:03:52.904 --> 00:03:54.764
+Markdown in five minutes,
+
+134
+00:03:54.764 --> 00:03:57.524
+without learning anything beyond those three marks.
+
+135
+00:03:57.524 --> 00:03:59.564
+A Markdown file is a text file
+
+136
+00:03:59.564 --> 00:04:01.284
+whose name ends in dot md,
+
+137
+00:04:01.284 --> 00:04:03.444
+and it opens in any editor,
+
+138
+00:04:03.444 --> 00:04:04.664
+including the terminal.
+
+139
+00:04:04.980 --> 00:04:06.960
+The file that explains the project is
+
+140
+00:04:06.960 --> 00:04:08.440
+called README.
+
+141
+00:04:08.500 --> 00:04:11.680
+The course kit template has five sections:
+
+142
+00:04:11.760 --> 00:04:13.600
+purpose, read first,
+
+143
+00:04:13.600 --> 00:04:14.800
+organization,
+
+144
+00:04:14.800 --> 00:04:15.680
+how to check,
+
+145
+00:04:15.680 --> 00:04:17.460
+and current status.
+
+146
+00:04:17.600 --> 00:04:20.040
+You replace each template text with what's
+
+147
+00:04:20.040 --> 00:04:21.500
+true for your project.
+
+148
+00:04:21.500 --> 00:04:22.560
+And if you don't know a field
+
+149
+00:04:22.560 --> 00:04:23.760
+yet?
+
+150
+00:04:24.340 --> 00:04:25.780
+Write to be defined.
+
+151
+00:04:25.780 --> 00:04:27.760
+An honest open field is better than
+
+152
+00:04:27.760 --> 00:04:30.140
+template text nobody checked.
+
+153
+00:04:30.140 --> 00:04:31.700
+In the science fair README,
+
+154
+00:04:31.700 --> 00:04:33.780
+Lúcia wrote under purpose:
+
+155
+00:04:33.780 --> 00:04:36.060
+organize sign-ups for the fair.
+
+156
+00:04:36.060 --> 00:04:37.940
+And under how to check:
+
+157
+00:04:38.120 --> 00:04:40.380
+every registered group appears on the final
+
+158
+00:04:40.380 --> 00:04:41.460
+list.
+
+159
+00:04:41.460 --> 00:04:42.220
+You don't need bold,
+
+160
+00:04:42.220 --> 00:04:44.320
+tables, or links.
+
+161
+00:04:44.320 --> 00:04:46.080
+The value comes from clarity.
+
+162
+00:04:46.080 --> 00:04:47.720
+When Denise took a week off,
+
+163
+00:04:47.720 --> 00:04:49.360
+the colleague covering for her opened the
+
+164
+00:04:49.360 --> 00:04:51.340
+council project README and kept the work
+
+165
+00:04:51.340 --> 00:04:53.600
+going without having to call her.
+
+166
+00:04:53.600 --> 00:04:54.900
+To edit in the terminal,
+
+167
+00:04:54.900 --> 00:04:55.840
+use nano.
+
+168
+00:04:55.840 --> 00:04:57.020
+It shows the text in the middle
+
+169
+00:04:57.020 --> 00:04:58.900
+and the shortcuts at the bottom.
+
+170
+00:04:58.900 --> 00:05:01.180
+The caret symbol means Control.
+
+171
+00:05:01.520 --> 00:05:03.640
+You move around with the arrow keys,
+
+172
+00:05:03.640 --> 00:05:05.520
+save with Control O,
+
+173
+00:05:05.520 --> 00:05:06.800
+confirm the name with Enter,
+
+174
+00:05:06.800 --> 00:05:09.161
+and exit with Control X.
+
+175
+00:05:09.161 --> 00:05:11.141
+Then the cat command shows on screen
+
+176
+00:05:11.141 --> 00:05:12.241
+what was saved.
+
+177
+00:05:12.241 --> 00:05:14.121
+Pause the video and practice.
+
+178
+00:05:14.121 --> 00:05:16.881
+Go into the practice project folder,
+
+179
+00:05:17.481 --> 00:05:20.021
+download the README template with the curl
+
+180
+00:05:20.021 --> 00:05:22.441
+command, and open it in nano.
+
+181
+00:05:22.441 --> 00:05:24.201
+Heads up:
+
+182
+00:05:24.201 --> 00:05:26.541
+if you've already written a README in
+
+183
+00:05:26.541 --> 00:05:29.161
+that folder, skip the curl line,
+
+184
+00:05:29.161 --> 00:05:31.191
+because it writes over the file.
+
+185
+00:05:31.191 --> 00:05:33.261
+Replace each template text with something true
+
+186
+00:05:33.261 --> 00:05:34.341
+about your project,
+
+187
+00:05:34.341 --> 00:05:36.201
+or with to be defined,
+
+188
+00:05:36.201 --> 00:05:39.281
+and describe the entradas and saidas folders.
+
+189
+00:05:39.461 --> 00:05:42.061
+Save, exit, and use cat to check
+
+190
+00:05:42.061 --> 00:05:43.441
+that the titles still have their hash
+
+191
+00:05:43.441 --> 00:05:44.461
+signs.
+
+192
+00:05:44.461 --> 00:05:46.641
+The README talks about one project.
+
+193
+00:05:46.641 --> 00:05:49.101
+What about things that apply to everything,
+
+194
+00:05:49.101 --> 00:05:51.341
+like your preferences and decisions?
+
+195
+00:05:51.341 --> 00:05:54.641
+The school office doesn't write everything in
+
+196
+00:05:54.641 --> 00:05:56.261
+a single notebook:
+
+197
+00:05:56.741 --> 00:05:58.821
+it has the minutes book,
+
+198
+00:05:58.821 --> 00:06:00.321
+the incidents book,
+
+199
+00:06:00.321 --> 00:06:01.761
+and the procedures notebook,
+
+200
+00:06:01.761 --> 00:06:04.421
+and each one answers one question.
+
+201
+00:06:04.421 --> 00:06:06.321
+In the config folder,
+
+202
+00:06:06.321 --> 00:06:08.761
+four files play that role.
+
+203
+00:06:08.771 --> 00:06:10.301
+memoria dot md answers how I like
+
+204
+00:06:10.301 --> 00:06:11.723
+the work to come out.
+
+205
+00:06:11.723 --> 00:06:13.403
+decisoes dot md,
+
+206
+00:06:13.403 --> 00:06:15.043
+what we chose,
+
+207
+00:06:15.043 --> 00:06:16.413
+when, and why.
+
+208
+00:06:16.413 --> 00:06:17.883
+dicas dot md,
+
+209
+00:06:17.883 --> 00:06:19.523
+how it's done,
+
+210
+00:06:19.523 --> 00:06:21.403
+the way that has already worked.
+
+211
+00:06:21.403 --> 00:06:22.443
+And falhas dot md,
+
+212
+00:06:22.443 --> 00:06:24.363
+what went wrong and what the fix
+
+213
+00:06:24.363 --> 00:06:25.183
+was.
+
+214
+00:06:25.183 --> 00:06:26.603
+Denise was trying to find out why
+
+215
+00:06:26.603 --> 00:06:28.863
+the parents meeting had moved to Saturday.
+
+216
+00:06:28.863 --> 00:06:31.023
+The reason was in a forty-page notebook,
+
+217
+00:06:31.023 --> 00:06:33.003
+among messages and phone numbers,
+
+218
+00:06:33.003 --> 00:06:34.963
+and it took her half an hour
+
+219
+00:06:34.963 --> 00:06:36.003
+to find it.
+
+220
+00:06:36.003 --> 00:06:37.943
+A preference is your steady way of
+
+221
+00:06:37.943 --> 00:06:40.863
+working, and it hardly ever changes.
+
+222
+00:06:40.863 --> 00:06:43.223
+Lúcia prefers exercises with the answer key
+
+223
+00:06:43.223 --> 00:06:44.483
+at the end:
+
+224
+00:06:44.483 --> 00:06:46.183
+that goes in memoria.
+
+225
+00:06:46.183 --> 00:06:47.783
+A decision is a choice with a
+
+226
+00:06:47.783 --> 00:06:50.283
+reason, and the reason can change.
+
+227
+00:06:50.283 --> 00:06:52.103
+The 8th grade tests have ten questions
+
+228
+00:06:52.103 --> 00:06:54.783
+because the coordination standardized them:
+
+229
+00:06:54.783 --> 00:06:56.463
+that goes in decisoes,
+
+230
+00:06:56.463 --> 00:06:57.423
+with a date.
+
+231
+00:06:57.423 --> 00:06:58.763
+When a decision changes,
+
+232
+00:06:58.763 --> 00:07:00.703
+don't quietly replace the old line.
+
+233
+00:07:00.703 --> 00:07:03.343
+In October, the tests went to twelve
+
+234
+00:07:03.343 --> 00:07:04.383
+questions,
+
+235
+00:07:04.383 --> 00:07:06.743
+with two on reading graphs.
+
+236
+00:07:06.943 --> 00:07:08.883
+Lúcia added the new line and marked
+
+237
+00:07:08.883 --> 00:07:11.083
+the August one as replaced.
+
+238
+00:07:11.143 --> 00:07:13.663
+The falhas file records the symptom,
+
+239
+00:07:13.663 --> 00:07:14.923
+the confirmed cause,
+
+240
+00:07:14.923 --> 00:07:16.024
+and the smallest fix.
+
+241
+00:07:16.024 --> 00:07:18.444
+The minutes summary came out empty because
+
+242
+00:07:18.444 --> 00:07:20.724
+the entradas folder was empty.
+
+243
+00:07:20.764 --> 00:07:22.224
+The fix was to check the folder
+
+244
+00:07:22.224 --> 00:07:23.564
+before asking.
+
+245
+00:07:23.564 --> 00:07:25.584
+You open this file when the problem
+
+246
+00:07:25.584 --> 00:07:26.744
+comes back, without
+
+247
+00:07:26.744 --> 00:07:28.784
+pasting it into every request.
+
+248
+00:07:28.784 --> 00:07:30.764
+Sometimes a note seems to fit in
+
+249
+00:07:30.764 --> 00:07:32.004
+two files.
+
+250
+00:07:32.804 --> 00:07:33.804
+Then ask:
+
+251
+00:07:33.804 --> 00:07:35.984
+does it say how I like it,
+
+252
+00:07:35.984 --> 00:07:37.104
+what we chose,
+
+253
+00:07:37.104 --> 00:07:38.144
+how it's done,
+
+254
+00:07:38.144 --> 00:07:39.764
+or what went wrong?
+
+255
+00:07:39.764 --> 00:07:42.224
+The first answer that fits decides.
+
+256
+00:07:42.464 --> 00:07:44.364
+Pause the video and practice.
+
+257
+00:07:44.364 --> 00:07:46.204
+Go into the config folder and download
+
+258
+00:07:46.204 --> 00:07:48.084
+the four kit templates with the curl
+
+259
+00:07:48.084 --> 00:07:49.284
+command,
+
+260
+00:07:49.304 --> 00:07:51.324
+one line for each file.
+
+261
+00:07:51.324 --> 00:07:52.664
+If you've already written in any of
+
+262
+00:07:52.664 --> 00:07:54.444
+them, skip its line,
+
+263
+00:07:54.444 --> 00:07:56.731
+because curl writes over the file.
+
+264
+00:07:56.731 --> 00:07:59.404
+The ls should show all four files.
+
+265
+00:07:59.404 --> 00:08:00.844
+Then, on paper,
+
+266
+00:08:00.844 --> 00:08:02.584
+say where each of the five made-up
+
+267
+00:08:02.584 --> 00:08:03.824
+notes from the lesson belongs,
+
+268
+00:08:03.824 --> 00:08:06.364
+like I prefer notices to families in
+
+269
+00:08:06.364 --> 00:08:07.964
+five lines or fewer,
+
+270
+00:08:07.964 --> 00:08:09.584
+or report cards in PDF since September,
+
+271
+00:08:09.584 --> 00:08:10.644
+because
+
+272
+00:08:10.644 --> 00:08:12.964
+not every family opens spreadsheets.
+
+273
+00:08:12.984 --> 00:08:15.044
+Write down the reason for each choice
+
+274
+00:08:15.044 --> 00:08:16.947
+and compare with the answer key.
+
+275
+00:08:17.240 --> 00:08:18.980
+And the school system password,
+
+276
+00:08:18.980 --> 00:08:20.240
+which of those four files does it
+
+277
+00:08:20.240 --> 00:08:21.260
+go in?
+
+278
+00:08:21.260 --> 00:08:22.760
+None of them.
+
+279
+00:08:23.200 --> 00:08:24.500
+At the front desk,
+
+280
+00:08:24.500 --> 00:08:26.700
+the key board shows which rooms exist,
+
+281
+00:08:26.700 --> 00:08:28.600
+and nobody worries about that list being
+
+282
+00:08:28.600 --> 00:08:29.460
+visible.
+
+283
+00:08:29.460 --> 00:08:31.500
+The keys are a different story:
+
+284
+00:08:31.500 --> 00:08:34.000
+whoever takes the key opens the room.
+
+285
+00:08:34.000 --> 00:08:35.920
+A credential works like the key.
+
+286
+00:08:35.920 --> 00:08:37.440
+A password, an API key,
+
+287
+00:08:37.440 --> 00:08:39.980
+or a bot token lets whoever holds
+
+288
+00:08:39.980 --> 00:08:42.300
+it act on behalf of your account.
+
+289
+00:08:42.300 --> 00:08:43.660
+Denise was about to send the team
+
+290
+00:08:43.660 --> 00:08:45.720
+group a screenshot of the grading system
+
+291
+00:08:45.720 --> 00:08:46.920
+settings.
+
+292
+00:08:47.140 --> 00:08:48.260
+Before sending it,
+
+293
+00:08:48.260 --> 00:08:49.600
+she saw the password for the entire
+
+294
+00:08:49.600 --> 00:08:52.060
+coordination in the corner of the image.
+
+295
+00:08:52.060 --> 00:08:53.580
+If she had sent it,
+
+296
+00:08:53.580 --> 00:08:55.080
+all thirty people in the group would
+
+297
+00:08:55.080 --> 00:08:56.380
+have had access.
+
+298
+00:08:56.380 --> 00:08:57.320
+She covered the password,
+
+299
+00:08:57.320 --> 00:08:59.280
+and the team saw what they needed,
+
+300
+00:08:59.280 --> 00:09:01.840
+with access still limited to the coordination.
+
+301
+00:09:01.940 --> 00:09:03.980
+So where does the credential go?
+
+302
+00:09:03.980 --> 00:09:06.200
+In a file called dot env.
+
+303
+00:09:06.200 --> 00:09:07.520
+It holds variables:
+
+304
+00:09:07.520 --> 00:09:08.860
+a name,
+
+305
+00:09:08.880 --> 00:09:09.520
+an equals sign,
+
+306
+00:09:09.520 --> 00:09:11.080
+and a value,
+
+307
+00:09:11.080 --> 00:09:13.020
+like a Telegram bot token or a
+
+308
+00:09:13.020 --> 00:09:16.100
+database address with the password inside.
+
+309
+00:09:16.240 --> 00:09:20.200
+Heads up: dot env is not encrypted.
+
+310
+00:09:20.200 --> 00:09:22.000
+Anyone with access to the file can
+
+311
+00:09:22.000 --> 00:09:23.360
+read what's in it,
+
+312
+00:09:23.360 --> 00:09:25.660
+so it stays only on your machine.
+
+313
+00:09:25.820 --> 00:09:27.020
+In module seven,
+
+314
+00:09:27.020 --> 00:09:28.400
+Lúcia will create a lookup bot for
+
+315
+00:09:28.400 --> 00:09:30.380
+her class, and its token will live
+
+316
+00:09:30.380 --> 00:09:32.100
+there, and nowhere else.
+
+317
+00:09:32.100 --> 00:09:33.610
+To share the project,
+
+318
+00:09:33.610 --> 00:09:34.960
+there's dot env dot example,
+
+319
+00:09:34.960 --> 00:09:38.100
+with the same names and made-up values.
+
+320
+00:09:38.640 --> 00:09:40.580
+Whoever receives it sees what they need
+
+321
+00:09:40.580 --> 00:09:41.120
+to fill in,
+
+322
+00:09:41.120 --> 00:09:43.060
+but gets access to nothing.
+
+323
+00:09:43.060 --> 00:09:44.840
+That's how Denise handed the reports project
+
+324
+00:09:44.840 --> 00:09:46.460
+over to the vice principal,
+
+325
+00:09:46.460 --> 00:09:48.020
+and the vice principal filled in her
+
+326
+00:09:48.020 --> 00:09:48.740
+own dot env.
+
+327
+00:09:48.740 --> 00:09:50.160
+To help you,
+
+328
+00:09:50.160 --> 00:09:52.020
+the AI almost always only needs to
+
+329
+00:09:52.020 --> 00:09:53.840
+know that the variable exists.
+
+330
+00:09:53.840 --> 00:09:56.000
+Lúcia's report wouldn't connect to the school
+
+331
+00:09:56.000 --> 00:09:57.200
+spreadsheet.
+
+332
+00:09:57.240 --> 00:09:59.080
+Instead of pasting the dot env,
+
+333
+00:09:59.080 --> 00:10:01.380
+she wrote that the database variable was
+
+334
+00:10:01.380 --> 00:10:04.160
+filled in and asked what to check.
+
+335
+00:10:04.160 --> 00:10:05.780
+The help was just as good,
+
+336
+00:10:05.780 --> 00:10:07.620
+and the secret stayed at home.
+
+337
+00:10:07.620 --> 00:10:09.240
+If you paste a key by mistake,
+
+338
+00:10:09.240 --> 00:10:11.900
+deleting the message isn't enough:
+
+339
+00:10:11.900 --> 00:10:13.400
+replace the key on the site that
+
+340
+00:10:13.400 --> 00:10:14.740
+generated it.
+
+341
+00:10:14.740 --> 00:10:16.600
+Pause the video and practice.
+
+342
+00:10:16.600 --> 00:10:18.256
+In the practice project folder,
+
+343
+00:10:18.256 --> 00:10:19.576
+paste the lines on the screen all
+
+344
+00:10:19.576 --> 00:10:21.756
+at once, without typing them by hand,
+
+345
+00:10:21.756 --> 00:10:23.536
+because of the quotes.
+
+346
+00:10:23.536 --> 00:10:26.196
+The printf command writes the two names,
+
+347
+00:10:26.196 --> 00:10:28.631
+with the value preencha localmente,
+
+348
+00:10:28.631 --> 00:10:31.156
+into dot env dot example.
+
+349
+00:10:31.156 --> 00:10:33.976
+Check with cat and with ls dash
+
+350
+00:10:33.976 --> 00:10:35.176
+a.
+
+351
+00:10:35.316 --> 00:10:37.276
+Don't create the dot env now:
+
+352
+00:10:37.276 --> 00:10:39.956
+you'll only need it in module seven.
+
+353
+00:10:39.956 --> 00:10:41.861
+Now, how do you make sure dot
+
+354
+00:10:41.861 --> 00:10:44.016
+env is never saved along with the
+
+355
+00:10:44.016 --> 00:10:46.796
+project's history, not even by accident?
+
+356
+00:10:46.796 --> 00:10:48.876
+Each version saved by Git is called
+
+357
+00:10:48.876 --> 00:10:50.046
+a commit.
+
+358
+00:10:50.046 --> 00:10:52.676
+Dot gitignore is a text file in
+
+359
+00:10:52.676 --> 00:10:54.456
+the project folder with the list of
+
+360
+00:10:54.456 --> 00:10:55.296
+what Git should leave out.
+
+361
+00:10:55.296 --> 00:10:58.376
+That list includes dot env,
+
+362
+00:10:58.376 --> 00:11:00.456
+its private variants,
+
+363
+00:11:00.476 --> 00:11:03.436
+and the temporary folders that programs create
+
+364
+00:11:03.436 --> 00:11:04.416
+on their own.
+
+365
+00:11:04.416 --> 00:11:06.596
+Everything else goes into the history:
+
+366
+00:11:06.596 --> 00:11:08.556
+the README, dot env dot example,
+
+367
+00:11:08.556 --> 00:11:10.696
+and the rest of the work files.
+
+368
+00:11:10.696 --> 00:11:12.196
+In the reports project,
+
+369
+00:11:12.196 --> 00:11:14.236
+Denise put dot env on the list
+
+370
+00:11:14.236 --> 00:11:16.476
+before saving the first version.
+
+371
+00:11:16.476 --> 00:11:17.676
+The result:
+
+372
+00:11:17.676 --> 00:11:19.496
+the file with the grading system password
+
+373
+00:11:19.496 --> 00:11:22.036
+never entered the history.
+
+374
+00:11:22.036 --> 00:11:24.656
+Git itself only comes in module six.
+
+375
+00:11:24.656 --> 00:11:26.881
+For today, it's enough to have dot
+
+376
+00:11:26.881 --> 00:11:29.096
+gitignore ready in the folder.
+
+377
+00:11:29.096 --> 00:11:30.916
+There's a rule about order that trips
+
+378
+00:11:30.916 --> 00:11:32.543
+up a lot of people.
+
+379
+00:11:32.543 --> 00:11:34.296
+Dot gitignore doesn't apply to a file
+
+380
+00:11:34.296 --> 00:11:35.916
+that has already been saved.
+
+381
+00:11:35.916 --> 00:11:37.896
+It's like the school office courier pouch:
+
+382
+00:11:37.896 --> 00:11:40.096
+the paper that shouldn't go out comes
+
+383
+00:11:40.096 --> 00:11:41.936
+off the pile before the pouch is
+
+384
+00:11:41.936 --> 00:11:42.776
+sealed.
+
+385
+00:11:42.776 --> 00:11:44.876
+Once the pouch has left,
+
+386
+00:11:44.876 --> 00:11:46.436
+crossing the paper off the list doesn't
+
+387
+00:11:46.436 --> 00:11:47.696
+bring it back.
+
+388
+00:11:47.696 --> 00:11:49.776
+A colleague of Denise's added dot env
+
+389
+00:11:49.776 --> 00:11:51.636
+to gitignore a week after the first
+
+390
+00:11:51.636 --> 00:11:53.696
+version, and the file with the password
+
+391
+00:11:53.696 --> 00:11:54.456
+was still there,
+
+392
+00:11:54.456 --> 00:11:55.716
+in the old version.
+
+393
+00:11:55.716 --> 00:11:56.516
+And if a key leaked,
+
+394
+00:11:56.516 --> 00:11:58.836
+the first fix is to revoke it
+
+395
+00:11:58.836 --> 00:11:59.496
+at the source,
+
+396
+00:11:59.496 --> 00:12:01.176
+meaning cancel it on the site that
+
+397
+00:12:01.176 --> 00:12:01.676
+created it.
+
+398
+00:12:01.656 --> 00:12:02.856
+The
+
+399
+00:12:03.416 --> 00:12:05.456
+API key for one of Lúcia's projects
+
+400
+00:12:05.456 --> 00:12:07.476
+showed up in a version shared with
+
+401
+00:12:07.476 --> 00:12:07.976
+the team.
+
+402
+00:12:07.756 --> 00:12:11.156
+She canceled it that same minute,
+
+403
+00:12:11.156 --> 00:12:12.316
+created a new one,
+
+404
+00:12:12.316 --> 00:12:14.316
+and only then dealt with the file.
+
+405
+00:12:14.316 --> 00:12:16.776
+Fixing the history comes in module six.
+
+406
+00:12:17.100 --> 00:12:18.640
+Each line in dot gitignore is a
+
+407
+00:12:18.640 --> 00:12:19.345
+pattern.
+
+408
+00:12:19.345 --> 00:12:20.880
+The dot env line catches the dot
+
+409
+00:12:20.880 --> 00:12:22.097
+env file.
+
+410
+00:12:22.097 --> 00:12:24.100
+The dot env dot asterisk line catches
+
+411
+00:12:24.100 --> 00:12:26.560
+variants like dot env dot local,
+
+412
+00:12:26.560 --> 00:12:28.940
+because the asterisk stands for any ending.
+
+413
+00:12:28.940 --> 00:12:30.200
+And the line that starts with an
+
+414
+00:12:30.200 --> 00:12:32.760
+exclamation mark makes an exception:
+
+415
+00:12:32.760 --> 00:12:35.800
+it puts dot env dot example back
+
+416
+00:12:35.800 --> 00:12:37.660
+on the list of what gets saved.
+
+417
+00:12:37.660 --> 00:12:39.580
+Lúcia found that exclamation mark odd in
+
+418
+00:12:39.580 --> 00:12:40.640
+the kit file,
+
+419
+00:12:40.640 --> 00:12:41.900
+but it was what kept the example
+
+420
+00:12:41.900 --> 00:12:43.280
+in the project,
+
+421
+00:12:43.580 --> 00:12:46.020
+so her math colleague would know what
+
+422
+00:12:46.020 --> 00:12:47.160
+to fill in.
+
+423
+00:12:47.160 --> 00:12:49.460
+The last lines cover temporary folders,
+
+424
+00:12:49.460 --> 00:12:51.060
+and you don't need to touch them.
+
+425
+00:12:51.060 --> 00:12:53.140
+Pause the video and practice.
+
+426
+00:12:53.300 --> 00:12:55.480
+Download the kit template with curl and
+
+427
+00:12:55.480 --> 00:12:58.100
+display it with cat dash n.
+
+428
+00:12:58.100 --> 00:12:59.800
+On paper, write down the number of
+
+429
+00:12:59.800 --> 00:13:01.740
+the line that keeps dot env out
+
+430
+00:13:01.740 --> 00:13:03.500
+and the one that keeps the example
+
+431
+00:13:03.500 --> 00:13:04.240
+in.
+
+432
+00:13:04.240 --> 00:13:06.020
+With everything in its place,
+
+433
+00:13:06.020 --> 00:13:08.040
+what should the AI read first?
+
+434
+00:13:08.040 --> 00:13:10.480
+It doesn't automatically read every Markdown file
+
+435
+00:13:10.480 --> 00:13:11.740
+on your computer.
+
+436
+00:13:11.740 --> 00:13:14.200
+You tell it which documents to consult.
+
+437
+00:13:14.240 --> 00:13:15.860
+Denise asked for a draft of the
+
+438
+00:13:15.860 --> 00:13:18.660
+council report without naming any file.
+
+439
+00:13:18.660 --> 00:13:20.351
+She got back a table with each
+
+440
+00:13:20.351 --> 00:13:23.211
+class's average and three recommendations,
+
+441
+00:13:23.211 --> 00:13:25.331
+in a format nobody had decided on
+
+442
+00:13:25.331 --> 00:13:27.891
+and with numbers nobody had provided.
+
+443
+00:13:27.891 --> 00:13:30.231
+So she redid the request:
+
+444
+00:13:30.231 --> 00:13:31.971
+read the README and the decisoes file
+
+445
+00:13:31.971 --> 00:13:33.191
+in the config folder,
+
+446
+00:13:33.191 --> 00:13:35.091
+then put together the draft of the
+
+447
+00:13:35.091 --> 00:13:37.311
+council report, without making up any data.
+
+448
+00:13:37.311 --> 00:13:39.471
+This time, the
+
+449
+00:13:39.471 --> 00:13:41.971
+answer said what it had read,
+
+450
+00:13:41.971 --> 00:13:43.851
+followed the format recorded in the decisions,
+
+451
+00:13:43.851 --> 00:13:44.761
+and
+
+452
+00:13:44.761 --> 00:13:46.971
+listed as open items whatever wasn't in
+
+453
+00:13:46.971 --> 00:13:47.951
+the inputs.
+
+454
+00:13:47.951 --> 00:13:49.451
+When a reference applies to every task
+
+455
+00:13:49.451 --> 00:13:50.391
+in the project,
+
+456
+00:13:50.391 --> 00:13:52.671
+it goes in AGENTS dot md,
+
+457
+00:13:52.671 --> 00:13:54.771
+the topic of the next module.
+
+458
+00:13:55.131 --> 00:13:56.051
+In the README,
+
+459
+00:13:56.051 --> 00:13:57.411
+the read first section lists the files
+
+460
+00:13:57.411 --> 00:13:59.231
+that any task in the project should
+
+461
+00:13:59.231 --> 00:14:00.631
+open first.
+
+462
+00:14:00.631 --> 00:14:01.771
+Three paths are enough,
+
+463
+00:14:01.771 --> 00:14:02.871
+in order.
+
+464
+00:14:02.871 --> 00:14:03.886
+First,
+
+465
+00:14:03.886 --> 00:14:04.771
+AGENTS dot md,
+
+466
+00:14:04.771 --> 00:14:06.651
+with the project's instructions,
+
+467
+00:14:06.651 --> 00:14:08.471
+right in the project folder.
+
+468
+00:14:08.471 --> 00:14:09.671
+Second,
+
+469
+00:14:09.671 --> 00:14:11.731
+decisoes, with the team's choices.
+
+470
+00:14:11.751 --> 00:14:14.091
+Third, memoria, with your steady preferences.
+
+471
+00:14:14.091 --> 00:14:17.211
+Those last two live in config,
+
+472
+00:14:17.211 --> 00:14:19.911
+so the path starts with
+
+473
+00:14:20.511 --> 00:14:21.011
+dot dot slash,
+
+474
+00:14:20.511 --> 00:14:22.721
+which you read as go up one
+
+475
+00:14:22.721 --> 00:14:23.681
+folder.
+
+476
+00:14:23.681 --> 00:14:25.301
+From meu primeiro projeto
+
+477
+00:14:25.301 --> 00:14:27.621
+you go up to projetos and,
+
+478
+00:14:27.621 --> 00:14:29.441
+from there, into config.
+
+479
+00:14:29.441 --> 00:14:31.131
+In the science fair project,
+
+480
+00:14:31.131 --> 00:14:32.421
+Lúcia put the fair rules in second
+
+481
+00:14:32.421 --> 00:14:34.721
+place, because that's where they mattered.
+
+482
+00:14:34.721 --> 00:14:36.261
+In your practice project,
+
+483
+00:14:36.261 --> 00:14:37.261
+use these three.
+
+484
+00:14:37.261 --> 00:14:39.401
+And if you type ls with the
+
+485
+00:14:39.401 --> 00:14:41.921
+three paths, the terminal checks that each
+
+486
+00:14:41.921 --> 00:14:43.081
+one exists.
+
+487
+00:14:43.081 --> 00:14:46.041
+There's one detail that ls doesn't solve.
+
+488
+00:14:46.041 --> 00:14:47.841
+A bulletin board
+
+489
+00:14:47.901 --> 00:14:49.761
+in the teachers' lounge with a notice
+
+490
+00:14:49.761 --> 00:14:52.061
+about a March meeting is more confusing
+
+491
+00:14:52.061 --> 00:14:53.621
+than an empty board.
+
+492
+00:14:53.621 --> 00:14:55.761
+The same goes for the AI's memory.
+
+493
+00:14:55.761 --> 00:14:58.241
+Lúcia's decisoes file still said tests have
+
+494
+00:14:58.241 --> 00:15:00.161
+ten questions, and the AI put together
+
+495
+00:15:00.161 --> 00:15:01.511
+a test with
+
+496
+00:15:01.511 --> 00:15:02.101
+ten.
+
+497
+00:15:02.101 --> 00:15:03.661
+She added the new line and marked
+
+498
+00:15:03.661 --> 00:15:05.681
+the August one as replaced.
+
+499
+00:15:05.681 --> 00:15:07.061
+With the file up to date,
+
+500
+00:15:07.061 --> 00:15:08.861
+the test comes out with twelve.
+
+501
+00:15:08.861 --> 00:15:11.921
+So ls checks that the path exists,
+
+502
+00:15:11.921 --> 00:15:13.781
+but only by opening the file do
+
+503
+00:15:13.781 --> 00:15:15.681
+you know whether it's current.
+
+504
+00:15:16.461 --> 00:15:18.841
+Denise set aside ten minutes on her
+
+505
+00:15:18.841 --> 00:15:21.241
+calendar, every first Monday of the month,
+
+506
+00:15:21.241 --> 00:15:23.581
+to review the read first section.
+
+507
+00:15:23.581 --> 00:15:25.441
+Pause the video and practice.
+
+508
+00:15:25.441 --> 00:15:27.872
+Paste the lines from the lesson,
+
+509
+00:15:27.872 --> 00:15:29.552
+write the read first section in the
+
+510
+00:15:29.552 --> 00:15:30.932
+README with the three paths,
+
+511
+00:15:30.932 --> 00:15:33.392
+and add today's date to memoria and
+
+512
+00:15:33.392 --> 00:15:33.892
+decisoes.
+
+513
+00:15:33.752 --> 00:15:35.292
+Let's put it all together.
+
+514
+00:15:35.292 --> 00:15:37.392
+You created a tree where each folder
+
+515
+00:15:37.392 --> 00:15:39.252
+holds a single context,
+
+516
+00:15:39.252 --> 00:15:41.052
+with config for what always applies and
+
+517
+00:15:41.052 --> 00:15:43.272
+inputs kept apart from outputs.
+
+518
+00:15:43.272 --> 00:15:46.112
+You wrote a README in Markdown that
+
+519
+00:15:46.112 --> 00:15:47.632
+explains the project,
+
+520
+00:15:47.632 --> 00:15:49.012
+with to be defined wherever you don't
+
+521
+00:15:49.012 --> 00:15:49.852
+know yet.
+
+522
+00:15:49.852 --> 00:15:52.812
+You gave each note its own file:
+
+523
+00:15:53.492 --> 00:15:55.932
+preference, decision with a date,
+
+524
+00:15:55.932 --> 00:15:58.092
+procedure, and failure.
+
+525
+00:15:58.152 --> 00:16:00.112
+You separated secrets from knowledge:
+
+526
+00:16:00.112 --> 00:16:02.332
+dot env stays on your machine,
+
+527
+00:16:02.332 --> 00:16:03.572
+the example can be shared,
+
+528
+00:16:03.572 --> 00:16:05.252
+and if something leaks,
+
+529
+00:16:05.252 --> 00:16:07.172
+you replace the key at the source.
+
+530
+00:16:07.172 --> 00:16:09.132
+You put gitignore in place before the
+
+531
+00:16:09.132 --> 00:16:10.692
+first version existed.
+
+532
+00:16:10.692 --> 00:16:12.472
+And you wrote down what the AI
+
+533
+00:16:12.472 --> 00:16:13.692
+should read first,
+
+534
+00:16:13.692 --> 00:16:16.452
+checking that everything exists and is current.
+
+535
+00:16:16.452 --> 00:16:18.132
+In the next module,
+
+536
+00:16:18.412 --> 00:16:19.332
+AGENTS,
+
+537
+00:16:19.332 --> 00:16:20.252
+Skills, and memory,
+
+538
+00:16:20.252 --> 00:16:21.452
+the
+
+539
+00:16:21.757 --> 00:16:23.992
+AGENTS dot md you put in the
+
+540
+00:16:23.992 --> 00:16:26.852
+folder starts guiding every run of the
+
+541
+00:16:26.852 --> 00:16:28.052
+agent.
+
+542
+00:16:28.112 --> 00:16:28.740
+See you there.
