@@ -1,0 +1,2257 @@
+WEBVTT
+
+1
+00:00:00.300 --> 00:00:02.160
+Hi, I'm Nei Maldaner,
+
+2
+00:00:02.160 --> 00:00:04.060
+and this is module eight of
+
+3
+00:00:04.060 --> 00:00:04.640
+OSWork.
+
+4
+00:00:04.640 --> 00:00:05.780
+In module seven,
+
+5
+00:00:05.780 --> 00:00:07.800
+Denise built a restricted training bot,
+
+6
+00:00:07.800 --> 00:00:09.560
+but it only answers while her laptop
+
+7
+00:00:09.560 --> 00:00:10.480
+is on.
+
+8
+00:00:10.480 --> 00:00:11.720
+In this last module,
+
+9
+00:00:11.720 --> 00:00:13.860
+we'll move that bot off the laptop.
+
+10
+00:00:13.860 --> 00:00:15.960
+You'll understand what a VPS is and
+
+11
+00:00:15.960 --> 00:00:17.760
+how big it needs to be,
+
+12
+00:00:17.760 --> 00:00:19.880
+get into it over the internet without
+
+13
+00:00:19.880 --> 00:00:21.680
+locking yourself out,
+
+14
+00:00:21.680 --> 00:00:23.420
+install only what's needed,
+
+15
+00:00:23.420 --> 00:00:25.120
+close the front desk and the password
+
+16
+00:00:25.120 --> 00:00:27.240
+file, hand the bot to a caretaker
+
+17
+00:00:27.240 --> 00:00:29.520
+that starts and restarts it on its
+
+18
+00:00:29.520 --> 00:00:30.720
+own,
+
+19
+00:00:31.160 --> 00:00:33.580
+and finally prove with a rehearsal that
+
+20
+00:00:33.580 --> 00:00:35.780
+your backup comes back whole.
+
+21
+00:00:35.780 --> 00:00:37.620
+You don't need to rent any machine
+
+22
+00:00:37.620 --> 00:00:39.460
+right now: the practice works on your
+
+23
+00:00:39.460 --> 00:00:41.060
+own computer or on paper.
+
+24
+00:00:41.060 --> 00:00:42.340
+When I ask,
+
+25
+00:00:42.340 --> 00:00:43.920
+pause the video and do it right
+
+26
+00:00:43.920 --> 00:00:45.120
+away.
+
+27
+00:00:45.420 --> 00:00:47.220
+Start with Denise's problem.
+
+28
+00:00:47.220 --> 00:00:49.740
+Her training bot answers on Telegram only
+
+29
+00:00:49.740 --> 00:00:51.200
+while the laptop is on.
+
+30
+00:00:51.200 --> 00:00:53.160
+At six in the evening she closes
+
+31
+00:00:53.160 --> 00:00:55.380
+the lid, and the bot stops answering.
+
+32
+00:00:55.380 --> 00:00:57.400
+The way out is a VPS.
+
+33
+00:00:57.400 --> 00:00:59.620
+Think of a rented room:
+
+34
+00:00:59.620 --> 00:01:00.880
+the building owner hands you the room
+
+35
+00:01:00.880 --> 00:01:02.600
+with lights and a door,
+
+36
+00:01:02.600 --> 00:01:04.520
+and whatever happens inside is up to
+
+37
+00:01:04.520 --> 00:01:05.140
+you.
+
+38
+00:01:05.140 --> 00:01:06.700
+A VPS works the same way.
+
+39
+00:01:06.700 --> 00:01:08.780
+It's a rented virtual server,
+
+40
+00:01:08.780 --> 00:01:11.200
+with memory, disk and network,
+
+41
+00:01:11.200 --> 00:01:13.120
+from a company called the VPS provider.
+
+42
+00:01:13.120 --> 00:01:14.700
+It runs all the time,
+
+43
+00:01:14.700 --> 00:01:17.020
+but users, updates and programs are your
+
+44
+00:01:17.020 --> 00:01:17.520
+job.
+
+45
+00:01:17.360 --> 00:01:18.700
+On the laptop,
+
+46
+00:01:18.700 --> 00:01:20.040
+you were already taking care of all
+
+47
+00:01:20.040 --> 00:01:21.100
+that without noticing.
+
+48
+00:01:21.100 --> 00:01:22.380
+On the VPS,
+
+49
+00:01:22.380 --> 00:01:23.340
+you do it on purpose.
+
+50
+00:01:23.340 --> 00:01:24.840
+Both work.
+
+51
+00:01:24.840 --> 00:01:27.340
+The VPS solves the closed-lid problem and,
+
+52
+00:01:27.340 --> 00:01:28.240
+along with it,
+
+53
+00:01:28.240 --> 00:01:29.980
+brings a new responsibility.
+
+54
+00:01:30.260 --> 00:01:31.980
+So how big does this machine need
+
+55
+00:01:31.980 --> 00:01:32.900
+to be?
+
+56
+00:01:32.900 --> 00:01:34.880
+Start small, with a machine that fits
+
+57
+00:01:34.880 --> 00:01:36.580
+the program it will run.
+
+58
+00:01:36.580 --> 00:01:38.740
+A bot that calls an AI model
+
+59
+00:01:38.740 --> 00:01:41.020
+through the API doesn't need an expensive
+
+60
+00:01:41.020 --> 00:01:43.580
+graphics card, because the model runs on
+
+61
+00:01:43.580 --> 00:01:45.780
+the AI provider's computers;
+
+62
+00:01:45.960 --> 00:01:48.540
+the VPS only sends the request and
+
+63
+00:01:48.540 --> 00:01:49.800
+receives the answer.
+
+64
+00:01:49.800 --> 00:01:52.540
+Lúcia almost rented a VPS with a
+
+65
+00:01:52.540 --> 00:01:54.480
+graphics card for a bot with the
+
+66
+00:01:54.480 --> 00:01:56.360
+class's fictional grade averages.
+
+67
+00:01:56.360 --> 00:01:57.880
+The card would sit idle,
+
+68
+00:01:57.880 --> 00:01:59.215
+and the bill would be high.
+
+69
+00:01:59.215 --> 00:02:01.475
+Notice, too, that there are three separate
+
+70
+00:02:01.475 --> 00:02:03.495
+bills: the VPS monthly fee,
+
+71
+00:02:03.495 --> 00:02:06.435
+which arrives every month whether the machine
+
+72
+00:02:06.435 --> 00:02:07.975
+is working or idle,
+
+73
+00:02:07.975 --> 00:02:09.155
+the extra disk space,
+
+74
+00:02:09.155 --> 00:02:11.575
+and the AI API.
+
+75
+00:02:11.575 --> 00:02:13.515
+Paying for one doesn't pay for the
+
+76
+00:02:13.515 --> 00:02:14.015
+others.
+
+77
+00:02:13.915 --> 00:02:15.815
+It's the same logic as module one:
+
+78
+00:02:15.815 --> 00:02:17.675
+each access has its own bill,
+
+79
+00:02:17.675 --> 00:02:18.875
+and
+
+80
+00:02:19.075 --> 00:02:20.295
+you write down the limit for each
+
+81
+00:02:20.295 --> 00:02:21.165
+one.
+
+82
+00:02:21.165 --> 00:02:22.215
+Before you rent,
+
+83
+00:02:22.215 --> 00:02:24.195
+remember that a machine that's on doesn't
+
+84
+00:02:24.195 --> 00:02:25.735
+mean a healthy service.
+
+85
+00:02:25.735 --> 00:02:27.995
+The bot can stop in there without
+
+86
+00:02:27.995 --> 00:02:28.975
+anyone noticing.
+
+87
+00:02:28.975 --> 00:02:32.015
+So first decide what needs to run
+
+88
+00:02:32.015 --> 00:02:34.495
+nonstop and who will check when something
+
+89
+00:02:34.495 --> 00:02:35.355
+goes wrong.
+
+90
+00:02:35.355 --> 00:02:38.475
+The course kit includes the file plano-vps.md,
+
+91
+00:02:38.475 --> 00:02:39.675
+and
+
+92
+00:02:39.895 --> 00:02:42.695
+its first part has six lines:
+
+93
+00:02:42.775 --> 00:02:43.975
+the work,
+
+94
+00:02:43.975 --> 00:02:45.475
+the technical owner,
+
+95
+00:02:45.475 --> 00:02:47.095
+the VPS budget,
+
+96
+00:02:47.095 --> 00:02:48.955
+the separate API budget,
+
+97
+00:02:48.955 --> 00:02:50.575
+the system, which in the examples is
+
+98
+00:02:50.575 --> 00:02:51.475
+Ubuntu,
+
+99
+00:02:51.475 --> 00:02:52.835
+and the shutdown plan.
+
+100
+00:02:52.835 --> 00:02:54.875
+For Denise, the last one took the
+
+101
+00:02:54.875 --> 00:02:57.315
+longest: where the cancel button is and
+
+102
+00:02:57.315 --> 00:02:59.095
+who can press it.
+
+103
+00:02:59.095 --> 00:03:00.695
+Pause the video and fill in the
+
+104
+00:03:00.695 --> 00:03:02.335
+six lines with a job of your
+
+105
+00:03:02.335 --> 00:03:02.835
+own.
+
+106
+00:03:02.795 --> 00:03:04.715
+Where data is missing,
+
+107
+00:03:04.715 --> 00:03:06.275
+write to be defined and the name
+
+108
+00:03:06.275 --> 00:03:07.075
+of whoever decides.
+
+109
+00:03:07.075 --> 00:03:08.055
+Nothing
+
+110
+00:03:08.055 --> 00:03:09.875
+gets rented, and the plan holds no
+
+111
+00:03:09.875 --> 00:03:11.635
+password or credit card.
+
+112
+00:03:11.635 --> 00:03:13.095
+With the room rented,
+
+113
+00:03:13.095 --> 00:03:14.735
+the first door is the entrance.
+
+114
+00:03:14.735 --> 00:03:17.295
+You get into the VPS through SSH,
+
+115
+00:03:17.295 --> 00:03:19.575
+which creates a protected connection to manage
+
+116
+00:03:19.575 --> 00:03:20.695
+the machine.
+
+117
+00:03:20.695 --> 00:03:22.795
+The command is ssh,
+
+118
+00:03:22.895 --> 00:03:25.475
+followed by the user,
+
+119
+00:03:25.475 --> 00:03:25.975
+the at sign,
+
+120
+00:03:25.935 --> 00:03:28.075
+and the VPS address.
+
+121
+00:03:28.155 --> 00:03:30.075
+User and address are fields to replace,
+
+122
+00:03:30.075 --> 00:03:31.255
+not real values,
+
+123
+00:03:31.255 --> 00:03:33.255
+and the address shows up in the
+
+124
+00:03:33.255 --> 00:03:34.415
+provider's panel.
+
+125
+00:03:34.415 --> 00:03:36.595
+Lúcia opened two terminal windows and got
+
+126
+00:03:36.595 --> 00:03:38.755
+mixed up: one was the laptop,
+
+127
+00:03:38.755 --> 00:03:39.995
+the other was the VPS.
+
+128
+00:03:39.995 --> 00:03:42.615
+What fixed it was looking at the
+
+129
+00:03:42.615 --> 00:03:43.695
+start of the line,
+
+130
+00:03:43.695 --> 00:03:44.875
+which, once you're in,
+
+131
+00:03:44.875 --> 00:03:47.355
+shows the user and the VPS name,
+
+132
+00:03:47.355 --> 00:03:49.535
+and running the pwd command,
+
+133
+00:03:49.535 --> 00:03:51.315
+which tells you the folder you're in.
+
+134
+00:03:51.315 --> 00:03:52.695
+So here's
+
+135
+00:03:52.895 --> 00:03:54.395
+a habit for life:
+
+136
+00:03:54.395 --> 00:03:55.995
+before any command,
+
+137
+00:03:55.995 --> 00:03:57.295
+look at the start of the line.
+
+138
+00:03:57.295 --> 00:03:59.200
+It tells you which machine you're on.
+
+139
+00:03:59.480 --> 00:04:00.340
+To get in,
+
+140
+00:04:00.340 --> 00:04:02.580
+use the public key registered the way
+
+141
+00:04:02.580 --> 00:04:04.120
+the provider tells you.
+
+142
+00:04:04.120 --> 00:04:06.540
+The private key never leaves your computer,
+
+143
+00:04:06.540 --> 00:04:08.420
+and the provider's panel walks you through
+
+144
+00:04:08.420 --> 00:04:10.500
+creating it when you sign up.
+
+145
+00:04:10.500 --> 00:04:11.800
+On the first connection,
+
+146
+00:04:11.800 --> 00:04:14.260
+SSH shows the machine's fingerprint and
+
+147
+00:04:14.260 --> 00:04:16.310
+asks whether you want to continue.
+
+148
+00:04:16.310 --> 00:04:18.820
+Denise compared that fingerprint with the one
+
+149
+00:04:18.820 --> 00:04:20.080
+the panel showed,
+
+150
+00:04:20.080 --> 00:04:21.760
+and only then typed yes.
+
+151
+00:04:21.760 --> 00:04:24.500
+That question comes up once per machine;
+
+152
+00:04:24.500 --> 00:04:25.720
+if it shows up again for the
+
+153
+00:04:25.720 --> 00:04:26.840
+same VPS,
+
+154
+00:04:26.840 --> 00:04:28.540
+stop and investigate.
+
+155
+00:04:28.540 --> 00:04:29.520
+Inside,
+
+156
+00:04:29.520 --> 00:04:31.040
+work with a user of your own,
+
+157
+00:04:31.040 --> 00:04:32.520
+the work user.
+
+158
+00:04:32.520 --> 00:04:34.960
+When a task needs administrator permission,
+
+159
+00:04:34.960 --> 00:04:36.700
+put sudo in front of the command.
+
+160
+00:04:36.700 --> 00:04:38.880
+That way, that power shows up only
+
+161
+00:04:38.880 --> 00:04:40.940
+where you asked for it.
+
+162
+00:04:41.420 --> 00:04:42.980
+And when you type the password,
+
+163
+00:04:42.980 --> 00:04:44.920
+nothing appears on the screen.
+
+164
+00:04:44.920 --> 00:04:46.040
+That's normal.
+
+165
+00:04:46.040 --> 00:04:47.800
+Now, the rule that gives this lesson
+
+166
+00:04:47.800 --> 00:04:50.060
+its name: don't return the old key
+
+167
+00:04:50.060 --> 00:04:52.060
+before testing the new one.
+
+168
+00:04:52.060 --> 00:04:53.520
+Before you change the network or the
+
+169
+00:04:53.520 --> 00:04:54.500
+way you get in,
+
+170
+00:04:54.500 --> 00:04:56.440
+leave the original session open,
+
+171
+00:04:56.440 --> 00:04:57.240
+open another window,
+
+172
+00:04:57.240 --> 00:04:58.700
+and test the new entry.
+
+173
+00:04:58.700 --> 00:05:00.580
+Only close the first one when the
+
+174
+00:05:00.580 --> 00:05:01.200
+second one works.
+
+175
+00:05:01.200 --> 00:05:04.340
+And check beforehand that the recovery console,
+
+176
+00:05:04.340 --> 00:05:05.540
+in
+
+177
+00:05:05.680 --> 00:05:06.540
+the provider's panel,
+
+178
+00:05:06.540 --> 00:05:10.069
+opens the machine if everything fails.
+
+179
+00:05:11.069 --> 00:05:13.329
+Pause the video and analyze a case
+
+180
+00:05:13.329 --> 00:05:13.829
+on paper.
+
+181
+00:05:13.829 --> 00:05:14.909
+Rogério,
+
+182
+00:05:14.909 --> 00:05:17.389
+Denise's coworker, pasted a command from the
+
+183
+00:05:17.389 --> 00:05:19.129
+internet that changes the SSH port,
+
+184
+00:05:19.129 --> 00:05:21.229
+ran it, and closed the terminal right
+
+185
+00:05:21.229 --> 00:05:21.969
+away.
+
+186
+00:05:21.969 --> 00:05:23.809
+Now he can't get back in,
+
+187
+00:05:23.809 --> 00:05:25.749
+and he never opened the console.
+
+188
+00:05:25.749 --> 00:05:27.189
+Answer three questions:
+
+189
+00:05:27.189 --> 00:05:29.449
+which rule was missing,
+
+190
+00:05:29.549 --> 00:05:31.169
+where he can still get in,
+
+191
+00:05:31.169 --> 00:05:33.609
+and what he writes in the plan.
+
+192
+00:05:33.609 --> 00:05:35.129
+Then check the lesson's answer key.
+
+193
+00:05:35.129 --> 00:05:36.329
+Inside,
+
+194
+00:05:36.629 --> 00:05:38.049
+the machine comes almost empty,
+
+195
+00:05:38.049 --> 00:05:39.909
+and the question becomes what to put
+
+196
+00:05:39.909 --> 00:05:40.409
+in it.
+
+197
+00:05:40.169 --> 00:05:42.549
+The course examples use Ubuntu,
+
+198
+00:05:42.549 --> 00:05:46.349
+which installs and updates programs with apt.
+
+199
+00:05:46.749 --> 00:05:50.469
+First, the command sudo apt update refreshes
+
+200
+00:05:50.469 --> 00:05:51.929
+the list of what's available for the
+
+201
+00:05:51.929 --> 00:05:52.429
+machine.
+
+202
+00:05:52.349 --> 00:05:53.549
+Then,
+
+203
+00:05:53.609 --> 00:05:56.329
+sudo apt upgrade proposes the updates and
+
+204
+00:05:56.329 --> 00:05:57.189
+waits for your answer.
+
+205
+00:05:57.189 --> 00:05:58.929
+At the end comes the question do
+
+206
+00:05:58.929 --> 00:06:00.049
+you want to continue,
+
+207
+00:06:00.049 --> 00:06:01.949
+with a capital Y as the default
+
+208
+00:06:01.949 --> 00:06:03.149
+answer.
+
+209
+00:06:03.489 --> 00:06:04.849
+On the practice VPS,
+
+210
+00:06:04.849 --> 00:06:06.569
+Denise stopped at that question and read
+
+211
+00:06:06.569 --> 00:06:08.789
+the whole list before answering Y.
+
+212
+00:06:08.789 --> 00:06:09.789
+Do the same:
+
+213
+00:06:09.789 --> 00:06:11.189
+if the list shows a program you
+
+214
+00:06:11.189 --> 00:06:12.369
+don't recognize,
+
+215
+00:06:12.369 --> 00:06:13.769
+look it up before you confirm.
+
+216
+00:06:13.769 --> 00:06:15.089
+And the sudo in front,
+
+217
+00:06:15.089 --> 00:06:16.869
+as you saw in the previous lesson,
+
+218
+00:06:16.869 --> 00:06:18.999
+is the request for administrator permission.
+
+219
+00:06:18.999 --> 00:06:20.779
+So what do you install?
+
+220
+00:06:20.779 --> 00:06:23.639
+The course kit's bot needs Python 3,
+
+221
+00:06:24.359 --> 00:06:26.019
+and Git helps you carry the project
+
+222
+00:06:26.019 --> 00:06:28.519
+from your computer to the VPS.
+
+223
+00:06:28.599 --> 00:06:32.499
+The command is sudo apt install git
+
+224
+00:06:32.499 --> 00:06:33.279
+python3.
+
+225
+00:06:33.279 --> 00:06:34.899
+The bot uses only what already comes
+
+226
+00:06:34.899 --> 00:06:37.359
+with Python, with no extra add-ons.
+
+227
+00:06:37.359 --> 00:06:38.619
+Other tools, like Codex,
+
+228
+00:06:38.619 --> 00:06:40.759
+are optional and go in only if
+
+229
+00:06:40.759 --> 00:06:42.999
+the program asks for them.
+
+230
+00:06:43.419 --> 00:06:45.519
+A tutorial suggested that Lúcia install five
+
+231
+00:06:45.519 --> 00:06:46.919
+tools, just to be safe.
+
+232
+00:06:46.919 --> 00:06:49.039
+She checked what the bot needed and
+
+233
+00:06:49.039 --> 00:06:49.599
+kept two.
+
+234
+00:06:49.599 --> 00:06:51.619
+It's the carry-on bag logic:
+
+235
+00:06:51.619 --> 00:06:53.839
+every extra program is one more thing
+
+236
+00:06:53.839 --> 00:06:55.519
+to update and maintain.
+
+237
+00:06:55.519 --> 00:06:57.439
+With five, that would be five things
+
+238
+00:06:57.439 --> 00:06:59.559
+to update and three sitting unused.
+
+239
+00:06:59.559 --> 00:07:01.659
+With two, both are at work,
+
+240
+00:07:01.659 --> 00:07:02.859
+and
+
+241
+00:07:02.979 --> 00:07:04.619
+the bot loses nothing it does.
+
+242
+00:07:04.619 --> 00:07:07.239
+Before installing, check what's already there.
+
+243
+00:07:07.239 --> 00:07:08.999
+Ask each program for its version,
+
+244
+00:07:08.999 --> 00:07:10.939
+with python3 and the version option,
+
+245
+00:07:10.939 --> 00:07:12.559
+and then with git and the same
+
+246
+00:07:12.559 --> 00:07:13.059
+option.
+
+247
+00:07:12.979 --> 00:07:14.159
+If it answers,
+
+248
+00:07:14.159 --> 00:07:15.239
+it's on the machine.
+
+249
+00:07:15.239 --> 00:07:17.779
+Next, create the projetos folder in your
+
+250
+00:07:17.779 --> 00:07:20.059
+home folder with the mkdir command,
+
+251
+00:07:20.059 --> 00:07:22.699
+and check it with ls.
+
+252
+00:07:23.419 --> 00:07:26.619
+The tilde sign means my home folder.
+
+253
+00:07:26.619 --> 00:07:29.139
+None of these commands changes the system.
+
+254
+00:07:29.139 --> 00:07:30.948
+Lúcia ran all of it on her
+
+255
+00:07:30.948 --> 00:07:33.868
+laptop before renting any VPS and wrote
+
+256
+00:07:33.868 --> 00:07:35.468
+down the versions.
+
+257
+00:07:35.768 --> 00:07:37.188
+Pause the video and do the same
+
+258
+00:07:37.188 --> 00:07:38.308
+in your terminal;
+
+259
+00:07:38.308 --> 00:07:40.738
+on Windows, use the WSL from module
+
+260
+00:07:40.738 --> 00:07:41.238
+three.
+
+261
+00:07:40.908 --> 00:07:42.628
+If you see command not found,
+
+262
+00:07:42.628 --> 00:07:44.188
+it's not your mistake:
+
+263
+00:07:44.188 --> 00:07:46.508
+note it as missing in the plan.
+
+264
+00:07:46.508 --> 00:07:48.388
+Finally, write in the plan what the
+
+265
+00:07:48.388 --> 00:07:50.028
+VPS needs to get:
+
+266
+00:07:50.028 --> 00:07:51.228
+Python 3,
+
+267
+00:07:51.228 --> 00:07:54.228
+Git, and nothing else without a reason.
+
+268
+00:07:54.248 --> 00:07:55.508
+With the bot inside,
+
+269
+00:07:55.508 --> 00:07:57.148
+the front desk is still missing.
+
+270
+00:07:57.148 --> 00:07:59.108
+The firewall filters network connections,
+
+271
+00:07:59.108 --> 00:08:01.448
+in both directions.
+
+272
+00:08:01.568 --> 00:08:03.308
+It's like the school's front desk:
+
+273
+00:08:03.308 --> 00:08:04.848
+there's a list of who can come
+
+274
+00:08:04.848 --> 00:08:06.468
+in, and the mail carrier goes out
+
+275
+00:08:06.468 --> 00:08:07.048
+to pick up the mail.
+
+276
+00:08:07.048 --> 00:08:10.888
+The kit's bot works the second way,
+
+277
+00:08:10.888 --> 00:08:13.168
+with what's called long polling:
+
+278
+00:08:13.168 --> 00:08:14.768
+it goes out through a secure connection
+
+279
+00:08:14.768 --> 00:08:17.508
+and asks Telegram whether a message has
+
+280
+00:08:17.508 --> 00:08:18.008
+arrived.
+
+281
+00:08:17.868 --> 00:08:19.068
+Nobody
+
+282
+00:08:19.488 --> 00:08:21.628
+from outside needs to knock on its
+
+283
+00:08:21.628 --> 00:08:22.268
+door.
+
+284
+00:08:22.268 --> 00:08:23.828
+Lúcia thought she had to open a
+
+285
+00:08:23.828 --> 00:08:25.248
+port so the bot could receive the
+
+286
+00:08:25.248 --> 00:08:26.748
+class's messages.
+
+287
+00:08:26.848 --> 00:08:28.728
+She didn't, because the only one who
+
+288
+00:08:28.728 --> 00:08:30.488
+comes into the machine is her,
+
+289
+00:08:30.488 --> 00:08:31.708
+through SSH.
+
+290
+00:08:31.708 --> 00:08:32.948
+So keep the rule:
+
+291
+00:08:32.948 --> 00:08:34.248
+with long polling,
+
+292
+00:08:34.248 --> 00:08:36.288
+the only entrance the VPS needs is
+
+293
+00:08:36.288 --> 00:08:37.328
+the SSH one.
+
+294
+00:08:37.328 --> 00:08:39.167
+Everything else can stay closed.
+
+295
+00:08:39.480 --> 00:08:41.460
+On Ubuntu, the firewall is set up
+
+296
+00:08:41.460 --> 00:08:42.100
+with ufw.
+
+297
+00:08:42.100 --> 00:08:43.200
+And
+
+298
+00:08:43.200 --> 00:08:44.560
+the order matters:
+
+299
+00:08:44.560 --> 00:08:46.020
+before turning it on,
+
+300
+00:08:46.020 --> 00:08:48.500
+allow the SSH port your VPS actually
+
+301
+00:08:48.500 --> 00:08:49.580
+uses.
+
+302
+00:08:49.580 --> 00:08:50.380
+If it's twenty-two,
+
+303
+00:08:50.380 --> 00:08:53.020
+the command is sudo ufw allow twenty-two
+
+304
+00:08:53.020 --> 00:08:54.520
+slash tcp.
+
+305
+00:08:54.520 --> 00:08:55.800
+If it's another one,
+
+306
+00:08:55.800 --> 00:08:57.160
+the number changes.
+
+307
+00:08:57.160 --> 00:09:01.100
+Only after that comes sudo ufw enable,
+
+308
+00:09:01.100 --> 00:09:03.240
+which turns the firewall on.
+
+309
+00:09:03.440 --> 00:09:06.000
+ufw itself warns you that this may
+
+310
+00:09:06.000 --> 00:09:07.540
+drop open SSH connections,
+
+311
+00:09:07.540 --> 00:09:10.200
+and asks whether to proceed.
+
+312
+00:09:10.200 --> 00:09:12.700
+Denise only answered yes after setting up
+
+313
+00:09:12.700 --> 00:09:14.980
+the ways back from the previous lesson:
+
+314
+00:09:14.980 --> 00:09:17.200
+the second session tested and the provider's
+
+315
+00:09:17.200 --> 00:09:18.640
+console checked.
+
+316
+00:09:18.700 --> 00:09:20.320
+And there's one more detail:
+
+317
+00:09:20.320 --> 00:09:22.200
+some providers have their own firewall in
+
+318
+00:09:22.200 --> 00:09:22.700
+the panel.
+
+319
+00:09:22.360 --> 00:09:24.240
+If yours does,
+
+320
+00:09:24.240 --> 00:09:26.340
+check there too that the SSH port
+
+321
+00:09:26.340 --> 00:09:27.500
+is allowed.
+
+322
+00:09:27.500 --> 00:09:30.040
+What's left is the secrets file.
+
+323
+00:09:30.040 --> 00:09:31.060
+The bot's token,
+
+324
+00:09:31.060 --> 00:09:33.020
+its password on Telegram,
+
+325
+00:09:33.320 --> 00:09:35.200
+lives in the dot env file.
+
+326
+00:09:35.200 --> 00:09:38.120
+The command chmod six hundred makes that
+
+327
+00:09:38.120 --> 00:09:40.800
+file readable only by its owner,
+
+328
+00:09:40.800 --> 00:09:42.520
+and ls shows that at the start
+
+329
+00:09:42.520 --> 00:09:43.647
+of the line.
+
+330
+00:09:43.647 --> 00:09:45.410
+And dot env never goes into Git;
+
+331
+00:09:45.410 --> 00:09:47.550
+the gitignore from module four already takes
+
+332
+00:09:47.550 --> 00:09:48.510
+care of that.
+
+333
+00:09:48.510 --> 00:09:49.930
+If the bot stops,
+
+334
+00:09:50.390 --> 00:09:52.530
+don't open ports to see if it
+
+335
+00:09:52.530 --> 00:09:53.650
+helps.
+
+336
+00:09:53.650 --> 00:09:55.410
+Ask whether the process is running,
+
+337
+00:09:55.410 --> 00:09:57.230
+whether the token was accepted,
+
+338
+00:09:57.230 --> 00:09:59.630
+and whether outgoing network works.
+
+339
+00:09:59.630 --> 00:10:01.870
+The log of Denise's bot said HTTP
+
+340
+00:10:01.870 --> 00:10:03.690
+failure four oh one:
+
+341
+00:10:03.690 --> 00:10:04.910
+it was the token,
+
+342
+00:10:04.910 --> 00:10:06.170
+changed the week before.
+
+343
+00:10:06.170 --> 00:10:07.210
+Pause
+
+344
+00:10:07.210 --> 00:10:07.910
+the video and,
+
+345
+00:10:07.910 --> 00:10:09.170
+in a practice folder,
+
+346
+00:10:09.170 --> 00:10:11.210
+create an empty dot env,
+
+347
+00:10:11.310 --> 00:10:12.590
+lock it with chmod,
+
+348
+00:10:12.590 --> 00:10:14.670
+and check that the line starts with
+
+349
+00:10:14.670 --> 00:10:15.690
+dash,
+
+350
+00:10:15.690 --> 00:10:16.890
+r,
+
+351
+00:10:16.960 --> 00:10:18.270
+w and only dashes.
+
+352
+00:10:18.270 --> 00:10:20.190
+In the plan,
+
+353
+00:10:20.350 --> 00:10:21.710
+write down the ports:
+
+354
+00:10:21.710 --> 00:10:23.090
+the SSH one and,
+
+355
+00:10:23.090 --> 00:10:23.990
+for the bot,
+
+356
+00:10:23.990 --> 00:10:24.770
+none.
+
+357
+00:10:24.770 --> 00:10:26.350
+The front desk is ready,
+
+358
+00:10:26.350 --> 00:10:27.850
+but the bot still depends on you
+
+359
+00:10:27.850 --> 00:10:28.850
+to start it.
+
+360
+00:10:28.850 --> 00:10:30.110
+Up to now,
+
+361
+00:10:30.110 --> 00:10:31.530
+you started the bot by hand,
+
+362
+00:10:31.530 --> 00:10:32.483
+with
+
+363
+00:10:32.483 --> 00:10:34.550
+python3 bot.py in the terminal.
+
+364
+00:10:34.550 --> 00:10:35.510
+On the VPS,
+
+365
+00:10:35.510 --> 00:10:37.710
+that ties the bot to your connection.
+
+366
+00:10:38.350 --> 00:10:40.190
+Denise left the bot running in an
+
+367
+00:10:40.190 --> 00:10:42.050
+SSH session and went home.
+
+368
+00:10:42.050 --> 00:10:43.810
+The connection dropped on the way,
+
+369
+00:10:43.810 --> 00:10:45.390
+and the bot stopped with it.
+
+370
+00:10:45.390 --> 00:10:48.130
+What solves this is systemd,
+
+371
+00:10:48.130 --> 00:10:49.979
+the machine's caretaker:
+
+372
+00:10:49.979 --> 00:10:52.219
+it turns on the lights every morning,
+
+373
+00:10:52.219 --> 00:10:53.639
+turns back on whatever went off,
+
+374
+00:10:53.639 --> 00:10:56.106
+and writes everything down in the incident
+
+375
+00:10:56.106 --> 00:10:56.799
+log book.
+
+376
+00:10:56.799 --> 00:10:57.899
+With it,
+
+377
+00:10:57.899 --> 00:11:00.139
+the bot starts by itself along with
+
+378
+00:11:00.139 --> 00:11:01.419
+the machine,
+
+379
+00:11:01.419 --> 00:11:03.399
+restarts fifteen seconds after a failure,
+
+380
+00:11:03.399 --> 00:11:04.599
+and the record is kept for you
+
+381
+00:11:04.599 --> 00:11:05.279
+to read later,
+
+382
+00:11:05.279 --> 00:11:07.179
+instead of vanishing with the window.
+
+383
+00:11:07.179 --> 00:11:09.819
+The instruction for this caretaker is
+
+384
+00:11:10.079 --> 00:11:12.339
+a file called a unit,
+
+385
+00:11:12.339 --> 00:11:14.839
+and the kit comes with one ready.
+
+386
+00:11:14.839 --> 00:11:17.999
+The kit's unit is the file oswork-bot.service,
+
+387
+00:11:20.999 --> 00:11:22.099
+and it says what,
+
+388
+00:11:22.099 --> 00:11:24.199
+with whom, and where.
+
+389
+00:11:24.199 --> 00:11:26.179
+Four fields take your user and your
+
+390
+00:11:26.179 --> 00:11:28.959
+path: User, who runs the bot;
+
+391
+00:11:28.959 --> 00:11:31.049
+WorkingDirectory, the folder;
+
+392
+00:11:31.049 --> 00:11:33.679
+EnvironmentFile, where the dot env is;
+
+393
+00:11:33.679 --> 00:11:35.999
+and ExecStart, the command that starts it.
+
+394
+00:11:35.999 --> 00:11:38.439
+A fifth one you keep:
+
+395
+00:11:38.439 --> 00:11:40.739
+Restart equals on-failure,
+
+396
+00:11:40.739 --> 00:11:43.579
+which restarts it after a failure.
+
+397
+00:11:43.579 --> 00:11:44.979
+On the VPS,
+
+398
+00:11:44.979 --> 00:11:47.099
+the unit goes into the systemd folder,
+
+399
+00:11:47.099 --> 00:11:48.119
+with sudo.
+
+400
+00:11:48.119 --> 00:11:49.099
+Then
+
+401
+00:11:49.099 --> 00:11:51.079
+daemon-reload makes systemd
+
+402
+00:11:51.079 --> 00:11:52.759
+reread the units,
+
+403
+00:11:52.759 --> 00:11:54.929
+enable with the now option starts the
+
+404
+00:11:54.929 --> 00:11:57.649
+bot now and on every future reboot,
+
+405
+00:11:57.649 --> 00:12:00.009
+and status shows its state.
+
+406
+00:12:00.409 --> 00:12:02.609
+Denise saw active running.
+
+407
+00:12:02.609 --> 00:12:04.669
+Even so, she only called the step
+
+408
+00:12:04.669 --> 00:12:07.909
+done after sending slash status on Telegram
+
+409
+00:12:07.909 --> 00:12:09.849
+and getting the answer.
+
+410
+00:12:09.969 --> 00:12:11.329
+After starting it,
+
+411
+00:12:11.329 --> 00:12:12.849
+do a restart on purpose,
+
+412
+00:12:12.849 --> 00:12:14.529
+with systemctl restart,
+
+413
+00:12:14.529 --> 00:12:15.869
+send slash status again,
+
+414
+00:12:15.869 --> 00:12:17.569
+and write down the time.
+
+415
+00:12:17.569 --> 00:12:20.169
+Next, read the record with the journalctl
+
+416
+00:12:20.169 --> 00:12:21.269
+command.
+
+417
+00:12:21.269 --> 00:12:22.989
+Lúcia saw the bot stop and come
+
+418
+00:12:22.989 --> 00:12:25.409
+back there, with date and time.
+
+419
+00:12:25.409 --> 00:12:26.389
+But watch out:
+
+420
+00:12:26.389 --> 00:12:28.209
+restarting doesn't fix an error that keeps
+
+421
+00:12:28.209 --> 00:12:29.129
+coming back.
+
+422
+00:12:29.129 --> 00:12:30.089
+On another day,
+
+423
+00:12:30.089 --> 00:12:32.149
+she saw the line process ended for
+
+424
+00:12:32.149 --> 00:12:33.289
+diagnosis,
+
+425
+00:12:33.289 --> 00:12:34.049
+stopped the service,
+
+426
+00:12:34.049 --> 00:12:35.789
+and went looking for the cause before
+
+427
+00:12:35.789 --> 00:12:36.809
+trying again.
+
+428
+00:12:36.809 --> 00:12:38.969
+Now pause the video and adapt the
+
+429
+00:12:38.969 --> 00:12:40.969
+kit's unit to your user.
+
+430
+00:12:40.969 --> 00:12:41.949
+Unzip the kit,
+
+431
+00:12:41.949 --> 00:12:43.469
+open oswork-bot.service
+
+432
+00:12:44.529 --> 00:12:46.589
+with nano, replace the four fields with
+
+433
+00:12:46.589 --> 00:12:48.109
+your user and path,
+
+434
+00:12:48.109 --> 00:12:49.249
+save,
+
+435
+00:12:49.249 --> 00:12:51.469
+and check with the grep command that
+
+436
+00:12:51.469 --> 00:12:53.309
+none of the four lines still says
+
+437
+00:12:53.309 --> 00:12:54.509
+oswork.
+
+438
+00:12:54.609 --> 00:12:55.289
+Without a VPS,
+
+439
+00:12:55.289 --> 00:12:57.717
+nothing starts: it's just a text file.
+
+440
+00:12:58.000 --> 00:13:01.320
+Started and restarted still isn't care.
+
+441
+00:13:01.320 --> 00:13:03.180
+systemd restarts the bot,
+
+442
+00:13:03.180 --> 00:13:04.900
+but it doesn't warn anyone if the
+
+443
+00:13:04.900 --> 00:13:06.340
+bot goes silent.
+
+444
+00:13:06.340 --> 00:13:08.960
+That's why there's the external check:
+
+445
+00:13:09.200 --> 00:13:10.460
+someone, outside
+
+446
+00:13:10.460 --> 00:13:12.020
+the VPS, verifies
+
+447
+00:13:12.020 --> 00:13:13.580
+that the service answers.
+
+448
+00:13:13.580 --> 00:13:16.420
+A simple daily check records two things:
+
+449
+00:13:16.420 --> 00:13:18.240
+whether the bot answered and how much
+
+450
+00:13:18.240 --> 00:13:19.840
+disk space is left,
+
+451
+00:13:19.840 --> 00:13:21.120
+which the df command shows on the
+
+452
+00:13:21.120 --> 00:13:22.100
+VPS.
+
+453
+00:13:22.100 --> 00:13:23.920
+Denise sends slash
+
+454
+00:13:24.020 --> 00:13:25.780
+status from her phone every morning,
+
+455
+00:13:25.780 --> 00:13:27.860
+before the eight o'clock meeting,
+
+456
+00:13:27.860 --> 00:13:28.860
+and writes down the time of the
+
+457
+00:13:28.860 --> 00:13:29.860
+answer;
+
+458
+00:13:29.860 --> 00:13:30.680
+once a week,
+
+459
+00:13:30.680 --> 00:13:32.720
+she also writes down the disk space.
+
+460
+00:13:32.720 --> 00:13:34.180
+If your phone gets the answer,
+
+461
+00:13:34.180 --> 00:13:35.460
+the whole path works.
+
+462
+00:13:35.460 --> 00:13:36.360
+As for the disk,
+
+463
+00:13:36.360 --> 00:13:37.680
+you look at it before it fills
+
+464
+00:13:37.680 --> 00:13:40.420
+up, because a full disk makes
+
+465
+00:13:40.440 --> 00:13:42.020
+any service stop.
+
+466
+00:13:42.020 --> 00:13:43.960
+And the note carries a name,
+
+467
+00:13:43.960 --> 00:13:46.260
+because the check belongs to someone.
+
+468
+00:13:46.260 --> 00:13:47.680
+Now, the backups.
+
+469
+00:13:47.680 --> 00:13:49.280
+Keep copies of the data outside the
+
+470
+00:13:49.280 --> 00:13:50.480
+VPS,
+
+471
+00:13:50.840 --> 00:13:52.940
+for example in a protected folder in
+
+472
+00:13:52.940 --> 00:13:54.580
+the school's Drive
+
+473
+00:13:54.580 --> 00:13:55.980
+or on an external disk.
+
+474
+00:13:55.980 --> 00:13:57.840
+If the machine disappears,
+
+475
+00:13:57.840 --> 00:13:59.880
+the copy can't go with it.
+
+476
+00:13:59.880 --> 00:14:01.340
+Also set the retention,
+
+477
+00:14:01.340 --> 00:14:03.520
+meaning how long each copy is kept.
+
+478
+00:14:03.520 --> 00:14:05.080
+Lúcia used to keep the copy on
+
+479
+00:14:05.080 --> 00:14:07.220
+the same VPS and started keeping it
+
+480
+00:14:07.220 --> 00:14:08.220
+outside,
+
+481
+00:14:08.220 --> 00:14:09.985
+with three monthly copies;
+
+482
+00:14:09.985 --> 00:14:10.600
+the dot env,
+
+483
+00:14:10.600 --> 00:14:11.900
+with the token,
+
+484
+00:14:11.900 --> 00:14:13.060
+was left out.
+
+485
+00:14:13.060 --> 00:14:14.660
+But a copy only counts after the
+
+486
+00:14:14.660 --> 00:14:16.540
+rehearsal, like a fire drill.
+
+487
+00:14:16.540 --> 00:14:18.700
+The test restores the file vendas.csv
+
+488
+00:14:18.700 --> 00:14:21.320
+into a separate folder and compares it
+
+489
+00:14:21.320 --> 00:14:23.380
+with the original using diff.
+
+490
+00:14:23.380 --> 00:14:24.900
+If diff says nothing,
+
+491
+00:14:24.900 --> 00:14:25.980
+the two are identical.
+
+492
+00:14:25.980 --> 00:14:27.920
+In Denise's first test,
+
+493
+00:14:27.920 --> 00:14:28.800
+the copy was empty:
+
+494
+00:14:28.800 --> 00:14:31.240
+the command pointed to the wrong folder.
+
+495
+00:14:31.240 --> 00:14:33.120
+The rehearsal found the error before a
+
+496
+00:14:33.120 --> 00:14:34.520
+real loss.
+
+497
+00:14:35.160 --> 00:14:37.200
+The course project closes with five pieces
+
+498
+00:14:37.200 --> 00:14:38.400
+of evidence:
+
+499
+00:14:38.400 --> 00:14:39.600
+authorized response,
+
+500
+00:14:39.600 --> 00:14:40.960
+unknown user blocked,
+
+501
+00:14:40.960 --> 00:14:42.000
+restart,
+
+502
+00:14:42.000 --> 00:14:42.813
+log without token,
+
+503
+00:14:42.813 --> 00:14:44.593
+and restore checked.
+
+504
+00:14:44.593 --> 00:14:47.053
+Without a second Telegram account,
+
+505
+00:14:47.653 --> 00:14:50.853
+the unknown-user block can be proven with
+
+506
+00:14:50.853 --> 00:14:52.393
+the kit's self-test.
+
+507
+00:14:52.393 --> 00:14:54.173
+And whatever wasn't done,
+
+508
+00:14:54.173 --> 00:14:55.153
+you declare.
+
+509
+00:14:55.153 --> 00:14:56.733
+Denise didn't have the VPS yet,
+
+510
+00:14:56.733 --> 00:14:58.913
+so on the restart line she wrote:
+
+511
+00:14:58.913 --> 00:15:00.933
+not executed,
+
+512
+00:15:00.933 --> 00:15:01.933
+no VPS.
+
+513
+00:15:01.933 --> 00:15:04.173
+A written not done is
+
+514
+00:15:04.393 --> 00:15:06.073
+worth more than a done that nobody
+
+515
+00:15:06.073 --> 00:15:07.113
+checked.
+
+516
+00:15:07.113 --> 00:15:09.273
+Now pause the video and make a
+
+517
+00:15:09.273 --> 00:15:11.653
+real backup on your computer:
+
+518
+00:15:11.653 --> 00:15:13.613
+copy the kit's vendas.csv
+
+519
+00:15:13.713 --> 00:15:15.733
+into a backup folder,
+
+520
+00:15:15.733 --> 00:15:17.973
+restore it into a separate folder,
+
+521
+00:15:17.973 --> 00:15:19.053
+and run diff.
+
+522
+00:15:19.053 --> 00:15:20.813
+Silence is the sign you got it
+
+523
+00:15:20.813 --> 00:15:21.973
+right.
+
+524
+00:15:21.973 --> 00:15:23.693
+Then show the file with cat and
+
+525
+00:15:23.693 --> 00:15:25.013
+add up the values:
+
+526
+00:15:25.013 --> 00:15:26.773
+the total has to be one hundred.
+
+527
+00:15:26.773 --> 00:15:28.233
+Write the date and the result in
+
+528
+00:15:28.233 --> 00:15:29.013
+the plan.
+
+529
+00:15:29.013 --> 00:15:30.473
+To wrap up:
+
+530
+00:15:30.473 --> 00:15:32.553
+a VPS is a rented room:
+
+531
+00:15:32.553 --> 00:15:33.753
+it runs all the time,
+
+532
+00:15:33.753 --> 00:15:35.633
+and you're the one who takes care
+
+533
+00:15:35.633 --> 00:15:36.473
+of it.
+
+534
+00:15:36.473 --> 00:15:38.293
+Size follows the program,
+
+535
+00:15:38.293 --> 00:15:39.513
+each bill has its limit,
+
+536
+00:15:39.513 --> 00:15:41.973
+and the plan comes before the purchase.
+
+537
+00:15:41.973 --> 00:15:43.753
+You get in through SSH,
+
+538
+00:15:43.753 --> 00:15:45.333
+keeping the old key until the new
+
+539
+00:15:45.333 --> 00:15:47.413
+one works, install only what the bot
+
+540
+00:15:47.413 --> 00:15:48.513
+asks for,
+
+541
+00:15:48.513 --> 00:15:50.993
+leave only the SSH port open,
+
+542
+00:15:50.993 --> 00:15:52.753
+lock the dot env,
+
+543
+00:15:52.753 --> 00:15:55.013
+and hand the bot to systemd,
+
+544
+00:15:55.013 --> 00:15:56.873
+which starts, restarts
+
+545
+00:15:56.873 --> 00:15:57.393
+and logs.
+
+546
+00:15:57.393 --> 00:15:58.333
+And you prove,
+
+547
+00:15:58.333 --> 00:16:00.693
+from outside, that it answers,
+
+548
+00:16:00.693 --> 00:16:02.053
+and you rehearse the restore.
+
+549
+00:16:02.053 --> 00:16:03.093
+With
+
+550
+00:16:03.093 --> 00:16:05.153
+that, OSWork comes to an end.
+
+551
+00:16:05.153 --> 00:16:07.333
+You leave with an organized folder with
+
+552
+00:16:07.333 --> 00:16:09.093
+verifiable instructions,
+
+553
+00:16:09.273 --> 00:16:11.473
+a Skill, the history in Git,
+
+554
+00:16:11.473 --> 00:16:12.873
+a restricted bot,
+
+555
+00:16:12.873 --> 00:16:14.653
+and a supervised operation plan on a
+
+556
+00:16:14.653 --> 00:16:15.293
+VPS.
+
+557
+00:16:15.293 --> 00:16:16.453
+From here on,
+
+558
+00:16:16.453 --> 00:16:18.013
+the course becomes routine:
+
+559
+00:16:18.013 --> 00:16:19.153
+the daily check,
+
+560
+00:16:19.153 --> 00:16:19.673
+the monthly rehearsal,
+
+561
+00:16:19.673 --> 00:16:23.293
+and the plan updated with every change.
+
+562
+00:16:23.393 --> 00:16:24.833
+Put the next restore test on your
+
+563
+00:16:24.833 --> 00:16:27.073
+calendar now, a month from today.
+
+564
+00:16:27.073 --> 00:16:29.053
+Thank you for making it this far.
