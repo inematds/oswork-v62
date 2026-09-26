@@ -1,0 +1,2249 @@
+WEBVTT
+
+1
+00:00:00.300 --> 00:00:01.440
+Hi, I'm Nei Maldaner,
+
+2
+00:00:01.440 --> 00:00:03.640
+and this is module one of
+
+3
+00:00:03.650 --> 00:00:04.380
+OSWork.
+
+4
+00:00:04.380 --> 00:00:06.400
+When an AI answer comes out bad,
+
+5
+00:00:06.400 --> 00:00:07.980
+the most common reaction is to switch
+
+6
+00:00:07.980 --> 00:00:10.020
+tools or write a longer and longer
+
+7
+00:00:10.020 --> 00:00:11.100
+request.
+
+8
+00:00:11.100 --> 00:00:12.020
+In this module,
+
+9
+00:00:12.020 --> 00:00:13.320
+we'll do it differently.
+
+10
+00:00:13.320 --> 00:00:15.380
+You'll learn to see AI as a
+
+11
+00:00:15.380 --> 00:00:16.720
+system of pieces,
+
+12
+00:00:16.720 --> 00:00:18.360
+to choose the model by the task
+
+13
+00:00:18.360 --> 00:00:20.020
+and not by its fame,
+
+14
+00:00:20.020 --> 00:00:21.640
+to judge an answer with a rubric
+
+15
+00:00:21.640 --> 00:00:23.080
+written in advance,
+
+16
+00:00:23.080 --> 00:00:25.120
+to find out which account each cost
+
+17
+00:00:25.120 --> 00:00:27.500
+comes from, and to delegate work with
+
+18
+00:00:27.500 --> 00:00:28.670
+clear limits.
+
+19
+00:00:28.670 --> 00:00:30.780
+We'll follow two colleagues from a school:
+
+20
+00:00:30.780 --> 00:00:33.200
+Denise, the academic coordinator,
+
+21
+00:00:33.200 --> 00:00:36.640
+and Lúcia, who teaches eighth grade science.
+
+22
+00:00:37.040 --> 00:00:39.320
+Each lesson has a short practice.
+
+23
+00:00:39.320 --> 00:00:40.220
+When I ask,
+
+24
+00:00:40.220 --> 00:00:41.840
+pause the video and do it right
+
+25
+00:00:41.840 --> 00:00:43.440
+then, with a real task of your
+
+26
+00:00:43.440 --> 00:00:44.080
+own.
+
+27
+00:00:44.080 --> 00:00:45.340
+When we talk about AI in this
+
+28
+00:00:45.340 --> 00:00:48.240
+course, we mainly mean language models,
+
+29
+00:00:48.240 --> 00:00:49.600
+the LLMs.
+
+30
+00:00:49.860 --> 00:00:51.800
+A model is a mechanism trained to
+
+31
+00:00:51.800 --> 00:00:54.600
+produce text from what you give it.
+
+32
+00:00:54.600 --> 00:00:56.120
+Notice that last part:
+
+33
+00:00:56.120 --> 00:00:57.620
+from what you give it.
+
+34
+00:00:57.620 --> 00:00:59.160
+It can't see your school,
+
+35
+00:00:59.160 --> 00:01:01.823
+your team, or last week's meeting.
+
+36
+00:01:02.243 --> 00:01:04.043
+Whatever is missing from the request,
+
+37
+00:01:04.043 --> 00:01:05.243
+it fills in with the most common
+
+38
+00:01:05.243 --> 00:01:07.123
+way of answering.
+
+39
+00:01:07.323 --> 00:01:08.783
+Take Denise's case.
+
+40
+00:01:08.783 --> 00:01:10.323
+She asked for a plan for the
+
+41
+00:01:10.323 --> 00:01:11.523
+eighth grade parents meeting,
+
+42
+00:01:11.523 --> 00:01:12.923
+and nothing else.
+
+43
+00:01:12.923 --> 00:01:14.123
+She got back a nice plan,
+
+44
+00:01:14.123 --> 00:01:15.023
+with
+
+45
+00:01:15.023 --> 00:01:16.723
+a welcome, the teaching project,
+
+46
+00:01:16.723 --> 00:01:18.323
+and the test calendar.
+
+47
+00:01:18.323 --> 00:01:19.783
+None of that was on the school's
+
+48
+00:01:19.783 --> 00:01:20.783
+agenda.
+
+49
+00:01:20.783 --> 00:01:22.603
+Then she pasted the agenda and the
+
+50
+00:01:22.603 --> 00:01:24.123
+minutes from the previous meeting,
+
+51
+00:01:24.123 --> 00:01:26.063
+and asked it to mark what was
+
+52
+00:01:26.063 --> 00:01:27.263
+still pending.
+
+53
+00:01:27.263 --> 00:01:28.403
+Same AI.
+
+54
+00:01:28.403 --> 00:01:30.423
+Now every item pointed to a document
+
+55
+00:01:30.423 --> 00:01:32.003
+she had in hand.
+
+56
+00:01:32.003 --> 00:01:33.983
+So, if a bad answer isn't always
+
+57
+00:01:33.983 --> 00:01:35.163
+the model's fault,
+
+58
+00:01:35.163 --> 00:01:36.783
+where does it come from?
+
+59
+00:01:36.783 --> 00:01:38.223
+This is the central idea of the
+
+60
+00:01:38.223 --> 00:01:39.083
+course.
+
+61
+00:01:39.083 --> 00:01:41.163
+A model produces answers.
+
+62
+00:01:41.163 --> 00:01:43.263
+A system organizes how those answers become
+
+63
+00:01:43.263 --> 00:01:44.463
+work.
+
+64
+00:01:45.073 --> 00:01:47.603
+OSWork looks at seven pieces:
+
+65
+00:01:47.603 --> 00:01:49.803
+the model, the interface where you chat,
+
+66
+00:01:49.803 --> 00:01:52.343
+the files that provide evidence,
+
+67
+00:01:52.343 --> 00:01:53.843
+the standing instructions,
+
+68
+00:01:53.843 --> 00:01:55.683
+the tools that carry out actions,
+
+69
+00:01:55.683 --> 00:01:57.103
+the memory between conversations,
+
+70
+00:01:57.103 --> 00:01:59.943
+and the automations that run without you
+
+71
+00:01:59.943 --> 00:02:01.743
+opening the chat.
+
+72
+00:02:02.045 --> 00:02:03.485
+Think of a small workshop.
+
+73
+00:02:03.485 --> 00:02:05.525
+The worker's skill matters,
+
+74
+00:02:05.525 --> 00:02:07.085
+but tools, materials,
+
+75
+00:02:07.085 --> 00:02:09.565
+and a quality standard also decide the
+
+76
+00:02:09.565 --> 00:02:10.065
+result.
+
+77
+00:02:09.865 --> 00:02:11.785
+When Denise drew the seven boxes for
+
+78
+00:02:11.785 --> 00:02:12.945
+the parents meeting minutes,
+
+79
+00:02:12.945 --> 00:02:14.125
+she saw she had a model and
+
+80
+00:02:14.125 --> 00:02:15.105
+an interface.
+
+81
+00:02:15.105 --> 00:02:16.785
+The files were missing:
+
+82
+00:02:16.785 --> 00:02:18.665
+the agenda was in someone else's email.
+
+83
+00:02:18.665 --> 00:02:20.415
+And one note:
+
+84
+00:02:20.415 --> 00:02:22.305
+OSWork is a metaphor for organization.
+
+85
+00:02:22.305 --> 00:02:24.605
+You won't be replacing your computer's operating
+
+86
+00:02:24.605 --> 00:02:25.745
+system.
+
+87
+00:02:25.745 --> 00:02:28.745
+Separating the pieces has a practical benefit:
+
+88
+00:02:28.745 --> 00:02:30.845
+it stops the reflex of writing a
+
+89
+00:02:30.845 --> 00:02:32.725
+longer and longer request.
+
+90
+00:02:32.725 --> 00:02:35.085
+First you ask where the failure started.
+
+91
+00:02:35.085 --> 00:02:36.805
+Then you fix only that spot.
+
+92
+00:02:36.805 --> 00:02:38.765
+Lúcia's AI said it
+
+93
+00:02:38.765 --> 00:02:39.965
+had saved the grades,
+
+94
+00:02:39.965 --> 00:02:41.885
+but the file never showed up.
+
+95
+00:02:41.885 --> 00:02:44.605
+Rewriting the request wouldn't have solved anything:
+
+96
+00:02:44.605 --> 00:02:46.345
+what was missing was a tool with
+
+97
+00:02:46.345 --> 00:02:48.105
+permission to save.
+
+98
+00:02:48.165 --> 00:02:49.885
+And there's one piece that never leaves
+
+99
+00:02:49.885 --> 00:02:51.565
+the system: you.
+
+100
+00:02:51.565 --> 00:02:52.705
+The model reasons,
+
+101
+00:02:52.705 --> 00:02:53.905
+the tools execute,
+
+102
+00:02:53.905 --> 00:02:54.985
+and you are the one who checks.
+
+103
+00:02:54.985 --> 00:02:56.505
+Now pause the video.
+
+104
+00:02:56.505 --> 00:02:58.545
+Take a task you've already asked AI
+
+105
+00:02:58.545 --> 00:03:00.485
+to do and draw seven boxes.
+
+106
+00:03:00.485 --> 00:03:01.685
+Mark
+
+107
+00:03:02.125 --> 00:03:03.428
+right or wrong for model,
+
+108
+00:03:03.428 --> 00:03:04.968
+interface, and files,
+
+109
+00:03:04.968 --> 00:03:06.208
+and put a question mark on the
+
+110
+00:03:06.208 --> 00:03:07.968
+other four, which come in the next
+
+111
+00:03:07.968 --> 00:03:09.168
+modules.
+
+112
+00:03:09.188 --> 00:03:11.368
+Circle the missing piece and write next
+
+113
+00:03:11.368 --> 00:03:12.328
+to it how to bring it in.
+
+114
+00:03:12.328 --> 00:03:14.328
+If the model is a piece,
+
+115
+00:03:14.328 --> 00:03:16.148
+what kinds of pieces are there?
+
+116
+00:03:16.148 --> 00:03:17.748
+Before comparing names,
+
+117
+00:03:17.748 --> 00:03:19.008
+sort by function.
+
+118
+00:03:19.008 --> 00:03:20.308
+There are four.
+
+119
+00:03:20.308 --> 00:03:22.468
+Text models, the LLMs,
+
+120
+00:03:22.468 --> 00:03:23.928
+write, summarize, explain,
+
+121
+00:03:23.928 --> 00:03:25.568
+and even code.
+
+122
+00:03:25.568 --> 00:03:28.908
+Image models create or edit pictures.
+
+123
+00:03:28.928 --> 00:03:31.228
+Video models create clips.
+
+124
+00:03:31.228 --> 00:03:31.748
+And there are classifiers,
+
+125
+00:03:31.748 --> 00:03:32.948
+which
+
+126
+00:03:33.088 --> 00:03:35.628
+don't chat: they receive a set of
+
+127
+00:03:35.628 --> 00:03:37.608
+options and return a choice,
+
+128
+00:03:37.608 --> 00:03:38.608
+a yes or no,
+
+129
+00:03:38.608 --> 00:03:40.148
+or a score.
+
+130
+00:03:40.148 --> 00:03:42.328
+Lúcia listed what she does with AI
+
+131
+00:03:42.328 --> 00:03:43.428
+in a month.
+
+132
+00:03:43.428 --> 00:03:45.728
+Summarizing the class council minutes calls for
+
+133
+00:03:45.728 --> 00:03:46.528
+text.
+
+134
+00:03:46.528 --> 00:03:48.148
+The science fair cover calls for an
+
+135
+00:03:48.148 --> 00:03:49.028
+image.
+
+136
+00:03:49.028 --> 00:03:51.508
+A ten-second intro calls for video.
+
+137
+00:03:51.508 --> 00:03:53.168
+And sorting two hundred comments from her
+
+138
+00:03:53.168 --> 00:03:54.988
+class into question,
+
+139
+00:03:55.768 --> 00:03:58.968
+praise, and complaint calls for classification.
+
+140
+00:03:59.408 --> 00:04:00.868
+Each task goes to the kind of
+
+141
+00:04:00.868 --> 00:04:02.100
+model that can do it.
+
+142
+00:04:02.440 --> 00:04:06.140
+ChatGPT, Gemini, and Copilot are chats.
+
+143
+00:04:06.320 --> 00:04:08.740
+Behind each one there are models,
+
+144
+00:04:08.740 --> 00:04:11.560
+organized into families with their own names.
+
+145
+00:04:11.560 --> 00:04:13.440
+You don't need to memorize that list.
+
+146
+00:04:13.440 --> 00:04:14.640
+Names,
+
+147
+00:04:14.920 --> 00:04:18.500
+versions, and availability change from one month
+
+148
+00:04:18.500 --> 00:04:19.000
+to the next,
+
+149
+00:04:18.740 --> 00:04:21.100
+and what shows up in a colleague's
+
+150
+00:04:21.100 --> 00:04:23.440
+account may not show up in yours.
+
+151
+00:04:23.440 --> 00:04:25.200
+That's why the choice happens when the
+
+152
+00:04:25.200 --> 00:04:26.640
+task comes up,
+
+153
+00:04:26.640 --> 00:04:29.260
+by checking the official page and writing
+
+154
+00:04:29.260 --> 00:04:30.340
+down the date.
+
+155
+00:04:30.340 --> 00:04:31.900
+Denise heard that a certain model was
+
+156
+00:04:31.900 --> 00:04:33.320
+the best and wanted to use it
+
+157
+00:04:33.320 --> 00:04:34.680
+for everything.
+
+158
+00:04:34.680 --> 00:04:35.820
+It worked for the text of the
+
+159
+00:04:35.820 --> 00:04:37.500
+June festival invitation.
+
+160
+00:04:37.500 --> 00:04:39.360
+When she asked for the invitation artwork,
+
+161
+00:04:39.360 --> 00:04:41.360
+she found out that model only wrote
+
+162
+00:04:41.360 --> 00:04:42.300
+text.
+
+163
+00:04:42.300 --> 00:04:43.200
+There are also hubs,
+
+164
+00:04:43.200 --> 00:04:44.220
+like
+
+165
+00:04:44.220 --> 00:04:46.600
+OpenRouter for text and Kie for images
+
+166
+00:04:46.600 --> 00:04:48.300
+and video.
+
+167
+00:04:48.420 --> 00:04:49.920
+They give you access to many models
+
+168
+00:04:49.920 --> 00:04:50.600
+in one place,
+
+169
+00:04:50.600 --> 00:04:52.800
+with their own credit.
+
+170
+00:04:52.820 --> 00:04:54.720
+The classifier deserves a closer look,
+
+171
+00:04:54.720 --> 00:04:57.080
+because it's the one people forget.
+
+172
+00:04:57.080 --> 00:04:58.840
+It receives a text and a closed
+
+173
+00:04:58.840 --> 00:05:00.440
+list of options,
+
+174
+00:05:00.580 --> 00:05:02.140
+and it returns a choice,
+
+175
+00:05:02.140 --> 00:05:03.096
+not a paragraph.
+
+176
+00:05:03.096 --> 00:05:04.996
+To sort many items into a few
+
+177
+00:05:04.996 --> 00:05:06.956
+categories, that can be easier to check
+
+178
+00:05:06.956 --> 00:05:08.056
+than a conversation.
+
+179
+00:05:08.056 --> 00:05:09.816
+It's a hypothesis to test,
+
+180
+00:05:09.816 --> 00:05:11.096
+not a guarantee.
+
+181
+00:05:11.096 --> 00:05:12.416
+And you can try it today,
+
+182
+00:05:12.416 --> 00:05:13.996
+right in the chat.
+
+183
+00:05:14.556 --> 00:05:17.016
+Lúcia pasted a student's comment,
+
+184
+00:05:17.016 --> 00:05:19.756
+I didn't understand the photosynthesis part that
+
+185
+00:05:19.756 --> 00:05:20.876
+was on the test,
+
+186
+00:05:20.876 --> 00:05:22.776
+along with the three categories,
+
+187
+00:05:22.776 --> 00:05:24.876
+asking only for the category.
+
+188
+00:05:24.876 --> 00:05:26.176
+One word came back:
+
+189
+00:05:26.176 --> 00:05:27.076
+question.
+
+190
+00:05:27.076 --> 00:05:28.656
+She checked ten answers by hand before
+
+191
+00:05:28.656 --> 00:05:30.116
+trusting the rest.
+
+192
+00:05:30.116 --> 00:05:31.496
+Your practice now:
+
+193
+00:05:31.496 --> 00:05:33.456
+pause and write down the three AI
+
+194
+00:05:33.456 --> 00:05:35.836
+tasks you repeat most.
+
+195
+00:05:35.956 --> 00:05:37.116
+Next to each one,
+
+196
+00:05:37.116 --> 00:05:38.556
+the kind of model.
+
+197
+00:05:38.556 --> 00:05:40.756
+Only then, a name to test.
+
+198
+00:05:40.756 --> 00:05:42.836
+Within the same model there's still a
+
+199
+00:05:42.836 --> 00:05:44.356
+second control:
+
+200
+00:05:44.756 --> 00:05:46.296
+reasoning effort.
+
+201
+00:05:46.296 --> 00:05:48.836
+The model is the mechanism you chose.
+
+202
+00:05:48.836 --> 00:05:51.116
+Effort is a setting of that mechanism:
+
+203
+00:05:51.116 --> 00:05:53.596
+how much it analyzes before answering.
+
+204
+00:05:53.596 --> 00:05:55.896
+Denise thought changing the level meant switching
+
+205
+00:05:55.896 --> 00:05:56.896
+AIs.
+
+206
+00:05:56.896 --> 00:05:58.156
+It doesn't.
+
+207
+00:05:58.156 --> 00:05:59.416
+With the same model,
+
+208
+00:05:59.416 --> 00:06:00.276
+you can ask for a quick answer
+
+209
+00:06:00.276 --> 00:06:02.652
+or a longer analysis.
+
+210
+00:06:02.652 --> 00:06:04.892
+Higher levels can take more time and
+
+211
+00:06:04.892 --> 00:06:06.232
+use more tokens.
+
+212
+00:06:06.232 --> 00:06:07.972
+And the names on the selector change
+
+213
+00:06:07.972 --> 00:06:09.672
+from product to product:
+
+214
+00:06:09.672 --> 00:06:10.652
+in the chat,
+
+215
+00:06:10.652 --> 00:06:12.872
+in Work, and in Codex you'll find
+
+216
+00:06:12.872 --> 00:06:14.152
+different labels.
+
+217
+00:06:14.152 --> 00:06:15.952
+There's no single list of levels that
+
+218
+00:06:15.952 --> 00:06:17.232
+applies everywhere.
+
+219
+00:06:17.232 --> 00:06:20.012
+Some chats don't even show this control,
+
+220
+00:06:20.012 --> 00:06:22.232
+depending on the product and the plan.
+
+221
+00:06:22.232 --> 00:06:23.972
+Many people turn on maximum effort for
+
+222
+00:06:23.972 --> 00:06:26.172
+every task, just in case.
+
+223
+00:06:26.172 --> 00:06:27.772
+But no amount of effort brings back
+
+224
+00:06:27.772 --> 00:06:29.612
+a document that was left out of
+
+225
+00:06:29.612 --> 00:06:30.712
+the request.
+
+226
+00:06:30.712 --> 00:06:32.412
+Lúcia wanted to understand why the front
+
+227
+00:06:32.412 --> 00:06:35.292
+office's grade spreadsheet didn't
+
+228
+00:06:35.472 --> 00:06:36.952
+match hers.
+
+229
+00:06:36.952 --> 00:06:38.312
+At maximum effort,
+
+230
+00:06:38.312 --> 00:06:40.232
+without pasting the spreadsheets,
+
+231
+00:06:40.232 --> 00:06:41.672
+she got a list of possible causes,
+
+232
+00:06:41.672 --> 00:06:43.912
+without pointing to any of them.
+
+233
+00:06:43.912 --> 00:06:45.412
+At the default effort,
+
+234
+00:06:45.412 --> 00:06:47.792
+with both spreadsheets pasted in,
+
+235
+00:06:47.792 --> 00:06:49.412
+she got the exact
+
+236
+00:06:49.412 --> 00:06:52.012
+row: one student with a different grade
+
+237
+00:06:52.012 --> 00:06:52.892
+on one assessment.
+
+238
+00:06:52.892 --> 00:06:55.712
+The right input solved what the control
+
+239
+00:06:55.712 --> 00:06:56.872
+at maximum didn't.
+
+240
+00:06:56.872 --> 00:06:58.292
+So here's the order.
+
+241
+00:06:58.292 --> 00:06:59.632
+Start with the default,
+
+242
+00:06:59.632 --> 00:07:02.232
+which handles most everyday tasks.
+
+243
+00:07:02.548 --> 00:07:04.008
+Complete the inputs.
+
+244
+00:07:04.008 --> 00:07:05.968
+Only then decide whether the problem needs
+
+245
+00:07:05.968 --> 00:07:08.208
+more analysis, like tasks with many steps
+
+246
+00:07:08.208 --> 00:07:09.448
+or lots of data.
+
+247
+00:07:09.448 --> 00:07:11.228
+And how do you know if more
+
+248
+00:07:11.228 --> 00:07:11.988
+effort helped?
+
+249
+00:07:11.988 --> 00:07:14.428
+By changing just one control.
+
+250
+00:07:14.428 --> 00:07:16.288
+Repeat the same request,
+
+251
+00:07:16.288 --> 00:07:17.228
+with
+
+252
+00:07:17.228 --> 00:07:18.568
+the same material,
+
+253
+00:07:18.568 --> 00:07:19.828
+in the same model,
+
+254
+00:07:19.828 --> 00:07:21.668
+and change only the effort.
+
+255
+00:07:21.668 --> 00:07:23.568
+If you change two things at once,
+
+256
+00:07:23.568 --> 00:07:25.528
+you can't conclude anything.
+
+257
+00:07:25.528 --> 00:07:27.308
+Then write down whether there was an
+
+258
+00:07:27.308 --> 00:07:28.508
+improvement you can show:
+
+259
+00:07:28.508 --> 00:07:30.008
+one more fact,
+
+260
+00:07:30.008 --> 00:07:31.368
+one less error,
+
+261
+00:07:31.368 --> 00:07:33.248
+a correct calculation.
+
+262
+00:07:33.248 --> 00:07:34.408
+It got better,
+
+263
+00:07:34.408 --> 00:07:35.828
+with no evidence,
+
+264
+00:07:35.828 --> 00:07:36.788
+doesn't count.
+
+265
+00:07:36.788 --> 00:07:39.688
+Lúcia asked for the same annotated correction
+
+266
+00:07:39.688 --> 00:07:40.188
+twice.
+
+267
+00:07:40.168 --> 00:07:41.788
+At the higher level,
+
+268
+00:07:41.788 --> 00:07:43.548
+a unit error showed up,
+
+269
+00:07:43.548 --> 00:07:45.468
+kilometers instead of meters,
+
+270
+00:07:45.468 --> 00:07:47.568
+that the default had let slip by.
+
+271
+00:07:47.568 --> 00:07:49.308
+She wrote down exactly that.
+
+272
+00:07:49.308 --> 00:07:51.568
+Pause and do the same:
+
+273
+00:07:51.568 --> 00:07:52.748
+one real request,
+
+274
+00:07:52.748 --> 00:07:54.448
+two rounds in new conversations,
+
+275
+00:07:54.448 --> 00:07:56.448
+and one line saying whether it improved
+
+276
+00:07:56.448 --> 00:07:58.228
+and what the evidence was.
+
+277
+00:07:58.228 --> 00:08:00.168
+If both come out the same,
+
+278
+00:08:00.168 --> 00:08:01.068
+that's a result too:
+
+279
+00:08:01.068 --> 00:08:02.520
+the default is enough.
+
+280
+00:08:02.780 --> 00:08:04.380
+To say something got better,
+
+281
+00:08:04.380 --> 00:08:05.980
+you need a rubric.
+
+282
+00:08:06.460 --> 00:08:08.220
+A quality rubric says,
+
+283
+00:08:08.220 --> 00:08:09.460
+before the request,
+
+284
+00:08:09.460 --> 00:08:11.100
+which facts must appear,
+
+285
+00:08:11.100 --> 00:08:12.480
+which errors are unacceptable,
+
+286
+00:08:12.480 --> 00:08:13.440
+and
+
+287
+00:08:13.440 --> 00:08:15.920
+how the output will be used.
+
+288
+00:08:15.920 --> 00:08:18.180
+The key detail is the before.
+
+289
+00:08:18.180 --> 00:08:19.140
+Written in advance,
+
+290
+00:08:19.140 --> 00:08:20.660
+the rubric doesn't get swayed by the
+
+291
+00:08:20.660 --> 00:08:21.600
+answer.
+
+292
+00:08:21.600 --> 00:08:23.860
+Written afterward, it tends to approve whatever
+
+293
+00:08:23.860 --> 00:08:25.060
+arrived.
+
+294
+00:08:25.060 --> 00:08:26.320
+Denise was about to ask for a
+
+295
+00:08:26.320 --> 00:08:28.760
+summary of the science fair planning meeting.
+
+296
+00:08:28.760 --> 00:08:30.200
+I want a good summary is a
+
+297
+00:08:30.200 --> 00:08:31.400
+wish:
+
+298
+00:08:31.680 --> 00:08:34.080
+any well-written text passes.
+
+299
+00:08:34.680 --> 00:08:36.540
+So, before opening the chat,
+
+300
+00:08:36.540 --> 00:08:37.920
+she wrote three lines on a piece
+
+301
+00:08:37.920 --> 00:08:38.420
+of paper.
+
+302
+00:08:38.020 --> 00:08:40.120
+The three people responsible,
+
+303
+00:08:40.120 --> 00:08:42.260
+with no deadline that isn't in the
+
+304
+00:08:42.260 --> 00:08:43.460
+minutes.
+
+305
+00:08:44.200 --> 00:08:45.180
+A section for pending items.
+
+306
+00:08:45.180 --> 00:08:46.320
+Every
+
+307
+00:08:46.320 --> 00:08:48.480
+sentence can be found in the minutes.
+
+308
+00:08:48.480 --> 00:08:50.700
+Three yes-or-no questions,
+
+309
+00:08:50.700 --> 00:08:51.800
+answered in under a minute.
+
+310
+00:08:51.800 --> 00:08:55.500
+To start, three criteria are enough.
+
+311
+00:08:55.500 --> 00:08:56.520
+Fidelity to the data:
+
+312
+00:08:56.520 --> 00:08:58.820
+no data from the material changes or
+
+313
+00:08:58.820 --> 00:08:59.800
+disappears.
+
+314
+00:08:59.800 --> 00:09:01.280
+Agreed-upon format:
+
+315
+00:09:01.280 --> 00:09:04.240
+the length and sections you asked for.
+
+316
+00:09:04.780 --> 00:09:06.340
+Verifiable conclusions:
+
+317
+00:09:06.500 --> 00:09:07.960
+nothing is added that can't be found
+
+318
+00:09:07.960 --> 00:09:09.360
+in the material.
+
+319
+00:09:09.360 --> 00:09:11.300
+These three are the template,
+
+320
+00:09:11.300 --> 00:09:12.680
+and in each task they turn into
+
+321
+00:09:12.680 --> 00:09:14.080
+concrete items.
+
+322
+00:09:14.080 --> 00:09:15.340
+In Denise's minutes,
+
+323
+00:09:15.340 --> 00:09:17.900
+fidelity became the three people responsible,
+
+324
+00:09:17.900 --> 00:09:19.580
+with no invented deadline.
+
+325
+00:09:19.580 --> 00:09:22.000
+Lúcia used the same template for the
+
+326
+00:09:22.000 --> 00:09:23.420
+summary of a chapter from the science
+
+327
+00:09:23.420 --> 00:09:24.460
+textbook,
+
+328
+00:09:24.460 --> 00:09:26.200
+and the items changed:
+
+329
+00:09:26.200 --> 00:09:28.600
+only concepts that are in the chapter,
+
+330
+00:09:28.600 --> 00:09:30.080
+one page of bullet points,
+
+331
+00:09:30.080 --> 00:09:32.540
+and each point with its page number.
+
+332
+00:09:32.540 --> 00:09:35.120
+If writing criteria feels like red tape,
+
+333
+00:09:35.120 --> 00:09:36.440
+start with just one:
+
+334
+00:09:36.440 --> 00:09:39.220
+no data that isn't in the material.
+
+335
+00:09:39.420 --> 00:09:41.400
+The others show up after the first
+
+336
+00:09:41.400 --> 00:09:42.560
+wrong answer.
+
+337
+00:09:42.560 --> 00:09:44.060
+Why does this matter so much?
+
+338
+00:09:44.060 --> 00:09:45.620
+Because without criteria
+
+339
+00:09:45.620 --> 00:09:47.580
+you pick the prettiest answer.
+
+340
+00:09:47.580 --> 00:09:49.660
+Denise got two
+
+341
+00:09:49.720 --> 00:09:51.280
+versions of the summary.
+
+342
+00:09:51.280 --> 00:09:53.100
+The first was smooth:
+
+343
+00:09:53.100 --> 00:09:54.960
+the meeting was productive and full of
+
+344
+00:09:54.960 --> 00:09:57.580
+energy, Lúcia is organizing the groups,
+
+345
+00:09:57.580 --> 00:10:00.413
+Marcos is booking the courtyard by Friday,
+
+346
+00:10:00.413 --> 00:10:02.153
+the fair looks promising.
+
+347
+00:10:02.213 --> 00:10:03.413
+The second was plain:
+
+348
+00:10:03.413 --> 00:10:04.993
+three decisions,
+
+349
+00:10:04.993 --> 00:10:06.413
+three people responsible,
+
+350
+00:10:06.413 --> 00:10:08.433
+and one pending item.
+
+351
+00:10:08.433 --> 00:10:09.353
+With the rubric,
+
+352
+00:10:09.353 --> 00:10:12.153
+the pretty version failed all three items.
+
+353
+00:10:12.153 --> 00:10:13.193
+Renata was missing,
+
+354
+00:10:13.193 --> 00:10:14.753
+by Friday wasn't in the minutes,
+
+355
+00:10:14.753 --> 00:10:15.813
+there were no pending items,
+
+356
+00:10:15.813 --> 00:10:17.553
+and full of energy can't be found
+
+357
+00:10:17.553 --> 00:10:18.533
+anywhere.
+
+358
+00:10:18.533 --> 00:10:20.913
+The plain one passed everything.
+
+359
+00:10:21.113 --> 00:10:22.933
+Turn the rubric into a table:
+
+360
+00:10:22.933 --> 00:10:25.413
+criterion, expected, observed,
+
+361
+00:10:25.413 --> 00:10:27.213
+and passed, yes or no.
+
+362
+00:10:27.213 --> 00:10:29.213
+And keep the bad answer,
+
+363
+00:10:29.213 --> 00:10:30.393
+because it reminds you what you want
+
+364
+00:10:30.393 --> 00:10:31.613
+to avoid.
+
+365
+00:10:31.613 --> 00:10:33.673
+Pause and write your three-line rubric for
+
+366
+00:10:33.673 --> 00:10:34.933
+the next summary you're going to ask
+
+367
+00:10:34.933 --> 00:10:35.833
+for.
+
+368
+00:10:35.833 --> 00:10:38.133
+Testing two models costs something.
+
+369
+00:10:38.133 --> 00:10:39.793
+And the question is:
+
+370
+00:10:39.873 --> 00:10:42.073
+which account does that cost come from?
+
+371
+00:10:42.073 --> 00:10:43.373
+A test may be drawing on a
+
+372
+00:10:43.373 --> 00:10:45.293
+different account than you think.
+
+373
+00:10:45.293 --> 00:10:47.233
+The first path is signing in with
+
+374
+00:10:47.233 --> 00:10:49.413
+your account, by logging in to the
+
+375
+00:10:49.413 --> 00:10:50.033
+chat.
+
+376
+00:10:50.033 --> 00:10:52.153
+Then you use that account's rights and
+
+377
+00:10:52.153 --> 00:10:54.453
+limits, which come from the plan and
+
+378
+00:10:54.453 --> 00:10:55.793
+the workspace.
+
+379
+00:10:56.153 --> 00:10:57.793
+Lúcia uses the chat through the school's
+
+380
+00:10:57.793 --> 00:10:58.693
+account.
+
+381
+00:10:58.693 --> 00:11:00.773
+When she hit the daily usage limit,
+
+382
+00:11:00.773 --> 00:11:02.273
+she found out the limit belonged to
+
+383
+00:11:02.273 --> 00:11:03.433
+the school's plan,
+
+384
+00:11:03.433 --> 00:11:03.933
+not to her.
+
+385
+00:11:03.713 --> 00:11:05.953
+And those limits change.
+
+386
+00:11:05.953 --> 00:11:07.873
+The source of truth is your account's
+
+387
+00:11:07.873 --> 00:11:11.173
+current settings, not what someone told you.
+
+388
+00:11:11.193 --> 00:11:14.013
+The second path is the API key.
+
+389
+00:11:14.013 --> 00:11:15.473
+Programs use AI through an API,
+
+390
+00:11:15.473 --> 00:11:17.753
+with a key billed by usage on
+
+391
+00:11:17.753 --> 00:11:18.893
+the platform.
+
+392
+00:11:18.893 --> 00:11:20.813
+Subscribing to the chat doesn't give you
+
+393
+00:11:20.813 --> 00:11:22.773
+a free balance for any program that
+
+394
+00:11:22.773 --> 00:11:24.353
+calls the API.
+
+395
+00:11:24.603 --> 00:11:25.913
+They're two accounts,
+
+396
+00:11:25.913 --> 00:11:27.773
+with two bills,
+
+397
+00:11:27.773 --> 00:11:28.913
+even when the model has a similar
+
+398
+00:11:28.913 --> 00:11:29.633
+name.
+
+399
+00:11:29.633 --> 00:11:31.853
+Denise ran a reporting program with a
+
+400
+00:11:31.853 --> 00:11:34.473
+school key, and the tokens used showed
+
+401
+00:11:34.473 --> 00:11:35.573
+up on the API platform,
+
+402
+00:11:35.573 --> 00:11:36.973
+not on the subscription.
+
+403
+00:11:36.973 --> 00:11:38.173
+The
+
+404
+00:11:38.713 --> 00:11:39.913
+third
+
+405
+00:11:40.413 --> 00:11:41.793
+path is hubs,
+
+406
+00:11:41.793 --> 00:11:43.473
+like OpenRouter and Kie,
+
+407
+00:11:43.473 --> 00:11:44.853
+with their own credit.
+
+408
+00:11:44.853 --> 00:11:46.373
+Lúcia made the
+
+409
+00:11:46.373 --> 00:11:47.573
+reading week posters in a hub,
+
+410
+00:11:47.573 --> 00:11:49.293
+and the credit ran out in the
+
+411
+00:11:49.293 --> 00:11:50.433
+middle of the batch.
+
+412
+00:11:50.433 --> 00:11:52.893
+The chat subscription was still active,
+
+413
+00:11:52.893 --> 00:11:53.733
+but it didn't cover that.
+
+414
+00:11:53.733 --> 00:11:55.873
+The fix is to top up the
+
+415
+00:11:55.873 --> 00:11:57.493
+credit in the hub itself.
+
+416
+00:11:57.840 --> 00:11:59.460
+Before leaving something running for a long
+
+417
+00:11:59.460 --> 00:12:00.660
+time,
+
+418
+00:12:00.700 --> 00:12:03.820
+check which method is active.
+
+419
+00:12:03.820 --> 00:12:05.200
+In the tool's settings,
+
+420
+00:12:05.200 --> 00:12:06.500
+look at the account plan or the
+
+421
+00:12:06.500 --> 00:12:07.580
+key in use.
+
+422
+00:12:07.580 --> 00:12:08.380
+In module three,
+
+423
+00:12:08.380 --> 00:12:10.965
+in Codex, a terminal command,
+
+424
+00:12:10.965 --> 00:12:12.000
+codex login status,
+
+425
+00:12:12.000 --> 00:12:13.080
+will show you this.
+
+426
+00:12:13.080 --> 00:12:14.540
+And write the method on the project
+
+427
+00:12:14.540 --> 00:12:15.460
+sheet:
+
+428
+00:12:15.460 --> 00:12:17.740
+account, key, or hub.
+
+429
+00:12:17.740 --> 00:12:20.340
+The credential itself never goes on the
+
+430
+00:12:20.340 --> 00:12:22.040
+sheet, into a request,
+
+431
+00:12:22.040 --> 00:12:23.400
+or into a screenshot.
+
+432
+00:12:23.400 --> 00:12:25.000
+Before asking for the summary of the
+
+433
+00:12:25.000 --> 00:12:26.560
+year's forty sets of minutes,
+
+434
+00:12:26.560 --> 00:12:29.120
+Denise wrote: school chat,
+
+435
+00:12:29.380 --> 00:12:31.180
+school account, plan limit.
+
+436
+00:12:31.180 --> 00:12:32.620
+No password at all.
+
+437
+00:12:32.620 --> 00:12:34.440
+Pause and make your own sheet,
+
+438
+00:12:34.440 --> 00:12:36.200
+with one line for each AI tool
+
+439
+00:12:36.200 --> 00:12:37.200
+you use.
+
+440
+00:12:37.200 --> 00:12:38.720
+If today you only use the chat
+
+441
+00:12:38.720 --> 00:12:39.840
+with your own account,
+
+442
+00:12:39.840 --> 00:12:41.180
+the sheet has one line,
+
+443
+00:12:41.180 --> 00:12:42.660
+and that's fine.
+
+444
+00:12:42.760 --> 00:12:44.680
+If you find a key pasted into
+
+445
+00:12:44.680 --> 00:12:46.100
+some document,
+
+446
+00:12:46.120 --> 00:12:47.860
+delete it from there and let whoever
+
+447
+00:12:47.860 --> 00:12:49.340
+manages the account know.
+
+448
+00:12:49.340 --> 00:12:50.480
+With the right account,
+
+449
+00:12:50.480 --> 00:12:51.780
+how far should you let the AI
+
+450
+00:12:51.780 --> 00:12:53.400
+go on its own?
+
+451
+00:12:53.400 --> 00:12:54.180
+In a chat,
+
+452
+00:12:54.180 --> 00:12:55.300
+you send a message,
+
+453
+00:12:55.300 --> 00:12:55.980
+get an answer,
+
+454
+00:12:55.980 --> 00:12:57.840
+and see each step before the next
+
+455
+00:12:57.840 --> 00:12:58.340
+one.
+
+456
+00:12:58.080 --> 00:12:59.540
+An agent is different.
+
+457
+00:12:59.540 --> 00:13:01.672
+It gets a goal and keeps going
+
+458
+00:13:01.672 --> 00:13:03.032
+on its own:
+
+459
+00:13:03.032 --> 00:13:04.512
+it reads files,
+
+460
+00:13:04.512 --> 00:13:06.872
+creates, compares, fixes.
+
+461
+00:13:06.872 --> 00:13:08.032
+That saves work,
+
+462
+00:13:08.032 --> 00:13:10.492
+and it also multiplies the points where
+
+463
+00:13:10.492 --> 00:13:13.352
+it can make mistakes without you seeing.
+
+464
+00:13:13.352 --> 00:13:15.692
+Lúcia asked an agent to organize the
+
+465
+00:13:15.692 --> 00:13:16.572
+quarter's grades.
+
+466
+00:13:16.572 --> 00:13:18.832
+It read three spreadsheets,
+
+467
+00:13:18.832 --> 00:13:19.972
+created a new one,
+
+468
+00:13:19.972 --> 00:13:21.672
+and renamed the old ones.
+
+469
+00:13:21.672 --> 00:13:24.172
+She hadn't asked for that last step.
+
+470
+00:13:24.172 --> 00:13:25.672
+Without a written limit,
+
+471
+00:13:25.672 --> 00:13:27.212
+an agent can burn time,
+
+472
+00:13:27.212 --> 00:13:29.392
+credit, or touch the wrong file.
+
+473
+00:13:29.392 --> 00:13:31.272
+Autonomy, here,
+
+474
+00:13:31.392 --> 00:13:33.332
+is an authorization with scope,
+
+475
+00:13:33.332 --> 00:13:34.852
+not an invitation to do anything at
+
+476
+00:13:34.852 --> 00:13:35.772
+all.
+
+477
+00:13:35.772 --> 00:13:38.012
+An authorization has five parts:
+
+478
+00:13:38.012 --> 00:13:40.112
+the goal, the allowed files,
+
+479
+00:13:40.112 --> 00:13:41.532
+the authorized actions,
+
+480
+00:13:41.532 --> 00:13:42.572
+the time limit,
+
+481
+00:13:42.572 --> 00:13:43.792
+and the stop point.
+
+482
+00:13:43.792 --> 00:13:45.252
+Denise wrote one for
+
+483
+00:13:45.252 --> 00:13:47.072
+the agent that prepares the monthly attendance
+
+484
+00:13:47.072 --> 00:13:48.272
+report.
+
+485
+00:13:48.852 --> 00:13:51.822
+Goal: a draft of the September report.
+
+486
+00:13:51.822 --> 00:13:53.532
+Files: only
+
+487
+00:13:53.532 --> 00:13:55.772
+the September attendance spreadsheet.
+
+488
+00:13:55.772 --> 00:13:56.852
+Actions: read
+
+489
+00:13:56.852 --> 00:13:58.912
+and create the draft,
+
+490
+00:13:58.912 --> 00:14:01.412
+without deleting or renaming anything.
+
+491
+00:14:01.412 --> 00:14:04.792
+Time: up to ten minutes.
+
+492
+00:14:04.812 --> 00:14:07.644
+Stop: deliver the draft and stop before
+
+493
+00:14:07.644 --> 00:14:08.704
+sending.
+
+494
+00:14:08.704 --> 00:14:10.464
+It took two minutes and fits on
+
+495
+00:14:10.464 --> 00:14:11.864
+a sticky note.
+
+496
+00:14:11.864 --> 00:14:12.924
+And note:
+
+497
+00:14:12.924 --> 00:14:16.764
+sending, publishing, and deleting are external actions.
+
+498
+00:14:16.764 --> 00:14:19.604
+Each one requires an explicit instruction.
+
+499
+00:14:19.604 --> 00:14:21.544
+The fact that a send button exists
+
+500
+00:14:21.544 --> 00:14:24.604
+doesn't mean the agent can use it.
+
+501
+00:14:24.784 --> 00:14:26.564
+The tool limits what's possible;
+
+502
+00:14:26.564 --> 00:14:29.464
+the authorization says what's wanted.
+
+503
+00:14:29.604 --> 00:14:30.884
+To wrap up,
+
+504
+00:14:30.884 --> 00:14:33.244
+always ask for a three-part output:
+
+505
+00:14:33.244 --> 00:14:34.284
+what was done,
+
+506
+00:14:34.284 --> 00:14:35.584
+how it was verified,
+
+507
+00:14:35.584 --> 00:14:36.844
+and what's still pending.
+
+508
+00:14:36.844 --> 00:14:39.024
+That way the result becomes something you
+
+509
+00:14:39.024 --> 00:14:41.024
+review, not something you have to take
+
+510
+00:14:41.024 --> 00:14:42.364
+on faith.
+
+511
+00:14:42.724 --> 00:14:45.424
+Denise's agent answered like this.
+
+512
+00:14:45.424 --> 00:14:49.264
+Done: the draft with attendance by class.
+
+513
+00:14:49.424 --> 00:14:50.384
+Verified:
+
+514
+00:14:50.384 --> 00:14:52.364
+each class total matches the sum of
+
+515
+00:14:52.364 --> 00:14:53.344
+its rows.
+
+516
+00:14:53.344 --> 00:14:56.324
+Pending: eighth grade class C has two
+
+517
+00:14:56.324 --> 00:14:57.664
+rows with no date,
+
+518
+00:14:57.664 --> 00:14:59.384
+which it didn't fill in.
+
+519
+00:14:59.384 --> 00:15:01.344
+Notice that the pending item wasn't filled
+
+520
+00:15:01.344 --> 00:15:02.484
+with a guess.
+
+521
+00:15:02.484 --> 00:15:03.764
+Denise checked one of the numbers in
+
+522
+00:15:03.764 --> 00:15:05.444
+the spreadsheet and approved the rest.
+
+523
+00:15:05.444 --> 00:15:07.124
+Your practice:
+
+524
+00:15:07.584 --> 00:15:10.256
+pause and write a five-part authorization for
+
+525
+00:15:10.256 --> 00:15:11.016
+a small task,
+
+526
+00:15:11.016 --> 00:15:12.596
+with fictional data,
+
+527
+00:15:12.596 --> 00:15:14.796
+and send it in the chat.
+
+528
+00:15:14.836 --> 00:15:16.456
+Read the closing and check one of
+
+529
+00:15:16.456 --> 00:15:17.676
+the points yourself,
+
+530
+00:15:17.676 --> 00:15:19.576
+straight against the material.
+
+531
+00:15:19.816 --> 00:15:21.156
+Let's put it all together.
+
+532
+00:15:21.156 --> 00:15:22.556
+When AI gets it wrong,
+
+533
+00:15:22.556 --> 00:15:24.056
+you look for the missing piece before
+
+534
+00:15:24.056 --> 00:15:25.396
+rewriting the request.
+
+535
+00:15:25.396 --> 00:15:26.436
+You
+
+536
+00:15:26.436 --> 00:15:27.996
+choose the kind of model by function,
+
+537
+00:15:27.996 --> 00:15:29.756
+before the name.
+
+538
+00:15:29.756 --> 00:15:31.196
+You test one control at a time
+
+539
+00:15:31.196 --> 00:15:33.916
+and only accept an improvement with evidence.
+
+540
+00:15:33.916 --> 00:15:36.096
+You write the rubric before asking and
+
+541
+00:15:36.096 --> 00:15:37.656
+decide by the rubric,
+
+542
+00:15:37.656 --> 00:15:39.176
+not by the tone.
+
+543
+00:15:39.176 --> 00:15:41.096
+You know which account each cost comes
+
+544
+00:15:41.096 --> 00:15:43.376
+from, and you write down the method,
+
+545
+00:15:43.376 --> 00:15:44.496
+never the credential.
+
+546
+00:15:44.496 --> 00:15:46.756
+And you delegate with scope,
+
+547
+00:15:46.756 --> 00:15:48.096
+a stop point,
+
+548
+00:15:48.096 --> 00:15:49.056
+and
+
+549
+00:15:49.056 --> 00:15:51.696
+a closing that says what was done,
+
+550
+00:15:51.696 --> 00:15:53.776
+verified, and pending.
+
+551
+00:15:53.776 --> 00:15:55.476
+When you have about thirty minutes,
+
+552
+00:15:55.476 --> 00:15:56.276
+do the module lab,
+
+553
+00:15:56.276 --> 00:15:59.176
+in the supplementary material for lesson six:
+
+554
+00:15:59.176 --> 00:16:00.896
+the same request in two models,
+
+555
+00:16:00.896 --> 00:16:02.156
+judged by your rubric.
+
+556
+00:16:02.156 --> 00:16:03.736
+In the next module,
+
+557
+00:16:03.736 --> 00:16:04.976
+we'll look at Chat,
+
+558
+00:16:04.976 --> 00:16:06.656
+Work, and Desktop,
+
+559
+00:16:06.876 --> 00:16:08.616
+three ways to work with AI,
+
+560
+00:16:08.616 --> 00:16:09.556
+and
+
+561
+00:16:09.556 --> 00:16:11.636
+when to use each one.
+
+562
+00:16:11.636 --> 00:16:12.688
+See you there.
