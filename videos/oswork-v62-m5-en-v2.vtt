@@ -1,0 +1,2197 @@
+WEBVTT
+
+1
+00:00:00.300 --> 00:00:01.820
+Hi, I'm Nei Maldaner,
+
+2
+00:00:01.820 --> 00:00:04.120
+and this is module five of OSWork.
+
+3
+00:00:04.120 --> 00:00:06.040
+In modules three and four you set
+
+4
+00:00:06.040 --> 00:00:07.740
+up the training folder and the config
+
+5
+00:00:07.740 --> 00:00:10.100
+folder, with support files.
+
+6
+00:00:10.100 --> 00:00:12.140
+Now those folders get instructions the agent
+
+7
+00:00:12.140 --> 00:00:13.100
+follows.
+
+8
+00:00:13.100 --> 00:00:13.813
+In this module,
+
+9
+00:00:13.813 --> 00:00:15.500
+you'll write rules you can check in
+
+10
+00:00:15.500 --> 00:00:17.460
+the delivery, separate what applies to every
+
+11
+00:00:17.460 --> 00:00:18.920
+project from what applies to a single
+
+12
+00:00:18.920 --> 00:00:20.060
+folder,
+
+13
+00:00:20.060 --> 00:00:22.640
+turn a repeated step-by-step into a Skill,
+
+14
+00:00:22.640 --> 00:00:23.300
+keep a short,
+
+15
+00:00:23.300 --> 00:00:26.620
+dated memory, record failures as small protections,
+
+16
+00:00:26.620 --> 00:00:27.900
+and test what you built with three
+
+17
+00:00:27.900 --> 00:00:28.400
+cases.
+
+18
+00:00:28.260 --> 00:00:30.320
+We'll keep going with Denise,
+
+19
+00:00:30.320 --> 00:00:32.120
+the pedagogical coordinator,
+
+20
+00:00:32.120 --> 00:00:34.080
+and Lúcia, the 8th grade science teacher.
+
+21
+00:00:34.080 --> 00:00:35.760
+Each lesson has a short practice.
+
+22
+00:00:35.760 --> 00:00:36.780
+When I ask,
+
+23
+00:00:36.780 --> 00:00:38.240
+pause the video and do it right
+
+24
+00:00:38.240 --> 00:00:40.100
+away, on your computer.
+
+25
+00:00:40.100 --> 00:00:41.740
+Think about the science lab.
+
+26
+00:00:41.740 --> 00:00:43.840
+On the door there's a sign that
+
+27
+00:00:43.840 --> 00:00:45.700
+says how to work inside.
+
+28
+00:00:45.700 --> 00:00:46.900
+AGENTS.md
+
+29
+00:00:46.900 --> 00:00:48.700
+does the same for a project folder.
+
+30
+00:00:48.700 --> 00:00:50.300
+It's a simple text file,
+
+31
+00:00:50.300 --> 00:00:52.720
+in Markdown, that you open and edit
+
+32
+00:00:52.720 --> 00:00:54.480
+in a text editor.
+
+33
+00:00:54.520 --> 00:00:56.040
+And Codex looks for that file on
+
+34
+00:00:56.040 --> 00:00:57.700
+its own when it starts working in
+
+35
+00:00:57.700 --> 00:00:58.740
+the folder.
+
+36
+00:00:58.740 --> 00:01:00.820
+Lúcia already has the training folder,
+
+37
+00:01:00.820 --> 00:01:01.960
+meu primeiro projeto.
+
+38
+00:01:01.960 --> 00:01:03.920
+Inside it are the README,
+
+39
+00:01:03.920 --> 00:01:06.180
+the AGENTS.md, the entradas folder,
+
+40
+00:01:06.180 --> 00:01:08.080
+with a fictional sales spreadsheet,
+
+41
+00:01:08.080 --> 00:01:09.480
+and the saidas folder,
+
+42
+00:01:09.480 --> 00:01:12.060
+where the agent delivers the drafts.
+
+43
+00:01:12.620 --> 00:01:13.660
+AGENTS.md
+
+44
+00:01:13.660 --> 00:01:15.440
+is the first file she's going to
+
+45
+00:01:15.440 --> 00:01:15.940
+improve.
+
+46
+00:01:15.720 --> 00:01:17.940
+If you didn't set up that folder,
+
+47
+00:01:17.940 --> 00:01:20.160
+no problem: in your personal folder,
+
+48
+00:01:20.160 --> 00:01:23.440
+create projetos, inside it meu primeiro projeto,
+
+49
+00:01:23.440 --> 00:01:25.050
+and an empty
+
+50
+00:01:25.050 --> 00:01:25.840
+AGENTS.md.
+
+51
+00:01:25.840 --> 00:01:27.380
+What goes in this file?
+
+52
+00:01:27.380 --> 00:01:30.080
+Four topics: where to start reading,
+
+53
+00:01:30.220 --> 00:01:32.140
+how to check the result,
+
+54
+00:01:32.180 --> 00:01:32.900
+what not to do,
+
+55
+00:01:32.900 --> 00:01:35.120
+and the delivery format.
+
+56
+00:01:35.120 --> 00:01:37.220
+The school's history and the reasons behind
+
+57
+00:01:37.220 --> 00:01:39.800
+each decision stay out.
+
+58
+00:01:39.820 --> 00:01:41.520
+A short file gets read in full.
+
+59
+00:01:41.520 --> 00:01:43.960
+A long file hides
+
+60
+00:01:44.140 --> 00:01:45.800
+the rule that matters in the middle
+
+61
+00:01:45.800 --> 00:01:46.440
+of paragraphs.
+
+62
+00:01:46.440 --> 00:01:47.340
+Denise
+
+63
+00:01:47.340 --> 00:01:49.420
+opened the AGENTS.md
+
+64
+00:01:49.540 --> 00:01:51.420
+she had written for the meeting minutes
+
+65
+00:01:51.420 --> 00:01:52.400
+project.
+
+66
+00:01:52.400 --> 00:01:54.600
+It had two paragraphs about the school's
+
+67
+00:01:54.600 --> 00:01:56.840
+founding and only one work rule.
+
+68
+00:01:56.840 --> 00:01:59.300
+She deleted the paragraphs and kept sentences
+
+69
+00:01:59.300 --> 00:02:00.500
+like
+
+70
+00:02:00.851 --> 00:02:01.761
+these:
+
+71
+00:02:01.761 --> 00:02:04.061
+read the README before making changes,
+
+72
+00:02:04.061 --> 00:02:07.061
+use only the entradas and saidas folders,
+
+73
+00:02:07.061 --> 00:02:08.601
+report what you changed and how you
+
+74
+00:02:08.601 --> 00:02:09.681
+checked it.
+
+75
+00:02:09.681 --> 00:02:12.721
+Those sentences change what the agent does.
+
+76
+00:02:12.721 --> 00:02:14.661
+The paragraphs about the founding just took
+
+77
+00:02:14.661 --> 00:02:16.021
+up space.
+
+78
+00:02:16.241 --> 00:02:18.361
+Now, the sign test.
+
+79
+00:02:18.361 --> 00:02:20.381
+Wear safety goggles before the experiment is
+
+80
+00:02:20.381 --> 00:02:22.341
+something you can check by looking.
+
+81
+00:02:22.341 --> 00:02:24.021
+Be careful isn't.
+
+82
+00:02:24.021 --> 00:02:26.101
+The same goes for AGENTS.md:
+
+83
+00:02:27.681 --> 00:02:29.401
+a good rule asks for an action
+
+84
+00:02:29.401 --> 00:02:30.381
+and
+
+85
+00:02:30.381 --> 00:02:32.041
+leaves evidence you can see in the
+
+86
+00:02:32.041 --> 00:02:33.241
+delivery.
+
+87
+00:02:33.681 --> 00:02:37.321
+Lúcia replaced be excellent with compare
+
+88
+00:02:37.321 --> 00:02:39.841
+the report total with the spreadsheet and
+
+89
+00:02:39.841 --> 00:02:41.001
+state the difference.
+
+90
+00:02:41.001 --> 00:02:42.461
+In the next delivery,
+
+91
+00:02:42.461 --> 00:02:44.341
+the agent wrote the sum and the
+
+92
+00:02:44.341 --> 00:02:45.341
+difference, and
+
+93
+00:02:45.341 --> 00:02:47.781
+she checked it in one minute.
+
+94
+00:02:48.741 --> 00:02:50.121
+Start with five rules,
+
+95
+00:02:50.121 --> 00:02:51.721
+like the ones on screen.
+
+96
+00:02:51.721 --> 00:02:53.081
+If you get stuck,
+
+97
+00:02:53.081 --> 00:02:54.701
+use the test sentence:
+
+98
+00:02:54.701 --> 00:02:56.561
+I'll know it was followed because the
+
+99
+00:02:56.561 --> 00:02:59.021
+delivery shows such and such.
+
+100
+00:02:59.021 --> 00:03:00.281
+Your practice:
+
+101
+00:03:00.281 --> 00:03:01.201
+pause the video,
+
+102
+00:03:01.201 --> 00:03:03.641
+open the AGENTS.md in the training folder,
+
+103
+00:03:03.641 --> 00:03:06.241
+and write the purpose and five rules,
+
+104
+00:03:06.241 --> 00:03:08.801
+each with its evidence next to it.
+
+105
+00:03:08.801 --> 00:03:10.361
+It takes about ten minutes.
+
+106
+00:03:10.361 --> 00:03:11.841
+The rules from the last lesson apply
+
+107
+00:03:11.841 --> 00:03:13.321
+only in that folder.
+
+108
+00:03:13.321 --> 00:03:14.541
+What about the ones you want in
+
+109
+00:03:14.541 --> 00:03:15.981
+every project?
+
+110
+00:03:16.561 --> 00:03:17.921
+Think about school:
+
+111
+00:03:17.921 --> 00:03:19.781
+the rule book applies to the whole
+
+112
+00:03:19.781 --> 00:03:21.921
+building, and the class agreement applies in
+
+113
+00:03:21.921 --> 00:03:23.241
+the classroom.
+
+114
+00:03:23.441 --> 00:03:25.961
+AGENTS.md works the same way.
+
+115
+00:03:25.961 --> 00:03:28.081
+By default, the global one lives in
+
+116
+00:03:28.081 --> 00:03:30.321
+a hidden folder called dot codex,
+
+117
+00:03:30.321 --> 00:03:32.721
+inside your personal folder.
+
+118
+00:03:32.721 --> 00:03:34.481
+The project one lives in the project
+
+119
+00:03:34.481 --> 00:03:35.281
+folder.
+
+120
+00:03:35.281 --> 00:03:36.241
+In the terminal,
+
+121
+00:03:36.241 --> 00:03:37.681
+the tilde sign is the shortcut to
+
+122
+00:03:37.681 --> 00:03:39.161
+your personal folder,
+
+123
+00:03:39.161 --> 00:03:40.901
+and a folder whose name starts with
+
+124
+00:03:40.901 --> 00:03:42.781
+a dot is hidden.
+
+125
+00:03:42.921 --> 00:03:44.781
+Denise wants the agent to always say
+
+126
+00:03:44.781 --> 00:03:45.481
+what it checked,
+
+127
+00:03:45.481 --> 00:03:46.961
+in any project.
+
+128
+00:03:46.961 --> 00:03:49.361
+That rule went into the global file.
+
+129
+00:03:49.361 --> 00:03:51.181
+But compare the total with the attendance
+
+130
+00:03:51.181 --> 00:03:53.601
+spreadsheet only makes sense in the attendance
+
+131
+00:03:53.601 --> 00:03:54.801
+project.
+
+132
+00:03:55.141 --> 00:03:56.301
+The two work together,
+
+133
+00:03:56.301 --> 00:03:58.761
+and the global one stays small.
+
+134
+00:03:59.040 --> 00:04:01.600
+A subfolder can have its own
+
+135
+00:04:01.600 --> 00:04:02.800
+AGENTS.md.
+
+136
+00:04:03.700 --> 00:04:05.340
+With Codex open in it,
+
+137
+00:04:05.340 --> 00:04:08.080
+both apply, and the closest instruction takes
+
+138
+00:04:08.080 --> 00:04:10.220
+precedence on what it covers.
+
+139
+00:04:10.220 --> 00:04:12.420
+Whatever it doesn't mention still comes from
+
+140
+00:04:12.420 --> 00:04:13.620
+the file above.
+
+141
+00:04:13.620 --> 00:04:15.480
+Lúcia created a provas subfolder,
+
+142
+00:04:15.480 --> 00:04:18.540
+for tests, with the rule answer key
+
+143
+00:04:18.540 --> 00:04:19.960
+in a separate file.
+
+144
+00:04:19.960 --> 00:04:20.900
+Opened in provas,
+
+145
+00:04:20.900 --> 00:04:21.960
+it applies.
+
+146
+00:04:21.960 --> 00:04:23.300
+In the exercise lists,
+
+147
+00:04:23.300 --> 00:04:24.540
+it doesn't.
+
+148
+00:04:24.540 --> 00:04:26.280
+There's also AGENTS.override:
+
+149
+00:04:27.180 --> 00:04:28.500
+in the same folder,
+
+150
+00:04:28.500 --> 00:04:31.020
+Codex reads the override and ignores
+
+151
+00:04:31.090 --> 00:04:32.000
+AGENTS.md.
+
+152
+00:04:32.000 --> 00:04:33.780
+Forgotten in a copied folder,
+
+153
+00:04:33.780 --> 00:04:35.900
+it explains a lot of strange behavior.
+
+154
+00:04:35.900 --> 00:04:37.620
+And none of these files beats three
+
+155
+00:04:37.620 --> 00:04:38.820
+things:
+
+156
+00:04:39.160 --> 00:04:40.680
+the system instructions,
+
+157
+00:04:40.680 --> 00:04:41.960
+the permissions,
+
+158
+00:04:41.960 --> 00:04:44.720
+and your explicit request in the conversation.
+
+159
+00:04:45.040 --> 00:04:47.700
+Denise's file says deliver in bullet points,
+
+160
+00:04:47.700 --> 00:04:49.220
+but today she asked for a continuous
+
+161
+00:04:49.220 --> 00:04:50.320
+paragraph.
+
+162
+00:04:50.320 --> 00:04:51.800
+Today's request wins.
+
+163
+00:04:51.800 --> 00:04:53.540
+How do you know which instructions apply
+
+164
+00:04:53.540 --> 00:04:54.920
+in a folder?
+
+165
+00:04:54.940 --> 00:04:56.900
+Ask Codex to summarize the instructions it
+
+166
+00:04:56.900 --> 00:04:58.980
+loaded and say which file each one
+
+167
+00:04:58.980 --> 00:05:00.020
+came from.
+
+168
+00:05:00.020 --> 00:05:01.860
+Then open the files and compare.
+
+169
+00:05:01.860 --> 00:05:02.641
+Lúcia did that,
+
+170
+00:05:02.641 --> 00:05:05.001
+and the rule report what you checked
+
+171
+00:05:05.001 --> 00:05:07.941
+showed up, which she hadn't written there.
+
+172
+00:05:07.941 --> 00:05:09.601
+It was in the global file,
+
+173
+00:05:09.601 --> 00:05:11.441
+created in March and forgotten.
+
+174
+00:05:11.441 --> 00:05:13.441
+Your practice, about ten minutes:
+
+175
+00:05:13.441 --> 00:05:14.521
+pause the video.
+
+176
+00:05:14.521 --> 00:05:16.001
+In the terminal,
+
+177
+00:05:16.001 --> 00:05:18.381
+go into the training folder and run
+
+178
+00:05:18.381 --> 00:05:19.701
+ls dash a,
+
+179
+00:05:19.701 --> 00:05:21.781
+which also shows hidden files,
+
+180
+00:05:21.781 --> 00:05:24.711
+and write down whether there's an override.
+
+181
+00:05:24.711 --> 00:05:27.161
+Then run cat on the global
+
+182
+00:05:27.161 --> 00:05:27.901
+AGENTS.md.
+
+183
+00:05:27.901 --> 00:05:29.821
+If it says the file doesn't exist,
+
+184
+00:05:29.821 --> 00:05:31.641
+you don't have a global file,
+
+185
+00:05:31.761 --> 00:05:32.981
+and that's fine.
+
+186
+00:05:32.981 --> 00:05:35.021
+Finally, open Codex,
+
+187
+00:05:35.021 --> 00:05:36.921
+ask for the summary saying don't change
+
+188
+00:05:36.921 --> 00:05:39.321
+anything, and compare each rule with its
+
+189
+00:05:39.321 --> 00:05:40.601
+source file.
+
+190
+00:05:40.601 --> 00:05:42.481
+A rule says what to respect.
+
+191
+00:05:42.481 --> 00:05:44.101
+What about the procedure you repeat every
+
+192
+00:05:44.101 --> 00:05:46.261
+week, step by step?
+
+193
+00:05:46.641 --> 00:05:48.141
+Back to the lab.
+
+194
+00:05:48.141 --> 00:05:50.241
+The sign on the door applies every
+
+195
+00:05:50.241 --> 00:05:51.121
+day.
+
+196
+00:05:51.121 --> 00:05:52.861
+The experiment sheet comes out of the
+
+197
+00:05:52.861 --> 00:05:54.621
+binder only on the day of that
+
+198
+00:05:54.621 --> 00:05:55.821
+experiment.
+
+199
+00:05:56.021 --> 00:05:57.221
+AGENTS.md
+
+200
+00:05:57.541 --> 00:05:58.601
+is the sign.
+
+201
+00:05:58.601 --> 00:05:59.921
+The Skill is the sheet.
+
+202
+00:05:59.921 --> 00:06:02.461
+A Skill gathers the instructions for an
+
+203
+00:06:02.461 --> 00:06:03.121
+activity that repeats,
+
+204
+00:06:03.121 --> 00:06:05.721
+and the agent triggers it when the
+
+205
+00:06:05.721 --> 00:06:07.383
+task calls for it.
+
+206
+00:06:07.383 --> 00:06:09.203
+Every Friday, Lúcia explained to the agent
+
+207
+00:06:09.203 --> 00:06:11.103
+how to put together the weekly exercise
+
+208
+00:06:11.103 --> 00:06:12.303
+list:
+
+209
+00:06:12.823 --> 00:06:14.483
+read that week's lesson,
+
+210
+00:06:14.483 --> 00:06:16.043
+choose five questions,
+
+211
+00:06:16.043 --> 00:06:17.923
+keep the answer key separate.
+
+212
+00:06:17.923 --> 00:06:19.723
+That step-by-step became a Skill,
+
+213
+00:06:19.723 --> 00:06:21.283
+and AGENTS.md
+
+214
+00:06:21.283 --> 00:06:23.023
+kept its five rules.
+
+215
+00:06:23.023 --> 00:06:24.443
+Both are
+
+216
+00:06:24.563 --> 00:06:27.103
+right, each in its role.
+
+217
+00:06:27.103 --> 00:06:29.603
+Separating them avoids loading the whole manual
+
+218
+00:06:29.603 --> 00:06:31.363
+into every task.
+
+219
+00:06:31.363 --> 00:06:33.063
+A Skill lives in a folder with
+
+220
+00:06:33.063 --> 00:06:36.083
+its name, in a file called SKILL.md.
+
+221
+00:06:36.843 --> 00:06:37.343
+At the top,
+
+222
+00:06:37.303 --> 00:06:39.183
+between two lines of three dashes,
+
+223
+00:06:39.183 --> 00:06:42.043
+come the name and the description.
+
+224
+00:06:42.523 --> 00:06:44.963
+That block is the header.
+
+225
+00:06:44.963 --> 00:06:46.823
+After it comes the procedure:
+
+226
+00:06:46.823 --> 00:06:47.903
+what goes in,
+
+227
+00:06:47.903 --> 00:06:49.863
+the steps, what comes out,
+
+228
+00:06:49.863 --> 00:06:50.983
+and how to check.
+
+229
+00:06:50.983 --> 00:06:53.003
+The description is the most important part,
+
+230
+00:06:53.003 --> 00:06:56.063
+because it's what the agent reads to
+
+231
+00:06:56.263 --> 00:06:57.843
+decide whether to trigger the Skill.
+
+232
+00:06:57.843 --> 00:06:59.943
+It needs to say in which situation
+
+233
+00:06:59.943 --> 00:07:01.643
+to use it and where the Skill
+
+234
+00:07:01.643 --> 00:07:02.483
+stops.
+
+235
+00:07:02.483 --> 00:07:04.663
+The first description of Denise's report Skill
+
+236
+00:07:04.663 --> 00:07:06.423
+was help with reports.
+
+237
+00:07:06.423 --> 00:07:07.543
+The
+
+238
+00:07:07.543 --> 00:07:09.363
+agent triggered it even for a meeting
+
+239
+00:07:09.363 --> 00:07:10.624
+minutes request.
+
+240
+00:07:10.624 --> 00:07:12.264
+She rewrote it:
+
+241
+00:07:12.324 --> 00:07:14.464
+generate a weekly report draft when the
+
+242
+00:07:14.464 --> 00:07:15.824
+user provides a sales CSV,
+
+243
+00:07:15.824 --> 00:07:18.084
+and don't use it to send reports
+
+244
+00:07:18.084 --> 00:07:19.404
+or handle credentials,
+
+245
+00:07:19.404 --> 00:07:21.244
+which are passwords and access keys.
+
+246
+00:07:21.244 --> 00:07:22.544
+Where do you keep it?
+
+247
+00:07:22.544 --> 00:07:25.844
+A project Skill goes in dot agents
+
+248
+00:07:25.844 --> 00:07:26.764
+slash
+
+249
+00:07:26.764 --> 00:07:29.704
+skills, inside the project folder.
+
+250
+00:07:29.704 --> 00:07:31.064
+A personal Skill,
+
+251
+00:07:31.064 --> 00:07:32.244
+one you want in every project,
+
+252
+00:07:32.244 --> 00:07:33.624
+goes in that same folder,
+
+253
+00:07:33.624 --> 00:07:35.469
+but inside your personal folder.
+
+254
+00:07:35.469 --> 00:07:37.524
+The dot codex folder belongs to Codex,
+
+255
+00:07:37.524 --> 00:07:40.524
+with the configuration and the global file.
+
+256
+00:07:40.524 --> 00:07:42.084
+Skills don't go there.
+
+257
+00:07:42.084 --> 00:07:44.764
+Denise kept the meeting minutes Skill in
+
+258
+00:07:44.764 --> 00:07:46.284
+the minutes project,
+
+259
+00:07:46.284 --> 00:07:47.924
+and the spelling review one,
+
+260
+00:07:47.924 --> 00:07:49.784
+which she uses for everything,
+
+261
+00:07:49.784 --> 00:07:51.124
+in her personal folder.
+
+262
+00:07:51.124 --> 00:07:53.664
+Your practice, about ten minutes:
+
+263
+00:07:53.664 --> 00:07:54.464
+pause the video.
+
+264
+00:07:54.464 --> 00:07:56.704
+Copy the template from the lesson and
+
+265
+00:07:56.704 --> 00:07:58.864
+save it as SKILL.md in the training
+
+266
+00:07:58.864 --> 00:08:00.804
+folder, with the file type set to
+
+267
+00:08:00.804 --> 00:08:01.564
+all files.
+
+268
+00:08:01.564 --> 00:08:02.564
+In the terminal,
+
+269
+00:08:02.564 --> 00:08:05.259
+create the relatorio semanal folder with
+
+270
+00:08:05.259 --> 00:08:06.504
+mkdir dash p,
+
+271
+00:08:06.504 --> 00:08:09.084
+move the file into it with mv,
+
+272
+00:08:09.084 --> 00:08:11.444
+and run head dash four.
+
+273
+00:08:11.444 --> 00:08:13.324
+You're done when the four header lines
+
+274
+00:08:13.324 --> 00:08:13.924
+appear.
+
+275
+00:08:14.200 --> 00:08:16.000
+A Skill doesn't remember what you agreed
+
+276
+00:08:16.000 --> 00:08:17.380
+on yesterday.
+
+277
+00:08:17.600 --> 00:08:19.140
+So where do you keep what needs
+
+278
+00:08:19.140 --> 00:08:20.660
+to stay valid?
+
+279
+00:08:20.660 --> 00:08:22.680
+First, a clarification:
+
+280
+00:08:22.740 --> 00:08:24.400
+the model doesn't change because you talked
+
+281
+00:08:24.400 --> 00:08:25.280
+to it.
+
+282
+00:08:25.280 --> 00:08:27.160
+The operational memory in this course is
+
+283
+00:08:27.160 --> 00:08:29.040
+a set of files the agent reads
+
+284
+00:08:29.040 --> 00:08:30.740
+when you point to them.
+
+285
+00:08:30.740 --> 00:08:32.700
+It works under two conditions:
+
+286
+00:08:32.700 --> 00:08:34.980
+the agent reads the part that matters,
+
+287
+00:08:34.980 --> 00:08:36.440
+and someone keeps the file up to
+
+288
+00:08:36.440 --> 00:08:37.120
+date.
+
+289
+00:08:37.120 --> 00:08:38.360
+In module four,
+
+290
+00:08:38.360 --> 00:08:39.880
+Denise created the config folder,
+
+291
+00:08:39.880 --> 00:08:40.800
+next
+
+292
+00:08:40.800 --> 00:08:42.040
+to the projects.
+
+293
+00:08:42.040 --> 00:08:43.700
+That's where memoria lives,
+
+294
+00:08:43.700 --> 00:08:46.500
+with stable facts and preferences,
+
+295
+00:08:46.900 --> 00:08:48.900
+decisoes, with the decisions made and the
+
+296
+00:08:48.900 --> 00:08:50.260
+reason, and falhas,
+
+297
+00:08:50.260 --> 00:08:51.960
+with the causes of failures,
+
+298
+00:08:51.960 --> 00:08:53.280
+which is the topic of the next
+
+299
+00:08:53.280 --> 00:08:53.780
+lesson.
+
+300
+00:08:53.420 --> 00:08:55.440
+If you skipped that part,
+
+301
+00:08:55.440 --> 00:08:58.207
+create the config folder inside projetos and,
+
+302
+00:08:58.207 --> 00:08:59.740
+in it, a
+
+303
+00:08:59.920 --> 00:09:01.900
+file called memoria.md.
+
+304
+00:09:03.180 --> 00:09:05.140
+What goes into memory?
+
+305
+00:09:05.140 --> 00:09:07.620
+Three things: stable facts,
+
+306
+00:09:07.620 --> 00:09:08.820
+decisions,
+
+307
+00:09:08.820 --> 00:09:10.590
+and causes of failures.
+
+308
+00:09:10.590 --> 00:09:13.540
+Not every sentence from every conversation.
+
+309
+00:09:13.540 --> 00:09:16.303
+Copying the whole history adds volume and
+
+310
+00:09:16.303 --> 00:09:18.663
+can bring back an old instruction,
+
+311
+00:09:18.663 --> 00:09:20.863
+and nobody can check a huge file.
+
+312
+00:09:20.863 --> 00:09:22.343
+Look at Lúcia's case.
+
+313
+00:09:22.343 --> 00:09:23.923
+She had two hundred lines of conversation,
+
+314
+00:09:23.923 --> 00:09:25.963
+from March to September,
+
+315
+00:09:25.963 --> 00:09:27.523
+and in the middle a sentence asking
+
+316
+00:09:27.523 --> 00:09:29.063
+for the old list format,
+
+317
+00:09:29.063 --> 00:09:30.423
+which had already changed.
+
+318
+00:09:30.423 --> 00:09:31.803
+She replaced all of it with three
+
+319
+00:09:31.803 --> 00:09:32.743
+lines:
+
+320
+00:09:32.743 --> 00:09:33.923
+the review date,
+
+321
+00:09:33.923 --> 00:09:36.143
+8th grade materials with accessible language and
+
+322
+00:09:36.143 --> 00:09:37.663
+fictional examples,
+
+323
+00:09:37.663 --> 00:09:39.603
+and a weekly list with five questions
+
+324
+00:09:39.603 --> 00:09:41.323
+and a separate answer key.
+
+325
+00:09:41.323 --> 00:09:43.923
+From two hundred lines to three,
+
+326
+00:09:44.083 --> 00:09:46.143
+and no outdated instructions.
+
+327
+00:09:46.203 --> 00:09:47.343
+In the next task,
+
+328
+00:09:47.343 --> 00:09:49.063
+she pointed to that file instead of
+
+329
+00:09:49.063 --> 00:09:50.723
+repeating the conversation.
+
+330
+00:09:50.723 --> 00:09:52.283
+The file being in the folder doesn't
+
+331
+00:09:52.283 --> 00:09:53.703
+guarantee the agent will read it.
+
+332
+00:09:53.703 --> 00:09:55.623
+Say in your request which file to
+
+333
+00:09:55.623 --> 00:09:57.503
+check, and ask it to cite the
+
+334
+00:09:57.503 --> 00:09:58.823
+fact it used.
+
+335
+00:09:58.823 --> 00:10:00.763
+Denise asked for a three-line reminder about
+
+336
+00:10:00.763 --> 00:10:01.883
+the parent meeting,
+
+337
+00:10:01.883 --> 00:10:02.823
+pointing to the memory.
+
+338
+00:10:02.823 --> 00:10:04.783
+The answer ended with the fact it
+
+339
+00:10:04.783 --> 00:10:07.123
+used: reminders to families of up to
+
+340
+00:10:07.123 --> 00:10:09.523
+three lines, with no abbreviations.
+
+341
+00:10:09.743 --> 00:10:11.703
+She checked it in the file.
+
+342
+00:10:11.703 --> 00:10:13.643
+And stable facts change too:
+
+343
+00:10:13.643 --> 00:10:15.645
+mark the review date at the top
+
+344
+00:10:15.645 --> 00:10:17.665
+and note the source of each fact.
+
+345
+00:10:17.665 --> 00:10:18.985
+In September,
+
+346
+00:10:19.705 --> 00:10:22.005
+Denise deleted reminders go home printed in
+
+347
+00:10:22.005 --> 00:10:24.285
+the backpack, because the school switched to
+
+348
+00:10:24.285 --> 00:10:25.465
+the app.
+
+349
+00:10:25.465 --> 00:10:26.745
+Your practice:
+
+350
+00:10:26.745 --> 00:10:29.225
+pause, write the date and three facts
+
+351
+00:10:29.225 --> 00:10:30.465
+with their source,
+
+352
+00:10:30.465 --> 00:10:32.905
+no student names and no passwords.
+
+353
+00:10:32.905 --> 00:10:35.565
+Then, in Codex or your chat,
+
+354
+00:10:35.685 --> 00:10:37.205
+ask for a short task pointing to
+
+355
+00:10:37.205 --> 00:10:39.005
+the file and check the fact it
+
+356
+00:10:39.005 --> 00:10:40.005
+cites.
+
+357
+00:10:40.005 --> 00:10:41.565
+When something goes wrong,
+
+358
+00:10:41.565 --> 00:10:43.345
+what goes into the record?
+
+359
+00:10:43.345 --> 00:10:45.385
+Start by separating two things.
+
+360
+00:10:45.385 --> 00:10:47.125
+The report came out empty is the
+
+361
+00:10:47.125 --> 00:10:48.445
+symptom, what you saw.
+
+362
+00:10:48.445 --> 00:10:50.865
+The cause is the reason you observed,
+
+363
+00:10:50.865 --> 00:10:53.845
+like the spreadsheet had no records.
+
+364
+00:10:53.845 --> 00:10:56.665
+Notice: observed, not assumed.
+
+365
+00:10:56.665 --> 00:10:57.985
+In the training project,
+
+366
+00:10:57.985 --> 00:10:59.985
+Lúcia saw the report come out empty.
+
+367
+00:10:59.985 --> 00:11:01.285
+Before touching anything,
+
+368
+00:11:01.285 --> 00:11:03.085
+she wrote down the symptom and opened
+
+369
+00:11:03.085 --> 00:11:04.165
+the input spreadsheet.
+
+370
+00:11:04.165 --> 00:11:05.825
+It had no records at all.
+
+371
+00:11:05.825 --> 00:11:08.525
+After the symptom and the cause come
+
+372
+00:11:08.525 --> 00:11:10.125
+two more columns:
+
+373
+00:11:10.765 --> 00:11:11.985
+the smallest fix,
+
+374
+00:11:11.985 --> 00:11:13.665
+which here is checking the number of
+
+375
+00:11:13.665 --> 00:11:15.105
+rows before generating,
+
+376
+00:11:15.105 --> 00:11:16.945
+and the verification,
+
+377
+00:11:16.945 --> 00:11:18.668
+which says how you know the fix
+
+378
+00:11:18.668 --> 00:11:22.068
+works: an empty spreadsheet produces a warning,
+
+379
+00:11:22.068 --> 00:11:22.848
+not a report.
+
+380
+00:11:22.848 --> 00:11:25.108
+All in a single table row,
+
+381
+00:11:25.108 --> 00:11:26.528
+in the falhas file,
+
+382
+00:11:26.528 --> 00:11:28.328
+with the date and the type.
+
+383
+00:11:28.328 --> 00:11:29.928
+And what type of failure is it?
+
+384
+00:11:29.928 --> 00:11:32.008
+A request failure is when the goal
+
+385
+00:11:32.008 --> 00:11:34.328
+was ambiguous or information was missing.
+
+386
+00:11:34.328 --> 00:11:36.948
+An infrastructure failure is when the text
+
+387
+00:11:36.948 --> 00:11:39.978
+was fine, but something outside it failed,
+
+388
+00:11:39.978 --> 00:11:41.748
+like a missing file or a process
+
+389
+00:11:41.748 --> 00:11:43.088
+that stopped.
+
+390
+00:11:43.088 --> 00:11:44.928
+Denise had one of each in the
+
+391
+00:11:44.928 --> 00:11:45.428
+same week.
+
+392
+00:11:45.368 --> 00:11:48.048
+The minutes summary came out two pages
+
+393
+00:11:48.048 --> 00:11:50.268
+long, because the request didn't say the
+
+394
+00:11:50.268 --> 00:11:50.768
+length.
+
+395
+00:11:50.608 --> 00:11:52.608
+The fix was in the text:
+
+396
+00:11:52.608 --> 00:11:53.848
+up to ten lines.
+
+397
+00:11:53.848 --> 00:11:56.848
+The attendance report didn't come out because
+
+398
+00:11:56.848 --> 00:11:58.608
+the spreadsheet wasn't in the folder.
+
+399
+00:11:58.608 --> 00:12:01.168
+The fix was a check:
+
+400
+00:12:01.228 --> 00:12:04.308
+confirm the file exists before starting.
+
+401
+00:12:04.308 --> 00:12:05.948
+When in doubt,
+
+402
+00:12:05.948 --> 00:12:07.148
+ask:
+
+403
+00:12:07.168 --> 00:12:08.428
+if I had written it better,
+
+404
+00:12:08.428 --> 00:12:09.608
+would it have worked?
+
+405
+00:12:09.608 --> 00:12:11.588
+If yes, it was the request.
+
+406
+00:12:11.588 --> 00:12:13.388
+If it was both,
+
+407
+00:12:13.388 --> 00:12:14.968
+mark both.
+
+408
+00:12:15.428 --> 00:12:17.728
+And prefer the smallest fix to a
+
+409
+00:12:17.728 --> 00:12:18.293
+rebuild.
+
+410
+00:12:18.620 --> 00:12:20.360
+Faced with the empty report,
+
+411
+00:12:20.360 --> 00:12:22.340
+Lúcia thought about switching models.
+
+412
+00:12:22.340 --> 00:12:24.020
+That would take two hours,
+
+413
+00:12:24.020 --> 00:12:25.780
+and the empty spreadsheet would keep breaking
+
+414
+00:12:25.780 --> 00:12:27.260
+the next report.
+
+415
+00:12:27.260 --> 00:12:28.900
+One new line was enough.
+
+416
+00:12:28.900 --> 00:12:30.780
+And that line goes into
+
+417
+00:12:30.780 --> 00:12:31.980
+AGENTS.md
+
+418
+00:12:33.180 --> 00:12:34.740
+or the Skill,
+
+419
+00:12:34.740 --> 00:12:37.580
+which the agent reads on every task.
+
+420
+00:12:37.720 --> 00:12:39.800
+Denise wrote in the attendance one:
+
+421
+00:12:39.800 --> 00:12:42.760
+before reading, check that the spreadsheet exists.
+
+422
+00:12:42.900 --> 00:12:43.660
+If it's missing,
+
+423
+00:12:43.660 --> 00:12:45.680
+stop and say which file is missing.
+
+424
+00:12:45.680 --> 00:12:46.780
+The following week,
+
+425
+00:12:46.780 --> 00:12:48.920
+the agent stopped and warned her.
+
+426
+00:12:48.920 --> 00:12:50.920
+Your practice, about twelve minutes:
+
+427
+00:12:50.920 --> 00:12:52.120
+pause.
+
+428
+00:12:52.280 --> 00:12:53.260
+In the terminal,
+
+429
+00:12:53.260 --> 00:12:55.100
+list the entradas folder and look for
+
+430
+00:12:55.100 --> 00:12:57.580
+an October file that doesn't exist.
+
+431
+00:12:57.580 --> 00:12:59.640
+Record that fictional failure in falhas,
+
+432
+00:12:59.640 --> 00:13:01.640
+paste the rule into AGENTS.md,
+
+433
+00:13:01.640 --> 00:13:03.920
+open Codex, and ask for the October
+
+434
+00:13:03.920 --> 00:13:05.120
+report.
+
+435
+00:13:05.320 --> 00:13:06.540
+Check that it stops,
+
+436
+00:13:06.540 --> 00:13:07.620
+says which file is missing,
+
+437
+00:13:07.620 --> 00:13:09.780
+and doesn't make up numbers.
+
+438
+00:13:09.780 --> 00:13:11.040
+The Skill worked once.
+
+439
+00:13:11.040 --> 00:13:11.660
+Does it always work?
+
+440
+00:13:11.660 --> 00:13:13.480
+To find out,
+
+441
+00:13:13.480 --> 00:13:15.740
+you'll test it with three cases.
+
+442
+00:13:15.740 --> 00:13:17.060
+And before running it,
+
+443
+00:13:17.060 --> 00:13:18.860
+you write on a checklist what each
+
+444
+00:13:18.860 --> 00:13:20.600
+case should produce.
+
+445
+00:13:20.600 --> 00:13:22.280
+That way you compare with a reference,
+
+446
+00:13:22.280 --> 00:13:24.297
+not with your impression in the moment.
+
+447
+00:13:24.297 --> 00:13:26.397
+Denise set up the checklist the way
+
+448
+00:13:26.397 --> 00:13:28.637
+she sets up the evacuation drill sheet:
+
+449
+00:13:28.637 --> 00:13:30.657
+first what should happen,
+
+450
+00:13:30.657 --> 00:13:32.077
+then the run-through.
+
+451
+00:13:32.077 --> 00:13:33.177
+In the normal case,
+
+452
+00:13:33.177 --> 00:13:35.344
+the spreadsheet has a notebook at thirty-five
+
+453
+00:13:35.344 --> 00:13:37.157
+fifty, a pen at nine fifty,
+
+454
+00:13:37.157 --> 00:13:38.497
+and a planner at fifty-five,
+
+455
+00:13:38.497 --> 00:13:40.697
+and the expected total is one hundred.
+
+456
+00:13:40.697 --> 00:13:42.517
+In the incomplete case,
+
+457
+00:13:42.517 --> 00:13:43.377
+the pen has no value,
+
+458
+00:13:43.377 --> 00:13:45.597
+so the expected result is the known
+
+459
+00:13:45.597 --> 00:13:47.697
+total of ninety fifty and a pending
+
+460
+00:13:47.697 --> 00:13:48.457
+item for the pen.
+
+461
+00:13:48.457 --> 00:13:50.557
+In the not as agreed case,
+
+462
+00:13:50.557 --> 00:13:52.537
+the request is generate and send to
+
+463
+00:13:52.537 --> 00:13:55.237
+management, and the expected result is only
+
+464
+00:13:55.237 --> 00:13:57.397
+the draft, with nothing sent.
+
+465
+00:13:57.397 --> 00:13:58.517
+In the incomplete case,
+
+466
+00:13:58.517 --> 00:14:01.077
+the right result doesn't invent the missing
+
+467
+00:14:01.077 --> 00:14:01.577
+value.
+
+468
+00:14:01.537 --> 00:14:03.897
+It shows the total of what's known
+
+469
+00:14:03.897 --> 00:14:06.257
+and keeps the pending item in plain
+
+470
+00:14:06.257 --> 00:14:06.977
+view.
+
+471
+00:14:06.977 --> 00:14:08.897
+The first version of Lúcia's Skill was
+
+472
+00:14:08.897 --> 00:14:12.157
+missing the rule don't invent missing values,
+
+473
+00:14:12.217 --> 00:14:14.317
+and the agent answered with a total
+
+474
+00:14:14.317 --> 00:14:15.037
+of one hundred,
+
+475
+00:14:15.037 --> 00:14:17.177
+as if the pen had a value.
+
+476
+00:14:17.177 --> 00:14:19.897
+It was the test that revealed this.
+
+477
+00:14:20.077 --> 00:14:21.417
+After the fix,
+
+478
+00:14:21.417 --> 00:14:23.197
+the answer brought the source,
+
+479
+00:14:23.197 --> 00:14:25.517
+the draft in the saidas folder,
+
+480
+00:14:25.517 --> 00:14:27.255
+the known total of ninety fifty,
+
+481
+00:14:27.255 --> 00:14:30.275
+and the pen as a pending item,
+
+482
+00:14:30.295 --> 00:14:31.115
+left blank.
+
+483
+00:14:31.115 --> 00:14:32.275
+In the third case,
+
+484
+00:14:32.275 --> 00:14:34.935
+Denise deliberately asked to send
+
+485
+00:14:34.935 --> 00:14:36.395
+the report to management.
+
+486
+00:14:36.395 --> 00:14:38.115
+Codex can't even send email there.
+
+487
+00:14:38.115 --> 00:14:39.975
+The test checks whether it respects the
+
+488
+00:14:39.975 --> 00:14:42.215
+limit: it made the draft,
+
+489
+00:14:42.215 --> 00:14:43.275
+checked the total,
+
+490
+00:14:43.275 --> 00:14:44.795
+and said it didn't send,
+
+491
+00:14:44.795 --> 00:14:46.955
+because the Skill stops before sending or
+
+492
+00:14:46.955 --> 00:14:48.155
+publishing.
+
+493
+00:14:48.155 --> 00:14:49.315
+Looking for the Skill's name in the
+
+494
+00:14:49.315 --> 00:14:51.095
+answer isn't a test.
+
+495
+00:14:51.095 --> 00:14:53.615
+A test means answering three questions,
+
+496
+00:14:53.615 --> 00:14:55.475
+looking at the answer and the report
+
+497
+00:14:55.475 --> 00:14:57.475
+file in the saidas folder:
+
+498
+00:14:57.475 --> 00:14:59.495
+does the total equal the sum?
+
+499
+00:14:59.495 --> 00:15:00.935
+Is the pending item visible,
+
+500
+00:15:00.935 --> 00:15:02.375
+with no made-up number?
+
+501
+00:15:02.375 --> 00:15:04.135
+Did it stop before sending?
+
+502
+00:15:04.135 --> 00:15:05.455
+If a case fails,
+
+503
+00:15:05.455 --> 00:15:07.235
+add to the Skill the smallest rule
+
+504
+00:15:07.235 --> 00:15:09.235
+that fixes that failure and run it
+
+505
+00:15:09.235 --> 00:15:10.435
+again.
+
+506
+00:15:11.015 --> 00:15:13.215
+Lúcia didn't rewrite the Skill.
+
+507
+00:15:13.215 --> 00:15:14.835
+She added one line,
+
+508
+00:15:14.835 --> 00:15:17.335
+an empty value becomes a pending item,
+
+509
+00:15:17.335 --> 00:15:18.815
+never fill it in,
+
+510
+00:15:18.815 --> 00:15:20.275
+and all three cases passed.
+
+511
+00:15:20.275 --> 00:15:21.535
+Your practice,
+
+512
+00:15:21.535 --> 00:15:23.215
+about twelve minutes:
+
+513
+00:15:23.835 --> 00:15:25.335
+pause the video.
+
+514
+00:15:25.395 --> 00:15:28.235
+Create the two fictional spreadsheets with the
+
+515
+00:15:28.235 --> 00:15:29.295
+commands from the lesson.
+
+516
+00:15:29.295 --> 00:15:30.535
+For each case,
+
+517
+00:15:30.535 --> 00:15:32.092
+open Codex,
+
+518
+00:15:32.092 --> 00:15:33.332
+send the request,
+
+519
+00:15:33.332 --> 00:15:35.752
+exit, and read the report.
+
+520
+00:15:35.852 --> 00:15:39.052
+Mark passed or failed on the checklist.
+
+521
+00:15:39.052 --> 00:15:40.252
+If one fails,
+
+522
+00:15:40.252 --> 00:15:42.552
+add only the smallest rule.
+
+523
+00:15:42.712 --> 00:15:44.432
+Let's put it all together.
+
+524
+00:15:44.432 --> 00:15:46.512
+You write instructions you can check in
+
+525
+00:15:46.512 --> 00:15:49.392
+the delivery, with action and evidence,
+
+526
+00:15:49.392 --> 00:15:51.292
+and you remove from the file whatever
+
+527
+00:15:51.292 --> 00:15:52.712
+doesn't change the work.
+
+528
+00:15:52.712 --> 00:15:54.432
+You keep the global file small and
+
+529
+00:15:54.432 --> 00:15:55.492
+the details in the project,
+
+530
+00:15:55.492 --> 00:15:57.692
+knowing that the closest file decides there
+
+531
+00:15:57.692 --> 00:16:00.372
+and that your explicit request counts more.
+
+532
+00:16:00.372 --> 00:16:03.132
+You turn the step-by-step that repeats into
+
+533
+00:16:03.132 --> 00:16:04.812
+a Skill, with
+
+534
+00:16:04.952 --> 00:16:07.392
+a description that says when to use
+
+535
+00:16:07.392 --> 00:16:08.732
+it and when not to.
+
+536
+00:16:08.732 --> 00:16:11.032
+You keep in memory only what stays
+
+537
+00:16:11.032 --> 00:16:13.052
+valid, with date and source,
+
+538
+00:16:13.052 --> 00:16:15.392
+and you point to the file in
+
+539
+00:16:15.392 --> 00:16:16.332
+your request.
+
+540
+00:16:16.332 --> 00:16:18.392
+You record failures as small protections,
+
+541
+00:16:18.392 --> 00:16:21.452
+where the next run reads them.
+
+542
+00:16:21.992 --> 00:16:23.972
+And you test the Skill with three
+
+543
+00:16:23.972 --> 00:16:25.872
+cases before trusting it.
+
+544
+00:16:25.872 --> 00:16:28.192
+When you have about thirty minutes,
+
+545
+00:16:28.192 --> 00:16:29.832
+do the module lab in the supplementary
+
+546
+00:16:29.832 --> 00:16:31.572
+material for lesson thirty.
+
+547
+00:16:31.572 --> 00:16:32.932
+In module six:
+
+548
+00:16:32.932 --> 00:16:35.372
+Git and GitHub without losing work.
+
+549
+00:16:35.372 --> 00:16:36.389
+See you there.

@@ -153,5 +153,10 @@
     "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m4-en-v2.mp4",
     "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m4-en-v2.srt",
     "duration": 988.781016
+  },
+  "oswork-v62-m5-en-v2": {
+    "url": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m5-en-v2.mp4",
+    "srt": "https://github.com/inematds/oswork-v62/releases/download/video-v1.0.0/oswork-v62-m5-en-v2.srt",
+    "duration": 996.421016
   }
 }
