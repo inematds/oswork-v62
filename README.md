@@ -26,3 +26,11 @@ de cada aula. O OSWork v6 (7 aulas para leigo) é outro curso e continua separad
 Atualizar: `python3 scripts/complementar.py` → `python3 ~/.claude/skills/formato-curso-v6/scripts/montar-curso.py .`
 → `python3 scripts/semear-traducao.py` → `python3 ~/.claude/skills/formato-curso-v6/scripts/traduzir-curso.py . en es`
 → `auditar-curso.cjs` e `testar-motor.cjs` em `curso.html`, `en/curso.html` e `es/curso.html`.
+
+<!-- inema-backlink:v1 -->
+## Mais no INEMA.CLUB
+
+- [Ficha completa deste curso](https://www.inema.club/cursos/288-oswork-v6-2-sua-ia-precisa-de-um-sistema/)
+- [Guia: como aprender inteligência artificial](https://www.inema.club/aprender-inteligencia-artificial/)
+- [Todos os cursos](https://www.inema.club/cursos/)
+<!-- /inema-backlink:v1 -->
