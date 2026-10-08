@@ -49,3 +49,16 @@ Metáforas de abertura (inéditas no ecossistema v6): bancada de oficina (A1), b
 
 Mesmo molde e mesmos personagens (Denise e Lúcia). Plano de cada módulo (tabela de aulas + metáforas):
 `plano-m2.md` … `plano-m8.md`. Leitor simulado: `leitor-m2.md` … `leitor-m8.md`.
+
+## Aula 49 — acrescentada em 07/10/2026 (módulo 6, 7ª aula)
+
+Pedido do Nei: o OSWork precisa levar o aluno até GitHub com gh + chave SSH, repositório público/privado e Pages.
+Numerada 49 para não renumerar 37–48 (progresso dos alunos e vídeos usam o número); entra no módulo 6 pela lista
+`modulos` e pela navegação 36 → 49 → 37.
+
+| Aula | Tópico | Tipo | Promessa | Prática | Gancho |
+|---|---|---|---|---|---|
+| 49 | Chave no chaveiro, página no ar | ferramenta | criar a chave SSH, ligar o terminal à conta e pôr uma página de treino no ar | tarefa no terminal, 10 min | módulo 7 (Telegram) e, no 8, a mesma chave abre a VPS |
+
+Metáfora: cadeado (chave pública, você entrega) × chave do chaveiro (privada, fica). Sem complementar do v2 (não há
+tópico de origem); complementar próprio com fontes de 07/10/2026.

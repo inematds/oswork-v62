@@ -425,7 +425,7 @@
     "formas": [
       "chave pública"
     ],
-    "def": "Metade pública do par de chaves do SSH. Fica cadastrada na VPS; a outra metade, a chave privada, fica só no seu computador e nunca é colada em lugar nenhum."
+    "def": "Metade pública do par de chaves do SSH. Fica cadastrada no GitHub e na VPS; a outra metade, a chave privada, fica só no seu computador e nunca é colada em lugar nenhum."
   },
   "impressao-digital": {
     "formas": [

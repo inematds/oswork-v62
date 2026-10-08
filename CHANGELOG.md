@@ -1,5 +1,11 @@
 # Changelog — OSWork v6.2
 
+## 1.4.1 — 2026-10-07
+
+- Aula 49 (módulo 6, 7ª aula): chave SSH, `gh auth login` com SSH, repositório público ou privado (`gh repo create`) e GitHub Pages, com prática de publicar uma página de treino. Leitor simulado em 3 rodadas (5 → 7,5 → ver `context/leitor-simulado.md`).
+- Aula 19: o passo 4 mostra a mesma pasta na janela de arquivos do Windows (`explorer.exe .`, endereço `\\wsl.localhost\Ubuntu\…`; `open .` no Mac); terminal de exemplo com `/home/denise`; prática com o passo da janela.
+- Módulo 6 passa a 7 aulas (kickers e navegação 36 → 49 → 37). Definição de "chave pública" passa a citar GitHub e VPS.
+
 ## 1.3.1 — 2026-09-25
 
 - Vídeo-aulas: página `videos/` com um player por módulo (avatar e voz do Nei, capítulos por aula, legendas). Publicados M1, M2 e M4 em PT; os demais entram conforme ficam prontos. MP4/SRT na release `video-v1.0.0`.

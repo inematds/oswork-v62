@@ -54,7 +54,9 @@
     "revert",
     "restore",
     "origin",
-    "shell"
+    "shell",
+    "gh",
+    "GitHub Pages"
   ],
   "modulos": [
     {
@@ -126,7 +128,8 @@
         33,
         34,
         35,
-        36
+        36,
+        49
       ]
     },
     {

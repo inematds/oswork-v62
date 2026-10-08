@@ -4,7 +4,7 @@
   <p class="kicker">Módulo 4 · Aula 1 de 6</p>
   <h1>Uma pasta representa <em>um contexto</em></h1>
   <figure class="cena"><img src="assets/img/aula-19.webp" width="1280" height="720" alt="Uma coordenadora pedagógica abre uma gaveta do arquivo de aço da secretaria da escola; dentro, só as pastas de uma turma, e as outras gavetas ficam fechadas."></figure>
-  <p class="promise">Você consegue desenhar a árvore da sua pasta de projetos, com config e um projeto de treino. E consegue criá-la com um comando no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
+  <p class="promise">Você consegue desenhar a árvore da sua pasta de projetos, com config e um projeto de treino. E consegue criá-la com um comando no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> e ver as mesmas pastas na janela de arquivos do computador.</p>
   <p class="why">Quando tudo fica numa pasta só, a IA lê material de assuntos que não têm nada a ver com o pedido. Depois fica difícil dizer de onde veio uma conclusão. Hoje você separa os assuntos antes de criar qualquer arquivo.</p>
   <div class="em1min">
     <p class="k">Em 1 minuto</p>
@@ -38,8 +38,8 @@
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
 <pre><code><span class="pr">$</span> cd ~
 <span class="pr">$</span> pwd
-<span class="out">/Users/denise</span></code></pre>
-<p class="tela-nota">cd ~ leva você para a pasta pessoal; pwd mostra onde você está. No Linux, e no Windows com o terminal do módulo 3, o endereço começa com /home, como /home/denise.</p></div>
+<span class="out">/home/denise</span></code></pre>
+<p class="tela-nota">cd ~ leva você para a pasta pessoal; pwd mostra onde você está. No Windows, com o terminal do módulo 3, e no Linux, o endereço começa com /home. No Mac, começa com /Users, como /Users/denise.</p></div>
   <figcaption>O endereço muda de computador para computador. O ~ vale em todos.</figcaption></figure>
 </section>
 
@@ -53,7 +53,7 @@
       <div class="tela-top"><i></i><i></i><i></i><span>~/projetos</span></div>
       <div class="janela-body">
         <div class="item pasta"><span class="pin">1</span> config</div>
-        <div class="item doc dentro">memoria.md · decisoes.md (aula 3 deste módulo)</div>
+        <div class="item doc dentro">memoria.md · decisoes.md (você cria na aula 3; por ora, vazia)</div>
         <div class="item pasta"><span class="pin">2</span> meu-primeiro-projeto</div>
         <div class="item pasta dentro"><span class="pin">3</span> entradas</div>
         <div class="item pasta dentro"><span class="pin">4</span> saidas</div>
@@ -80,28 +80,47 @@
   <h2><span class="n">4</span>Desenhe a árvore antes de criar as pastas</h2>
   <p>Antes de criar, desenhe a árvore no papel: uma pasta config e um único projeto de treino. Assim você decide os nomes com calma.</p>
   <p>Use nomes curtos, sem espaço e sem acento, como meu-primeiro-projeto e saidas. No terminal, espaço e acento dão trabalho em cada comando.</p>
+  <p>No Windows, o terminal do módulo 3 é o <span class="gterm" data-gl="wsl" data-def="Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux.">WSL</span>, que traz um <span class="gterm" data-gl="ubuntu" data-def="Versão popular do Linux, comum em servidores.">Ubuntu</span> dentro do Windows. Por isso a janela de arquivos mostra wsl.localhost e Ubuntu no endereço da pasta.</p>
   <p data-ex="professora">Lúcia desenhou num guardanapo: projetos, com config e feira-de-ciencias; dentro da feira, entradas e saidas. Levou um minuto e evitou três pastas com nomes parecidos.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
 <pre><code><span class="pr">$</span> mkdir -p ~/projetos/config ~/projetos/meu-primeiro-projeto/entradas ~/projetos/meu-primeiro-projeto/saidas
 <span class="pr">$</span> ls ~/projetos
-<span class="out">config  meu-primeiro-projeto</span></code></pre>
-<p class="tela-nota">mkdir -p cria as pastas e as de cima que faltarem. Se uma pasta já existe, ela fica como está.</p></div>
-  <figcaption>Um comando cria a árvore inteira. O ls confere o resultado.</figcaption></figure>
-  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O comando é comprido porque cria quatro pastas de uma vez. Copie e cole do jeito que está, numa linha só. Para colar no terminal, use o botão direito › Colar; no teclado, Ctrl+Shift+V no Linux e no Windows, Cmd+V no Mac. Prefere o mouse? Digite cd ~ e depois open . no Mac, ou explorer.exe . no Windows, dentro do terminal Linux do módulo 3: o gerenciador de arquivos abre na sua pasta pessoal do terminal. Crie ali as pastas, com botão direito › Nova pasta.</p></div>
+<span class="out">config  meu-primeiro-projeto</span>
+<span class="pr">$</span> cd ~/projetos
+<span class="pr">$</span> explorer.exe .</code></pre>
+<p class="tela-nota">mkdir -p cria as pastas e as de cima que faltarem. O explorer.exe . abre a janela de arquivos do Windows nesta mesma pasta; no Mac, use open . no lugar dele.</p></div>
+  <figcaption>Um comando cria a árvore inteira. O ls confere no terminal; o explorer.exe . mostra o mesmo lugar na janela de arquivos.</figcaption></figure>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Explorador de Arquivos · \\wsl.localhost\Ubuntu\home\denise\projetos</span></div>
+      <div class="janela-body">
+        <div class="item pasta"><span class="pin">1</span> config</div>
+        <div class="item pasta"><span class="pin">2</span> meu-primeiro-projeto</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>As mesmas pastas que o ls listou, agora na janela do Windows.</span></li>
+      <li><span class="pin">2</span><span>No painel lateral, elas ficam em Linux › Ubuntu › home › o seu nome › projetos.</span></li>
+    </ol>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O comando é comprido porque cria quatro pastas de uma vez. No celular ele parece quebrado em várias linhas; é uma linha só, e o botão copiar leva do jeito certo. Para colar no terminal, use o botão direito › Colar; no teclado, Ctrl+Shift+V no Linux e no Windows, Cmd+V no Mac. O explorer.exe . abriu a pasta Documentos do Windows? Você não estava em ~/projetos: rode cd ~/projetos e repita. Prefere o mouse? Na janela que abriu, crie as pastas com botão direito › Nova pasta; o ls do terminal passa a mostrá-las.</p></div>
 </section>
 
 <section class="practice" data-mode="tarefa">
-  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
   <h3 class="ph">Crie a árvore do projeto de treino</h3>
-  <p class="pgoal">Pronto quando o primeiro ls mostrar config e meu-primeiro-projeto, e o segundo mostrar entradas e saidas. Cerca de 8 minutos, no computador.</p>
+  <p class="pgoal">Pronto quando o primeiro ls mostrar config e meu-primeiro-projeto, o segundo mostrar entradas e saidas, e a janela de arquivos mostrar as mesmas pastas. Cerca de 9 minutos, no computador.</p>
   <p class="psafe">Os comandos só criam pastas vazias dentro da sua pasta pessoal; nada é apagado. Criou meu-primeiro-projeto no módulo 3? Tudo bem, o que já está lá continua. Apareceu uma mensagem de erro? Pare, confira se colou a linha inteira e tente de novo uma vez.</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir -p ~/projetos/config ~/projetos/meu-primeiro-projeto/entradas ~/projetos/meu-primeiro-projeto/saidas
 ls ~/projetos
-ls ~/projetos/meu-primeiro-projeto</pre></div>
+ls ~/projetos/meu-primeiro-projeto
+cd ~/projetos
+explorer.exe .</pre></div>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>Desenhe no papel a árvore: projetos, com config e meu-primeiro-projeto; dentro do projeto, entradas e saidas.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Abra o terminal do módulo 3 (no Windows, o mesmo terminal Linux daquele módulo). Cole as três linhas com o botão direito › Colar e aperte Enter. O -p só pede: crie também as pastas de cima que faltarem.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Abra o terminal do módulo 3 (no Windows, o mesmo terminal Linux daquele módulo). Copie o bloco inteiro (cinco linhas), cole com o botão direito › Colar e aperte Enter. O -p só pede: crie também as pastas de cima que faltarem.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Compare a resposta com o seu desenho. Se o projeto já tinha arquivos do módulo 3, eles também aparecem, e está certo.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>Confira a janela de arquivos que abriu: config e meu-primeiro-projeto estão lá. No Mac, troque a última linha por open . antes de colar.</span></label></li>
   </ol>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>O que você deve ver</span></div>
 <pre><code><span class="out">config  meu-primeiro-projeto

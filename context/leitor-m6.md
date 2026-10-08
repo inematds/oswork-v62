@@ -19,3 +19,19 @@ Aberto (fora do alcance do módulo): o motor põe botão "copiar" também nos te
 inteiro, com as respostas junto (`curso.js`, linha do "copiar"); a leitora pode colar saída no terminal. Sugestão para o
 motor: em `.terminal`, copiar só as linhas com `.pr`. `<code>` dentro de `.psafe` quebra o layout (o `.psafe` é flex) —
 usei aspas no lugar. Ainda **não houve teste com pessoas reais** (`TESTE-HUMANO.md` §2).
+
+## Aula 49 — chave SSH, gh e GitHub Pages (07/10/2026)
+
+Personas: coordenadora pedagógica, 58, medo de estragar o computador · professora, 34. Capturas a 390px (rodadas 1–2), texto (3–5).
+
+| Rodada | Notas | Principais correções |
+|---|---|---|
+| 1 | 5 (coord.) · 5 (prof.) | bloco 1 em um copiar por comando (o ssh-keygen engolia as linhas seguintes); senha do sudo invisível; setas ↑↓ no gh; "yes" do primeiro ssh; "não troque o {owner}"; "null não é erro"; próximo passo com add/commit/push; conta GitHub no pré-requisito |
+| 2 | 7,5 | direção do código (aparece no terminal, vai no navegador) e github.com/login/device |
+| 3 | 8 | botão verde Authorize; aviso "Paste anyway" ao colar várias linhas; WhatsApp no exemplo |
+| 4 | 8 | `sudo apt update && sudo apt install -y gh`; código "8 caracteres, como ABCD-1234"; "texto grande" da página |
+| 5 | 8 · TRAVEI: nenhum → corrigido | tela do gh com a lista e o sinal > antes da escolha |
+
+Aula 19 (rodada 1: 8 · 8 → corrigido): /home/denise no terminal; "cinco linhas" na prática; wsl.localhost e Ubuntu ditos por extenso;
+aviso de que o comando só parece quebrado no celular; memoria.md/decisoes.md "você cria na aula 3".
+Auditoria final 49/49 em PT (10,0), EN (9,9) e ES (9,9); motor 26/26 nos três.
