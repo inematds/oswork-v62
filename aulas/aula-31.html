@@ -85,39 +85,41 @@
 
 <section class="step" data-kind="fundamento">
   <h2><span class="n">4</span>Comece o histórico só na pasta de treino</h2>
-  <p>No <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>, <code>git --version</code> confirma que o Git está no computador. Depois, dentro de uma pasta nova, <code>git init -b main</code> começa o histórico.</p>
-  <p><code>mkdir -p</code> cria a pasta, e <code>cd</code> entra nela. O <code>-b main</code> só dá o nome <code>main</code> à linha principal de trabalho. Nunca rode <code>git init</code> na sua pasta pessoal inteira: o Git passaria a acompanhar tudo o que está lá.</p>
+  <p>No <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>, o <span class="gterm" data-gl="winget" data-def="Instalador de programas que já vem no Windows 10 e 11. Você digita no cmd o nome oficial do programa e ele baixa e instala.">winget</span> instala o Git com <code>winget install -e --id Git.Git</code>. Feche e abra o cmd; então <code>git --version</code> confirma que o Git está no computador. Depois, dentro de uma pasta nova, <code>git init -b main</code> começa o histórico.</p>
+  <p><code>mkdir</code> cria a pasta, e <code>cd</code> entra nela. O <code>-b main</code> só dá o nome <code>main</code> à linha principal de trabalho. Nunca rode <code>git init</code> na sua pasta pessoal inteira: o Git passaria a acompanhar tudo o que está lá.</p>
   <p data-ex="professora">Lúcia criou a pasta <code>treino-git</code> dentro de <code>projetos</code>, entrou nela e só então começou o histórico. A resposta do terminal citava o caminho da pasta, e ela conferiu que era o de treino.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> git --version
-<span class="out">git version 2.43.0</span>
-<span class="pr">$</span> mkdir -p ~/projetos/treino-git
-<span class="pr">$</span> cd ~/projetos/treino-git
-<span class="pr">$</span> git init -b main
-<span class="out">Initialized empty Git repository in /home/lucia/projetos/treino-git/.git/</span></code></pre>
-<p class="tela-nota">A última linha diz, em inglês, "repositório vazio iniciado em…". Confira que o caminho termina em treino-git. O .git no fim é a pasta oculta onde o histórico mora: não mexa nela.</p></div>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\lucia&gt;</span> git --version
+<span class="out">git version 2.47.0.windows.1</span>
+<span class="pr">C:\Users\lucia&gt;</span> mkdir %USERPROFILE%\projetos\treino-git
+<span class="pr">C:\Users\lucia&gt;</span> cd %USERPROFILE%\projetos\treino-git
+<span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> git init -b main
+<span class="out">Initialized empty Git repository in C:/Users/lucia/projetos/treino-git/.git/</span></code></pre>
+<p class="tela-nota">A última linha diz, em inglês, "repositório vazio iniciado em…". Confira que o caminho termina em treino-git; o Git escreve o caminho com barras normais. O .git no fim é a pasta oculta onde o histórico mora: não mexa nela.</p></div>
   <figcaption>O número da versão e o nome de usuária no caminho serão outros no seu computador.</figcaption></figure>
-  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Se aparecer <code>command not found</code>, o Git não está <span class="gterm" data-gl="instalar" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial.">instalado</span>. Pare e siga a página oficial, git-scm.com, para o seu sistema. No Mac, pode abrir uma janela oferecendo as ferramentas de linha de comando: aceite, espere terminar e repita. Se aparecer <code>unknown switch</code>, o seu Git é anterior à versão 2.28: atualize pela mesma página e repita. No Windows, use o <span class="gterm" data-gl="bash" data-def="Linguagem de comandos do terminal no Linux e no macOS. Os comandos deste curso são escritos para ele.">Bash</span> do <span class="gterm" data-gl="wsl" data-def="Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux.">WSL</span> preparado no módulo 3; se ele ainda não estiver pronto, volte lá antes. A resposta pode vir em português se o seu sistema estiver em português: o sentido é o mesmo.</p></div>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Se aparecer "não é reconhecido como um comando interno", o Git não está <span class="gterm" data-gl="instalar" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial.">instalado</span>. Rode o winget do passo, feche e abra o cmd e repita. O winget falhou? Baixe o instalador da página oficial, git-scm.com, e aceite as opções padrão. Se aparecer <code>unknown switch</code>, o seu Git é anterior à versão 2.28: atualize pela mesma página e repita. A resposta pode vir em português se o seu sistema estiver em português: o sentido é o mesmo.</p></div>
 </section>
 
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Comece o histórico da pasta de treino</h3>
-  <p class="pgoal">Pronto quando o terminal responder que o repositório vazio foi iniciado em treino-git e mostrar <code>No commits yet</code>. Cerca de 8 minutos, no computador.</p>
+  <p class="pgoal">Pronto quando o cmd responder que o repositório vazio foi iniciado em treino-git e mostrar <code>No commits yet</code>. Cerca de 8 minutos, no computador.</p>
   <p class="psafe">A pasta é nova e vazia: nada seu é tocado e nada sai do computador. Se o caminho da resposta não terminar em treino-git, pare. Não apague nada por conta própria; anote em qual pasta foi e peça ajuda a alguém que use Git.</p>
-  <p><b>Bloco 1</b> · confira o Git:</p>
+  <p><b>Bloco 1</b> · instale o Git (uma vez só):</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">winget install -e --id Git.Git</pre></div>
+  <p><b>Bloco 2</b> · num cmd novo, confira o Git:</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">git --version</pre></div>
-  <p><b>Bloco 2</b> · crie a pasta e entre nela:</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir -p ~/projetos/treino-git
-cd ~/projetos/treino-git
-pwd</pre></div>
-  <p><b>Bloco 3</b> · comece o histórico:</p>
+  <p><b>Bloco 3</b> · crie a pasta e entre nela:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir %USERPROFILE%\projetos\treino-git
+cd %USERPROFILE%\projetos\treino-git
+cd</pre></div>
+  <p><b>Bloco 4</b> · comece o histórico:</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">git init -b main
 git status</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Abra o terminal, cole o bloco 1 e aperte Enter. Confira que a resposta começa com "git version".</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Cole o bloco 2. Confira que a resposta do <code>pwd</code> termina em /projetos/treino-git.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="3"> <span>Só se o caminho estiver certo, cole o bloco 3. Confira <code>Initialized empty Git repository</code> e, no status, <code>On branch main</code> e <code>No commits yet</code>.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Abra o cmd e cole o bloco 1 (já tem o Git? Ele avisa e você segue). Feche, abra outro cmd, cole o bloco 2 e confira que a resposta começa com "git version".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Cole o bloco 3. Confira que a resposta do <code>cd</code> sozinho termina em \projetos\treino-git.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Só se o caminho estiver certo, cole o bloco 4. Confira <code>Initialized empty Git repository</code> e, no status, <code>On branch main</code> e <code>No commits yet</code>.</span></label></li>
   </ol>
   <p class="pdone">Você acabou de começar um histórico numa pasta que escolheu, e conferiu pela resposta que era a pasta certa.</p>
 </section>

@@ -45,8 +45,8 @@
   <h2><span class="n">2</span><code>git status</code> diz a etapa de cada arquivo</h2>
   <p>Rode <code>git status</code> sempre antes de separar qualquer coisa. A resposta vem em inglês, em blocos com título.</p>
   <p data-ex="professora">Lúcia escreveu o <span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span> da pasta de treino e uma anotação com ideias soltas para a aula. O status mostrou os dois arquivos no mesmo bloco, ainda fora do histórico.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> git status
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> git status
 <span class="out">On branch main
 
 No commits yet
@@ -64,9 +64,9 @@ Untracked files:
   <p>Escreva o nome do arquivo depois de <code>git add</code>. Assim você vê o tamanho da mudança e não leva junto o que não tem relação.</p>
   <p>Existe o atalho <code>git add .</code>, que separa tudo o que não está ignorado. Para aprender, nomeie cada arquivo.</p>
   <p data-ex="professora">Lúcia rodou <code>git add README.md</code>. No status seguinte, o README subiu para o bloco da próxima versão, e a anotação ficou onde estava.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> git add README.md
-<span class="pr">$</span> git status
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> git add README.md
+<span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> git status
 <span class="out">On branch main
 
 No commits yet
@@ -87,9 +87,9 @@ Untracked files:
   <p>O status diz quais arquivos. O <span class="gterm" data-gl="diff" data-def="Comparação que mostra, linha por linha, o que mudou num arquivo.">diff</span> mostra o que está escrito neles. <code>git diff --cached</code> mostra o que já foi separado e vai entrar na versão.</p>
   <p><code>git diff</code>, sem mais nada, mostra mudanças ainda não separadas, mas só em arquivos que o Git já acompanha. Arquivo fora do histórico, como a anotação, nunca aparece nele.</p>
   <p data-ex="professora">Lúcia rodou os dois na pasta de treino. O primeiro veio vazio: o README já estava separado e a anotação está fora do histórico. O segundo mostrou as linhas do README com um sinal de mais na frente.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> git diff
-<span class="pr">$</span> git diff --cached
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> git diff
+<span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> git diff --cached
 <span class="out">diff --git a/README.md b/README.md
 new file mode 100644
 index 0000000..4280337
@@ -98,7 +98,7 @@ index 0000000..4280337
 @@ -0,0 +1,3 @@
 +# Treino de Git
 +
-+Pasta para praticar o histórico.</span></code></pre>
++Pasta para praticar o Git.</span></code></pre>
 <p class="tela-nota">O primeiro não respondeu nada. No segundo, pule o cabeçalho, até a linha que começa com @@: o que importa são as linhas que começam com +, o texto que vai entrar.</p></div>
   <figcaption>Vazio no primeiro quer dizer: nada mudado ficou fora da etapa 2.</figcaption></figure>
   <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Se a tela parar com dois pontos no rodapé e não voltar ao cursor, o Git abriu a resposta em modo de leitura. Aperte a tecla q para sair. Nada foi perdido. Se o seu terminal responde em português, os títulos dos blocos vêm traduzidos, na mesma ordem.</p></div>
@@ -110,9 +110,9 @@ index 0000000..4280337
   <p class="pgoal">Pronto quando o status mostrar o README em "Changes to be committed", a anotação em "Untracked files", e você souber explicar por que o <code>git diff</code> veio vazio. Cerca de 10 minutos, no computador.</p>
   <p class="psafe">Tudo acontece na pasta treino-git e nada é salvo no histórico ainda. O sinal &gt; cria o arquivo e substitui outro de mesmo nome: por isso, só rode estas linhas dentro de treino-git. Se o “cd” der erro, pare e faça antes a prática da aula 1 do módulo. Fechou o terminal entre um bloco e outro? Rode de novo “cd ~/projetos/treino-git” antes de seguir.</p>
   <p><b>Bloco 1</b> · crie os dois arquivos e olhe o status:</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/treino-git
-printf '# Treino de Git\n\nPasta para praticar o histórico.\n' &gt; README.md
-printf 'ideias soltas, não publicar\n' &gt; notas-privadas.txt
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\treino-git
+(echo # Treino de Git&amp; echo.&amp; echo Pasta para praticar o Git.)&gt; README.md
+echo rascunho pessoal, fica fora do Git&gt; notas-privadas.txt
 git status</pre></div>
   <p><b>Bloco 2</b> · separe só o README:</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">git add README.md
@@ -121,12 +121,12 @@ git status</pre></div>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">git diff
 git diff --cached</pre></div>
   <details class="mais"><summary>Não fez a aula 1 do módulo? Rode isto antes</summary>
-    <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir -p ~/projetos/treino-git
-cd ~/projetos/treino-git
+    <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir %USERPROFILE%\projetos\treino-git
+cd %USERPROFILE%\projetos\treino-git
 git init -b main</pre></div>
   </details>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Cole o bloco 1. O <code>printf</code> escreve o texto entre aspas no arquivo; o <code>\n</code> é a quebra de linha. Confira os dois arquivos em "Untracked files".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole o bloco 1 no <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>. O <code>echo</code> escreve o texto no arquivo; dentro dos parênteses, cada <code>&amp;</code> começa uma linha nova, e o <code>echo.</code> deixa uma linha em branco. Confira os dois arquivos em "Untracked files".</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Cole o bloco 2. Confira o README em "Changes to be committed" e a anotação ainda em "Untracked files".</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Cole o bloco 3. Anote no papel ou no bloco de notas por que o primeiro diff veio vazio e o que o segundo mostrou.</span></label></li>
   </ol>

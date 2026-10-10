@@ -43,11 +43,11 @@
   <p>Rodado no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>, o comando mostra para onde a pasta envia. O endereço aparece com o apelido <span class="gterm" data-gl="origin" data-def="Nome que o Git dá, por padrão, ao endereço no GitHub de onde a pasta veio e para onde ela envia.">origin</span>. A conta dona está no próprio endereço, logo depois de github.com.</p>
   <p>Resposta vazia quer dizer que a pasta não tem destino: um push não teria para onde ir.</p>
   <p data-ex="coordenadora">Antes de enviar os modelos de relatório, Denise rodou o comando. O endereço apontava para o <span class="gterm" data-gl="repositorio" data-def="Pasta de projeto acompanhada pelo Git, com todo o histórico de versões.">repositório</span> da rede de ensino, e não para o da coordenação. Ela parou ali.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> cd ~/projetos/treino-git
-<span class="pr">$</span> git remote -v
-<span class="pr">$</span> cd ~/projetos/clone-curso
-<span class="pr">$</span> git remote -v
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\lucia&gt;</span> cd %USERPROFILE%\projetos\treino-git
+<span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> git remote -v
+<span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> cd %USERPROFILE%\projetos\clone-curso
+<span class="pr">C:\Users\lucia\projetos\clone-curso&gt;</span> git remote -v
 <span class="out">origin	https://github.com/inematds/oswork-v62.git (fetch)
 origin	https://github.com/inematds/oswork-v62.git (push)</span></code></pre>
 <p class="tela-nota">No treino, nada: não há destino. No clone, o destino é a conta inematds, que não é a sua; você não tem permissão para enviar para lá.</p></div>
@@ -59,8 +59,8 @@ origin	https://github.com/inematds/oswork-v62.git (push)</span></code></pre>
   <p><code>git status</code> diz se sobrou algo sem salvar. <code>git show --stat</code> mostra a última versão: autor, mensagem e a lista de arquivos que ela mudou.</p>
   <p>O push leva todas as versões que o destino ainda não tem, e não só a última. O status diz quantas: <code>up to date with 'origin/main'</code> quer dizer nenhuma; <code>ahead of 'origin/main' by 2 commits</code> quer dizer duas. Sem destino, como no treino, essa linha nem aparece, e iria o histórico inteiro do log.</p>
   <p data-ex="professora">Lúcia rodou os dois na pasta de treino. O status estava limpo. A última versão era a errata da aula anterior, e só mexia no <span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span>.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> git show --stat
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> git show --stat
 <span class="out">commit b11f583e5f52d25a3b67584457953303751f2cc5
 Author: Lúcia Andrade &lt;lucia@exemplo.com&gt;
 Date:   Fri Sep 25 00:38:59 2026 -0300
@@ -101,13 +101,13 @@ Date:   Fri Sep 25 00:38:59 2026 -0300
   <p class="pgoal">Pronto quando você tiver a conferência preenchida para a pasta de treino e para o clone do curso, cada uma com a decisão e o motivo. Cerca de 10 minutos, no computador. Anote no papel ou no bloco de notas.</p>
   <p class="psafe">Só leitura: nenhum comando desta prática envia nada. Não rode o push. Na pasta de treino não há destino, e no clone a conta não é sua. A opção --no-pager só faz a resposta sair inteira, sem parar a tela. Não fez as aulas anteriores? Use qualquer pasta com histórico que você tenha.</p>
   <p><b>Bloco 1</b> · pasta de treino:</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/treino-git
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\treino-git
 git remote -v
 git status
 git --no-pager log --oneline
 git --no-pager show --stat</pre></div>
   <p><b>Bloco 2</b> · clone do curso:</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/clone-curso
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\clone-curso
 git remote -v
 git status
 git --no-pager show --stat</pre></div>

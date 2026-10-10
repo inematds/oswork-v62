@@ -58,14 +58,14 @@
   <p>O <span class="gterm" data-gl="head" data-def="No Git, a versão em que você está agora.">HEAD</span> é o marcador de página do histórico: fica na versão em que você está agora, normalmente a última salva. O comando desta aula desfaz a versão marcada, então olhe antes qual é.</p>
   <p><code>git log --oneline</code> mostra a lista, com a mais nova no topo. Na linha marcada aparece <code>(HEAD -&gt; main)</code>: o marcador está aqui, na linha principal.</p>
   <p data-ex="professora">Na pasta de treino, Lúcia mudou o título do <span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span> e salvou uma segunda versão. O log mostrou essa versão no topo, com a marca HEAD.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> git diff
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> git diff
 <span class="out">@@ -1,3 +1,3 @@
 -# Treino de Git
-+# Treino de Git — versão nova
++# Treino de Git 2
  
- Pasta para praticar o histórico.</span>
-<span class="pr">$</span> git log --oneline
+ Pasta para praticar o Git.</span>
+<span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> git log --oneline
 <span class="out">7ef98be (HEAD -&gt; main) Muda o título do README (treino)
 5f6c1eb Cria README e lista do que não guardar</span></code></pre>
 <p class="tela-nota">No <span class="gterm" data-gl="diff" data-def="Comparação que mostra, linha por linha, o que mudou num arquivo.">diff</span> (cabeçalho cortado), a linha com − é o título que saiu e a com +, o que entrou; linhas sem sinal não mudaram. No log, a linha do topo, com HEAD, é a mudança de título: é ela que o revert vai desfazer. Os códigos serão outros no seu computador.</p></div>
@@ -77,19 +77,19 @@
   <h2><span class="n">4</span>Desfaça e confira o arquivo aberto</h2>
   <p><code>git revert --no-edit HEAD</code> desfaz a última versão e usa uma mensagem automática; sem ele, o Git abriria um editor de texto para você escrever a mensagem. Depois, abra o README e leia o título. A resposta do <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> diz que algo foi feito; o arquivo diz se ficou certo.</p>
   <p data-ex="coordenadora">Denise rodou o revert no relatório e abriu o arquivo. O título antigo estava de volta, e o log tinha uma linha nova começando com "Revert".</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> git revert --no-edit HEAD
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> git revert --no-edit HEAD
 <span class="out">[main b11f583] Revert "Muda o título do README (treino)"
  1 file changed, 1 insertion(+), 1 deletion(-)</span>
-<span class="pr">$</span> cat README.md
+<span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> type README.md
 <span class="out"># Treino de Git
 
-Pasta para praticar o histórico.</span>
-<span class="pr">$</span> git log --oneline
+Pasta para praticar o Git.</span>
+<span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> git log --oneline
 <span class="out">b11f583 (HEAD -&gt; main) Revert "Muda o título do README (treino)"
 7ef98be Muda o título do README (treino)
 5f6c1eb Cria README e lista do que não guardar</span></code></pre>
-<p class="tela-nota"><code>cat</code> mostra o arquivo: o título voltou. O log tem três linhas: a original, a mudança e a errata.</p></div></figure>
+<p class="tela-nota"><code>type</code> mostra o arquivo: o título voltou. O log tem três linhas: a original, a mudança e a errata.</p></div></figure>
   <details class="mais"><summary>E se a mudança ainda não estava salva?</summary>
   <p>Aí o comando é outro: o <span class="gterm" data-gl="restore" data-def="Comando do Git que descarta as mudanças ainda não salvas de um arquivo, voltando ao que estava na última versão. O que foi descartado não volta.">restore</span>, com o nome do arquivo, descarta as mudanças ainda não separadas com <code>git add</code>. O que você tinha escrito se perde, sem volta. Use só quando tiver certeza, e nunca na pasta inteira. Você também vai achar na internet o <code>reset --hard</code> como solução para tudo: ele apaga mudanças sem volta, e este curso não o usa.</p>
   </details>
@@ -101,26 +101,26 @@ Pasta para praticar o histórico.</span>
   <p class="pgoal">Pronto quando o README mostrar de novo o título que tinha antes do bloco 1 e o log tiver três linhas, a do topo começando com "Revert". Cerca de 10 minutos, no computador.</p>
   <p class="psafe">Tudo acontece na pasta treino-git e nada sai do computador. O revert não apaga nenhuma versão. Se o log do bloco 1 não mostrar a mudança de treino no topo, não rode o bloco 2. Se o revert responder “Your local changes … would be overwritten”, havia uma mudança sem salvar no README e ele não fez nada: rode “git status” e peça ajuda antes de descartar qualquer coisa.</p>
   <p><b>Antes</b> · confira que não há nada sem salvar (a resposta deve terminar em <code>working tree clean</code>):</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/treino-git
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\treino-git
 git status</pre></div>
-  <p><b>Bloco 1</b> · faça a mudança e salve. A primeira linha reescreve o README inteiro, com o título novo (cada <code>\n</code> é uma quebra de linha):</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">printf '# Treino de Git — versão nova\n\nPasta para praticar o histórico.\n' &gt; README.md
+  <p><b>Bloco 1</b> · faça a mudança e salve. A primeira linha reescreve o README inteiro, com o título novo (cada <code>&amp;</code> começa uma linha):</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">(echo # Treino de Git 2&amp; echo.&amp; echo Pasta para praticar o Git.)&gt; README.md
 git diff
 git add README.md
 git commit -m "Muda o título do README (treino)"
 git log --oneline</pre></div>
   <p><b>Bloco 2</b> · só depois de conferir o log:</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">git revert --no-edit HEAD
-cat README.md
+type README.md
 git log --oneline</pre></div>
   <details class="mais"><summary>Não fez as aulas anteriores do módulo? Rode isto antes</summary>
-    <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir -p ~/projetos/treino-git
-cd ~/projetos/treino-git
+    <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir %USERPROFILE%\projetos\treino-git
+cd %USERPROFILE%\projetos\treino-git
 git init -b main
 git config user.name "Seu Nome"
 git config user.email "seu-email@exemplo.com"
-printf '# Treino de Git\n\nPasta para praticar o histórico.\n' &gt; README.md
-printf 'notas-privadas.txt\n' &gt; .gitignore
+(echo # Treino de Git&amp; echo.&amp; echo Pasta para praticar o Git.)&gt; README.md
+echo notas-privadas.txt&gt; .gitignore
 git add README.md .gitignore
 git commit -m "Cria README e lista do que não guardar"</pre></div>
   </details>

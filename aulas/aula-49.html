@@ -19,47 +19,50 @@
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">1</span>A chave fica com você; o cadeado vai para o GitHub</h2>
   <p>Pense num cadeado com a sua chave. Você pode entregar cadeados a quem quiser, e só a sua chave abre. No <span class="gterm" data-gl="ssh" data-def="Forma segura de abrir o terminal de outro computador pela internet.">SSH</span> é igual. A <span class="gterm" data-gl="chave-publica" data-def="Metade pública do par de chaves do SSH. Fica cadastrada no GitHub e na VPS; a outra metade, a chave privada, fica só no seu computador e nunca é colada em lugar nenhum.">chave pública</span> é o cadeado. A <span class="gterm" data-gl="chave-privada" data-def="Metade secreta do par de chaves do SSH. Fica só no seu computador; quem tiver esse arquivo entra como você.">chave privada</span> é a chave do chaveiro.</p>
-  <p>Um comando no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> cria as duas. Ele faz três perguntas: onde guardar, uma senha extra e a repetição dela. Aperte Enter nas três; sem senha extra está bem para treino. Depois, abra a pasta onde as chaves ficaram.</p>
+  <p>Um comando no <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span> cria as duas; o ssh-keygen já vem no Windows 10 e 11. Ele faz três perguntas: onde guardar, uma senha extra e a repetição dela. Aperte Enter nas três; sem senha extra está bem para treino. Depois, abra a pasta onde as chaves ficaram.</p>
   <p data-ex="professora">Lúcia criou a chave no notebook da escola e abriu a pasta. Viu os dois arquivos lado a lado e escreveu num papel qual deles nunca sai dali.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> ssh-keygen -t ed25519 -C "lucia@exemplo.com"
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\lucia&gt;</span> ssh-keygen -t ed25519 -C "lucia@exemplo.com"
 <span class="out">Generating public/private ed25519 key pair.
-Enter file in which to save the key (/home/lucia/.ssh/id_ed25519):
+Enter file in which to save the key (C:\Users\lucia/.ssh/id_ed25519):
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
-Your public key has been saved in /home/lucia/.ssh/id_ed25519.pub</span>
-<span class="pr">$</span> cd ~/.ssh
-<span class="pr">$</span> ls
-<span class="out">id_ed25519  id_ed25519.pub</span>
-<span class="pr">$</span> explorer.exe .</code></pre>
-<p class="tela-nota">id_ed25519 é a chave privada. id_ed25519.pub, com .pub no fim, é a pública. O explorer.exe . abre a pasta na janela de arquivos do Windows; no Mac, use open .</p></div>
+Your public key has been saved in C:\Users\lucia/.ssh/id_ed25519.pub</span>
+<span class="pr">C:\Users\lucia&gt;</span> cd %USERPROFILE%\.ssh
+<span class="pr">C:\Users\lucia\.ssh&gt;</span> dir /b
+<span class="out">id_ed25519
+id_ed25519.pub</span>
+<span class="pr">C:\Users\lucia\.ssh&gt;</span> explorer .</code></pre>
+<p class="tela-nota">id_ed25519 é a chave privada. id_ed25519.pub, com .pub no fim, é a pública. O explorer . abre a pasta no Explorador de Arquivos. O caminho mistura \ e /: é o jeito do ssh-keygen no Windows, e funciona.</p></div>
   <figcaption>Os dois arquivos ficam na pasta .ssh, dentro da sua pasta pessoal. Só o que termina em .pub sai do computador.</figcaption></figure>
 </section>
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">2</span>O gh entra na conta e leva o cadeado</h2>
-  <p>O <span class="gterm" data-gl="gh" data-def="Programa oficial do GitHub para o terminal. Entra na sua conta, cria repositórios e liga a página, sem abrir o site.">gh</span> é o GitHub dentro do terminal. Primeiro você o coloca no computador. O comando pede a senha que você criou no terminal Linux do módulo 3. Enquanto você digita, nada aparece na tela, e é assim mesmo.</p>
+  <p>O <span class="gterm" data-gl="gh" data-def="Programa oficial do GitHub para o terminal. Entra na sua conta, cria repositórios e liga a página, sem abrir o site.">gh</span> é o GitHub dentro do terminal. Primeiro você o coloca no computador com o <span class="gterm" data-gl="winget" data-def="Instalador de programas que já vem no Windows 10 e 11. Você digita no cmd o nome oficial do programa e ele baixa e instala.">winget</span>. Depois, feche e abra o cmd, para a janela nova encontrar o gh. Se o Windows perguntar se o programa pode fazer alterações, clique em Sim.</p>
   <p>Depois, o gh auth login faz o <span class="gterm" data-gl="login" data-def="Entrar numa ferramenta com a sua conta, como a conta do ChatGPT. Os direitos e limites vêm do plano dessa conta.">login</span> na conta. Ele faz cinco perguntas em inglês. Cada pergunta mostra uma lista; o sinal &gt; marca a opção da vez. Escolha com as setas ↑↓ e confirme com Enter: GitHub.com, SSH, a sua chave .pub, Enter no título e o navegador. O terminal mostra um código de 8 caracteres, como ABCD-1234: aperte Enter e digite esse código no navegador que abrir. Se ele não abrir sozinho, abra github.com/login/device no navegador. Depois do código, o GitHub pede para autorizar: clique no botão verde Authorize. Ele só dá acesso ao gh, do seu computador.</p>
   <p data-ex="coordenadora">Denise fez a entrada com a conta da coordenação. Quando o gh ofereceu a chave, ela conferiu o nome: terminava em .pub. Só então confirmou.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> sudo apt update &amp;&amp; sudo apt install -y gh
-<span class="pr">$</span> gh auth login
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\denise&gt;</span> winget install -e --id GitHub.cli
+<span class="out">Instalado com êxito</span>
+<span class="pr">C:\Users\denise&gt;</span> <span class="out">rem fechou o cmd e abriu outro</span>
+<span class="pr">C:\Users\denise&gt;</span> gh auth login
 <span class="out">? Where do you use GitHub?  [Use arrows to move, type to filter]
 &gt; GitHub.com
   Other
 ? Where do you use GitHub? GitHub.com
 ? What is your preferred protocol for Git operations on this host? SSH
-? Upload your SSH public key to your GitHub account? /home/denise/.ssh/id_ed25519.pub
+? Upload your SSH public key to your GitHub account? C:\Users\denise\.ssh\id_ed25519.pub
 ? Title for your SSH key: (GitHub CLI)
 ? How would you like to authenticate GitHub CLI? Login with a web browser
 ! First copy your one-time code: ABCD-1234
 ✓ Logged in as denise-coordenacao</span>
-<span class="pr">$</span> ssh -T git@github.com
+<span class="pr">C:\Users\denise&gt;</span> ssh -T git@github.com
 <span class="out">Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 Hi denise-coordenacao! You've successfully authenticated, but GitHub does not provide shell access.</span></code></pre>
 <p class="tela-nota">Na primeira vez, o teste pergunta se você confia: digite yes e Enter. O "Hi" com o seu usuário é a prova de que o cadeado chegou. A frase em inglês depois da vírgula é normal: o GitHub não abre terminal para ninguém.</p></div>
   <figcaption>Quatro respostas e um código no navegador. Depois disso, o terminal envia para o GitHub sem pedir senha.</figcaption></figure>
-  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Apareceu "Permission denied (publickey)" no teste? O cadeado não foi entregue. Rode gh auth login de novo e escolha SSH e a chave .pub. No Mac, siga o caminho da página oficial do gh, que o site do GitHub indica.</p></div>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Apareceu "Permission denied (publickey)" no teste? O cadeado não foi entregue. Rode gh auth login de novo e escolha SSH e a chave .pub. O gh "não é reconhecido"? Feche e abra o cmd; o winget só vale na janela nova.</p></div>
 </section>
 
 <section class="step" data-kind="fundamento">
@@ -80,8 +83,8 @@ Hi denise-coordenacao! You've successfully authenticated, but GitHub does not pr
   <p>O <span class="gterm" data-gl="github-pages" data-def="Serviço grátis do GitHub que publica as páginas de um repositório público num endereço seu, terminado em github.io.">GitHub Pages</span> publica a página de um repositório público. Dentro da pasta, um comando liga o serviço. Em alguns minutos o endereço abre em qualquer navegador.</p>
   <p>Cole o comando igual, sem trocar nada: o gh preenche sozinho o {owner} e o {repo}. O endereço segue sempre o mesmo molde: o seu usuário, github.io e o nome do repositório.</p>
   <p data-ex="coordenadora">Denise publicou a página de treino da coordenação e mandou o endereço para si mesma no WhatsApp. Abriu no ônibus, antes da reunião de pais.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · dentro da pasta minha-pagina</span></div>
-<pre><code><span class="pr">$</span> gh api repos/{owner}/{repo}/pages -X POST -f "source[branch]=main" -f "source[path]=/"
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando · dentro da pasta minha-pagina</span></div>
+<pre><code><span class="pr">C:\Users\lucia\projetos\minha-pagina&gt;</span> gh api repos/{owner}/{repo}/pages -X POST -f "source[branch]=main" -f "source[path]=/"
 <span class="out">  "status": null,
   "html_url": "https://denise-coordenacao.github.io/minha-pagina/",</span></code></pre>
 <p class="tela-nota">A resposta é mais longa; procure a linha html_url: é o endereço da página. A palavra null aqui não é erro.</p></div>
@@ -93,22 +96,22 @@ Hi denise-coordenacao! You've successfully authenticated, but GitHub does not pr
   <h3 class="ph">Publique uma página de treino</h3>
   <p class="pgoal">Pronto quando o endereço terminado em github.io/minha-pagina abrir no celular com o texto grande da sua página: Minha página de treino. Cerca de 10 minutos, no computador, com a sua conta do GitHub (crie grátis em github.com, se não tiver).</p>
   <p class="psafe">A página tem uma linha de texto, sem nenhum dado seu além do nome que você escolher. Para tirar do ar depois, apague o repositório nas configurações dele no GitHub. Não configurou nome e e-mail no <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span> (aula 3 deste módulo)? Rode antes: git config --global user.name "Seu Nome" e git config --global user.email "seu@email.com". Deu erro? Pare no comando que falhou e leia a primeira linha da resposta.</p>
-  <p><b>Bloco 1</b> · chave e conta, uma vez por computador. Um comando por vez: cada um faz perguntas, responda antes de colar o próximo. No primeiro, troque &lt;seu e-mail&gt;, com os sinais &lt; e &gt;, pelo seu e-mail.</p>
+  <p><b>Bloco 1</b> · chave e conta, uma vez por computador. Um comando por vez: cada um faz perguntas, responda antes de colar o próximo. Depois do winget, feche e abra o cmd. No primeiro, troque &lt;seu e-mail&gt;, com os sinais &lt; e &gt;, pelo seu e-mail.</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">ssh-keygen -t ed25519 -C "&lt;seu e-mail&gt;"</pre></div>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">sudo apt update &amp;&amp; sudo apt install -y gh</pre></div>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">winget install -e --id GitHub.cli</pre></div>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">gh auth login</pre></div>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">ssh -T git@github.com</pre></div>
-  <p><b>Bloco 2</b> · a página de treino. Este pode ir inteiro: nenhum comando faz pergunta. Se o terminal avisar que o texto tem várias linhas, escolha colar mesmo assim (Paste anyway); é normal.</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir -p ~/projetos/minha-pagina
-cd ~/projetos/minha-pagina
-printf '&lt;h1&gt;Minha página de treino&lt;/h1&gt;\n' &gt; index.html
+  <p><b>Bloco 2</b> · a página de treino. Este pode ir inteiro: nenhum comando faz pergunta. Se o terminal avisar que o texto tem várias linhas, escolha colar mesmo assim; é normal. O curl baixa do site do curso uma página pronta, com o título Minha página de treino.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir %USERPROFILE%\projetos\minha-pagina
+cd %USERPROFILE%\projetos\minha-pagina
+curl -fsSL -o index.html https://inematds.github.io/oswork-v62/materiais/treino/index.html
 git init -b main
 git add index.html
 git commit -m "Primeira página"
 gh repo create minha-pagina --public --source=. --push
 gh api repos/{owner}/{repo}/pages -X POST -f "source[branch]=main" -f "source[path]=/"</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Cole os quatro comandos do bloco 1, um de cada vez. Enter nas três perguntas da chave; a senha não aparece ao digitar; no gh, setas e Enter, e o código de 8 caracteres vai no navegador (ou em github.com/login/device); no teste, yes.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole os quatro comandos do bloco 1, um de cada vez. Enter nas três perguntas da chave; depois do winget, feche e abra o cmd; no gh, setas e Enter, e o código de 8 caracteres vai no navegador (ou em github.com/login/device); no teste, yes.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Confira o teste: a resposta começa com Hi e o seu usuário.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Cole o bloco 2 e copie o endereço da linha html_url.</span></label></li>
     <li><label><input type="checkbox" data-ptask="4"> <span>Depois de alguns minutos, abra o endereço no celular e veja o texto grande: Minha página de treino.</span></label></li>
@@ -129,7 +132,7 @@ gh api repos/{owner}/{repo}/pages -X POST -f "source[branch]=main" -f "source[pa
   <div class="next-action">
     <p class="nak">Seu próximo passo</p>
     <p class="na-win">Você já envia para a sua conta sem senha e sabe pôr uma página no ar com um endereço seu.</p>
-    <p class="na-action">Hoje, troque o título: na pasta minha-pagina, rode de novo o printf com outro texto entre &lt;h1&gt; e &lt;/h1&gt;. Depois, <code>git add index.html</code>, <code>git commit -m "Troca o título"</code> e <code>git push</code>. Confira no celular em alguns minutos.</p>
+    <p class="na-action">Hoje, troque o título: na pasta minha-pagina, rode <code>notepad index.html</code>, mude o texto entre &lt;h1&gt; e &lt;/h1&gt; e grave com Ctrl+S. Depois, <code>git add index.html</code>, <code>git commit -m "Troca o título"</code> e <code>git push</code>. Confira no celular em alguns minutos.</p>
     <p class="na-hook">No módulo 7: o <span class="gterm" data-gl="telegram" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7.">Telegram</span> vira tela de trabalho, com um <span class="gterm" data-gl="bot" data-def="Programa que conversa por um aplicativo de mensagens e responde sozinho, seguindo as regras que você define.">bot</span> que responde sem executar mensagens. No módulo 8, a mesma chave SSH abre a porta da <span class="gterm" data-gl="vps" data-def="Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar.">VPS</span>.</p>
   </div>
 </div>
