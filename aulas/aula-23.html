@@ -102,26 +102,26 @@
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Ponha o .gitignore no projeto de treino</h3>
-  <p class="pgoal">Pronto quando o cat -n mostrar as linhas .env e !.env.example e o ls -a listar o .gitignore. Cerca de 8 minutos, no computador, no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
-  <p class="psafe">O modelo é um arquivo de texto do kit do curso e não guarda nada por si: só vira regra quando o Git entrar, no módulo 6. Atenção: a segunda linha substitui um .gitignore que já exista nessa pasta. Não fez a aula 1 deste módulo? Rode antes: mkdir -p ~/projetos/meu-primeiro-projeto</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/meu-primeiro-projeto
+  <p class="pgoal">Pronto quando o findstr mostrar as linhas .env e !.env.example, numeradas, e o dir listar o .gitignore. Cerca de 8 minutos, no computador, no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
+  <p class="psafe">O modelo é um arquivo de texto do kit do curso e não guarda nada por si: só vira regra quando o Git entrar, no módulo 6. Atenção: a segunda linha substitui um .gitignore que já exista nessa pasta. Não fez a aula 1 deste módulo? Rode antes: mkdir %USERPROFILE%\projetos\meu-primeiro-projeto</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\meu-primeiro-projeto
 curl -fsSL https://inematds.github.io/oswork/materiais/gitignore.txt -o .gitignore
-cat -n .gitignore
-ls -a</pre></div>
+findstr /n "^" .gitignore
+dir /b</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Cole as quatro linhas e aperte Enter. A segunda usa o curl, que baixa um arquivo da internet: ele traz o modelo do kit e o -o grava com o nome .gitignore. O cat -n mostra o arquivo com o número de cada linha.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Na resposta do cat -n, anote no papel o número da linha que deixa o .env de fora e o da linha que mantém o .env.example.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="3"> <span>No ls -a, confira que o .gitignore aparece junto do .env.example e do README.md.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole as quatro linhas no <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span> e aperte Enter. A segunda usa o curl, que baixa um arquivo da internet: ele traz o modelo do kit e o -o grava com o nome .gitignore. O findstr /n "^" mostra o arquivo com o número de cada linha; copie pelo botão, por causa das aspas.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Na resposta do findstr, anote no papel o número da linha que deixa o .env de fora e o da linha que mantém o .env.example.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>No dir /b, confira que o .gitignore aparece junto do .env.example e do README.md.</span></label></li>
   </ol>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>O que você deve ver</span></div>
-<pre><code><span class="out">     1	.env
-     2	.env.*
-     3	!.env.example
-     4	__pycache__/
-     5	*.pyc
-     6	node_modules/
-     7	.verificacao/</span></code></pre>
-<p class="tela-nota">Essa é a resposta do cat -n. As linhas 4 a 7 são temporários de programas; ficam como estão. Linha 1 deixa o .env de fora; linha 3 mantém o .env.example.</p></div></figure>
+<pre><code><span class="out">1:.env
+2:.env.*
+3:!.env.example
+4:__pycache__/
+5:*.pyc
+6:node_modules/
+7:.verificacao/</span></code></pre>
+<p class="tela-nota">Essa é a resposta do findstr: o número da linha, dois-pontos e o texto. As linhas 4 a 7 são temporários de programas; ficam como estão. Linha 1 deixa o .env de fora; linha 3 mantém o .env.example.</p></div></figure>
   <p class="pdone">Você acabou de pôr a lista do que nunca entra no histórico antes da primeira versão existir.</p>
 </section>
 

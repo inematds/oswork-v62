@@ -33,18 +33,19 @@
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">2</span>O nome termina em .md e abre em qualquer editor</h2>
   <p>Um arquivo Markdown é um arquivo de texto cujo nome termina em .md, como README.md. Ele abre no editor de texto do computador e também no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
-  <p>No terminal, o <span class="gterm" data-gl="nano" data-def="Editor de texto que abre dentro do terminal. Ctrl+O grava o arquivo e Ctrl+X sai.">nano</span> abre o arquivo para editar ali mesmo. Depois, o comando cat mostra o conteúdo na tela, para você conferir.</p>
-  <p data-ex="coordenadora">Denise abriu o README do projeto do conselho com o nano. Trocou uma linha, gravou com Ctrl+O, confirmou o nome com Enter e saiu com Ctrl+X. Depois conferiu com cat.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · dentro do nano</span></div>
-<pre><code><span class="out">  GNU nano                    README.md
+  <p>No <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>, o comando <span class="gterm" data-gl="notepad" data-def="O Bloco de Notas do Windows. No cmd, notepad seguido do nome do arquivo abre o arquivo nele; Ctrl+S grava.">notepad</span> seguido do nome abre o arquivo no Bloco de Notas, o editor que já vem no Windows. Depois, o comando type mostra o conteúdo na tela, para você conferir.</p>
+  <p data-ex="coordenadora">Denise abriu o README do projeto do conselho com notepad README.md. Trocou uma linha, gravou com Ctrl+S e fechou a janela. Depois conferiu com type.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>README.md - Bloco de Notas</span></div>
+<pre><code><span class="out">Arquivo   Editar   Exibir
+
 # Meu primeiro projeto OSWork
 
 ## Propósito
 Produzir relatórios de treino a partir de dados fictícios.
 
-^G Help    ^O Write Out    ^W Where Is    ^X Exit</span></code></pre>
-<p class="tela-nota">É assim que o nano aparece: o texto no meio e os atalhos no rodapé, em inglês. O ^ quer dizer Ctrl. Write Out é gravar; Exit é sair. Depois do Ctrl+O, ele mostra o nome do arquivo embaixo: aperte Enter.</p></div>
-  <figcaption>Não há menu de mouse: você anda com as setas e digita direto. Ao sair, cat README.md mostra o que ficou gravado.</figcaption></figure>
+Ln 1, Col 1        UTF-8</span></code></pre>
+<p class="tela-nota">É assim que o Bloco de Notas aparece: o menu no alto, o texto no meio e, no rodapé, a linha onde está o cursor e o UTF-8, o jeito de gravar que guarda os acentos. Ctrl+S grava; depois feche a janela.</p></div>
+  <figcaption>Você edita com o mouse e o teclado, como qualquer texto. Ao fechar, type README.md mostra no cmd o que ficou gravado.</figcaption></figure>
 </section>
 
 <section class="step" data-kind="ferramenta">
@@ -91,24 +92,24 @@ Produzir relatórios de treino a partir de dados fictícios.
       <p class="saldo"><b>Saldo:</b> a explicação passa a morar na pasta, e não na memória de alguém.</p>
     </div>
   </figure>
-  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O nano estranha na primeira vez: não há menu com mouse. Prefere outro caminho? Na pasta do projeto, digite open -e README.md no Mac, ou explorer.exe . no Windows, dentro do terminal Linux do módulo 3, e abra o README.md com o Bloco de Notas. Ao salvar, em Tipo, escolha Todos os arquivos, para ele não virar README.md.txt.</p></div>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O Bloco de Notas perguntou se quer criar um arquivo novo? O curl não baixou o modelo: confira se você está na pasta do projeto, com cd sozinho, e rode a linha do curl de novo. Usou o menu Arquivo › Salvar como? Em Tipo, escolha Todos os arquivos, para ele não virar README.md.txt.</p></div>
 </section>
 
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Escreva o README do projeto de treino</h3>
-  <p class="pgoal">Pronto quando o cat mostrar os títulos com # e você tiver lido cada seção e deixado nela texto seu ou "a definir". Cerca de 10 minutos, no computador.</p>
-  <p class="psafe">O modelo é um arquivo de texto do kit do curso, sem dado de ninguém. Atenção: a segunda linha substitui um README.md que já exista nessa pasta. Já escreveu um? Pule essa linha. Não fez a aula anterior? Rode antes: mkdir -p ~/projetos/meu-primeiro-projeto</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/meu-primeiro-projeto
+  <p class="pgoal">Pronto quando o type mostrar os títulos com # e você tiver lido cada seção e deixado nela texto seu ou "a definir". Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">O modelo é um arquivo de texto do kit do curso, sem dado de ninguém. Atenção: a segunda linha substitui um README.md que já exista nessa pasta. Já escreveu um? Pule essa linha. Não fez a aula anterior? Rode antes: mkdir %USERPROFILE%\projetos\meu-primeiro-projeto</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\meu-primeiro-projeto
 curl -fsSL https://inematds.github.io/oswork/materiais/README-projeto.md -o README.md
-nano README.md</pre></div>
+notepad README.md</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Cole as três linhas. A primeira entra na pasta. A segunda usa o curl, que baixa um arquivo da internet: ele traz o modelo do kit e o -o grava com o nome README.md. A terceira abre o arquivo no nano.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Troque cada texto do modelo por algo verdadeiro do seu projeto de treino, ou por "a definir". Em Organização, descreva as pastas entradas e saidas. Mantenha os # e os hífens. Grave com Ctrl+O e Enter; saia com Ctrl+X.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="3"> <span>Digite cat README.md e confira: os títulos continuam com #, e cada seção tem texto seu ou "a definir".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole as três linhas. A primeira entra na pasta. A segunda usa o curl, que baixa um arquivo da internet: ele traz o modelo do kit e o -o grava com o nome README.md. A terceira abre o arquivo no Bloco de Notas.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Troque cada texto do modelo por algo verdadeiro do seu projeto de treino, ou por "a definir". Em Organização, descreva as pastas entradas e saidas. Mantenha os # e os hífens. Grave com Ctrl+S e feche a janela.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Digite type README.md no cmd e confira: os títulos continuam com #, e cada seção tem texto seu ou "a definir".</span></label></li>
   </ol>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>O que você deve ver (começo)</span></div>
-<pre><code><span class="pr">$</span> cat README.md
+<pre><code><span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> type README.md
 <span class="out"># Meu primeiro projeto OSWork
 
 ## Propósito
@@ -116,7 +117,7 @@ A definir.
 
 ## Leia primeiro
 A definir.</span></code></pre>
-<p class="tela-nota">O título pode ficar como no modelo. O texto das seções é o seu; confira os títulos com # e nenhuma seção vazia. Se o terminal responder que não conhece o nano, use o Bloco de Notas, como diz o quadro "Se travou aqui", no fim do passo 4 da aula.</p></div></figure>
+<p class="tela-nota">O título pode ficar como no modelo. O texto das seções é o seu; confira os títulos com # e nenhuma seção vazia. Acentos trocados no cmd são só a tela: no Bloco de Notas eles aparecem certos.</p></div></figure>
   <p class="pdone">Você acabou de escrever, em Markdown, a explicação do projeto que fica na pasta, e não numa conversa.</p>
 </section>
 
@@ -126,7 +127,7 @@ A definir.</span></code></pre>
     <h3>Markdown e README</h3>
     <ol>
       <li><span><b># ## -</b>título, subtítulo e item de lista. Nada mais é obrigatório.</span></li>
-      <li><span><b>.md</b>continua sendo texto; abre no nano ou em qualquer editor.</span></li>
+      <li><span><b>.md</b>continua sendo texto; abre no Bloco de Notas ou em qualquer editor.</span></li>
       <li><span><b>README</b>propósito e verificação; o que falta vira "a definir".</span></li>
     </ol>
   </div>
@@ -151,7 +152,7 @@ A definir.</span></code></pre>
 [
   {"front":"Você abriu um arquivo .md sem nenhum programa especial e viu linhas começando com # e com hífen. Está com defeito?","back":"Não. É o próprio Markdown: texto com marcas. O # indica título e o hífen, item de lista."},
   {"front":"Um campo do README você ainda não sabe preencher. Deixa o texto do modelo ou escreve outra coisa?","back":"Escreve \"a definir\". Texto do modelo que ninguém conferiu engana quem lê depois."},
-  {"front":"Você gravou o README no nano. Como confere que ficou certo sem abrir o editor de novo?","back":"Com cat README.md, que mostra o conteúdo gravado na tela."}
+  {"front":"Você gravou o README no Bloco de Notas. Como confere que ficou certo sem abrir o editor de novo?","back":"Com type README.md no cmd, que mostra o conteúdo gravado na tela."}
 ]
 </script>
 </section>

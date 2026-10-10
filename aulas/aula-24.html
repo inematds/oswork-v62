@@ -45,7 +45,7 @@
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">2</span>O Leia primeiro aponta três caminhos, na ordem</h2>
-  <p>No README, a seção Leia primeiro lista os arquivos que qualquer tarefa do projeto deve abrir antes. Três <span class="gterm" data-gl="caminho" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config.">caminhos</span> bastam.</p>
+  <p>No README, a seção Leia primeiro lista os arquivos que qualquer tarefa do projeto deve abrir antes. Três <span class="gterm" data-gl="caminho" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra invertida, como C:\Users\denise\projetos\config.">caminhos</span> bastam.</p>
   <p>Escreva cada caminho a partir da pasta do projeto. O ## faz subtítulo, como na aula 2 deste módulo. Leia ../ como "sobe uma pasta": de meu-primeiro-projeto você sobe para projetos e, de lá, entra em config.</p>
   <p data-ex="professora">No projeto da feira de ciências, Lúcia pôs o regulamento da feira em segundo lugar. No seu projeto de treino, use os três caminhos do quadro abaixo.</p>
   <figure class="largo">
@@ -85,34 +85,38 @@
   <p>Ao começar uma tarefa, peça a leitura do README e da decisão que importa. Não carregue listas de contatos nem senhas só porque estão na mesma pasta.</p>
   <p>Revise de tempos em tempos. Primeiro confira se cada caminho existe; depois abra o arquivo e veja se ainda descreve a situação de hoje.</p>
   <p data-ex="coordenadora">Denise pôs na agenda da coordenação: toda primeira segunda do mês, dez minutos para revisar o Leia primeiro do projeto do conselho.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> ls AGENTS.md ../config/decisoes.md ../config/memoria.md
-<span class="out">AGENTS.md  ../config/decisoes.md  ../config/memoria.md</span></code></pre>
-<p class="tela-nota">Os três caminhos existem. Se um faltasse, o ls avisaria com "No such file or directory", e o Leia primeiro estaria errado.</p></div>
-  <figcaption>O ls confere se o caminho existe. Se está em dia, só abrindo o arquivo.</figcaption></figure>
-  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O ls respondeu "No such file or directory"? Confira o nome letra por letra, com ponto e barra. Continuou? O arquivo não existe ainda: a prática diz em qual aula ele é criado.</p></div>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> dir /b AGENTS.md ..\config\decisoes.md ..\config\memoria.md
+<span class="out">AGENTS.md
+decisoes.md
+memoria.md</span></code></pre>
+<p class="tela-nota">Os três caminhos existem: o dir /b responde só o nome de cada um. Se um faltasse, ele avisaria "Arquivo não encontrado", e o Leia primeiro estaria errado.</p></div>
+  <figcaption>O dir /b confere se o caminho existe. Se está em dia, só abrindo o arquivo.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O dir respondeu "Arquivo não encontrado"? Confira o nome letra por letra, com os pontos e a barra invertida. Continuou? O arquivo não existe ainda: a prática diz em qual aula ele é criado.</p></div>
 </section>
 
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
   <h3 class="ph">Escreva e confira o Leia primeiro</h3>
-  <p class="pgoal">Pronto quando o ls listar os três caminhos sem erro, o README tiver a seção Leia primeiro e os dois arquivos de config tiverem a data de hoje. Cerca de 10 minutos, no computador, no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
-  <p class="psafe">Os arquivos são do kit do curso, com dados fictícios. Nada é substituído: a segunda linha só baixa o AGENTS.md do kit se a pasta ainda não tiver um. O último ls acusou "No such file or directory"? Volte à aula que cria o que falta: README na aula 2 deste módulo, config na aula 3.</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/meu-primeiro-projeto
-ls AGENTS.md || curl -fsSL https://inematds.github.io/oswork/materiais/AGENTS-projeto.md -o AGENTS.md
-ls AGENTS.md ../config/decisoes.md ../config/memoria.md
-nano README.md</pre></div>
+  <p class="pgoal">Pronto quando o dir /b listar os três caminhos sem erro, o README tiver a seção Leia primeiro e os dois arquivos de config tiverem a data de hoje. Cerca de 10 minutos, no computador, no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
+  <p class="psafe">Os arquivos são do kit do curso, com dados fictícios. Nada é substituído: a segunda linha só baixa o AGENTS.md do kit se a pasta ainda não tiver um. O último dir acusou "Arquivo não encontrado"? Volte à aula que cria o que falta: README na aula 2 deste módulo, config na aula 3.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\meu-primeiro-projeto
+dir /b AGENTS.md || curl -fsSL https://inematds.github.io/oswork/materiais/AGENTS-projeto.md -o AGENTS.md
+dir /b AGENTS.md ..\config\decisoes.md ..\config\memoria.md
+notepad README.md</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Cole as quatro linhas. A segunda procura o AGENTS.md; o || quer dizer "só se o anterior falhar", então o curl baixa o do kit apenas quando ele não existe. Por isso, na primeira vez, essa linha mostra "No such file or directory": é esperado. A terceira confere os três caminhos; só um aviso na resposta dela indica problema. A quarta abre o README no nano.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole as quatro linhas no <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>. A segunda procura o AGENTS.md; o || quer dizer "só se o anterior falhar", então o curl baixa o do kit apenas quando ele não existe. Por isso, na primeira vez, essa linha mostra "Arquivo não encontrado": é esperado. A terceira confere os três caminhos; só um aviso na resposta dela indica problema. A quarta abre o README no Bloco de Notas.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Procure a linha ## Leia primeiro. Se o seu README veio do kit, na aula 2 deste módulo, ela já existe. Se não existe, desça com a seta para baixo até o fim do arquivo e digite ## Leia primeiro. Apague o que houver embaixo dela até o próximo ## (Ctrl+K apaga a linha inteira) e escreva, uma em cada linha: 1. AGENTS.md, depois 2. ../config/decisoes.md, depois 3. ../config/memoria.md. Grave com Ctrl+O e Enter; saia com Ctrl+X.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="3"> <span>Digite nano ../config/memoria.md. Na linha "Revisado em", troque "preencha a data" pela data de hoje, como 25/09/2026. Grave e saia. Não há essa linha? Escreva no topo: Revisado em: e a data.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="4"> <span>Digite nano ../config/decisoes.md. Na tabela, troque "Preencha" pela data de hoje. Grave e saia. Sem data, ninguém sabe se o arquivo está em dia.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Digite <span class="gterm" data-gl="notepad" data-def="O Bloco de Notas do Windows. No cmd, notepad seguido do nome do arquivo abre o arquivo nele; Ctrl+S grava.">notepad</span> ..\config\memoria.md. Na linha "Revisado em", troque "preencha a data" pela data de hoje, como 25/09/2026. Grave com Ctrl+S e feche. Não há essa linha? Escreva no topo: Revisado em: e a data.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>Digite notepad ..\config\decisoes.md. Na tabela, troque "Preencha" pela data de hoje. Grave com Ctrl+S e feche. Sem data, ninguém sabe se o arquivo está em dia.</span></label></li>
   </ol>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>O que você deve ver</span></div>
-<pre><code><span class="pr">$</span> ls AGENTS.md ../config/decisoes.md ../config/memoria.md
-<span class="out">AGENTS.md  ../config/decisoes.md  ../config/memoria.md</span>
-<span class="pr">$</span> nano ../config/memoria.md</code></pre>
-<p class="tela-nota">Três caminhos listados, em qualquer ordem, e nenhum aviso de erro. Depois, o <span class="gterm" data-gl="nano" data-def="Editor de texto que abre dentro do terminal. Ctrl+O grava o arquivo e Ctrl+X sai.">nano</span> abre cada arquivo de config para a data.</p></div></figure>
+<pre><code><span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> dir /b AGENTS.md ..\config\decisoes.md ..\config\memoria.md
+<span class="out">AGENTS.md
+decisoes.md
+memoria.md</span>
+<span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> notepad ..\config\memoria.md</code></pre>
+<p class="tela-nota">Três caminhos listados, em qualquer ordem, e nenhum aviso de erro. Depois, o notepad abre cada arquivo de config para a data.</p></div></figure>
   <p class="pdone">Você acabou de dizer, por escrito, o que a IA deve ler primeiro, e de conferir que tudo existe e está em dia.</p>
 </section>
 
@@ -122,7 +126,7 @@ nano README.md</pre></div>
     <h3>Contexto limpo</h3>
     <ol>
       <li><span><b>Aponte</b>a IA lê os arquivos que você nomeia.</span></li>
-      <li><span><b>Leia primeiro</b>três caminhos no README, conferidos com ls.</span></li>
+      <li><span><b>Leia primeiro</b>três caminhos no README, conferidos com dir /b.</span></li>
       <li><span><b>Em dia</b>decisão vencida atrapalha; data de revisão em cada arquivo.</span></li>
     </ol>
   </div>
@@ -137,7 +141,7 @@ nano README.md</pre></div>
 <!--COMP-->
 <details class="complementar">
   <summary>Material complementar · Faça uma limpeza de contexto<small>Texto completo do tópico no OSWork v2 e fechamento do módulo. Não conta no tempo da aula.</small></summary>
-  <section class="comp-sec"><h3>O que é</h3><p>A IA não lê automaticamente todo arquivo Markdown existente no computador. Diga quais documentos consultar e mantenha referências no AGENTS.md quando forem necessárias. Antes de uma tarefa, remova dados irrelevantes da cópia de trabalho e atualize decisões vencidas.</p><h3>Por que aprender</h3><p>Memória útil precisa ser encontrada e estar correta. Um arquivo antigo pode atrapalhar mais que não ter memória se trouxer endereço de serviço ou processo que já mudou.</p><h3>Conceitos-chave</h3><p>Seleção de contexto; data; fonte de verdade; revisão periódica.</p><h4>Na prática</h4><p>Ao iniciar um relatório, peça leitura de README.md e da decisão sobre formato. Não carregue listas de contatos ou credenciais porque estão na mesma pasta.</p><h4>Experimente agora</h4><p>Acrescente ao README uma seção “Leia primeiro” com três caminhos reais. Abra cada <span class="gterm" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config." data-gl="caminho">caminho</span> e confira se descreve a situação atual.</p></section><section class="comp-sec"><h3>Laboratório do módulo: Organize seu segundo cérebro operacional</h3><p>Use arquivos fictícios e uma <span class="gterm" data-def="Pasta só com arquivos fictícios ou cópias, criada para testar a IA sem risco para o material verdadeiro." data-gl="pasta-de-treino">pasta de treino</span>. As práticas com <span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">instalação</span>, <span class="gterm" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7." data-gl="telegram">Telegram</span> ou <span class="gterm" data-def="Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar." data-gl="vps">VPS</span> podem exigir tempo adicional para cadastro e configuração.</p><ol><li>Crie config e meu-primeiro-projeto dentro de projetos, usando gerenciador de arquivos ou <span class="gterm" data-def="Linguagem de comandos do terminal no Linux e no macOS. Os comandos deste curso são escritos para ele." data-gl="bash">Bash</span>.</li><li>Na pasta config, crie memoria.md, falhas.md, dicas.md e decisoes.md a partir do kit.</li><li>No projeto, acrescente README.md, AGENTS.md e <span class="gterm" data-def="Arquivo que lista o que o Git não deve guardar, como senhas e arquivos temporários." data-gl="gitignore">.gitignore</span>.</li><li>Revise com a tabela da aula: cada arquivo tem um papel e nenhum segredo aparece nos documentos.</li></ol><h4>Estrutura de trabalho</h4><p>Leia o bloco antes de usar. Campos como Seu Nome e usuario@ip-da-vps são exemplos para adaptar; comandos administrativos pertencem somente ao seu ambiente de treino.</p><pre><code>~/projetos/
+  <section class="comp-sec"><h3>O que é</h3><p>A IA não lê automaticamente todo arquivo Markdown existente no computador. Diga quais documentos consultar e mantenha referências no AGENTS.md quando forem necessárias. Antes de uma tarefa, remova dados irrelevantes da cópia de trabalho e atualize decisões vencidas.</p><h3>Por que aprender</h3><p>Memória útil precisa ser encontrada e estar correta. Um arquivo antigo pode atrapalhar mais que não ter memória se trouxer endereço de serviço ou processo que já mudou.</p><h3>Conceitos-chave</h3><p>Seleção de contexto; data; fonte de verdade; revisão periódica.</p><h4>Na prática</h4><p>Ao iniciar um relatório, peça leitura de README.md e da decisão sobre formato. Não carregue listas de contatos ou credenciais porque estão na mesma pasta.</p><h4>Experimente agora</h4><p>Acrescente ao README uma seção “Leia primeiro” com três caminhos reais. Abra cada <span class="gterm" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config." data-gl="caminho">caminho</span> e confira se descreve a situação atual.</p></section><section class="comp-sec"><h3>Laboratório do módulo: Organize seu segundo cérebro operacional</h3><p>Use arquivos fictícios e uma <span class="gterm" data-def="Pasta só com arquivos fictícios ou cópias, criada para testar a IA sem risco para o material verdadeiro." data-gl="pasta-de-treino">pasta de treino</span>. As práticas com <span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">instalação</span>, <span class="gterm" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7." data-gl="telegram">Telegram</span> ou <span class="gterm" data-def="Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar." data-gl="vps">VPS</span> podem exigir tempo adicional para cadastro e configuração.</p><ol><li>Crie config e meu-primeiro-projeto dentro de projetos, usando o Explorador de Arquivos ou o cmd.</li><li>Na pasta config, crie memoria.md, falhas.md, dicas.md e decisoes.md a partir do kit.</li><li>No projeto, acrescente README.md, AGENTS.md e <span class="gterm" data-def="Arquivo que lista o que o Git não deve guardar, como senhas e arquivos temporários." data-gl="gitignore">.gitignore</span>.</li><li>Revise com a tabela da aula: cada arquivo tem um papel e nenhum segredo aparece nos documentos.</li></ol><h4>Estrutura de trabalho</h4><p>Leia o bloco antes de usar. Campos como Seu Nome e usuario@ip-da-vps são exemplos para adaptar; comandos administrativos pertencem somente ao seu ambiente de treino.</p><pre><code>%USERPROFILE%/projetos/
 ├── config/
 │   ├── memoria.md
 │   ├── falhas.md
@@ -157,7 +161,7 @@ nano README.md</pre></div>
 <script type="application/json" id="cards-24">
 [
   {"front":"A pasta do projeto tem uma lista de contatos das famílias ao lado do material da tarefa. Você cita a pasta inteira no pedido?","back":"Não. Você nomeia só os arquivos da tarefa; o que não interessa fica fora do pedido."},
-  {"front":"O ls respondeu \"No such file or directory\" para um caminho do Leia primeiro. O que isso diz?","back":"Que o caminho não existe: o nome está errado ou o arquivo não foi criado. O Leia primeiro precisa de correção."},
+  {"front":"O dir respondeu \"Arquivo não encontrado\" para um caminho do Leia primeiro. O que isso diz?","back":"Que o caminho não existe: o nome está errado ou o arquivo não foi criado. O Leia primeiro precisa de correção."},
   {"front":"Todos os caminhos existem. Isso garante que o Leia primeiro está em dia?","back":"Não. Existir não é estar atual: é preciso abrir cada arquivo e ver se descreve a situação de hoje."}
 ]
 </script>

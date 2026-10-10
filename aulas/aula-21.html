@@ -23,7 +23,7 @@
   <p data-ex="coordenadora">Denise procurava por que a reunião de pais tinha mudado para sábado. O motivo estava num caderno de 40 páginas, entre recados e telefones. Levou meia hora para achar.</p>
   <figure class="largo">
     <div class="janela">
-      <div class="tela-top"><i></i><i></i><i></i><span>~/projetos/config</span></div>
+      <div class="tela-top"><i></i><i></i><i></i><span>C:\Users\lucia\projetos\config</span></div>
       <div class="janela-body">
         <div class="item doc"><span class="pin">1</span> memoria.md</div>
         <div class="item doc"><span class="pin">2</span> decisoes.md</div>
@@ -106,21 +106,21 @@
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Monte a pasta config e distribua cinco notas</h3>
-  <p class="pgoal">Pronto quando o ls mostrar os quatro arquivos e você tiver escrito, no papel, o arquivo de cada uma das cinco notas. Cerca de 10 minutos, no computador, no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> do módulo 3.</p>
-  <p class="psafe">Os modelos são arquivos de texto do kit do curso, e as notas são fictícias. Se você já escreveu num desses quatro arquivos, pule a linha dele: o curl grava por cima de um arquivo com o mesmo nome. Uma linha falhou? O curl mostra uma mensagem de erro logo abaixo dela; rode só aquela de novo. Não fez a aula 1 deste módulo? Rode antes: mkdir -p ~/projetos/config</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/config
+  <p class="pgoal">Pronto quando o dir /b mostrar os quatro arquivos e você tiver escrito, no papel, o arquivo de cada uma das cinco notas. Cerca de 10 minutos, no computador, no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> do módulo 3.</p>
+  <p class="psafe">Os modelos são arquivos de texto do kit do curso, e as notas são fictícias. Se você já escreveu num desses quatro arquivos, pule a linha dele: o curl grava por cima de um arquivo com o mesmo nome. Uma linha falhou? O curl mostra uma mensagem de erro logo abaixo dela; rode só aquela de novo. Não fez a aula 1 deste módulo? Rode antes: mkdir %USERPROFILE%\projetos\config</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\config
 curl -fsSL https://inematds.github.io/oswork/materiais/memoria.md -o memoria.md
 curl -fsSL https://inematds.github.io/oswork/materiais/decisoes.md -o decisoes.md
 curl -fsSL https://inematds.github.io/oswork/materiais/dicas.md -o dicas.md
 curl -fsSL https://inematds.github.io/oswork/materiais/falhas.md -o falhas.md
-ls</pre></div>
+dir /b</pre></div>
   <p><b>As cinco notas (fictícias):</b> 1) "Prefiro avisos às famílias em até cinco linhas." 2) "Boletim vai em PDF desde setembro, porque nem todas as famílias abrem planilha." 3) "Para juntar as atas do mês: peça primeiro a lista dos arquivos lidos, depois o resumo." 4) "O resumo da reunião trouxe uma data que não estava na ata; a correção foi pedir à IA que deixe um espaço em branco quando a data faltar." 5) "Relatórios sempre com as pendências no fim."</p>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Abra o terminal e cole as seis linhas. O último comando, ls, deve responder: decisoes.md  dicas.md  falhas.md  memoria.md.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Abra o <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span> e cole as seis linhas. O último comando, dir /b, deve responder os quatro nomes, um por linha: decisoes.md, dicas.md, falhas.md e memoria.md.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>No papel ou no bloco de notas, escreva ao lado de cada nota o arquivo em que ela mora e o porquê, em poucas palavras.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Abra o gabarito e compare. Se errou uma, diga qual das quatro perguntas do passo 1 você usou.</span></label></li>
   </ol>
-  <details class="gabarito"><summary>Ver o gabarito</summary><p>1 e 5: memoria.md, porque são o seu jeito estável e não têm motivo que mude. 2: decisoes.md, porque é uma escolha com data e motivo. 3: dicas.md, porque é um procedimento que já deu certo. 4: falhas.md, porque tem sintoma, causa e correção. Quer ir além? Abra memoria.md com <span class="gterm" data-gl="nano" data-def="Editor de texto que abre dentro do terminal. Ctrl+O grava o arquivo e Ctrl+X sai.">nano</span> e escreva uma preferência real sua.</p></details>
+  <details class="gabarito"><summary>Ver o gabarito</summary><p>1 e 5: memoria.md, porque são o seu jeito estável e não têm motivo que mude. 2: decisoes.md, porque é uma escolha com data e motivo. 3: dicas.md, porque é um procedimento que já deu certo. 4: falhas.md, porque tem sintoma, causa e correção. Quer ir além? Abra memoria.md com <span class="gterm" data-gl="notepad" data-def="O Bloco de Notas do Windows. No cmd, notepad seguido do nome do arquivo abre o arquivo nele; Ctrl+S grava.">notepad</span> memoria.md e escreva uma preferência real sua.</p></details>
   <p class="pdone">Você acabou de montar a pasta config e de dar a cada nota o seu lugar.</p>
 </section>
 
@@ -137,7 +137,7 @@ ls</pre></div>
   <div class="next-action">
     <p class="nak">Seu próximo passo</p>
     <p class="na-win">Você já sabe separar preferência, decisão, procedimento e falha, cada uma no seu arquivo.</p>
-    <p class="na-action">Hoje, abra o arquivo com nano ~/projetos/config/decisoes.md e acrescente uma decisão real da sua equipe no fim da tabela, copiando o formato das linhas da Lúcia no passo 4.</p>
+    <p class="na-action">Hoje, abra o arquivo com notepad %USERPROFILE%\projetos\config\decisoes.md e acrescente uma decisão real da sua equipe no fim da tabela, copiando o formato das linhas da Lúcia no passo 4.</p>
     <p class="na-hook">Na próxima aula: e a senha do sistema da escola, vai em qual desses arquivos? Em nenhum. Você vai ver onde ela fica.</p>
   </div>
 </div>
