@@ -32,12 +32,12 @@
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">2</span>Ligue com um comando e deixe o terminal aberto</h2>
-  <p>No <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>, na pasta bot, rode python3 bot.py. Nenhuma linha aparece, e esse é o sinal certo: o programa está esperando.</p>
+  <p>No <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>, na pasta bot, rode py bot.py. Nenhuma linha aparece, e esse é o sinal certo: o programa está esperando.</p>
   <p>O terminal precisa ficar aberto. Fechou a janela ou apertou Ctrl+C, o bot para de responder.</p>
   <p data-ex="coordenadora">Denise estranhou a tela parada e quase fechou o terminal. Lúcia explicou: tela sem linha nova é o bot trabalhando; linha nova costuma ser aviso.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta bot</span></div>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando · pasta bot</span></div>
 <div class="pcodewrap" style="margin:0"><pre><code>
-<span class="pr">$</span> python3 bot.py
+<span class="pr">C:\Users\lucia\projetos\oswork-kit\bot&gt;</span> py bot.py
 
 <span class="out">^C</span>
 <span class="out">Bot encerrado.</span></code></pre></div>
@@ -62,15 +62,15 @@
       <p class="tela-nota bom">Três vendas, R$ 100.00: o programa escreve com ponto, mas é o mesmo R$ 100,00 da soma do arquivo abaixo.</p>
     </div>
   </figure>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta bot</span></div>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando · pasta bot</span></div>
 <div class="pcodewrap" style="margin:0"><pre><code>
-<span class="pr">$</span> cat vendas.csv
+<span class="pr">C:\Users\lucia\projetos\oswork-kit\bot&gt;</span> type vendas.csv
 <span class="out">produto,valor
 Caderno,35.50
 Caneta,9.50
 Agenda,55.00</span></code></pre></div>
 <p class="tela-nota">35,50 + 9,50 + 55,00 = 100,00. O arquivo não tem segredo nenhum; pode abrir à vontade.</p></div>
-  <figcaption>Rode o cat antes de ligar o bot: com o bot ligado, o terminal fica ocupado até o Ctrl+C.</figcaption></figure>
+  <figcaption>Rode o type antes de ligar o bot: com o bot ligado, o terminal fica ocupado até o Ctrl+C.</figcaption></figure>
 </section>
 
 <section class="step" data-kind="ferramenta">
@@ -78,7 +78,7 @@ Agenda,55.00</span></code></pre></div>
   <p>Mantenha um único programa buscando mensagens para cada bot. Dois ao mesmo tempo, com o mesmo <span class="gterm" data-gl="token-do-bot" data-def="Senha que o Telegram gera para o seu bot. Quem tem o token controla o bot; por isso ele fica no .env.">token do bot</span>, disputam as mensagens, e o Telegram recusa.</p>
   <p>O kit percebe o conflito e se desliga sozinho. O aviso sai no <span class="gterm" data-gl="log" data-def="Registro do que um programa fez, linha por linha, com data e hora. É onde se procura a causa de um erro.">log</span>, que aparece no próprio terminal, sem mostrar o token.</p>
   <p data-ex="professora">Lúcia ligou o bot em casa, esquecendo que ele seguia ligado no notebook da escola. O de casa parou com o aviso abaixo. No dia seguinte, ela desligou o da escola com Ctrl+C e religou o de casa.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · aviso de conflito</span></div>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando · aviso de conflito</span></div>
 <div class="pcodewrap" style="margin:0"><pre><code>
 <span class="out">2026-09-25 19:40:12,381 WARNING Falha HTTP 409 no Telegram; sem detalhes que exponham token.
 2026-09-25 19:40:12,382 ERROR Confira token, instância duplicada ou webhook; processo encerrado para diagnóstico.</span></code></pre></div>
@@ -92,11 +92,11 @@ Agenda,55.00</span></code></pre></div>
   <h3 class="ph">Ligue o bot e confira o total</h3>
   <p class="pgoal">Pronto quando o /relatorio mostrar o mesmo total da sua soma e, com o bot desligado, o /status ficar sem resposta. Cerca de 10 minutos, no computador e no celular.</p>
   <p class="psafe"><span>O bot só lê o vendas.csv, com dados fictícios, e não muda nada no computador. Apareceu "Falha HTTP 401"? O token do <span class="gterm" data-gl="env" data-def="Arquivo que guarda chaves e senhas fora do código. Nunca vai para o Git, para um pedido ou para um print.">.env</span> está errado ou foi revogado: refaça o passo do token na aula 2 deste módulo (aula 38). Nenhuma resposta no celular? Confira o seu <span class="gterm" data-gl="id-numerico" data-def="Número fixo que o Telegram dá a cada conta. Não muda quando a pessoa troca o nome que aparece.">ID numérico</span> na <span class="gterm" data-gl="lista-de-acesso" data-def="Lista dos IDs numéricos que o bot atende. No kit, fica na linha ALLOWED_USER_IDS do .env.">lista de acesso</span>, como na aula 3 deste módulo (aula 39).</span></p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/oswork-kit/bot
-cat vendas.csv</pre></div>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\oswork-kit\bot
+type vendas.csv</pre></div>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>Rode os dois comandos do quadro e some os três valores no papel.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Rode <code style="white-space:nowrap">python3 bot.py</code> e deixe o terminal aberto, sem linha nova.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Rode <code style="white-space:nowrap">py bot.py</code> e deixe o terminal aberto, sem linha nova.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>No celular, na conversa privada com o bot, envie /status e depois /relatorio.</span></label></li>
     <li><label><input type="checkbox" data-ptask="4"> <span>Compare o total com a sua soma. Depois aperte Ctrl+C e envie /status de novo: não deve vir resposta. Ao religar o bot outro dia, ele pode responder a esse /status atrasado; é normal.</span></label></li>
   </ol>
@@ -123,7 +123,7 @@ cat vendas.csv</pre></div>
 <!--COMP-->
 <details class="complementar">
   <summary>Material complementar · Comece com long polling<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
-  <section class="comp-sec"><h3>O que é</h3><p>Long polling é o programa perguntar ao Telegram por mensagens e esperar um pouco quando não há novidades. É simples para aprender e não exige abrir uma <span class="gterm" data-def="Número que identifica um serviço dentro da máquina. O SSH costuma usar a porta 22, mas a sua VPS pode usar outra." data-gl="porta">porta</span> pública de entrada. Webhook é outra estratégia, em que o Telegram chama um endereço HTTPS seu; não é necessária neste laboratório.</p><h3>Por que aprender</h3><p>Escolher um único modo reduz problemas de configuração. Mantenha uma única instância buscando mensagens para um bot: processos duplicados podem disputar atualizações.</p><h3>Conceitos-chave</h3><p>getUpdates; offset; timeout; instância única; acesso de saída.</p><h4>Na prática</h4><p>O processo aguarda até 25 segundos por uma mensagem. Ao recebê-la, atualiza o offset para não repetir a mesma consulta. Após uma falha de rede, espera antes de tentar de novo.</p><h4>✓ Faça</h4><p>Inicie com python3 bot.py. Use Ctrl+C para encerrar. Se surgir conflito, confira se outro processo usa o mesmo token ou se existe webhook configurado.</p><h4>✗ Evite</h4><p>Misturar a cópia de treino com arquivos privados ou trabalho em produção.</p><figure class="comp-fig"><ul><li><b>Long polling</b> — o bot pergunta</li><li><b>Webhook</b> — o <span class="gterm" data-def="Computador que fica ligado prestando um serviço para outros, como responder às mensagens de um bot." data-gl="servidor">servidor</span> avisa</li></ul><figcaption>Comece pelo long polling: não exige endereço público nem certificado para funcionar.</figcaption></figure></section>
+  <section class="comp-sec"><h3>O que é</h3><p>Long polling é o programa perguntar ao Telegram por mensagens e esperar um pouco quando não há novidades. É simples para aprender e não exige abrir uma <span class="gterm" data-def="Número que identifica um serviço dentro da máquina. O SSH costuma usar a porta 22, mas a sua VPS pode usar outra." data-gl="porta">porta</span> pública de entrada. Webhook é outra estratégia, em que o Telegram chama um endereço HTTPS seu; não é necessária neste laboratório.</p><h3>Por que aprender</h3><p>Escolher um único modo reduz problemas de configuração. Mantenha uma única instância buscando mensagens para um bot: processos duplicados podem disputar atualizações.</p><h3>Conceitos-chave</h3><p>getUpdates; offset; timeout; instância única; acesso de saída.</p><h4>Na prática</h4><p>O processo aguarda até 25 segundos por uma mensagem. Ao recebê-la, atualiza o offset para não repetir a mesma consulta. Após uma falha de rede, espera antes de tentar de novo.</p><h4>✓ Faça</h4><p>Inicie com py bot.py. Use Ctrl+C para encerrar. Se surgir conflito, confira se outro processo usa o mesmo token ou se existe webhook configurado.</p><h4>✗ Evite</h4><p>Misturar a cópia de treino com arquivos privados ou trabalho em produção.</p><figure class="comp-fig"><ul><li><b>Long polling</b> — o bot pergunta</li><li><b>Webhook</b> — o <span class="gterm" data-def="Computador que fica ligado prestando um serviço para outros, como responder às mensagens de um bot." data-gl="servidor">servidor</span> avisa</li></ul><figcaption>Comece pelo long polling: não exige endereço público nem certificado para funcionar.</figcaption></figure></section>
 </details>
 <!--/COMP-->
 <nav class="lnav"><a href="#aula-39">← aula anterior</a><a class="next" href="#aula-41">próxima aula →</a></nav>

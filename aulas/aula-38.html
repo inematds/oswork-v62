@@ -52,20 +52,24 @@
 </section>
 
 <section class="step" data-kind="ferramenta">
-  <h2><span class="n">3</span>Quatro comandos criam o .env protegido</h2>
-  <p>O kit do curso é o arquivo oswork-kit.zip; o link está no passo 1 da prática. Abra o <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> e entre na pasta bot, dentro do kit descompactado. Copie o exemplo, restrinja a leitura e confira.</p>
-  <p>O <span class="gterm" data-gl="chmod" data-def="Comando que define quem pode ler ou alterar um arquivo.">chmod</span> 600 deixa só a sua conta ler e alterar o arquivo. Confira a linha do resultado: ela começa com -rw-------, um r e um w só.</p>
-  <p data-ex="professora">Lúcia rodou os quatro comandos e achou o -rw------- na primeira tentativa. Depois colou o token no arquivo, salvou e fechou sem tirar print.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<div class="pcodewrap" style="margin:0"><pre><code>
-<span class="pr">$</span> cd ~/projetos/oswork-kit/bot
-<span class="pr">$</span> cp .env.example .env
-<span class="pr">$</span> chmod 600 .env
-<span class="pr">$</span> ls -l .env
-<span class="out">-rw------- 1 lucia lucia 66 set 25 10:02 .env</span></code></pre></div>
-<p class="tela-nota">Os três primeiros comandos não mostram nada quando dão certo. O último mostra a linha para conferir.</p></div>
-  <figcaption>Olhe o começo da linha: -rw-------. Nome, tamanho e data mudam no seu computador.</figcaption></figure>
-  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Apareceu "No such file or directory"? Você não está na pasta certa. Repita o cd com o caminho de onde descompactou o kit. Se a linha não começa com -rw-------, rode de novo o chmod 600 .env e confira.</p></div>
+  <h2><span class="n">3</span>Três comandos criam o .env, só seu</h2>
+  <p>O kit do curso é o arquivo oswork-kit.zip; a prática baixa e descompacta com o <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>. Depois você entra na pasta bot, copia o exemplo e abre a cópia no Bloco de Notas para colar o token.</p>
+  <p>O .env mora dentro da sua pasta pessoal, em C:\Users\seu-nome. Outras contas do computador não abrem essa pasta. Se um dia a pasta for para o <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span>, o <span class="gterm" data-gl="gitignore" data-def="Arquivo que lista o que o Git não deve guardar, como senhas e arquivos temporários.">.gitignore</span> do módulo 4 deixa o .env de fora.</p>
+  <p data-ex="professora">Lúcia rodou os três comandos e viu o .env ao lado do .env.example. Depois colou o token no Bloco de Notas, gravou e fechou sem tirar print.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\lucia\projetos\oswork-kit\bot&gt;</span> copy .env.example .env
+<span class="out">        1 arquivo(s) copiado(s).</span>
+<span class="pr">C:\Users\lucia\projetos\oswork-kit\bot&gt;</span> dir /b
+<span class="out">.env
+.env.example
+bot.py
+oswork-bot.service
+README.md
+vendas.csv</span>
+<span class="pr">C:\Users\lucia\projetos\oswork-kit\bot&gt;</span> notepad .env</code></pre>
+<p class="tela-nota">O copy confirma a cópia; o dir mostra o .env novo ao lado do modelo. O notepad abre o .env para você colar o token.</p></div>
+  <figcaption>O endereço antes do &gt; mostra que você está na pasta bot, dentro da sua pasta pessoal.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Apareceu "O sistema não pode encontrar o caminho especificado"? Você não está na pasta certa. Rode o cd da prática de novo, com o caminho da pasta bot. O Bloco de Notas perguntou se quer criar um arquivo novo? O copy não rodou: repita o copy antes do notepad.</p></div>
 </section>
 
 <section class="step" data-kind="ferramenta">
@@ -96,21 +100,24 @@
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/5</span></p>
   <h3 class="ph">Crie o seu bot e guarde o token no .env</h3>
-  <p class="pgoal">Pronto quando o <code style="white-space:nowrap">ls -l</code> mostrar <code style="white-space:nowrap">-rw-------</code> no .env e o token estiver lá dentro, sem ter passado por print ou mensagem. Cerca de 12 minutos, no computador com o terminal e o Telegram no celular.</p>
+  <p class="pgoal">Pronto quando o <code>dir /b</code> mostrar o .env na pasta bot e o token estiver lá dentro, sem ter passado por print ou mensagem. Cerca de 12 minutos, no computador com o cmd e o Telegram no celular.</p>
   <p class="psafe">Você cria um bot novo, só seu, e mexe apenas na pasta do kit. Nenhum comando aqui apaga nada. Se o token aparecer em algum print, pare, revogue no BotFather e refaça o último passo com o token novo.</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/oswork-kit/bot
-cp .env.example .env
-chmod 600 .env
-ls -l .env</pre></div>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir %USERPROFILE%\projetos\oswork-kit
+cd %USERPROFILE%\projetos\oswork-kit
+curl -fsSL -o oswork-kit.zip https://inematds.github.io/oswork/materiais/oswork-kit.zip
+tar -xf oswork-kit.zip
+cd bot
+copy .env.example .env
+dir /b</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Baixe o oswork-kit.zip na <a href="https://inematds.github.io/oswork/materiais/" target="_blank" rel="noopener">página de materiais do OSWork</a> e descompacte numa pasta oswork-kit dentro de projetos. Ficou uma pasta dentro da outra, ou em outro lugar (no Windows com WSL, dentro de projetos do WSL)? Ajuste o caminho do cd até chegar à pasta bot.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole o bloco no cmd. Ele cria a pasta oswork-kit dentro de projetos, baixa o kit da <a href="https://inematds.github.io/oswork/materiais/" target="_blank" rel="noopener">página de materiais do OSWork</a>, descompacta com o tar, entra na pasta bot e copia o exemplo. Confira o .env na lista do dir.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>No Telegram, abra o BotFather oficial, envie /newbot e responda às perguntas. Não tire print da resposta com o token.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="3"> <span>No terminal, rode os quatro comandos do quadro (pode colar os quatro juntos) e confira <code style="white-space:nowrap">-rw-------</code> no começo da última linha.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Não tire print do cmd nem do Bloco de Notas daqui em diante: o próximo passo põe o token no arquivo.</span></label></li>
     <li><label><input type="checkbox" data-ptask="4"> <span>No computador, abra o Telegram com a mesma conta: o aplicativo ou web.telegram.org. Ele mostra um código QR; no celular, vá em Configurações › Dispositivos e leia o código. Depois copie o token da conversa com o BotFather.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="5"> <span>Rode <code style="white-space:nowrap">nano .env</code> e troque preencha_localmente pelo token. Para colar no terminal: Ctrl+Shift+V no Linux e no <span class="gterm" data-gl="wsl" data-def="Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux.">WSL</span> do Windows, Cmd+V no Mac. O token é longo; se a linha passar da tela, é normal. Salve com Ctrl+O e Enter; saia com Ctrl+X.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="5"> <span>Rode <code>notepad .env</code> e troque preencha_localmente pelo token, colando com Ctrl+V. O token é longo; se a linha passar da janela, é normal. Grave com Ctrl+S e feche.</span></label></li>
   </ol>
-  <details class="mais"><summary>O que é o nano e como ele aparece</summary>
-    <p>O <span class="gterm" data-gl="nano" data-def="Editor de texto que abre dentro do terminal. Ctrl+O grava o arquivo e Ctrl+X sai.">nano</span> abre o arquivo dentro do próprio terminal. Você verá duas linhas: TELEGRAM_BOT_TOKEN=preencha_localmente e ALLOWED_USER_IDS=123456789. Nesta aula, mude só a primeira. A segunda fica para a próxima aula.</p>
+  <details class="mais"><summary>O que aparece no Bloco de Notas</summary>
+    <p>O notepad abre o .env numa janela do Bloco de Notas. Você verá duas linhas: TELEGRAM_BOT_TOKEN=preencha_localmente e ALLOWED_USER_IDS=123456789. Nesta aula, mude só a primeira. A segunda fica para a próxima aula.</p>
   </details>
   <p class="pdone">Você criou um bot e guardou a chave dele num lugar que só a sua conta abre.</p>
 </section>
@@ -121,7 +128,7 @@ ls -l .env</pre></div>
     <h3>A chave do bot</h3>
     <ol>
       <li><span><b>BotFather</b>/newbot cria o bot e entrega o token.</span></li>
-      <li><span><b>.env</b>o único lugar do token, com chmod 600.</span></li>
+      <li><span><b>.env</b>o único lugar do token, na sua pasta pessoal.</span></li>
       <li><span><b>Vazou</b>revogue no BotFather e troque no .env.</span></li>
     </ol>
   </div>
@@ -135,7 +142,7 @@ ls -l .env</pre></div>
 <!--COMP-->
 <details class="complementar">
   <summary>Material complementar · Crie o bot e proteja o token<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
-  <section class="comp-sec"><h3>O que é</h3><p>No Telegram, encontre o BotFather oficial e use /newbot. Escolha nome e identificador conforme as instruções mostradas. O token gerado autentica seu programa perante o Telegram. Guarde-o como TELEGRAM_BOT_TOKEN em um arquivo privado; o kit tem apenas valores de exemplo.</p><h3>Por que aprender</h3><p>Quem controla o token pode operar o bot. Capturas de tela do processo e URLs contendo o token podem vazar acesso. Se houver exposição, revogue o token no BotFather antes de continuar.</p><h3>Conceitos-chave</h3><p>BotFather; token; <span class="gterm" data-def="Um nome com um valor guardado, escrito como NOME=valor. O programa procura o valor pelo nome." data-gl="variavel">variável</span> de ambiente; rotação.</p><h4>Na prática</h4><p>A professora cria um bot para uso pessoal. Ela não coloca o token no <span class="gterm" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado." data-gl="readme">README</span> e não envia o arquivo de credenciais para os alunos. Cada <span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">instalação</span> usa suas próprias credenciais.</p><h4>Experimente agora</h4><p>Use o modo --identify do kit: ele informa o ID de quem envia /start no terminal local, sem dar acesso às funções operacionais.</p></section>
+  <section class="comp-sec"><h3>O que é</h3><p>No Telegram, encontre o BotFather oficial e use /newbot. Escolha nome e identificador conforme as instruções mostradas. O token gerado autentica seu programa perante o Telegram. Guarde-o como TELEGRAM_BOT_TOKEN em um arquivo privado; o kit tem apenas valores de exemplo.</p><h3>Por que aprender</h3><p>Quem controla o token pode operar o bot. Capturas de tela do processo e URLs contendo o token podem vazar acesso. Se houver exposição, revogue o token no BotFather antes de continuar.</p><h3>Conceitos-chave</h3><p>BotFather; token; <span class="gterm" data-def="Um nome com um valor guardado, escrito como NOME=valor. O programa procura o valor pelo nome." data-gl="variavel">variável</span> de ambiente; rotação.</p><h4>Na prática</h4><p>A professora cria um bot para uso pessoal. Ela não coloca o token no <span class="gterm" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado." data-gl="readme">README</span> e não envia o arquivo de credenciais para os alunos. Cada <span class="gterm" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial." data-gl="instalar">instalação</span> usa suas próprias credenciais.</p><h4>Experimente agora</h4><p>Use o modo --identify do kit: ele informa o ID de quem envia /start no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> local, sem dar acesso às funções operacionais.</p></section>
 </details>
 <!--/COMP-->
 <nav class="lnav"><a href="#aula-37">← aula anterior</a><a class="next" href="#aula-39">próxima aula →</a></nav>
@@ -144,7 +151,7 @@ ls -l .env</pre></div>
 <script type="application/json" id="cards-38">
 [
   {"front":"Você vai mostrar a uma colega como configurou o bot. O que pode aparecer no print e o que não pode?","back":"Pode aparecer o nome das variáveis e o caminho da pasta. O valor do token nunca; se aparecer, revogue."},
-  {"front":"O ls -l .env mostrou -rw-r--r--. O que isso indica e o que você faz?","back":"Outras contas do computador conseguem ler o arquivo. Rode chmod 600 .env e confira de novo."},
+  {"front":"Por que o .env fica dentro da sua pasta pessoal, e não numa pasta compartilhada do computador?","back":"Porque outras contas do Windows não abrem a sua pasta pessoal. Numa pasta compartilhada, qualquer pessoa leria o token."},
   {"front":"Duas colegas querem usar o kit, cada uma no seu computador. Elas podem dividir um token?","back":"Não. Cada uma cria o próprio bot e guarda o token no próprio .env; um token deve ter um só programa usando."}
 ]
 </script>

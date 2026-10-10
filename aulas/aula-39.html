@@ -35,9 +35,9 @@
   <p>O nome que aparece na conversa, a pessoa troca quando quiser. O bot confere o <span class="gterm" data-gl="id-numerico" data-def="Número fixo que o Telegram dá a cada conta. Não muda quando a pessoa troca o nome que aparece.">ID numérico</span>, que o Telegram dá a cada conta.</p>
   <p>Para descobrir o seu, o kit tem um modo só de identificação. No celular, o bot não responde nada nesse modo: o número aparece no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
   <p data-ex="professora">Lúcia aparece no Telegram como "Lúcia Ciências". Se mudar para "Prof. Lúcia", o bot continua reconhecendo: o número dela é o mesmo.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta bot</span></div>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando · pasta bot</span></div>
 <div class="pcodewrap" style="margin:0"><pre><code>
-<span class="pr">$</span> python3 bot.py --identify
+<span class="pr">C:\Users\lucia\projetos\oswork-kit\bot&gt;</span> py bot.py --identify
 <span class="out">Identificação apenas: envie /start em privado; confira seu ID abaixo e encerre com Ctrl+C. Nenhuma função operacional ativa.
 ID recebido na identificação: 7012345678
 ^C
@@ -95,16 +95,18 @@ if message.get('from',{}).get('id') not in allowed:return None</code></pre>
   <h3 class="ph">Descubra o seu ID e coloque na lista de acesso</h3>
   <p class="pgoal">Pronto quando a linha ALLOWED_USER_IDS do .env tiver o seu número, e não o do exemplo. Cerca de 8 minutos, no computador, com o celular na mão.</p>
   <p class="psafe">O modo de identificação não responde nem executa nada: só mostra o número no terminal. Apareceu "Configure TELEGRAM_BOT_TOKEN no .env privado"? O token ainda não está no .env: faça a aula 2 deste módulo (aula 38), que cria esse arquivo na pasta projetos/oswork-kit/bot.</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/oswork-kit/bot
-python3 --version</pre></div>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">winget install -e --id Python.Python.3.12</pre></div>
+  <p><b>Depois, num cmd novo:</b></p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\oswork-kit\bot
+py --version</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Rode os dois comandos do quadro. O segundo mostra a versão do Python: precisa ser 3.10 ou maior. Neste curso o comando é sempre python3.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Rode <code style="white-space:nowrap">python3 bot.py --identify</code>. O terminal fica ocupado, esperando. No celular, procure o seu bot pelo identificador que você escolheu (por exemplo, @lojinha_gremio_lucia_bot), abra a conversa e envie /start.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>No <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>, rode o <span class="gterm" data-gl="winget" data-def="Instalador de programas que já vem no Windows 10 e 11. Você digita no cmd o nome oficial do programa e ele baixa e instala.">winget</span> do primeiro quadro (já tem o Python? Ele avisa e você segue). Feche e abra o cmd e rode o segundo quadro: o py --version precisa mostrar 3.10 ou maior. No Windows, o comando do Python é py.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Rode <code style="white-space:nowrap">py bot.py --identify</code>. O cmd fica ocupado, esperando. No celular, procure o seu bot pelo identificador que você escolheu (por exemplo, @lojinha_gremio_lucia_bot), abra a conversa e envie /start.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Anote o número da linha "ID recebido na identificação" e encerre com Ctrl+C.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="4"> <span>Rode <code style="white-space:nowrap">nano .env</code>, troque 123456789 pelo seu número, salve com Ctrl+O e Enter e saia com Ctrl+X.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>Rode <code>notepad .env</code>, troque 123456789 pelo seu número, grave com Ctrl+S e feche.</span></label></li>
   </ol>
-  <details class="mais"><summary>O python3 --version deu erro ou versão antiga</summary>
-    <p>O bot do kit é escrito em <span class="gterm" data-gl="python" data-def="Linguagem de programação. O bot do kit do curso é escrito nela.">Python</span> e precisa da versão 3.10 ou mais nova. Se aparecer "command not found" ou um número menor, o Python precisa passar por uma <span class="gterm" data-gl="instalar" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial.">instalação</span> pela fonte oficial antes de continuar: <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org/downloads</a> mostra a versão para Windows e Mac. No Linux, o Python 3 costuma vir junto com o sistema.</p>
+  <details class="mais"><summary>O py --version deu erro ou versão antiga</summary>
+    <p>O bot do kit é escrito em <span class="gterm" data-gl="python" data-def="Linguagem de programação. O bot do kit do curso é escrito nela.">Python</span> e precisa da versão 3.10 ou mais nova. Se aparecer "não é reconhecido" mesmo depois de fechar e abrir o cmd, ou um número menor, o Python precisa passar por uma <span class="gterm" data-gl="instalar" data-def="Colocar um programa no computador para que ele possa ser usado. O módulo 3 faz a primeira instalação, pela fonte oficial.">instalação</span> pela fonte oficial antes de continuar: <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org/downloads</a> mostra o instalador para Windows; nele, marque a opção "Add python.exe to PATH". Digitar python abriu a Microsoft Store? Feche a loja e use py.</p>
   </details>
   <p class="pdone">Você decidiu, por número, quem o seu bot atende.</p>
 </section>
