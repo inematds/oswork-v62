@@ -14,7 +14,7 @@ Pedido do Nei (10/10/2026): "começa com cmd sem linux, depois vai pra uma VPS u
 - [ ] `grep -liE 'wsl|ubuntu|sudo |apt |/home/|~/' aulas/aula-{13..42}.html aulas/aula-49.html` → vazio
 - [ ] `grep -lE 'mkdir -p|\bcat |\bls\b|nano |python3|chmod|printf' aulas/aula-{13..42}.html aulas/aula-49.html` → vazio (exceto citação explícita da tabela cmd→Linux)
 - [ ] `grep -c 'C:\\Users' aulas/aula-13.html aulas/aula-19.html` → ≥1 cada
-- [ ] aula 43 (ou a 1ª aula do módulo 8 que entra na VPS) contém a tabela `dir→ls`, `type→cat`, `cls→clear`
+- [ ] aula 44 (primeira entrada na VPS) contém a tabela `dir→ls`, `type→cat`, `cls→clear`
 - [ ] `node ~/.claude/skills/formato-curso-v6/scripts/auditar-curso.cjs curso.html` (e en/, es/) → 49 aulas, todas ≥9, sem falha nos critérios 7/8/10
 - [ ] `node ~/.claude/skills/formato-curso-v6/scripts/testar-motor.cjs` ×3 → 26/26
 

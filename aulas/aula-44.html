@@ -19,23 +19,42 @@
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">1</span>SSH abre o terminal da VPS no seu computador</h2>
   <p>O <span class="gterm" data-gl="ssh" data-def="Forma segura de abrir o terminal de outro computador pela internet.">SSH</span> cria uma conexão protegida para administrar a máquina. O comando <code>ssh usuario@ip-da-vps</code> abre a sessão.</p>
-  <p>As partes <code>usuario</code> e <code>ip-da-vps</code> são campos para trocar, não valores reais. O endereço da VPS aparece no painel do provedor da VPS.</p>
-  <p data-ex="professora">Lúcia abriu duas janelas de terminal e se confundiu: numa estava o notebook, na outra a VPS. O nome no começo da linha e o comando <code>pwd</code> mostraram onde ela estava.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> ssh usuario@ip-da-vps
+  <p>As partes <code>usuario</code> e <code>ip-da-vps</code> são campos para trocar, não valores reais. O endereço da VPS aparece no painel do provedor da VPS. O comando ssh já vem no Windows: você o digita no <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>.</p>
+  <p>Depois de entrar, a janela é a mesma, mas quem responde é o Linux da VPS. A navegação é a do módulo 3 com outros nomes: veja a tabela abaixo.</p>
+  <p data-ex="professora">Lúcia abriu duas janelas do cmd e se confundiu: numa estava o notebook, na outra a VPS. O começo da linha mostrou onde ela estava: C:\Users\lucia&gt; no notebook, usuario@nome-da-vps:~$ na VPS.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando · entrando na VPS</span></div>
+<pre><code><span class="pr">C:\Users\lucia&gt;</span> ssh usuario@ip-da-vps
 <span class="out">usuario@nome-da-vps:~$</span> pwd
 <span class="out">/home/usuario</span></code></pre>
-<p class="tela-nota">Depois de entrar, o começo da linha muda: agora ele mostra o usuário e o nome da VPS. O comando pwd responde a pasta em que você está.</p></div>
+<p class="tela-nota">Depois de entrar, o começo da linha muda: agora ele mostra o usuário e o nome da VPS e termina em $. No Linux, o pwd responde a pasta em que você está, como o cd sozinho no cmd.</p></div>
   <figcaption>Antes de qualquer comando, olhe o começo da linha. Ele diz em que máquina você está.</figcaption></figure>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Do cmd para o Linux da VPS</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> cd sozinho → pwd · onde estou</div>
+        <div class="item doc"><span class="pin">2</span> dir → ls · o que tem aqui</div>
+        <div class="item doc"><span class="pin">3</span> type → cat · mostrar um arquivo</div>
+        <div class="item doc"><span class="pin">4</span> notepad → <span class="gterm" data-gl="nano" data-def="Editor de texto que abre dentro do terminal do Linux, na VPS. Ctrl+O grava o arquivo e Ctrl+X sai.">nano</span> · editar um arquivo</div>
+        <div class="item doc"><span class="pin">5</span> cls → clear · limpar a tela</div>
+        <div class="item doc"><span class="pin">6</span> %USERPROFILE% → ~ · e a barra \ vira /</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>cd seguido de um nome, cd .. e mkdir funcionam igual nos dois.</span></li>
+      <li><span class="pin">2</span><span>No Linux, nome com maiúscula é outro nome: Projetos e projetos são pastas diferentes.</span></li>
+      <li><span class="pin">6</span><span>~ é a pasta pessoal na VPS, como /home/usuario.</span></li>
+    </ol>
+  </figure>
 </section>
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">2</span>Chave no lugar da senha, identidade conferida</h2>
-  <p>Use a <span class="gterm" data-gl="chave-publica" data-def="Metade pública do par de chaves do SSH. Fica cadastrada no GitHub e na VPS; a outra metade, a chave privada, fica só no seu computador e nunca é colada em lugar nenhum.">chave pública</span> cadastrada do jeito que o provedor da VPS indica. A chave privada nunca sai do seu computador. Ao contratar, o painel do provedor guia a criação e o cadastro; nesta aula você não precisa criar nenhuma.</p>
+  <p>Use a <span class="gterm" data-gl="chave-publica" data-def="Metade pública do par de chaves do SSH. Fica cadastrada no GitHub e na VPS; a outra metade, a chave privada, fica só no seu computador e nunca é colada em lugar nenhum.">chave pública</span> cadastrada do jeito que o provedor da VPS indica. Serve a mesma da aula 49, o arquivo id_ed25519.pub; no cmd, <code>type %USERPROFILE%\.ssh\id_ed25519.pub</code> mostra o texto que o painel pede. A chave privada nunca sai do seu computador.</p>
   <p>Na primeira conexão, o SSH mostra a <span class="gterm" data-gl="impressao-digital" data-def="Sequência curta que identifica a VPS. Na primeira conexão por SSH, você confere se ela bate com a que o provedor da VPS informa.">impressão digital</span> da máquina. Ela confirma que você chegou à VPS certa.</p>
   <p data-ex="coordenadora">Denise recebeu a pergunta em inglês na primeira entrada. Antes de digitar yes, comparou a impressão digital com a que o painel do provedor mostrava.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · primeira conexão</span></div>
-<pre><code><span class="pr">$</span> ssh usuario@ip-da-vps
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando · primeira conexão</span></div>
+<pre><code><span class="pr">C:\Users\denise&gt;</span> ssh usuario@ip-da-vps
 <span class="out">The authenticity of host 'ip-da-vps' can't be established.
 ED25519 key fingerprint is SHA256:[impressão digital].
 Are you sure you want to continue connecting (yes/no/[fingerprint])?</span></code></pre>
@@ -48,10 +67,10 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?</span></cod
   <p>Trabalhe com um usuário seu, o usuário de trabalho. Quando uma tarefa pedir permissão de administrador, ponha <span class="gterm" data-gl="sudo" data-def="Comando que executa a instrução seguinte com permissão de administrador. Pede a sua senha.">sudo</span> na frente do comando.</p>
   <p>Assim o poder de administrador aparece só onde você pediu, e fica visível no comando.</p>
   <p data-ex="professora">Lúcia conferiu o próprio usuário antes de mexer em qualquer coisa. O mesmo comando com sudo mostrou o administrador, depois de pedir a senha dela.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · na VPS</span></div>
-<pre><code><span class="pr">$</span> whoami
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando · na VPS</span></div>
+<pre><code><span class="pr">usuario@nome-da-vps:~$</span> whoami
 <span class="out">usuario</span>
-<span class="pr">$</span> sudo whoami
+<span class="pr">usuario@nome-da-vps:~$</span> sudo whoami
 <span class="out">[sudo] password for usuario:
 root</span></code></pre>
 <p class="tela-nota">whoami responde "quem sou eu". Sem sudo, é o usuário de trabalho; com sudo, é root, o administrador da máquina.</p></div>

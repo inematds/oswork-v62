@@ -47,7 +47,6 @@
     "staging",
     "HEAD",
     "nano",
-    "WSL",
     "BotFather",
     ".env.example",
     "AGENTS.override.md",

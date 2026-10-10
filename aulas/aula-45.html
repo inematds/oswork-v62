@@ -22,9 +22,9 @@
   <p>O <span class="gterm" data-gl="sudo" data-def="Comando que executa a instrução seguinte com permissão de administrador. Pede a sua senha.">sudo</span> na frente pede a permissão de administrador, como na aula anterior.</p>
   <p data-ex="coordenadora">Na <span class="gterm" data-gl="vps" data-def="Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar.">VPS</span> de treino, Denise parou na pergunta final e leu a lista inteira. Só depois respondeu Y.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · na VPS</span></div>
-<pre><code><span class="pr">$</span> sudo apt update
+<pre><code><span class="pr">usuario@nome-da-vps:~$</span> sudo apt update
 <span class="out">Reading package lists... Done</span>
-<span class="pr">$</span> sudo apt upgrade
+<span class="pr">usuario@nome-da-vps:~$</span> sudo apt upgrade
 <span class="out">The following packages will be upgraded:
   [lista de programas que vão mudar]
 Do you want to continue? [Y/n]</span></code></pre>
@@ -50,34 +50,40 @@ Do you want to continue? [Y/n]</span></code></pre>
   <h2><span class="n">3</span>Confira as versões e crie a pasta</h2>
   <p>Pergunte a versão de cada programa. Se ele responde, está na máquina. Depois crie a pasta <code>projetos</code> na sua pasta pessoal, na conta de trabalho.</p>
   <p>Os comandos de versão só leem. O de criar pasta não apaga nada: se a pasta já existe, ele a deixa como está.</p>
-  <p data-ex="professora">Lúcia rodou os mesmos comandos no notebook, antes de alugar qualquer VPS. Os dois responderam. Ela anotou as versões no plano, para conferir as mesmas na VPS.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> python3 --version
+  <p data-ex="professora">Antes de alugar a VPS, Lúcia conferiu no notebook, no <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>, com py --version e git --version. Anotou as versões no plano. Na VPS, entrou com <span class="gterm" data-gl="ssh" data-def="Forma segura de abrir o terminal de outro computador pela internet.">ssh</span> e rodou os comandos do Linux.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando · na VPS</span></div>
+<pre><code><span class="pr">usuario@nome-da-vps:~$</span> python3 --version
 <span class="out">Python 3.x.y</span>
-<span class="pr">$</span> git --version
+<span class="pr">usuario@nome-da-vps:~$</span> git --version
 <span class="out">git version 2.x.y</span>
-<span class="pr">$</span> mkdir -p ~/projetos
-<span class="pr">$</span> ls -d ~/projetos
+<span class="pr">usuario@nome-da-vps:~$</span> mkdir -p ~/projetos
+<span class="pr">usuario@nome-da-vps:~$</span> ls -d ~/projetos
 <span class="out">/home/usuario/projetos</span></code></pre>
 <p class="tela-nota">Onde está x.y, aparece o número da versão da sua máquina. O último comando confirma que a pasta existe.</p></div>
   <figcaption>Quatro comandos, nenhum muda o sistema. O sinal ~ quer dizer "a minha pasta pessoal".</figcaption></figure>
-  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Se aparecer "command not found", ou no Mac uma janela oferecendo as ferramentas de linha de comando, o programa não está na máquina. Não é erro seu. Anote "falta" no plano: é exatamente o que a VPS vai precisar receber. No Windows, rode no terminal do <span class="gterm" data-gl="wsl" data-def="Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux.">WSL</span>, do módulo 3.</p></div>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Se aparecer "command not found", o programa não está na VPS. Não é erro seu. Anote "falta" no plano: é exatamente o que a VPS vai precisar receber.</p></div>
 </section>
 
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Confira Python e Git e crie a pasta de projetos</h3>
-  <p class="pgoal">Pronto quando você tiver a resposta dos dois comandos de versão e a pasta projetos existir. Cerca de 8 minutos, no computador, no terminal.</p>
-  <p class="psafe">Nenhum comando daqui muda o sistema: dois só leem a versão, o outro cria uma pasta vazia. Não rode a atualização do apt no computador do trabalho só para treinar. No Windows, use o terminal do WSL, preparado no módulo 3: no PowerShell estes comandos respondem diferente. Tem uma VPS de treino? Rode os mesmos comandos nela.</p>
+  <p class="pgoal">Pronto quando você tiver a resposta dos dois comandos de versão e a pasta projetos existir. Cerca de 8 minutos, na VPS, pelo ssh da aula 44.</p>
+  <p class="psafe">Nenhum comando daqui muda o sistema: dois só leem a versão, o outro cria uma pasta vazia. Entre na VPS com ssh usuario@ip-da-vps e confira o começo da linha antes de colar. Ainda sem VPS? Faça a versão do cmd, no quadro logo abaixo, e repita na VPS quando tiver a sua.</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">python3 --version
 git --version
 mkdir -p ~/projetos
 ls -d ~/projetos</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Abra o terminal e rode as duas primeiras linhas, uma de cada vez. Anote as versões.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Na VPS, rode as duas primeiras linhas, uma de cada vez. Anote as versões.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Rode as duas últimas e confira que a resposta termina em /projetos.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>No plano de VPS, escreva o que a máquina precisa receber: Python 3, Git, e nada mais sem motivo.</span></label></li>
   </ol>
+  <details class="mais"><summary>Ainda sem VPS: a mesma conferência no cmd</summary>
+    <p>No Windows, os nomes mudam: py no lugar de python3, e dir no lugar de ls. A pasta projetos já existe desde o módulo 3.</p>
+    <pre><code>py --version
+git --version
+dir /b %USERPROFILE%\projetos</code></pre>
+  </details>
   <p class="pdone">Você acabou de conferir o que a máquina tem e de decidir o que ela precisa, sem colocar nada por hábito.</p>
 </section>
 

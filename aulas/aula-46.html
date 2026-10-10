@@ -44,10 +44,10 @@
   <p>Alguns provedores têm um firewall próprio no painel. Se o seu tiver, confira lá também que a porta do SSH está liberada.</p>
   <p data-ex="coordenadora">Denise só ligou o firewall depois de preparar as rotas de volta da aula anterior sobre SSH: a segunda sessão testada e o console do provedor conferido. O próprio ufw a avisou do risco.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · na VPS</span></div>
-<pre><code><span class="pr">$</span> sudo ufw allow 22/tcp
+<pre><code><span class="pr">usuario@nome-da-vps:~$</span> sudo ufw allow 22/tcp
 <span class="out">Rules updated
 Rules updated (v6)</span>
-<span class="pr">$</span> sudo ufw enable
+<span class="pr">usuario@nome-da-vps:~$</span> sudo ufw enable
 <span class="out">Command may disrupt existing ssh connections. Proceed with operation (y|n)?</span></code></pre>
 <p class="tela-nota">"Rules updated" confirma a regra. A pergunta final avisa: "isto pode derrubar as conexões SSH abertas; continuar?".</p></div>
   <figcaption>Responda y só depois de liberar a porta certa e com a rota de volta pronta.</figcaption></figure>
@@ -55,14 +55,14 @@ Rules updated (v6)</span>
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">3</span>O .env fica fechado e fora do Git</h2>
-  <p>O <span class="gterm" data-gl="token-do-bot" data-def="Senha que o Telegram gera para o seu bot. Quem tem o token controla o bot; por isso ele fica no .env.">token do bot</span> mora no .env. O comando <span class="gterm" data-gl="chmod" data-def="Comando que define quem pode ler ou alterar um arquivo.">chmod</span> 600 deixa esse arquivo legível só pelo dono.</p>
+  <p>O <span class="gterm" data-gl="token-do-bot" data-def="Senha que o Telegram gera para o seu bot. Quem tem o token controla o bot; por isso ele fica no .env.">token do bot</span> mora no .env. O comando <span class="gterm" data-gl="chmod" data-def="Comando do Linux que define quem pode ler ou alterar um arquivo.">chmod</span> 600 deixa esse arquivo legível só pelo dono.</p>
   <p>E o .env nunca entra no <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span>: o arquivo <span class="gterm" data-gl="gitignore" data-def="Arquivo que lista o que o Git não deve guardar, como senhas e arquivos temporários.">.gitignore</span>, do módulo 4, já cuida disso.</p>
   <p data-ex="professora">Lúcia conferiu o .env antes e depois do chmod. No começo da linha, os traços mostram quem não pode ler.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> ls -l .env
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando · na VPS</span></div>
+<pre><code><span class="pr">usuario@nome-da-vps:~$</span> ls -l .env
 <span class="out">-rw-rw-r-- 1 usuario usuario 0 [data] .env</span>
-<span class="pr">$</span> chmod 600 .env
-<span class="pr">$</span> ls -l .env
+<span class="pr">usuario@nome-da-vps:~$</span> chmod 600 .env
+<span class="pr">usuario@nome-da-vps:~$</span> ls -l .env
 <span class="out">-rw------- 1 usuario usuario 0 [data] .env</span></code></pre>
 <p class="tela-nota">Depois do primeiro sinal vêm três trios: dono, grupo e outros. r é ler, w é alterar, traço é "não pode". Antes, o grupo e os outros liam (rw- e r--). Depois, só o dono tem rw.</p></div>
   <figcaption>O que importa é o começo: -rw------- quer dizer "só o dono".</figcaption></figure>
@@ -94,8 +94,8 @@ Rules updated (v6)</span>
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Feche um .env de treino e liste as portas</h3>
-  <p class="pgoal">Pronto quando o ls -l mostrar -rw------- no .env de treino e o plano tiver as portas necessárias. Cerca de 8 minutos, no computador, no terminal.</p>
-  <p class="psafe">O arquivo é criado vazio, numa pasta nova, só para treinar: não tem token nenhum. Não mexa no .env de um bot que já funciona. No Windows, rode no terminal do <span class="gterm" data-gl="wsl" data-def="Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux.">WSL</span>, do módulo 3: fora dele o -rw------- pode não aparecer; não é erro seu, volte ao WSL. Se o chmod der erro, confira com pwd se você está na pasta treino-rede.</p>
+  <p class="pgoal">Pronto quando o ls -l mostrar -rw------- no .env de treino e o plano tiver as portas necessárias. Cerca de 8 minutos, na VPS, pelo ssh da aula 44.</p>
+  <p class="psafe">O arquivo é criado vazio, numa pasta nova, só para treinar: não tem token nenhum. Não mexa no .env de um bot que já funciona. Rode na VPS, depois de entrar com ssh: o chmod é do Linux e não existe no <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>. Se o chmod der erro, confira com pwd se você está na pasta treino-rede. Ainda sem VPS? Faça só o passo 3 agora e os comandos quando tiver a sua.</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir -p ~/treino-rede
 cd ~/treino-rede
 touch .env
@@ -103,7 +103,7 @@ ls -l .env
 chmod 600 .env
 ls -l .env</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Rode as quatro primeiras linhas e anote o começo da resposta do ls -l. Ele pode variar de um computador para outro.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Na VPS, rode as quatro primeiras linhas e anote o começo da resposta do ls -l. Ele pode variar de um computador para outro.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Rode as duas últimas e confira que o começo virou -rw-------.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>No plano de VPS, escreva as portas de entrada necessárias: a do SSH, com o número real ou "a conferir". Para o bot, nenhuma.</span></label></li>
   </ol>

@@ -1,7 +1,7 @@
 # Convenções cmd (edição 1.5.x, 10/10/2026)
 
 Pedido do Nei: começa com cmd, sem Linux; depois vai para a VPS usando Linux.
-Aulas 13–42 e 49 = cmd do Windows. Aulas 43–48 = Linux na VPS (aula 43 traz a tabela cmd → Linux).
+Aulas 13–42 e 49 = cmd do Windows. Aulas 43–48 = Linux na VPS (aula 44 traz a tabela cmd → Linux).
 Edição WSL preservada na tag `v1.4.1-wsl`. Fonte das convenções: oswork-quick/conteudo/pt.json (conferido nas docs em 07/10).
 
 ## Tabela de troca
@@ -32,7 +32,7 @@ Edição WSL preservada na tag `v1.4.1-wsl`. Fonte das convenções: oswork-quic
 
 - Depois de todo `winget install`: fechar e abrir o cmd (PATH). Primeiro winget pode pedir para aceitar termos: Y.
 - Colar no cmd: botão direito do mouse ou Ctrl+V.
-- Mac: só uma nota `details.mais` na aula 13 (Terminal, pwd/ls; tabela na aula 43).
+- Mac: só uma nota `details.mais` na aula 13 (Terminal, pwd/ls; tabela na aula 44).
 - Termo `cmd` precisa de `.gterm` em toda aula que o cita (perfil técnico). Cuidado: "Cmd+V" casa com o termo.
 - Nomes de exemplo: Lúcia (professora), Denise (coordenadora) → `C:\Users\lucia`, `C:\Users\denise`.
 - type mostra acento trocado (cp850): nota 'use notepad arq' na 1ª ocorrência (aula 17)

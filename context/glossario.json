@@ -133,7 +133,7 @@
     "formas": [
       "Bash"
     ],
-    "def": "Linguagem de comandos do terminal no Linux e no macOS. Os comandos deste curso são escritos para ele."
+    "def": "Linguagem de comandos do terminal no Linux. O curso a usa na VPS, no módulo 8."
   },
   "diretorio": {
     "formas": [
@@ -369,26 +369,26 @@
     "formas": [
       "chmod"
     ],
-    "def": "Comando que define quem pode ler ou alterar um arquivo."
+    "def": "Comando do Linux que define quem pode ler ou alterar um arquivo."
   },
   "pasta-pessoal": {
     "formas": [
       "pasta pessoal"
     ],
-    "def": "A sua pasta principal no computador, onde ficam Documentos, Downloads e as demais. No terminal ela aparece como ~ (til)."
+    "def": "A pasta com o seu nome de usuário, onde ficam Documentos, Downloads e Imagens. No Windows: C:\\Users\\seu-nome; no cmd, %USERPROFILE%."
   },
   "caminho": {
     "formas": [
       "caminho",
       "caminhos"
     ],
-    "def": "Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config."
+    "def": "Endereço de uma pasta ou de um arquivo. No Windows, os nomes vão separados por barra invertida, como C:\\Users\\denise\\projetos\\config; na VPS, por barra normal."
   },
   "nano": {
     "formas": [
       "nano"
     ],
-    "def": "Editor de texto que abre dentro do terminal. Ctrl+O grava o arquivo e Ctrl+X sai."
+    "def": "Editor de texto que abre dentro do terminal do Linux, na VPS. Ctrl+O grava o arquivo e Ctrl+X sai."
   },
   "variavel": {
     "formas": [
@@ -535,16 +535,40 @@
     ],
     "def": "Teste que o próprio bot do kit roda sem Telegram e sem internet, com mensagens de mentira, para conferir as suas regras."
   },
-  "wsl": {
-    "formas": [
-      "WSL"
-    ],
-    "def": "Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux."
-  },
   "shell": {
     "formas": [
       "shell"
     ],
     "def": "Programa que interpreta os comandos digitados no terminal."
+  },
+  "cmd": {
+    "formas": [
+      "cmd"
+    ],
+    "def": "O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele."
+  },
+  "winget": {
+    "formas": [
+      "winget"
+    ],
+    "def": "Instalador de programas que já vem no Windows 10 e 11. Você digita no cmd o nome oficial do programa e ele baixa e instala."
+  },
+  "npm": {
+    "formas": [
+      "npm"
+    ],
+    "def": "O instalador de pacotes que vem com o Node.js. O Codex é publicado nele com o nome @openai/codex."
+  },
+  "node": {
+    "formas": [
+      "Node.js"
+    ],
+    "def": "Node.js: programa que roda ferramentas escritas em JavaScript, como o Codex. Vem junto com o npm."
+  },
+  "notepad": {
+    "formas": [
+      "notepad"
+    ],
+    "def": "O Bloco de Notas do Windows. No cmd, notepad seguido do nome do arquivo abre o arquivo nele; Ctrl+S grava."
   }
 }

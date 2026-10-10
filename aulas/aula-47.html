@@ -36,7 +36,7 @@
   <p>O campo Restart=on-failure religa o bot depois de uma falha. No kit, o usuário de exemplo é oswork; o usuário e as pastas precisam existir na VPS.</p>
   <p data-ex="professora">Lúcia trocou oswork pelo usuário de trabalho dela nos quatro campos. Depois mostrou só essas linhas na tela para conferir.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta bot do kit</span></div>
-<pre><code><span class="pr">$</span> grep -E "^(User|WorkingDirectory|EnvironmentFile|ExecStart|Restart)=" oswork-bot.service
+<pre><code><span class="pr">usuario@nome-da-vps:~$</span> grep -E "^(User|WorkingDirectory|EnvironmentFile|ExecStart|Restart)=" oswork-bot.service
 <span class="out">User=oswork
 WorkingDirectory=/home/oswork/projetos/oswork/materiais/bot
 EnvironmentFile=/home/oswork/projetos/oswork/materiais/bot/.env
@@ -52,10 +52,10 @@ Restart=on-failure</span></code></pre>
   <p>O <span class="gterm" data-gl="sudo" data-def="Comando que executa a instrução seguinte com permissão de administrador. Pede a sua senha.">sudo</span> aparece nos dois primeiros porque eles mudam a máquina. O terceiro só lê.</p>
   <p data-ex="coordenadora">Denise viu "active (running)" no status. Mesmo assim, só deu o passo por concluído depois de mandar /status no <span class="gterm" data-gl="telegram" data-def="Aplicativo de mensagens. No curso, ele vira a tela de conversa com um bot seu, no módulo 7.">Telegram</span> e receber a resposta.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · na VPS</span></div>
-<pre><code><span class="pr">$</span> sudo cp oswork-bot.service /etc/systemd/system/
-<span class="pr">$</span> sudo systemctl daemon-reload
-<span class="pr">$</span> sudo systemctl enable --now oswork-bot
-<span class="pr">$</span> systemctl status oswork-bot --no-pager
+<pre><code><span class="pr">usuario@nome-da-vps:~$</span> sudo cp oswork-bot.service /etc/systemd/system/
+<span class="pr">usuario@nome-da-vps:~$</span> sudo systemctl daemon-reload
+<span class="pr">usuario@nome-da-vps:~$</span> sudo systemctl enable --now oswork-bot
+<span class="pr">usuario@nome-da-vps:~$</span> systemctl status oswork-bot --no-pager
 <span class="out">● oswork-bot.service - OSWork bot de treino restrito
      Active: active (running) since [data e hora]</span></code></pre>
 <p class="tela-nota">A primeira linha copia a unidade. O daemon-reload faz o systemd reler as unidades. "active (running)" quer dizer "ativo, rodando". O enable --now liga agora e deixa ligado para os próximos reinícios.</p></div>
@@ -78,8 +78,8 @@ Restart=on-failure</span></code></pre>
   <p>Religar não conserta um erro que se repete. Se o bot cai de novo, pare o serviço e procure a causa antes de insistir.</p>
   <p data-ex="professora">No log, Lúcia viu a parada e a volta do bot, com hora. Em outro dia, viu "processo encerrado para diagnóstico" e parou o serviço antes de tentar de novo.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · na VPS</span></div>
-<pre><code><span class="pr">$</span> sudo systemctl restart oswork-bot
-<span class="pr">$</span> journalctl -u oswork-bot -n 50 --no-pager
+<pre><code><span class="pr">usuario@nome-da-vps:~$</span> sudo systemctl restart oswork-bot
+<span class="pr">usuario@nome-da-vps:~$</span> journalctl -u oswork-bot -n 50 --no-pager
 <span class="out">[data] nome-da-vps systemd[1]: Stopped oswork-bot.service - OSWork bot de treino restrito.
 [data] nome-da-vps systemd[1]: Started oswork-bot.service - OSWork bot de treino restrito.</span></code></pre>
 <p class="tela-nota">Stopped e Started: parou e ligou, com data e hora. Com o bot funcionando, ele não escreve mais nada.</p></div>
@@ -90,25 +90,38 @@ Restart=on-failure</span></code></pre>
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Adapte a unidade do kit ao seu usuário</h3>
-  <p class="pgoal">Pronto quando o grep mostrar o seu usuário e o seu caminho nos quatro campos. Cerca de 10 minutos, no computador, com um editor de texto e o terminal.</p>
-  <p class="psafe">Você edita um arquivo de texto, sem ligar nada: sem VPS, nada roda. Trabalhe numa cópia descompactada do kit. Errou? Descompacte de novo. No Windows, faça tudo no terminal do <span class="gterm" data-gl="wsl" data-def="Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux.">WSL</span>, do módulo 3.</p>
-  <p><b>Onde está a unidade:</b> no kit do curso, o oswork-kit.zip da <a href="https://inematds.github.io/oswork/materiais/" target="_blank" rel="noopener">página de materiais do OSWork</a>. Descompacte em <code>~/projetos/oswork-kit</code>: a unidade fica em <code>~/projetos/oswork-kit/bot</code>. No Windows, o zip baixa na pasta Downloads; no WSL, traga com <code>cp /mnt/c/Users/SeuNome/Downloads/oswork-kit.zip ~/projetos/</code> e depois <code>cd ~/projetos</code> e <code>unzip oswork-kit.zip -d oswork-kit</code>. O caminho que vem no kit é o do repositório do curso; troque pelo lugar onde o bot vai morar na VPS. No molde fica /home mesmo, também no Mac: é o caminho da VPS.</p>
+  <p class="pgoal">Pronto quando o grep mostrar o seu usuário e o seu caminho nos quatro campos. Cerca de 10 minutos, na VPS, pelo ssh da aula 44.</p>
+  <p class="psafe">Você edita um arquivo de texto, sem ligar nada: sem VPS, nada roda. Trabalhe numa cópia descompactada do kit. Errou? Descompacte de novo. Ainda sem VPS? Use a versão do Bloco de Notas, no quadro depois do passo a passo.</p>
+  <p><b>Onde está a unidade:</b> no kit do curso, o oswork-kit.zip da <a href="https://inematds.github.io/oswork/materiais/" target="_blank" rel="noopener">página de materiais do OSWork</a>. Na VPS, o bloco abaixo baixa o kit com o curl, descompacta com o <span class="gterm" data-gl="python" data-def="Linguagem de programação. O bot do kit do curso é escrito nela.">Python</span>, que já vem no <span class="gterm" data-gl="ubuntu" data-def="Versão popular do Linux, comum em servidores.">Ubuntu</span>, e abre a unidade no <span class="gterm" data-gl="nano" data-def="Editor de texto que abre dentro do terminal do Linux, na VPS. Ctrl+O grava o arquivo e Ctrl+X sai.">nano</span>, o editor que roda dentro do terminal. O caminho que vem no kit é o do repositório do curso; troque pelo lugar onde o bot vai morar na VPS.</p>
+  <p><b>Rode na VPS</b>, para baixar e abrir:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir -p ~/projetos/oswork-kit
+cd ~/projetos/oswork-kit
+curl -fsSL -o oswork-kit.zip https://inematds.github.io/oswork/materiais/oswork-kit.zip
+python3 -m zipfile -e oswork-kit.zip .
+cd bot
+nano oswork-bot.service</pre></div>
   <p><b>Cole no arquivo</b>, no lugar das quatro linhas do kit:</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">User=&lt;seu usuário de trabalho&gt;
 WorkingDirectory=/home/&lt;usuário&gt;/projetos/oswork-kit/bot
 EnvironmentFile=/home/&lt;usuário&gt;/projetos/oswork-kit/bot/.env
 ExecStart=/usr/bin/python3 /home/&lt;usuário&gt;/projetos/oswork-kit/bot/bot.py</pre></div>
-  <p><b>Rode no terminal</b>, para conferir:</p>
+  <p><b>Rode na VPS</b>, depois de salvar, para conferir:</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/oswork-kit/bot
 grep -E "^(User|WorkingDirectory|EnvironmentFile|ExecStart)=" oswork-bot.service</pre></div>
   <details class="mais"><summary>Veja a unidade adaptada por uma coordenadora</summary>
     <p>User=denise<br>WorkingDirectory=/home/denise/projetos/oswork-kit/bot<br>EnvironmentFile=/home/denise/projetos/oswork-kit/bot/.env<br>ExecStart=/usr/bin/python3 /home/denise/projetos/oswork-kit/bot/bot.py</p>
   </details>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Na pasta bot, abra o arquivo com <code>nano oswork-bot.service</code>, no próprio terminal, e troque os quatro campos pelo molde, com o seu usuário. Para salvar, Ctrl+O e Enter; para sair, Ctrl+X.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Salve e rode a linha do grep no terminal, dentro da pasta bot.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Rode o bloco de baixar e abrir. No nano, troque os quatro campos pelo molde, com o seu usuário. Para salvar, Ctrl+O e Enter; para sair, Ctrl+X.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Rode o bloco de conferir, dentro da pasta bot.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Confira que nenhuma das quatro linhas ainda diz oswork. Anote no plano: nome da unidade, usuário e caminho.</span></label></li>
   </ol>
+  <details class="mais"><summary>Ainda sem VPS: edite no Bloco de Notas</summary>
+    <p>O kit da aula 38 já está no seu computador. No <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>, abra a unidade, troque os quatro campos e confira com o findstr, que faz o papel do grep. O caminho do molde continua com /home: é o da VPS, não o do Windows.</p>
+    <pre><code>cd %USERPROFILE%\projetos\oswork-kit\bot
+notepad oswork-bot.service
+findstr /b "User= WorkingDirectory= EnvironmentFile= ExecStart=" oswork-bot.service</code></pre>
+  </details>
   <p class="pdone">Você acabou de preparar a instrução que deixa o bot ligado sem depender da sua janela.</p>
 </section>
 
@@ -132,7 +145,7 @@ grep -E "^(User|WorkingDirectory|EnvironmentFile|ExecStart)=" oswork-bot.service
 <!--COMP-->
 <details class="complementar">
   <summary>Material complementar · Systemd supervisiona o processo<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
-  <section class="comp-sec"><h3>O que é</h3><p>systemd é o gerenciador de serviços de muitas distribuições Linux. Uma unidade descreve qual programa iniciar, com qual usuário e em qual pasta. Restart=on-failure reinicia após uma falha, mas não corrige um erro persistente. O kit fornece uma unidade parametrizada para o usuário oswork.</p><h3>Por que aprender</h3><p>Executar o bot numa sessão SSH pode encerrar o trabalho ao fechar a conexão. Supervisão permite reiniciar com a máquina e centralizar <span class="gterm" data-def="Registro do que um programa fez, linha por linha, com data e hora. É onde se procura a causa de um erro." data-gl="log">logs</span>. Ela não substitui alertas, limites ou análise da causa.</p><h3>Conceitos-chave</h3><p>Unidade; usuário de serviço; <span class="gterm" data-def="Outro nome para pasta, usado no terminal." data-gl="diretorio">diretório</span>; reinício; journal.</p><h4>Na prática</h4><p>Depois de adaptar <span class="gterm" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config." data-gl="caminho">caminhos</span>, use sudo systemctl daemon-reload e sudo systemctl enable --now oswork-bot. Consulte systemctl status e journalctl -u oswork-bot -n 50 --no-pager.</p><h4>Experimente agora</h4><p>Faça um reinício controlado com systemctl restart, confira /status e registre o horário. Se falhar, pare o serviço antes de ficar repetindo tentativas sem diagnóstico.</p><figure class="comp-fig"><ul><li>Pasta local</li><li><span class="gterm" data-def="Pasta de projeto acompanhada pelo Git, com todo o histórico de versões." data-gl="repositorio">Repositório</span></li><li>VPS</li><li>systemd</li></ul><figcaption>O mesmo trabalho, quatro lugares. O systemd é o que faz a rotina sobreviver a um reinício.</figcaption></figure></section>
+  <section class="comp-sec"><h3>O que é</h3><p>systemd é o gerenciador de serviços de muitas distribuições Linux. Uma unidade descreve qual programa iniciar, com qual usuário e em qual pasta. Restart=on-failure reinicia após uma falha, mas não corrige um erro persistente. O kit fornece uma unidade parametrizada para o usuário oswork.</p><h3>Por que aprender</h3><p>Executar o bot numa sessão SSH pode encerrar o trabalho ao fechar a conexão. Supervisão permite reiniciar com a máquina e centralizar <span class="gterm" data-def="Registro do que um programa fez, linha por linha, com data e hora. É onde se procura a causa de um erro." data-gl="log">logs</span>. Ela não substitui alertas, limites ou análise da causa.</p><h3>Conceitos-chave</h3><p>Unidade; usuário de serviço; <span class="gterm" data-def="Outro nome para pasta, usado no terminal." data-gl="diretorio">diretório</span>; reinício; journal.</p><h4>Na prática</h4><p>Depois de adaptar <span class="gterm" data-def="Endereço de uma pasta ou de um arquivo. No Windows, os nomes vão separados por barra invertida, como C:\Users\denise\projetos\config; na VPS, por barra normal." data-gl="caminho">caminhos</span>, use sudo systemctl daemon-reload e sudo systemctl enable --now oswork-bot. Consulte systemctl status e journalctl -u oswork-bot -n 50 --no-pager.</p><h4>Experimente agora</h4><p>Faça um reinício controlado com systemctl restart, confira /status e registre o horário. Se falhar, pare o serviço antes de ficar repetindo tentativas sem diagnóstico.</p><figure class="comp-fig"><ul><li>Pasta local</li><li><span class="gterm" data-def="Pasta de projeto acompanhada pelo Git, com todo o histórico de versões." data-gl="repositorio">Repositório</span></li><li>VPS</li><li>systemd</li></ul><figcaption>O mesmo trabalho, quatro lugares. O systemd é o que faz a rotina sobreviver a um reinício.</figcaption></figure></section>
 </details>
 <!--/COMP-->
 <nav class="lnav"><a href="#aula-46">← aula anterior</a><a class="next" href="#aula-48">próxima aula →</a></nav>
