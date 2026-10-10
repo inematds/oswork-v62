@@ -107,8 +107,8 @@
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Monte a pasta config e distribua cinco notas</h3>
   <p class="pgoal">Pronto quando o dir /b mostrar os quatro arquivos e você tiver escrito, no papel, o arquivo de cada uma das cinco notas. Cerca de 10 minutos, no computador, no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> do módulo 3.</p>
-  <p class="psafe">Os modelos são arquivos de texto do kit do curso, e as notas são fictícias. Se você já escreveu num desses quatro arquivos, pule a linha dele: o curl grava por cima de um arquivo com o mesmo nome. Uma linha falhou? O curl mostra uma mensagem de erro logo abaixo dela; rode só aquela de novo. Não fez a aula 1 deste módulo? Rode antes: mkdir %USERPROFILE%\projetos\config</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\config
+  <p class="psafe">Os modelos são arquivos de texto do kit do curso, e as notas são fictícias. Se você já escreveu num desses quatro arquivos, pule a linha dele: o curl grava por cima de um arquivo com o mesmo nome. Uma linha falhou? O curl mostra uma mensagem de erro logo abaixo dela; rode só aquela de novo. Não fez a aula 1 deste módulo? Rode antes: mkdir "%USERPROFILE%\projetos\config"</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd "%USERPROFILE%\projetos\config"
 curl -fsSL https://inematds.github.io/oswork/materiais/memoria.md -o memoria.md
 curl -fsSL https://inematds.github.io/oswork/materiais/decisoes.md -o decisoes.md
 curl -fsSL https://inematds.github.io/oswork/materiais/dicas.md -o dicas.md
@@ -137,7 +137,7 @@ dir /b</pre></div>
   <div class="next-action">
     <p class="nak">Seu próximo passo</p>
     <p class="na-win">Você já sabe separar preferência, decisão, procedimento e falha, cada uma no seu arquivo.</p>
-    <p class="na-action">Hoje, abra o arquivo com notepad %USERPROFILE%\projetos\config\decisoes.md e acrescente uma decisão real da sua equipe no fim da tabela, copiando o formato das linhas da Lúcia no passo 4.</p>
+    <p class="na-action">Hoje, abra o arquivo com notepad "%USERPROFILE%\projetos\config\decisoes.md" e acrescente uma decisão real da sua equipe no fim da tabela, copiando o formato das linhas da Lúcia no passo 4.</p>
     <p class="na-hook">Na próxima aula: e a senha do sistema da escola, vai em qual desses arquivos? Em nenhum. Você vai ver onde ela fica.</p>
   </div>
 </div>

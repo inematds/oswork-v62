@@ -22,7 +22,7 @@
   <p>No <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>, basta o endereço e o nome da pasta nova. Clonar não executa nada. Mesmo assim, leia antes de rodar qualquer programa que veio no clone, inclusive de um repositório conhecido.</p>
   <p data-ex="coordenadora">A rede de ensino guarda os modelos de relatório num repositório público. Denise clonou numa pasta só para isso, longe da pasta dos relatórios dela.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
-<pre><code><span class="pr">C:\Users\lucia&gt;</span> cd %USERPROFILE%\projetos
+<pre><code><span class="pr">C:\Users\lucia&gt;</span> cd "%USERPROFILE%\projetos"
 <span class="pr">C:\Users\lucia\projetos&gt;</span> git clone https://github.com/inematds/oswork-v62.git clone-curso
 <span class="out">Cloning into 'clone-curso'...</span>
 <span class="pr">C:\Users\lucia\projetos&gt;</span> cd clone-curso</code></pre>
@@ -104,10 +104,10 @@ and have 1 and 1 different commits each, respectively.</span></code></pre>
   <p class="pgoal">Pronto quando o status disser "up to date with 'origin/main'" e o pull responder "Already up to date." Cerca de 8 minutos, no computador e com internet.</p>
   <p class="psafe">O clone vai para uma pasta nova, clone-curso, separada da pasta de treino. Nenhum programa é executado. Se aparecer "destination path 'clone-curso' already exists", você já clonou antes: siga do bloco 2.</p>
   <p><b>Bloco 1</b> · clone:</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd "%USERPROFILE%\projetos"
 git clone https://github.com/inematds/oswork-v62.git clone-curso</pre></div>
   <p><b>Bloco 2</b> · entre e confira:</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\clone-curso
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd "%USERPROFILE%\projetos\clone-curso"
 git status
 git log --oneline -3</pre></div>
   <p><b>Bloco 3</b> · atualize com freio:</p>

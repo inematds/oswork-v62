@@ -110,12 +110,12 @@ cat ~/restauracao-teste/vendas.csv</pre></div>
   </ol>
   <details class="mais"><summary>Ainda sem VPS: o mesmo ensaio no cmd</summary>
     <p>Use o kit da aula 38. O copy faz o papel do cp, o fc o do diff e o type o do cat. Sem diferença, o fc responde "nenhuma diferença encontrada".</p>
-    <pre><code>cd %USERPROFILE%\projetos\oswork-kit\bot
-mkdir %USERPROFILE%\copias-oswork %USERPROFILE%\restauracao-teste
-copy vendas.csv %USERPROFILE%\copias-oswork\vendas-copia-1.csv
-copy %USERPROFILE%\copias-oswork\vendas-copia-1.csv %USERPROFILE%\restauracao-teste\vendas.csv
-fc vendas.csv %USERPROFILE%\restauracao-teste\vendas.csv
-type %USERPROFILE%\restauracao-teste\vendas.csv</code></pre>
+    <pre><code>cd "%USERPROFILE%\projetos\oswork-kit\bot"
+mkdir "%USERPROFILE%\copias-oswork" "%USERPROFILE%\restauracao-teste"
+copy vendas.csv "%USERPROFILE%\copias-oswork\vendas-copia-1.csv"
+copy "%USERPROFILE%\copias-oswork\vendas-copia-1.csv" "%USERPROFILE%\restauracao-teste\vendas.csv"
+fc vendas.csv "%USERPROFILE%\restauracao-teste\vendas.csv"
+type "%USERPROFILE%\restauracao-teste\vendas.csv"</code></pre>
   </details>
   <p class="pdone">Você acabou de provar, e não só supor, que a sua cópia volta inteira.</p>
 </section>

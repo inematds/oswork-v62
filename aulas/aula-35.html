@@ -101,7 +101,7 @@ Pasta para praticar o Git.</span>
   <p class="pgoal">Pronto quando o README mostrar de novo o título que tinha antes do bloco 1 e o log tiver três linhas, a do topo começando com "Revert". Cerca de 10 minutos, no computador.</p>
   <p class="psafe">Tudo acontece na pasta treino-git e nada sai do computador. O revert não apaga nenhuma versão. Se o log do bloco 1 não mostrar a mudança de treino no topo, não rode o bloco 2. Se o revert responder “Your local changes … would be overwritten”, havia uma mudança sem salvar no README e ele não fez nada: rode “git status” e peça ajuda antes de descartar qualquer coisa.</p>
   <p><b>Antes</b> · confira que não há nada sem salvar (a resposta deve terminar em <code>working tree clean</code>):</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\treino-git
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd "%USERPROFILE%\projetos\treino-git"
 git status</pre></div>
   <p><b>Bloco 1</b> · faça a mudança e salve. A primeira linha reescreve o README inteiro, com o título novo (cada <code>&amp;</code> começa uma linha):</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">(echo # Treino de Git 2&amp; echo.&amp; echo Pasta para praticar o Git.)&gt; README.md
@@ -114,8 +114,8 @@ git log --oneline</pre></div>
 type README.md
 git log --oneline</pre></div>
   <details class="mais"><summary>Não fez as aulas anteriores do módulo? Rode isto antes</summary>
-    <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir %USERPROFILE%\projetos\treino-git
-cd %USERPROFILE%\projetos\treino-git
+    <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir "%USERPROFILE%\projetos\treino-git"
+cd "%USERPROFILE%\projetos\treino-git"
 git init -b main
 git config user.name "Seu Nome"
 git config user.email "seu-email@exemplo.com"

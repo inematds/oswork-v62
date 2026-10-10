@@ -34,12 +34,12 @@
   <h2><span class="n">2</span>%USERPROFILE% é o apelido da sua pasta pessoal</h2>
   <p>No <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>, <code>%USERPROFILE%</code> representa a sua <span class="gterm" data-gl="pasta-pessoal" data-def="A pasta com o seu nome de usuário, onde ficam Documentos, Downloads e Imagens. No Windows: C:\Users\seu-nome.">pasta pessoal</span>. É uma palavra só, entre sinais de porcentagem, e o Windows troca pelo endereço certo. Dentro dela você vai criar uma pasta projetos, que reúne trabalhos independentes.</p>
   <p>O <span class="gterm" data-gl="caminho" data-def="Endereço de uma pasta ou de um arquivo. No Windows, os nomes vão separados por barra invertida, como C:\Users\denise\projetos\config; na VPS, por barra normal.">caminho</span> C:\Users\denise\projetos\config se lê em ordem: disco C, pasta pessoal de Denise, depois projetos, depois config.</p>
-  <p data-ex="coordenadora">Denise digitou <code>cd %USERPROFILE%</code> e depois <code>cd</code>, como no módulo 3. Viu o endereço completo da pasta pessoal dela.</p>
+  <p data-ex="coordenadora">Denise digitou <code>cd "%USERPROFILE%"</code> e depois <code>cd</code>, como no módulo 3. Viu o endereço completo da pasta pessoal dela.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
-<pre><code><span class="pr">C:\&gt;</span> cd %USERPROFILE%
+<pre><code><span class="pr">C:\&gt;</span> cd "%USERPROFILE%"
 <span class="pr">C:\Users\denise&gt;</span> cd
 <span class="out">C:\Users\denise</span></code></pre>
-<p class="tela-nota">cd %USERPROFILE% leva você para a pasta pessoal, de qualquer lugar; o cd sozinho mostra onde você está.</p></div>
+<p class="tela-nota">cd "%USERPROFILE%" leva você para a pasta pessoal, de qualquer lugar; o cd sozinho mostra onde você está.</p></div>
   <figcaption>O endereço muda de computador para computador. O %USERPROFILE% vale em todos.</figcaption></figure>
 </section>
 
@@ -104,7 +104,7 @@ meu-primeiro-projeto</span>
       <li><span class="pin">2</span><span>No painel lateral, elas ficam em Este Computador › Disco Local (C:) › Usuários › o seu nome › projetos.</span></li>
     </ol>
   </figure>
-  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O comando é comprido porque cria quatro pastas de uma vez. No celular ele parece quebrado em várias linhas; é uma linha só, e o botão copiar leva do jeito certo. Para colar no cmd, use o botão direito do mouse ou Ctrl+V. Apareceu "Já existe uma subpasta ou um arquivo"? A pasta já existia, de antes: as outras foram criadas, siga em frente. O explorer . abriu a pasta Documentos? Você não estava em projetos: rode cd %USERPROFILE%\projetos e repita. Prefere o mouse? Na janela que abriu, crie as pastas com botão direito › Novo › Pasta; o dir do cmd passa a mostrá-las.</p></div>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O comando é comprido porque cria quatro pastas de uma vez. No celular ele parece quebrado em várias linhas; é uma linha só, e o botão copiar leva do jeito certo. Para colar no cmd, use o botão direito do mouse ou Ctrl+V. Apareceu "Já existe uma subpasta ou um arquivo"? A pasta já existia, de antes: as outras foram criadas, siga em frente. O explorer . abriu a pasta Documentos? Você não estava em projetos: rode cd "%USERPROFILE%\projetos" e repita. Prefere o mouse? Na janela que abriu, crie as pastas com botão direito › Novo › Pasta; o dir do cmd passa a mostrá-las.</p></div>
 </section>
 
 <section class="practice" data-mode="tarefa">
@@ -112,7 +112,7 @@ meu-primeiro-projeto</span>
   <h3 class="ph">Crie a árvore do projeto de treino</h3>
   <p class="pgoal">Pronto quando o primeiro dir mostrar config e meu-primeiro-projeto, o segundo mostrar entradas e saidas, e a janela de arquivos mostrar as mesmas pastas. Cerca de 9 minutos, no computador.</p>
   <p class="psafe">Os comandos só criam pastas vazias dentro da sua pasta pessoal; nada é apagado. Criou meu-primeiro-projeto no módulo 3? Tudo bem, o que já está lá continua. Apareceu outra mensagem de erro? Pare, confira se colou o bloco inteiro e tente de novo uma vez.</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd "%USERPROFILE%"
 mkdir projetos\config projetos\meu-primeiro-projeto\entradas projetos\meu-primeiro-projeto\saidas
 dir /b projetos
 dir /b projetos\meu-primeiro-projeto
@@ -120,7 +120,7 @@ cd projetos
 explorer .</pre></div>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>Desenhe no papel a árvore: projetos, com config e meu-primeiro-projeto; dentro do projeto, entradas e saidas.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Abra o cmd. Copie o bloco inteiro (seis linhas), cole com o botão direito do mouse e, se a última linha não rodar sozinha, aperte Enter.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Abra o cmd. Copie o bloco inteiro (seis linhas) e cole com Ctrl+V ou o botão direito. Aviso de texto com várias linhas? Clique em "Colar mesmo assim". Se a última linha não rodar sozinha, aperte Enter.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Compare a resposta com o seu desenho. Se o projeto já tinha arquivos do módulo 3, eles também aparecem, e está certo.</span></label></li>
     <li><label><input type="checkbox" data-ptask="4"> <span>Confira a janela de arquivos que abriu: config e meu-primeiro-projeto estão lá, com o endereço C:\Users\o seu nome\projetos no alto.</span></label></li>
   </ol>

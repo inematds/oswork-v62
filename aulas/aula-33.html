@@ -89,7 +89,7 @@ Untracked files:
   <p class="pgoal">Pronto quando o log mostrar uma linha com a sua mensagem e o status responder "nothing to commit, working tree clean". Cerca de 10 minutos, no computador.</p>
   <p class="psafe">Tudo fica na pasta treino-git, e nada sai do computador. Troque o nome e o e-mail pelos seus, ou por fictícios. Se o status ainda listar notas-privadas.txt, não salve. Em "Untracked files", confira o nome escrito no .gitignore. Em "Changes to be committed", você a separou antes: rode “git rm --cached notas-privadas.txt”, que tira do monte sem apagar o arquivo, e confira o status de novo. Colou o bloco 1 sem trocar o nome? Rode de novo com o seu; o novo substitui o anterior.</p>
   <p><b>Bloco 1</b> · troque o nome e o e-mail antes de rodar:</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\treino-git
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd "%USERPROFILE%\projetos\treino-git"
 git config user.name "Seu Nome"
 git config user.email "seu-email@exemplo.com"</pre></div>
   <p><b>Bloco 2</b> · a lista do que não guardar:</p>
@@ -101,8 +101,8 @@ git commit -m "Cria README e lista do que não guardar"
 git log --oneline
 git status</pre></div>
   <details class="mais"><summary>Não fez as aulas anteriores do módulo? Rode isto antes</summary>
-    <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir %USERPROFILE%\projetos\treino-git
-cd %USERPROFILE%\projetos\treino-git
+    <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir "%USERPROFILE%\projetos\treino-git"
+cd "%USERPROFILE%\projetos\treino-git"
 git init -b main
 (echo # Treino de Git&amp; echo.&amp; echo Pasta para praticar o Git.)&gt; README.md
 echo rascunho pessoal, fica fora do Git&gt; notas-privadas.txt</pre></div>

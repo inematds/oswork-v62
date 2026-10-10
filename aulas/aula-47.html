@@ -118,7 +118,7 @@ grep -E "^(User|WorkingDirectory|EnvironmentFile|ExecStart)=" oswork-bot.service
   </ol>
   <details class="mais"><summary>Ainda sem VPS: edite no Bloco de Notas</summary>
     <p>O kit da aula 38 já está no seu computador. No <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>, abra a unidade, troque os quatro campos e confira com o findstr, que faz o papel do grep. O caminho do molde continua com /home: é o da VPS, não o do Windows.</p>
-    <pre><code>cd %USERPROFILE%\projetos\oswork-kit\bot
+    <pre><code>cd "%USERPROFILE%\projetos\oswork-kit\bot"
 notepad oswork-bot.service
 findstr /b "User= WorkingDirectory= EnvironmentFile= ExecStart=" oswork-bot.service</code></pre>
   </details>

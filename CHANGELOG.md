@@ -1,5 +1,12 @@
 # Changelog — OSWork v6.2
 
+## 1.5.1 — 2026-10-10
+
+- No Windows, o curso passa a usar o **cmd** (Prompt de Comando), sem WSL/Linux, das aulas 13 a 42 e na 49: `cd` sozinho e `dir` no lugar de `pwd` e `ls`, `%USERPROFILE%\projetos`, `explorer .`, `notepad` no lugar do `nano`, `type`, `copy`/`xcopy`, `fc`, `findstr`; Codex por `winget` (Node.js) + `npm install -g @openai/codex`; Git, gh e Python por `winget`; bot com `py`.
+- Módulo 8 (VPS) continua em Linux: a aula 44 traz a tabela cmd → Linux na primeira entrada por `ssh`; as práticas 45–48 rodam na VPS, com alternativa no cmd para quem ainda não tem VPS.
+- Arquivos de treino hospedados em `materiais/treino{,-en,-es}/` (baixados com `curl`, sem acento quebrado pelo cmd).
+- Edição WSL preservada na tag `v1.4.1-wsl`. Pedido do Nei em 10/10/2026: "começa com cmd sem linux, depois vai pra uma VPS usando linux".
+
 ## 1.4.1 — 2026-10-07
 
 - Aula 49 (módulo 6, 7ª aula): chave SSH, `gh auth login` com SSH, repositório público ou privado (`gh repo create`) e GitHub Pages, com prática de publicar uma página de treino. Leitor simulado em 3 rodadas (5 → 7,5 → ver `context/leitor-simulado.md`).

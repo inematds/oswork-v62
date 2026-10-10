@@ -83,7 +83,7 @@
   <p data-ex="coordenadora">Denise acrescentou ao AGENTS.md da frequência: "Antes de ler, confira se a planilha existe. Se faltar, pare e diga qual arquivo falta." Na semana seguinte, o agente parou e avisou.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
 <pre><code>
-<span class="pr">C:\Users\denise&gt;</span> cd %USERPROFILE%\projetos\meu-primeiro-projeto
+<span class="pr">C:\Users\denise&gt;</span> cd "%USERPROFILE%\projetos\meu-primeiro-projeto"
 <span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> dir /b entradas\
 <span class="out">vendas.csv</span>
 <span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> dir /b entradas\vendas-outubro.csv
@@ -104,7 +104,7 @@
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Antes de ler um arquivo de entradas/, confira se ele existe. Se faltar, pare e diga qual arquivo falta.</pre></div>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>No <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>, rode os comandos do quadro do passo 4 e veja a resposta para o arquivo que falta.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Abra o arquivo com notepad %USERPROFILE%\projetos\config\falhas.md. Se ele já tem a tabela, como o do módulo 4, cole só a última linha do molde no fim. Se está vazio, cole as três linhas. Preencha as lacunas.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Abra o arquivo com notepad "%USERPROFILE%\projetos\config\falhas.md". Se ele já tem a tabela, como o do módulo 4, cole só a última linha do molde no fim. Se está vazio, cole as três linhas. Preencha as lacunas.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Cole a regra do segundo molde como uma linha nova no AGENTS.md da pasta de treino e salve. Só depois digite codex, para ele ler a regra nova, e peça "gere o relatório de entradas/vendas-outubro.csv". O arquivo não existe de propósito: confira que ele para, diz qual arquivo falta e não inventa números.</span></label></li>
   </ol>
   <p class="pdone">Você acabou de transformar uma falha numa proteção pequena, registrada onde a próxima execução vai ler.</p>

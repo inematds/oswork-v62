@@ -113,20 +113,20 @@ Não alterei nenhum arquivo.</p>
   <p class="psafe">Os três comandos só leem e listam; nada é alterado. O pedido ao Codex diz "não altere nada". Se o Codex pedir autorização para mudar algum arquivo, recuse. Sem o Codex ainda? Faça só os passos 1 e 2 e anote o que encontrou.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
 <pre><code>
-<span class="pr">C:\Users\denise&gt;</span> cd %USERPROFILE%\projetos\meu-primeiro-projeto
+<span class="pr">C:\Users\denise&gt;</span> cd "%USERPROFILE%\projetos\meu-primeiro-projeto"
 <span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> dir /a /b
 <span class="out">AGENTS.md
 entradas
 README.md
 saidas</span>
-<span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> type %USERPROFILE%\.codex\AGENTS.md
+<span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> type "%USERPROFILE%\.codex\AGENTS.md"
 <span class="out">O sistema não pode encontrar o arquivo especificado.</span></code></pre>
 <p class="tela-nota">O /a do dir lista também os arquivos ocultos. Procure um AGENTS.override.md: se aparecer, abra e veja se ainda deve existir. A última linha diz que o arquivo não existe: não há global. Se ele existir, o type mostra o texto dele.</p></div>
   <figcaption>A sua lista pode ter mais arquivos, como os que você criou no módulo 4. O %USERPROFILE% vira a sua pasta pessoal, com o seu nome de usuário.</figcaption></figure>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Resuma as instruções que você carregou para esta pasta e diga de qual arquivo veio cada uma. Não altere nada.</pre></div>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>No cmd, entre na pasta de treino e rode dir /a /b. Anote se existe AGENTS.override.md.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Rode type %USERPROFILE%\.codex\AGENTS.md e anote se há global e o que ele diz.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Rode type "%USERPROFILE%\.codex\AGENTS.md" e anote se há global e o que ele diz.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Digite codex, cole o pedido e compare cada regra do resumo com o arquivo de onde ela diz ter vindo. Se o Codex fizer alguma pergunta ao abrir, responda como no módulo 3. Para sair, aperte Ctrl+C (duas vezes, se ele pedir): fecha o Codex e não desfaz nada.</span></label></li>
   </ol>
   <p class="pdone">Você acabou de rastrear de onde vem cada instrução que o agente segue naquela pasta.</p>

@@ -28,7 +28,7 @@ Enter file in which to save the key (C:\Users\lucia/.ssh/id_ed25519):
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 Your public key has been saved in C:\Users\lucia/.ssh/id_ed25519.pub</span>
-<span class="pr">C:\Users\lucia&gt;</span> cd %USERPROFILE%\.ssh
+<span class="pr">C:\Users\lucia&gt;</span> cd "%USERPROFILE%\.ssh"
 <span class="pr">C:\Users\lucia\.ssh&gt;</span> dir /b
 <span class="out">id_ed25519
 id_ed25519.pub</span>
@@ -39,7 +39,7 @@ id_ed25519.pub</span>
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">2</span>O gh entra na conta e leva o cadeado</h2>
-  <p>O <span class="gterm" data-gl="gh" data-def="Programa oficial do GitHub para o terminal. Entra na sua conta, cria repositórios e liga a página, sem abrir o site.">gh</span> é o GitHub dentro do terminal. Primeiro você o coloca no computador com o <span class="gterm" data-gl="winget" data-def="Instalador de programas que já vem no Windows 10 e 11. Você digita no cmd o nome oficial do programa e ele baixa e instala.">winget</span>. Depois, feche e abra o cmd, para a janela nova encontrar o gh. Se o Windows perguntar se o programa pode fazer alterações, clique em Sim.</p>
+  <p>O <span class="gterm" data-gl="gh" data-def="Programa oficial do GitHub para o terminal. Entra na sua conta, cria repositórios e liga a página, sem abrir o site.">gh</span> é o GitHub dentro do terminal. Primeiro você o coloca no computador com o <span class="gterm" data-gl="winget" data-def="Instalador de programas que já vem no Windows 10 e 11. Você digita no cmd o nome oficial do programa e ele baixa e instala.">winget</span>. Depois, feche e abra o cmd, para a janela nova encontrar o gh. Na primeira vez, o winget pergunta se você aceita os termos da loja: digite Y e tecle Enter. Se o Windows perguntar se o programa pode fazer alterações, clique em Sim.</p>
   <p>Depois, o gh auth login faz o <span class="gterm" data-gl="login" data-def="Entrar numa ferramenta com a sua conta, como a conta do ChatGPT. Os direitos e limites vêm do plano dessa conta.">login</span> na conta. Ele faz cinco perguntas em inglês. Cada pergunta mostra uma lista; o sinal &gt; marca a opção da vez. Escolha com as setas ↑↓ e confirme com Enter: GitHub.com, SSH, a sua chave .pub, Enter no título e o navegador. O terminal mostra um código de 8 caracteres, como ABCD-1234: aperte Enter e digite esse código no navegador que abrir. Se ele não abrir sozinho, abra github.com/login/device no navegador. Depois do código, o GitHub pede para autorizar: clique no botão verde Authorize. Ele só dá acesso ao gh, do seu computador.</p>
   <p data-ex="coordenadora">Denise fez a entrada com a conta da coordenação. Quando o gh ofereceu a chave, ela conferiu o nome: terminava em .pub. Só então confirmou.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
@@ -58,9 +58,11 @@ id_ed25519.pub</span>
 ! First copy your one-time code: ABCD-1234
 ✓ Logged in as denise-coordenacao</span>
 <span class="pr">C:\Users\denise&gt;</span> ssh -T git@github.com
-<span class="out">Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+<span class="out">The authenticity of host 'github.com (140.82.112.4)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 Hi denise-coordenacao! You've successfully authenticated, but GitHub does not provide shell access.</span></code></pre>
-<p class="tela-nota">Na primeira vez, o teste pergunta se você confia: digite yes e Enter. O "Hi" com o seu usuário é a prova de que o cadeado chegou. A frase em inglês depois da vírgula é normal: o GitHub não abre terminal para ninguém.</p></div>
+<p class="tela-nota">Na primeira vez, o teste mostra a impressão digital do GitHub e pergunta se você confia: digite yes e Enter. O "Hi" com o seu usuário é a prova de que o cadeado chegou. A frase em inglês depois da vírgula é normal: o GitHub não abre terminal para ninguém.</p></div>
   <figcaption>Quatro respostas e um código no navegador. Depois disso, o terminal envia para o GitHub sem pedir senha.</figcaption></figure>
   <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Apareceu "Permission denied (publickey)" no teste? O cadeado não foi entregue. Rode gh auth login de novo e escolha SSH e a chave .pub. O gh "não é reconhecido"? Feche e abra o cmd; o winget só vale na janela nova.</p></div>
 </section>
@@ -84,7 +86,7 @@ Hi denise-coordenacao! You've successfully authenticated, but GitHub does not pr
   <p>Cole o comando igual, sem trocar nada: o gh preenche sozinho o {owner} e o {repo}. O endereço segue sempre o mesmo molde: o seu usuário, github.io e o nome do repositório.</p>
   <p data-ex="coordenadora">Denise publicou a página de treino da coordenação e mandou o endereço para si mesma no WhatsApp. Abriu no ônibus, antes da reunião de pais.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando · dentro da pasta minha-pagina</span></div>
-<pre><code><span class="pr">C:\Users\lucia\projetos\minha-pagina&gt;</span> gh api repos/{owner}/{repo}/pages -X POST -f "source[branch]=main" -f "source[path]=/"
+<pre><code><span class="pr">C:\Users\denise\projetos\minha-pagina&gt;</span> gh api repos/{owner}/{repo}/pages -X POST -f "source[branch]=main" -f "source[path]=/"
 <span class="out">  "status": null,
   "html_url": "https://denise-coordenacao.github.io/minha-pagina/",</span></code></pre>
 <p class="tela-nota">A resposta é mais longa; procure a linha html_url: é o endereço da página. A palavra null aqui não é erro.</p></div>
@@ -102,8 +104,8 @@ Hi denise-coordenacao! You've successfully authenticated, but GitHub does not pr
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">gh auth login</pre></div>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">ssh -T git@github.com</pre></div>
   <p><b>Bloco 2</b> · a página de treino. Este pode ir inteiro: nenhum comando faz pergunta. Se o terminal avisar que o texto tem várias linhas, escolha colar mesmo assim; é normal. O curl baixa do site do curso uma página pronta, com o título Minha página de treino.</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir %USERPROFILE%\projetos\minha-pagina
-cd %USERPROFILE%\projetos\minha-pagina
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir "%USERPROFILE%\projetos\minha-pagina"
+cd "%USERPROFILE%\projetos\minha-pagina"
 curl -fsSL -o index.html https://inematds.github.io/oswork-v62/materiais/treino/index.html
 git init -b main
 git add index.html
@@ -111,9 +113,9 @@ git commit -m "Primeira página"
 gh repo create minha-pagina --public --source=. --push
 gh api repos/{owner}/{repo}/pages -X POST -f "source[branch]=main" -f "source[path]=/"</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Cole os quatro comandos do bloco 1, um de cada vez. Enter nas três perguntas da chave; depois do winget, feche e abra o cmd; no gh, setas e Enter, e o código de 8 caracteres vai no navegador (ou em github.com/login/device); no teste, yes.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole os quatro comandos do bloco 1, um de cada vez. Enter nas três perguntas da chave; no winget, Y para os termos se ele pedir, e depois feche e abra o cmd; no gh, setas e Enter, e o código de 8 caracteres vai no navegador (ou em github.com/login/device); no teste, yes.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Confira o teste: a resposta começa com Hi e o seu usuário.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="3"> <span>Cole o bloco 2 e copie o endereço da linha html_url.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Cole o bloco 2 e, se a última linha ficar parada, tecle Enter. Copie o endereço da linha html_url. Se o curl falhar, pare ali e rode o bloco de novo: as linhas seguintes dependem do index.html.</span></label></li>
     <li><label><input type="checkbox" data-ptask="4"> <span>Depois de alguns minutos, abra o endereço no celular e veja o texto grande: Minha página de treino.</span></label></li>
   </ol>
   <p class="pdone">Você acabou de ligar o seu computador à sua conta sem senha e publicou uma página que qualquer pessoa abre.</p>

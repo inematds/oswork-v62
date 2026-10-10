@@ -44,9 +44,9 @@
   <p>Resposta vazia quer dizer que a pasta não tem destino: um push não teria para onde ir.</p>
   <p data-ex="coordenadora">Antes de enviar os modelos de relatório, Denise rodou o comando. O endereço apontava para o <span class="gterm" data-gl="repositorio" data-def="Pasta de projeto acompanhada pelo Git, com todo o histórico de versões.">repositório</span> da rede de ensino, e não para o da coordenação. Ela parou ali.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
-<pre><code><span class="pr">C:\Users\lucia&gt;</span> cd %USERPROFILE%\projetos\treino-git
+<pre><code><span class="pr">C:\Users\lucia&gt;</span> cd "%USERPROFILE%\projetos\treino-git"
 <span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> git remote -v
-<span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> cd %USERPROFILE%\projetos\clone-curso
+<span class="pr">C:\Users\lucia\projetos\treino-git&gt;</span> cd "%USERPROFILE%\projetos\clone-curso"
 <span class="pr">C:\Users\lucia\projetos\clone-curso&gt;</span> git remote -v
 <span class="out">origin	https://github.com/inematds/oswork-v62.git (fetch)
 origin	https://github.com/inematds/oswork-v62.git (push)</span></code></pre>
@@ -101,13 +101,13 @@ Date:   Fri Sep 25 00:38:59 2026 -0300
   <p class="pgoal">Pronto quando você tiver a conferência preenchida para a pasta de treino e para o clone do curso, cada uma com a decisão e o motivo. Cerca de 10 minutos, no computador. Anote no papel ou no bloco de notas.</p>
   <p class="psafe">Só leitura: nenhum comando desta prática envia nada. Não rode o push. Na pasta de treino não há destino, e no clone a conta não é sua. A opção --no-pager só faz a resposta sair inteira, sem parar a tela. Não fez as aulas anteriores? Use qualquer pasta com histórico que você tenha.</p>
   <p><b>Bloco 1</b> · pasta de treino:</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\treino-git
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd "%USERPROFILE%\projetos\treino-git"
 git remote -v
 git status
 git --no-pager log --oneline
 git --no-pager show --stat</pre></div>
   <p><b>Bloco 2</b> · clone do curso:</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\clone-curso
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd "%USERPROFILE%\projetos\clone-curso"
 git remote -v
 git status
 git --no-pager show --stat</pre></div>

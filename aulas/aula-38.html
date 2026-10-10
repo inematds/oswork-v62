@@ -52,9 +52,9 @@
 </section>
 
 <section class="step" data-kind="ferramenta">
-  <h2><span class="n">3</span>Três comandos criam o .env, só seu</h2>
+  <h2><span class="n">3</span>Uma cópia do exemplo vira o seu .env</h2>
   <p>O kit do curso é o arquivo oswork-kit.zip; a prática baixa e descompacta com o <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>. Depois você entra na pasta bot, copia o exemplo e abre a cópia no Bloco de Notas para colar o token.</p>
-  <p>O .env mora dentro da sua pasta pessoal, em C:\Users\seu-nome. Outras contas do computador não abrem essa pasta. Se um dia a pasta for para o <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span>, o <span class="gterm" data-gl="gitignore" data-def="Arquivo que lista o que o Git não deve guardar, como senhas e arquivos temporários.">.gitignore</span> do módulo 4 deixa o .env de fora.</p>
+  <p>O .env mora dentro da sua pasta pessoal, em C:\Users\seu-nome. As outras contas comuns do computador não abrem essa pasta; só um administrador abre. Se um dia a pasta for para o <span class="gterm" data-gl="git" data-def="Programa que guarda o histórico das versões de uma pasta de projeto: o que mudou, quando e por quê.">Git</span>, o <span class="gterm" data-gl="gitignore" data-def="Arquivo que lista o que o Git não deve guardar, como senhas e arquivos temporários.">.gitignore</span> do módulo 4 deixa o .env de fora.</p>
   <p data-ex="professora">Lúcia rodou os três comandos e viu o .env ao lado do .env.example. Depois colou o token no Bloco de Notas, gravou e fechou sem tirar print.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
 <pre><code><span class="pr">C:\Users\lucia\projetos\oswork-kit\bot&gt;</span> copy .env.example .env
@@ -67,7 +67,7 @@ oswork-bot.service
 README.md
 vendas.csv</span>
 <span class="pr">C:\Users\lucia\projetos\oswork-kit\bot&gt;</span> notepad .env</code></pre>
-<p class="tela-nota">O copy confirma a cópia; o dir mostra o .env novo ao lado do modelo. O notepad abre o .env para você colar o token.</p></div>
+<p class="tela-nota">O copy confirma a cópia; o dir mostra o .env novo ao lado do modelo. O oswork-bot.service também é do kit: é usado só na <span class="gterm" data-gl="vps" data-def="Computador alugado num provedor, ligado o tempo todo e sob sua responsabilidade. O módulo 8 ensina a usar.">VPS</span>, no módulo 8. O notepad abre o .env para você colar o token.</p></div>
   <figcaption>O endereço antes do &gt; mostra que você está na pasta bot, dentro da sua pasta pessoal.</figcaption></figure>
   <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Apareceu "O sistema não pode encontrar o caminho especificado"? Você não está na pasta certa. Rode o cd da prática de novo, com o caminho da pasta bot. O Bloco de Notas perguntou se quer criar um arquivo novo? O copy não rodou: repita o copy antes do notepad.</p></div>
 </section>
@@ -102,19 +102,19 @@ vendas.csv</span>
   <h3 class="ph">Crie o seu bot e guarde o token no .env</h3>
   <p class="pgoal">Pronto quando o <code>dir /b</code> mostrar o .env na pasta bot e o token estiver lá dentro, sem ter passado por print ou mensagem. Cerca de 12 minutos, no computador com o cmd e o Telegram no celular.</p>
   <p class="psafe">Você cria um bot novo, só seu, e mexe apenas na pasta do kit. Nenhum comando aqui apaga nada. Se o token aparecer em algum print, pare, revogue no BotFather e refaça o último passo com o token novo.</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir %USERPROFILE%\projetos\oswork-kit
-cd %USERPROFILE%\projetos\oswork-kit
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir "%USERPROFILE%\projetos\oswork-kit"
+cd "%USERPROFILE%\projetos\oswork-kit"
 curl -fsSL -o oswork-kit.zip https://inematds.github.io/oswork/materiais/oswork-kit.zip
 tar -xf oswork-kit.zip
 cd bot
 copy .env.example .env
 dir /b</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Cole o bloco no cmd. Ele cria a pasta oswork-kit dentro de projetos, baixa o kit da <a href="https://inematds.github.io/oswork/materiais/" target="_blank" rel="noopener">página de materiais do OSWork</a>, descompacta com o tar, entra na pasta bot e copia o exemplo. Confira o .env na lista do dir.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole o bloco no cmd (aviso de várias linhas: "Colar mesmo assim"). Ele cria a pasta oswork-kit dentro de projetos, baixa o kit da <a href="https://inematds.github.io/oswork/materiais/" target="_blank" rel="noopener">página de materiais do OSWork</a>, descompacta com o tar, entra na pasta bot e copia o exemplo. Confira o .env na lista do dir.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>No Telegram, abra o BotFather oficial, envie /newbot e responda às perguntas. Não tire print da resposta com o token.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="3"> <span>Não tire print do cmd nem do Bloco de Notas daqui em diante: o próximo passo põe o token no arquivo.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="4"> <span>No computador, abra o Telegram com a mesma conta: o aplicativo ou web.telegram.org. Ele mostra um código QR; no celular, vá em Configurações › Dispositivos e leia o código. Depois copie o token da conversa com o BotFather.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="5"> <span>Rode <code>notepad .env</code> e troque preencha_localmente pelo token, colando com Ctrl+V. O token é longo; se a linha passar da janela, é normal. Grave com Ctrl+S e feche.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Confira a lista do dir: .env e .env.example, lado a lado. Daqui em diante, nada de print do cmd nem do Bloco de Notas.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>No computador, abra o Telegram com a mesma conta: o aplicativo ou web.telegram.org. Ele mostra um código QR; no celular, vá em Configurações › Dispositivos › Conectar dispositivo e aponte a câmera para o código. Depois copie o token da conversa com o BotFather.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="5"> <span>Rode <code>notepad .env</code>. Na primeira linha, clique logo depois do sinal = e apague com a tecla Delete só a palavra preencha_localmente, até o fim da linha. Cole o token com Ctrl+V. A linha fica TELEGRAM_BOT_TOKEN= seguido do token, sem espaço. O token é longo; se a linha passar da janela, é normal. Grave com Ctrl+S e feche.</span></label></li>
   </ol>
   <details class="mais"><summary>O que aparece no Bloco de Notas</summary>
     <p>O notepad abre o .env numa janela do Bloco de Notas. Você verá duas linhas: TELEGRAM_BOT_TOKEN=preencha_localmente e ALLOWED_USER_IDS=123456789. Nesta aula, mude só a primeira. A segunda fica para a próxima aula.</p>

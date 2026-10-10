@@ -22,8 +22,8 @@
   <p>No <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>, <code>mkdir</code> cria a pasta, e as de antes se faltarem. <code>cd</code> seguido do caminho entra nela. <code>%USERPROFILE%</code> quer dizer "a minha pasta pessoal", a que tem o seu nome em C:\Users.</p>
   <p data-ex="coordenadora">Denise criou a pasta de treino e entrou nela. O <code>cd</code> sozinho confirmou o endereço antes de ela abrir qualquer programa.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
-<pre><code><span class="pr">C:\Users\denise&gt;</span> mkdir %USERPROFILE%\projetos\meu-primeiro-projeto
-<span class="pr">C:\Users\denise&gt;</span> cd %USERPROFILE%\projetos\meu-primeiro-projeto
+<pre><code><span class="pr">C:\Users\denise&gt;</span> mkdir "%USERPROFILE%\projetos\meu-primeiro-projeto"
+<span class="pr">C:\Users\denise&gt;</span> cd "%USERPROFILE%\projetos\meu-primeiro-projeto"
 <span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> cd
 <span class="out">C:\Users\denise\projetos\meu-primeiro-projeto</span></code></pre>
 <p class="tela-nota">Os dois primeiros comandos não respondem nada quando dão certo. Quem confirma é o <code>cd</code> sozinho, que também já aparece antes do <code>&gt;</code>.</p></div>
@@ -55,7 +55,7 @@
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">3</span>Um arquivo para pessoas, outro para o agente</h2>
   <p>O <span class="gterm" data-gl="readme" data-def="Arquivo de texto na pasta do projeto que explica para que ele serve, o que tem dentro e como conferir o resultado.">README</span> descreve a finalidade do projeto para quem chega. O <span class="gterm" data-gl="agents-md" data-def="Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir.">AGENTS.md</span> dá instruções de trabalho ao <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span>.</p>
-  <p>Os dois terminam em .md porque são texto em <span class="gterm" data-gl="markdown" data-def="Jeito de escrever texto simples com marcas leves, como # para título e - para lista. Os arquivos terminam em .md.">Markdown</span>: o # marca o título, e o hífen, um item de lista.</p>
+  <p>Você não digita esses arquivos: a prática baixa os dois prontos. Eles terminam em .md porque são texto em <span class="gterm" data-gl="markdown" data-def="Jeito de escrever texto simples com marcas leves, como # para título e - para lista. Os arquivos terminam em .md.">Markdown</span>: o # marca o título, e o hífen, um item de lista.</p>
   <p data-ex="coordenadora">Denise escreveu no README a finalidade: preparar a pauta da reunião. No AGENTS.md, pôs duas regras: trabalhar só naquela pasta e não enviar nada.</p>
   <figure class="largo">
     <div class="lado">
@@ -85,23 +85,23 @@ subject to your permission settings. …
   Open restricted</span></code></pre>
 <p class="tela-nota">Em inglês: "Confia nesta pasta? O Codex pode ler, editar e executar arquivos aqui, dentro das suas permissões." "Trust and continue" é "confiar e continuar"; "Open restricted" abre com restrições. A resposta fica guardada. As palavras podem mudar um pouco com a versão.</p></div>
   <figcaption>Endereço certo, arquivos certos, e só então o programa.</figcaption></figure>
-  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>A pergunta em inglês assusta na primeira vez. Ela só aparece porque a pasta é nova para o Codex. Confirme apenas em pastas que você conhece. Na dúvida, saia com <code>/quit</code> (ou tecle Ctrl+C duas vezes) e confira o <code>cd</code> de novo.</p></div>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>A pergunta em inglês assusta na primeira vez. Ela só aparece porque a pasta é nova para o Codex. Confirme apenas em pastas que você conhece. Na dúvida, saia com <code>/quit</code> (ou tecle Ctrl+C duas vezes) e confira o <code>cd</code> de novo. No Windows, o Codex pode perguntar antes sobre o modo de proteção, em inglês "sandbox": escolha a opção recomendada.</p></div>
 </section>
 
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Monte a pasta de treino e abra o Codex nela</h3>
   <p class="pgoal">Pronto quando o <code>dir /b</code> mostrar AGENTS.md, README.md e entradas, e o Codex abrir nessa pasta. Cerca de 10 minutos, no computador.</p>
-  <p class="psafe">O bloco cria uma pasta nova e baixa do site do curso três arquivos fictícios para dentro dela. Nada fora dela é tocado. Use o bloco só nessa pasta nova: em outra pasta, ele substituiria um README.md que já estivesse lá. Apareceu "Já existe uma subpasta ou um arquivo"? A pasta já existia, de antes: siga, os outros comandos funcionam.</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir %USERPROFILE%\projetos\meu-primeiro-projeto\entradas
-cd %USERPROFILE%\projetos\meu-primeiro-projeto
+  <p class="psafe">O bloco cria uma pasta nova e baixa do site do curso três arquivos fictícios para dentro dela. Nada fora dela é tocado. Use o bloco só nessa pasta nova: em outra pasta, ele substituiria um README.md que já estivesse lá. Apareceu "Já existe uma subpasta ou um arquivo"? A pasta já existia, de antes: siga, os outros comandos funcionam. Uma linha do curl respondeu "curl: (6)" ou "curl: (22)"? A internet ou o endereço falhou: rode só aquela linha de novo.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir "%USERPROFILE%\projetos\meu-primeiro-projeto\entradas"
+cd "%USERPROFILE%\projetos\meu-primeiro-projeto"
 curl -fsSL -o README.md https://inematds.github.io/oswork-v62/materiais/treino/README.md
 curl -fsSL -o AGENTS.md https://inematds.github.io/oswork-v62/materiais/treino/AGENTS.md
 curl -fsSL -o entradas\reuniao.txt https://inematds.github.io/oswork-v62/materiais/treino/reuniao.txt
 cd
 dir /b</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Copie o bloco inteiro, cole no cmd com o botão direito e, se a última linha não rodar sozinha, tecle Enter. Confira que a resposta do <code>cd</code> termina em meu-primeiro-projeto.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Copie o bloco inteiro e cole no cmd com Ctrl+V ou o botão direito. Se o Windows avisar que o texto tem várias linhas, clique em "Colar mesmo assim". Se a última linha não rodar sozinha, tecle Enter. Confira que a resposta do <code>cd</code> termina em meu-primeiro-projeto.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Confira que o <code>dir /b</code> mostrou AGENTS.md, README.md e entradas.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Digite <code>codex</code> e tecle Enter. Na pergunta sobre a pasta, escolha "Trust and continue" e tecle Enter. Depois, saia com <code>/quit</code>.</span></label></li>
   </ol>
@@ -121,14 +121,14 @@ dir /b</pre></div>
   <div class="next-action">
     <p class="nak">Seu próximo passo</p>
     <p class="na-win">Você já sabe abrir o agente numa pasta escolhida por você, e não onde o terminal estava.</p>
-    <p class="na-action">No terminal, dentro da pasta de treino, digite <code>type entradas\reuniao.txt</code> e leia a pauta. São esses cinco itens que o Codex vai ler na próxima aula.</p>
+    <p class="na-action">No terminal, dentro da pasta de treino, digite <code>notepad entradas\reuniao.txt</code> e leia a pauta. São esses cinco itens que o Codex vai ler na próxima aula.</p>
     <p class="na-hook">Na próxima aula: o primeiro pedido ao Codex. Ele vai ler a pasta e dizer o que falta, sem mudar nada.</p>
   </div>
 </div>
 <!--COMP-->
 <details class="complementar">
   <summary>Material complementar · Entre na pasta antes de pedir<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
-  <section class="comp-sec"><h3>O que é</h3><p>A pasta de trabalho é a bancada da tarefa. Crie uma área pequena, com arquivos de treino, antes de permitir mudanças. Um README.md descreve a finalidade para pessoas; AGENTS.md dá instruções operacionais ao agente. Você não precisa abrir sua <span class="gterm" data-def="A pasta com o seu nome de usuário, onde ficam Documentos, Downloads e Imagens. No Windows: C:\Users\seu-nome; no cmd, %USERPROFILE%." data-gl="pasta-pessoal">pasta pessoal</span> inteira para experimentar.</p><h3>Por que aprender</h3><p>Um escopo pequeno reduz ambiguidade e facilita revisar diferenças. Quando algo sai errado, fica claro quais arquivos deveriam ter sido afetados.</p><h3>Conceitos-chave</h3><p>Escopo local; README; AGENTS; arquivos de entrada.</p><h4>Na prática</h4><p>O projeto possui README.md e entradas/reuniao.txt. A primeira tarefa é explicar esses dois arquivos. Não há necessidade de acesso a documentos pessoais nem a outros projetos.</p><h4>✓ Faça</h4><p>No cmd: mkdir %USERPROFILE%\projetos\meu-primeiro-projeto. Entre com cd %USERPROFILE%\projetos\meu-primeiro-projeto e inicie codex.</p><h4>✗ Evite</h4><p>Misturar a cópia de treino com arquivos privados ou trabalho em produção.</p></section>
+  <section class="comp-sec"><h3>O que é</h3><p>A pasta de trabalho é a bancada da tarefa. Crie uma área pequena, com arquivos de treino, antes de permitir mudanças. Um README.md descreve a finalidade para pessoas; AGENTS.md dá instruções operacionais ao agente. Você não precisa abrir sua <span class="gterm" data-def="A pasta com o seu nome de usuário, onde ficam Documentos, Downloads e Imagens. No Windows: C:\Users\seu-nome; no cmd, %USERPROFILE%." data-gl="pasta-pessoal">pasta pessoal</span> inteira para experimentar.</p><h3>Por que aprender</h3><p>Um escopo pequeno reduz ambiguidade e facilita revisar diferenças. Quando algo sai errado, fica claro quais arquivos deveriam ter sido afetados.</p><h3>Conceitos-chave</h3><p>Escopo local; README; AGENTS; arquivos de entrada.</p><h4>Na prática</h4><p>O projeto possui README.md e entradas/reuniao.txt. A primeira tarefa é explicar esses dois arquivos. Não há necessidade de acesso a documentos pessoais nem a outros projetos.</p><h4>✓ Faça</h4><p>No cmd: mkdir "%USERPROFILE%\projetos\meu-primeiro-projeto". Entre com cd "%USERPROFILE%\projetos\meu-primeiro-projeto" e inicie codex.</p><h4>✗ Evite</h4><p>Misturar a cópia de treino com arquivos privados ou trabalho em produção.</p></section>
 </details>
 <!--/COMP-->
 <nav class="lnav"><a href="#aula-15">← aula anterior</a><a class="next" href="#aula-17">próxima aula →</a></nav>

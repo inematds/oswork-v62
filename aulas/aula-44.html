@@ -50,8 +50,8 @@
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">2</span>Chave no lugar da senha, identidade conferida</h2>
-  <p>Use a <span class="gterm" data-gl="chave-publica" data-def="Metade pública do par de chaves do SSH. Fica cadastrada no GitHub e na VPS; a outra metade, a chave privada, fica só no seu computador e nunca é colada em lugar nenhum.">chave pública</span> cadastrada do jeito que o provedor da VPS indica. Serve a mesma da aula 49, o arquivo id_ed25519.pub; no cmd, <code>type %USERPROFILE%\.ssh\id_ed25519.pub</code> mostra o texto que o painel pede. A chave privada nunca sai do seu computador.</p>
-  <p>Na primeira conexão, o SSH mostra a <span class="gterm" data-gl="impressao-digital" data-def="Sequência curta que identifica a VPS. Na primeira conexão por SSH, você confere se ela bate com a que o provedor da VPS informa.">impressão digital</span> da máquina. Ela confirma que você chegou à VPS certa.</p>
+  <p>Use a <span class="gterm" data-gl="chave-publica" data-def="Metade pública do par de chaves do SSH. Fica cadastrada no GitHub e na VPS; a outra metade, a chave privada, fica só no seu computador e nunca é colada em lugar nenhum.">chave pública</span> cadastrada do jeito que o provedor da VPS indica. Serve a mesma da aula 49, do módulo 6: o arquivo id_ed25519.pub. Ao criar a VPS, procure no painel do provedor a opção de chave SSH ("SSH key"), clique em adicionar e cole o texto da chave; no cmd, <code>type "%USERPROFILE%\.ssh\id_ed25519.pub"</code> mostra o texto que o painel pede. A chave privada nunca sai do seu computador.</p>
+  <p>Na primeira conexão, o SSH mostra a <span class="gterm" data-gl="impressao-digital" data-def="Sequência curta que identifica a VPS. Na primeira conexão por SSH, você confere se ela bate com a que o provedor da VPS informa.">impressão digital</span> da máquina. Ela confirma que você chegou à VPS certa. O painel não mostra a impressão digital? No console do provedor, <code>ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub</code> mostra a mesma sequência para comparar.</p>
   <p data-ex="coordenadora">Denise recebeu a pergunta em inglês na primeira entrada. Antes de digitar yes, comparou a impressão digital com a que o painel do provedor mostrava.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando · primeira conexão</span></div>
 <pre><code><span class="pr">C:\Users\denise&gt;</span> ssh usuario@ip-da-vps
@@ -105,8 +105,8 @@ root</span></code></pre>
   </ol>
   <details class="gabarito"><summary>Ver gabarito</summary>
     <p><b>1.</b> A segunda sessão. Ele devia manter a primeira aberta e testar a nova porta numa outra janela antes de fechar.</p>
-    <p><b>2.</b> Pelo console de recuperação, no painel do provedor da VPS. Por lá, ele desfaz a troca de porta.</p>
-    <p><b>3.</b> Na parte Acesso do plano de VPS (a segunda das cinco partes do <code>plano-vps.md</code>): "Porta SSH real", "Segunda sessão SSH testada" e "Console de recuperação disponível", com a data do teste.</p>
+    <p><b>2.</b> Se souber a porta nova, tenta <code>ssh -p &lt;porta&gt; rogerio@ip-da-vps</code>. Se não der, pelo console de recuperação, no painel do provedor da VPS. Por lá, ele desfaz a troca de porta.</p>
+    <p><b>3.</b> Na parte Acesso do plano de VPS (a segunda das cinco partes do <code>plano-vps.md</code>, o plano do kit que você começou na aula 43): "Porta SSH real", "Segunda sessão SSH testada" e "Console de recuperação disponível", com a data do teste.</p>
   </details>
   <p class="pdone">Você acabou de achar o erro que tranca uma pessoa fora da própria VPS, e a rota de volta.</p>
 </section>

@@ -97,7 +97,7 @@ description: Gerar rascunho de relatório semanal quando o usuário fornecer um 
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Crie a Skill relatorio-semanal no projeto de treino</h3>
   <p class="pgoal">Pronto quando o último comando mostrar as quatro linhas do cabeçalho. Cerca de 10 minutos, no computador, com o cmd.</p>
-  <p class="psafe">Os comandos só criam uma pasta nova e movem um arquivo seu para dentro dela; nada é apagado. Não tem a pasta de treino dos módulos 3 e 4? Crie uma com mkdir %USERPROFILE%\projetos\meu-primeiro-projeto e siga igual. Se aparecer "O sistema não pode encontrar o arquivo especificado", confira se está na pasta certa com cd sozinho.</p>
+  <p class="psafe">Os comandos só criam uma pasta nova e movem um arquivo seu para dentro dela; nada é apagado. Não tem a pasta de treino dos módulos 3 e 4? Crie uma com mkdir "%USERPROFILE%\projetos\meu-primeiro-projeto" e siga igual. Se aparecer "O sistema não pode encontrar o arquivo especificado", confira se está na pasta certa com cd sozinho.</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">---
 name: relatorio-semanal
 description: Gerar rascunho de relatório semanal quando o usuário fornecer um CSV de vendas. Não usar para enviar relatórios ou tratar credenciais.
@@ -139,7 +139,7 @@ CSV indicado pelo usuário, contendo produto e valor. Use apenas fontes explicit
   </figure>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
 <pre><code>
-<span class="pr">C:\Users\denise&gt;</span> cd %USERPROFILE%\projetos\meu-primeiro-projeto
+<span class="pr">C:\Users\denise&gt;</span> cd "%USERPROFILE%\projetos\meu-primeiro-projeto"
 <span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> dir /b
 <span class="out">AGENTS.md
 entradas

@@ -39,8 +39,8 @@
       <li><span class="pin">3</span><span>Não precisa abrir como administrador.</span></li>
     </ol>
   </figure>
-  <details class="mais"><summary>Abriu uma janela azul, ou você usa Mac?</summary>
-    <p>Janela azul com <code>PS</code> no começo da linha é o PowerShell, outro terminal do Windows. Feche e procure "cmd" de novo. No Mac, o terminal se chama Terminal (Cmd+Espaço, digite "Terminal"). Nele, os comandos são os do Linux: <code>pwd</code> no lugar de <code>cd</code> sozinho e <code>ls</code> no lugar de <code>dir</code>. A tabela completa está na aula 44.</p>
+  <details class="mais"><summary>Abriu o PowerShell, ou você usa Mac?</summary>
+    <p>Se a linha começa com <code>PS</code>, como <code>PS C:\Users\lucia&gt;</code>, é o PowerShell, outro terminal do Windows. Feche e procure "cmd" de novo. No Mac, o terminal se chama Terminal (Cmd+Espaço, digite "Terminal"). Nele, os comandos são os do Linux: <code>pwd</code> no lugar de <code>cd</code> sozinho e <code>ls</code> no lugar de <code>dir</code>. A tabela completa está na aula 44.</p>
   </details>
   <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O computador é da escola e bloqueou o cmd? Não force: faça hoje a leitura desta aula e peça acesso a quem cuida do computador. Abrir o cmd não exige senha de administrador.</p></div>
 </section>
@@ -74,15 +74,22 @@
   <h2><span class="n">4</span><code>dir</code> mostra o que tem na pasta</h2>
   <p>Depois de saber onde está, veja o que tem ali. O comando <code>dir</code> lista as pastas e os arquivos do lugar atual, um por linha. Pasta aparece com <code>&lt;DIR&gt;</code> ao lado. O Windows mostra alguns nomes em inglês, como Documents e Downloads.</p>
   <p>O <code>cd</code> seguido de um nome muda de pasta. Isso fica para a aula 16. Por enquanto, basta saber que a pasta de início importa.</p>
-  <p data-ex="coordenadora">Denise abriu o <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span> na pasta Downloads, num teste de um colega. Ele não enxergava o projeto dela, que estava em outra pasta. O <code>cd</code> sozinho teria mostrado isso antes.</p>
+  <p data-ex="coordenadora">Denise abriu o programa da próxima aula, o <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span> na pasta Downloads, num teste de um colega. Ele não enxergava o projeto dela, que estava em outra pasta. O <code>cd</code> sozinho teria mostrado isso antes.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
 <pre><code><span class="pr">C:\Users\denise&gt;</span> dir
-<span class="out"> Pasta de C:\Users\denise
+<span class="out"> O volume na unidade C não tem nome.
+ O Número de Série do Volume é 1A2B-3C4D
 
+ Pasta de C:\Users\denise
+
+10/10/2026  09:12    &lt;DIR&gt;          .
+10/10/2026  09:12    &lt;DIR&gt;          ..
 10/10/2026  09:12    &lt;DIR&gt;          Documents
 10/10/2026  09:12    &lt;DIR&gt;          Downloads
-10/10/2026  09:12    &lt;DIR&gt;          Pictures</span></code></pre>
-<p class="tela-nota">Data, hora, a marca <code>&lt;DIR&gt;</code> de pasta e o nome. Os nomes mudam de um computador para outro.</p></div>
+10/10/2026  09:12    &lt;DIR&gt;          Pictures
+               0 arquivo(s)              0 bytes
+               5 pasta(s)   80.000.000.000 bytes disponíveis</span></code></pre>
+<p class="tela-nota">Pule as duas linhas do volume, o ponto e os dois pontos do começo (a própria pasta e a de cima) e o resumo do fim. O que importa é o meio: data, hora, a marca <code>&lt;DIR&gt;</code> de pasta e o nome.</p></div>
   <figcaption>O <code>dir</code> mostra o que o programa vai enxergar se começar a trabalhar dali.</figcaption></figure>
   <div class="quiz" data-answer="b">
     <p class="qk">Teste-se</p>
@@ -98,13 +105,13 @@
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Pergunte ao computador onde você está</h3>
   <p class="pgoal">Pronto quando você tiver anotado a resposta do <code>cd</code> e três nomes que o <code>dir</code> mostrou. Cerca de 8 minutos, no computador.</p>
-  <p class="psafe">Os dois comandos só leem: nada é criado, movido ou apagado. Se aparecer "não é reconhecido como um comando interno", confira a digitação: duas letras, sem espaço no meio.</p>
+  <p class="psafe">Os dois comandos só leem: nada é criado, movido ou apagado. Se aparecer "não é reconhecido como um comando interno", confira a digitação: cd e dir, em minúsculas, sem espaço no meio. Colou as duas linhas juntas e o Windows avisou que o texto tem várias linhas? Clique em "Colar mesmo assim".</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd
 dir</pre></div>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>Abra o cmd pelo caminho do quadro "Como abrir o cmd".</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Digite <code>cd</code> e tecle Enter. Anote a linha que voltou: é a pasta em que você está.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="3"> <span>Digite <code>dir</code> e tecle Enter. Anote três nomes marcados com <code>&lt;DIR&gt;</code>. Documents é a pasta Documentos.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Digite <code>dir</code> e tecle Enter. Anote três nomes marcados com <code>&lt;DIR&gt;</code>, sem contar o . e o ... Documents é a pasta Documentos.</span></label></li>
   </ol>
   <p class="pdone">Você acabou de ler, no terminal, onde está e o que tem ali, sem mudar nada.</p>
 </section>
