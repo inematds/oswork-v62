@@ -56,7 +56,11 @@
     "origin",
     "shell",
     "gh",
-    "GitHub Pages"
+    "GitHub Pages",
+    "cmd",
+    "winget",
+    "npm",
+    "Node.js"
   ],
   "modulos": [
     {

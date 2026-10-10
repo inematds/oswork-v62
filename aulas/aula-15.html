@@ -21,11 +21,11 @@
   <p>Na escola, você passa o crachá na catraca e ninguém ouve a sua senha. O <span class="gterm" data-gl="login" data-def="Entrar numa ferramenta com a sua conta, como a conta do ChatGPT. Os direitos e limites vêm do plano dessa conta.">login</span> do Codex funciona assim: o <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span> manda você ao navegador, e é lá que você entra.</p>
   <p>A senha nunca passa pelo terminal. Quando você termina no navegador, o Codex recebe a confirmação e guarda a entrada.</p>
   <p>Quais planos do ChatGPT incluem o Codex muda com o tempo. Antes de começar, confira na <a href="https://learn.chatgpt.com/docs/auth" target="_blank" rel="noopener">página oficial de autenticação</a> se o seu plano está lá. O nome do seu plano aparece nas configurações da sua conta do ChatGPT.</p>
-  <p data-ex="professora">Lúcia digitou <code>codex login</code>. O navegador abriu na tela de entrada do ChatGPT. Ela entrou com a conta da escola e voltou para o terminal.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> codex login
-<span class="out"># o navegador abre; entre com a conta do ChatGPT e volte ao terminal</span></code></pre>
-<p class="tela-nota">A primeira linha é o que você digita. A segunda é um lembrete do curso: o resto acontece no navegador.</p></div>
+  <p data-ex="professora">Lúcia digitou <code>codex login</code> no cmd. O navegador abriu na tela de entrada do ChatGPT. Ela entrou com a conta da escola e voltou para o cmd.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\lucia&gt;</span> codex login
+<span class="out">→ o navegador abre; entre com a conta do ChatGPT e volte ao cmd</span></code></pre>
+<p class="tela-nota">A primeira linha é o que você digita. A segunda, com a seta, é um lembrete do curso: o resto acontece no navegador.</p></div>
   <figcaption>Nenhuma senha é digitada no terminal nesse caminho.</figcaption></figure>
 </section>
 
@@ -34,8 +34,8 @@
   <p>Estar conectado não basta: importa por qual caminho. Entrar com a conta usa o plano dela. Uma <span class="gterm" data-gl="chave-de-api" data-def="Senha longa que identifica quem usa a API e para quem vai a conta. Nunca vai num pedido, num arquivo compartilhado ou num print.">chave de API</span> cobra por consumo, em outra conta.</p>
   <p>Essa diferença é da aula 5, no módulo 1. Pulou? O resumo é esse: são duas contas, com duas cobranças.</p>
   <p data-ex="coordenadora">Denise esperava ver "ChatGPT" e viu que o Codex estava entrando por uma chave de <span class="gterm" data-gl="api" data-def="Porta de entrada para um programa usar um serviço de IA sem passar pela tela do chat. O uso pela API é cobrado por consumo.">API</span> antiga da escola. Ela saiu com <code>codex logout</code> e entrou de novo com <code>codex login</code>, pela conta.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> codex login status
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\denise&gt;</span> codex login status
 <span class="out">Logged in using ChatGPT</span></code></pre>
 <p class="tela-nota">Em inglês: "conectado usando o ChatGPT". O método é a conta. Com uma chave de API, a resposta cita a chave, mas nunca o valor completo.</p></div>
   <figcaption>Leia a resposta antes de pedir qualquer tarefa longa.</figcaption></figure>
@@ -43,13 +43,13 @@
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">3</span>Pela API, a chave não aparece na tela</h2>
-  <p>Vai entrar pela conta do ChatGPT? Pode pular este passo. Se você usar API, a chave fica guardada num nome, <code>OPENAI_API_KEY</code>, que o terminal conhece. O comando oficial entrega o valor direto ao Codex, sem mostrar na tela.</p>
+  <p>Vai entrar pela conta do ChatGPT? Pode pular este passo. Se você usar API, a chave fica guardada num nome, <code>OPENAI_API_KEY</code>, que o <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span> conhece. O comando oficial entrega o valor direto ao Codex, sem mostrar na tela.</p>
   <p>Digitar a chave no comando é o erro comum: ela fica no histórico do terminal e aparece em qualquer print. Um arquivo <span class="gterm" data-gl="env" data-def="Arquivo que guarda chaves e senhas fora do código. Nunca vai para o Git, para um pedido ou para um print.">.env</span> sozinho também não conecta nada. Algum mecanismo precisa carregar o valor.</p>
   <p data-ex="professora">Uma colega pediu a chave da escola para testar em casa. Lúcia não mandou pelo grupo. Explicou que a chave diz quem paga e que cada pessoa entra com a própria conta.</p>
   <figure class="largo">
     <div class="lado">
       <div class="antes"><span class="rot">✗ Chave no comando</span><p><b>Como fica:</b> <code>codex login --with-api-key</code> seguido da chave inteira.</p><p><b>Resultado:</b> a chave fica no histórico e em qualquer print da tela.</p></div>
-      <div class="depois"><span class="rot">✓ Comando oficial</span><p><b>Como fica:</b> <code>printenv OPENAI_API_KEY | codex login --with-api-key</code></p><p><b>Resultado:</b> o valor vai direto ao programa. Na tela, só o comando.</p></div>
+      <div class="depois"><span class="rot">✓ Comando oficial</span><p><b>Como fica:</b> <code>echo %OPENAI_API_KEY%| codex login --with-api-key</code></p><p><b>Resultado:</b> o valor vai direto ao programa. Na tela, só o comando.</p></div>
     </div>
     <figcaption>Os dois conectam. Só o segundo não espalha a chave.</figcaption>
   </figure>
@@ -111,7 +111,7 @@
 <!--COMP-->
 <details class="complementar">
   <summary>Material complementar · Autentique sem espalhar segredos<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
-  <section class="comp-sec"><h3>O que é</h3><p>Execute codex login e conclua o fluxo de navegador para entrar com ChatGPT. Se optar por API, a chave precisa estar na <span class="gterm" data-def="Um nome com um valor guardado, escrito como NOME=valor. O programa procura o valor pelo nome." data-gl="variavel">variável</span> OPENAI_API_KEY; encaminhe-a pela entrada padrão, sem digitá-la no comando. Um arquivo .env sozinho não autentica o Codex: algum mecanismo deve carregar a variável.</p><h3>Por que aprender</h3><p>Colar a chave em exemplos, mensagens ou histórico pode expor a conta. Também é possível estar autenticado pelo método errado e consumir uma modalidade diferente da esperada.</p><h3>Conceitos-chave</h3><p>codex login; codex login status; entrada padrão; conta ativa.</p><h4>Na prática</h4><p>Para API, o comando documentado é printenv OPENAI_API_KEY | codex login --with-api-key. Ele envia o valor diretamente ao programa, em vez de mostrar a chave na tela.</p><h4>Sequência para experimentar</h4><ol><li>Prepare uma cópia de treino.</li><li>Escolha um método, conclua o login e execute codex login status. Registre apenas “ChatGPT” ou “API” na ficha do projeto.</li><li>Registre o resultado observado e a próxima correção.</li></ol></section>
+  <section class="comp-sec"><h3>O que é</h3><p>Execute codex login e conclua o fluxo de navegador para entrar com ChatGPT. Se optar por API, a chave precisa estar na <span class="gterm" data-def="Um nome com um valor guardado, escrito como NOME=valor. O programa procura o valor pelo nome." data-gl="variavel">variável</span> OPENAI_API_KEY; encaminhe-a pela entrada padrão, sem digitá-la no comando. Um arquivo .env sozinho não autentica o Codex: algum mecanismo deve carregar a variável.</p><h3>Por que aprender</h3><p>Colar a chave em exemplos, mensagens ou histórico pode expor a conta. Também é possível estar autenticado pelo método errado e consumir uma modalidade diferente da esperada.</p><h3>Conceitos-chave</h3><p>codex login; codex login status; entrada padrão; conta ativa.</p><h4>Na prática</h4><p>Para API, o comando documentado, adaptado ao cmd, é echo %OPENAI_API_KEY%| codex login --with-api-key (sem espaço antes da barra vertical). Ele envia o valor diretamente ao programa, em vez de mostrar a chave na tela.</p><h4>Sequência para experimentar</h4><ol><li>Prepare uma cópia de treino.</li><li>Escolha um método, conclua o login e execute codex login status. Registre apenas “ChatGPT” ou “API” na ficha do projeto.</li><li>Registre o resultado observado e a próxima correção.</li></ol></section>
 </details>
 <!--/COMP-->
 <nav class="lnav"><a href="#aula-14">← aula anterior</a><a class="next" href="#aula-16">próxima aula →</a></nav>

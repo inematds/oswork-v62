@@ -31,16 +31,16 @@
 </section>
 
 <section class="step" data-kind="fundamento">
-  <h2><span class="n">2</span>O til é o apelido da sua pasta pessoal</h2>
-  <p>No terminal, o símbolo ~ (til) representa a sua <span class="gterm" data-gl="pasta-pessoal" data-def="A sua pasta principal no computador, onde ficam Documentos, Downloads e as demais. No terminal ela aparece como ~ (til).">pasta pessoal</span>. Dentro dela você vai criar uma pasta projetos, que reúne trabalhos independentes.</p>
-  <p>O <span class="gterm" data-gl="caminho" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config.">caminho</span> ~/projetos/config se lê em ordem: pasta pessoal, depois projetos, depois config. No teclado brasileiro, o til sai com a tecla do til seguida da barra de espaço.</p>
-  <p data-ex="coordenadora">Denise digitou pwd no terminal, como no módulo 3, e viu o endereço completo da pasta pessoal dela. O ~ é só o jeito curto de escrever esse endereço.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> cd ~
-<span class="pr">$</span> pwd
-<span class="out">/home/denise</span></code></pre>
-<p class="tela-nota">cd ~ leva você para a pasta pessoal; pwd mostra onde você está. No Windows, com o terminal do módulo 3, e no Linux, o endereço começa com /home. No Mac, começa com /Users, como /Users/denise.</p></div>
-  <figcaption>O endereço muda de computador para computador. O ~ vale em todos.</figcaption></figure>
+  <h2><span class="n">2</span>%USERPROFILE% é o apelido da sua pasta pessoal</h2>
+  <p>No <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>, <code>%USERPROFILE%</code> representa a sua <span class="gterm" data-gl="pasta-pessoal" data-def="A pasta com o seu nome de usuário, onde ficam Documentos, Downloads e Imagens. No Windows: C:\Users\seu-nome.">pasta pessoal</span>. É uma palavra só, entre sinais de porcentagem, e o Windows troca pelo endereço certo. Dentro dela você vai criar uma pasta projetos, que reúne trabalhos independentes.</p>
+  <p>O <span class="gterm" data-gl="caminho" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra invertida, como C:\Users\denise\projetos\config.">caminho</span> C:\Users\denise\projetos\config se lê em ordem: disco C, pasta pessoal de Denise, depois projetos, depois config.</p>
+  <p data-ex="coordenadora">Denise digitou <code>cd %USERPROFILE%</code> e depois <code>cd</code>, como no módulo 3. Viu o endereço completo da pasta pessoal dela.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\&gt;</span> cd %USERPROFILE%
+<span class="pr">C:\Users\denise&gt;</span> cd
+<span class="out">C:\Users\denise</span></code></pre>
+<p class="tela-nota">cd %USERPROFILE% leva você para a pasta pessoal, de qualquer lugar; o cd sozinho mostra onde você está.</p></div>
+  <figcaption>O endereço muda de computador para computador. O %USERPROFILE% vale em todos.</figcaption></figure>
 </section>
 
 <section class="step" data-kind="fundamento">
@@ -50,7 +50,7 @@
   <p data-ex="coordenadora">Denise prefere relatórios curtos, com as pendências no fim. Isso vale para o relatório do conselho e para a pauta da reunião de pais. Então vai para config, uma vez só.</p>
   <figure class="largo">
     <div class="janela">
-      <div class="tela-top"><i></i><i></i><i></i><span>~/projetos</span></div>
+      <div class="tela-top"><i></i><i></i><i></i><span>C:\Users\denise\projetos</span></div>
       <div class="janela-body">
         <div class="item pasta"><span class="pin">1</span> config</div>
         <div class="item doc dentro">memoria.md · decisoes.md (você cria na aula 3; por ora, vazia)</div>
@@ -80,52 +80,56 @@
   <h2><span class="n">4</span>Desenhe a árvore antes de criar as pastas</h2>
   <p>Antes de criar, desenhe a árvore no papel: uma pasta config e um único projeto de treino. Assim você decide os nomes com calma.</p>
   <p>Use nomes curtos, sem espaço e sem acento, como meu-primeiro-projeto e saidas. No terminal, espaço e acento dão trabalho em cada comando.</p>
-  <p>No Windows, o terminal do módulo 3 é o <span class="gterm" data-gl="wsl" data-def="Linux que roda dentro do Windows, oficial da Microsoft. Nele, os comandos do curso funcionam como no Linux.">WSL</span>, que traz um <span class="gterm" data-gl="ubuntu" data-def="Versão popular do Linux, comum em servidores.">Ubuntu</span> dentro do Windows. Por isso a janela de arquivos mostra wsl.localhost e Ubuntu no endereço da pasta.</p>
+  <p>Depois de criar, o comando <code>explorer .</code> abre o Explorador de Arquivos do Windows na pasta em que o cmd está. O ponto quer dizer "aqui". São as mesmas pastas, vistas de dois jeitos.</p>
   <p data-ex="professora">Lúcia desenhou num guardanapo: projetos, com config e feira-de-ciencias; dentro da feira, entradas e saidas. Levou um minuto e evitou três pastas com nomes parecidos.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> mkdir -p ~/projetos/config ~/projetos/meu-primeiro-projeto/entradas ~/projetos/meu-primeiro-projeto/saidas
-<span class="pr">$</span> ls ~/projetos
-<span class="out">config  meu-primeiro-projeto</span>
-<span class="pr">$</span> cd ~/projetos
-<span class="pr">$</span> explorer.exe .</code></pre>
-<p class="tela-nota">mkdir -p cria as pastas e as de cima que faltarem. O explorer.exe . abre a janela de arquivos do Windows nesta mesma pasta; no Mac, use open . no lugar dele.</p></div>
-  <figcaption>Um comando cria a árvore inteira. O ls confere no terminal; o explorer.exe . mostra o mesmo lugar na janela de arquivos.</figcaption></figure>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\denise&gt;</span> mkdir projetos\config projetos\meu-primeiro-projeto\entradas projetos\meu-primeiro-projeto\saidas
+<span class="pr">C:\Users\denise&gt;</span> dir /b projetos
+<span class="out">config
+meu-primeiro-projeto</span>
+<span class="pr">C:\Users\denise&gt;</span> cd projetos
+<span class="pr">C:\Users\denise\projetos&gt;</span> explorer .</code></pre>
+<p class="tela-nota">O mkdir cria as pastas e as de cima que faltarem. O /b do dir pede só os nomes, sem data e hora. O explorer . abre a janela de arquivos nesta mesma pasta.</p></div>
+  <figcaption>Um comando cria a árvore inteira. O dir confere no terminal; o explorer . mostra o mesmo lugar na janela de arquivos.</figcaption></figure>
   <figure class="largo">
     <div class="janela">
-      <div class="tela-top"><i></i><i></i><i></i><span>Explorador de Arquivos · \\wsl.localhost\Ubuntu\home\denise\projetos</span></div>
+      <div class="tela-top"><i></i><i></i><i></i><span>Explorador de Arquivos · C:\Users\denise\projetos</span></div>
       <div class="janela-body">
         <div class="item pasta"><span class="pin">1</span> config</div>
         <div class="item pasta"><span class="pin">2</span> meu-primeiro-projeto</div>
       </div>
     </div>
     <ol class="passos">
-      <li><span class="pin">1</span><span>As mesmas pastas que o ls listou, agora na janela do Windows.</span></li>
-      <li><span class="pin">2</span><span>No painel lateral, elas ficam em Linux › Ubuntu › home › o seu nome › projetos.</span></li>
+      <li><span class="pin">1</span><span>As mesmas pastas que o dir listou, agora na janela do Windows.</span></li>
+      <li><span class="pin">2</span><span>No painel lateral, elas ficam em Este Computador › Disco Local (C:) › Usuários › o seu nome › projetos.</span></li>
     </ol>
   </figure>
-  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O comando é comprido porque cria quatro pastas de uma vez. No celular ele parece quebrado em várias linhas; é uma linha só, e o botão copiar leva do jeito certo. Para colar no terminal, use o botão direito › Colar; no teclado, Ctrl+Shift+V no Linux e no Windows, Cmd+V no Mac. O explorer.exe . abriu a pasta Documentos do Windows? Você não estava em ~/projetos: rode cd ~/projetos e repita. Prefere o mouse? Na janela que abriu, crie as pastas com botão direito › Nova pasta; o ls do terminal passa a mostrá-las.</p></div>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O comando é comprido porque cria quatro pastas de uma vez. No celular ele parece quebrado em várias linhas; é uma linha só, e o botão copiar leva do jeito certo. Para colar no cmd, use o botão direito do mouse ou Ctrl+V. Apareceu "Já existe uma subpasta ou um arquivo"? A pasta já existia, de antes: as outras foram criadas, siga em frente. O explorer . abriu a pasta Documentos? Você não estava em projetos: rode cd %USERPROFILE%\projetos e repita. Prefere o mouse? Na janela que abriu, crie as pastas com botão direito › Novo › Pasta; o dir do cmd passa a mostrá-las.</p></div>
 </section>
 
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
   <h3 class="ph">Crie a árvore do projeto de treino</h3>
-  <p class="pgoal">Pronto quando o primeiro ls mostrar config e meu-primeiro-projeto, o segundo mostrar entradas e saidas, e a janela de arquivos mostrar as mesmas pastas. Cerca de 9 minutos, no computador.</p>
-  <p class="psafe">Os comandos só criam pastas vazias dentro da sua pasta pessoal; nada é apagado. Criou meu-primeiro-projeto no módulo 3? Tudo bem, o que já está lá continua. Apareceu uma mensagem de erro? Pare, confira se colou a linha inteira e tente de novo uma vez.</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">mkdir -p ~/projetos/config ~/projetos/meu-primeiro-projeto/entradas ~/projetos/meu-primeiro-projeto/saidas
-ls ~/projetos
-ls ~/projetos/meu-primeiro-projeto
-cd ~/projetos
-explorer.exe .</pre></div>
+  <p class="pgoal">Pronto quando o primeiro dir mostrar config e meu-primeiro-projeto, o segundo mostrar entradas e saidas, e a janela de arquivos mostrar as mesmas pastas. Cerca de 9 minutos, no computador.</p>
+  <p class="psafe">Os comandos só criam pastas vazias dentro da sua pasta pessoal; nada é apagado. Criou meu-primeiro-projeto no módulo 3? Tudo bem, o que já está lá continua. Apareceu outra mensagem de erro? Pare, confira se colou o bloco inteiro e tente de novo uma vez.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%
+mkdir projetos\config projetos\meu-primeiro-projeto\entradas projetos\meu-primeiro-projeto\saidas
+dir /b projetos
+dir /b projetos\meu-primeiro-projeto
+cd projetos
+explorer .</pre></div>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>Desenhe no papel a árvore: projetos, com config e meu-primeiro-projeto; dentro do projeto, entradas e saidas.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Abra o terminal do módulo 3 (no Windows, o mesmo terminal Linux daquele módulo). Copie o bloco inteiro (cinco linhas), cole com o botão direito › Colar e aperte Enter. O -p só pede: crie também as pastas de cima que faltarem.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Abra o cmd. Copie o bloco inteiro (seis linhas), cole com o botão direito do mouse e, se a última linha não rodar sozinha, aperte Enter.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Compare a resposta com o seu desenho. Se o projeto já tinha arquivos do módulo 3, eles também aparecem, e está certo.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="4"> <span>Confira a janela de arquivos que abriu: config e meu-primeiro-projeto estão lá. No Mac, troque a última linha por open . antes de colar.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>Confira a janela de arquivos que abriu: config e meu-primeiro-projeto estão lá, com o endereço C:\Users\o seu nome\projetos no alto.</span></label></li>
   </ol>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>O que você deve ver</span></div>
-<pre><code><span class="out">config  meu-primeiro-projeto
-entradas  saidas</span></code></pre>
-<p class="tela-nota">A primeira linha responde ao ls de projetos; a segunda, ao ls do projeto de treino.</p></div></figure>
+<pre><code><span class="out">config
+meu-primeiro-projeto
+entradas
+saidas</span></code></pre>
+<p class="tela-nota">As duas primeiras linhas respondem ao dir de projetos; as duas últimas, ao dir do projeto de treino.</p></div></figure>
   <p class="pdone">Você acabou de criar, com um comando, a árvore que separa o que vale sempre do que é de um projeto só.</p>
 </section>
 
@@ -149,8 +153,8 @@ entradas  saidas</span></code></pre>
 
 <!--COMP-->
 <details class="complementar">
-  <summary>Material complementar · Uma pasta representa um contexto<small>Texto completo do tópico no OSWork v2. Não conta no tempo da aula.</small></summary>
-  <section class="comp-sec"><h3>O que é</h3><p>O símbolo ~ representa a pasta pessoal no <span class="gterm" data-def="Linguagem de comandos do terminal no Linux e no macOS. Os comandos deste curso são escritos para ele." data-gl="bash">Bash</span>. Dentro dela, projetos reúne trabalhos independentes. Use nomes claros e evite misturar documentos de clientes diferentes. A pasta config guarda conhecimento transversal; cada projeto mantém suas próprias entradas e resultados.</p><h3>Por que aprender</h3><p>Contextos separados ajudam a limitar o que a IA precisa ler. Uma pasta cheia de assuntos não relacionados aumenta ruído e torna difícil explicar de onde veio uma conclusão.</p><h3>Conceitos-chave</h3><p>Pasta pessoal; projetos; contexto; entradas e saídas.</p><h4>Na prática</h4><p>Em ~/projetos/website ficam os arquivos do site. Em ~/projetos/estudos ficam experimentos. No Windows, o gerenciador pode mostrar <span class="gterm" data-def="Endereço de uma pasta ou de um arquivo, com os nomes separados por barra, como ~/projetos/config." data-gl="caminho">caminhos</span> como C:\Users\SeuNome\projetos.</p><h4>✓ Faça</h4><p>Desenhe a árvore antes de criar arquivos. Escolha um único projeto de treino e uma única pasta global config.</p><h4>✗ Evite</h4><p>Aceitar uma conclusão sem conferir a entrada que a sustenta.</p><figure class="comp-fig"><ul><li>~/projetos/</li><li>config/</li><li>memoria.md</li><li>decisoes.md</li><li>meu-projeto/</li><li><span class="gterm" data-def="Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir." data-gl="agents-md">AGENTS.md</span></li><li>entradas/</li><li>saidas/</li></ul><figcaption>Uma pasta por contexto. As configurações ficam fora do projeto; entradas e saídas ficam separadas.</figcaption></figure></section>
+  <summary>Material complementar · Uma pasta representa um contexto<small>Texto do tópico no OSWork v2, adaptado ao cmd. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que é</h3><p>No cmd, %USERPROFILE% representa a pasta pessoal. Dentro dela, projetos reúne trabalhos independentes. Use nomes claros e evite misturar documentos de clientes diferentes. A pasta config guarda conhecimento transversal; cada projeto mantém suas próprias entradas e resultados.</p><h3>Por que aprender</h3><p>Contextos separados ajudam a limitar o que a IA precisa ler. Uma pasta cheia de assuntos não relacionados aumenta ruído e torna difícil explicar de onde veio uma conclusão.</p><h3>Conceitos-chave</h3><p>Pasta pessoal; projetos; contexto; entradas e saídas.</p><h4>Na prática</h4><p>Em C:\Users\SeuNome\projetos\website ficam os arquivos do site. Em C:\Users\SeuNome\projetos\estudos ficam experimentos. O Explorador mostra os mesmos caminhos na barra de endereço.</p><h4>✓ Faça</h4><p>Desenhe a árvore antes de criar arquivos. Escolha um único projeto de treino e uma única pasta global config.</p><h4>✗ Evite</h4><p>Aceitar uma conclusão sem conferir a entrada que a sustenta.</p><figure class="comp-fig"><ul><li>projetos\</li><li>config\</li><li>memoria.md</li><li>decisoes.md</li><li>meu-projeto\</li><li><span class="gterm" data-def="Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir." data-gl="agents-md">AGENTS.md</span></li><li>entradas\</li><li>saidas\</li></ul><figcaption>Uma pasta por contexto. As configurações ficam fora do projeto; entradas e saídas ficam separadas.</figcaption></figure></section>
 </details>
 <!--/COMP-->
 <nav class="lnav"><a href="#aula-18">← aula anterior</a><a class="next" href="#aula-20">próxima aula →</a></nav>
@@ -160,7 +164,7 @@ entradas  saidas</span></code></pre>
 [
   {"front":"Você vai pedir à IA o resumo da reunião de pais, e a pasta aberta tem também as notas das turmas. O que faz antes do pedido?","back":"Separa: cria uma pasta só para a reunião, com o material dela, e abre a IA ali."},
   {"front":"Qual a diferença entre a pasta config e a pasta de um projeto?","back":"config guarda o que vale para qualquer projeto, como preferências. O projeto guarda as entradas e saídas daquele trabalho."},
-  {"front":"O que o símbolo ~ quer dizer num caminho como ~/projetos?","back":"A sua pasta pessoal. É o jeito curto de escrever o endereço dela, que muda de computador para computador."}
+  {"front":"O que o cd %USERPROFILE% faz no cmd?","back":"Leva você para a sua pasta pessoal, como C:\\Users\\denise, de qualquer lugar em que estiver."}
 ]
 </script>
 </section>

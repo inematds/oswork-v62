@@ -10,7 +10,7 @@
     <p class="k">Em 1 minuto</p>
     <ol>
       <li>Primeiro pedido: <b>ler e explicar</b>, sem editar.</li>
-      <li>Peça que ele diga <b>quais arquivos usou</b>, e confira com o <code>ls</code>.</li>
+      <li>Peça que ele diga <b>quais arquivos usou</b>, e confira com o <code>dir /b</code>.</li>
       <li>Depois, uma alteração pequena e com nome: <b>só o plano.md</b>.</li>
     </ol>
   </div>
@@ -60,7 +60,7 @@ Arquivos lidos: AGENTS.md e README.md. Também consultei a listagem de arquivos.
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">3</span>Confira o que ele usou</h2>
-  <p>A lista de arquivos usados mostra em que a resposta se apoia. Compare com o que o <code>ls</code> mostra na pasta.</p>
+  <p>A lista de arquivos usados mostra em que a resposta se apoia. Compare com o que o <code>dir /b</code> mostra na pasta.</p>
   <p>Na resposta real, o Codex leu dois arquivos e avisou que não abriu a pauta. Então a lista do que falta vem só do README. É uma boa leitura, mas ainda não conhece os cinco itens da reunião.</p>
   <p data-ex="coordenadora">Denise leu "não li seu conteúdo" e entendeu o limite da resposta. No segundo pedido, deixou claro que o plano devia se apoiar na pauta.</p>
   <figure class="largo">
@@ -74,11 +74,11 @@ Arquivos lidos: AGENTS.md e README.md. Também consultei a listagem de arquivos.
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">4</span>Depois, uma alteração com nome</h2>
-  <p>Agora autorize uma mudança pequena: criar só o plano.md, com três ações e uma verificação para cada. O Codex pode perguntar "Would you like to make the following edits?". Confira que a mudança é só no plano.md e escolha "Yes, proceed". Se for outro arquivo, escolha a opção que começa com "No". Ele criou sem perguntar? Também acontece: as permissões atuais deixam escrever na pasta. Confira com <code>ls</code>.</p>
-  <p>Depois, saia com <code>/quit</code> e leia o arquivo com <code>cat plano.md</code>, que mostra o conteúdo no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>. Confira se as ações se apoiam no que existe na pasta.</p>
+  <p>Agora autorize uma mudança pequena: criar só o plano.md, com três ações e uma verificação para cada. O Codex pode perguntar "Would you like to make the following edits?". Confira que a mudança é só no plano.md e escolha "Yes, proceed". Se for outro arquivo, escolha a opção que começa com "No". Ele criou sem perguntar? Também acontece: as permissões atuais deixam escrever na pasta. Confira com <code>dir /b</code>.</p>
+  <p>Depois, saia com <code>/quit</code> e leia o arquivo com <code>type plano.md</code>, que mostra o conteúdo no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>. Confira se as ações se apoiam no que existe na pasta. Os acentos saíram trocados, como Ã§ no lugar de ç? É só a tela do <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>; o arquivo está certo. Para ler com acentos, use <code>notepad plano.md</code>.</p>
   <p data-ex="professora">O plano que Lúcia recebeu cobre os cinco itens da pauta e avisa que horários e datas ainda precisam ser definidos. Ela conferiu no reuniao.txt: tudo estava lá.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
-<pre><code><span class="pr">$</span> cat plano.md
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
+<pre><code><span class="pr">C:\Users\lucia\projetos\meu-primeiro-projeto&gt;</span> type plano.md
 <span class="out"># Plano de ações
 
 Base: entradas/reuniao.txt (reunião pedagógica fictícia).
@@ -100,15 +100,15 @@ Horários e datas ainda precisam ser definidos.
   <p class="pgoal">Pronto quando o plano.md existir na pasta e você tiver conferido uma das verificações direto no reuniao.txt. Cerca de 10 minutos, no computador.</p>
   <p class="psafe">O primeiro pedido não muda nada; o segundo cria um arquivo só, na pasta de treino. Não fez a aula 16? O bloco da prática dela monta a pasta em um minuto. Se o Codex quiser mexer em outro arquivo, recuse e repita o pedido.</p>
   <p><b>Passo 1 · cole no terminal</b></p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd ~/projetos/meu-primeiro-projeto
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\meu-primeiro-projeto
 codex</pre></div>
   <p><b>Pedido 1 · cole dentro do Codex e tecle Enter</b></p>
   <pre><code>Leia AGENTS.md e README.md. Explique o propósito e liste o que falta, sem editar. Diga quais arquivos você usou.</code></pre>
   <p><b>Pedido 2 · cole dentro do Codex, só depois da resposta ao pedido 1</b></p>
   <pre><code>Crie somente plano.md, com três ações e uma verificação para cada. Apoie o plano em entradas/reuniao.txt. Não altere nenhum outro arquivo.</code></pre>
   <p><b>Passo 3 · cole no terminal, depois de sair com /quit</b></p>
-  <pre><code>cat plano.md
-cat entradas/reuniao.txt</code></pre>
+  <pre><code>type plano.md
+type entradas\reuniao.txt</code></pre>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>Cole o passo 1 no terminal. Dentro do Codex, mande o pedido 1 e confira os arquivos que ele diz ter usado.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Mande o pedido 2. Se ele perguntar sobre as mudanças, escolha "Yes, proceed" só se for o plano.md.</span></label></li>
@@ -123,7 +123,7 @@ cat entradas/reuniao.txt</code></pre>
     <h3>Ler antes de mudar</h3>
     <ol>
       <li><span><b>Pedido 1</b>ler e explicar, sem editar.</span></li>
-      <li><span><b>Arquivos usados</b>compare com o ls.</span></li>
+      <li><span><b>Arquivos usados</b>compare com o dir /b.</span></li>
       <li><span><b>Pedido 2</b>um arquivo, com nome; você confere.</span></li>
     </ol>
   </div>
