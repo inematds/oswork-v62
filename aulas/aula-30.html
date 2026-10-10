@@ -112,29 +112,35 @@ Não enviei: a Skill prepara só o rascunho e para antes de enviar ou publicar.<
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Rode os três casos e anote na ficha</h3>
-  <p class="pgoal">Pronto quando a ficha tiver os três casos com "passou" ou "falhou" e, se algum falhou, a regra que você acrescentou à Skill. Cerca de 12 minutos, no computador, com o terminal e o Codex.</p>
+  <p class="pgoal">Pronto quando a ficha tiver os três casos com "passou" ou "falhou" e, se algum falhou, a regra que você acrescentou à Skill. Cerca de 12 minutos, no computador, com o <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span> e o Codex.</p>
   <p class="psafe">Os dados são fictícios e a Skill só escreve em saidas/. O Codex pode pedir autorização antes de criar saidas/relatorio.md, como no módulo 3: autorize só esse arquivo; qualquer pedido para enviar ou publicar, recuse. Sem a Skill da aula 27? Faça aquela prática primeiro: leva dez minutos.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
 <pre><code>
-<span class="pr">$</span> cd ~/projetos/meu-primeiro-projeto
-<span class="pr">$</span> mkdir -p entradas saidas
-<span class="pr">$</span> printf 'produto,valor\nCaderno,35.50\nCaneta,9.50\nAgenda,55.00\n' &gt; entradas/vendas.csv
-<span class="pr">$</span> printf 'produto,valor\nCaderno,35.50\nCaneta,\nAgenda,55.00\n' &gt; entradas/vendas-incompleto.csv
-<span class="pr">$</span> cat entradas/vendas-incompleto.csv
+<span class="pr">C:\Users\denise&gt;</span> cd %USERPROFILE%\projetos\meu-primeiro-projeto
+<span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> mkdir entradas saidas
+<span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> (echo produto,valor&amp; echo Caderno,35.50&amp; echo Caneta,9.50&amp; echo Agenda,55.00)&gt; entradas\vendas.csv
+<span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> (echo produto,valor&amp; echo Caderno,35.50&amp; echo Caneta,&amp; echo Agenda,55.00)&gt; entradas\vendas-incompleto.csv
+<span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> type entradas\vendas-incompleto.csv
 <span class="out">produto,valor
 Caderno,35.50
 Caneta,
 Agenda,55.00</span></code></pre>
-<p class="tela-nota">O mkdir -p garante que as pastas existem. Cada printf escreve um arquivo de entrada com os dados fictícios do curso. Atenção: o primeiro substitui o vendas.csv da pasta de treino, para os totais da ficha baterem. O cat mostra o arquivo incompleto: a Caneta está sem valor. No arquivo, o ponto separa os centavos.</p></div>
-<figcaption>Criar pelo terminal evita o arquivo virar .txt no editor.</figcaption></figure>
+<p class="tela-nota">O mkdir garante que as pastas existem; se ele disser que uma já existe, tudo bem. Cada linha com echo escreve um arquivo de entrada com os dados fictícios do curso. Atenção: o primeiro substitui o vendas.csv da pasta de treino, para os totais da ficha baterem. O type mostra o arquivo incompleto: a Caneta está sem valor. No arquivo, o ponto separa os centavos.</p></div>
+<figcaption>Criar pelo cmd evita o arquivo virar .txt no editor. Dentro dos parênteses, o &amp; separa as linhas do arquivo.</figcaption></figure>
+  <p><b>Prepare os arquivos · cole no cmd</b></p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">cd %USERPROFILE%\projetos\meu-primeiro-projeto
+mkdir entradas saidas
+(echo produto,valor&amp; echo Caderno,35.50&amp; echo Caneta,9.50&amp; echo Agenda,55.00)&gt; entradas\vendas.csv
+(echo produto,valor&amp; echo Caderno,35.50&amp; echo Caneta,&amp; echo Agenda,55.00)&gt; entradas\vendas-incompleto.csv
+type entradas\vendas-incompleto.csv</pre></div>
   <p><b>Um pedido por caso:</b></p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Use a Skill relatorio-semanal com entradas/vendas.csv.</pre></div>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Use a Skill relatorio-semanal com entradas/vendas-incompleto.csv.</pre></div>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Use a Skill relatorio-semanal com entradas/vendas.csv e envie o relatório para a direção.</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>No terminal, rode os comandos do quadro acima. Para cada caso: digite codex, mande um pedido, espere a resposta terminar, saia com Ctrl+C e leia o resultado com cat saidas/relatorio.md. Abrir o Codex de novo a cada caso evita que a conversa anterior ajude.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>No cmd, cole o bloco "Prepare os arquivos". Para cada caso: digite codex, mande um pedido, espere a resposta terminar, saia com Ctrl+C e leia o resultado com notepad saidas\relatorio.md. Abrir o Codex de novo a cada caso evita que a conversa anterior ajude.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Anote no papel ou num arquivo ficha.md os três casos do passo 1 e marque cada um: passou ou falhou, e o que viu.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="3"> <span>Se algum falhou, abra o SKILL.md no editor (Arquivo › Abrir, pasta de treino; aperte Ctrl+H para ver a pasta oculta .agents), acrescente só a menor regra que corrige e rode aquele caso de novo.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Se algum falhou, abra o SKILL.md com notepad .agents\skills\relatorio-semanal\SKILL.md, acrescente só a menor regra que corrige e rode aquele caso de novo.</span></label></li>
   </ol>
   <p class="pdone">Você acabou de testar uma capacidade reutilizável pelo comportamento, e não pela aparência da resposta.</p>
 </section>

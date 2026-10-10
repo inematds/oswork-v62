@@ -23,7 +23,7 @@
   <p data-ex="professora">No projeto de treino, Lúcia viu o relatório sair vazio. Antes de mexer em qualquer coisa, anotou o sintoma e abriu a planilha de entrada: estava sem nenhum registro.</p>
   <figure class="largo">
     <div class="janela">
-      <div class="tela-top"><i></i><i></i><i></i><span>~/projetos/config/falhas.md</span></div>
+      <div class="tela-top"><i></i><i></i><i></i><span>C:\Users\denise\projetos\config\falhas.md</span></div>
       <div class="janela-body">
         <div class="item doc"><span class="pin">1</span> Sintoma: relatório vazio</div>
         <div class="item doc"><span class="pin">2</span> Causa observada: planilha sem registros</div>
@@ -38,7 +38,7 @@
       <li><span class="pin">3</span><span>A proteção pequena.</span></li>
       <li><span class="pin">4</span><span>Como saber que a proteção funciona.</span></li>
     </ol>
-    <figcaption>A linha de exemplo do curso. No arquivo, ela vira uma linha de tabela, com a data e o tipo junto dessas quatro. Não fez o módulo 4? Crie falhas.md em ~/projetos/config.</figcaption>
+    <figcaption>A linha de exemplo do curso. No arquivo, ela vira uma linha de tabela, com a data e o tipo junto dessas quatro. Não fez o módulo 4? Crie falhas.md em %USERPROFILE%\projetos\config.</figcaption>
   </figure>
 </section>
 
@@ -81,14 +81,14 @@
   <p>O registro só ensina alguma coisa quando muda o procedimento seguinte. Por isso a proteção entra no <span class="gterm" data-gl="agents-md" data-def="Arquivo em Markdown com as instruções que o agente lê antes de trabalhar numa pasta: regras, limites e como conferir.">AGENTS.md</span> ou na <span class="gterm" data-gl="skill" data-def="Procedimento empacotado que o agente pode reusar: instruções, passos e como conferir, guardados numa pasta.">Skill</span>, que o <span class="gterm" data-gl="agente" data-def="IA que executa várias etapas por conta própria, como ler arquivos, criar e comparar, em vez de só responder uma mensagem.">agente</span> lê de novo a cada tarefa.</p>
   <p>No fim da prática, o <span class="gterm" data-gl="codex" data-def="Agente de programação da OpenAI que trabalha numa pasta do seu computador, a partir do terminal. O curso o instala no módulo 3.">Codex</span> mostra se a regra funcionou. Antes de escrever a regra, veja a checagem funcionar você mesma no <span class="gterm" data-gl="terminal" data-def="Programa de texto em que você digita comandos para o computador executar. O módulo 3 ensina a abrir e usar.">terminal</span>.</p>
   <p data-ex="coordenadora">Denise acrescentou ao AGENTS.md da frequência: "Antes de ler, confira se a planilha existe. Se faltar, pare e diga qual arquivo falta." Na semana seguinte, o agente parou e avisou.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Prompt de Comando</span></div>
 <pre><code>
-<span class="pr">$</span> cd ~/projetos/meu-primeiro-projeto
-<span class="pr">$</span> ls entradas/
+<span class="pr">C:\Users\denise&gt;</span> cd %USERPROFILE%\projetos\meu-primeiro-projeto
+<span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> dir /b entradas\
 <span class="out">vendas.csv</span>
-<span class="pr">$</span> ls entradas/vendas-outubro.csv
-<span class="out">ls: cannot access 'entradas/vendas-outubro.csv': No such file or directory</span></code></pre>
-<p class="tela-nota">O primeiro ls lista o que existe. O segundo procura um arquivo que não está lá; a resposta, em inglês, diz "não foi possível acessar: arquivo ou pasta não existe". É isso que a checagem pega antes da execução.</p></div>
+<span class="pr">C:\Users\denise\projetos\meu-primeiro-projeto&gt;</span> dir /b entradas\vendas-outubro.csv
+<span class="out">Arquivo não encontrado</span></code></pre>
+<p class="tela-nota">O primeiro dir lista o que existe. O segundo procura um arquivo que não está lá, e a resposta é "Arquivo não encontrado". É isso que a checagem pega antes da execução.</p></div>
   <figcaption>Na sua pasta, a lista de entradas/ pode ter outros arquivos. O que importa é a resposta quando o arquivo falta.</figcaption></figure>
   <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não sabe se a falha foi de pedido ou de infraestrutura? Pergunte: "se eu tivesse escrito melhor, teria dado certo?" Se sim, foi de pedido. Se o texto estava bom e algo da máquina faltou, foi de infraestrutura. Se foram os dois, marque os dois.</p></div>
 </section>
@@ -97,14 +97,14 @@
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Registre uma falha de arquivo ausente e a checagem</h3>
   <p class="pgoal">Pronto quando falhas.md tiver a linha nova, a regra estiver no AGENTS.md e o Codex parar avisando qual arquivo falta. Cerca de 12 minutos, no computador.</p>
-  <p class="psafe">No arquivo, as barras verticais desenham uma tabela: é assim que o Markdown escreve tabelas, e o editor mostra desse jeito mesmo. A falha é fictícia e os comandos só listam; nada é apagado. Se a sua pasta entradas/ não existir, o primeiro ls também avisa que não existe: anote isso como uma falha real e crie a pasta pelo gerenciador de arquivos.</p>
+  <p class="psafe">No arquivo, as barras verticais desenham uma tabela: é assim que o Markdown escreve tabelas, e o editor mostra desse jeito mesmo. A falha é fictícia e os comandos só listam; nada é apagado. Se a sua pasta entradas não existir, o primeiro dir também avisa que não existe: anote isso como uma falha real e crie a pasta pelo gerenciador de arquivos.</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">| Data | Sintoma | Causa observada | Menor correção | Verificação | Pedido ou infraestrutura |
 |---|---|---|---|---|---|
 | &lt;data de hoje&gt; | Relatório de outubro não saiu | &lt;ex.: entradas/vendas-outubro.csv não existe&gt; | &lt;ex.: conferir se o arquivo existe antes de ler&gt; | &lt;ex.: arquivo ausente gera aviso e parada&gt; | Infraestrutura (exemplo fictício) |</pre></div>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Antes de ler um arquivo de entradas/, confira se ele existe. Se faltar, pare e diga qual arquivo falta.</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>No terminal, rode os comandos do quadro do passo 4 e veja a resposta para o arquivo que falta.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Abra ~/projetos/config/falhas.md no editor. Se ele já tem a tabela, como o do módulo 4, cole só a última linha do molde no fim. Se está vazio, cole as três linhas. Preencha as lacunas.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>No <span class="gterm" data-gl="cmd" data-def="O Prompt de Comando, terminal que já vem no Windows. Os comandos do curso, até o módulo 7, são escritos para ele.">cmd</span>, rode os comandos do quadro do passo 4 e veja a resposta para o arquivo que falta.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Abra o arquivo com notepad %USERPROFILE%\projetos\config\falhas.md. Se ele já tem a tabela, como o do módulo 4, cole só a última linha do molde no fim. Se está vazio, cole as três linhas. Preencha as lacunas.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Cole a regra do segundo molde como uma linha nova no AGENTS.md da pasta de treino e salve. Só depois digite codex, para ele ler a regra nova, e peça "gere o relatório de entradas/vendas-outubro.csv". O arquivo não existe de propósito: confira que ele para, diz qual arquivo falta e não inventa números.</span></label></li>
   </ol>
   <p class="pdone">Você acabou de transformar uma falha numa proteção pequena, registrada onde a próxima execução vai ler.</p>
